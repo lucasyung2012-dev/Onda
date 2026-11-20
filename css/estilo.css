@@ -743,6 +743,46 @@ img { max-width: 100%; display: block; }
   animation: subir 0.3s ease both;
 }
 
+/* ---------- Tema do dia em formato de mini-aula ---------- */
+.aula-capa { position: relative; overflow: hidden; min-height: 220px; display: flex; align-items: flex-end; }
+.aula-capa .aula-imagem { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease; }
+.aula-capa .aula-imagem.carregou { opacity: 0.45; }
+.aula-capa-texto { position: relative; z-index: 1; }
+.aula-capa .credito { position: absolute; top: 10px; right: 10px; z-index: 2; font-size: 10.5px; color: #fff; background: rgba(0, 0, 0, 0.5); padding: 1px 7px; border-radius: 6px; text-decoration: none; }
+
+.indice-aula { display: grid; gap: 2px; margin-top: 18px; padding: 14px 16px; border-radius: var(--raio); background: var(--superficie); border: 1px solid var(--borda); }
+.indice-aula .rotulo { margin-bottom: 6px; }
+.indice-aula a { font-size: 14.5px; color: var(--texto-2); text-decoration: none; padding: 4px 0; }
+.indice-aula a:active { color: var(--acento); }
+.aula .bloco { scroll-margin-top: calc(var(--altura-topo) + 12px); }
+
+.glossario { display: grid; gap: 6px; margin-top: 14px; }
+.glossario details { padding: 10px 12px; border-radius: var(--raio-p); background: var(--superficie); border: 1px solid var(--borda); }
+.glossario summary { cursor: pointer; font-weight: 600; font-size: 14.5px; color: var(--acento); }
+.glossario p { margin-top: 6px; font-size: 14.5px; color: var(--texto-2); }
+
+.numeros { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 16px; }
+.numero-caixa { padding: 14px; border-radius: var(--raio); background: var(--superficie); border: 1px solid var(--borda); }
+.numero-caixa strong { display: block; font-family: var(--fonte-titulo); font-size: 22px; line-height: 1.15; color: var(--acento); }
+.numero-caixa p { font-size: 13.5px; color: var(--texto-2); margin-top: 6px; }
+.numero-caixa small { display: block; font-size: 11.5px; color: var(--texto-3); margin-top: 6px; }
+
+.atores { display: grid; gap: 10px; }
+.ator { padding: 12px 14px; border-radius: var(--raio-p); background: var(--superficie); border: 1px solid var(--borda); display: grid; gap: 4px; }
+.ator strong { font-family: var(--fonte-titulo); font-size: 17px; }
+.ator p { font-size: 14.5px; }
+.ator .rotulo { font-size: 10.5px; margin-right: 4px; }
+
+.mito { display: grid; gap: 6px; padding: 12px 14px; border-radius: var(--raio-p); background: var(--superficie); border: 1px solid var(--borda); margin-top: 8px; font-size: 14.5px; }
+
+.quiz { padding: 14px; border-radius: var(--raio); background: var(--superficie); border: 1px solid var(--borda); margin-bottom: 10px; display: grid; gap: 8px; }
+.quiz-pergunta { font-weight: 600; }
+.quiz-opcao { text-align: left; padding: 10px 12px; border-radius: var(--raio-p); border: 1px solid var(--borda-forte); background: transparent; cursor: pointer; font-size: 14.5px; transition: background 0.2s ease, border-color 0.2s ease; }
+.quiz-opcao.certa { background: color-mix(in srgb, var(--sucesso) 18%, transparent); border-color: var(--sucesso); }
+.quiz-opcao.errada { background: color-mix(in srgb, var(--perigo) 15%, transparent); border-color: var(--perigo); }
+.quiz.respondida .quiz-opcao { cursor: default; }
+.quiz-explicacao { font-size: 14px; color: var(--texto-2); }
+
 /* ---------- Histórico em calendário ---------- */
 .calendario { padding: 12px; }
 .cal-topo { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }

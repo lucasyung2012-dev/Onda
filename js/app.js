@@ -96,8 +96,9 @@ function htmlDaRota({ tela, partes }) {
     // Telas de dias antigos: baixam o arquivo do dia e depois se desenham.
     case 'edicao': return carregarDepois('analises', partes[1], (ed) => { estado.edicaoAberta = ed; return telas.telaAnalise(ed, dados, { comOutros: true, botao: botaoPara(ed.destaque.fatoId) }); });
     case 'tema': {
-      if (estado.tema?.dataReferencia === partes[1]) return telas.telaTema(estado.tema);
-      return carregarDepois('temas', partes[1], (t) => telas.telaTema(t));
+      const anteriores = estado.temas?.temas || [];
+      if (estado.tema?.dataReferencia === partes[1]) return telas.telaTema(estado.tema, anteriores);
+      return carregarDepois('temas', partes[1], (t) => telas.telaTema(t, anteriores));
     }
     case 'meu': return htmlMeu();
     case 'analise-minha': return telas.telaMinhaAnalise(meus.pegar(partes[1]), dados);
@@ -376,11 +377,24 @@ document.addEventListener('input', (e) => {
 // ---------- Toques e cliques ----------
 
 document.addEventListener('click', (e) => {
-  const alvo = e.target.closest('[data-fato], [data-gaveta], [data-modo], [data-sub], [data-mais], [data-voltar], [data-fechar-folha], [data-recarregar], [data-acompanhar], [data-dropbox], [data-copiar-prompt], [data-mes], [data-dia], #veu');
+  const alvo = e.target.closest('[data-fato], [data-gaveta], [data-modo], [data-sub], [data-mais], [data-voltar], [data-fechar-folha], [data-recarregar], [data-acompanhar], [data-dropbox], [data-copiar-prompt], [data-mes], [data-dia], [data-resposta], [data-pular], #veu');
   if (!alvo) return;
   const idEditor = alvo.closest('.editor')?.dataset.item;
 
-  if (alvo.dataset.mes) { estado.cal.mes = alvo.dataset.mes; atualizarHistorico(); }
+  if (alvo.dataset.pular) {
+    // Índice da aula: rola até a parte, sem mudar de tela
+    e.preventDefault();
+    document.getElementById(alvo.dataset.pular)?.scrollIntoView({ behavior: 'smooth' });
+  } else if (alvo.dataset.resposta) {
+    // Teste rápido: marca a escolhida, mostra a certa e a explicação
+    const quiz = alvo.closest('.quiz');
+    if (quiz.classList.contains('respondida')) return;
+    quiz.classList.add('respondida');
+    const correta = alvo.dataset.correta;
+    quiz.querySelectorAll('.quiz-opcao').forEach((b) => { if (b.dataset.resposta === correta) b.classList.add('certa'); });
+    if (alvo.dataset.resposta !== correta) alvo.classList.add('errada');
+    quiz.querySelector('.quiz-explicacao').hidden = false;
+  } else if (alvo.dataset.mes) { estado.cal.mes = alvo.dataset.mes; atualizarHistorico(); }
   else if (alvo.dataset.dia) { estado.cal.dia = alvo.dataset.dia; estado.cal.mes = alvo.dataset.dia.slice(0, 7); atualizarHistorico(); }
   else if (alvo.dataset.acompanhar) alternarAcompanhar(alvo);
   else if (alvo.dataset.dropbox === 'conectar') dropbox.conectar();

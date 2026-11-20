@@ -15,6 +15,12 @@ on:
   schedule:
     - cron: '0 10 * * *'
   workflow_dispatch:
+    inputs:
+      parte:
+        description: 'O que rodar'
+        type: choice
+        default: tudo
+        options: [tudo, 'só o tema do dia']
 
 permissions:
   contents: write
@@ -26,7 +32,7 @@ concurrency:
 jobs:
   analisar:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
 
@@ -38,6 +44,7 @@ jobs:
         run: node coletor/coletar.mjs
 
       - name: Escolher e analisar o destaque do dia
+        if: github.event.inputs.parte != 'só o tema do dia'
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
@@ -50,7 +57,9 @@ jobs:
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: sleep 65 && node coletor/tema.mjs
+        run: |
+          if [ "${{ github.event.inputs.parte }}" != "só o tema do dia" ]; then sleep 65; fi
+          node coletor/tema.mjs
 
       - name: Salvar no repositório
         if: always()

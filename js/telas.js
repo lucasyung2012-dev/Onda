@@ -449,8 +449,89 @@ function curto(texto, max = 28) {
   return texto.length > max ? `${texto.slice(0, max - 1).trim()}…` : texto;
 }
 
-/** Explicação completa de um tema. */
-export function telaTema(tema) {
+/** Tela do tema: mini-aula (formato 2) ou explicação antiga. */
+export function telaTema(tema, temasAnteriores = []) {
+  if (!tema?.titulo) return `<div class="tela"><p class="vazio">Tema não encontrado.</p></div>`;
+  if (tema.formato !== 2) return telaTemaV1(tema);
+
+  const paragrafos = (texto) => (texto || '').split(/\n+/).filter(Boolean).map((p) => `<p>${esc(p)}</p>`).join('');
+  const blocos = [];
+  const bloco = (titulo, corpo) => blocos.push({ titulo, corpo });
+
+  if (tema.paraComecar) {
+    bloco('Para começar do zero', `<div class="texto-longo">${paragrafos(tema.paraComecar)}</div>
+      ${tema.glossario?.length ? `<div class="glossario">${tema.glossario.map((g) => `
+        <details><summary>${esc(g.termo)}</summary><p>${esc(g.definicao)}</p></details>`).join('')}</div>` : ''}`);
+  }
+  if (tema.historia) {
+    bloco('Como chegamos aqui', `<div class="texto-longo">${paragrafos(tema.historia)}</div>
+      ${tema.linhaDoTempo?.length ? `<ol class="cadeia linha-tempo" style="margin-top:16px">${tema.linhaDoTempo.map((l) => `
+        <li class="elo"><span class="ponto" style="font-size:9px">●</span><div class="caixa"><span class="camada">${esc(l.quando)}</span><p>${esc(l.oQue)}</p>${l.fonte ? `<small class="subtitulo">${esc(l.fonte)}</small>` : ''}</div></li>`).join('')}</ol>` : ''}`);
+  }
+  if (tema.comoFunciona) {
+    bloco('Como funciona por dentro', `<div class="texto-longo">${paragrafos(tema.comoFunciona)}</div>
+      ${tema.numeros?.length ? `<div class="numeros">${tema.numeros.map((n) => `
+        <div class="numero-caixa"><strong>${esc(n.valor)}</strong><p>${esc(n.significado)}</p>${n.fonte ? `<small>${esc(n.fonte)}</small>` : ''}</div>`).join('')}</div>` : ''}`);
+  }
+  if (tema.atores?.length) {
+    bloco('O que cada lado quer', `<div class="atores">${tema.atores.map((a) => `
+      <div class="ator"><strong>${esc(a.nome)}</strong><p><span class="rotulo acento">Quer</span> ${esc(a.quer)}</p>${a.porque ? `<p class="subtitulo">${esc(a.porque)}</p>` : ''}</div>`).join('')}</div>`);
+  }
+  if (tema.debate?.length || tema.mitos?.length) {
+    bloco('Onde há debate', `
+      ${(tema.debate || []).map((d) => `<div class="afirmacao" style="--cor:var(--a-analise);margin-bottom:8px"><span class="tipo">${esc(d.quemDefende || 'Visão')}</span><p><strong>${esc(d.visao)}</strong></p>${d.argumento ? `<small>${esc(d.argumento)}</small>` : ''}</div>`).join('')}
+      ${(tema.mitos || []).map((m) => `<div class="mito"><p><span class="etiqueta estatal">Mito</span> ${esc(m.mito)}</p><p><span class="etiqueta pronta">Verdade</span> ${esc(m.verdade)}</p></div>`).join('')}`);
+  }
+  if (tema.eHoje) bloco('E hoje?', `<div class="texto-longo">${paragrafos(tema.eHoje)}</div>`);
+  if (tema.cadeia?.length) {
+    bloco('Como chega em você', `<ol class="cadeia">
+      ${tema.cadeia.map((c, i) => `<li class="elo"><span class="ponto">${i + 1}</span><div class="caixa"><span class="camada">${esc(CAMADAS[c.camada] || c.camada)}</span><p>${esc(c.passo)}</p></div></li>`).join('')}
+      <li class="elo voce"><span class="ponto">★</span><div class="caixa"><span class="camada">Você · ${esc(IMPACTO[tema.chegaEmVoce?.tipo] || '')}</span><p>${esc(tema.chegaEmVoce?.texto || '')}</p></div></li></ol>`);
+  }
+  if (tema.teste?.length) {
+    bloco('Teste rápido', tema.teste.map((q, qi) => `
+      <div class="quiz" data-quiz="${qi}">
+        <p class="quiz-pergunta">${qi + 1}. ${esc(q.pergunta)}</p>
+        ${q.opcoes.map((o, oi) => `<button type="button" class="quiz-opcao" data-resposta="${oi}" data-correta="${q.correta}">${esc(o)}</button>`).join('')}
+        <p class="quiz-explicacao" hidden>${esc(q.explicacao || '')}</p>
+      </div>`).join(''));
+  }
+  const ligacoes = (tema.ligacoes || []).map((titulo) => temasAnteriores.find((t) => t.titulo === titulo)).filter(Boolean);
+  if (ligacoes.length) {
+    bloco('Ligações com outros temas', `<div class="temas-lista">${ligacoes.map((t) => `
+      <a class="tema-item" href="#tema/${esc(t.data)}" style="text-decoration:none;color:inherit"><span><strong style="display:block;font-weight:600">${esc(t.titulo)}</strong><small style="white-space:normal">${esc(t.pergunta)}</small></span><small>${esc(dataCurta(t.data))}</small></a>`).join('')}</div>`);
+  }
+  bloco('Para ir além: as fontes', `<ul class="fontes-usadas">${(tema.fontes || []).map((f, i) => `
+    <li><a class="fonte-usada" href="${esc(f.link)}" target="_blank" rel="noopener noreferrer"><span class="idx">${i + 1}</span><div><strong>${esc(f.fonte)}</strong><p>${esc(f.titulo)}</p></div><span class="icone i-externo" aria-hidden="true"></span></a></li>`).join('')}</ul>`);
+
+  // Índice no topo: pula direto para cada parte da aula
+  const indice = blocos.map((b, i) => `<a href="#tema/${esc(tema.dataReferencia)}" data-pular="bloco-${i}">${i + 1}. ${b.titulo}</a>`).join('');
+
+  return `
+    <div class="tela aula">
+      <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>Temas</button>
+      <div class="tema-do-dia aula-capa" style="margin-top:8px">
+        ${tema.imagem ? `<img class="aula-imagem" src="${esc(tema.imagem.url)}" alt="" loading="lazy" referrerpolicy="no-referrer" onload="this.classList.add('carregou')" onerror="this.remove()">` : ''}
+        <div class="aula-capa-texto">
+          <p class="rotulo">Tema do dia · ${esc(dataCurta(tema.dataReferencia))}</p>
+          <h2>${esc(tema.titulo)}</h2>
+          <p style="font-family:var(--fonte-titulo);font-size:18px;color:#fff">${esc(tema.pergunta)}</p>
+        </div>
+        ${tema.imagem ? `<a class="credito" href="${esc(tema.imagem.link)}" target="_blank" rel="noopener noreferrer">Imagem: ${esc(tema.imagem.credito)}</a>` : ''}
+      </div>
+      <div class="uma-frase"><p class="rotulo ouro">A resposta em uma frase</p><p>${esc(tema.emUmaFrase)}</p></div>
+      <nav class="indice-aula" aria-label="Partes da aula"><p class="rotulo">Nesta aula</p>${indice}</nav>
+      ${blocos.map((b, i) => `
+        <section class="bloco" id="bloco-${i}">
+          <div class="bloco-cabeca"><span class="num">${i + 1}</span><h2>${b.titulo}</h2></div>${b.corpo}
+        </section>`).join('')}
+      ${tema.paraPensar ? `<div class="uma-frase" style="margin-top:24px"><p class="rotulo ouro">Para pensar</p><p>${esc(tema.paraPensar)}</p></div>` : ''}
+      <p class="aviso-ia"><span class="icone i-ia" aria-hidden="true"></span>${esc(tema.ia?.aviso || '')} Gerada em ${dataHora(tema.geradoEm)}.</p>
+    </div>`;
+}
+
+/** Explicação de um tema no formato antigo (até 20/11/2026). */
+function telaTemaV1(tema) {
   if (!tema?.titulo) return `<div class="tela"><p class="vazio">Tema não encontrado.</p></div>`;
   const paragrafos = (texto) => texto.split(/\n+/).filter(Boolean).map((p) => `<p>${esc(p)}</p>`).join('');
   const bloco = (num, titulo, corpo) => `
