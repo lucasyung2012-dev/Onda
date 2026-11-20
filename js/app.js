@@ -13,6 +13,7 @@ import * as meus from './meus.js';
 import * as dropbox from './dropbox.js';
 import { gerarPrompt } from './prompt.js';
 import * as config from './config.js';
+import { dataCurta } from './util.js';
 import { t, emIngles, REGIOES_EN, TEMAS_EN } from './textos.js';
 
 // ---------- Estado: o que está acontecendo agora ----------
@@ -93,7 +94,7 @@ function htmlDaRota({ tela, partes }) {
   const { dados, analise } = estado;
   switch (tela) {
     case 'analise': return telas.telaAnalise(analise, dados, { botao: analise?.destaque ? botaoPara(analise.destaque.fatoId) : '' });
-    case 'temas': return telas.telaTemas(estado.tema, estado.temas);
+    case 'temas': return telas.telaTemas(estado.tema, estado.temas, htmlFila());
     case 'edicoes': return telas.telaEdicoes(htmlHistorico());
     // Telas de dias antigos: baixam o arquivo do dia e depois se desenham.
     case 'edicao': return carregarDepois('analises', partes[1], (ed) => { estado.edicaoAberta = ed; return telas.telaAnalise(ed, dados, { comOutros: true, botao: botaoPara(ed.destaque.fatoId) }); });
@@ -103,7 +104,7 @@ function htmlDaRota({ tela, partes }) {
       return carregarDepois('temas', partes[1], (t) => telas.telaTema(t, anteriores));
     }
     case 'meu': return htmlMeu();
-    case 'config': return telas.telaConfig(config.ler());
+    case 'config': return telas.telaConfig(config.ler(), { conectado: dropbox.conectado(), roboLigado: Boolean(estado.tema?.filaConectada) });
     case 'analise-minha': return telas.telaMinhaAnalise(meus.pegar(partes[1]), dados);
     case 'explorar': {
       if (partes.length >= 3) {
@@ -297,6 +298,35 @@ function htmlMeu() {
   });
 }
 
+// ---------- Fila de temas sugeridos ----------
+
+/** Data prevista de cada tema da fila: hoje (se antes das 7h e sem tema ainda) ou a partir de amanhã. */
+function htmlFila() {
+  const hoje = hojeData();
+  const horaBrasilia = Number(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', hour: 'numeric', hour12: false }).format(new Date()));
+  const temaDeHojeJaSaiu = estado.tema?.dataReferencia === hoje;
+  const primeiro = new Date(`${hoje}T12:00:00-03:00`);
+  // O robô começa às 6h30; sugestões até 6h ainda entram no tema do mesmo dia.
+  if (horaBrasilia >= 6 || temaDeHojeJaSaiu) primeiro.setDate(primeiro.getDate() + 1);
+  const itens = meus.fila().map((x, i) => {
+    const d = new Date(primeiro);
+    d.setDate(d.getDate() + i);
+    const data = d.toISOString().slice(0, 10);
+    const diferenca = Math.round((new Date(`${data}T12:00:00-03:00`) - new Date(`${hoje}T12:00:00-03:00`)) / 86400000);
+    const rotuloData = diferenca === 0 ? (emIngles() ? 'Today 7am' : 'Hoje 7h') : diferenca === 1 ? (emIngles() ? 'Tomorrow' : 'Amanhã') : dataCurta(data);
+    return { ...x, data, rotuloData };
+  });
+  return telas.secaoFila(itens, { conectado: dropbox.conectado(), roboLigado: Boolean(estado.tema?.filaConectada) });
+}
+
+// Enviar uma sugestão de tema (o "Enter" do teclado também funciona)
+document.addEventListener('submit', (e) => {
+  if (!e.target.matches('[data-sugerir]')) return;
+  e.preventDefault();
+  const campo = document.getElementById('campo-sugestao');
+  if (meus.sugerirTema(campo.value)) aviso(emIngles() ? 'Added to the queue' : 'Tema na fila');
+});
+
 // ---------- Histórico em calendário ----------
 
 /** Monta o calendário e o dia escolhido (baixa a edição do dia se precisar). */
@@ -328,7 +358,9 @@ function atualizarHistorico() {
 
 // Quando os seus dados mudam (ou sincronizam), a aba Meu Onda se redesenha.
 meus.aoMudar(() => {
-  if (rotaAtual().tela === 'meu') conteudo.innerHTML = htmlMeu();
+  const tela = rotaAtual().tela;
+  if (tela === 'meu') conteudo.innerHTML = htmlMeu();
+  if (tela === 'temas') conteudo.innerHTML = telas.telaTemas(estado.tema, estado.temas, htmlFila());
 });
 
 // ---------- Minha análise: salva enquanto você digita ----------
@@ -380,11 +412,19 @@ document.addEventListener('input', (e) => {
 // ---------- Toques e cliques ----------
 
 document.addEventListener('click', (e) => {
-  const alvo = e.target.closest('[data-fato], [data-gaveta], [data-modo], [data-sub], [data-mais], [data-voltar], [data-fechar-folha], [data-recarregar], [data-acompanhar], [data-dropbox], [data-copiar-prompt], [data-mes], [data-dia], [data-resposta], [data-pular], [data-config], #veu');
+  const alvo = e.target.closest('[data-fato], [data-gaveta], [data-modo], [data-sub], [data-mais], [data-voltar], [data-fechar-folha], [data-recarregar], [data-acompanhar], [data-dropbox], [data-copiar-prompt], [data-mes], [data-dia], [data-resposta], [data-pular], [data-config], [data-fila], [data-chave-robo], #veu');
   if (!alvo) return;
   const idEditor = alvo.closest('.editor')?.dataset.item;
 
-  if (alvo.dataset.config) {
+  if (alvo.dataset.fila) {
+    const id = alvo.dataset.id;
+    if (alvo.dataset.fila === 'tirar') meus.tirarDaFila(id);
+    else meus.moverNaFila(id, alvo.dataset.fila === 'subir' ? -1 : 1);
+  } else if (alvo.hasAttribute('data-chave-robo')) {
+    navigator.clipboard.writeText(dropbox.chaveDoRobo())
+      .then(() => aviso(emIngles() ? 'Key copied — paste it only in GitHub Secrets' : 'Chave copiada — cole só nos Secrets do GitHub'))
+      .catch(() => aviso('Não deu para copiar neste navegador'));
+  } else if (alvo.dataset.config) {
     // Configurações: grava, aplica e redesenha a tela
     config.salvar({ [alvo.dataset.config]: alvo.dataset.valor });
     if (alvo.dataset.config === 'idioma') { aplicarIdiomaNosDados(); traduzirFixos(); }

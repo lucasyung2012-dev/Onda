@@ -413,12 +413,12 @@ export function dadosDaGaveta(dados, tipo, id) {
 // ---------- TEMAS ----------
 
 /** Aba Temas: o tema do dia e os temas anteriores (que vão se acumulando). */
-export function telaTemas(tema, indice) {
+export function telaTemas(tema, indice, filaHtml = '') {
   const temHoje = tema?.status === 'ok';
   const anteriores = (indice?.temas || []).filter((t) => !temHoje || t.data !== tema.dataReferencia);
   const capa = temHoje ? `
     <a class="tema-do-dia" href="#tema/${esc(tema.dataReferencia)}" style="margin-top:18px;display:block;text-decoration:none">
-      <p class="rotulo">Tema do dia · ${esc(dataCurta(tema.dataReferencia))}</p>
+      <p class="rotulo">${t('Tema do dia')} · ${esc(dataCurta(tema.dataReferencia))}${tema.sugeridoPorVoce ? ` · ${emIngles() ? 'your suggestion' : 'sugerido por você'}` : ''}</p>
       <h2>${esc(tema.titulo)}</h2>
       <p style="font-family:var(--fonte-titulo);font-size:17px;color:#fff;margin-bottom:10px">${esc(tema.pergunta)}</p>
       <div class="passos-tema">${tema.cadeia.slice(0, 4).map((c) => `<span>${esc(curto(c.passo))}</span>`).join('<i>›</i>')}<i>›</i><span>${t('Você')}</span></div>
@@ -435,6 +435,7 @@ export function telaTemas(tema, indice) {
     <div class="tela">
       ${cabecalho('Temas', 'Entender o mundo', 'Não é notícia: é a explicação de um assunto, do começo até o seu dia a dia.')}
       ${capa}
+      ${filaHtml}
       <div class="secao">
         <div class="secao-cabeca"><h2>${t('Temas anteriores')}</h2><span>${anteriores.length}</span></div>
         ${anteriores.length
@@ -517,7 +518,7 @@ export function telaTema(tema, temasAnteriores = []) {
       <div class="tema-do-dia aula-capa" style="margin-top:8px">
         ${tema.imagem ? `<img class="aula-imagem" src="${esc(tema.imagem.url)}" alt="" loading="lazy" referrerpolicy="no-referrer" onload="this.classList.add('carregou')" onerror="this.remove()">` : ''}
         <div class="aula-capa-texto">
-          <p class="rotulo">Tema do dia · ${esc(dataCurta(tema.dataReferencia))}</p>
+          <p class="rotulo">${t('Tema do dia')} · ${esc(dataCurta(tema.dataReferencia))}${tema.sugeridoPorVoce ? ` · ${emIngles() ? 'your suggestion' : 'sugerido por você'}` : ''}</p>
           <h2>${esc(tema.titulo)}</h2>
           <p style="font-family:var(--fonte-titulo);font-size:18px;color:#fff">${esc(tema.pergunta)}</p>
         </div>
@@ -547,7 +548,7 @@ function telaTemaV1(tema) {
     <div class="tela">
       <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>${t('Temas')}</button>
       <div class="tema-do-dia" style="margin-top:8px">
-        <p class="rotulo">Tema do dia · ${esc(dataCurta(tema.dataReferencia))}</p>
+        <p class="rotulo">${t('Tema do dia')} · ${esc(dataCurta(tema.dataReferencia))}${tema.sugeridoPorVoce ? ` · ${emIngles() ? 'your suggestion' : 'sugerido por você'}` : ''}</p>
         <h2>${esc(tema.titulo)}</h2>
         <p style="font-family:var(--fonte-titulo);font-size:18px;color:#fff">${esc(tema.pergunta)}</p>
       </div>
@@ -840,7 +841,7 @@ export function telaErro(mensagem) {
 
 // ---------- CONFIGURAÇÕES ----------
 
-export function telaConfig(config) {
+export function telaConfig(config, { conectado = false, roboLigado = false } = {}) {
   // Grupo de opções lado a lado (como um seletor). Cada botão grava uma escolha.
   const opcoes = (chave, lista) => `
     <div class="opcoes" role="group">
@@ -877,9 +878,51 @@ export function telaConfig(config) {
         ${interruptor('movimento', config.movimento === 'reduzido', 'Menos movimento', en ? 'Turns off animations and transitions.' : 'Desliga animações e transições.')}
       </section>
 
+      ${conectado ? `<section class="grupo-config">
+        <h2>${en ? 'Topic queue: link the robot' : 'Fila de temas: ligar o robô'}</h2>
+        <p class="subtitulo">${roboLigado ? (en ? '✓ The robot is already reading your queue.' : '✓ O robô já está lendo a sua fila.') : (en ? 'Done once: copy the key below and save it in GitHub → Onda → Settings → Secrets and variables → Actions → New repository secret, with the name DROPBOX_REFRESH_TOKEN. It only opens the Onda folder in your Dropbox. Never paste it anywhere else.' : 'Faça uma vez só: copie a chave abaixo e salve no GitHub → Onda → Settings → Secrets and variables → Actions → New repository secret, com o nome DROPBOX_REFRESH_TOKEN. Ela só abre a pasta do Onda no seu Dropbox. Não cole em nenhum outro lugar.')}</p>
+        <button class="botao" type="button" data-chave-robo>${en ? 'Copy robot key' : 'Copiar a chave do robô'}</button>
+      </section>` : ''}
       <section class="grupo-config">
         <h2>${t('Sobre o Onda')}</h2>
         <p class="subtitulo">${en ? 'Onda — from the world to you. Free, open source:' : 'Onda — do mundo até você. Gratuito e de código aberto:'} <a href="https://github.com/lucasyung2012-dev/Onda" target="_blank" rel="noopener noreferrer">github.com/lucasyung2012-dev/Onda</a></p>
       </section>
+    </div>`;
+}
+
+// ---------- FILA DE TEMAS SUGERIDOS ----------
+
+/**
+ * Você sugere assuntos; o robô transforma o primeiro da fila no tema do
+ * próximo dia (às 7h). `itens` = [{ id, texto, data }] com a data prevista.
+ */
+export function secaoFila(itens, { conectado, roboLigado }) {
+  const en = emIngles();
+  const aviso = !conectado
+    ? `<p class="subtitulo">${en ? 'Connect Dropbox in My Onda to use the queue.' : 'Conecte o Dropbox no Meu Onda para usar a fila.'}</p>`
+    : !roboLigado
+      ? `<p class="subtitulo">${en ? 'Last step: link the robot to your Dropbox in Settings, so it can read the queue.' : 'Falta um passo: ligar o robô ao seu Dropbox, em Configurações, para ele conseguir ler a fila.'} <a href="#config">${t('Configurações')}</a></p>`
+      : '';
+  return `
+    <div class="secao">
+      <div class="secao-cabeca"><h2>${en ? 'Topic queue' : 'Fila de temas'}</h2><span>${itens.length}</span></div>
+      <p class="subtitulo" style="margin:-6px 0 12px">${en
+        ? 'Suggest something you want to learn. The first in line becomes the topic of the next day (or today, if before 7 a.m.). With an empty queue, the AI picks.'
+        : 'Sugira algo que você quer aprender. O primeiro da fila vira o tema do próximo dia (ou de hoje, se for antes das 7h). Com a fila vazia, a IA escolhe sozinha.'}</p>
+      ${aviso}
+      <form class="sugerir" data-sugerir>
+        <input id="campo-sugestao" type="text" maxlength="200" placeholder="${en ? 'e.g. How do US elections work?' : 'Ex.: Como funcionam as eleições nos EUA?'}" ${conectado ? '' : 'disabled'} enterkeyhint="send">
+        <button class="botao principal" type="submit" ${conectado ? '' : 'disabled'}>${en ? 'Add' : 'Sugerir'}</button>
+      </form>
+      ${itens.length ? `<ol class="fila">${itens.map((x, i) => `
+        <li class="fila-item">
+          <span class="fila-data">${esc(x.rotuloData)}</span>
+          <span class="fila-texto">${esc(x.texto)}</span>
+          <span class="fila-acoes">
+            <button type="button" class="botao-icone" data-fila="subir" data-id="${esc(x.id)}" aria-label="${en ? 'Move up' : 'Subir'}" style="--icone:var(--i-subir)" ${i === 0 ? 'disabled' : ''}></button>
+            <button type="button" class="botao-icone" data-fila="descer" data-id="${esc(x.id)}" aria-label="${en ? 'Move down' : 'Descer'}" style="--icone:var(--i-descer)" ${i === itens.length - 1 ? 'disabled' : ''}></button>
+            <button type="button" class="botao-icone" data-fila="tirar" data-id="${esc(x.id)}" aria-label="${en ? 'Remove' : 'Tirar da fila'}" style="--icone:var(--i-fechar)"></button>
+          </span>
+        </li>`).join('')}</ol>` : ''}
     </div>`;
 }

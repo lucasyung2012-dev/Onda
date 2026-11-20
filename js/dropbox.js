@@ -160,3 +160,12 @@ export async function salvar(dados, rev) {
   const info = await r.json();
   return { rev: info.rev };
 }
+
+/**
+ * A "chave de renovação" deste aparelho, para o robô do GitHub também
+ * conseguir ler a fila de temas no Dropbox. Ela só dá acesso à pasta
+ * do app Onda. Deve ser guardada SÓ nos Secrets do GitHub.
+ */
+export function chaveDoRobo() {
+  return lerLocal(CHAVE_TOKEN)?.refresh_token || '';
+}

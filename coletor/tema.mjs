@@ -27,6 +27,7 @@
 
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { perguntarIA, temIA } from './ia.mjs';
+import * as fila from './fila.mjs';
 
 const FUSO = 'America/Sao_Paulo';
 const NAVEGADOR = 'OndaRadar/1.0 (https://github.com/lucasyung2012-dev/Onda)';
@@ -129,9 +130,11 @@ function material(artigos, palavras, { soIntro = false, limite = MATERIAL_POR_PA
 
 // ---------- 1. Escolher o assunto ----------
 
-async function escolherAssunto(anteriores, manchetes, evitar) {
+async function escolherAssunto(anteriores, manchetes, evitar, sugestao = null) {
   const usuario = `Escolha o "Tema do dia" do Onda: uma MINI-AULA para entender o mundo. Não é uma notícia: é a explicação de algo de qualquer época (história, economia, instituições, geografia, recursos, tecnologia, alianças, conflitos) que ajuda a entender a geopolítica e como ela chega ao dia a dia no Brasil.
-Prefira assuntos de fundo e duradouros (ex.: como funciona a OTAN, por que o petróleo pesa tanto na economia, a história do Oriente Médio, o que é o FMI). NÃO transforme a notícia do dia no tema.
+Foque em geopolítica e em como o mundo e a política funcionam: instituições, eleições, tribunais, alianças, conflitos, recursos, fronteiras, organizações internacionais. Varie as regiões e os assuntos de um dia para o outro. Prefira assuntos de fundo e duradouros (ex.: como funcionam as eleições nos EUA, o que faz o Supremo Tribunal Federal, como funciona a OTAN, a história do Oriente Médio). NÃO faça temas sobre investimentos ou mercado financeiro. NÃO transforme a notícia do dia no tema.${sugestao ? `
+
+O LEITOR PEDIU ESTE TEMA: "${sugestao}". Use exatamente esse assunto (pode reformular o título e a pergunta para ficarem claros e com olhar geopolítico), mesmo que pareça com um tema anterior.` : ''}
 
 Temas já feitos (não repita nem faça um muito parecido):
 ${anteriores.length ? anteriores.map((t) => `- ${t}`).join('\n') : '- (nenhum ainda)'}
@@ -305,15 +308,30 @@ async function principal() {
   const fatos = hoje.fatos.filter((f) => f.fontes >= 2 && f.temas[0] !== 'outros').slice(0, 25);
   const manchetes = fatos.map((f) => f.titulo);
 
+  // Fila de temas sugeridos (no Dropbox): se tiver algo, a primeira sugestão vira o tema.
+  let sugestao = null;
+  let filaConectada = false;
+  if (fila.filaConfigurada()) {
+    try {
+      sugestao = await fila.proximaSugestao();
+      filaConectada = true;
+      console.log(sugestao ? `Fila: usando a sugestão "${sugestao.texto}"` : 'Fila: vazia, a IA escolhe');
+    } catch (erro) {
+      console.log(`Fila: não deu para ler o Dropbox (${erro.message}). A IA escolhe.`);
+    }
+  }
+
   let escolhido = null;
   const evitar = [];
   for (let tentativa = 1; tentativa <= 3 && !escolhido; tentativa++) {
+    // Na 1ª tentativa usa a sugestão; se não houver material, a IA escolhe outro assunto.
+    const usarSugestao = sugestao && tentativa === 1 ? sugestao.texto : null;
     console.log(`Tema do dia — escolha (tentativa ${tentativa})…`);
-    const { resposta } = await escolherAssunto(indice.temas.map((t) => t.titulo), manchetes, evitar);
+    const { resposta } = await escolherAssunto(indice.temas.map((t) => t.titulo), manchetes, evitar, usarSugestao);
     console.log(`  Assunto: ${resposta.titulo}`);
     const artigos = await buscarArtigos(resposta.buscas);
     console.log(`  Artigos achados: ${artigos.map((a) => a.titulo).join(' | ') || 'nenhum'}`);
-    if (artigos.length >= 2) escolhido = { escolha: resposta, artigos };
+    if (artigos.length >= 2) escolhido = { escolha: resposta, artigos, daFila: Boolean(usarSugestao) };
     else { evitar.push(resposta.titulo); await esperar(30000); }
   }
   if (!escolhido) throw new Error('não achei fontes suficientes para nenhum tema');
@@ -329,6 +347,8 @@ async function principal() {
     dataReferencia: hojeData,
     ia: { ...ia, aviso: 'Aula gerada por IA a partir das fontes listadas. Pode conter erros: confira nas fontes.' },
     ...aula,
+    sugeridoPorVoce: escolhido.daFila ? sugestao.texto : null,
+    filaConectada, // o app usa para saber se o robô já consegue ler a fila
   };
 
   const doDia = await lerJson(`data/temas/${hojeData}.json`, { data: hojeData, versoes: [] });
@@ -341,6 +361,12 @@ async function principal() {
   indice.temas.sort((x, y) => y.data.localeCompare(x.data));
   await gravarJson('data/app/temas.json', indice);
   console.log(`Tema do dia gravado: ${aula.titulo}`);
+
+  // Só agora, com o tema pronto e salvo, a sugestão sai da fila.
+  if (escolhido.daFila) {
+    try { await fila.tirarDaFila(sugestao.id); console.log('Fila: sugestão usada e retirada.'); }
+    catch (erro) { console.log(`Fila: tema feito, mas não deu para tirar da fila (${erro.message}).`); }
+  }
 }
 
 principal().catch((erro) => {

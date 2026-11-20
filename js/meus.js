@@ -13,7 +13,7 @@ import * as dropbox from './dropbox.js';
 export const LIMITE_POR_DIA = 5;
 const CHAVE_LOCAL = 'onda-meus';
 
-const vazio = () => ({ versao: 1, itens: {}, apagados: {} });
+const vazio = () => ({ versao: 1, itens: {}, fila: {}, apagados: {} });
 
 let dados = (() => { try { return JSON.parse(localStorage.getItem(CHAVE_LOCAL)) || vazio(); } catch { return vazio(); } })();
 let ultimaSincronizacao = null;
@@ -76,23 +76,69 @@ function salvar({ avisarTela = true } = {}) {
   esperaEnvio = setTimeout(sincronizar, 1500); // junta várias mudanças seguidas num envio só
 }
 
-/** Junta duas versões: de cada item, vale a mais recente; apagados valem se forem mais novos. */
+/**
+ * Junta duas versões: de cada item (e de cada tema da fila), vale a mais
+ * recente; apagados valem se forem mais novos.
+ */
 function juntar(a, b) {
   const resultado = vazio();
   resultado.apagados = { ...a.apagados };
   for (const [id, quando] of Object.entries(b.apagados || {})) {
     if (!resultado.apagados[id] || quando > resultado.apagados[id]) resultado.apagados[id] = quando;
   }
-  for (const fonte of [a.itens, b.itens || {}]) {
-    for (const item of Object.values(fonte)) {
-      const atual = resultado.itens[item.id];
-      if (!atual || item.atualizadoEm > atual.atualizadoEm) resultado.itens[item.id] = item;
+  for (const campo of ['itens', 'fila']) {
+    resultado[campo] = {};
+    for (const fonte of [a[campo] || {}, b[campo] || {}]) {
+      for (const item of Object.values(fonte)) {
+        const atual = resultado[campo][item.id];
+        if (!atual || item.atualizadoEm > atual.atualizadoEm) resultado[campo][item.id] = item;
+      }
+    }
+    for (const [id, quando] of Object.entries(resultado.apagados)) {
+      if (resultado[campo][id] && resultado[campo][id].atualizadoEm <= quando) delete resultado[campo][id];
     }
   }
-  for (const [id, quando] of Object.entries(resultado.apagados)) {
-    if (resultado.itens[id] && resultado.itens[id].atualizadoEm <= quando) delete resultado.itens[id];
-  }
   return resultado;
+}
+
+// ---------- Fila de temas sugeridos ----------
+// Você sugere assuntos; o robô usa o primeiro da fila no tema do dia
+// seguinte (ou de hoje, se ainda não passou das 7h) e tira da fila.
+
+/** A fila em ordem (o primeiro é o próximo a virar tema). */
+export const fila = () => Object.values(dados.fila || {}).sort((a, b) => a.ordem - b.ordem || a.criadoEm.localeCompare(b.criadoEm));
+
+export function sugerirTema(texto) {
+  const limpo = texto.trim().slice(0, 200);
+  if (!limpo) return false;
+  const agora = new Date().toISOString();
+  const id = `fila-${Date.now().toString(36)}`;
+  const ultima = fila().at(-1);
+  dados.fila ||= {};
+  dados.fila[id] = { id, texto: limpo, criadoEm: agora, atualizadoEm: agora, ordem: (ultima?.ordem ?? 0) + 1 };
+  salvar();
+  return true;
+}
+
+export function tirarDaFila(id) {
+  if (!dados.fila?.[id]) return;
+  delete dados.fila[id];
+  dados.apagados[id] = new Date().toISOString();
+  salvar();
+}
+
+/** Sobe (-1) ou desce (+1) um tema na fila, trocando de lugar com o vizinho. */
+export function moverNaFila(id, direcao) {
+  const lista = fila();
+  const i = lista.findIndex((x) => x.id === id);
+  const j = i + direcao;
+  if (i < 0 || j < 0 || j >= lista.length) return;
+  const agora = new Date().toISOString();
+  lista.forEach((x, k) => { x.ordem = k; });
+  [lista[i].ordem, lista[j].ordem] = [lista[j].ordem, lista[i].ordem];
+  lista[i].atualizadoEm = agora;
+  lista[j].atualizadoEm = agora;
+  salvar();
 }
 
 let sincronizando = null;
