@@ -1,0 +1,60 @@
+# =============================================================
+# Publica o site do Onda no GitHub Pages.
+#
+# Quando roda:
+#   - quando alguém muda o código do site (push na main);
+#   - logo depois que o robô de coleta ou o de ícones terminar.
+#     (Gravações feitas por um robô não disparam outros robôs
+#     sozinhas; por isso usamos "workflow_run", que espera o outro
+#     terminar e então publica.)
+#   - quando você aperta "Run workflow" na aba Actions.
+#
+# Configuração necessária (uma vez): Settings → Pages → Source:
+# "GitHub Actions".
+# =============================================================
+name: Publicar site
+
+on:
+  push:
+    branches: [main]
+  workflow_run:
+    workflows: ['Coletar notícias', 'Gerar ícones do app']
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write      # publicar no Pages
+  id-token: write   # provar ao Pages que o pedido vem deste repositório
+
+# Uma publicação por vez; se chegar outra, a mais nova vence.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  publicar:
+    # Só publica se o robô anterior deu certo (ou se não veio de outro robô).
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.publicacao.outputs.page_url }}
+    steps:
+      - name: Baixar a versão mais recente do repositório
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Preparar o Pages
+        uses: actions/configure-pages@v5
+
+      - name: Empacotar o site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Publicar
+        id: publicacao
+        uses: actions/deploy-pages@v4
