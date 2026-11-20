@@ -149,7 +149,7 @@ export function telaHoje(analise, dados) {
             <p>${esc(d.emUmaFrase)}</p>
           </div>
           <a class="botao principal largo" href="#analise" style="margin-top:14px">Ler a análise completa <span class="icone i-seta" aria-hidden="true"></span></a>
-          <p class="aviso-ia"><span class="icone i-ia" aria-hidden="true"></span>Análise feita por IA às ${hora(analise.geradoEm)} a partir de ${d.fontesUsadas.length} matérias. Confira nas fontes.</p>
+          <p class="aviso-ia"><span class="icone i-ia" aria-hidden="true"></span>${analise.versao > 1 ? `Versão ${analise.versao} · refeita às ${hora(analise.geradoEm)}` : `Análise feita por IA às ${hora(analise.geradoEm)}`} a partir de ${d.fontesUsadas.length} matérias. Confira nas fontes.</p>
         </div>
         <div class="secao">
           <div class="secao-cabeca"><h2>Também importa hoje</h2></div>
