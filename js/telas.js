@@ -491,26 +491,88 @@ export function telaTema(tema) {
     </div>`;
 }
 
-// ---------- EDIÇÕES ANTERIORES ----------
+// ---------- HISTÓRICO EM CALENDÁRIO ----------
+// Cada dia guarda, automaticamente, a edição do Onda (destaque + 5 fatos)
+// e o que você acompanhou. Toque num dia para ver tudo de forma compacta.
 
-export function telaEdicoes(indice, dados) {
-  const edicoes = indice?.edicoes || [];
+const MESES = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+
+/** Calendário de um mês. mes = "AAAA-MM". */
+function calendario({ mes, dia, diasEdicao, diasMeus, hoje }) {
+  const [ano, m] = mes.split('-').map(Number);
+  const primeiroDiaSemana = new Date(Date.UTC(ano, m - 1, 1)).getUTCDay(); // 0 = domingo
+  const diasNoMes = new Date(Date.UTC(ano, m, 0)).getUTCDate();
+  const celulas = [];
+  for (let i = 0; i < primeiroDiaSemana; i++) celulas.push('<span></span>');
+  for (let d = 1; d <= diasNoMes; d++) {
+    const data = `${mes}-${String(d).padStart(2, '0')}`;
+    const futuro = data > hoje;
+    const classes = [
+      diasEdicao.has(data) ? 'tem-edicao' : '',
+      diasMeus.has(data) ? 'tem-meus' : '',
+      data === dia ? 'escolhido' : '',
+      data === hoje ? 'hoje' : '',
+    ].join(' ');
+    celulas.push(`<button type="button" class="dia ${classes}" data-dia="${data}" ${futuro ? 'disabled' : ''} aria-label="${d} de ${MESES[m - 1]}">${d}</button>`);
+  }
+  const anterior = m === 1 ? `${ano - 1}-12` : `${ano}-${String(m - 1).padStart(2, '0')}`;
+  const proximo = m === 12 ? `${ano + 1}-01` : `${ano}-${String(m + 1).padStart(2, '0')}`;
+  return `
+    <div class="calendario cartao">
+      <div class="cal-topo">
+        <button type="button" class="botao-icone" data-mes="${anterior}" aria-label="Mês anterior" style="--icone:var(--i-voltar)"></button>
+        <strong>${MESES[m - 1]} de ${ano}</strong>
+        <button type="button" class="botao-icone" data-mes="${proximo}" aria-label="Próximo mês" style="--icone:var(--i-seta)" ${proximo > hoje.slice(0, 7) ? 'disabled' : ''}></button>
+      </div>
+      <div class="cal-semana"><span>D</span><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span></div>
+      <div class="cal-dias">${celulas.join('')}</div>
+      <div class="cal-legenda"><span class="l-edicao">edição do Onda</span><span class="l-meus">você acompanhou</span></div>
+    </div>`;
+}
+
+/** O dia escolhido, compacto: destaque, os 5 fatos e o que você acompanhou. */
+function diaCompacto({ dia, edicao, carregando, meusDoDia, dados }) {
+  const titulo = `<h3 class="dia-titulo">${esc(dataPorExtenso(dia))}</h3>`;
+  let corpo;
+  if (carregando) corpo = '<p class="vazio" style="padding:16px">Carregando…</p>';
+  else if (!edicao) corpo = '<p class="subtitulo" style="margin:4px 0 8px">Sem edição do Onda neste dia.</p>';
+  else {
+    const d = edicao.destaque;
+    corpo = `
+      <a class="linha-compacta destaque-compacto" href="#edicao/${esc(dia)}">
+        <span class="n">★</span>
+        <span><strong>${esc(d.titulo)}</strong><small>Destaque · notas ${d.notas.geral} · ${d.notas.mundo} · <b style="color:var(--ouro)">${d.notas.voce}</b></small></span>
+        <span class="icone i-seta" aria-hidden="true"></span>
+      </a>
+      ${(edicao.tambemImporta || []).map((t, i) => `
+        <button type="button" class="linha-compacta" data-fato="${esc(t.fatoId)}">
+          <span class="n">${i + 2}</span>
+          <span><strong>${esc(t.tituloPt)}</strong><small>${esc(dados.nomesRegioes[t.regioes[0]] || '')}</small></span>
+          <span class="icone i-seta" aria-hidden="true"></span>
+        </button>`).join('')}`;
+  }
+  const meus = meusDoDia.length ? `
+    <p class="rotulo ouro" style="margin:14px 0 6px">Você acompanhou</p>
+    ${meusDoDia.map((it) => `
+      <a class="linha-compacta" href="#analise-minha/${esc(it.id)}">
+        <span class="n" style="color:var(--ouro)">☆</span>
+        <span><strong>${esc(it.titulo)}</strong><small>${it.minha?.texto ? 'com a sua análise' : it.minha?.palpite ? 'com o seu palpite' : 'sem análise'}</small></span>
+        <span class="icone i-seta" aria-hidden="true"></span>
+      </a>`).join('')}` : '';
+  return `<div class="dia-compacto entrar-lado">${titulo}${corpo}${meus}</div>`;
+}
+
+/** Calendário + dia escolhido (usado no Meu Onda e em "Edições anteriores"). */
+export function areaHistorico(params) {
+  return `<div id="historico">${calendario(params)}${diaCompacto(params)}</div>`;
+}
+
+export function telaEdicoes(historicoHtml) {
   return `
     <div class="tela">
       <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>Hoje</button>
-      ${cabecalho('Histórico', 'Edições anteriores', 'O destaque e os outros 5 fatos de cada dia, guardados para reler.')}
-      ${edicoes.length ? `
-        <div class="importa cascata" style="margin-top:18px">
-          ${edicoes.map((e, i) => `
-            <a class="cartao-importa" href="#edicao/${esc(e.data)}" style="--i:${Math.min(i, 10)};grid-template-columns:52px 1fr 64px;text-decoration:none;color:inherit">
-              <span class="numero" style="font-size:15px;line-height:1.1">${esc(dataCurta(e.data))}</span>
-              <div>
-                <h3>${esc(e.titulo)}</h3>
-                <p>Notas ${e.notas.geral} · ${e.notas.mundo} · <span style="color:var(--ouro)">${e.notas.voce}</span> — e mais ${e.outros.length} fatos</p>
-              </div>
-              ${imagem({ url: e.imagem, regiao: e.regiao, nomeRegiao: dados.nomesRegioes[e.regiao], comCredito: false })}
-            </a>`).join('')}
-        </div>` : '<p class="vazio">As edições vão se acumulando aqui, uma por dia, a partir da primeira análise.</p>'}
+      ${cabecalho('Histórico', 'Edições anteriores', 'Todo dia o Onda guarda o destaque e os outros 5 fatos. Toque num dia.')}
+      <div style="margin-top:16px">${historicoHtml}</div>
     </div>`;
 }
 
@@ -574,7 +636,7 @@ function linhaMeu(item, dados, i) {
     </a>`;
 }
 
-export function telaMeu({ situacao, nomeConta, hoje, anteriores, limite, dados }) {
+export function telaMeu({ situacao, nomeConta, hoje, anteriores, limite, dados, historico }) {
   let conta;
   if (!situacao.configurado) {
     conta = `<div class="cartao meu-cartao"><div class="avatar"><span class="icone i-pessoa" aria-hidden="true"></span></div>
@@ -601,9 +663,9 @@ export function telaMeu({ situacao, nomeConta, hoje, anteriores, limite, dados }
           : '<p class="vazio">Toque em ☆ Acompanhar numa notícia (no destaque, nos 5 do dia ou no Explorar).</p>'}
       </div>
       <div class="secao">
-        <div class="secao-cabeca"><h2>Anteriores</h2><span>${anteriores.length}</span></div>
-        ${anteriores.length ? `<div class="importa cascata">${anteriores.map((it, i) => linhaMeu(it, dados, i)).join('')}</div>`
-          : '<p class="vazio">As notícias e análises dos dias anteriores ficam guardadas aqui.</p>'}
+        <div class="secao-cabeca"><h2>Dia a dia</h2><span>${anteriores.length} acompanhadas antes</span></div>
+        <p class="subtitulo" style="margin:-6px 0 12px">Cada dia guarda sozinho a edição do Onda (destaque + 5) e o que você acompanhou.</p>
+        ${historico}
       </div>
       ${situacao.conectado ? '<button class="botao largo" type="button" data-dropbox="desconectar" style="margin-top:28px">Desconectar este aparelho</button>' : ''}
     </div>`;

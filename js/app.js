@@ -22,6 +22,7 @@ const estado = {
   edicoes: null,      // data/app/edicoes.json (índice das edições anteriores)
   arquivos: {},       // edições e temas antigos já baixados (para não baixar de novo)
   edicaoAberta: null, // edição antiga que está na tela (para abrir as notícias dela)
+  cal: { mes: null, dia: null }, // mês e dia escolhidos no calendário do histórico
   explorar: { modo: 'regioes', busca: '', limite: 30 },
   gaveta: { chave: '', sub: '', limite: 30 },
 };
@@ -91,7 +92,7 @@ function htmlDaRota({ tela, partes }) {
   switch (tela) {
     case 'analise': return telas.telaAnalise(analise, dados, { botao: analise?.destaque ? botaoPara(analise.destaque.fatoId) : '' });
     case 'temas': return telas.telaTemas(estado.tema, estado.temas);
-    case 'edicoes': return telas.telaEdicoes(estado.edicoes, dados);
+    case 'edicoes': return telas.telaEdicoes(htmlHistorico());
     // Telas de dias antigos: baixam o arquivo do dia e depois se desenham.
     case 'edicao': return carregarDepois('analises', partes[1], (ed) => { estado.edicaoAberta = ed; return telas.telaAnalise(ed, dados, { comOutros: true, botao: botaoPara(ed.destaque.fatoId) }); });
     case 'tema': {
@@ -288,7 +289,37 @@ function htmlMeu() {
     anteriores: todos.filter((i) => i.data !== hojeData()),
     limite: meus.LIMITE_POR_DIA,
     dados: estado.dados,
+    historico: htmlHistorico(),
   });
+}
+
+// ---------- Histórico em calendário ----------
+
+/** Monta o calendário e o dia escolhido (baixa a edição do dia se precisar). */
+function htmlHistorico() {
+  const hoje = hojeData();
+  const datas = (estado.edicoes?.edicoes || []).map((e) => e.data);
+  const dia = estado.cal.dia || datas[0] || hoje;
+  const mes = estado.cal.mes || dia.slice(0, 7);
+  const diasEdicao = new Set(datas);
+  const diasMeus = new Set(meus.todos().map((i) => i.data));
+
+  let edicao = null;
+  let carregando = false;
+  if (estado.analise?.dataReferencia === dia && estado.analise.destaque) edicao = estado.analise;
+  else if (estado.arquivos[`analises/${dia}`]) edicao = estado.arquivos[`analises/${dia}`];
+  else if (diasEdicao.has(dia)) {
+    carregando = true;
+    arquivoDoDia('analises', dia).then(atualizarHistorico).catch(() => {});
+  }
+  estado.edicaoAberta = edicao; // para as notícias do dia abrirem na folha
+
+  return telas.areaHistorico({ mes, dia, diasEdicao, diasMeus, hoje, edicao, carregando, meusDoDia: meus.doDia(dia), dados: estado.dados });
+}
+
+function atualizarHistorico() {
+  const el = document.getElementById('historico');
+  if (el) el.outerHTML = htmlHistorico();
 }
 
 // Quando os seus dados mudam (ou sincronizam), a aba Meu Onda se redesenha.
@@ -345,11 +376,13 @@ document.addEventListener('input', (e) => {
 // ---------- Toques e cliques ----------
 
 document.addEventListener('click', (e) => {
-  const alvo = e.target.closest('[data-fato], [data-gaveta], [data-modo], [data-sub], [data-mais], [data-voltar], [data-fechar-folha], [data-recarregar], [data-acompanhar], [data-dropbox], [data-copiar-prompt], #veu');
+  const alvo = e.target.closest('[data-fato], [data-gaveta], [data-modo], [data-sub], [data-mais], [data-voltar], [data-fechar-folha], [data-recarregar], [data-acompanhar], [data-dropbox], [data-copiar-prompt], [data-mes], [data-dia], #veu');
   if (!alvo) return;
   const idEditor = alvo.closest('.editor')?.dataset.item;
 
-  if (alvo.dataset.acompanhar) alternarAcompanhar(alvo);
+  if (alvo.dataset.mes) { estado.cal.mes = alvo.dataset.mes; atualizarHistorico(); }
+  else if (alvo.dataset.dia) { estado.cal.dia = alvo.dataset.dia; estado.cal.mes = alvo.dataset.dia.slice(0, 7); atualizarHistorico(); }
+  else if (alvo.dataset.acompanhar) alternarAcompanhar(alvo);
   else if (alvo.dataset.dropbox === 'conectar') dropbox.conectar();
   else if (alvo.dataset.dropbox === 'sincronizar') { meus.sincronizar(); aviso('Sincronizando…'); }
   else if (alvo.dataset.dropbox === 'desconectar') dropbox.desconectar().then(() => { estado.nomeConta = ''; conteudo.innerHTML = htmlMeu(); aviso('Dropbox desconectado deste aparelho'); });
