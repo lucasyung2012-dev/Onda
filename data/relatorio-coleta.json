@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-20T21:51:08.665Z",
-  "fontesOk": 69,
-  "fontesComErro": 1,
-  "noticiasNovasNestaRodada": 2,
+  "geradoEm": "2026-11-20T22:54:55.629Z",
+  "fontesOk": 68,
+  "fontesComErro": 2,
+  "noticiasNovasNestaRodada": 44,
   "porFonte": [
     {
       "id": "nyt",
@@ -17,8 +17,8 @@
       "id": "wapo",
       "nome": "The Washington Post",
       "status": "ok",
-      "itensNoFeed": 13,
-      "aceitas": 13,
+      "itensNoFeed": 14,
+      "aceitas": 14,
       "descartadasPorIdade": 0,
       "comImagem": 0
     },
@@ -27,9 +27,9 @@
       "nome": "Fox News",
       "status": "ok",
       "itensNoFeed": 25,
-      "aceitas": 15,
-      "descartadasPorIdade": 10,
-      "comImagem": 15
+      "aceitas": 14,
+      "descartadasPorIdade": 11,
+      "comImagem": 14
     },
     {
       "id": "npr",
@@ -45,9 +45,9 @@
       "nome": "PBS NewsHour",
       "status": "ok",
       "itensNoFeed": 20,
-      "aceitas": 15,
-      "descartadasPorIdade": 5,
-      "comImagem": 15
+      "aceitas": 16,
+      "descartadasPorIdade": 4,
+      "comImagem": 16
     },
     {
       "id": "cbc",
@@ -64,17 +64,17 @@
       "nome": "Foreign Policy",
       "status": "ok",
       "itensNoFeed": 25,
-      "aceitas": 21,
-      "descartadasPorIdade": 4,
-      "comImagem": 21
+      "aceitas": 18,
+      "descartadasPorIdade": 7,
+      "comImagem": 18
     },
     {
       "id": "atlanticcouncil",
       "nome": "Atlantic Council",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 21,
-      "descartadasPorIdade": 79,
+      "aceitas": 23,
+      "descartadasPorIdade": 77,
       "comImagem": 0
     },
     {
@@ -126,10 +126,10 @@
       "id": "bbc",
       "nome": "BBC News",
       "status": "ok",
-      "itensNoFeed": 25,
-      "aceitas": 25,
+      "itensNoFeed": 26,
+      "aceitas": 26,
       "descartadasPorIdade": 0,
-      "comImagem": 25
+      "comImagem": 26
     },
     {
       "id": "bbcbrasil",
@@ -145,9 +145,9 @@
       "nome": "The Guardian",
       "status": "ok",
       "itensNoFeed": 45,
-      "aceitas": 40,
-      "descartadasPorIdade": 5,
-      "comImagem": 40
+      "aceitas": 39,
+      "descartadasPorIdade": 6,
+      "comImagem": 39
     },
     {
       "id": "dw",
@@ -215,9 +215,10 @@
     {
       "id": "euronews",
       "nome": "Euronews",
-      "status": "ok",
-      "itensNoFeed": 50,
-      "aceitas": 50,
+      "status": "erro",
+      "erro": "o site respondeu HTTP 406",
+      "itensNoFeed": 0,
+      "aceitas": 0,
       "descartadasPorIdade": 0,
       "comImagem": 0
     },
@@ -298,9 +299,9 @@
       "nome": "Haaretz",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 70,
-      "descartadasPorIdade": 30,
-      "comImagem": 70
+      "aceitas": 71,
+      "descartadasPorIdade": 29,
+      "comImagem": 71
     },
     {
       "id": "middleeasteye",
@@ -532,18 +533,18 @@
       "nome": "Gazeta do Povo Mundo",
       "status": "ok",
       "itensNoFeed": 61,
-      "aceitas": 59,
-      "descartadasPorIdade": 2,
-      "comImagem": 59
+      "aceitas": 60,
+      "descartadasPorIdade": 1,
+      "comImagem": 60
     },
     {
       "id": "cartacapital",
       "nome": "CartaCapital Mundo",
       "status": "ok",
       "itensNoFeed": 20,
-      "aceitas": 19,
-      "descartadasPorIdade": 1,
-      "comImagem": 19
+      "aceitas": 18,
+      "descartadasPorIdade": 2,
+      "comImagem": 18
     },
     {
       "id": "operamundi",
@@ -604,9 +605,9 @@
       "nome": "InSight Crime",
       "status": "ok",
       "itensNoFeed": 11,
-      "aceitas": 8,
-      "descartadasPorIdade": 3,
-      "comImagem": 8
+      "aceitas": 6,
+      "descartadasPorIdade": 5,
+      "comImagem": 6
     },
     {
       "id": "onunews",
