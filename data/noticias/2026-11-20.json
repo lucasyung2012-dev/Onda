@@ -2,6 +2,67 @@
   "data": "2026-11-20",
   "noticias": [
     {
+      "id": "ed891034bd17",
+      "titulo": "Reino Unido e União Europeia firmam acordo e tentam reconstruir laços após Brexit",
+      "resumo": "Reino Unido fecha acordo de cooperação com a União Europeia O Reino Unido e a União Europeia (UE) concordaram nesta sexta-feira (20) em remover barreiras comerciais e ampliar as oportunidades de viagem para jovens. Com o acordo, as lideranças tentam reconstruir laços tensos com…",
+      "link": "https://g1.globo.com/mundo/noticia/2026/11/20/reino-unido-ue-acordo-brexit.ghtml",
+      "fonte": "g1",
+      "fonteNome": "g1 Mundo",
+      "pais": "Brasil",
+      "visao": "Portal do Grupo Globo",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:41:49.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://s2-g1.glbimg.com/rSTMShStcmigpmfy7L5PyQDJkGw=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/i/8/LOQsOdQ0yTGRnhSRJLBg/ap26324361853975.jpg",
+      "imagemCredito": "g1 Mundo",
+      "regioes": [
+        "europa",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "economia",
+        "politica",
+        "diplomacia",
+        "conflitos",
+        "clima",
+        "direitos",
+        "energia",
+        "midia",
+        "saude"
+      ],
+      "coletadoEm": "2026-11-20T20:46:12.688Z"
+    },
+    {
+      "id": "8da05aa07f64",
+      "titulo": "Brazil ex-President Bolsonaro taken to hospital with abdominal pain, son says",
+      "resumo": "SAO PAULO, Nov 20 - Imprisoned former Brazilian President Jair Bolsonaro has been taken to hospital after suffering \\\"severe abdominal pain,\\\" his son Carlos Bolsonaro said in a post on X on Friday.",
+      "link": "https://www.straitstimes.com/world/brazil-ex-president-bolsonaro-taken-to-hospital-with-abdominal-pain-son-says",
+      "fonte": "straitstimes",
+      "fonteNome": "The Straits Times",
+      "pais": "Singapura",
+      "visao": "Jornal de referência de Singapura",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:40:28.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "brasil"
+      ],
+      "temas": [
+        "politica"
+      ],
+      "coletadoEm": "2026-11-20T20:46:12.688Z"
+    },
+    {
       "id": "7caf8b434d45",
       "titulo": "US right wing voices attack Islam online after a study projects global Muslim majority by 2035",
       "resumo": "Submitted by Nouran Saleh on Fri, 11/20/2026 - 19:32 Pew Research study projects Islam to grow by 80 percent globally by 2070, to the ire of the US right wing Muslim pilgrims perform Umrah around the Kaaba, Islam's holiest shrine, in Saudi Arabia's holy city of Mecca, on 20…",
@@ -30792,6 +30853,34 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     },
     {
+      "id": "a28f14318492",
+      "titulo": "Africa: Africa Day At COP31 Calls for Water Security, Climate Resilience and Accessible Finance to Advance Agenda 2063",
+      "resumo": "[African Development Bank (AfDB)] Africa Day at COP31 brought together African leaders, ministers, development partners, financial institutions, private sector representatives, civil society and youth representatives to advance a shared agenda on water security, climate…",
+      "link": "https://allafrica.com/stories/202611200119.html",
+      "fonte": "allafrica",
+      "fonteNome": "AllAfrica",
+      "pais": "África (vários)",
+      "visao": "Reúne jornais de todo o continente africano",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T05:05:12.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "africa",
+        "global"
+      ],
+      "temas": [
+        "clima",
+        "conflitos"
+      ],
+      "coletadoEm": "2026-11-20T20:46:12.688Z"
+    },
+    {
       "id": "61cbd17e66e0",
       "titulo": "Schumer doubles down on hawkery despite Van Hollen's anti-war test",
       "resumo": "In some of his first remarks on the Senate floor since his leadership of the Democratic caucus was formally challenged, Sen. Chuck Schumer of New York blasted President Donald Trump for pursuing an insufficiently hawkish foreign policy. “Trump calls the trilateral meeting with Xi…",
@@ -32458,5 +32547,5 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     }
   ],
-  "atualizadoEm": "2026-11-20T20:38:32.716Z"
+  "atualizadoEm": "2026-11-20T20:46:12.688Z"
 }

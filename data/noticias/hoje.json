@@ -1,10 +1,10 @@
 {
-  "geradoEm": "2026-11-20T20:38:32.716Z",
+  "geradoEm": "2026-11-20T20:46:12.688Z",
   "fuso": "America/Sao_Paulo",
   "dataReferencia": "2026-11-20",
   "janelaHoras": 24,
-  "totalNoticias": 1380,
-  "totalFatos": 1105,
+  "totalNoticias": 1381,
+  "totalFatos": 1104,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -195,6 +195,37 @@
         "92b1903e2810",
         "fbff5ae02f69",
         "d51383a5608f"
+      ]
+    },
+    {
+      "id": "ed891034bd17",
+      "titulo": "Reino Unido e União Europeia firmam acordo e tentam reconstruir laços após Brexit",
+      "imagem": "https://s2-g1.glbimg.com/rSTMShStcmigpmfy7L5PyQDJkGw=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/i/8/LOQsOdQ0yTGRnhSRJLBg/ap26324361853975.jpg",
+      "fontes": 6,
+      "umaFonteSo": false,
+      "regioes": [
+        "europa",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "diplomacia",
+        "economia",
+        "clima",
+        "politica",
+        "conflitos",
+        "direitos",
+        "energia",
+        "midia",
+        "saude"
+      ],
+      "maisRecente": "2026-11-20T20:41:49.000Z",
+      "noticias": [
+        "ed891034bd17",
+        "c99aeb6b2ce5",
+        "e779d1423620",
+        "d3bbdd510cff",
+        "f1abe986ef18",
+        "c1f34ebd8316"
       ]
     },
     {
@@ -479,28 +510,6 @@
         "8e4e752402d8",
         "4e092f34ed9a",
         "7ddcd30869f3"
-      ]
-    },
-    {
-      "id": "fdda3f0faec7",
-      "titulo": "Reino Unido e UE avançam em reaproximação dez anos após Brexit",
-      "imagem": "https://s.rfi.fr/media/display/5abce4b0-e4e9-11f1-a425-6b451f569414/w:1024/p:16x9/AP26324352017318.jpg",
-      "fontes": 5,
-      "umaFonteSo": false,
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "diplomacia",
-        "economia"
-      ],
-      "maisRecente": "2026-11-20T16:00:29.000Z",
-      "noticias": [
-        "fdda3f0faec7",
-        "c99aeb6b2ce5",
-        "d3bbdd510cff",
-        "f1abe986ef18",
-        "c1f34ebd8316"
       ]
     },
     {
@@ -1824,6 +1833,26 @@
       ]
     },
     {
+      "id": "ddee8393e899",
+      "titulo": "Africa at COP31: Will climate cash finally flow?",
+      "imagem": "",
+      "fontes": 2,
+      "umaFonteSo": false,
+      "regioes": [
+        "africa",
+        "global"
+      ],
+      "temas": [
+        "clima",
+        "conflitos"
+      ],
+      "maisRecente": "2026-11-20T14:18:00.000Z",
+      "noticias": [
+        "ddee8393e899",
+        "a28f14318492"
+      ]
+    },
+    {
       "id": "375adef90e0f",
       "titulo": "South Africa: Cachalia Drops Apartheid Truth Bombs As Latest Stats Show '60 Killed Daily in SA'",
       "imagem": "https://cdn.dailymaverick.co.za/i/mmcvdFG95VA4cscjHFGABNb-FAY=/800x0/smart/filters:strip_exif()/file/attachments/orphans/cachalia-truths-caryn_930967.jpg",
@@ -2449,6 +2478,23 @@
       "noticias": [
         "2145a303e43a",
         "0521d2c8ffd9"
+      ]
+    },
+    {
+      "id": "8da05aa07f64",
+      "titulo": "Brazil ex-President Bolsonaro taken to hospital with abdominal pain, son says",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "brasil"
+      ],
+      "temas": [
+        "politica"
+      ],
+      "maisRecente": "2026-11-20T20:40:28.000Z",
+      "noticias": [
+        "8da05aa07f64"
       ]
     },
     {
@@ -8235,6 +8281,24 @@
       ]
     },
     {
+      "id": "fdda3f0faec7",
+      "titulo": "Reino Unido e UE avançam em reaproximação dez anos após Brexit",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "diplomacia",
+        "economia"
+      ],
+      "maisRecente": "2026-11-20T16:00:29.000Z",
+      "noticias": [
+        "fdda3f0faec7"
+      ]
+    },
+    {
       "id": "e4ddad96d238",
       "titulo": "Coalition Carries out Sophisticated Operation to Neutralize Sources of Threat in Hodeidah",
       "imagem": "https://static.srpcdigital.com/styles/414x217/public/2026-11/1886164.jpeg.webp?VersionId=sKshumjv.97dHoy6BsC06K4zky2v8RGR",
@@ -8878,25 +8942,6 @@
       "maisRecente": "2026-11-20T15:17:17.000Z",
       "noticias": [
         "9f231adcaccf"
-      ]
-    },
-    {
-      "id": "e779d1423620",
-      "titulo": "Irlanda celebra acordo entre a UE e o Reino Unido para reforçar laços após o Brexit",
-      "imagem": "https://media.gazetadopovo.com.br/2026/11/20121413/7488c8d3a5fd0d910ce67f296aa24597b2523ed5-960x540.jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "economia",
-        "clima",
-        "diplomacia"
-      ],
-      "maisRecente": "2026-11-20T15:17:09.000Z",
-      "noticias": [
-        "e779d1423620"
       ]
     },
     {
@@ -10098,25 +10143,6 @@
       "maisRecente": "2026-11-20T14:19:26.000Z",
       "noticias": [
         "2c53e605f92f"
-      ]
-    },
-    {
-      "id": "ddee8393e899",
-      "titulo": "Africa at COP31: Will climate cash finally flow?",
-      "imagem": "",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "africa",
-        "global"
-      ],
-      "temas": [
-        "clima",
-        "conflitos"
-      ],
-      "maisRecente": "2026-11-20T14:18:00.000Z",
-      "noticias": [
-        "ddee8393e899"
       ]
     },
     {
@@ -20256,45 +20282,70 @@
       "noticias": [
         "c0df60649105"
       ]
-    },
+    }
+  ],
+  "noticias": [
     {
-      "id": "c2292ca0ac7b",
-      "titulo": "Kyiv’s partners should prioritize Ukraine’s domestic drone production",
-      "imagem": "",
-      "fontes": 1,
-      "umaFonteSo": true,
+      "id": "ed891034bd17",
+      "titulo": "Reino Unido e União Europeia firmam acordo e tentam reconstruir laços após Brexit",
+      "resumo": "Reino Unido fecha acordo de cooperação com a União Europeia O Reino Unido e a União Europeia (UE) concordaram nesta sexta-feira (20) em remover barreiras comerciais e ampliar as oportunidades de viagem para jovens. Com o acordo, as lideranças tentam reconstruir laços tensos com…",
+      "link": "https://g1.globo.com/mundo/noticia/2026/11/20/reino-unido-ue-acordo-brexit.ghtml",
+      "fonte": "g1",
+      "fonteNome": "g1 Mundo",
+      "pais": "Brasil",
+      "visao": "Portal do Grupo Globo",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:41:49.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://s2-g1.glbimg.com/rSTMShStcmigpmfy7L5PyQDJkGw=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/i/8/LOQsOdQ0yTGRnhSRJLBg/ap26324361853975.jpg",
+      "imagemCredito": "g1 Mundo",
       "regioes": [
-        "europa"
+        "europa",
+        "asia-pacifico"
       ],
       "temas": [
-        "conflitos",
         "economia",
-        "energia"
+        "politica",
+        "diplomacia",
+        "conflitos",
+        "clima",
+        "direitos",
+        "energia",
+        "midia",
+        "saude"
       ],
-      "maisRecente": "2026-11-19T20:39:47.000Z",
-      "noticias": [
-        "c2292ca0ac7b"
-      ]
+      "coletadoEm": "2026-11-20T20:46:12.688Z"
     },
     {
-      "id": "52838d7902ae",
-      "titulo": "Hora extra mais cara com fim da 6x1? Veja conta com salário de R$ 3 mil e o que muda com decreto de Lula",
-      "imagem": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/9878/live/7574c280-e432-11f1-8346-933d3547e297.jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
+      "id": "8da05aa07f64",
+      "titulo": "Brazil ex-President Bolsonaro taken to hospital with abdominal pain, son says",
+      "resumo": "SAO PAULO, Nov 20 - Imprisoned former Brazilian President Jair Bolsonaro has been taken to hospital after suffering \\\"severe abdominal pain,\\\" his son Carlos Bolsonaro said in a post on X on Friday.",
+      "link": "https://www.straitstimes.com/world/brazil-ex-president-bolsonaro-taken-to-hospital-with-abdominal-pain-son-says",
+      "fonte": "straitstimes",
+      "fonteNome": "The Straits Times",
+      "pais": "Singapura",
+      "visao": "Jornal de referência de Singapura",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:40:28.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
       "regioes": [
         "brasil"
       ],
       "temas": [
-        "outros"
+        "politica"
       ],
-      "maisRecente": "2026-11-19T20:39:07.000Z",
-      "noticias": [
-        "52838d7902ae"
-      ]
-    }
-  ],
-  "noticias": [
+      "coletadoEm": "2026-11-20T20:46:12.688Z"
+    },
     {
       "id": "7caf8b434d45",
       "titulo": "US right wing voices attack Islam online after a study projects global Muslim majority by 2035",
@@ -51086,6 +51137,34 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     },
     {
+      "id": "a28f14318492",
+      "titulo": "Africa: Africa Day At COP31 Calls for Water Security, Climate Resilience and Accessible Finance to Advance Agenda 2063",
+      "resumo": "[African Development Bank (AfDB)] Africa Day at COP31 brought together African leaders, ministers, development partners, financial institutions, private sector representatives, civil society and youth representatives to advance a shared agenda on water security, climate…",
+      "link": "https://allafrica.com/stories/202611200119.html",
+      "fonte": "allafrica",
+      "fonteNome": "AllAfrica",
+      "pais": "África (vários)",
+      "visao": "Reúne jornais de todo o continente africano",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T05:05:12.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "africa",
+        "global"
+      ],
+      "temas": [
+        "clima",
+        "conflitos"
+      ],
+      "coletadoEm": "2026-11-20T20:46:12.688Z"
+    },
+    {
       "id": "61cbd17e66e0",
       "titulo": "Schumer doubles down on hawkery despite Van Hollen's anti-war test",
       "resumo": "In some of his first remarks on the Senate floor since his leadership of the Democratic caucus was formally challenged, Sen. Chuck Schumer of New York blasted President Donald Trump for pursuing an insufficiently hawkish foreign policy. “Trump calls the trilateral meeting with Xi…",
@@ -57498,60 +57577,6 @@
         "diplomacia"
       ],
       "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "c2292ca0ac7b",
-      "titulo": "Kyiv’s partners should prioritize Ukraine’s domestic drone production",
-      "resumo": "Ukrainian long-range drone strikes have reduced Russian oil refining output by around 45 percent in the past few weeks, Reuters reports. Kyiv's partners should build on this success and prioritize funding for Ukraine's domestic drone industry, writes Leonid Baratz. The post…",
-      "link": "https://www.atlanticcouncil.org/blogs/ukrainealert/kyivs-partners-should-prioritize-ukraines-domestic-drone-production/",
-      "fonte": "atlanticcouncil",
-      "fonteNome": "Atlantic Council",
-      "pais": "EUA",
-      "visao": "Centro de estudos pró-OTAN e transatlântico",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "analise",
-      "publicadoEm": "2026-11-19T20:39:47.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "",
-      "imagemCredito": "",
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "conflitos",
-        "economia",
-        "energia"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "52838d7902ae",
-      "titulo": "Hora extra mais cara com fim da 6x1? Veja conta com salário de R$ 3 mil e o que muda com decreto de Lula",
-      "resumo": "A maior mudança nas jornadas de trabalho em quase 40 anos começará a entrar em vigor no mês que vem, com um período de transição. Ainda há contestações na Justiça.",
-      "link": "https://www.bbc.com/portuguese/articles/cvlyjkw9zr5jo?at_medium=RSS&at_campaign=rss",
-      "fonte": "bbcbrasil",
-      "fonteNome": "BBC News Brasil",
-      "pais": "Reino Unido",
-      "visao": "Serviço em português da BBC",
-      "idioma": "pt",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T20:39:07.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/9878/live/7574c280-e432-11f1-8346-933d3547e297.jpg",
-      "imagemCredito": "BBC News Brasil",
-      "regioes": [
-        "brasil"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
     }
   ]
 }

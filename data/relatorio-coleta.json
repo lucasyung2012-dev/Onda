@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-20T20:38:32.716Z",
+  "geradoEm": "2026-11-20T20:46:12.688Z",
   "fontesOk": 69,
   "fontesComErro": 1,
-  "noticiasNovasNestaRodada": 4,
+  "noticiasNovasNestaRodada": 3,
   "porFonte": [
     {
       "id": "nyt",
@@ -271,9 +271,9 @@
       "nome": "Kyiv Post",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 89,
-      "descartadasPorIdade": 11,
-      "comImagem": 89
+      "aceitas": 88,
+      "descartadasPorIdade": 12,
+      "comImagem": 88
     },
     {
       "id": "pravdaua",
@@ -442,9 +442,9 @@
       "nome": "The Diplomat",
       "status": "ok",
       "itensNoFeed": 96,
-      "aceitas": 20,
-      "descartadasPorIdade": 76,
-      "comImagem": 20
+      "aceitas": 19,
+      "descartadasPorIdade": 77,
+      "comImagem": 19
     },
     {
       "id": "lowy",
@@ -469,8 +469,8 @@
       "nome": "AllAfrica",
       "status": "ok",
       "itensNoFeed": 33,
-      "aceitas": 30,
-      "descartadasPorIdade": 3,
+      "aceitas": 32,
+      "descartadasPorIdade": 1,
       "comImagem": 0
     },
     {
@@ -622,9 +622,9 @@
       "nome": "UN News",
       "status": "ok",
       "itensNoFeed": 30,
-      "aceitas": 11,
-      "descartadasPorIdade": 19,
-      "comImagem": 11
+      "aceitas": 10,
+      "descartadasPorIdade": 20,
+      "comImagem": 10
     },
     {
       "id": "crisisgroup",
