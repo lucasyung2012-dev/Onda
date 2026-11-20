@@ -1,0 +1,647 @@
+{
+  "status": "ok",
+  "geradoEm": "2026-11-20T21:36:23.920Z",
+  "dataReferencia": "2026-11-20",
+  "fuso": "America/Sao_Paulo",
+  "ia": {
+    "provedor": "Groq",
+    "modelo": "openai/gpt-oss-120b",
+    "aviso": "Análise gerada por IA a partir das matérias listadas. Pode conter erros: confira nas fontes."
+  },
+  "destaque": {
+    "fatoId": "907bb66957b9",
+    "regioes": [
+      "europa",
+      "america-norte",
+      "asia-pacifico",
+      "global"
+    ],
+    "temas": [
+      "diplomacia",
+      "conflitos",
+      "politica",
+      "energia",
+      "economia",
+      "direitos"
+    ],
+    "imagem": "https://meduza.io/image/attachments/images/012/997/359/small/4o1tfRvVOU0ghhkn8RwvCg",
+    "credito": "Meduza",
+    "criterio": "Reúne as três maiores potências globais, podendo redefinir alianças estratégicas e influenciar a ordem mundial",
+    "titulo": "Cúpula Trump‑Putin‑Xi em Shenzhen: declarações de paz, mas poucos resultados concretos",
+    "emUmaFrase": "O encontro dos três líderes gera declarações simbólicas e queda nas bolsas, mas não altera imediatamente o preço da gasolina ou o cotidiano dos brasileiros.",
+    "oQueAconteceu": "Em 19 de novembro de 2026, na cidade chinesa de Shenzhen, o presidente dos EUA Donald Trump, o presidente da Rússia Vladimir Putin e o presidente da China Xi Jinping se reuniram pessoalmente pela primeira vez. O encontro foi descrito como historicamente simbólico, mas com resultados modestos (Meduza, TASS).\n\nOs líderes assinaram uma \"declaração de paz\" que reafirma que uma guerra nuclear não pode ser vencida, promete avançar reformas nas Nações Unidas, aumentar o fornecimento de combustíveis e garantir imunidade a autoridades estaduais (CNA). A cláusula que mencionava a guerra na Ucrânia foi retirada a pedido dos EUA, e o documento final não citou o conflito (Kyiv Post).\n\nTrump declarou que as conversas com Putin foram \"muito boas\" sobre a Ucrânia e que Putin quer encerrar a guerra por via diplomática (Straits Times, Ukrainska Pravda). Putin, por sua vez, saiu do summit celebrando um triunfo simbólico e afirmando que compartilha valores com Trump (NYT). Analistas apontam que poucos resultados concretos foram alcançados, expondo limites da diplomacia pessoal de Trump (Daily Sabah, Meduza).\n\nA reação dos mercados foi imediata: o índice MOEX russo caiu abaixo de 2.400 pontos, seu nível mais baixo desde meados de outubro, refletindo a percepção de falta de avanços (The Moscow Times). O summit também reacendeu discussões sobre um roteiro conjunto para armas nucleares (The Hindu).",
+    "dataDoFato": "2026-11-19",
+    "dataDoFatoObs": "O fato ocorreu em 19 de novembro de 2026; as matérias foram publicadas em 20 de novembro relatando o evento.",
+    "porQueImporta": "É a primeira reunião presencial entre os três maiores poderes globais desde a Guerra Fria, sinalizando uma nova dinâmica de diplomacia entre EUA, Rússia e China. A retirada da cláusula sobre a Ucrânia demonstra a influência dos EUA nas negociações e pode afetar a pressão internacional sobre Moscou.\n\nAlém disso, a declaração conjunta sobre a impossibilidade de vitória nuclear e a promessa de reformas na ONU trazem implicações para a segurança global, enquanto a queda nas bolsas russas indica que investidores ainda veem risco nas relações trilaterais, o que pode repercutir nos mercados de energia e commodities.",
+    "cadeia": [
+      {
+        "passo": "Summit gera declaração de paz sem menção à Ucrânia",
+        "camada": "politica"
+      },
+      {
+        "passo": "Remoção da cláusula ucraniana reduz pressão sobre a Rússia",
+        "camada": "politica"
+      },
+      {
+        "passo": "Investidores reagem, índice MOEX cai",
+        "camada": "economia"
+      },
+      {
+        "passo": "Incerteza eleva preços internacionais do petróleo",
+        "camada": "energia"
+      },
+      {
+        "passo": "Aumento do preço do combustível no Brasil",
+        "camada": "precos"
+      },
+      {
+        "passo": "Elevação dos custos de transporte e bens de consumo em São Paulo",
+        "camada": "sociedade"
+      }
+    ],
+    "chegaEmVoce": {
+      "tipo": "indireto",
+      "texto": "A alta nos preços do petróleo pode encarecer a gasolina e o diesel nas bombas, refletindo em custos maiores de transporte e, consequentemente, em preços de alimentos e outros produtos no dia a dia dos paulistanos."
+    },
+    "notas": {
+      "geral": {
+        "nota": 7,
+        "porque": "Grande encontro de potências que pode mudar equilíbrios regionais"
+      },
+      "mundo": {
+        "nota": 7,
+        "porque": "Impacto significativo nas relações internacionais e nos mercados globais"
+      },
+      "voce": {
+        "nota": 2,
+        "porque": "Efeito indireto e limitado ao preço de combustíveis"
+      }
+    },
+    "afirmacoes": [
+      {
+        "tipo": "fato",
+        "texto": "Trump, Putin e Xi se encontraram em Shenzhen em 19 de novembro de 2026",
+        "fontes": [
+          0,
+          1
+        ]
+      },
+      {
+        "tipo": "declaracao",
+        "texto": "Os líderes assinaram uma declaração de paz que reafirma que guerra nuclear não pode ser vencida",
+        "fontes": [
+          11
+        ]
+      },
+      {
+        "tipo": "declaracao",
+        "texto": "A cláusula sobre a guerra na Ucrânia foi removida do documento final a pedido dos EUA",
+        "fontes": [
+          7
+        ]
+      },
+      {
+        "tipo": "declaracao",
+        "texto": "Trump afirmou que as conversas com Putin foram \"muito boas\" sobre a Ucrânia",
+        "fontes": [
+          2
+        ]
+      },
+      {
+        "tipo": "declaracao",
+        "texto": "Putin declarou que compartilha valores com Trump, celebrando vitória simbólica",
+        "fontes": [
+          6
+        ]
+      },
+      {
+        "tipo": "alegacao",
+        "texto": "O summit produziu poucos resultados concretos, expondo limites da diplomacia pessoal de Trump",
+        "fontes": [
+          9,
+          0
+        ]
+      },
+      {
+        "tipo": "fato",
+        "texto": "O índice MOEX russo caiu abaixo de 2.400 pontos após o summit",
+        "fontes": [
+          5
+        ]
+      },
+      {
+        "tipo": "analise",
+        "texto": "A reunião pode abrir caminho para discussões conjuntas sobre armas nucleares",
+        "fontes": [
+          4
+        ]
+      }
+    ],
+    "oQueNaoSabemos": "Se haverá negociações concretas sobre controle de armas nucleares ou mudanças nas sanções à Rússia nos próximos meses.",
+    "oQueAcompanhar": [
+      "Evolução dos preços internacionais do petróleo",
+      "Reações dos mercados financeiros globais ao summit",
+      "Novas declarações sobre a Ucrânia ou sanções",
+      "Desdobramentos de possíveis diálogos sobre reforma da ONU"
+    ],
+    "fontesUsadas": [
+      {
+        "fonte": "Meduza",
+        "pais": "Rússia",
+        "visao": "Site russo independente, no exílio, oposição ao Kremlin",
+        "estatal": false,
+        "titulo": "‘This was no Yalta’: How the world’s press read the Trump–Putin–Xi summit in China",
+        "link": "https://meduza.io/en/feature/2026/11/21/this-was-no-yalta-how-the-world-s-press-read-the-trump-putin-xi-summit-in-china",
+        "publicadoEm": "2026-11-20T21:20:52.000Z"
+      },
+      {
+        "fonte": "TASS",
+        "pais": "Rússia",
+        "visao": "Agência estatal russa (versão oficial do Kremlin)",
+        "estatal": true,
+        "titulo": "Trump dubs talks with Putin, Xi ‘summit of three’",
+        "link": "https://tass.com/world/2222729",
+        "publicadoEm": "2026-11-20T19:41:51.000Z"
+      },
+      {
+        "fonte": "The Straits Times",
+        "pais": "Singapura",
+        "visao": "Jornal de referência de Singapura",
+        "estatal": false,
+        "titulo": "Trump says he, Russia’s Putin had ‘very good’ talks on Ukraine",
+        "link": "https://www.straitstimes.com/world/europe/trump-says-he-putin-had-very-good-talks-on-ukraine",
+        "publicadoEm": "2026-11-20T18:50:46.000Z"
+      },
+      {
+        "fonte": "Ukrainska Pravda",
+        "pais": "Ucrânia",
+        "visao": "Site ucraniano de jornalismo independente",
+        "estatal": false,
+        "titulo": "Trump says Putin wants to end Russia's war against Ukraine through diplomacy",
+        "link": "https://www.pravda.com.ua/eng/news/2026/11/20/8063876/",
+        "publicadoEm": "2026-11-20T18:25:00.000Z"
+      },
+      {
+        "fonte": "The Hindu",
+        "pais": "Índia",
+        "visao": "Jornal de referência indiano",
+        "estatal": false,
+        "titulo": "Three to tango: On Trump, Xi, Putin trilateral summit",
+        "link": "https://www.thehindu.com/opinion/editorial/three-to-tango-on-trump-xi-putin-trilateral-summit/article71725845.ece",
+        "publicadoEm": "2026-11-20T18:22:45.000Z"
+      },
+      {
+        "fonte": "The Moscow Times",
+        "pais": "Rússia",
+        "visao": "Jornal russo independente, no exílio",
+        "estatal": false,
+        "titulo": "Russian Stocks Fall After No Breakthrough at Putin-Trump-Xi Summit",
+        "link": "https://www.themoscowtimes.com/2026/11/20/russian-stocks-fall-after-no-breakthrough-at-putin-trump-xi-summit-a94334",
+        "publicadoEm": "2026-11-20T14:20:46.000Z"
+      },
+      {
+        "fonte": "The New York Times",
+        "pais": "EUA",
+        "visao": "Jornal de referência dos EUA, centro-esquerda",
+        "estatal": false,
+        "titulo": "Putin Exits Summit With Symbolic Win, Saying He and Trump Share ‘Values’",
+        "link": "https://www.nytimes.com/2026/11/20/world/europe/putin-trump-xi-summit-apec.html",
+        "publicadoEm": "2026-11-20T13:56:56.000Z"
+      },
+      {
+        "fonte": "Kyiv Post",
+        "pais": "Ucrânia",
+        "visao": "Jornal ucraniano",
+        "estatal": false,
+        "titulo": "US Asked Trump-Putin-Xi Summit to Drop Ukraine Clause From ‘Peace Declaration,’ Stubb Says",
+        "link": "https://www.kyivpost.com/post/90722",
+        "publicadoEm": "2026-11-20T13:18:12.000Z"
+      },
+      {
+        "fonte": "Asharq Al-Awsat",
+        "pais": "Arábia Saudita",
+        "visao": "Jornal pan-árabe de dono saudita",
+        "estatal": false,
+        "titulo": "Xi-Putin-Trump Summit: What Comes Next?",
+        "link": "https://english.aawsat.com/node/5343528",
+        "publicadoEm": "2026-11-20T09:31:41.000Z"
+      },
+      {
+        "fonte": "Daily Sabah",
+        "pais": "Turquia",
+        "visao": "Jornal turco pró-governo Erdogan",
+        "estatal": false,
+        "titulo": "Trump’s summit with Xi, Putin exposes limits of his personal diplomacy",
+        "link": "https://www.dailysabah.com/world/americas/trumps-summit-with-xi-putin-exposes-limits-of-his-personal-diplomacy",
+        "publicadoEm": "2026-11-20T08:47:44.000Z"
+      },
+      {
+        "fonte": "The Diplomat",
+        "pais": "Japão",
+        "visao": "Revista de análise sobre Ásia-Pacífico",
+        "estatal": false,
+        "titulo": "The ICJ’s Myanmar Genocide Ruling: What Comes Next?",
+        "link": "https://thediplomat.com/2026/11/the-icjs-myanmar-genocide-ruling-what-comes-next/",
+        "publicadoEm": "2026-11-20T05:15:00.000Z"
+      },
+      {
+        "fonte": "CNA",
+        "pais": "Singapura",
+        "visao": "Canal de Singapura, foco no Sudeste Asiático",
+        "estatal": true,
+        "titulo": "Trump, Xi and Putin release 'peace declaration' from unprecedented summit",
+        "link": "https://www.channelnewsasia.com/world/china-russia-us-peace-declaration-nuclear-trilateral-talks-6565716",
+        "publicadoEm": "2026-11-20T03:16:00.000Z"
+      }
+    ]
+  },
+  "tambemImporta": [
+    {
+      "fatoId": "9095096ce73c",
+      "tituloPt": "Acordo histórico entre UE e Reino Unido",
+      "porQueImporta": "Reaproximação UE‑UK pode abrir oportunidades comerciais para o Brasil e alterar dinâmicas econômicas europeias",
+      "regioes": [
+        "europa",
+        "mundo"
+      ],
+      "temas": [
+        "diplomacia",
+        "economia",
+        "politica",
+        "clima",
+        "conflitos"
+      ],
+      "imagem": "https://dam.mediacorp.sg/image/upload/s--KhTQEj19--/fl_relative,g_south_east,l_mediacorp:cna:watermark:2024-04:reuters_1,w_0.1/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/one-cms/core/2026-11-20T140638Z_1_LYNXNPEMAJ16P_RTROPTP_3_EU-BRITAIN-SUMMIT.JPG?itok=C6HtvZUl",
+      "credito": "CNA",
+      "resumo": "UK Prime Minister Andy Burnham and EU leaders have agreed on new deals to improve trade, travel and youth mobility after Brexit, but disagreements over university fees remain unresolved.",
+      "materias": [
+        {
+          "fonte": "CNA",
+          "pais": "Singapura",
+          "visao": "Canal de Singapura, foco no Sudeste Asiático",
+          "estatal": true,
+          "tipo": "noticia",
+          "titulo": "EU and UK hail 'landmark' deal to rebuild ties at Brussels summit",
+          "link": "https://www.channelnewsasia.com/world/burnham-eu-brexit-landmark-deal-brussels-summit-6570481",
+          "publicadoEm": "2026-11-20T20:10:00.000Z"
+        },
+        {
+          "fonte": "France 24",
+          "pais": "França",
+          "visao": "Emissora internacional pública francesa",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "UK and EU strike ‘landmark’ deal to rebuild ties after Brexit",
+          "link": "https://www.france24.com/en/video/20261120-uk-and-eu-strike-landmark-deal-to-rebuild-ties-after-brexit",
+          "publicadoEm": "2026-11-20T17:06:59.000Z"
+        },
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "UK and EU strike deals on trade and travel, pledging to rebuild ties after Brexit",
+          "link": "https://www.straitstimes.com/world/europe/uk-and-eu-strike-deals-on-trade-and-travel-pledging-to-rebuild-ties-after-brexit",
+          "publicadoEm": "2026-11-20T17:03:51.000Z"
+        },
+        {
+          "fonte": "DW",
+          "pais": "Alemanha",
+          "visao": "Emissora internacional pública alemã",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "EU and UK strike 'landmark deal' to strengthen ties after Brexit",
+          "link": "https://www.dw.com/en/eu-and-uk-strike-landmark-deal-to-strengthen-ties-after-brexit/a-80001076?maca=en-rss-en-world-4025-rdf",
+          "publicadoEm": "2026-11-20T14:30:00.000Z"
+        },
+        {
+          "fonte": "Asharq Al-Awsat",
+          "pais": "Arábia Saudita",
+          "visao": "Jornal pan-árabe de dono saudita",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "UK, EU Hold Rare Summit to Strengthen Ties as Burnham Seeks to Mend Brexit Damage",
+          "link": "https://english.aawsat.com/node/5343563",
+          "publicadoEm": "2026-11-20T11:25:15.000Z"
+        },
+        {
+          "fonte": "NPR",
+          "pais": "EUA",
+          "visao": "Rádio pública dos EUA",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "The U.K. and EU hold a rare summit to strengthen ties",
+          "link": "https://www.npr.org/2026/11/20/g-s1-154576/uk-eu-summit",
+          "publicadoEm": "2026-11-20T09:14:41.000Z"
+        },
+        {
+          "fonte": "RFI (inglês)",
+          "pais": "França",
+          "visao": "Rádio pública francesa, forte cobertura da África",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "EU and UK agree 'landmark' deal at Burnham's Brussels summit",
+          "link": "https://www.rfi.fr/en/international/20261120-eu-and-uk-agree-landmark-deal-at-burnham-s-brussels-summit",
+          "publicadoEm": "2026-11-20T02:00:32.000Z"
+        }
+      ]
+    },
+    {
+      "fatoId": "acf404f6e9c1",
+      "tituloPt": "Míssil russo atinge a Polônia",
+      "porQueImporta": "Escalada de tensões na Europa Oriental afeta a segurança da OTAN, influenciando políticas de defesa que o Brasil acompanha",
+      "regioes": [
+        "europa",
+        "asia-pacifico",
+        "america-norte"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia",
+        "politica"
+      ],
+      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cbb7/live/b5de9720-e4ea-11f1-99b6-a35a62fa4264.jpg",
+      "credito": "BBC News",
+      "resumo": "Nobody was hurt and no damage has been reported, but Warsaw described the incident as a \"provocation\" from Moscow.",
+      "materias": [
+        {
+          "fonte": "BBC News",
+          "pais": "Reino Unido",
+          "visao": "Emissora pública britânica",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "Russian missile hits Poland as Ukraine's allies hold military exercise, says Tusk",
+          "link": "https://www.bbc.co.uk/news/articles/cqx2x9dklxnro?at_medium=RSS&at_campaign=rss",
+          "publicadoEm": "2026-11-20T16:54:29.000Z"
+        },
+        {
+          "fonte": "France 24",
+          "pais": "França",
+          "visao": "Emissora internacional pública francesa",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "Russia pummels Ukraine with massive strikes, missile hits Poland",
+          "link": "https://www.france24.com/en/video/20261120-russia-pummels-ukraine-with-massive-strikes-missile-hits-poland",
+          "publicadoEm": "2026-11-20T14:36:48.000Z"
+        },
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "Russia pounds Ukraine, killing 8, as missile lands in Poland",
+          "link": "https://www.straitstimes.com/world/europe/russia-pounds-ukraine-killing-8-as-missile-lands-in-poland",
+          "publicadoEm": "2026-11-20T13:32:55.000Z"
+        },
+        {
+          "fonte": "Politico Europe",
+          "pais": "Bélgica",
+          "visao": "Bastidores da política da União Europeia",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "Tusk: Russian cruise missile incursion into Poland seems ‘intentional’",
+          "link": "https://www.politico.eu/article/russian-missile-incursion-into-poland-seems-intentional-tusk-says/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+          "publicadoEm": "2026-11-20T12:43:31.000Z"
+        },
+        {
+          "fonte": "Kyiv Post",
+          "pais": "Ucrânia",
+          "visao": "Jornal ucraniano",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "Ukraine Hits Back: 3 Russian Missile Launchers Targeted Overnight",
+          "link": "https://www.kyivpost.com/post/90708",
+          "publicadoEm": "2026-11-20T11:23:00.000Z"
+        },
+        {
+          "fonte": "Le Monde (inglês)",
+          "pais": "França",
+          "visao": "Jornal de referência francês",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "Massive Russian strikes kill at least eight in Ukraine, missile lands in Poland",
+          "link": "https://www.lemonde.fr/en/international/article/2026/11/20/russian-strikes-on-kyiv-kill-at-least-six_6785275_4.html",
+          "publicadoEm": "2026-11-20T10:12:47.000Z"
+        }
+      ]
+    },
+    {
+      "fatoId": "481d8fea9264",
+      "tituloPt": "Negociações climáticas da COP31 se arrastam",
+      "porQueImporta": "Decisões sobre cortes de combustíveis fósseis impactam acordos climáticos globais, relevantes para as metas de redução de emissões do Brasil",
+      "regioes": [
+        "europa",
+        "global",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "clima",
+        "diplomacia",
+        "energia",
+        "conflitos"
+      ],
+      "imagem": "https://s.rfi.fr/media/display/d38cd700-e4fe-11f1-b775-13439ca2fe89/w:1024/p:16x9/AP26323433339470.jpg",
+      "credito": "RFI (inglês)",
+      "resumo": "Deep divisions over fossil fuels and financial support for poorer nations pushed the Cop31 climate summit in Turkey beyond its scheduled closing day on Friday, as nearly 200 countries struggled to agree on how to tackle global warming.",
+      "materias": [
+        {
+          "fonte": "RFI (inglês)",
+          "pais": "França",
+          "visao": "Rádio pública francesa, forte cobertura da África",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "UN climate talks run into overtime as countries clash over fossil fuel cuts",
+          "link": "https://www.rfi.fr/en/environment/20261120-un-climate-talks-run-into-overtime-as-countries-clash-over-fossil-fuel-cuts-cop31",
+          "publicadoEm": "2026-11-20T16:38:58.000Z"
+        },
+        {
+          "fonte": "South China Morning Post",
+          "pais": "Hong Kong",
+          "visao": "Jornal de Hong Kong sobre China e Ásia",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "COP31 climate talks go into overtime as nations quarrel over fossil fuels",
+          "link": "https://www.scmp.com/news/world/article/3375291/cop31-climate-talks-go-overtime-nations-quarrel-over-fossil-fuels",
+          "publicadoEm": "2026-11-20T15:34:06.000Z"
+        },
+        {
+          "fonte": "France 24",
+          "pais": "França",
+          "visao": "Emissora internacional pública francesa",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "COP31 wrapping up in Turkey: Climate deal elusive as fossil fuels go unmentioned",
+          "link": "https://www.france24.com/en/video/20261120-cop31-wrapping-up-in-turkey-climate-deal-elusive-as-fossil-fuels-go-unmentioned",
+          "publicadoEm": "2026-11-20T14:38:56.000Z"
+        },
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "UN climate talks in Turkey risk being ‘worst COP ever’ as fossil fuels go unmentioned",
+          "link": "https://www.straitstimes.com/world/un-climate-talks-in-turkey-risk-being-worst-cop-ever-as-fossil-fuels-go-unmentioned",
+          "publicadoEm": "2026-11-20T14:19:04.000Z"
+        },
+        {
+          "fonte": "The Japan Times",
+          "pais": "Japão",
+          "visao": "Jornal japonês em inglês",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "Climate talks ditch call to quit fossil fuels as deal nears",
+          "link": "https://www.japantimes.co.jp/environment/2026/11/20/climate-change/cop-fossil-fuel-language/",
+          "publicadoEm": "2026-11-20T03:17:00.000Z"
+        }
+      ]
+    },
+    {
+      "fatoId": "6cc38668b794",
+      "tituloPt": "Decisão da CIJ sobre genocídio dos Rohingya",
+      "porQueImporta": "Fortalece precedentes de responsabilidade internacional, influenciando a postura do Brasil em direitos humanos",
+      "regioes": [
+        "oriente-medio",
+        "asia-pacifico",
+        "africa"
+      ],
+      "temas": [
+        "direitos",
+        "conflitos",
+        "economia",
+        "diplomacia",
+        "clima"
+      ],
+      "imagem": "https://www.thenationalnews.com/resizer/v2/6YEWN4MEKNBV5L6Y2XW4RSIK34.JPG?auth=1db353f9d73fe30f13ee2dea6a11772fe8da9e74868eccba73c4456fef81d021&smart=true&width=7856&height=5239",
+      "credito": "The National",
+      "resumo": "Verdict against Myanmar may have implications for Israel's genocide in Gaza.",
+      "materias": [
+        {
+          "fonte": "Al Jazeera",
+          "pais": "Catar",
+          "visao": "Rede do Catar, foco no Sul Global e no mundo árabe",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "What are the implications of the ICJ Rohingya genocide ruling?",
+          "link": "https://www.aljazeera.com/video/inside-story/2026/11/20/what-are-the-implications-of-the-icj-rohingya-genocide-ruling?traffic_source=rss",
+          "publicadoEm": "2026-11-20T19:12:14.000Z"
+        },
+        {
+          "fonte": "The National",
+          "pais": "Emirados Árabes",
+          "visao": "Jornal dos Emirados, ligado ao governo",
+          "estatal": true,
+          "tipo": "noticia",
+          "titulo": "Pictures of the week: From Rohingya refugees watching ICJ ruling to Dubai Future Week",
+          "link": "https://www.thenationalnews.com/news/2026/11/20/pictures-of-the-week-rohingya-genocide-ruling/",
+          "publicadoEm": "2026-11-20T17:51:00.000Z"
+        },
+        {
+          "fonte": "Tehran Times",
+          "pais": "Irã",
+          "visao": "Jornal iraniano alinhado ao governo (versão oficial de Teerã)",
+          "estatal": true,
+          "tipo": "noticia",
+          "titulo": "ICJ ruling against Myanmar brings Gaza genocide case into sharper focus",
+          "link": "https://www.tehrantimes.com/news/532347/ICJ-ruling-against-Myanmar-brings-Gaza-genocide-case-into-sharper",
+          "publicadoEm": "2026-11-20T16:45:32.000Z"
+        },
+        {
+          "fonte": "Foreign Policy",
+          "pais": "EUA",
+          "visao": "Revista de análise de política externa",
+          "estatal": false,
+          "tipo": "analise",
+          "titulo": "ICJ Finds Myanmar Committed Genocide. What Comes Next?",
+          "link": "https://foreignpolicy.com/2026/11/20/myanmar-genocide-icj-ruling-rohingya-muslims-ukraine-gaza-tom-andrews-un/",
+          "publicadoEm": "2026-11-20T15:57:04.000Z"
+        },
+        {
+          "fonte": "Al-Monitor",
+          "pais": "EUA",
+          "visao": "Site especializado em Oriente Médio",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "Myanmar genocide judgment may bolster Gaza case against Israel",
+          "link": "https://www.al-monitor.com/originals/2026/11/myanmar-genocide-judgment-may-bolster-gaza-case-against-israel",
+          "publicadoEm": "2026-11-20T15:46:30.000Z"
+        },
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "Myanmar genocide judgment may bolster Gaza case against Israel",
+          "link": "https://www.straitstimes.com/world/middle-east/myanmar-genocide-judgment-may-bolster-gaza-case-against-israel",
+          "publicadoEm": "2026-11-20T15:30:40.000Z"
+        },
+        {
+          "fonte": "The Diplomat",
+          "pais": "Japão",
+          "visao": "Revista de análise sobre Ásia-Pacífico",
+          "estatal": false,
+          "tipo": "analise",
+          "titulo": "ICJ’s Genocide Verdict on Myanmar and the Ramifications for Israel",
+          "link": "https://thediplomat.com/2026/11/icjs-genocide-verdict-on-myanmar-and-the-ramifications-for-israel/",
+          "publicadoEm": "2026-11-20T14:08:00.000Z"
+        },
+        {
+          "fonte": "Middle East Eye",
+          "pais": "Reino Unido",
+          "visao": "Site focado no Oriente Médio, crítico de governos da região",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "Israeli experts warn Myanmar genocide ruling could strengthen Gaza case at ICJ",
+          "link": "https://www.middleeasteye.net/news/israeli-experts-warn-myanmar-genocide-ruling-could-strengthen-gaza-case-icj",
+          "publicadoEm": "2026-11-20T13:42:43.000Z"
+        }
+      ]
+    },
+    {
+      "fatoId": "932324fde5af",
+      "tituloPt": "Cúpula do APEC: EUA, China e Rússia prometem mais petróleo",
+      "porQueImporta": "Compromisso de grandes produtores afeta preços globais de energia, impactando a economia e exportações brasileiras de petróleo",
+      "regioes": [
+        "america-norte",
+        "europa",
+        "asia-pacifico",
+        "oriente-medio"
+      ],
+      "temas": [
+        "diplomacia",
+        "energia",
+        "conflitos",
+        "economia"
+      ],
+      "imagem": "https://static01.nyt.com/images/2026/11/19/multimedia/19trump-summits-petroleum-topart-wcmf/19trump-summits-petroleum-topart-wcmf-mediumSquareAt3X.jpg",
+      "credito": "The New York Times",
+      "resumo": "The United States, China and Russia agreed to boost the supply of refined petroleum products, as oil prices spike because of the Iran war.",
+      "materias": [
+        {
+          "fonte": "The New York Times",
+          "pais": "EUA",
+          "visao": "Jornal de referência dos EUA, centro-esquerda",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "At APEC Summit, U.S., China and Russia Vow to Increase Oil Supply Amid Global Energy Transition",
+          "link": "https://www.nytimes.com/2026/11/19/world/asia/russia-china-united-states-oil-joint-statement.html",
+          "publicadoEm": "2026-11-20T17:45:55.000Z"
+        },
+        {
+          "fonte": "The Hindu",
+          "pais": "Índia",
+          "visao": "Jornal de referência indiano",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "U.S., China, Russia hold historic summit in Shenzhen",
+          "link": "https://www.thehindu.com/news/international/china-russia-us-trilateral-summit-xi-putin-trump-call-for-cooperation-to-confront-global-security-challenges/article71720102.ece",
+          "publicadoEm": "2026-11-20T04:09:13.000Z"
+        }
+      ]
+    }
+  ],
+  "versao": 1
+}

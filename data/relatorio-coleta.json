@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-20T21:34:56.860Z",
+  "geradoEm": "2026-11-20T21:36:02.787Z",
   "fontesOk": 69,
   "fontesComErro": 1,
-  "noticiasNovasNestaRodada": 4,
+  "noticiasNovasNestaRodada": 2,
   "porFonte": [
     {
       "id": "nyt",
@@ -469,8 +469,8 @@
       "nome": "AllAfrica",
       "status": "ok",
       "itensNoFeed": 33,
-      "aceitas": 32,
-      "descartadasPorIdade": 1,
+      "aceitas": 30,
+      "descartadasPorIdade": 3,
       "comImagem": 0
     },
     {
@@ -496,9 +496,9 @@
       "nome": "g1 Mundo",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 70,
-      "descartadasPorIdade": 30,
-      "comImagem": 70
+      "aceitas": 72,
+      "descartadasPorIdade": 28,
+      "comImagem": 72
     },
     {
       "id": "folha",
@@ -622,9 +622,9 @@
       "nome": "UN News",
       "status": "ok",
       "itensNoFeed": 30,
-      "aceitas": 11,
-      "descartadasPorIdade": 19,
-      "comImagem": 11
+      "aceitas": 12,
+      "descartadasPorIdade": 18,
+      "comImagem": 12
     },
     {
       "id": "crisisgroup",

@@ -29,6 +29,37 @@
       "coletadoEm": "2026-11-20T21:32:55.518Z"
     },
     {
+      "id": "3ce45f843b62",
+      "titulo": "TikTok lança ferramentas para identificar conteúdos de IA e deepfakes; veja como funcionam",
+      "resumo": "TikTok lança ferramenta para identificar deepfakes O TikTok anunciou nesta sexta-feira (20) duas novas ferramentas para identificar conteúdos criados ou manipulados por inteligência artificial (IA). As medidas buscam ampliar a transparência sobre o uso da tecnologia e facilitar a…",
+      "link": "https://g1.globo.com/tecnologia/noticia/2026/11/20/tiktok-ferramentas-para-identificar-ia-e-deepfakes.ghtml",
+      "fonte": "g1",
+      "fonteNome": "g1 Mundo",
+      "pais": "Brasil",
+      "visao": "Portal do Grupo Globo",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:30:05.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://s2-g1.glbimg.com/FUULwFt5nMKOeZd_CA1cJJjvkLw=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/U/4/awDZ8iRBOibmSDJYzvSA/ap26023052378716.jpg",
+      "imagemCredito": "g1 Mundo",
+      "regioes": [
+        "europa",
+        "brasil"
+      ],
+      "temas": [
+        "politica",
+        "tecnologia",
+        "conflitos",
+        "economia",
+        "midia"
+      ],
+      "coletadoEm": "2026-11-20T21:36:02.787Z"
+    },
+    {
       "id": "d63b2f82bb2d",
       "titulo": "Calls to fund Indigenous disaster response ahead of more flooding",
       "resumo": "As Central Australia faces another wet season, researchers warn Aboriginal organisations are being left without the resources they need to prepare communities for disasters.",
@@ -80,6 +111,36 @@
         "direitos"
       ],
       "coletadoEm": "2026-11-20T21:34:56.860Z"
+    },
+    {
+      "id": "2521bcb3abac",
+      "titulo": "Senado francês aprova lei sobre disparos feitos por policiais, chamada de 'licença para matar' por críticos",
+      "resumo": "Plenário do Senado da França, em Paris Bertrand Guay/AFP Senadores franceses aprovaram definitivamente nesta sexta-feira (20) uma lei que presume que policiais que utilizam suas armas estão agindo legalmente. A proposta é contestada por parlamentares de esquerda, que pretendem…",
+      "link": "https://g1.globo.com/mundo/noticia/2026/11/20/senado-frances-lei-disparos-policiais.ghtml",
+      "fonte": "g1",
+      "fonteNome": "g1 Mundo",
+      "pais": "Brasil",
+      "visao": "Portal do Grupo Globo",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:25:43.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://s2-g1.glbimg.com/HblA_rPemCNTzIqw6mVkgQ7VXIg=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/w/a/1vRdjrTA2mLn6abL4oQw/afp-20260927-c9gh8we-v1-midres-filesfrancepoliticssenatevote.jpg",
+      "imagemCredito": "g1 Mundo",
+      "regioes": [
+        "europa",
+        "global"
+      ],
+      "temas": [
+        "politica",
+        "conflitos",
+        "economia",
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-20T21:36:02.787Z"
     },
     {
       "id": "a1be826d98f2",
@@ -34235,5 +34296,5 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     }
   ],
-  "atualizadoEm": "2026-11-20T21:34:56.860Z"
+  "atualizadoEm": "2026-11-20T21:36:02.787Z"
 }

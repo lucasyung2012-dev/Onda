@@ -1,0 +1,124 @@
+{
+  "data": "2026-11-20",
+  "versoes": [
+    {
+      "status": "ok",
+      "geradoEm": "2026-11-20T21:38:43.833Z",
+      "dataReferencia": "2026-11-20",
+      "ia": {
+        "provedor": "Groq",
+        "modelo": "openai/gpt-oss-120b",
+        "aviso": "Explicação gerada por IA a partir das fontes listadas. Pode conter erros: confira nas fontes."
+      },
+      "titulo": "Segurança na Europa Oriental",
+      "pergunta": "Como as tensões entre Rússia e Ucrânia afetam a segurança dos países vizinhos?",
+      "emUmaFrase": "A guerra entre Rússia e Ucrânia gera ameaças diretas, como ataques de mísseis em territórios vizinhos, e eleva a instabilidade regional, refletindo em alertas de segurança e repercussões econômicas.",
+      "explicacao": "A partir da dissolução da União Soviética em 1991, a região da Europa Oriental passou a ter fronteiras sensíveis entre antigos territórios soviéticos e países da OTAN. As relações entre Rússia e Ucrânia se deterioraram em 2014, quando a Rússia anexou a Crimeia e apoiou separatistas no leste da Ucrânia, iniciando um conflito que já matou mais de 13.000 pessoas até 2020. Essa hostilidade se estendeu além das fronteiras ucranianas, atingindo países vizinhos. Em novembro de 2026, mísseis russos caíram em solo polonês, provocando alertas de ataque aéreo em províncias fronteiriças e sendo descritos como \"provocação\" por Varsóvia. Ao mesmo tempo, a Rússia rejeitou garantias de segurança ao estilo da OTAN para a Ucrânia, reforçando a percepção de risco para os estados da região. O Grupo de Estados da Europa Oriental da ONU, que inclui Rússia, Ucrânia e outros países vizinhos, tem representação no Conselho de Segurança, mas a tensão atual limita a cooperação multilateral e aumenta a preocupação com a segurança coletiva.",
+      "linhaDoTempo": [
+        {
+          "quando": "1991",
+          "oQue": "Dissolução da União Soviética, criando novos Estados independentes",
+          "fonte": "Wikipedia (português)"
+        },
+        {
+          "quando": "2014",
+          "oQue": "Anexação da Crimeia pela Rússia e apoio a separatistas no leste da Ucrânia",
+          "fonte": "Wikipedia (português)"
+        },
+        {
+          "quando": "2020",
+          "oQue": "Conflito já havia causado mais de 13.000 mortes",
+          "fonte": "Wikipedia (português)"
+        },
+        {
+          "quando": "2026-11-20",
+          "oQue": "Míssil russo atinge território polonês; Varsóvia chama de provocação",
+          "fonte": "BBC News"
+        },
+        {
+          "quando": "2026-11-20",
+          "oQue": "Polônia emite alertas de ataque aéreo após queda de dois mísseis e um drone russos",
+          "fonte": "Meduza"
+        },
+        {
+          "quando": "2026-11-20",
+          "oQue": "Rússia rejeita garantias de segurança ao estilo da OTAN para a Ucrânia",
+          "fonte": "Kyiv Post"
+        }
+      ],
+      "atores": [
+        {
+          "nome": "Rússia",
+          "papel": "Conduz operações militares contra a Ucrânia e lança projéteis que atingem países vizinhos"
+        },
+        {
+          "nome": "Ucrânia",
+          "papel": "Estado alvo da agressão russa, cuja defesa mobiliza apoio internacional"
+        },
+        {
+          "nome": "Polônia",
+          "papel": "País vizinho que tem sofrido incidentes de mísseis e alertas de ataque"
+        },
+        {
+          "nome": "Grupo de Estados da Europa Oriental (ONU)",
+          "papel": "Fórum regional que inclui os países envolvidos e tem assentos no Conselho de Segurança"
+        }
+      ],
+      "cadeia": [
+        {
+          "passo": "Conflito Rússia‑Ucrânia gera ataques transfronteiriços",
+          "camada": "seguranca"
+        },
+        {
+          "passo": "Incidentes em países vizinhos como a Polônia aumentam alertas militares regionais",
+          "camada": "seguranca"
+        },
+        {
+          "passo": "Instabilidade eleva preços de energia e commodities na Europa, afetando mercados globais",
+          "camada": "energia"
+        },
+        {
+          "passo": "Pressão por maior envolvimento da OTAN gera debates de política externa no Brasil",
+          "camada": "politica"
+        },
+        {
+          "passo": "Cobertura midiática intensifica a percepção de risco global entre a população brasileira",
+          "camada": "midia"
+        }
+      ],
+      "chegaEmVoce": {
+        "tipo": "indireto",
+        "texto": "Você pode ver notícias de alertas de mísseis na Polônia e sentir o impacto nos preços da energia e no debate político sobre a segurança internacional."
+      },
+      "eHoje": "Mísseis russos caíram em solo polonês e provocaram alertas de ataque aéreo em duas províncias fronteiriças, enquanto Moscou rejeita garantias de segurança ao estilo da OTAN para a Ucrânia.",
+      "paraPensar": "Como a instabilidade em uma região distante pode influenciar a sua vida cotidiana no Brasil, seja nos preços que paga ou nas discussões políticas que acompanha?",
+      "fontes": [
+        {
+          "fonte": "Wikipedia (português)",
+          "titulo": "Leste Europeu",
+          "link": "https://pt.wikipedia.org/wiki/Leste_Europeu"
+        },
+        {
+          "fonte": "Wikipedia (português)",
+          "titulo": "Relações entre Rússia e Ucrânia",
+          "link": "https://pt.wikipedia.org/wiki/Rela%C3%A7%C3%B5es_entre_R%C3%BAssia_e_Ucr%C3%A2nia"
+        },
+        {
+          "fonte": "BBC News",
+          "titulo": "Russian missile hits Poland as Ukraine's allies hold military exercise, says Tusk",
+          "link": "https://www.bbc.co.uk/news/articles/cqx2x9dklxnro?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "fonte": "Meduza",
+          "titulo": "Poland issues air raid alerts as Russia attacks Ukraine. Poland’s defense minister says two Russian missiles and a drone fell on Polish soil.",
+          "link": "https://meduza.io/en/news/2026/11/20/poland-issues-air-raid-alerts-as-russia-attacks-ukraine-poland-s-defense-minister-says-two-russian-missiles-and-a-drone-fell-on-polish-soil"
+        },
+        {
+          "fonte": "Kyiv Post",
+          "titulo": "Russia Rejects NATO-Style Security Guarantees for Ukraine",
+          "link": "https://www.kyivpost.com/post/90735"
+        }
+      ]
+    }
+  ]
+}

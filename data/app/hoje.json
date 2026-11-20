@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-20T21:34:56.860Z",
+  "geradoEm": "2026-11-20T21:36:02.787Z",
   "dataReferencia": "2026-11-20",
   "fuso": "America/Sao_Paulo",
   "totalNoticias": 1422,
@@ -7009,6 +7009,41 @@
       ]
     },
     {
+      "id": "3ce45f843b62",
+      "titulo": "TikTok lança ferramentas para identificar conteúdos de IA e deepfakes; veja como funcionam",
+      "resumo": "TikTok lança ferramenta para identificar deepfakes O TikTok anunciou nesta sexta-feira (20) duas novas ferramentas para identificar conteúdos criados ou manipulados por inteligência artificial (IA). As medidas buscam ampliar a transparência sobre o uso da tecnologia e facilitar a…",
+      "imagem": "https://s2-g1.glbimg.com/FUULwFt5nMKOeZd_CA1cJJjvkLw=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/U/4/awDZ8iRBOibmSDJYzvSA/ap26023052378716.jpg",
+      "credito": "g1 Mundo",
+      "regioes": [
+        "europa",
+        "brasil"
+      ],
+      "temas": [
+        "politica",
+        "tecnologia",
+        "conflitos",
+        "economia",
+        "midia"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T21:30:05.000Z",
+      "materias": [
+        {
+          "fonte": "g1 Mundo",
+          "pais": "Brasil",
+          "visao": "Portal do Grupo Globo",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "pt",
+          "titulo": "TikTok lança ferramentas para identificar conteúdos de IA e deepfakes; veja como funcionam",
+          "link": "https://g1.globo.com/tecnologia/noticia/2026/11/20/tiktok-ferramentas-para-identificar-ia-e-deepfakes.ghtml",
+          "publicadoEm": "2026-11-20T21:30:05.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
       "id": "d63b2f82bb2d",
       "titulo": "Calls to fund Indigenous disaster response ahead of more flooding",
       "resumo": "As Central Australia faces another wet season, researchers warn Aboriginal organisations are being left without the resources they need to prepare communities for disasters.",
@@ -7065,6 +7100,40 @@
           "titulo": "Lawyer says ex-client confessed missing boy Loan’s body is in lagoon",
           "link": "https://www.batimes.com.ar/news/argentina/lawyer-says-ex-client-confessed-missing-boy-loans-body-is-in-lagoon.phtml",
           "publicadoEm": "2026-11-20T21:27:55.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "2521bcb3abac",
+      "titulo": "Senado francês aprova lei sobre disparos feitos por policiais, chamada de 'licença para matar' por críticos",
+      "resumo": "Plenário do Senado da França, em Paris Bertrand Guay/AFP Senadores franceses aprovaram definitivamente nesta sexta-feira (20) uma lei que presume que policiais que utilizam suas armas estão agindo legalmente. A proposta é contestada por parlamentares de esquerda, que pretendem…",
+      "imagem": "https://s2-g1.glbimg.com/HblA_rPemCNTzIqw6mVkgQ7VXIg=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/w/a/1vRdjrTA2mLn6abL4oQw/afp-20260927-c9gh8we-v1-midres-filesfrancepoliticssenatevote.jpg",
+      "credito": "g1 Mundo",
+      "regioes": [
+        "europa",
+        "global"
+      ],
+      "temas": [
+        "politica",
+        "conflitos",
+        "economia",
+        "direitos"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T21:25:43.000Z",
+      "materias": [
+        {
+          "fonte": "g1 Mundo",
+          "pais": "Brasil",
+          "visao": "Portal do Grupo Globo",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "pt",
+          "titulo": "Senado francês aprova lei sobre disparos feitos por policiais, chamada de 'licença para matar' por críticos",
+          "link": "https://g1.globo.com/mundo/noticia/2026/11/20/senado-frances-lei-disparos-policiais.ghtml",
+          "publicadoEm": "2026-11-20T21:25:43.000Z",
           "semData": false
         }
       ]
@@ -38702,71 +38771,6 @@
           "titulo": "Wall Street ends sharply lower as Anthropic’s debut fails to revive AI fervour",
           "link": "https://www.thehindu.com/business/markets/wall-street-ends-sharply-lower-as-anthropics-debut-fails-to-revive-ai-fervour/article71721814.ece",
           "publicadoEm": "2026-11-19T21:36:10.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "978d7c61ae8d",
-      "titulo": "Japan’s PM Takaichi Holds First Talks With Putin Since 2022",
-      "resumo": "During a roughly 30-minute meeting at the Asia-Pacific Economic Cooperation (APEC) summit in Shenzhen on Wednesday, Nov. 18, Japanese Prime Minister Sanae Takaichi pressed Russian President Vladimir Putin to free detained Hokkaido Shimbun reporter Yuki Imai. The talks, the first…",
-      "imagem": "https://static.kyivpost.com/storage/2026/11/19/1b3342b91746b5b251b5bcaf1e7d6694.jpg?w=640&q=90&f=jpg",
-      "credito": "Kyiv Post",
-      "regioes": [
-        "europa",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "diplomacia",
-        "economia",
-        "politica",
-        "conflitos",
-        "midia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T21:35:18.000Z",
-      "materias": [
-        {
-          "fonte": "Kyiv Post",
-          "pais": "Ucrânia",
-          "visao": "Jornal ucraniano",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Japan’s PM Takaichi Holds First Talks With Putin Since 2022",
-          "link": "https://www.kyivpost.com/post/90647",
-          "publicadoEm": "2026-11-19T21:35:18.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "862b058520c7",
-      "titulo": "MISSION IMPOSSIBLE: Rassie’s ‘knee-drop’ complaint — how rugby’s complex laws hobble accurate officiating",
-      "resumo": "Springbok coach Rassie Erasmus’ now infamous media conference, where he used the term ‘match-fixing’, raises uncomfortable questions for the custodians of the game.",
-      "imagem": "https://cdn.dailymaverick.co.za/i/Mh276N-wr12HL8wAmTskk6CEoC8=/800x0/smart/filters:strip_exif()/file/attachments/3000/TL_2651134_655028.jpg",
-      "credito": "Daily Maverick",
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "midia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T21:35:11.000Z",
-      "materias": [
-        {
-          "fonte": "Daily Maverick",
-          "pais": "África do Sul",
-          "visao": "Jornal sul-africano independente",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "MISSION IMPOSSIBLE: Rassie’s ‘knee-drop’ complaint — how rugby’s complex laws hobble accurate officiating",
-          "link": "https://www.dailymaverick.co.za/article/2026-11-19-rassies-knee-drop-complaint-how-rugbys-complex-laws-hobble-accurate-officiating/",
-          "publicadoEm": "2026-11-19T21:35:11.000Z",
           "semData": false
         }
       ]
