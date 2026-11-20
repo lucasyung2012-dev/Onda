@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="512" height="512" role="img" aria-label="Onda — do mundo até você">
+  <!--
+    Logo do Onda (versão completa).
+    Ideia: o globo nasce do mar; as ondas levam o fato até "você",
+    o ponto dourado na crista da onda à direita.
+    Use esta versão em tamanhos a partir de 48 px.
+    Para 16–32 px, use onda-mini.svg.
+  -->
+  <defs>
+    <!-- Céu: azul-noite em cima, azul-oceano embaixo -->
+    <linearGradient id="ceu" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#061A2E"/>
+      <stop offset="0.65" stop-color="#0A2C47"/>
+      <stop offset="1" stop-color="#0D3B5C"/>
+    </linearGradient>
+    <!-- Brilho turquesa atrás do globo -->
+    <radialGradient id="brilho" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#6FE3D8" stop-opacity="0.5"/>
+      <stop offset="0.6" stop-color="#6FE3D8" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#6FE3D8" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Globo: luz vindo do alto à esquerda -->
+    <radialGradient id="globo" cx="0.34" cy="0.28" r="0.85">
+      <stop offset="0" stop-color="#B9E6FA"/>
+      <stop offset="0.35" stop-color="#8FD3F4"/>
+      <stop offset="1" stop-color="#1D5D9B"/>
+    </radialGradient>
+    <!-- Sombra do lado direito do globo (dá volume) -->
+    <radialGradient id="sombra" cx="0.3" cy="0.3" r="0.9">
+      <stop offset="0.55" stop-color="#061A2E" stop-opacity="0"/>
+      <stop offset="1" stop-color="#061A2E" stop-opacity="0.55"/>
+    </radialGradient>
+    <!-- Ondas: cada camada mais clara que a de trás -->
+    <linearGradient id="ondaFundo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14608A"/>
+      <stop offset="1" stop-color="#0F4C6E"/>
+    </linearGradient>
+    <linearGradient id="ondaMeio" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22A3BA"/>
+      <stop offset="1" stop-color="#16788F"/>
+    </linearGradient>
+    <linearGradient id="ondaFrente" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5FE0D2"/>
+      <stop offset="1" stop-color="#2FB3A8"/>
+    </linearGradient>
+    <!-- Halo dourado de "você" -->
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFD166" stop-opacity="0.65"/>
+      <stop offset="1" stop-color="#FFD166" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="recorteGlobo"><circle cx="50" cy="44" r="24"/></clipPath>
+    <clipPath id="recorteIcone"><rect width="100" height="100" rx="22"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#recorteIcone)">
+    <!-- 1. Céu -->
+    <rect width="100" height="100" fill="url(#ceu)"/>
+
+    <!-- 2. Estrelas discretas -->
+    <g fill="#CFEFFF">
+      <circle cx="15" cy="13" r="0.9" opacity="0.85"/>
+      <circle cx="83" cy="11" r="1.1" opacity="0.75"/>
+      <circle cx="89" cy="31" r="0.7" opacity="0.6"/>
+      <circle cx="9" cy="37" r="0.7" opacity="0.5"/>
+      <circle cx="73" cy="20" r="0.55" opacity="0.6"/>
+      <circle cx="25" cy="24" r="0.55" opacity="0.5"/>
+      <circle cx="62" cy="8" r="0.5" opacity="0.5"/>
+      <path d="M83 11m-2.6 0h5.2M83 11m0-2.6v5.2" stroke="#CFEFFF" stroke-width="0.35" opacity="0.6"/>
+    </g>
+
+    <!-- 3. Brilho atrás do globo -->
+    <circle cx="50" cy="44" r="40" fill="url(#brilho)"/>
+
+    <!-- 4. Globo -->
+    <circle cx="50" cy="44" r="24" fill="url(#globo)"/>
+    <g clip-path="url(#recorteGlobo)">
+      <!-- Continentes estilizados (abstratos de propósito) -->
+      <g fill="#7BD389">
+        <path d="M31 32c3-6 10-8 15-6 4 2 5 6 2 9-2 2-5 1-6 4-1 3-2 7-6 7-4 0-6-4-7-7-1-3 0-5 2-7z"/>
+        <path d="M54 25c5-3 12-2 15 2 3 4 1 8-3 9-3 1-4 4-7 4-4 0-7-3-7-7 0-3 0-6 2-8z"/>
+        <path d="M45 50c4-2 9 0 9 4 1 4-2 8-6 8-3 0-5-3-5-6 0-3 0-5 2-6z"/>
+        <path d="M64 46c3-1 6 0 6 3s-2 5-5 5-4-2-4-4 1-3 3-4z"/>
+        <path d="M70 37c1-1 3-1 3 1s-1 2-2 2-2-2-1-3z"/>
+      </g>
+      <!-- Relevo claro nos continentes -->
+      <g fill="#B5EBB4" opacity="0.55">
+        <path d="M34 31c3-3 7-4 10-3-2 2-5 3-7 5-1 1-3 0-3-2z"/>
+        <path d="M57 26c3-1 7-1 9 1-3 1-6 2-8 2-1 0-2-2-1-3z"/>
+      </g>
+      <!-- Meridianos e paralelos -->
+      <g stroke="#E6F6FF" stroke-width="0.6" fill="none" opacity="0.3">
+        <ellipse cx="50" cy="44" rx="9" ry="24"/>
+        <ellipse cx="50" cy="44" rx="17" ry="24"/>
+        <path d="M50 20v48"/>
+        <path d="M27 36h46M26 44h48M27 52h46M31 29h38M31 59h38"/>
+      </g>
+      <!-- Sombra para dar volume -->
+      <circle cx="50" cy="44" r="24" fill="url(#sombra)"/>
+    </g>
+    <!-- Reflexo de luz e contorno -->
+    <ellipse cx="40.5" cy="33" rx="7.5" ry="3.6" fill="#FFFFFF" opacity="0.28" transform="rotate(-32 40.5 33)"/>
+    <circle cx="35.5" cy="38" r="1.2" fill="#FFFFFF" opacity="0.35"/>
+    <circle cx="50" cy="44" r="24" fill="none" stroke="#E6F6FF" stroke-width="1.1" opacity="0.7"/>
+
+    <!-- 5. Mar: onda do fundo -->
+    <path d="M0 66 C8 60 17 60 25 66 C33 72 42 72 50 66 C58 60 67 60 75 66 C83 72 92 72 100 66 V100 H0Z" fill="url(#ondaFundo)"/>
+    <!-- Reflexo do globo na água -->
+    <ellipse cx="50" cy="70.5" rx="18" ry="2.4" fill="#8FD3F4" opacity="0.28"/>
+    <ellipse cx="50" cy="70.5" rx="9" ry="1.1" fill="#E6F6FF" opacity="0.25"/>
+
+    <!-- 6. Onda do meio, com espuma -->
+    <path d="M0 72 C8 78 17 78 25 72 C33 66 42 66 50 72 C58 78 67 78 75 72 C83 66 92 66 100 72 V100 H0Z" fill="url(#ondaMeio)"/>
+    <path d="M0 72 C8 78 17 78 25 72 C33 66 42 66 50 72 C58 78 67 78 75 72 C83 66 92 66 100 72" fill="none" stroke="#E6FFFB" stroke-width="0.8" opacity="0.45"/>
+
+    <!-- 7. Onda da frente, com espuma -->
+    <path d="M0 80 C8 74 17 74 25 80 C33 86 42 86 50 80 C58 74 67 74 75 80 C83 86 92 86 100 80 V100 H0Z" fill="url(#ondaFrente)"/>
+    <path d="M0 80 C8 74 17 74 25 80 C33 86 42 86 50 80 C58 74 67 74 75 80 C83 86 92 86 100 80" fill="none" stroke="#E6FFFB" stroke-width="1.2" opacity="0.8"/>
+    <!-- Brilhos na água -->
+    <g stroke="#E6FFFB" stroke-linecap="round" opacity="0.5">
+      <path d="M12 88h6" stroke-width="0.8"/>
+      <path d="M38 92h9" stroke-width="0.8"/>
+      <path d="M66 89h5" stroke-width="0.7"/>
+    </g>
+
+    <!-- 8. "Você": ponto dourado na crista da onda do meio, à direita -->
+    <circle cx="87.5" cy="67.5" r="8" fill="url(#halo)"/>
+    <circle cx="87.5" cy="67.5" r="5.2" fill="none" stroke="#FFD166" stroke-width="0.7" opacity="0.6"/>
+    <circle cx="87.5" cy="67.5" r="2.9" fill="#FFD166"/>
+    <circle cx="86.6" cy="66.6" r="0.9" fill="#FFF6DA"/>
+  </g>
+</svg>

@@ -1,0 +1,62 @@
+# =============================================================
+# Robô de coleta do Onda.
+#
+# Quando roda:
+#   - a cada 3 horas (o horário do "cron" é UTC; o código calcula
+#     a data de Brasília sozinho);
+#   - quando você aperta "Run workflow" na aba Actions do GitHub;
+#   - quando alguém muda o código do coletor ou a lista de fontes.
+#
+# O que faz: roda coletor/coletar.mjs e, se surgirem notícias
+# novas, salva os arquivos de data/ de volta no repositório.
+# =============================================================
+name: Coletar notícias
+
+on:
+  schedule:
+    - cron: '7 */3 * * *'   # minuto 7 de cada 3 horas (evita o horário cheio, mais congestionado)
+  workflow_dispatch:         # botão "Run workflow"
+  push:
+    branches: [main]
+    paths:
+      - 'coletor/**'
+      - 'data/fontes.json'
+      - '.github/workflows/coletar.yml'
+
+# Permite que o robô grave os arquivos de volta no repositório.
+permissions:
+  contents: write
+
+# Nunca roda duas coletas ao mesmo tempo.
+concurrency:
+  group: coleta
+  cancel-in-progress: false
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Preparar o Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Coletar as notícias
+        run: node coletor/coletar.mjs
+
+      - name: Salvar as notícias no repositório
+        run: |
+          git config user.name "onda-robo"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "Nada de novo para salvar."
+          else
+            git commit -m "Coleta de notícias: $(TZ=America/Sao_Paulo date '+%d/%m/%Y %H:%M') (Brasília)"
+            git pull --rebase
+            git push
+          fi
