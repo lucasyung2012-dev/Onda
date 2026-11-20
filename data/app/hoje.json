@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-20T20:46:12.688Z",
+  "geradoEm": "2026-11-20T21:17:00.434Z",
   "dataReferencia": "2026-11-20",
   "fuso": "America/Sao_Paulo",
-  "totalNoticias": 1381,
+  "totalNoticias": 1398,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -78,6 +78,18 @@
           "idioma": "en",
           "titulo": "Trump says he, Putin had very good talks on Ukraine",
           "link": "https://www.al-monitor.com/originals/2026/11/trump-says-he-putin-had-very-good-talks-ukraine",
+          "publicadoEm": "2026-11-20T19:46:32.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Al-Monitor",
+          "pais": "EUA",
+          "visao": "Site especializado em Oriente Médio",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Trump cites good talks with Putin on Ukraine, holds back on security guarantees",
+          "link": "https://www.al-monitor.com/originals/2026/11/trump-cites-good-talks-putin-ukraine-holds-back-security-guarantees",
           "publicadoEm": "2026-11-20T19:46:32.000Z",
           "semData": false
         },
@@ -312,11 +324,11 @@
       ]
     },
     {
-      "id": "6cc38668b794",
-      "titulo": "What are the implications of the ICJ Rohingya genocide ruling?",
-      "resumo": "Verdict against Myanmar may have implications for Israel's genocide in Gaza.",
-      "imagem": "https://www.thenationalnews.com/resizer/v2/6YEWN4MEKNBV5L6Y2XW4RSIK34.JPG?auth=1db353f9d73fe30f13ee2dea6a11772fe8da9e74868eccba73c4456fef81d021&smart=true&width=7856&height=5239",
-      "credito": "The National",
+      "id": "3640a3fbb952",
+      "titulo": "'Friends' But Who Benefits? Notes from an Historic Summit, Myanmar's Genocide Ruling, Time to 'Bre-join' the EU?",
+      "resumo": "Welcome to the World This Week with Gavin Lee. You give us 45 minutes, we'll give you 7 days worth of crystal clear analysis. As ever, alongside a handpicked panel of four distinguished foreign correspondents.",
+      "imagem": "https://s.france24.com/media/display/cfefa95a-e518-11f1-b6ef-13439ca2fe89/w:1024/p:16x9/2026-11-19T230006Z-1256675834-RC2WQOACA4BG-RTRMADP-3-CYBERSECURITY-DRONES-RISK.jpg",
+      "credito": "France 24",
       "regioes": [
         "asia-pacifico",
         "oriente-medio",
@@ -324,98 +336,24 @@
       ],
       "temas": [
         "direitos",
-        "conflitos",
         "politica",
         "diplomacia",
-        "economia",
-        "clima"
+        "conflitos"
       ],
-      "fontes": 16,
-      "paises": 12,
-      "maisRecente": "2026-11-20T19:12:14.000Z",
+      "fontes": 10,
+      "paises": 9,
+      "maisRecente": "2026-11-20T19:42:58.000Z",
       "materias": [
         {
-          "fonte": "Al Jazeera",
-          "pais": "Catar",
-          "visao": "Rede do Catar, foco no Sul Global e no mundo árabe",
+          "fonte": "France 24",
+          "pais": "França",
+          "visao": "Emissora internacional pública francesa",
           "estatal": false,
           "tipo": "noticia",
           "idioma": "en",
-          "titulo": "What are the implications of the ICJ Rohingya genocide ruling?",
-          "link": "https://www.aljazeera.com/video/inside-story/2026/11/20/what-are-the-implications-of-the-icj-rohingya-genocide-ruling?traffic_source=rss",
-          "publicadoEm": "2026-11-20T19:12:14.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The National",
-          "pais": "Emirados Árabes",
-          "visao": "Jornal dos Emirados, ligado ao governo",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Pictures of the week: From Rohingya refugees watching ICJ ruling to Dubai Future Week",
-          "link": "https://www.thenationalnews.com/news/2026/11/20/pictures-of-the-week-rohingya-genocide-ruling/",
-          "publicadoEm": "2026-11-20T17:51:00.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Tehran Times",
-          "pais": "Irã",
-          "visao": "Jornal iraniano alinhado ao governo (versão oficial de Teerã)",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "ICJ ruling against Myanmar brings Gaza genocide case into sharper focus",
-          "link": "https://www.tehrantimes.com/news/532347/ICJ-ruling-against-Myanmar-brings-Gaza-genocide-case-into-sharper",
-          "publicadoEm": "2026-11-20T16:45:32.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Foreign Policy",
-          "pais": "EUA",
-          "visao": "Revista de análise de política externa",
-          "estatal": false,
-          "tipo": "analise",
-          "idioma": "en",
-          "titulo": "ICJ Finds Myanmar Committed Genocide. What Comes Next?",
-          "link": "https://foreignpolicy.com/2026/11/20/myanmar-genocide-icj-ruling-rohingya-muslims-ukraine-gaza-tom-andrews-un/",
-          "publicadoEm": "2026-11-20T15:57:04.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Al-Monitor",
-          "pais": "EUA",
-          "visao": "Site especializado em Oriente Médio",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Myanmar genocide judgment may bolster Gaza case against Israel",
-          "link": "https://www.al-monitor.com/originals/2026/11/myanmar-genocide-judgment-may-bolster-gaza-case-against-israel",
-          "publicadoEm": "2026-11-20T15:46:30.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The Straits Times",
-          "pais": "Singapura",
-          "visao": "Jornal de referência de Singapura",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Myanmar genocide judgment may bolster Gaza case against Israel",
-          "link": "https://www.straitstimes.com/world/middle-east/myanmar-genocide-judgment-may-bolster-gaza-case-against-israel",
-          "publicadoEm": "2026-11-20T15:30:40.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Middle East Eye",
-          "pais": "Reino Unido",
-          "visao": "Site focado no Oriente Médio, crítico de governos da região",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Israeli experts warn Myanmar genocide ruling could strengthen Gaza case at ICJ",
-          "link": "https://www.middleeasteye.net/news/israeli-experts-warn-myanmar-genocide-ruling-could-strengthen-gaza-case-icj",
-          "publicadoEm": "2026-11-20T13:42:43.000Z",
+          "titulo": "'Friends' But Who Benefits? Notes from an Historic Summit, Myanmar's Genocide Ruling, Time to 'Bre-join' the EU?",
+          "link": "https://www.france24.com/en/tv-shows/the-world-this-week/20261120-friends-but-who-benefits-notes-from-an-historic-summit-myanmar-s-genocide-ruling-time-to-bre-join-the-eu",
+          "publicadoEm": "2026-11-20T19:42:58.000Z",
           "semData": false
         },
         {
@@ -776,96 +714,133 @@
       ]
     },
     {
-      "id": "77ce998683fd",
-      "titulo": "White House removes cyber-security chief after series of tech outages",
-      "resumo": "He has been fired after losing the confidence of new White House chief of staff Stephen Miller, according to reports.",
-      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/76fa/live/ea62ee60-e4bd-11f1-87df-79d8910e0f29.jpg",
-      "credito": "BBC News",
+      "id": "6cc38668b794",
+      "titulo": "What are the implications of the ICJ Rohingya genocide ruling?",
+      "resumo": "Verdict against Myanmar may have implications for Israel's genocide in Gaza.",
+      "imagem": "https://www.thenationalnews.com/resizer/v2/6YEWN4MEKNBV5L6Y2XW4RSIK34.JPG?auth=1db353f9d73fe30f13ee2dea6a11772fe8da9e74868eccba73c4456fef81d021&smart=true&width=7856&height=5239",
+      "credito": "The National",
       "regioes": [
-        "america-norte",
+        "oriente-medio",
+        "asia-pacifico",
         "africa"
       ],
       "temas": [
-        "tecnologia",
-        "politica",
-        "conflitos"
+        "direitos",
+        "conflitos",
+        "economia",
+        "diplomacia",
+        "clima"
       ],
       "fontes": 7,
-      "paises": 7,
-      "maisRecente": "2026-11-20T19:03:56.000Z",
+      "paises": 6,
+      "maisRecente": "2026-11-20T19:12:14.000Z",
       "materias": [
         {
-          "fonte": "BBC News",
+          "fonte": "Al Jazeera",
+          "pais": "Catar",
+          "visao": "Rede do Catar, foco no Sul Global e no mundo árabe",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "What are the implications of the ICJ Rohingya genocide ruling?",
+          "link": "https://www.aljazeera.com/video/inside-story/2026/11/20/what-are-the-implications-of-the-icj-rohingya-genocide-ruling?traffic_source=rss",
+          "publicadoEm": "2026-11-20T19:12:14.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The National",
+          "pais": "Emirados Árabes",
+          "visao": "Jornal dos Emirados, ligado ao governo",
+          "estatal": true,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Pictures of the week: From Rohingya refugees watching ICJ ruling to Dubai Future Week",
+          "link": "https://www.thenationalnews.com/news/2026/11/20/pictures-of-the-week-rohingya-genocide-ruling/",
+          "publicadoEm": "2026-11-20T17:51:00.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Tehran Times",
+          "pais": "Irã",
+          "visao": "Jornal iraniano alinhado ao governo (versão oficial de Teerã)",
+          "estatal": true,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "ICJ ruling against Myanmar brings Gaza genocide case into sharper focus",
+          "link": "https://www.tehrantimes.com/news/532347/ICJ-ruling-against-Myanmar-brings-Gaza-genocide-case-into-sharper",
+          "publicadoEm": "2026-11-20T16:45:32.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Foreign Policy",
+          "pais": "EUA",
+          "visao": "Revista de análise de política externa",
+          "estatal": false,
+          "tipo": "analise",
+          "idioma": "en",
+          "titulo": "ICJ Finds Myanmar Committed Genocide. What Comes Next?",
+          "link": "https://foreignpolicy.com/2026/11/20/myanmar-genocide-icj-ruling-rohingya-muslims-ukraine-gaza-tom-andrews-un/",
+          "publicadoEm": "2026-11-20T15:57:04.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Al-Monitor",
+          "pais": "EUA",
+          "visao": "Site especializado em Oriente Médio",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Myanmar genocide judgment may bolster Gaza case against Israel",
+          "link": "https://www.al-monitor.com/originals/2026/11/myanmar-genocide-judgment-may-bolster-gaza-case-against-israel",
+          "publicadoEm": "2026-11-20T15:46:30.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Myanmar genocide judgment may bolster Gaza case against Israel",
+          "link": "https://www.straitstimes.com/world/middle-east/myanmar-genocide-judgment-may-bolster-gaza-case-against-israel",
+          "publicadoEm": "2026-11-20T15:30:40.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Middle East Eye",
           "pais": "Reino Unido",
-          "visao": "Emissora pública britânica",
+          "visao": "Site focado no Oriente Médio, crítico de governos da região",
           "estatal": false,
           "tipo": "noticia",
           "idioma": "en",
-          "titulo": "White House removes cyber-security chief after series of tech outages",
-          "link": "https://www.bbc.co.uk/news/articles/cwz0k3nn5p5mo?at_medium=RSS&at_campaign=rss",
-          "publicadoEm": "2026-11-20T19:03:56.000Z",
+          "titulo": "Israeli experts warn Myanmar genocide ruling could strengthen Gaza case at ICJ",
+          "link": "https://www.middleeasteye.net/news/israeli-experts-warn-myanmar-genocide-ruling-could-strengthen-gaza-case-icj",
+          "publicadoEm": "2026-11-20T13:42:43.000Z",
           "semData": false
-        },
-        {
-          "fonte": "The Hindu",
-          "pais": "Índia",
-          "visao": "Jornal de referência indiano",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "White House fires cybersecurity chief after widespread outages",
-          "link": "https://www.thehindu.com/news/international/white-house-fires-cybersecurity-chief-after-widespread-outages/article71722952.ece",
-          "publicadoEm": "2026-11-20T08:05:47.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Euronews",
-          "pais": "União Europeia",
-          "visao": "Canal de notícias pan-europeu",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "White House national cyber director fired after wave of tech outages",
-          "link": "https://www.euronews.com/2026/11/20/white-house-national-cyber-director-fired-after-wave-of-tech-outages",
-          "publicadoEm": "2026-11-20T07:03:40.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Asharq Al-Awsat",
-          "pais": "Arábia Saudita",
-          "visao": "Jornal pan-árabe de dono saudita",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "White House Taps Kirsten Davies as Cyber Chief After Outages Rattle Americans",
-          "link": "https://english.aawsat.com/node/5343475",
-          "publicadoEm": "2026-11-20T06:52:02.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Daily Maverick",
-          "pais": "África do Sul",
-          "visao": "Jornal sul-africano independente",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Trump ousts cyber director after tech outages spark criticism",
-          "link": "https://www.dailymaverick.co.za/article/2026-11-20-trump-ousts-cyber-director-after-tech-outages-spark-criticism-friday-20th-november-2026-0338/",
-          "publicadoEm": "2026-11-20T05:07:59.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "DW",
-          "pais": "Alemanha",
-          "visao": "Emissora internacional pública alemã",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "White House replaces cyber security chief after tech outages",
-          "link": "https://www.dw.com/en/white-house-replaces-cyber-security-chief-after-tech-outages/a-79998531?maca=en-rss-en-world-4025-rdf",
-          "publicadoEm": "2026-11-20T04:21:00.000Z",
-          "semData": false
-        },
+        }
+      ]
+    },
+    {
+      "id": "fcbfb2b1548e",
+      "titulo": "Indian man jailed over US murder plot against Sikh separatist",
+      "resumo": "A US judge sentenced Indian national Nikhil Gupta to more than 19 years in prison for plotting to assassinate Sikh separatist Gurpatwant Singh Pannun.",
+      "imagem": "https://dam.mediacorp.sg/image/upload/s--ryYFxIjG--/fl_relative,g_south_east,l_mediacorp:cna:watermark:2024-04:reuters_1,w_0.1/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/one-cms/core/2026-11-20T171806Z_2_LYNXNPEMAJ1KJ_RTROPTP_3_USA-INDIA-SIKH.JPG?itok=rEa2zlkv",
+      "credito": "CNA",
+      "regioes": [
+        "asia-pacifico",
+        "america-norte"
+      ],
+      "temas": [
+        "direitos",
+        "conflitos",
+        "outros",
+        "politica"
+      ],
+      "fontes": 6,
+      "paises": 4,
+      "maisRecente": "2026-11-20T21:07:04.000Z",
+      "materias": [
         {
           "fonte": "CNA",
           "pais": "Singapura",
@@ -873,9 +848,69 @@
           "estatal": true,
           "tipo": "noticia",
           "idioma": "en",
-          "titulo": "Trump ousts cyber director after tech outages spark criticism",
-          "link": "https://www.channelnewsasia.com/world/white-house-fires-cybersecurity-chief-widespread-outages-6567801",
-          "publicadoEm": "2026-11-20T01:13:00.000Z",
+          "titulo": "Indian man jailed over US murder plot against Sikh separatist",
+          "link": "https://www.channelnewsasia.com/world/us-india-nikhil-gupta-sentenced-sikh-pannun-6570561",
+          "publicadoEm": "2026-11-20T21:07:04.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Al Jazeera",
+          "pais": "Catar",
+          "visao": "Rede do Catar, foco no Sul Global e no mundo árabe",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Indian man sentenced to 19 years in US Sikh separatist assassination plot",
+          "link": "https://www.aljazeera.com/news/2026/11/20/indian-man-sentenced-to-19-years-in-us-sikh-separatist-assassination-plot?traffic_source=rss",
+          "publicadoEm": "2026-11-20T19:40:07.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "South China Morning Post",
+          "pais": "Hong Kong",
+          "visao": "Jornal de Hong Kong sobre China e Ásia",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Indian man jailed over US murder plot against Sikh separatist",
+          "link": "https://www.scmp.com/news/world/united-states-canada/article/3375297/indian-man-jailed-over-us-murder-plot-against-sikh-separatist",
+          "publicadoEm": "2026-11-20T19:27:53.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "BBC News",
+          "pais": "Reino Unido",
+          "visao": "Emissora pública britânica",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Indian man sentenced to 19-plus years in plot to assassinate US-based Sikh separatist leader",
+          "link": "https://www.bbc.co.uk/news/articles/cq702ez8d4lwo?at_medium=RSS&at_campaign=rss",
+          "publicadoEm": "2026-11-20T19:27:49.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Guardian",
+          "pais": "Reino Unido",
+          "visao": "Jornal britânico, centro-esquerda",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Indian man sentenced to 19 years in prison for conspiring to kill Sikh separatist in New York",
+          "link": "https://www.theguardian.com/us-news/2026/nov/20/indian-man-sentenced-prison-murder-plot-sikh-separatist",
+          "publicadoEm": "2026-11-20T18:24:12.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Indian man sentenced to more than 19 years in US for plotting to kill Sikh separatist",
+          "link": "https://www.straitstimes.com/world/united-states/indian-man-sentenced-to-more-than-19-years-in-us-for-plotting-to-kill-sikh-separatist",
+          "publicadoEm": "2026-11-20T17:15:26.000Z",
           "semData": false
         }
       ]
@@ -1093,6 +1128,99 @@
           "titulo": "Two men suspected of being hired by Russia to kill Ukrainian rapper",
           "link": "https://www.straitstimes.com/world/europe/two-danes-suspected-of-being-hired-by-russia-to-kill-ukrainian-rapper",
           "publicadoEm": "2026-11-20T12:20:17.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "77ce998683fd",
+      "titulo": "White House removes cyber-security chief after series of tech outages",
+      "resumo": "He has been fired after losing the confidence of new White House chief of staff Stephen Miller, according to reports.",
+      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/76fa/live/ea62ee60-e4bd-11f1-87df-79d8910e0f29.jpg",
+      "credito": "BBC News",
+      "regioes": [
+        "america-norte",
+        "africa"
+      ],
+      "temas": [
+        "tecnologia",
+        "politica",
+        "conflitos"
+      ],
+      "fontes": 6,
+      "paises": 6,
+      "maisRecente": "2026-11-20T19:03:56.000Z",
+      "materias": [
+        {
+          "fonte": "BBC News",
+          "pais": "Reino Unido",
+          "visao": "Emissora pública britânica",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "White House removes cyber-security chief after series of tech outages",
+          "link": "https://www.bbc.co.uk/news/articles/cwz0k3nn5p5mo?at_medium=RSS&at_campaign=rss",
+          "publicadoEm": "2026-11-20T19:03:56.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Hindu",
+          "pais": "Índia",
+          "visao": "Jornal de referência indiano",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "White House fires cybersecurity chief after widespread outages",
+          "link": "https://www.thehindu.com/news/international/white-house-fires-cybersecurity-chief-after-widespread-outages/article71722952.ece",
+          "publicadoEm": "2026-11-20T08:05:47.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Euronews",
+          "pais": "União Europeia",
+          "visao": "Canal de notícias pan-europeu",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "White House national cyber director fired after wave of tech outages",
+          "link": "https://www.euronews.com/2026/11/20/white-house-national-cyber-director-fired-after-wave-of-tech-outages",
+          "publicadoEm": "2026-11-20T07:03:40.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Asharq Al-Awsat",
+          "pais": "Arábia Saudita",
+          "visao": "Jornal pan-árabe de dono saudita",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "White House Taps Kirsten Davies as Cyber Chief After Outages Rattle Americans",
+          "link": "https://english.aawsat.com/node/5343475",
+          "publicadoEm": "2026-11-20T06:52:02.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Daily Maverick",
+          "pais": "África do Sul",
+          "visao": "Jornal sul-africano independente",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Trump ousts cyber director after tech outages spark criticism",
+          "link": "https://www.dailymaverick.co.za/article/2026-11-20-trump-ousts-cyber-director-after-tech-outages-spark-criticism-friday-20th-november-2026-0338/",
+          "publicadoEm": "2026-11-20T05:07:59.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "CNA",
+          "pais": "Singapura",
+          "visao": "Canal de Singapura, foco no Sudeste Asiático",
+          "estatal": true,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Trump ousts cyber director after tech outages spark criticism",
+          "link": "https://www.channelnewsasia.com/world/white-house-fires-cybersecurity-chief-widespread-outages-6567801",
+          "publicadoEm": "2026-11-20T01:13:00.000Z",
           "semData": false
         }
       ]
@@ -1484,88 +1612,6 @@
           "titulo": "Líderes da Europa rejeitam negociações de Trump com Rússia e China sobre a Ucrânia",
           "link": "https://www.gazetadopovo.com.br/mundo/lideres-da-europa-rejeitam-negociacoes-de-trump-com-russia-e-china-sobre-a-ucrania/",
           "publicadoEm": "2026-11-20T01:35:33.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "04cee6e2e641",
-      "titulo": "Indian man sentenced to 19 years in US Sikh separatist assassination plot",
-      "resumo": "Nikhil Gupta jailed for conspiring to hire a hitman to kill New York-based Sikh leader, Gurpatwant Singh Pannun.",
-      "imagem": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/21/0f0925b3-2ff2-4ba0-9fd7-e1bab24b37cc_2c3ee19f.jpg?itok=5vV2v1nG&v=1795202856",
-      "credito": "South China Morning Post",
-      "regioes": [
-        "asia-pacifico",
-        "america-norte"
-      ],
-      "temas": [
-        "outros",
-        "politica",
-        "conflitos",
-        "direitos"
-      ],
-      "fontes": 5,
-      "paises": 4,
-      "maisRecente": "2026-11-20T19:40:07.000Z",
-      "materias": [
-        {
-          "fonte": "Al Jazeera",
-          "pais": "Catar",
-          "visao": "Rede do Catar, foco no Sul Global e no mundo árabe",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Indian man sentenced to 19 years in US Sikh separatist assassination plot",
-          "link": "https://www.aljazeera.com/news/2026/11/20/indian-man-sentenced-to-19-years-in-us-sikh-separatist-assassination-plot?traffic_source=rss",
-          "publicadoEm": "2026-11-20T19:40:07.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "South China Morning Post",
-          "pais": "Hong Kong",
-          "visao": "Jornal de Hong Kong sobre China e Ásia",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Indian man jailed over US murder plot against Sikh separatist",
-          "link": "https://www.scmp.com/news/world/united-states-canada/article/3375297/indian-man-jailed-over-us-murder-plot-against-sikh-separatist",
-          "publicadoEm": "2026-11-20T19:27:53.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "BBC News",
-          "pais": "Reino Unido",
-          "visao": "Emissora pública britânica",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Indian man sentenced to 19-plus years in plot to assassinate US-based Sikh separatist leader",
-          "link": "https://www.bbc.co.uk/news/articles/cq702ez8d4lwo?at_medium=RSS&at_campaign=rss",
-          "publicadoEm": "2026-11-20T19:27:49.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The Guardian",
-          "pais": "Reino Unido",
-          "visao": "Jornal britânico, centro-esquerda",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Indian man sentenced to 19 years in prison for conspiring to kill Sikh separatist in New York",
-          "link": "https://www.theguardian.com/us-news/2026/nov/20/indian-man-sentenced-prison-murder-plot-sikh-separatist",
-          "publicadoEm": "2026-11-20T18:24:12.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The Straits Times",
-          "pais": "Singapura",
-          "visao": "Jornal de referência de Singapura",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Indian man sentenced to more than 19 years in US for plotting to kill Sikh separatist",
-          "link": "https://www.straitstimes.com/world/united-states/indian-man-sentenced-to-more-than-19-years-in-us-for-plotting-to-kill-sikh-separatist",
-          "publicadoEm": "2026-11-20T17:15:26.000Z",
           "semData": false
         }
       ]
@@ -2164,6 +2210,73 @@
       ]
     },
     {
+      "id": "efd15946f176",
+      "titulo": "France investigates actor Depardieu, author Houellebecq over alleged gang rape",
+      "resumo": "The Paris prosecutor's office said the alleged abuse occurred in December 2018, during the shooting of 'Thalasso,' a movie starring the two men.",
+      "imagem": "https://img.lemde.fr/2026/11/20/0/97/1006/503/644/322/60/0/3449d3c_upload-1-fobb0c8ctxha-1217824.png",
+      "credito": "Le Monde (inglês)",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "direitos",
+        "outros"
+      ],
+      "fontes": 4,
+      "paises": 2,
+      "maisRecente": "2026-11-20T21:06:46.000Z",
+      "materias": [
+        {
+          "fonte": "Le Monde (inglês)",
+          "pais": "França",
+          "visao": "Jornal de referência francês",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "France investigates actor Depardieu, author Houellebecq over alleged gang rape",
+          "link": "https://www.lemonde.fr/en/france/article/2026/11/20/france-investigates-actor-depardieu-author-houellebecq-over-alleged-gang-rape_6785704_7.html",
+          "publicadoEm": "2026-11-20T21:06:46.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "France 24",
+          "pais": "França",
+          "visao": "Emissora internacional pública francesa",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "France investigates actor Depardieu, writer Houellebecq over alleged gang rape",
+          "link": "https://www.france24.com/en/france/20261120-france-investigates-gerard-depardieu-writer-houellebecq-over-alleged-gang-rape",
+          "publicadoEm": "2026-11-20T16:27:56.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "France probes actor Gerard Depardieu, author Michel Houellebecq over alleged gang rape",
+          "link": "https://www.straitstimes.com/world/europe/france-probes-actor-gerard-depardieu-author-michel-houellebecq-over-alleged-gang-rape",
+          "publicadoEm": "2026-11-20T15:22:00.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "RFI (inglês)",
+          "pais": "França",
+          "visao": "Rádio pública francesa, forte cobertura da África",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Depardieu and Houellebecq accused of gang rape on French film set",
+          "link": "https://www.rfi.fr/en/france/20261120-depardieu-and-houellebecq-accused-of-gang-rape-on-french-film-set",
+          "publicadoEm": "2026-11-20T14:24:55.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
       "id": "6764860dada9",
       "titulo": "‘We do whatever we want with what’s ours’: A look back at Ukraine’s attacks on the Crimean Bridge",
       "resumo": "Since the start of the full-scale war, the Crimean Bridge, which links the Russian-annexed peninsula to Russia’s Krasnodar region, has repeatedly been a target of Ukrainian strikes. Ukrainian officials have stressed that they target the bridge because it is used for military…",
@@ -2682,63 +2795,6 @@
       ]
     },
     {
-      "id": "6ddea0db023b",
-      "titulo": "Fiona, hipopótamo que viralizou nas redes por nascimento prematuro, morre após engolir gorro de lã em zoológico",
-      "resumo": "Inspiração para sabor de sorvete e até de uma personagem do balé da cidade, animal passou por diversas tentativas de expelir o objeto nos últimos dez dias",
-      "imagem": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/ff3b/live/b1a3a370-e464-11f1-99a1-253766e7ad8b.jpg",
-      "credito": "BBC News Brasil",
-      "regioes": [
-        "america-norte",
-        "mundo",
-        "oriente-medio"
-      ],
-      "temas": [
-        "outros",
-        "tecnologia"
-      ],
-      "fontes": 3,
-      "paises": 2,
-      "maisRecente": "2026-11-20T17:41:18.000Z",
-      "materias": [
-        {
-          "fonte": "BBC News Brasil",
-          "pais": "Reino Unido",
-          "visao": "Serviço em português da BBC",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "pt",
-          "titulo": "Fiona, hipopótamo que viralizou nas redes por nascimento prematuro, morre após engolir gorro de lã em zoológico",
-          "link": "https://www.bbc.com/portuguese/articles/cjn502p90dzxo?at_medium=RSS&at_campaign=rss",
-          "publicadoEm": "2026-11-20T17:41:18.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Estadão Internacional",
-          "pais": "Brasil",
-          "visao": "Jornal de referência brasileiro, centro-direita",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "pt",
-          "titulo": "Fiona, hipopótamo mais famosa dos EUA, morre após engolir gorro de tricô em zoológico de Cincinnati",
-          "link": "https://www.estadao.com.br/internacional/fiona-hipopotamo-mais-famosa-dos-eua-morre-apos-engolir-gorro-de-trico-em-zoologico-de-cincinnati-npr/",
-          "publicadoEm": "2026-11-19T22:34:34.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "g1 Mundo",
-          "pais": "Brasil",
-          "visao": "Portal do Grupo Globo",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "pt",
-          "titulo": "Fiona, hipopótamo famoso nas redes, morre após engolir gorro de tricô em zoológico nos EUA",
-          "link": "https://g1.globo.com/meio-ambiente/noticia/2026/11/19/fiona-hipopotamo-redes-gorro-zoologico-eua.ghtml",
-          "publicadoEm": "2026-11-19T21:16:09.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
       "id": "975d3cbfc9b6",
       "titulo": "Russia’s deputy prime minister says Crimean Bridge arch and main girder are damaged and repair timeline is unclear",
       "resumo": "Russia’s deputy prime minister, Marat Khusnullin, said it was still unclear how long repairs to the Crimean Bridge would take. He said officials could estimate the duration once engineers provided plans for the repairs.",
@@ -2910,63 +2966,6 @@
       ]
     },
     {
-      "id": "1c116c127c7e",
-      "titulo": "Saudi-led forces strike Yemen port as Houthis warn airlines off the kingdom",
-      "resumo": "By Yasmine Ghania and Muhammad Al Gebaly Nov 20 (Reuters) - The Saudi-led coalition fighting Yemen's Iran-aligned Houthis said it had struck the Red Sea port of Hodeidah to destroy Houthi capabilities on Friday, as the militants warned airlines to avoid Saudi airspace, pledging…",
-      "imagem": "",
-      "credito": "",
-      "regioes": [
-        "oriente-medio"
-      ],
-      "temas": [
-        "conflitos",
-        "energia",
-        "direitos",
-        "politica"
-      ],
-      "fontes": 3,
-      "paises": 3,
-      "maisRecente": "2026-11-20T16:47:17.000Z",
-      "materias": [
-        {
-          "fonte": "Al-Monitor",
-          "pais": "EUA",
-          "visao": "Site especializado em Oriente Médio",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Saudi-led forces strike Yemen port as Houthis warn airlines off the kingdom",
-          "link": "https://www.al-monitor.com/originals/2026/11/saudi-led-forces-strike-yemen-port-houthis-warn-airlines-kingdom",
-          "publicadoEm": "2026-11-20T16:47:17.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The Straits Times",
-          "pais": "Singapura",
-          "visao": "Jornal de referência de Singapura",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Saudi-led forces strike Yemen port as Houthis warn airlines off the kingdom",
-          "link": "https://www.straitstimes.com/world/middle-east/saudi-led-forces-strike-yemen-port-as-houthis-warn-airlines-off-the-kingdom",
-          "publicadoEm": "2026-11-20T16:40:38.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Middle East Eye",
-          "pais": "Reino Unido",
-          "visao": "Site focado no Oriente Médio, crítico de governos da região",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Saudi-backed forces defend strikes on Yemen's Hodeidah port",
-          "link": "https://www.middleeasteye.net/live-blog/live-blog-update/saudi-backed-forces-defend-strikes-yemens-hodeidah-port",
-          "publicadoEm": "2026-11-20T15:34:29.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
       "id": "7db600dee5b4",
       "titulo": "Yemen targets Saudi Arabia’s financial hub",
       "resumo": "The Yemeni Armed Forces (YAF) targeted the financial district in the Saudi capital on Thursday. The attack on the Saudi hallmark came as YAF makes battlefield advances against the Saudi-backed forces inside Yemen.",
@@ -3030,61 +3029,6 @@
           "titulo": "Middle East latest: Saudi-led coalition targets Houthi weapons smuggling at Hodeidah port",
           "link": "https://www.thenationalnews.com/news/mena/2026/11/20/live-iran-war-saudi-arabia-houthis/",
           "publicadoEm": "2026-11-20T12:37:34.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "77203b320b1d",
-      "titulo": "France investigates actor Depardieu, writer Houellebecq over alleged gang rape",
-      "resumo": "French police are investigating allegations actor and convicted sex offender Gérard Depardieu raped and assaulted a woman with the complicity of bestselling author Michel Houellebecq during a 2018 film shoot, two sources following the case said Friday. The plaintiff has accused…",
-      "imagem": "https://s.france24.com/media/display/c09677fe-e4f5-11f1-add1-13439ca2fe89/w:1024/p:16x9/000-D7ZY6NQ.jpg",
-      "credito": "France 24",
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "direitos",
-        "outros"
-      ],
-      "fontes": 3,
-      "paises": 2,
-      "maisRecente": "2026-11-20T16:27:56.000Z",
-      "materias": [
-        {
-          "fonte": "France 24",
-          "pais": "França",
-          "visao": "Emissora internacional pública francesa",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "France investigates actor Depardieu, writer Houellebecq over alleged gang rape",
-          "link": "https://www.france24.com/en/france/20261120-france-investigates-gerard-depardieu-writer-houellebecq-over-alleged-gang-rape",
-          "publicadoEm": "2026-11-20T16:27:56.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The Straits Times",
-          "pais": "Singapura",
-          "visao": "Jornal de referência de Singapura",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "France probes actor Gerard Depardieu, author Michel Houellebecq over alleged gang rape",
-          "link": "https://www.straitstimes.com/world/europe/france-probes-actor-gerard-depardieu-author-michel-houellebecq-over-alleged-gang-rape",
-          "publicadoEm": "2026-11-20T15:22:00.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "RFI (inglês)",
-          "pais": "França",
-          "visao": "Rádio pública francesa, forte cobertura da África",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Depardieu and Houellebecq accused of gang rape on French film set",
-          "link": "https://www.rfi.fr/en/france/20261120-depardieu-and-houellebecq-accused-of-gang-rape-on-french-film-set",
-          "publicadoEm": "2026-11-20T14:24:55.000Z",
           "semData": false
         }
       ]
@@ -3313,6 +3257,138 @@
           "titulo": "Russia Hits 3 Kyiv Bridges in Overnight Ballistic Attack",
           "link": "https://www.kyivpost.com/post/90654",
           "publicadoEm": "2026-11-20T01:31:05.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "cb8c3ef54bbf",
+      "titulo": "Trump replaces US cyber chief after outages hit flights, banks and NSA",
+      "resumo": "US President Donald Trump has tapped the Pentagon’s chief information officer as his new cyber chief following a series of major outages that disrupted air travel, banking and classified communications, saying on Friday that her predecessor was not “good enough”. Kirsten Davies…",
+      "imagem": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/21/baa74963-5f0f-4973-85f6-d1536abf6466_5022610b.jpg?itok=c4FQzzIM&v=1795209230",
+      "credito": "South China Morning Post",
+      "regioes": [
+        "america-norte"
+      ],
+      "temas": [
+        "tecnologia",
+        "politica"
+      ],
+      "fontes": 2,
+      "paises": 2,
+      "maisRecente": "2026-11-20T21:14:04.000Z",
+      "materias": [
+        {
+          "fonte": "South China Morning Post",
+          "pais": "Hong Kong",
+          "visao": "Jornal de Hong Kong sobre China e Ásia",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Trump replaces US cyber chief after outages hit flights, banks and NSA",
+          "link": "https://www.scmp.com/news/us/politics/article/3375298/trump-replaces-us-cyber-chief-after-outages-hit-flights-banks-and-nsa",
+          "publicadoEm": "2026-11-20T21:14:04.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "DW",
+          "pais": "Alemanha",
+          "visao": "Emissora internacional pública alemã",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "White House replaces cyber security chief after tech outages",
+          "link": "https://www.dw.com/en/white-house-replaces-cyber-security-chief-after-tech-outages/a-79998531?maca=en-rss-en-world-4025-rdf",
+          "publicadoEm": "2026-11-20T04:21:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "d62fe715ede0",
+      "titulo": "UN warns against Yemen escalation after Saudi-led air strikes on Hodeidah port",
+      "resumo": "",
+      "imagem": "https://www.thenationalnews.com/resizer/v2/MWM23OGD4PNHEDT7JJG3UH673U.jpg?auth=78b1d32393fc09cd57b5581abaff48371b96955c3ccdd8c388e865add3bd9196&smart=true&width=4368&height=2912",
+      "credito": "The National",
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "conflitos",
+        "politica",
+        "direitos"
+      ],
+      "fontes": 2,
+      "paises": 2,
+      "maisRecente": "2026-11-20T20:53:47.000Z",
+      "materias": [
+        {
+          "fonte": "The National",
+          "pais": "Emirados Árabes",
+          "visao": "Jornal dos Emirados, ligado ao governo",
+          "estatal": true,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "UN warns against Yemen escalation after Saudi-led air strikes on Hodeidah port",
+          "link": "https://www.thenationalnews.com/news/2026/11/20/un-yemen-saudi-houthis-hodeidah/",
+          "publicadoEm": "2026-11-20T20:53:47.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Middle East Eye",
+          "pais": "Reino Unido",
+          "visao": "Site focado no Oriente Médio, crítico de governos da região",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Saudi-backed forces defend strikes on Yemen's Hodeidah port",
+          "link": "https://www.middleeasteye.net/live-blog/live-blog-update/saudi-backed-forces-defend-strikes-yemens-hodeidah-port",
+          "publicadoEm": "2026-11-20T15:34:29.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "c7d4603146ab",
+      "titulo": "US Vice President Vance declines to say he would have ordered Iran strikes",
+      "resumo": "WASHINGTON, Nov 20 - US Vice President JD Vance on Friday declined to say whether he would have authorized strikes on Iran to prevent the country from developing a nuclear weapon, sidestepping President Donald Trump's calls for him to say the attacks were necessary and that he…",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "america-norte",
+        "oriente-medio"
+      ],
+      "temas": [
+        "conflitos",
+        "energia",
+        "politica"
+      ],
+      "fontes": 2,
+      "paises": 2,
+      "maisRecente": "2026-11-20T20:50:30.000Z",
+      "materias": [
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "US Vice President Vance declines to say he would have ordered Iran strikes",
+          "link": "https://www.straitstimes.com/world/middle-east/us-vice-president-vance-declines-to-say-he-would-have-ordered-iran-strikes",
+          "publicadoEm": "2026-11-20T20:50:30.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Al-Monitor",
+          "pais": "EUA",
+          "visao": "Site especializado em Oriente Médio",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "US Vice President Vance declines to say he would have ordered Iran strikes",
+          "link": "https://www.al-monitor.com/originals/2026/11/us-vice-president-vance-declines-say-he-would-have-ordered-iran-strikes",
+          "publicadoEm": "2026-11-20T20:46:52.000Z",
           "semData": false
         }
       ]
@@ -3580,6 +3656,55 @@
           "titulo": "Ex-Head of Russian Youth Patriotism Center Arrested on Embezzlement Charges",
           "link": "https://www.themoscowtimes.com/2026/11/20/ex-head-of-russian-youth-patriotism-center-arrested-on-embezzlement-charges-a94330",
           "publicadoEm": "2026-11-20T11:41:41.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "ef0c03a57e04",
+      "titulo": "Países da ONU estão divididos sobre regulamentação de ‘robôs assassinos’",
+      "resumo": "Conferência ocorre em Genebra nesta sexta para discutir sistemas de armas autônomas letais, capazes de selecionar e atacar alvos sem intervenção humana",
+      "imagem": "https://www.cartacapital.com.br/wp-content/uploads/2026/11/AFP__20261116__D7KW7KE__v1__MidRes__SwitzerlandDiplomacyUnDefenceWeaponry.jpg",
+      "credito": "CartaCapital Mundo",
+      "regioes": [
+        "global",
+        "europa",
+        "america-norte",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia",
+        "energia",
+        "politica",
+        "tecnologia"
+      ],
+      "fontes": 2,
+      "paises": 1,
+      "maisRecente": "2026-11-20T20:06:10.000Z",
+      "materias": [
+        {
+          "fonte": "CartaCapital Mundo",
+          "pais": "Brasil",
+          "visao": "Revista brasileira, esquerda",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "pt",
+          "titulo": "Países da ONU estão divididos sobre regulamentação de ‘robôs assassinos’",
+          "link": "https://www.cartacapital.com.br/mundo/paises-da-onu-estao-divididos-sobre-regulamentacao-de-robos-assassinos/",
+          "publicadoEm": "2026-11-20T20:06:10.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "g1 Mundo",
+          "pais": "Brasil",
+          "visao": "Portal do Grupo Globo",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "pt",
+          "titulo": "'Robôs assassinos' já são usados em guerras, mas países não chegam a acordo sobre limites na ONU",
+          "link": "https://g1.globo.com/inovacao/noticia/2026/11/20/robos-assassinos-ja-sao-usados-em-guerras-mas-paises-nao-chegam-a-acordo-sobre-limites-na-onu.ghtml",
+          "publicadoEm": "2026-11-20T14:00:27.000Z",
           "semData": false
         }
       ]
@@ -4172,6 +4297,49 @@
       ]
     },
     {
+      "id": "6ddea0db023b",
+      "titulo": "Fiona, hipopótamo que viralizou nas redes por nascimento prematuro, morre após engolir gorro de lã em zoológico",
+      "resumo": "Inspiração para sabor de sorvete e até de uma personagem do balé da cidade, animal passou por diversas tentativas de expelir o objeto nos últimos dez dias",
+      "imagem": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/ff3b/live/b1a3a370-e464-11f1-99a1-253766e7ad8b.jpg",
+      "credito": "BBC News Brasil",
+      "regioes": [
+        "mundo",
+        "america-norte"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 2,
+      "paises": 2,
+      "maisRecente": "2026-11-20T17:41:18.000Z",
+      "materias": [
+        {
+          "fonte": "BBC News Brasil",
+          "pais": "Reino Unido",
+          "visao": "Serviço em português da BBC",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "pt",
+          "titulo": "Fiona, hipopótamo que viralizou nas redes por nascimento prematuro, morre após engolir gorro de lã em zoológico",
+          "link": "https://www.bbc.com/portuguese/articles/cjn502p90dzxo?at_medium=RSS&at_campaign=rss",
+          "publicadoEm": "2026-11-20T17:41:18.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Estadão Internacional",
+          "pais": "Brasil",
+          "visao": "Jornal de referência brasileiro, centro-direita",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "pt",
+          "titulo": "Fiona, hipopótamo mais famosa dos EUA, morre após engolir gorro de tricô em zoológico de Cincinnati",
+          "link": "https://www.estadao.com.br/internacional/fiona-hipopotamo-mais-famosa-dos-eua-morre-apos-engolir-gorro-de-trico-em-zoologico-de-cincinnati-npr/",
+          "publicadoEm": "2026-11-19T22:34:34.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
       "id": "a5b6ed44f5ca",
       "titulo": "Bukele disputa terceiro mandato após aprovação da reeleição indefinida",
       "resumo": "O presidente de El Salvador, Nayib Bukele, oficializou nesta quinta-feira (19/11) sua candidatura a um terceiro mandato consecutivo nas eleições presidenciais programadas para 28 de fevereiro de 2027. Segundo as pesquisas, ele detém 55% e 70% das intenções de voto, enquanto os…",
@@ -4558,6 +4726,50 @@
           "titulo": "Brexit reset: £17bn boost as Britain strikes new deal with EU",
           "link": "https://www.thenationalnews.com/news/europe/2026/11/20/brexit-reset-17bn-boost-as-britain-strikes-new-deal-with-eu/",
           "publicadoEm": "2026-11-20T16:34:09.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "1c116c127c7e",
+      "titulo": "Saudi-led forces strike Yemen port as Houthis warn airlines off the kingdom",
+      "resumo": "By Yasmine Ghania and Muhammad Al Gebaly Nov 20 (Reuters) - The Saudi-led coalition fighting Yemen's Iran-aligned Houthis said it had struck the Red Sea port of Hodeidah to destroy Houthi capabilities on Friday, as the militants warned airlines to avoid Saudi airspace, pledging…",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "conflitos",
+        "energia",
+        "direitos"
+      ],
+      "fontes": 2,
+      "paises": 2,
+      "maisRecente": "2026-11-20T16:47:17.000Z",
+      "materias": [
+        {
+          "fonte": "Al-Monitor",
+          "pais": "EUA",
+          "visao": "Site especializado em Oriente Médio",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Saudi-led forces strike Yemen port as Houthis warn airlines off the kingdom",
+          "link": "https://www.al-monitor.com/originals/2026/11/saudi-led-forces-strike-yemen-port-houthis-warn-airlines-kingdom",
+          "publicadoEm": "2026-11-20T16:47:17.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Saudi-led forces strike Yemen port as Houthis warn airlines off the kingdom",
+          "link": "https://www.straitstimes.com/world/middle-east/saudi-led-forces-strike-yemen-port-as-houthis-warn-airlines-off-the-kingdom",
+          "publicadoEm": "2026-11-20T16:40:38.000Z",
           "semData": false
         }
       ]
@@ -6210,49 +6422,6 @@
       ]
     },
     {
-      "id": "d495c767f125",
-      "titulo": "Quatro homens são condenados no Reino Unido por crimes sexuais contra mulher drogada pelo marido",
-      "resumo": "",
-      "imagem": "",
-      "credito": "",
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "direitos",
-        "outros"
-      ],
-      "fontes": 2,
-      "paises": 1,
-      "maisRecente": "2026-11-20T09:38:52.000Z",
-      "materias": [
-        {
-          "fonte": "Estadão Internacional",
-          "pais": "Brasil",
-          "visao": "Jornal de referência brasileiro, centro-direita",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "pt",
-          "titulo": "Quatro homens são condenados no Reino Unido por crimes sexuais contra mulher drogada pelo marido",
-          "link": "https://www.estadao.com.br/internacional/quatro-homens-sao-condenados-no-reino-unido-por-crimes-sexuais-contra-mulher-drogada-pelo-marido-npr/",
-          "publicadoEm": "2026-11-20T09:38:52.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Folha Mundo",
-          "pais": "Brasil",
-          "visao": "Jornal de referência brasileiro",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "pt",
-          "titulo": "Reino Unido condena 4 homens por abusos a mulher drogada pelo marido em caso parecido com de Pelicot",
-          "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/reino-unido-condena-4-homens-por-abusos-a-mulher-drogada-pelo-marido-em-caso-parecido-com-de-pelicot.shtml",
-          "publicadoEm": "2026-11-19T21:15:00.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
       "id": "c6db44933161",
       "titulo": "Russia pummels Ukraine after Putin vowed 'painful' attack",
       "resumo": "The deadly strikes came after an unprecedented trilateral summit with China and the US, where Russian President Vladimir Putin had touted the three men's \"shared responsibility\" for global security.",
@@ -6645,6 +6814,455 @@
       ]
     },
     {
+      "id": "de1da4aefa52",
+      "titulo": "Ativista britânico de extrema direita é preso por atacar bote de migrantes",
+      "resumo": "Daniel Thomas recebeu pena de 15 meses por perfurar com uma faca uma embarcação inflável usada no transporte de migrantes pelo Canal da Mancha",
+      "imagem": "https://veja.abril.com.br/wp-content/uploads/2026/08/IMG_1468.jpg",
+      "credito": "Veja Mundo",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T21:12:02.000Z",
+      "materias": [
+        {
+          "fonte": "Veja Mundo",
+          "pais": "Brasil",
+          "visao": "Revista brasileira, centro-direita",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "pt",
+          "titulo": "Ativista britânico de extrema direita é preso por atacar bote de migrantes",
+          "link": "https://veja.abril.com.br/mundo/ativista-britanico-de-extrema-direita-e-preso-por-atacar-bote-de-migrantes/",
+          "publicadoEm": "2026-11-20T21:12:02.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "2b5a725f10a9",
+      "titulo": "Michelle Heyman marks 200 A-League games with Canberra United",
+      "resumo": "Matildas striker Michelle Heyman marks her 200th game playing for Canberra United this weekend, becoming the first player in the A-League Women to mark the milestone at a single club.",
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/3bf96109e7e4b0e3b65005626c30f310?impolicy=wcms_crop_resize&cropH=2188&cropW=3890&xPos=0&yPos=106&width=862&height=485",
+      "credito": "ABC News Austrália",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "conflitos"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T21:09:14.000Z",
+      "materias": [
+        {
+          "fonte": "ABC News Austrália",
+          "pais": "Austrália",
+          "visao": "Emissora pública australiana",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Michelle Heyman marks 200 A-League games with Canberra United",
+          "link": "https://www.abc.net.au/news/2026-11-21/act-michelle-heyman-200-games-milestone-canberra-united/107407628",
+          "publicadoEm": "2026-11-20T21:09:14.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "2b721ad99a5b",
+      "titulo": "Russian Strike on Kryvyi Rih Wounds 42, Kills 7-Year-Old and Paramedic",
+      "resumo": "A Russian ballistic missile strike on central Kryvyi Rih, a city in Ukraine’s Dnipropetrovsk region, on Friday evening, Nov. 20, killed a 7-year-old boy and a 20-year-old paramedic and injured 42 people, including four children, local officials said. Twenty-seven of the injured…",
+      "imagem": "https://static.kyivpost.com/storage/2026/11/20/4fa2e23b3d8427e2073a6c21b9bce99b.jpg?w=640&q=90&f=jpg",
+      "credito": "Kyiv Post",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "politica"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T21:09:00.000Z",
+      "materias": [
+        {
+          "fonte": "Kyiv Post",
+          "pais": "Ucrânia",
+          "visao": "Jornal ucraniano",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Russian Strike on Kryvyi Rih Wounds 42, Kills 7-Year-Old and Paramedic",
+          "link": "https://www.kyivpost.com/post/90770",
+          "publicadoEm": "2026-11-20T21:09:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "0ae4c356334a",
+      "titulo": "'Cobiçadas' por Trump, Filipinas lideram compra de carne suína do Brasil, mas são 22º destino das exportações do agro",
+      "resumo": "Trump diz que Filipinas vão trocar Brasil pelos EUA na agricultura O presidente dos Estados Unidos, Donald Trump, afirmou nesta sexta-feira (20) que teria firmado um acordo com as Filipinas para assegurar a preferência de produtos agrícolas norte-americanos no mercado do país…",
+      "imagem": "https://s2-g1.glbimg.com/DhnceYR-7SvVVOaVJtVVRvNLVkE=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/I/8/wDhdH0SUa78BARkv9A2w/2019-09-23t131016z-1-lynxmpef8m12t-rtroptp-4-china-economy-trade-pork.jpg",
+      "credito": "g1 Mundo",
+      "regioes": [
+        "asia-pacifico",
+        "america-norte",
+        "europa",
+        "brasil",
+        "america-latina"
+      ],
+      "temas": [
+        "economia",
+        "politica",
+        "conflitos",
+        "diplomacia",
+        "clima"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T21:05:49.000Z",
+      "materias": [
+        {
+          "fonte": "g1 Mundo",
+          "pais": "Brasil",
+          "visao": "Portal do Grupo Globo",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "pt",
+          "titulo": "'Cobiçadas' por Trump, Filipinas lideram compra de carne suína do Brasil, mas são 22º destino das exportações do agro",
+          "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/20/cobicadas-por-trump-filipinas-lideram-compra-de-carne-suina-do-brasil-mas-sao-22o-destino-das-exportacoes-do-agro.ghtml",
+          "publicadoEm": "2026-11-20T21:05:49.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "cd9c8bf3d290",
+      "titulo": "'I won't give up': Widow's vow after 38-year fight for gambling reform",
+      "resumo": "Janina Anstee's husband died by suicide, overwhelmed by debt acquired from gambling in 1987. She has since been calling for change.",
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/b1ac401d57aa5be1183082c61abdf2e0?impolicy=wcms_crop_resize&cropH=1993&cropW=3543&xPos=9&yPos=94&width=862&height=485",
+      "credito": "ABC News Austrália",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "economia"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T21:03:16.000Z",
+      "materias": [
+        {
+          "fonte": "ABC News Austrália",
+          "pais": "Austrália",
+          "visao": "Emissora pública australiana",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "'I won't give up': Widow's vow after 38-year fight for gambling reform",
+          "link": "https://www.abc.net.au/news/2026-11-21/widow-janina-anstee-lifetime-calling-for-gambling-reforms/107112444",
+          "publicadoEm": "2026-11-20T21:03:16.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "295759004f0e",
+      "titulo": "Geração Z impulsiona radicalização política global à esquerda e à direita",
+      "resumo": "",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T21:00:00.000Z",
+      "materias": [
+        {
+          "fonte": "Estadão Internacional",
+          "pais": "Brasil",
+          "visao": "Jornal de referência brasileiro, centro-direita",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "pt",
+          "titulo": "Geração Z impulsiona radicalização política global à esquerda e à direita",
+          "link": "https://www.estadao.com.br/internacional/geracao-z-impulsiona-mudanca-politica-global-apoiando-tanto-a-esquerda-quanto-a-direita-radicais/",
+          "publicadoEm": "2026-11-20T21:00:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "f429c0b6d673",
+      "titulo": "Trump-Putin relations vitally important for entire world — RDIF CEO",
+      "resumo": "Kirill Dmitriev has also stressed the importance of relations between the Russian and US Presidents for global security",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "europa",
+        "america-norte",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "politica",
+        "economia",
+        "conflitos"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T20:51:01.000Z",
+      "materias": [
+        {
+          "fonte": "TASS",
+          "pais": "Rússia",
+          "visao": "Agência estatal russa (versão oficial do Kremlin)",
+          "estatal": true,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Trump-Putin relations vitally important for entire world — RDIF CEO",
+          "link": "https://tass.com/politics/2222759",
+          "publicadoEm": "2026-11-20T20:51:01.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "TASS",
+          "pais": "Rússia",
+          "visao": "Agência estatal russa (versão oficial do Kremlin)",
+          "estatal": true,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Trump describes his relations with Putin as ‘fantastic’",
+          "link": "https://tass.com/world/2222727",
+          "publicadoEm": "2026-11-20T19:17:03.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "a6dccd431f04",
+      "titulo": "Lula visitará estudantes que impulsionaram virada eleitoral",
+      "resumo": "O presidente Luiz Inácio Lula da Silva visitará a Universidade Federal Fluminense (UFF), em Niterói (RJ), na sexta-feira (27/11), em reconhecimento à mobilização de estudantes que participaram da campanha pela virada eleitoral. As informações são da coluna de Lauro Jardim, do…",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "brasil"
+      ],
+      "temas": [
+        "politica"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T20:50:40.000Z",
+      "materias": [
+        {
+          "fonte": "Opera Mundi",
+          "pais": "Brasil",
+          "visao": "Site brasileiro de internacional, esquerda",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "pt",
+          "titulo": "Lula visitará estudantes que impulsionaram virada eleitoral",
+          "link": "https://operamundi.uol.com.br/brasil/lula-visitara-estudantes-que-impulsionaram-virada-eleitoral/",
+          "publicadoEm": "2026-11-20T20:50:40.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "47c4f196513e",
+      "titulo": "Aim is to ‘polarise’: Influencer deepfakes used to stoke Canada-US tensions",
+      "resumo": "Content creators say their identities are being stolen to create division.",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "america-norte"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T20:49:58.000Z",
+      "materias": [
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Aim is to ‘polarise’: Influencer deepfakes used to stoke Canada-US tensions",
+          "link": "https://www.straitstimes.com/world/aim-is-to-polarise-influencer-deepfakes-used-to-stoke-canada-us-tensions",
+          "publicadoEm": "2026-11-20T20:49:58.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "3c55c096f6e6",
+      "titulo": "Justiça dos EUA derruba restrições da Califórnia contra agentes de imigração",
+      "resumo": "Justiça dos EUA impede Califórnia de aplicar leis que restringiam uso de máscaras e exigiam identificação de agentes federais de imigração.",
+      "imagem": "https://media.gazetadopovo.com.br/2026/11/20174626/imigracao-restricoes-california-justica-eua-960x540.jpg",
+      "credito": "Gazeta do Povo Mundo",
+      "regioes": [
+        "america-norte"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T20:48:55.000Z",
+      "materias": [
+        {
+          "fonte": "Gazeta do Povo Mundo",
+          "pais": "Brasil",
+          "visao": "Jornal brasileiro, direita conservadora",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "pt",
+          "titulo": "Justiça dos EUA derruba restrições da Califórnia contra agentes de imigração",
+          "link": "https://www.gazetadopovo.com.br/mundo/justica-dos-eua-derruba-restricoes-da-california-contra-agentes-de-imigracao/",
+          "publicadoEm": "2026-11-20T20:48:55.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "d5925b4dd488",
+      "titulo": "Argentina hit hard by global turmoil as bonds slip into distress",
+      "resumo": "Bond sell-off deepens, pushing its debt into distressed territory for the first time in two years. Leer más",
+      "imagem": "https://fotos.perfil.com/2026/05/01/trim/540/304/entrance-casa-rosada-blocked-journalists-2231832.jpg",
+      "credito": "Buenos Aires Times",
+      "regioes": [
+        "america-latina"
+      ],
+      "temas": [
+        "economia"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T20:48:12.000Z",
+      "materias": [
+        {
+          "fonte": "Buenos Aires Times",
+          "pais": "Argentina",
+          "visao": "Jornal argentino em inglês (grupo Perfil)",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Argentina hit hard by global turmoil as bonds slip into distress",
+          "link": "https://www.batimes.com.ar/news/economy/argentina-hit-hard-by-global-turmoil-as-bonds-slip-into-distress.phtml",
+          "publicadoEm": "2026-11-20T20:48:12.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "74a5c11ff7c7",
+      "titulo": "Seat by seat, these are the major election issues in regional Victoria",
+      "resumo": "As Victoria heads into the last week of the election campaign, renewables projects, hospitals and the state of roads are what voters in the state's regions are thinking about.",
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/5f38c84c87f9c12974da2fc0c7db21f4?impolicy=wcms_crop_resize&cropH=1128&cropW=2005&xPos=988&yPos=858&width=862&height=485",
+      "credito": "ABC News Austrália",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "politica",
+        "energia"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T20:46:42.000Z",
+      "materias": [
+        {
+          "fonte": "ABC News Austrália",
+          "pais": "Austrália",
+          "visao": "Emissora pública australiana",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Seat by seat, these are the major election issues in regional Victoria",
+          "link": "https://www.abc.net.au/news/2026-11-21/victorian-election-regional-voters-issues-seat-by-seat/107390056",
+          "publicadoEm": "2026-11-20T20:46:42.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "663befa0c387",
+      "titulo": "Russian ornithologist jailed over small donations to Navalny's foundation",
+      "resumo": "Sofia Rosenfeld has devoted her life to studying Arctic birds. A Russian court sentenced her to 3.5 years in a penal colony over donations to Navalny's foundation. Friends and family are fighting for her release.",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "direitos",
+        "conflitos"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T20:45:00.000Z",
+      "materias": [
+        {
+          "fonte": "DW",
+          "pais": "Alemanha",
+          "visao": "Emissora internacional pública alemã",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Russian ornithologist jailed over small donations to Navalny's foundation",
+          "link": "https://www.dw.com/en/russian-ornithologist-jailed-over-small-donations-to-navalny-s-foundation/a-80005505?maca=en-rss-en-world-4025-rdf",
+          "publicadoEm": "2026-11-20T20:45:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "dede4df29b0f",
+      "titulo": "Rubio calls meeting of Russia, China, and US leaders foundation for further negotiations",
+      "resumo": "The US Secretary of State pointed out that this meeting has set the tone and created a platform upon which the hard work of diplomacy and trade negotiations can occur to the benefit of the American people and the world",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "europa",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "diplomacia",
+        "economia"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T20:45:00.000Z",
+      "materias": [
+        {
+          "fonte": "TASS",
+          "pais": "Rússia",
+          "visao": "Agência estatal russa (versão oficial do Kremlin)",
+          "estatal": true,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Rubio calls meeting of Russia, China, and US leaders foundation for further negotiations",
+          "link": "https://tass.com/world/2222757",
+          "publicadoEm": "2026-11-20T20:45:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
       "id": "8da05aa07f64",
       "titulo": "Brazil ex-President Bolsonaro taken to hospital with abdominal pain, son says",
       "resumo": "SAO PAULO, Nov 20 - Imprisoned former Brazilian President Jair Bolsonaro has been taken to hospital after suffering \\\"severe abdominal pain,\\\" his son Carlos Bolsonaro said in a post on X on Friday.",
@@ -6670,6 +7288,36 @@
           "titulo": "Brazil ex-President Bolsonaro taken to hospital with abdominal pain, son says",
           "link": "https://www.straitstimes.com/world/brazil-ex-president-bolsonaro-taken-to-hospital-with-abdominal-pain-son-says",
           "publicadoEm": "2026-11-20T20:40:28.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "6418d2b9f602",
+      "titulo": "Hannah Lillith Assadi's National Book Award puts Palestinian exile in the spotlight",
+      "resumo": "In \"Paradiso 17,\" Assadi draws on her father's flight after the Nakba to ask questions earlier generations of Jewish writers helped make central to American fiction",
+      "imagem": "https://img.haarets.co.il/bs/000001a1-fa95-dad7-a9fd-fadff5960000/88/3f/b03c7a0b41b186fc58e544d8c9c5/223634.jpg?width=108&height=81",
+      "credito": "Haaretz",
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T20:37:01.000Z",
+      "materias": [
+        {
+          "fonte": "Haaretz",
+          "pais": "Israel",
+          "visao": "Jornal israelense, centro-esquerda",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Hannah Lillith Assadi's National Book Award puts Palestinian exile in the spotlight",
+          "link": "https://www.haaretz.com/us-news/2026-11-20/ty-article/.premium/a-palestinian-story-of-exile-takes-one-of-americas-top-literary-prizes/000001a1-fa94-d381-ade5-fbf511090000",
+          "publicadoEm": "2026-11-20T20:37:01.000Z",
           "semData": false
         }
       ]
@@ -6707,6 +7355,67 @@
           "titulo": "US right wing voices attack Islam online after a study projects global Muslim majority by 2035",
           "link": "https://www.middleeasteye.net/trending/us-right-wing-attack-islam-after-study-projects-muslim-majority-2035",
           "publicadoEm": "2026-11-20T20:36:19.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "d62915d5b658",
+      "titulo": "Repression against Iranian lawyers increases",
+      "resumo": "At least 135 lawyers in Iran have been subjected to repressive measures over the past year. UN experts warn that this seriously jeopardizes the right of those accused to trial in a constitutional court.",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "direitos",
+        "conflitos"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T20:36:00.000Z",
+      "materias": [
+        {
+          "fonte": "DW",
+          "pais": "Alemanha",
+          "visao": "Emissora internacional pública alemã",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Repression against Iranian lawyers increases",
+          "link": "https://www.dw.com/en/repression-against-iranian-lawyers-increases/a-80006742?maca=en-rss-en-world-4025-rdf",
+          "publicadoEm": "2026-11-20T20:36:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "ff2fb4b46d93",
+      "titulo": "They often wanted to split Russia to dominate; they want to do so now as well — Putin",
+      "resumo": "Vladimir Putin believes that what is happening now is a continuation of the same policy — divide and rule — and the desire to reduce Russia’s potential",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T20:35:00.000Z",
+      "materias": [
+        {
+          "fonte": "TASS",
+          "pais": "Rússia",
+          "visao": "Agência estatal russa (versão oficial do Kremlin)",
+          "estatal": true,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "They often wanted to split Russia to dominate; they want to do so now as well — Putin",
+          "link": "https://tass.com/politics/2222753",
+          "publicadoEm": "2026-11-20T20:35:00.000Z",
           "semData": false
         }
       ]
@@ -6838,6 +7547,40 @@
       ]
     },
     {
+      "id": "d77f7922036d",
+      "titulo": "Trump acknowledges that it’s hard for him to agree to cut US nuclear arsenal",
+      "resumo": "Earlier, Donald Trump held talks with his Russian and Chinese counterparts, Vladimir Putin and Xi Jinping, and issues of nuclear weapons were among the topics they discussed",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "europa",
+        "asia-pacifico",
+        "america-norte"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia",
+        "energia"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T20:30:00.000Z",
+      "materias": [
+        {
+          "fonte": "TASS",
+          "pais": "Rússia",
+          "visao": "Agência estatal russa (versão oficial do Kremlin)",
+          "estatal": true,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Trump acknowledges that it’s hard for him to agree to cut US nuclear arsenal",
+          "link": "https://tass.com/world/2222751",
+          "publicadoEm": "2026-11-20T20:30:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
       "id": "7969f977e758",
       "titulo": "Minuta de acordo na ONU não prevê regras obrigatórias para uso de 'robôs assassinos'",
       "resumo": "Delegados participam da Conferência de Revisão dos Estados Partes da Convenção sobre Certas Armas Convencionais (CCAC), das Nações Unidas (ONU) Fabrice COFFRINI / AFP Uma minuta de acordo vista pela Reuters, durante encontro na ONU sobre armamentos, em Genebra, indica que regras…",
@@ -6903,6 +7646,40 @@
           "titulo": "Chinese-Born Neuroscientist Is Detained by ICE While Traveling From Conference",
           "link": "https://www.nytimes.com/2026/11/20/science/chinese-scientist-detained-ice-princeton-eva-yi-xie-.html",
           "publicadoEm": "2026-11-20T20:26:11.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "b9e43ed9299d",
+      "titulo": "'Look at India', 'country of 2nd chances': 10 takeaways from Trump's White House presser",
+      "resumo": "Donald Trump championed his administration's initiatives and signaled a willingness to partner with Democrats on key issues. He lauded the economic prospects of the Quad alliance, particularly India's remarkable growth figures. Discussing Iran, Trump called for clear and…",
+      "imagem": "https://static.toiimg.com/photo/msid-136038954,imgsize-81020.cms",
+      "credito": "The Times of India",
+      "regioes": [
+        "america-norte",
+        "oriente-medio",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "economia",
+        "diplomacia",
+        "tecnologia"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T20:25:58.000Z",
+      "materias": [
+        {
+          "fonte": "The Times of India",
+          "pais": "Índia",
+          "visao": "Maior jornal indiano em inglês",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "'Look at India', 'country of 2nd chances': 10 takeaways from Trump's White House presser",
+          "link": "https://timesofindia.indiatimes.com/world/us/look-at-india-country-of-second-chances-10-key-takeaways-from-trumps-first-presser-since-midterm-loss/articleshow/136038820.cms",
+          "publicadoEm": "2026-11-20T20:25:58.000Z",
           "semData": false
         }
       ]
@@ -7145,6 +7922,36 @@
           "titulo": "Russian ballistic missile strike on Ukraine’s Kryvyi Rih injures 20, including three children",
           "link": "https://meduza.io/en/news/2026/11/20/russian-ballistic-missile-strike-on-ukraine-s-kryvyi-rih-injures-20-including-three-children",
           "publicadoEm": "2026-11-20T20:17:28.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "c10c0d6d7b58",
+      "titulo": "Russia launches ballistic missile attack on central Kryvyi Rih: child and paramedic killed, at least 21 injured",
+      "resumo": "Russian forces attacked the centre of Kryvyi Rih with ballistic missiles on the evening of 20 November, injuring at least 21 people. A seven-year-old boy and a female paramedic have been killed in the attack.",
+      "imagem": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/3/b/961152/3b829fbac1f54d29071fa375cc4592b9.jpeg",
+      "credito": "Ukrainska Pravda",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T20:17:00.000Z",
+      "materias": [
+        {
+          "fonte": "Ukrainska Pravda",
+          "pais": "Ucrânia",
+          "visao": "Site ucraniano de jornalismo independente",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Russia launches ballistic missile attack on central Kryvyi Rih: child and paramedic killed, at least 21 injured",
+          "link": "https://www.pravda.com.ua/eng/news/2026/11/20/8063886/",
+          "publicadoEm": "2026-11-20T20:17:00.000Z",
           "semData": false
         }
       ]
@@ -7514,6 +8321,36 @@
           "titulo": "US expands military operations in Latin America",
           "link": "https://www.lemonde.fr/en/international/article/2026/11/20/us-expands-military-operations-in-latin-america_6785671_4.html",
           "publicadoEm": "2026-11-20T20:01:32.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "e831fd9a2898",
+      "titulo": "States Are Playing Serious Games on Virtual Battlefields",
+      "resumo": "The rise of video gaming has created new geopolitical arenas.",
+      "imagem": "https://foreignpolicy.com/wp-content/uploads/2026/11/PowerPlay-1-GettyImages-2305163039.png",
+      "credito": "Foreign Policy",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T20:00:53.000Z",
+      "materias": [
+        {
+          "fonte": "Foreign Policy",
+          "pais": "EUA",
+          "visao": "Revista de análise de política externa",
+          "estatal": false,
+          "tipo": "analise",
+          "idioma": "en",
+          "titulo": "States Are Playing Serious Games on Virtual Battlefields",
+          "link": "https://foreignpolicy.com/2026/11/20/grand-theft-auto-power-play-osborn-review-geopolitics-video-games/",
+          "publicadoEm": "2026-11-20T20:00:53.000Z",
           "semData": false
         }
       ]
@@ -8816,38 +9653,6 @@
           "titulo": "Amazon communities have a complicated relationship with giant anacondas; a 2025 study explores why some people fear them while others live alongside them",
           "link": "https://timesofindia.indiatimes.com/science/wildlife/amazon-communities-have-a-complicated-relationship-with-giant-anacondas-a-2025-study-explores-why-some-people-fear-them-while-others-live-alongside-them/articleshow/136020334.cms",
           "publicadoEm": "2026-11-20T19:17:59.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "e7f5a96c89de",
-      "titulo": "Trump describes his relations with Putin as ‘fantastic’",
-      "resumo": "He has also fantastic relationships with President Xi Jinping, US President added",
-      "imagem": "",
-      "credito": "",
-      "regioes": [
-        "america-norte",
-        "europa",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "politica"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-20T19:17:03.000Z",
-      "materias": [
-        {
-          "fonte": "TASS",
-          "pais": "Rússia",
-          "visao": "Agência estatal russa (versão oficial do Kremlin)",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Trump describes his relations with Putin as ‘fantastic’",
-          "link": "https://tass.com/world/2222727",
-          "publicadoEm": "2026-11-20T19:17:03.000Z",
           "semData": false
         }
       ]
@@ -20353,43 +21158,6 @@
       ]
     },
     {
-      "id": "90364238795c",
-      "titulo": "'Robôs assassinos' já são usados em guerras, mas países não chegam a acordo sobre limites na ONU",
-      "resumo": "Um homem está em meio aos escombros de um prédio de escritórios que pegou fogo após ser atingido durante ataques russos com mísseis e drones, em meio à ofensiva da Rússia contra a Ucrânia, em Kiev. REUTERS/Thomas Peter A conferência da ONU sobre os chamados \"robôs assassinos\"…",
-      "imagem": "https://s2-g1.glbimg.com/mhhwSTKug2q_7CS0Yh9EGuGzkxk=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/c/B/7HYhOjTJOuMhC5yWjqmA/2026-11-20t105448z-149963271-rc2lroaso7nj-rtrmadp-3-ukraine-crisis-attack-kyiv.jpg",
-      "credito": "g1 Mundo",
-      "regioes": [
-        "europa",
-        "america-norte",
-        "asia-pacifico",
-        "global"
-      ],
-      "temas": [
-        "conflitos",
-        "diplomacia",
-        "energia",
-        "politica",
-        "tecnologia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-20T14:00:27.000Z",
-      "materias": [
-        {
-          "fonte": "g1 Mundo",
-          "pais": "Brasil",
-          "visao": "Portal do Grupo Globo",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "pt",
-          "titulo": "'Robôs assassinos' já são usados em guerras, mas países não chegam a acordo sobre limites na ONU",
-          "link": "https://g1.globo.com/inovacao/noticia/2026/11/20/robos-assassinos-ja-sao-usados-em-guerras-mas-paises-nao-chegam-a-acordo-sobre-limites-na-onu.ghtml",
-          "publicadoEm": "2026-11-20T14:00:27.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
       "id": "aa700cf316bb",
       "titulo": "Organilleros: Is Mexico City’s centennial profession at risk of disappearing?",
       "resumo": "Mexico City's organilleros face precarious working conditions as they fight to preserve their century-old musical tradition. The post Organilleros: Is Mexico City’s centennial profession at risk of disappearing? appeared first on Mexico News Daily",
@@ -26687,6 +27455,36 @@
           "titulo": "Saudi Arabia Seeks to Bring Social Security Beneficiaries into Workforce",
           "link": "https://english.aawsat.com/node/5343530",
           "publicadoEm": "2026-11-20T09:44:48.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "d495c767f125",
+      "titulo": "Quatro homens são condenados no Reino Unido por crimes sexuais contra mulher drogada pelo marido",
+      "resumo": "",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T09:38:52.000Z",
+      "materias": [
+        {
+          "fonte": "Estadão Internacional",
+          "pais": "Brasil",
+          "visao": "Jornal de referência brasileiro, centro-direita",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "pt",
+          "titulo": "Quatro homens são condenados no Reino Unido por crimes sexuais contra mulher drogada pelo marido",
+          "link": "https://www.estadao.com.br/internacional/quatro-homens-sao-condenados-no-reino-unido-por-crimes-sexuais-contra-mulher-drogada-pelo-marido-npr/",
+          "publicadoEm": "2026-11-20T09:38:52.000Z",
           "semData": false
         }
       ]
@@ -37337,349 +38135,6 @@
           "titulo": "How Shin Bet chief Zini cast Arab Israelis as a threat long before the election",
           "link": "https://www.haaretz.com/israel-news/israel-security/2026-11-19/ty-article-magazine/.premium/how-shin-bet-chief-zini-cast-arab-israelis-as-a-threat-long-before-the-election/000001a1-f54a-dad7-a9fd-f74b1bff0000",
           "publicadoEm": "2026-11-19T21:22:36.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "43f0d04e8809",
-      "titulo": "Congress approves Animal Welfare Law, spelling out pet owners’ legal responsibilities",
-      "resumo": "The bill prohibits animal abuse in the public sphere, such as in circuses advertising and fighting events. But its most relevant action for pet owners is to apply legal sanctions for failure to follow such basic responsibilities as providing food, shelter and water. The post…",
-      "imagem": "",
-      "credito": "",
-      "regioes": [
-        "america-latina"
-      ],
-      "temas": [
-        "diplomacia",
-        "conflitos",
-        "politica",
-        "direitos"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T21:16:45.000Z",
-      "materias": [
-        {
-          "fonte": "Mexico News Daily",
-          "pais": "México",
-          "visao": "Notícias do México em inglês",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Congress approves Animal Welfare Law, spelling out pet owners’ legal responsibilities",
-          "link": "https://mexiconewsdaily.com/news/congress-approves-law-spelling-out-pet-owners-legal-responsibilities/",
-          "publicadoEm": "2026-11-19T21:16:45.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "3ca41e0fd6a0",
-      "titulo": "Papa Leão XIV convoca fiéis para aproximar jovens da fé cristã no Vaticano",
-      "resumo": "Papa Leão XIV recebe 3 mil fiéis da Comunidade Shalom no Vaticano e define a evangelização dos jovens como prioridade para os próximos anos.",
-      "imagem": "https://media.gazetadopovo.com.br/2026/11/19180807/Papa-Leao-XIV-3-1-3-960x540.jpg",
-      "credito": "Gazeta do Povo Mundo",
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T21:08:04.000Z",
-      "materias": [
-        {
-          "fonte": "Gazeta do Povo Mundo",
-          "pais": "Brasil",
-          "visao": "Jornal brasileiro, direita conservadora",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "pt",
-          "titulo": "Papa Leão XIV convoca fiéis para aproximar jovens da fé cristã no Vaticano",
-          "link": "https://www.gazetadopovo.com.br/mundo/papa-leao-xiv-convoca-fieis-para-aproximar-jovens-da-fe-crista-no-vaticano/",
-          "publicadoEm": "2026-11-19T21:08:04.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "3e4cf40e673c",
-      "titulo": "Bispos dos EUA criam força-tarefa para enfrentar ameaças da inteligência artificial",
-      "resumo": "Conferência Episcopal dos EUA estabelece grupo de trabalho para defender dignidade humana diante dos desafios da IA, com foco em educação e políticas públicas.",
-      "imagem": "https://media.gazetadopovo.com.br/2026/04/17104547/religiao-agencia-catolica-2-960x540.jpg",
-      "credito": "Gazeta do Povo Mundo",
-      "regioes": [
-        "america-norte"
-      ],
-      "temas": [
-        "tecnologia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T21:07:17.000Z",
-      "materias": [
-        {
-          "fonte": "Gazeta do Povo Mundo",
-          "pais": "Brasil",
-          "visao": "Jornal brasileiro, direita conservadora",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "pt",
-          "titulo": "Bispos dos EUA criam força-tarefa para enfrentar ameaças da inteligência artificial",
-          "link": "https://www.gazetadopovo.com.br/mundo/bispos-dos-eua-criam-forca-tarefa-para-enfrentar-ameacas-da-inteligencia-artificial/",
-          "publicadoEm": "2026-11-19T21:07:17.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "0dd7330be56e",
-      "titulo": "Greenpeace protests at COP31, demands climate finance as island nations face growing threats",
-      "resumo": "Greenpeace activists are staging a protest at the COP31 climate talks in Turkey, demanding urgent action. Small island nations are also raising their voices, warning that the climate crisis threatens their very survival. But Greenpeace says progress at the negotiations remains…",
-      "imagem": "http://images.euronews.com/articles/stories/10/00/04/31/640x360_cmsv2_3be27080-92a7-5413-a5db-0b54ad015def-10000431.jpg?1795118545",
-      "credito": "Africanews",
-      "regioes": [
-        "europa",
-        "global"
-      ],
-      "temas": [
-        "clima",
-        "diplomacia",
-        "conflitos",
-        "politica"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T21:02:10.000Z",
-      "materias": [
-        {
-          "fonte": "Africanews",
-          "pais": "Congo",
-          "visao": "Canal pan-africano de notícias",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Greenpeace protests at COP31, demands climate finance as island nations face growing threats",
-          "link": "http://www.africanews.com/2026/11/19/greenpeace-protests-at-cop31-demands-climate-finance-as-island-nations-face-growing-threat/",
-          "publicadoEm": "2026-11-19T21:02:10.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "d6a8bedd3513",
-      "titulo": "Apesar de dizer o contrário, Trump avalia retomar ataques ao Irã sob pressão de Netanyahu, diz site",
-      "resumo": "O presidente dos Estados Unidos , Donald Trump , afirmou em breve telefonema ao site Axios nesta quinta-feira (19) que ainda avalia se vai retomar ataques ao Irã , indicando como janela provável para uma decisão o começo do ano que vem. Leia mais (11/19/2026 - 18h02)",
-      "imagem": "",
-      "credito": "",
-      "regioes": [
-        "america-norte",
-        "oriente-medio"
-      ],
-      "temas": [
-        "politica",
-        "conflitos"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T21:02:00.000Z",
-      "materias": [
-        {
-          "fonte": "Folha Mundo",
-          "pais": "Brasil",
-          "visao": "Jornal de referência brasileiro",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "pt",
-          "titulo": "Apesar de dizer o contrário, Trump avalia retomar ataques ao Irã sob pressão de Netanyahu, diz site",
-          "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/apesar-de-dizer-o-contrario-trump-avalia-retomar-ataques-ao-ira-sob-pressao-de-netanyahu-diz-site.shtml",
-          "publicadoEm": "2026-11-19T21:02:00.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "7f5b6d632400",
-      "titulo": "Foreigners continue to offload Korean stocks in Oct.",
-      "resumo": "SEOUL, Nov. 20 (Yonhap) -- Foreign investors continued to sell Korean stocks in ...",
-      "imagem": "https://img.yna.co.kr/etc/inner/EN/2026/11/19/AEN20261119005700320_01_i_P2.jpg",
-      "credito": "Yonhap",
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "economia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T21:00:11.000Z",
-      "materias": [
-        {
-          "fonte": "Yonhap",
-          "pais": "Coreia do Sul",
-          "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Foreigners continue to offload Korean stocks in Oct.",
-          "link": "https://en.yna.co.kr/view/AEN20261119005700320",
-          "publicadoEm": "2026-11-19T21:00:11.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "c2eb384e8b7d",
-      "titulo": "Producer prices drop in Oct. on lower food prices",
-      "resumo": "SEOUL, Nov. 20 (Yonhap) -- Producer prices fell for the first time in three mont...",
-      "imagem": "https://img.yna.co.kr/photo/yna/YH/2026/10/30/PYH2026103009620001300_P2.jpg",
-      "credito": "Yonhap",
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "economia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T21:00:07.000Z",
-      "materias": [
-        {
-          "fonte": "Yonhap",
-          "pais": "Coreia do Sul",
-          "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Producer prices drop in Oct. on lower food prices",
-          "link": "https://en.yna.co.kr/view/AEN20261119008700320",
-          "publicadoEm": "2026-11-19T21:00:07.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "8789c46efd28",
-      "titulo": "Russian edition of Alexandra Prokopenko’s ‘From Sovereigns to Servants: How the War Against Ukraine Reshaped Russia’s Elite’ wins special prize for political nonfiction",
-      "resumo": "The Russian edition of Alexandra Prokopenko’s “From Sovereigns to Servants: How the War Against Ukraine Reshaped Russia’s Elite” has won the special PolitProsvet prize at the Prosvetitel (“Enlightener”) awards. Prokopenko is a fellow at the Carnegie Russia Eurasia Center in…",
-      "imagem": "https://meduza.io/imgly/share/1795121781/en/news/2026/11/19/russian-edition-of-alexandra-prokopenko-s-from-sovereigns-to-servants-how-the-war-against-ukraine-reshaped-russia-s-elite-wins-special-prize-for-political-nonfiction",
-      "credito": "Meduza",
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "conflitos"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T20:54:18.000Z",
-      "materias": [
-        {
-          "fonte": "Meduza",
-          "pais": "Rússia",
-          "visao": "Site russo independente, no exílio, oposição ao Kremlin",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Russian edition of Alexandra Prokopenko’s ‘From Sovereigns to Servants: How the War Against Ukraine Reshaped Russia’s Elite’ wins special prize for political nonfiction",
-          "link": "https://meduza.io/en/news/2026/11/19/russian-edition-of-alexandra-prokopenko-s-from-sovereigns-to-servants-how-the-war-against-ukraine-reshaped-russia-s-elite-wins-special-prize-for-political-nonfiction",
-          "publicadoEm": "2026-11-19T20:54:18.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "2f50068d9d55",
-      "titulo": "Putin proposes second humanitarian ceasefire — is it a trap?",
-      "resumo": "Russian President Putin has suggested evacuating civilians from the embattled Ukrainian city of Kostiantynivka. But experts warn this could serve military, not humanitarian, aims. What should Kyiv do?",
-      "imagem": "",
-      "credito": "",
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "conflitos",
-        "politica",
-        "direitos"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T20:53:00.000Z",
-      "materias": [
-        {
-          "fonte": "DW",
-          "pais": "Alemanha",
-          "visao": "Emissora internacional pública alemã",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Putin proposes second humanitarian ceasefire — is it a trap?",
-          "link": "https://www.dw.com/en/putin-proposes-second-humanitarian-ceasefire-is-it-a-trap/a-79996772?maca=en-rss-en-world-4025-rdf",
-          "publicadoEm": "2026-11-19T20:53:00.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "4a3424f49cdb",
-      "titulo": "South Korea’s Coal Use Is Surging – and Not Just Because of the Iran War",
-      "resumo": "Data suggests the country's current energy transition pains began before the war in the Gulf.",
-      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2026/11/thediplomat_2026-11-20-055209.jpg",
-      "credito": "The Diplomat",
-      "regioes": [
-        "oriente-medio",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "energia",
-        "conflitos"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T20:49:00.000Z",
-      "materias": [
-        {
-          "fonte": "The Diplomat",
-          "pais": "Japão",
-          "visao": "Revista de análise sobre Ásia-Pacífico",
-          "estatal": false,
-          "tipo": "analise",
-          "idioma": "en",
-          "titulo": "South Korea’s Coal Use Is Surging – and Not Just Because of the Iran War",
-          "link": "https://thediplomat.com/2026/11/south-koreas-coal-use-is-surging-and-not-just-because-of-the-iran-war/",
-          "publicadoEm": "2026-11-19T20:49:00.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "c0df60649105",
-      "titulo": "White House largely mum in aftermath of historic three-way summit",
-      "resumo": "Trump schedules a news conference for Friday but has little to say in the immediate aftermath of an historic trilateral meeting.",
-      "imagem": "",
-      "credito": "",
-      "regioes": [
-        "america-norte"
-      ],
-      "temas": [
-        "diplomacia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T20:48:28.000Z",
-      "materias": [
-        {
-          "fonte": "The Washington Post",
-          "pais": "EUA",
-          "visao": "Jornal de referência dos EUA, centro",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "White House largely mum in aftermath of historic three-way summit",
-          "link": "https://www.washingtonpost.com/politics/2026/11/19/white-house-offers-little-information-summit-outcome/",
-          "publicadoEm": "2026-11-19T20:48:28.000Z",
           "semData": false
         }
       ]

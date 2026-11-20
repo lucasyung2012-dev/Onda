@@ -1,10 +1,10 @@
 {
-  "geradoEm": "2026-11-20T20:46:12.688Z",
+  "geradoEm": "2026-11-20T21:17:00.434Z",
   "fuso": "America/Sao_Paulo",
   "dataReferencia": "2026-11-20",
   "janelaHoras": 24,
-  "totalNoticias": 1381,
-  "totalFatos": 1104,
+  "totalNoticias": 1398,
+  "totalFatos": 1117,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -55,6 +55,7 @@
       "noticias": [
         "3642ab4c66d8",
         "9901a664ab2b",
+        "77581637bbd4",
         "316ea496e5cb",
         "2679cd600bc2",
         "5447230f9e98",
@@ -77,10 +78,10 @@
       ]
     },
     {
-      "id": "6cc38668b794",
-      "titulo": "What are the implications of the ICJ Rohingya genocide ruling?",
-      "imagem": "https://www.thenationalnews.com/resizer/v2/6YEWN4MEKNBV5L6Y2XW4RSIK34.JPG?auth=1db353f9d73fe30f13ee2dea6a11772fe8da9e74868eccba73c4456fef81d021&smart=true&width=7856&height=5239",
-      "fontes": 16,
+      "id": "3640a3fbb952",
+      "titulo": "'Friends' But Who Benefits? Notes from an Historic Summit, Myanmar's Genocide Ruling, Time to 'Bre-join' the EU?",
+      "imagem": "https://s.france24.com/media/display/cfefa95a-e518-11f1-b6ef-13439ca2fe89/w:1024/p:16x9/2026-11-19T230006Z-1256675834-RC2WQOACA4BG-RTRMADP-3-CYBERSECURITY-DRONES-RISK.jpg",
+      "fontes": 10,
       "umaFonteSo": false,
       "regioes": [
         "asia-pacifico",
@@ -89,21 +90,13 @@
       ],
       "temas": [
         "direitos",
-        "conflitos",
         "politica",
         "diplomacia",
-        "economia",
-        "clima"
+        "conflitos"
       ],
-      "maisRecente": "2026-11-20T19:12:14.000Z",
+      "maisRecente": "2026-11-20T19:42:58.000Z",
       "noticias": [
-        "6cc38668b794",
-        "6ab57dae723b",
-        "548f344788d6",
-        "bbbcc7ffa943",
-        "4206ab86ff2d",
-        "7d6bcbdea648",
-        "e0b1167422c9",
+        "3640a3fbb952",
         "83035937eb8b",
         "647fbb4b0802",
         "1deeaf75e425",
@@ -172,29 +165,58 @@
       ]
     },
     {
-      "id": "77ce998683fd",
-      "titulo": "White House removes cyber-security chief after series of tech outages",
-      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/76fa/live/ea62ee60-e4bd-11f1-87df-79d8910e0f29.jpg",
+      "id": "6cc38668b794",
+      "titulo": "What are the implications of the ICJ Rohingya genocide ruling?",
+      "imagem": "https://www.thenationalnews.com/resizer/v2/6YEWN4MEKNBV5L6Y2XW4RSIK34.JPG?auth=1db353f9d73fe30f13ee2dea6a11772fe8da9e74868eccba73c4456fef81d021&smart=true&width=7856&height=5239",
       "fontes": 7,
       "umaFonteSo": false,
       "regioes": [
-        "america-norte",
+        "oriente-medio",
+        "asia-pacifico",
         "africa"
       ],
       "temas": [
-        "tecnologia",
-        "politica",
-        "conflitos"
+        "direitos",
+        "conflitos",
+        "economia",
+        "diplomacia",
+        "clima"
       ],
-      "maisRecente": "2026-11-20T19:03:56.000Z",
+      "maisRecente": "2026-11-20T19:12:14.000Z",
       "noticias": [
-        "77ce998683fd",
-        "e536767b4530",
-        "d65849cc23ce",
-        "403c1b9feff1",
-        "92b1903e2810",
-        "fbff5ae02f69",
-        "d51383a5608f"
+        "6cc38668b794",
+        "6ab57dae723b",
+        "548f344788d6",
+        "bbbcc7ffa943",
+        "4206ab86ff2d",
+        "7d6bcbdea648",
+        "e0b1167422c9"
+      ]
+    },
+    {
+      "id": "fcbfb2b1548e",
+      "titulo": "Indian man jailed over US murder plot against Sikh separatist",
+      "imagem": "https://dam.mediacorp.sg/image/upload/s--ryYFxIjG--/fl_relative,g_south_east,l_mediacorp:cna:watermark:2024-04:reuters_1,w_0.1/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/one-cms/core/2026-11-20T171806Z_2_LYNXNPEMAJ1KJ_RTROPTP_3_USA-INDIA-SIKH.JPG?itok=rEa2zlkv",
+      "fontes": 6,
+      "umaFonteSo": false,
+      "regioes": [
+        "asia-pacifico",
+        "america-norte"
+      ],
+      "temas": [
+        "direitos",
+        "conflitos",
+        "outros",
+        "politica"
+      ],
+      "maisRecente": "2026-11-20T21:07:04.000Z",
+      "noticias": [
+        "fcbfb2b1548e",
+        "04cee6e2e641",
+        "b07871e5d6dd",
+        "0c5c416688d4",
+        "ab96d4d31437",
+        "35c3a13bcf7d"
       ]
     },
     {
@@ -254,6 +276,31 @@
         "0ffce361c510",
         "e4cf90f11156",
         "9085b6daf043"
+      ]
+    },
+    {
+      "id": "77ce998683fd",
+      "titulo": "White House removes cyber-security chief after series of tech outages",
+      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/76fa/live/ea62ee60-e4bd-11f1-87df-79d8910e0f29.jpg",
+      "fontes": 6,
+      "umaFonteSo": false,
+      "regioes": [
+        "america-norte",
+        "africa"
+      ],
+      "temas": [
+        "tecnologia",
+        "politica",
+        "conflitos"
+      ],
+      "maisRecente": "2026-11-20T19:03:56.000Z",
+      "noticias": [
+        "77ce998683fd",
+        "e536767b4530",
+        "d65849cc23ce",
+        "403c1b9feff1",
+        "92b1903e2810",
+        "d51383a5608f"
       ]
     },
     {
@@ -362,31 +409,6 @@
         "9af42f598db4",
         "f2c7e77b2be7",
         "950e6addec21"
-      ]
-    },
-    {
-      "id": "04cee6e2e641",
-      "titulo": "Indian man sentenced to 19 years in US Sikh separatist assassination plot",
-      "imagem": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/21/0f0925b3-2ff2-4ba0-9fd7-e1bab24b37cc_2c3ee19f.jpg?itok=5vV2v1nG&v=1795202856",
-      "fontes": 5,
-      "umaFonteSo": false,
-      "regioes": [
-        "asia-pacifico",
-        "america-norte"
-      ],
-      "temas": [
-        "outros",
-        "politica",
-        "conflitos",
-        "direitos"
-      ],
-      "maisRecente": "2026-11-20T19:40:07.000Z",
-      "noticias": [
-        "04cee6e2e641",
-        "b07871e5d6dd",
-        "0c5c416688d4",
-        "ab96d4d31437",
-        "35c3a13bcf7d"
       ]
     },
     {
@@ -559,6 +581,27 @@
         "79ec57b3358f",
         "8dc4008f9d55",
         "849653d4de0c"
+      ]
+    },
+    {
+      "id": "efd15946f176",
+      "titulo": "France investigates actor Depardieu, author Houellebecq over alleged gang rape",
+      "imagem": "https://img.lemde.fr/2026/11/20/0/97/1006/503/644/322/60/0/3449d3c_upload-1-fobb0c8ctxha-1217824.png",
+      "fontes": 4,
+      "umaFonteSo": false,
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "direitos",
+        "outros"
+      ],
+      "maisRecente": "2026-11-20T21:06:46.000Z",
+      "noticias": [
+        "efd15946f176",
+        "77203b320b1d",
+        "381f23ce3fbe",
+        "9cc3982a1f84"
       ]
     },
     {
@@ -745,28 +788,6 @@
       ]
     },
     {
-      "id": "6ddea0db023b",
-      "titulo": "Fiona, hipopótamo que viralizou nas redes por nascimento prematuro, morre após engolir gorro de lã em zoológico",
-      "imagem": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/ff3b/live/b1a3a370-e464-11f1-99a1-253766e7ad8b.jpg",
-      "fontes": 3,
-      "umaFonteSo": false,
-      "regioes": [
-        "america-norte",
-        "mundo",
-        "oriente-medio"
-      ],
-      "temas": [
-        "outros",
-        "tecnologia"
-      ],
-      "maisRecente": "2026-11-20T17:41:18.000Z",
-      "noticias": [
-        "6ddea0db023b",
-        "7949280f8837",
-        "5100a7792b5c"
-      ]
-    },
-    {
       "id": "975d3cbfc9b6",
       "titulo": "Russia’s deputy prime minister says Crimean Bridge arch and main girder are damaged and repair timeline is unclear",
       "imagem": "https://meduza.io/imgly/share/1795195441/en/news/2026/11/20/russia-s-deputy-prime-minister-says-crimean-bridge-arch-and-main-girder-are-damaged-and-repair-timeline-is-unclear",
@@ -833,28 +854,6 @@
       ]
     },
     {
-      "id": "1c116c127c7e",
-      "titulo": "Saudi-led forces strike Yemen port as Houthis warn airlines off the kingdom",
-      "imagem": "",
-      "fontes": 3,
-      "umaFonteSo": false,
-      "regioes": [
-        "oriente-medio"
-      ],
-      "temas": [
-        "conflitos",
-        "energia",
-        "direitos",
-        "politica"
-      ],
-      "maisRecente": "2026-11-20T16:47:17.000Z",
-      "noticias": [
-        "1c116c127c7e",
-        "bb906115c780",
-        "c15204099a34"
-      ]
-    },
-    {
       "id": "7db600dee5b4",
       "titulo": "Yemen targets Saudi Arabia’s financial hub",
       "imagem": "https://media.tehrantimes.com/d/t/2026/11/20/4/6270756.jpg",
@@ -874,26 +873,6 @@
         "41bd601181cd",
         "9a37611b8e56",
         "3d8438c91e2e"
-      ]
-    },
-    {
-      "id": "77203b320b1d",
-      "titulo": "France investigates actor Depardieu, writer Houellebecq over alleged gang rape",
-      "imagem": "https://s.france24.com/media/display/c09677fe-e4f5-11f1-add1-13439ca2fe89/w:1024/p:16x9/000-D7ZY6NQ.jpg",
-      "fontes": 3,
-      "umaFonteSo": false,
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "direitos",
-        "outros"
-      ],
-      "maisRecente": "2026-11-20T16:27:56.000Z",
-      "noticias": [
-        "77203b320b1d",
-        "381f23ce3fbe",
-        "9cc3982a1f84"
       ]
     },
     {
@@ -982,6 +961,66 @@
         "8c2c1d5a86f2",
         "66d0fc6e1526",
         "3fe6fbac963c"
+      ]
+    },
+    {
+      "id": "cb8c3ef54bbf",
+      "titulo": "Trump replaces US cyber chief after outages hit flights, banks and NSA",
+      "imagem": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/21/baa74963-5f0f-4973-85f6-d1536abf6466_5022610b.jpg?itok=c4FQzzIM&v=1795209230",
+      "fontes": 2,
+      "umaFonteSo": false,
+      "regioes": [
+        "america-norte"
+      ],
+      "temas": [
+        "tecnologia",
+        "politica"
+      ],
+      "maisRecente": "2026-11-20T21:14:04.000Z",
+      "noticias": [
+        "cb8c3ef54bbf",
+        "fbff5ae02f69"
+      ]
+    },
+    {
+      "id": "d62fe715ede0",
+      "titulo": "UN warns against Yemen escalation after Saudi-led air strikes on Hodeidah port",
+      "imagem": "https://www.thenationalnews.com/resizer/v2/MWM23OGD4PNHEDT7JJG3UH673U.jpg?auth=78b1d32393fc09cd57b5581abaff48371b96955c3ccdd8c388e865add3bd9196&smart=true&width=4368&height=2912",
+      "fontes": 2,
+      "umaFonteSo": false,
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "conflitos",
+        "politica",
+        "direitos"
+      ],
+      "maisRecente": "2026-11-20T20:53:47.000Z",
+      "noticias": [
+        "d62fe715ede0",
+        "c15204099a34"
+      ]
+    },
+    {
+      "id": "c7d4603146ab",
+      "titulo": "US Vice President Vance declines to say he would have ordered Iran strikes",
+      "imagem": "",
+      "fontes": 2,
+      "umaFonteSo": false,
+      "regioes": [
+        "america-norte",
+        "oriente-medio"
+      ],
+      "temas": [
+        "conflitos",
+        "energia",
+        "politica"
+      ],
+      "maisRecente": "2026-11-20T20:50:30.000Z",
+      "noticias": [
+        "c7d4603146ab",
+        "5f2a7c56bef9"
       ]
     },
     {
@@ -1105,6 +1144,31 @@
       "noticias": [
         "2f4287616cd7",
         "389b8421a884"
+      ]
+    },
+    {
+      "id": "ef0c03a57e04",
+      "titulo": "Países da ONU estão divididos sobre regulamentação de ‘robôs assassinos’",
+      "imagem": "https://www.cartacapital.com.br/wp-content/uploads/2026/11/AFP__20261116__D7KW7KE__v1__MidRes__SwitzerlandDiplomacyUnDefenceWeaponry.jpg",
+      "fontes": 2,
+      "umaFonteSo": false,
+      "regioes": [
+        "global",
+        "europa",
+        "america-norte",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia",
+        "energia",
+        "politica",
+        "tecnologia"
+      ],
+      "maisRecente": "2026-11-20T20:06:10.000Z",
+      "noticias": [
+        "ef0c03a57e04",
+        "90364238795c"
       ]
     },
     {
@@ -1372,6 +1436,25 @@
       ]
     },
     {
+      "id": "6ddea0db023b",
+      "titulo": "Fiona, hipopótamo que viralizou nas redes por nascimento prematuro, morre após engolir gorro de lã em zoológico",
+      "imagem": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/ff3b/live/b1a3a370-e464-11f1-99a1-253766e7ad8b.jpg",
+      "fontes": 2,
+      "umaFonteSo": false,
+      "regioes": [
+        "mundo",
+        "america-norte"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "maisRecente": "2026-11-20T17:41:18.000Z",
+      "noticias": [
+        "6ddea0db023b",
+        "7949280f8837"
+      ]
+    },
+    {
       "id": "a5b6ed44f5ca",
       "titulo": "Bukele disputa terceiro mandato após aprovação da reeleição indefinida",
       "imagem": "https://s2-g1.glbimg.com/nI3U55jccChPyEt9f74gv3Ua8A0=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/b/o/lios6VT7KxLN89pT0jyA/2026-11-20t035714z-141827300-rc2froau0uhp-rtrmadp-3-elsalvador-election-bukele.jpg",
@@ -1546,6 +1629,26 @@
       "noticias": [
         "2692dbb17486",
         "baff26d6af40"
+      ]
+    },
+    {
+      "id": "1c116c127c7e",
+      "titulo": "Saudi-led forces strike Yemen port as Houthis warn airlines off the kingdom",
+      "imagem": "",
+      "fontes": 2,
+      "umaFonteSo": false,
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "conflitos",
+        "energia",
+        "direitos"
+      ],
+      "maisRecente": "2026-11-20T16:47:17.000Z",
+      "noticias": [
+        "1c116c127c7e",
+        "bb906115c780"
       ]
     },
     {
@@ -2286,25 +2389,6 @@
       ]
     },
     {
-      "id": "d495c767f125",
-      "titulo": "Quatro homens são condenados no Reino Unido por crimes sexuais contra mulher drogada pelo marido",
-      "imagem": "",
-      "fontes": 2,
-      "umaFonteSo": false,
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "direitos",
-        "outros"
-      ],
-      "maisRecente": "2026-11-20T09:38:52.000Z",
-      "noticias": [
-        "d495c767f125",
-        "d24676ad7396"
-      ]
-    },
-    {
       "id": "c6db44933161",
       "titulo": "Russia pummels Ukraine after Putin vowed 'painful' attack",
       "imagem": "https://dam.mediacorp.sg/image/upload/s--b1mrYQIn--/fl_relative,g_south_east,l_mediacorp:cna:watermark:2023-11:afp_watermark_14112023,w_0.1/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/mediacorp/cna/image/2026/11/20/000_d83z92b_mod.jpg?itok=bmQb0I5C",
@@ -2481,6 +2565,262 @@
       ]
     },
     {
+      "id": "de1da4aefa52",
+      "titulo": "Ativista britânico de extrema direita é preso por atacar bote de migrantes",
+      "imagem": "https://veja.abril.com.br/wp-content/uploads/2026/08/IMG_1468.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "maisRecente": "2026-11-20T21:12:02.000Z",
+      "noticias": [
+        "de1da4aefa52"
+      ]
+    },
+    {
+      "id": "2b5a725f10a9",
+      "titulo": "Michelle Heyman marks 200 A-League games with Canberra United",
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/3bf96109e7e4b0e3b65005626c30f310?impolicy=wcms_crop_resize&cropH=2188&cropW=3890&xPos=0&yPos=106&width=862&height=485",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "conflitos"
+      ],
+      "maisRecente": "2026-11-20T21:09:14.000Z",
+      "noticias": [
+        "2b5a725f10a9"
+      ]
+    },
+    {
+      "id": "2b721ad99a5b",
+      "titulo": "Russian Strike on Kryvyi Rih Wounds 42, Kills 7-Year-Old and Paramedic",
+      "imagem": "https://static.kyivpost.com/storage/2026/11/20/4fa2e23b3d8427e2073a6c21b9bce99b.jpg?w=640&q=90&f=jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "politica"
+      ],
+      "maisRecente": "2026-11-20T21:09:00.000Z",
+      "noticias": [
+        "2b721ad99a5b"
+      ]
+    },
+    {
+      "id": "0ae4c356334a",
+      "titulo": "'Cobiçadas' por Trump, Filipinas lideram compra de carne suína do Brasil, mas são 22º destino das exportações do agro",
+      "imagem": "https://s2-g1.glbimg.com/DhnceYR-7SvVVOaVJtVVRvNLVkE=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/I/8/wDhdH0SUa78BARkv9A2w/2019-09-23t131016z-1-lynxmpef8m12t-rtroptp-4-china-economy-trade-pork.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "asia-pacifico",
+        "america-norte",
+        "europa",
+        "brasil",
+        "america-latina"
+      ],
+      "temas": [
+        "economia",
+        "politica",
+        "conflitos",
+        "diplomacia",
+        "clima"
+      ],
+      "maisRecente": "2026-11-20T21:05:49.000Z",
+      "noticias": [
+        "0ae4c356334a"
+      ]
+    },
+    {
+      "id": "cd9c8bf3d290",
+      "titulo": "'I won't give up': Widow's vow after 38-year fight for gambling reform",
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/b1ac401d57aa5be1183082c61abdf2e0?impolicy=wcms_crop_resize&cropH=1993&cropW=3543&xPos=9&yPos=94&width=862&height=485",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "economia"
+      ],
+      "maisRecente": "2026-11-20T21:03:16.000Z",
+      "noticias": [
+        "cd9c8bf3d290"
+      ]
+    },
+    {
+      "id": "295759004f0e",
+      "titulo": "Geração Z impulsiona radicalização política global à esquerda e à direita",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "maisRecente": "2026-11-20T21:00:00.000Z",
+      "noticias": [
+        "295759004f0e"
+      ]
+    },
+    {
+      "id": "f429c0b6d673",
+      "titulo": "Trump-Putin relations vitally important for entire world — RDIF CEO",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "europa",
+        "america-norte",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "politica",
+        "economia",
+        "conflitos"
+      ],
+      "maisRecente": "2026-11-20T20:51:01.000Z",
+      "noticias": [
+        "f429c0b6d673",
+        "e7f5a96c89de"
+      ]
+    },
+    {
+      "id": "a6dccd431f04",
+      "titulo": "Lula visitará estudantes que impulsionaram virada eleitoral",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "brasil"
+      ],
+      "temas": [
+        "politica"
+      ],
+      "maisRecente": "2026-11-20T20:50:40.000Z",
+      "noticias": [
+        "a6dccd431f04"
+      ]
+    },
+    {
+      "id": "47c4f196513e",
+      "titulo": "Aim is to ‘polarise’: Influencer deepfakes used to stoke Canada-US tensions",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "america-norte"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "maisRecente": "2026-11-20T20:49:58.000Z",
+      "noticias": [
+        "47c4f196513e"
+      ]
+    },
+    {
+      "id": "3c55c096f6e6",
+      "titulo": "Justiça dos EUA derruba restrições da Califórnia contra agentes de imigração",
+      "imagem": "https://media.gazetadopovo.com.br/2026/11/20174626/imigracao-restricoes-california-justica-eua-960x540.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "america-norte"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "maisRecente": "2026-11-20T20:48:55.000Z",
+      "noticias": [
+        "3c55c096f6e6"
+      ]
+    },
+    {
+      "id": "d5925b4dd488",
+      "titulo": "Argentina hit hard by global turmoil as bonds slip into distress",
+      "imagem": "https://fotos.perfil.com/2026/05/01/trim/540/304/entrance-casa-rosada-blocked-journalists-2231832.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "america-latina"
+      ],
+      "temas": [
+        "economia"
+      ],
+      "maisRecente": "2026-11-20T20:48:12.000Z",
+      "noticias": [
+        "d5925b4dd488"
+      ]
+    },
+    {
+      "id": "74a5c11ff7c7",
+      "titulo": "Seat by seat, these are the major election issues in regional Victoria",
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/5f38c84c87f9c12974da2fc0c7db21f4?impolicy=wcms_crop_resize&cropH=1128&cropW=2005&xPos=988&yPos=858&width=862&height=485",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "politica",
+        "energia"
+      ],
+      "maisRecente": "2026-11-20T20:46:42.000Z",
+      "noticias": [
+        "74a5c11ff7c7"
+      ]
+    },
+    {
+      "id": "663befa0c387",
+      "titulo": "Russian ornithologist jailed over small donations to Navalny's foundation",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "direitos",
+        "conflitos"
+      ],
+      "maisRecente": "2026-11-20T20:45:00.000Z",
+      "noticias": [
+        "663befa0c387"
+      ]
+    },
+    {
+      "id": "dede4df29b0f",
+      "titulo": "Rubio calls meeting of Russia, China, and US leaders foundation for further negotiations",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "europa",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "diplomacia",
+        "economia"
+      ],
+      "maisRecente": "2026-11-20T20:45:00.000Z",
+      "noticias": [
+        "dede4df29b0f"
+      ]
+    },
+    {
       "id": "8da05aa07f64",
       "titulo": "Brazil ex-President Bolsonaro taken to hospital with abdominal pain, son says",
       "imagem": "",
@@ -2495,6 +2835,23 @@
       "maisRecente": "2026-11-20T20:40:28.000Z",
       "noticias": [
         "8da05aa07f64"
+      ]
+    },
+    {
+      "id": "6418d2b9f602",
+      "titulo": "Hannah Lillith Assadi's National Book Award puts Palestinian exile in the spotlight",
+      "imagem": "https://img.haarets.co.il/bs/000001a1-fa95-dad7-a9fd-fadff5960000/88/3f/b03c7a0b41b186fc58e544d8c9c5/223634.jpg?width=108&height=81",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "maisRecente": "2026-11-20T20:37:01.000Z",
+      "noticias": [
+        "6418d2b9f602"
       ]
     },
     {
@@ -2519,6 +2876,41 @@
       "maisRecente": "2026-11-20T20:36:19.000Z",
       "noticias": [
         "7caf8b434d45"
+      ]
+    },
+    {
+      "id": "d62915d5b658",
+      "titulo": "Repression against Iranian lawyers increases",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "direitos",
+        "conflitos"
+      ],
+      "maisRecente": "2026-11-20T20:36:00.000Z",
+      "noticias": [
+        "d62915d5b658"
+      ]
+    },
+    {
+      "id": "ff2fb4b46d93",
+      "titulo": "They often wanted to split Russia to dominate; they want to do so now as well — Putin",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "maisRecente": "2026-11-20T20:35:00.000Z",
+      "noticias": [
+        "ff2fb4b46d93"
       ]
     },
     {
@@ -2596,6 +2988,27 @@
       ]
     },
     {
+      "id": "d77f7922036d",
+      "titulo": "Trump acknowledges that it’s hard for him to agree to cut US nuclear arsenal",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "europa",
+        "asia-pacifico",
+        "america-norte"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia",
+        "energia"
+      ],
+      "maisRecente": "2026-11-20T20:30:00.000Z",
+      "noticias": [
+        "d77f7922036d"
+      ]
+    },
+    {
       "id": "7969f977e758",
       "titulo": "Minuta de acordo na ONU não prevê regras obrigatórias para uso de 'robôs assassinos'",
       "imagem": "https://s2-g1.glbimg.com/FOIufGin3oHmICVR0uS-ggGdTAU=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/k/w/9g5LRtSliIKHSjOfbVRA/undefenceweaponry.jpg",
@@ -2637,6 +3050,27 @@
       "maisRecente": "2026-11-20T20:26:11.000Z",
       "noticias": [
         "026966760f99"
+      ]
+    },
+    {
+      "id": "b9e43ed9299d",
+      "titulo": "'Look at India', 'country of 2nd chances': 10 takeaways from Trump's White House presser",
+      "imagem": "https://static.toiimg.com/photo/msid-136038954,imgsize-81020.cms",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "america-norte",
+        "oriente-medio",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "economia",
+        "diplomacia",
+        "tecnologia"
+      ],
+      "maisRecente": "2026-11-20T20:25:58.000Z",
+      "noticias": [
+        "b9e43ed9299d"
       ]
     },
     {
@@ -2775,6 +3209,23 @@
       "maisRecente": "2026-11-20T20:17:28.000Z",
       "noticias": [
         "39153cedcac5"
+      ]
+    },
+    {
+      "id": "c10c0d6d7b58",
+      "titulo": "Russia launches ballistic missile attack on central Kryvyi Rih: child and paramedic killed, at least 21 injured",
+      "imagem": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/3/b/961152/3b829fbac1f54d29071fa375cc4592b9.jpeg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos"
+      ],
+      "maisRecente": "2026-11-20T20:17:00.000Z",
+      "noticias": [
+        "c10c0d6d7b58"
       ]
     },
     {
@@ -2988,6 +3439,23 @@
       "maisRecente": "2026-11-20T20:01:32.000Z",
       "noticias": [
         "19b11a825b06"
+      ]
+    },
+    {
+      "id": "e831fd9a2898",
+      "titulo": "States Are Playing Serious Games on Virtual Battlefields",
+      "imagem": "https://foreignpolicy.com/wp-content/uploads/2026/11/PowerPlay-1-GettyImages-2305163039.png",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "maisRecente": "2026-11-20T20:00:53.000Z",
+      "noticias": [
+        "e831fd9a2898"
       ]
     },
     {
@@ -3744,25 +4212,6 @@
       "maisRecente": "2026-11-20T19:17:59.000Z",
       "noticias": [
         "081daf93e850"
-      ]
-    },
-    {
-      "id": "e7f5a96c89de",
-      "titulo": "Trump describes his relations with Putin as ‘fantastic’",
-      "imagem": "",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "america-norte",
-        "europa",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "politica"
-      ],
-      "maisRecente": "2026-11-20T19:17:03.000Z",
-      "noticias": [
-        "e7f5a96c89de"
       ]
     },
     {
@@ -10390,30 +10839,6 @@
       ]
     },
     {
-      "id": "90364238795c",
-      "titulo": "'Robôs assassinos' já são usados em guerras, mas países não chegam a acordo sobre limites na ONU",
-      "imagem": "https://s2-g1.glbimg.com/mhhwSTKug2q_7CS0Yh9EGuGzkxk=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/c/B/7HYhOjTJOuMhC5yWjqmA/2026-11-20t105448z-149963271-rc2lroaso7nj-rtrmadp-3-ukraine-crisis-attack-kyiv.jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "europa",
-        "america-norte",
-        "asia-pacifico",
-        "global"
-      ],
-      "temas": [
-        "conflitos",
-        "diplomacia",
-        "energia",
-        "politica",
-        "tecnologia"
-      ],
-      "maisRecente": "2026-11-20T14:00:27.000Z",
-      "noticias": [
-        "90364238795c"
-      ]
-    },
-    {
       "id": "aa700cf316bb",
       "titulo": "Organilleros: Is Mexico City’s centennial profession at risk of disappearing?",
       "imagem": "",
@@ -14063,6 +14488,23 @@
       "maisRecente": "2026-11-20T09:44:48.000Z",
       "noticias": [
         "a6c35bd56399"
+      ]
+    },
+    {
+      "id": "d495c767f125",
+      "titulo": "Quatro homens são condenados no Reino Unido por crimes sexuais contra mulher drogada pelo marido",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "maisRecente": "2026-11-20T09:38:52.000Z",
+      "noticias": [
+        "d495c767f125"
       ]
     },
     {
@@ -20082,209 +20524,553 @@
       "noticias": [
         "0a9fb7eb3699"
       ]
+    }
+  ],
+  "noticias": [
+    {
+      "id": "cb8c3ef54bbf",
+      "titulo": "Trump replaces US cyber chief after outages hit flights, banks and NSA",
+      "resumo": "US President Donald Trump has tapped the Pentagon’s chief information officer as his new cyber chief following a series of major outages that disrupted air travel, banking and classified communications, saying on Friday that her predecessor was not “good enough”. Kirsten Davies…",
+      "link": "https://www.scmp.com/news/us/politics/article/3375298/trump-replaces-us-cyber-chief-after-outages-hit-flights-banks-and-nsa",
+      "fonte": "scmp",
+      "fonteNome": "South China Morning Post",
+      "pais": "Hong Kong",
+      "visao": "Jornal de Hong Kong sobre China e Ásia",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:14:04.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/21/baa74963-5f0f-4973-85f6-d1536abf6466_5022610b.jpg?itok=c4FQzzIM&v=1795209230",
+      "imagemCredito": "South China Morning Post",
+      "regioes": [
+        "america-norte"
+      ],
+      "temas": [
+        "politica",
+        "tecnologia"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
     },
     {
-      "id": "43f0d04e8809",
-      "titulo": "Congress approves Animal Welfare Law, spelling out pet owners’ legal responsibilities",
-      "imagem": "",
-      "fontes": 1,
-      "umaFonteSo": true,
+      "id": "de1da4aefa52",
+      "titulo": "Ativista britânico de extrema direita é preso por atacar bote de migrantes",
+      "resumo": "Daniel Thomas recebeu pena de 15 meses por perfurar com uma faca uma embarcação inflável usada no transporte de migrantes pelo Canal da Mancha",
+      "link": "https://veja.abril.com.br/mundo/ativista-britanico-de-extrema-direita-e-preso-por-atacar-bote-de-migrantes/",
+      "fonte": "veja",
+      "fonteNome": "Veja Mundo",
+      "pais": "Brasil",
+      "visao": "Revista brasileira, centro-direita",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:12:02.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://veja.abril.com.br/wp-content/uploads/2026/08/IMG_1468.jpg",
+      "imagemCredito": "Veja Mundo",
       "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
+    },
+    {
+      "id": "2b5a725f10a9",
+      "titulo": "Michelle Heyman marks 200 A-League games with Canberra United",
+      "resumo": "Matildas striker Michelle Heyman marks her 200th game playing for Canberra United this weekend, becoming the first player in the A-League Women to mark the milestone at a single club.",
+      "link": "https://www.abc.net.au/news/2026-11-21/act-michelle-heyman-200-games-milestone-canberra-united/107407628",
+      "fonte": "abcau",
+      "fonteNome": "ABC News Austrália",
+      "pais": "Austrália",
+      "visao": "Emissora pública australiana",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:09:14.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/3bf96109e7e4b0e3b65005626c30f310?impolicy=wcms_crop_resize&cropH=2188&cropW=3890&xPos=0&yPos=106&width=862&height=485",
+      "imagemCredito": "ABC News Austrália",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "conflitos"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
+    },
+    {
+      "id": "2b721ad99a5b",
+      "titulo": "Russian Strike on Kryvyi Rih Wounds 42, Kills 7-Year-Old and Paramedic",
+      "resumo": "A Russian ballistic missile strike on central Kryvyi Rih, a city in Ukraine’s Dnipropetrovsk region, on Friday evening, Nov. 20, killed a 7-year-old boy and a 20-year-old paramedic and injured 42 people, including four children, local officials said. Twenty-seven of the injured…",
+      "link": "https://www.kyivpost.com/post/90770",
+      "fonte": "kyivpost",
+      "fonteNome": "Kyiv Post",
+      "pais": "Ucrânia",
+      "visao": "Jornal ucraniano",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:09:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://static.kyivpost.com/storage/2026/11/20/4fa2e23b3d8427e2073a6c21b9bce99b.jpg?w=640&q=90&f=jpg",
+      "imagemCredito": "Kyiv Post",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
+    },
+    {
+      "id": "fcbfb2b1548e",
+      "titulo": "Indian man jailed over US murder plot against Sikh separatist",
+      "resumo": "A US judge sentenced Indian national Nikhil Gupta to more than 19 years in prison for plotting to assassinate Sikh separatist Gurpatwant Singh Pannun.",
+      "link": "https://www.channelnewsasia.com/world/us-india-nikhil-gupta-sentenced-sikh-pannun-6570561",
+      "fonte": "cna",
+      "fonteNome": "CNA",
+      "pais": "Singapura",
+      "visao": "Canal de Singapura, foco no Sudeste Asiático",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:07:04.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://dam.mediacorp.sg/image/upload/s--ryYFxIjG--/fl_relative,g_south_east,l_mediacorp:cna:watermark:2024-04:reuters_1,w_0.1/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/one-cms/core/2026-11-20T171806Z_2_LYNXNPEMAJ1KJ_RTROPTP_3_USA-INDIA-SIKH.JPG?itok=rEa2zlkv",
+      "imagemCredito": "CNA",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "direitos",
+        "conflitos"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
+    },
+    {
+      "id": "efd15946f176",
+      "titulo": "France investigates actor Depardieu, author Houellebecq over alleged gang rape",
+      "resumo": "The Paris prosecutor's office said the alleged abuse occurred in December 2018, during the shooting of 'Thalasso,' a movie starring the two men.",
+      "link": "https://www.lemonde.fr/en/france/article/2026/11/20/france-investigates-actor-depardieu-author-houellebecq-over-alleged-gang-rape_6785704_7.html",
+      "fonte": "lemonde",
+      "fonteNome": "Le Monde (inglês)",
+      "pais": "França",
+      "visao": "Jornal de referência francês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:06:46.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://img.lemde.fr/2026/11/20/0/97/1006/503/644/322/60/0/3449d3c_upload-1-fobb0c8ctxha-1217824.png",
+      "imagemCredito": "Le Monde (inglês)",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
+    },
+    {
+      "id": "0ae4c356334a",
+      "titulo": "'Cobiçadas' por Trump, Filipinas lideram compra de carne suína do Brasil, mas são 22º destino das exportações do agro",
+      "resumo": "Trump diz que Filipinas vão trocar Brasil pelos EUA na agricultura O presidente dos Estados Unidos, Donald Trump, afirmou nesta sexta-feira (20) que teria firmado um acordo com as Filipinas para assegurar a preferência de produtos agrícolas norte-americanos no mercado do país…",
+      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/20/cobicadas-por-trump-filipinas-lideram-compra-de-carne-suina-do-brasil-mas-sao-22o-destino-das-exportacoes-do-agro.ghtml",
+      "fonte": "g1",
+      "fonteNome": "g1 Mundo",
+      "pais": "Brasil",
+      "visao": "Portal do Grupo Globo",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:05:49.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://s2-g1.glbimg.com/DhnceYR-7SvVVOaVJtVVRvNLVkE=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/I/8/wDhdH0SUa78BARkv9A2w/2019-09-23t131016z-1-lynxmpef8m12t-rtroptp-4-china-economy-trade-pork.jpg",
+      "imagemCredito": "g1 Mundo",
+      "regioes": [
+        "asia-pacifico",
+        "america-norte",
+        "europa",
+        "brasil",
         "america-latina"
       ],
       "temas": [
-        "diplomacia",
-        "conflitos",
+        "economia",
         "politica",
-        "direitos"
+        "conflitos",
+        "diplomacia",
+        "clima"
       ],
-      "maisRecente": "2026-11-19T21:16:45.000Z",
-      "noticias": [
-        "43f0d04e8809"
-      ]
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
     },
     {
-      "id": "3ca41e0fd6a0",
-      "titulo": "Papa Leão XIV convoca fiéis para aproximar jovens da fé cristã no Vaticano",
-      "imagem": "https://media.gazetadopovo.com.br/2026/11/19180807/Papa-Leao-XIV-3-1-3-960x540.jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
+      "id": "cd9c8bf3d290",
+      "titulo": "'I won't give up': Widow's vow after 38-year fight for gambling reform",
+      "resumo": "Janina Anstee's husband died by suicide, overwhelmed by debt acquired from gambling in 1987. She has since been calling for change.",
+      "link": "https://www.abc.net.au/news/2026-11-21/widow-janina-anstee-lifetime-calling-for-gambling-reforms/107112444",
+      "fonte": "abcau",
+      "fonteNome": "ABC News Austrália",
+      "pais": "Austrália",
+      "visao": "Emissora pública australiana",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:03:16.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/b1ac401d57aa5be1183082c61abdf2e0?impolicy=wcms_crop_resize&cropH=1993&cropW=3543&xPos=9&yPos=94&width=862&height=485",
+      "imagemCredito": "ABC News Austrália",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "economia"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
+    },
+    {
+      "id": "295759004f0e",
+      "titulo": "Geração Z impulsiona radicalização política global à esquerda e à direita",
+      "resumo": "",
+      "link": "https://www.estadao.com.br/internacional/geracao-z-impulsiona-mudanca-politica-global-apoiando-tanto-a-esquerda-quanto-a-direita-radicais/",
+      "fonte": "estadao",
+      "fonteNome": "Estadão Internacional",
+      "pais": "Brasil",
+      "visao": "Jornal de referência brasileiro, centro-direita",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:00:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
       "regioes": [
         "mundo"
       ],
       "temas": [
         "outros"
       ],
-      "maisRecente": "2026-11-19T21:08:04.000Z",
-      "noticias": [
-        "3ca41e0fd6a0"
-      ]
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
     },
     {
-      "id": "3e4cf40e673c",
-      "titulo": "Bispos dos EUA criam força-tarefa para enfrentar ameaças da inteligência artificial",
-      "imagem": "https://media.gazetadopovo.com.br/2026/04/17104547/religiao-agencia-catolica-2-960x540.jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
+      "id": "d62fe715ede0",
+      "titulo": "UN warns against Yemen escalation after Saudi-led air strikes on Hodeidah port",
+      "resumo": "",
+      "link": "https://www.thenationalnews.com/news/2026/11/20/un-yemen-saudi-houthis-hodeidah/",
+      "fonte": "thenational",
+      "fonteNome": "The National",
+      "pais": "Emirados Árabes",
+      "visao": "Jornal dos Emirados, ligado ao governo",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:53:47.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://www.thenationalnews.com/resizer/v2/MWM23OGD4PNHEDT7JJG3UH673U.jpg?auth=78b1d32393fc09cd57b5581abaff48371b96955c3ccdd8c388e865add3bd9196&smart=true&width=4368&height=2912",
+      "imagemCredito": "The National",
       "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "conflitos"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
+    },
+    {
+      "id": "f429c0b6d673",
+      "titulo": "Trump-Putin relations vitally important for entire world — RDIF CEO",
+      "resumo": "Kirill Dmitriev has also stressed the importance of relations between the Russian and US Presidents for global security",
+      "link": "https://tass.com/politics/2222759",
+      "fonte": "tass",
+      "fonteNome": "TASS",
+      "pais": "Rússia",
+      "visao": "Agência estatal russa (versão oficial do Kremlin)",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:51:01.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "europa",
         "america-norte"
       ],
       "temas": [
-        "tecnologia"
-      ],
-      "maisRecente": "2026-11-19T21:07:17.000Z",
-      "noticias": [
-        "3e4cf40e673c"
-      ]
-    },
-    {
-      "id": "0dd7330be56e",
-      "titulo": "Greenpeace protests at COP31, demands climate finance as island nations face growing threats",
-      "imagem": "http://images.euronews.com/articles/stories/10/00/04/31/640x360_cmsv2_3be27080-92a7-5413-a5db-0b54ad015def-10000431.jpg?1795118545",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "europa",
-        "global"
-      ],
-      "temas": [
-        "clima",
-        "diplomacia",
+        "economia",
         "conflitos",
         "politica"
       ],
-      "maisRecente": "2026-11-19T21:02:10.000Z",
-      "noticias": [
-        "0dd7330be56e"
-      ]
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
     },
     {
-      "id": "d6a8bedd3513",
-      "titulo": "Apesar de dizer o contrário, Trump avalia retomar ataques ao Irã sob pressão de Netanyahu, diz site",
+      "id": "a6dccd431f04",
+      "titulo": "Lula visitará estudantes que impulsionaram virada eleitoral",
+      "resumo": "O presidente Luiz Inácio Lula da Silva visitará a Universidade Federal Fluminense (UFF), em Niterói (RJ), na sexta-feira (27/11), em reconhecimento à mobilização de estudantes que participaram da campanha pela virada eleitoral. As informações são da coluna de Lauro Jardim, do…",
+      "link": "https://operamundi.uol.com.br/brasil/lula-visitara-estudantes-que-impulsionaram-virada-eleitoral/",
+      "fonte": "operamundi",
+      "fonteNome": "Opera Mundi",
+      "pais": "Brasil",
+      "visao": "Site brasileiro de internacional, esquerda",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:50:40.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
       "imagem": "",
-      "fontes": 1,
-      "umaFonteSo": true,
+      "imagemCredito": "",
+      "regioes": [
+        "brasil"
+      ],
+      "temas": [
+        "politica"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
+    },
+    {
+      "id": "c7d4603146ab",
+      "titulo": "US Vice President Vance declines to say he would have ordered Iran strikes",
+      "resumo": "WASHINGTON, Nov 20 - US Vice President JD Vance on Friday declined to say whether he would have authorized strikes on Iran to prevent the country from developing a nuclear weapon, sidestepping President Donald Trump's calls for him to say the attacks were necessary and that he…",
+      "link": "https://www.straitstimes.com/world/middle-east/us-vice-president-vance-declines-to-say-he-would-have-ordered-iran-strikes",
+      "fonte": "straitstimes",
+      "fonteNome": "The Straits Times",
+      "pais": "Singapura",
+      "visao": "Jornal de referência de Singapura",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:50:30.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
       "regioes": [
         "america-norte",
         "oriente-medio"
       ],
       "temas": [
-        "politica",
-        "conflitos"
-      ],
-      "maisRecente": "2026-11-19T21:02:00.000Z",
-      "noticias": [
-        "d6a8bedd3513"
-      ]
-    },
-    {
-      "id": "7f5b6d632400",
-      "titulo": "Foreigners continue to offload Korean stocks in Oct.",
-      "imagem": "https://img.yna.co.kr/etc/inner/EN/2026/11/19/AEN20261119005700320_01_i_P2.jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "economia"
-      ],
-      "maisRecente": "2026-11-19T21:00:11.000Z",
-      "noticias": [
-        "7f5b6d632400"
-      ]
-    },
-    {
-      "id": "c2eb384e8b7d",
-      "titulo": "Producer prices drop in Oct. on lower food prices",
-      "imagem": "https://img.yna.co.kr/photo/yna/YH/2026/10/30/PYH2026103009620001300_P2.jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "economia"
-      ],
-      "maisRecente": "2026-11-19T21:00:07.000Z",
-      "noticias": [
-        "c2eb384e8b7d"
-      ]
-    },
-    {
-      "id": "8789c46efd28",
-      "titulo": "Russian edition of Alexandra Prokopenko’s ‘From Sovereigns to Servants: How the War Against Ukraine Reshaped Russia’s Elite’ wins special prize for political nonfiction",
-      "imagem": "https://meduza.io/imgly/share/1795121781/en/news/2026/11/19/russian-edition-of-alexandra-prokopenko-s-from-sovereigns-to-servants-how-the-war-against-ukraine-reshaped-russia-s-elite-wins-special-prize-for-political-nonfiction",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "conflitos"
-      ],
-      "maisRecente": "2026-11-19T20:54:18.000Z",
-      "noticias": [
-        "8789c46efd28"
-      ]
-    },
-    {
-      "id": "2f50068d9d55",
-      "titulo": "Putin proposes second humanitarian ceasefire — is it a trap?",
-      "imagem": "",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
         "conflitos",
-        "politica",
-        "direitos"
-      ],
-      "maisRecente": "2026-11-19T20:53:00.000Z",
-      "noticias": [
-        "2f50068d9d55"
-      ]
-    },
-    {
-      "id": "4a3424f49cdb",
-      "titulo": "South Korea’s Coal Use Is Surging – and Not Just Because of the Iran War",
-      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2026/11/thediplomat_2026-11-20-055209.jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "oriente-medio",
-        "asia-pacifico"
-      ],
-      "temas": [
         "energia",
-        "conflitos"
+        "politica"
       ],
-      "maisRecente": "2026-11-19T20:49:00.000Z",
-      "noticias": [
-        "4a3424f49cdb"
-      ]
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
     },
     {
-      "id": "c0df60649105",
-      "titulo": "White House largely mum in aftermath of historic three-way summit",
+      "id": "47c4f196513e",
+      "titulo": "Aim is to ‘polarise’: Influencer deepfakes used to stoke Canada-US tensions",
+      "resumo": "Content creators say their identities are being stolen to create division.",
+      "link": "https://www.straitstimes.com/world/aim-is-to-polarise-influencer-deepfakes-used-to-stoke-canada-us-tensions",
+      "fonte": "straitstimes",
+      "fonteNome": "The Straits Times",
+      "pais": "Singapura",
+      "visao": "Jornal de referência de Singapura",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:49:58.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
       "imagem": "",
-      "fontes": 1,
-      "umaFonteSo": true,
+      "imagemCredito": "",
       "regioes": [
         "america-norte"
       ],
       "temas": [
-        "diplomacia"
+        "outros"
       ],
-      "maisRecente": "2026-11-19T20:48:28.000Z",
-      "noticias": [
-        "c0df60649105"
-      ]
-    }
-  ],
-  "noticias": [
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
+    },
+    {
+      "id": "3c55c096f6e6",
+      "titulo": "Justiça dos EUA derruba restrições da Califórnia contra agentes de imigração",
+      "resumo": "Justiça dos EUA impede Califórnia de aplicar leis que restringiam uso de máscaras e exigiam identificação de agentes federais de imigração.",
+      "link": "https://www.gazetadopovo.com.br/mundo/justica-dos-eua-derruba-restricoes-da-california-contra-agentes-de-imigracao/",
+      "fonte": "gazetadopovo",
+      "fonteNome": "Gazeta do Povo Mundo",
+      "pais": "Brasil",
+      "visao": "Jornal brasileiro, direita conservadora",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:48:55.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://media.gazetadopovo.com.br/2026/11/20174626/imigracao-restricoes-california-justica-eua-960x540.jpg",
+      "imagemCredito": "Gazeta do Povo Mundo",
+      "regioes": [
+        "america-norte"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
+    },
+    {
+      "id": "d5925b4dd488",
+      "titulo": "Argentina hit hard by global turmoil as bonds slip into distress",
+      "resumo": "Bond sell-off deepens, pushing its debt into distressed territory for the first time in two years. Leer más",
+      "link": "https://www.batimes.com.ar/news/economy/argentina-hit-hard-by-global-turmoil-as-bonds-slip-into-distress.phtml",
+      "fonte": "batimes",
+      "fonteNome": "Buenos Aires Times",
+      "pais": "Argentina",
+      "visao": "Jornal argentino em inglês (grupo Perfil)",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:48:12.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://fotos.perfil.com/2026/05/01/trim/540/304/entrance-casa-rosada-blocked-journalists-2231832.jpg",
+      "imagemCredito": "Buenos Aires Times",
+      "regioes": [
+        "america-latina"
+      ],
+      "temas": [
+        "economia"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
+    },
+    {
+      "id": "5f2a7c56bef9",
+      "titulo": "US Vice President Vance declines to say he would have ordered Iran strikes",
+      "resumo": "By Bo Erickson and Jacob Bogage WASHINGTON, Nov 20 (Reuters) - US Vice President JD Vance on Friday declined to say whether he would have authorized strikes on Iran to prevent the country from developing a nuclear weapon, sidestepping President Donald Trump's calls for him to say…",
+      "link": "https://www.al-monitor.com/originals/2026/11/us-vice-president-vance-declines-say-he-would-have-ordered-iran-strikes",
+      "fonte": "almonitor",
+      "fonteNome": "Al-Monitor",
+      "pais": "EUA",
+      "visao": "Site especializado em Oriente Médio",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:46:52.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "america-norte",
+        "oriente-medio"
+      ],
+      "temas": [
+        "conflitos",
+        "energia",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
+    },
+    {
+      "id": "74a5c11ff7c7",
+      "titulo": "Seat by seat, these are the major election issues in regional Victoria",
+      "resumo": "As Victoria heads into the last week of the election campaign, renewables projects, hospitals and the state of roads are what voters in the state's regions are thinking about.",
+      "link": "https://www.abc.net.au/news/2026-11-21/victorian-election-regional-voters-issues-seat-by-seat/107390056",
+      "fonte": "abcau",
+      "fonteNome": "ABC News Austrália",
+      "pais": "Austrália",
+      "visao": "Emissora pública australiana",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:46:42.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/5f38c84c87f9c12974da2fc0c7db21f4?impolicy=wcms_crop_resize&cropH=1128&cropW=2005&xPos=988&yPos=858&width=862&height=485",
+      "imagemCredito": "ABC News Austrália",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "politica",
+        "energia"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
+    },
+    {
+      "id": "663befa0c387",
+      "titulo": "Russian ornithologist jailed over small donations to Navalny's foundation",
+      "resumo": "Sofia Rosenfeld has devoted her life to studying Arctic birds. A Russian court sentenced her to 3.5 years in a penal colony over donations to Navalny's foundation. Friends and family are fighting for her release.",
+      "link": "https://www.dw.com/en/russian-ornithologist-jailed-over-small-donations-to-navalny-s-foundation/a-80005505?maca=en-rss-en-world-4025-rdf",
+      "fonte": "dw",
+      "fonteNome": "DW",
+      "pais": "Alemanha",
+      "visao": "Emissora internacional pública alemã",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:45:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "direitos",
+        "conflitos"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
+    },
+    {
+      "id": "dede4df29b0f",
+      "titulo": "Rubio calls meeting of Russia, China, and US leaders foundation for further negotiations",
+      "resumo": "The US Secretary of State pointed out that this meeting has set the tone and created a platform upon which the hard work of diplomacy and trade negotiations can occur to the benefit of the American people and the world",
+      "link": "https://tass.com/world/2222757",
+      "fonte": "tass",
+      "fonteNome": "TASS",
+      "pais": "Rússia",
+      "visao": "Agência estatal russa (versão oficial do Kremlin)",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:45:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "europa",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "diplomacia",
+        "economia"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
+    },
     {
       "id": "ed891034bd17",
       "titulo": "Reino Unido e União Europeia firmam acordo e tentam reconstruir laços após Brexit",
@@ -20347,6 +21133,32 @@
       "coletadoEm": "2026-11-20T20:46:12.688Z"
     },
     {
+      "id": "6418d2b9f602",
+      "titulo": "Hannah Lillith Assadi's National Book Award puts Palestinian exile in the spotlight",
+      "resumo": "In \"Paradiso 17,\" Assadi draws on her father's flight after the Nakba to ask questions earlier generations of Jewish writers helped make central to American fiction",
+      "link": "https://www.haaretz.com/us-news/2026-11-20/ty-article/.premium/a-palestinian-story-of-exile-takes-one-of-americas-top-literary-prizes/000001a1-fa94-d381-ade5-fbf511090000",
+      "fonte": "haaretz",
+      "fonteNome": "Haaretz",
+      "pais": "Israel",
+      "visao": "Jornal israelense, centro-esquerda",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:37:01.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://img.haarets.co.il/bs/000001a1-fa95-dad7-a9fd-fadff5960000/88/3f/b03c7a0b41b186fc58e544d8c9c5/223634.jpg?width=108&height=81",
+      "imagemCredito": "Haaretz",
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
+    },
+    {
       "id": "7caf8b434d45",
       "titulo": "US right wing voices attack Islam online after a study projects global Muslim majority by 2035",
       "resumo": "Submitted by Nouran Saleh on Fri, 11/20/2026 - 19:32 Pew Research study projects Islam to grow by 80 percent globally by 2070, to the ire of the US right wing Muslim pilgrims perform Umrah around the Kaaba, Islam's holiest shrine, in Saudi Arabia's holy city of Mecca, on 20…",
@@ -20380,6 +21192,33 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     },
     {
+      "id": "d62915d5b658",
+      "titulo": "Repression against Iranian lawyers increases",
+      "resumo": "At least 135 lawyers in Iran have been subjected to repressive measures over the past year. UN experts warn that this seriously jeopardizes the right of those accused to trial in a constitutional court.",
+      "link": "https://www.dw.com/en/repression-against-iranian-lawyers-increases/a-80006742?maca=en-rss-en-world-4025-rdf",
+      "fonte": "dw",
+      "fonteNome": "DW",
+      "pais": "Alemanha",
+      "visao": "Emissora internacional pública alemã",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:36:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "direitos",
+        "conflitos"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
+    },
+    {
       "id": "6764860dada9",
       "titulo": "‘We do whatever we want with what’s ours’: A look back at Ukraine’s attacks on the Crimean Bridge",
       "resumo": "Since the start of the full-scale war, the Crimean Bridge, which links the Russian-annexed peninsula to Russia’s Krasnodar region, has repeatedly been a target of Ukrainian strikes. Ukrainian officials have stressed that they target the bridge because it is used for military…",
@@ -20404,6 +21243,32 @@
         "conflitos"
       ],
       "coletadoEm": "2026-11-20T20:36:59.091Z"
+    },
+    {
+      "id": "ff2fb4b46d93",
+      "titulo": "They often wanted to split Russia to dominate; they want to do so now as well — Putin",
+      "resumo": "Vladimir Putin believes that what is happening now is a continuation of the same policy — divide and rule — and the desire to reduce Russia’s potential",
+      "link": "https://tass.com/politics/2222753",
+      "fonte": "tass",
+      "fonteNome": "TASS",
+      "pais": "Rússia",
+      "visao": "Agência estatal russa (versão oficial do Kremlin)",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:35:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
     },
     {
       "id": "909cb8b85c15",
@@ -20543,6 +21408,36 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     },
     {
+      "id": "d77f7922036d",
+      "titulo": "Trump acknowledges that it’s hard for him to agree to cut US nuclear arsenal",
+      "resumo": "Earlier, Donald Trump held talks with his Russian and Chinese counterparts, Vladimir Putin and Xi Jinping, and issues of nuclear weapons were among the topics they discussed",
+      "link": "https://tass.com/world/2222751",
+      "fonte": "tass",
+      "fonteNome": "TASS",
+      "pais": "Rússia",
+      "visao": "Agência estatal russa (versão oficial do Kremlin)",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:30:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "europa",
+        "asia-pacifico",
+        "america-norte"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia",
+        "energia"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
+    },
+    {
       "id": "7969f977e758",
       "titulo": "Minuta de acordo na ONU não prevê regras obrigatórias para uso de 'robôs assassinos'",
       "resumo": "Delegados participam da Conferência de Revisão dos Estados Partes da Convenção sobre Certas Armas Convencionais (CCAC), das Nações Unidas (ONU) Fabrice COFFRINI / AFP Uma minuta de acordo vista pela Reuters, durante encontro na ONU sobre armamentos, em Genebra, indica que regras…",
@@ -20659,6 +21554,36 @@
         "outros"
       ],
       "coletadoEm": "2026-11-20T20:36:59.091Z"
+    },
+    {
+      "id": "b9e43ed9299d",
+      "titulo": "'Look at India', 'country of 2nd chances': 10 takeaways from Trump's White House presser",
+      "resumo": "Donald Trump championed his administration's initiatives and signaled a willingness to partner with Democrats on key issues. He lauded the economic prospects of the Quad alliance, particularly India's remarkable growth figures. Discussing Iran, Trump called for clear and…",
+      "link": "https://timesofindia.indiatimes.com/world/us/look-at-india-country-of-second-chances-10-key-takeaways-from-trumps-first-presser-since-midterm-loss/articleshow/136038820.cms",
+      "fonte": "timesofindia",
+      "fonteNome": "The Times of India",
+      "pais": "Índia",
+      "visao": "Maior jornal indiano em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:25:58.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://static.toiimg.com/photo/msid-136038954,imgsize-81020.cms",
+      "imagemCredito": "The Times of India",
+      "regioes": [
+        "america-norte",
+        "oriente-medio",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "economia",
+        "diplomacia",
+        "tecnologia"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
     },
     {
       "id": "5222a0923a1e",
@@ -20957,6 +21882,32 @@
         "conflitos"
       ],
       "coletadoEm": "2026-11-20T20:36:59.091Z"
+    },
+    {
+      "id": "c10c0d6d7b58",
+      "titulo": "Russia launches ballistic missile attack on central Kryvyi Rih: child and paramedic killed, at least 21 injured",
+      "resumo": "Russian forces attacked the centre of Kryvyi Rih with ballistic missiles on the evening of 20 November, injuring at least 21 people. A seven-year-old boy and a female paramedic have been killed in the attack.",
+      "link": "https://www.pravda.com.ua/eng/news/2026/11/20/8063886/",
+      "fonte": "pravdaua",
+      "fonteNome": "Ukrainska Pravda",
+      "pais": "Ucrânia",
+      "visao": "Site ucraniano de jornalismo independente",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:17:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/3/b/961152/3b829fbac1f54d29071fa375cc4592b9.jpeg",
+      "imagemCredito": "Ukrainska Pravda",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
     },
     {
       "id": "cd8962017468",
@@ -21310,6 +22261,32 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     },
     {
+      "id": "ef0c03a57e04",
+      "titulo": "Países da ONU estão divididos sobre regulamentação de ‘robôs assassinos’",
+      "resumo": "Conferência ocorre em Genebra nesta sexta para discutir sistemas de armas autônomas letais, capazes de selecionar e atacar alvos sem intervenção humana",
+      "link": "https://www.cartacapital.com.br/mundo/paises-da-onu-estao-divididos-sobre-regulamentacao-de-robos-assassinos/",
+      "fonte": "cartacapital",
+      "fonteNome": "CartaCapital Mundo",
+      "pais": "Brasil",
+      "visao": "Revista brasileira, esquerda",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:06:10.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://www.cartacapital.com.br/wp-content/uploads/2026/11/AFP__20261116__D7KW7KE__v1__MidRes__SwitzerlandDiplomacyUnDefenceWeaponry.jpg",
+      "imagemCredito": "CartaCapital Mundo",
+      "regioes": [
+        "global"
+      ],
+      "temas": [
+        "conflitos"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
+    },
+    {
       "id": "777bb4e1a198",
       "titulo": "French Senate approves police shootings law dubbed 'licence to kill' by critics",
       "resumo": "PARIS, Nov 20 - French senators gave final approval on Friday to a law presuming that police officers who use their weapons are acting lawfully, a proposal that left-wing parliamentarians oppose and seek to challenge at the Constitutional Council.",
@@ -21496,6 +22473,32 @@
         "economia"
       ],
       "coletadoEm": "2026-11-20T20:27:30.953Z"
+    },
+    {
+      "id": "e831fd9a2898",
+      "titulo": "States Are Playing Serious Games on Virtual Battlefields",
+      "resumo": "The rise of video gaming has created new geopolitical arenas.",
+      "link": "https://foreignpolicy.com/2026/11/20/grand-theft-auto-power-play-osborn-review-geopolitics-video-games/",
+      "fonte": "foreignpolicy",
+      "fonteNome": "Foreign Policy",
+      "pais": "EUA",
+      "visao": "Revista de análise de política externa",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "analise",
+      "publicadoEm": "2026-11-20T20:00:53.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://foreignpolicy.com/wp-content/uploads/2026/11/PowerPlay-1-GettyImages-2305163039.png",
+      "imagemCredito": "Foreign Policy",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
     },
     {
       "id": "2fdd83319e87",
@@ -22105,6 +23108,36 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     },
     {
+      "id": "77581637bbd4",
+      "titulo": "Trump cites good talks with Putin on Ukraine, holds back on security guarantees",
+      "resumo": "By Bo Erickson and Doina Chiacu WASHINGTON, Nov 20 (Reuters) - US President Donald Trump said on Friday that he and Russian leader Vladimir Putin held very good talks on Ukraine during their meeting in China, but added he didn't want to discuss security guarantees for Ukraine…",
+      "link": "https://www.al-monitor.com/originals/2026/11/trump-cites-good-talks-putin-ukraine-holds-back-security-guarantees",
+      "fonte": "almonitor",
+      "fonteNome": "Al-Monitor",
+      "pais": "EUA",
+      "visao": "Site especializado em Oriente Médio",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T19:46:32.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "europa",
+        "america-norte",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "diplomacia",
+        "conflitos",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
+    },
+    {
       "id": "7cdc0f275971",
       "titulo": "Gérard Depardieu and French author investigated over sexual allegations",
       "resumo": "A judicial investigation was launched after a complaint was filed last year over \"allegations of a sexual nature\".",
@@ -22211,6 +23244,33 @@
         "politica"
       ],
       "coletadoEm": "2026-11-20T20:27:30.953Z"
+    },
+    {
+      "id": "3640a3fbb952",
+      "titulo": "'Friends' But Who Benefits? Notes from an Historic Summit, Myanmar's Genocide Ruling, Time to 'Bre-join' the EU?",
+      "resumo": "Welcome to the World This Week with Gavin Lee. You give us 45 minutes, we'll give you 7 days worth of crystal clear analysis. As ever, alongside a handpicked panel of four distinguished foreign correspondents.",
+      "link": "https://www.france24.com/en/tv-shows/the-world-this-week/20261120-friends-but-who-benefits-notes-from-an-historic-summit-myanmar-s-genocide-ruling-time-to-bre-join-the-eu",
+      "fonte": "france24",
+      "fonteNome": "France 24",
+      "pais": "França",
+      "visao": "Emissora internacional pública francesa",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T19:42:58.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://s.france24.com/media/display/cfefa95a-e518-11f1-b6ef-13439ca2fe89/w:1024/p:16x9/2026-11-19T230006Z-1256675834-RC2WQOACA4BG-RTRMADP-3-CYBERSECURITY-DRONES-RISK.jpg",
+      "imagemCredito": "France 24",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "diplomacia",
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-20T21:17:00.434Z"
     },
     {
       "id": "427277c871d3",
@@ -57225,358 +58285,6 @@
         "direitos"
       ],
       "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "43f0d04e8809",
-      "titulo": "Congress approves Animal Welfare Law, spelling out pet owners’ legal responsibilities",
-      "resumo": "The bill prohibits animal abuse in the public sphere, such as in circuses advertising and fighting events. But its most relevant action for pet owners is to apply legal sanctions for failure to follow such basic responsibilities as providing food, shelter and water. The post…",
-      "link": "https://mexiconewsdaily.com/news/congress-approves-law-spelling-out-pet-owners-legal-responsibilities/",
-      "fonte": "mexiconews",
-      "fonteNome": "Mexico News Daily",
-      "pais": "México",
-      "visao": "Notícias do México em inglês",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T21:16:45.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "",
-      "imagemCredito": "",
-      "regioes": [
-        "america-latina"
-      ],
-      "temas": [
-        "diplomacia",
-        "conflitos",
-        "politica",
-        "direitos"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "5100a7792b5c",
-      "titulo": "Fiona, hipopótamo famoso nas redes, morre após engolir gorro de tricô em zoológico nos EUA",
-      "resumo": "A hipopótamo Fiona engoliu um gorro e, agora, veterinários vão usar uma plataforma vibratória para ajudá-la a expelir o item. John Minchillo/AP Fiona, o hipopótamo-fêmea que se tornou uma das principais atrações do Zoológico de Cincinnati, nos Estados Unidos, morreu nesta…",
-      "link": "https://g1.globo.com/meio-ambiente/noticia/2026/11/19/fiona-hipopotamo-redes-gorro-zoologico-eua.ghtml",
-      "fonte": "g1",
-      "fonteNome": "g1 Mundo",
-      "pais": "Brasil",
-      "visao": "Portal do Grupo Globo",
-      "idioma": "pt",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T21:16:09.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://s2-g1.glbimg.com/lCKWOtaDiyIHalSWui3CD5mybf8=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/c/P/B5CNomRWWSjVqneAmn4A/ap26320773799425.jpg",
-      "imagemCredito": "g1 Mundo",
-      "regioes": [
-        "america-norte",
-        "oriente-medio"
-      ],
-      "temas": [
-        "tecnologia"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "d24676ad7396",
-      "titulo": "Reino Unido condena 4 homens por abusos a mulher drogada pelo marido em caso parecido com de Pelicot",
-      "resumo": "Quatro homens britânicos foram condenados nesta quinta-feira (19) por estuprar ou abusar sexualmente de uma mulher que havia sido drogada pelo então marido , em um caso que lembra o de Gisèle Pelicot , a francesa que se tornou um símbolo mundial na luta contra a violência sexual…",
-      "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/reino-unido-condena-4-homens-por-abusos-a-mulher-drogada-pelo-marido-em-caso-parecido-com-de-pelicot.shtml",
-      "fonte": "folha",
-      "fonteNome": "Folha Mundo",
-      "pais": "Brasil",
-      "visao": "Jornal de referência brasileiro",
-      "idioma": "pt",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T21:15:00.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "",
-      "imagemCredito": "",
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "3ca41e0fd6a0",
-      "titulo": "Papa Leão XIV convoca fiéis para aproximar jovens da fé cristã no Vaticano",
-      "resumo": "Papa Leão XIV recebe 3 mil fiéis da Comunidade Shalom no Vaticano e define a evangelização dos jovens como prioridade para os próximos anos.",
-      "link": "https://www.gazetadopovo.com.br/mundo/papa-leao-xiv-convoca-fieis-para-aproximar-jovens-da-fe-crista-no-vaticano/",
-      "fonte": "gazetadopovo",
-      "fonteNome": "Gazeta do Povo Mundo",
-      "pais": "Brasil",
-      "visao": "Jornal brasileiro, direita conservadora",
-      "idioma": "pt",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T21:08:04.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://media.gazetadopovo.com.br/2026/11/19180807/Papa-Leao-XIV-3-1-3-960x540.jpg",
-      "imagemCredito": "Gazeta do Povo Mundo",
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "3e4cf40e673c",
-      "titulo": "Bispos dos EUA criam força-tarefa para enfrentar ameaças da inteligência artificial",
-      "resumo": "Conferência Episcopal dos EUA estabelece grupo de trabalho para defender dignidade humana diante dos desafios da IA, com foco em educação e políticas públicas.",
-      "link": "https://www.gazetadopovo.com.br/mundo/bispos-dos-eua-criam-forca-tarefa-para-enfrentar-ameacas-da-inteligencia-artificial/",
-      "fonte": "gazetadopovo",
-      "fonteNome": "Gazeta do Povo Mundo",
-      "pais": "Brasil",
-      "visao": "Jornal brasileiro, direita conservadora",
-      "idioma": "pt",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T21:07:17.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://media.gazetadopovo.com.br/2026/04/17104547/religiao-agencia-catolica-2-960x540.jpg",
-      "imagemCredito": "Gazeta do Povo Mundo",
-      "regioes": [
-        "america-norte"
-      ],
-      "temas": [
-        "tecnologia"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "0dd7330be56e",
-      "titulo": "Greenpeace protests at COP31, demands climate finance as island nations face growing threats",
-      "resumo": "Greenpeace activists are staging a protest at the COP31 climate talks in Turkey, demanding urgent action. Small island nations are also raising their voices, warning that the climate crisis threatens their very survival. But Greenpeace says progress at the negotiations remains…",
-      "link": "http://www.africanews.com/2026/11/19/greenpeace-protests-at-cop31-demands-climate-finance-as-island-nations-face-growing-threat/",
-      "fonte": "africanews",
-      "fonteNome": "Africanews",
-      "pais": "Congo",
-      "visao": "Canal pan-africano de notícias",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T21:02:10.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "http://images.euronews.com/articles/stories/10/00/04/31/640x360_cmsv2_3be27080-92a7-5413-a5db-0b54ad015def-10000431.jpg?1795118545",
-      "imagemCredito": "Africanews",
-      "regioes": [
-        "europa",
-        "global"
-      ],
-      "temas": [
-        "clima",
-        "diplomacia",
-        "conflitos",
-        "politica"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "d6a8bedd3513",
-      "titulo": "Apesar de dizer o contrário, Trump avalia retomar ataques ao Irã sob pressão de Netanyahu, diz site",
-      "resumo": "O presidente dos Estados Unidos , Donald Trump , afirmou em breve telefonema ao site Axios nesta quinta-feira (19) que ainda avalia se vai retomar ataques ao Irã , indicando como janela provável para uma decisão o começo do ano que vem. Leia mais (11/19/2026 - 18h02)",
-      "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/apesar-de-dizer-o-contrario-trump-avalia-retomar-ataques-ao-ira-sob-pressao-de-netanyahu-diz-site.shtml",
-      "fonte": "folha",
-      "fonteNome": "Folha Mundo",
-      "pais": "Brasil",
-      "visao": "Jornal de referência brasileiro",
-      "idioma": "pt",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T21:02:00.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "",
-      "imagemCredito": "",
-      "regioes": [
-        "america-norte",
-        "oriente-medio"
-      ],
-      "temas": [
-        "politica",
-        "conflitos"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "7f5b6d632400",
-      "titulo": "Foreigners continue to offload Korean stocks in Oct.",
-      "resumo": "SEOUL, Nov. 20 (Yonhap) -- Foreign investors continued to sell Korean stocks in ...",
-      "link": "https://en.yna.co.kr/view/AEN20261119005700320",
-      "fonte": "yonhap",
-      "fonteNome": "Yonhap",
-      "pais": "Coreia do Sul",
-      "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
-      "idioma": "en",
-      "estatal": true,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T21:00:11.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://img.yna.co.kr/etc/inner/EN/2026/11/19/AEN20261119005700320_01_i_P2.jpg",
-      "imagemCredito": "Yonhap",
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "economia"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "c2eb384e8b7d",
-      "titulo": "Producer prices drop in Oct. on lower food prices",
-      "resumo": "SEOUL, Nov. 20 (Yonhap) -- Producer prices fell for the first time in three mont...",
-      "link": "https://en.yna.co.kr/view/AEN20261119008700320",
-      "fonte": "yonhap",
-      "fonteNome": "Yonhap",
-      "pais": "Coreia do Sul",
-      "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
-      "idioma": "en",
-      "estatal": true,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T21:00:07.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://img.yna.co.kr/photo/yna/YH/2026/10/30/PYH2026103009620001300_P2.jpg",
-      "imagemCredito": "Yonhap",
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "economia"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "8789c46efd28",
-      "titulo": "Russian edition of Alexandra Prokopenko’s ‘From Sovereigns to Servants: How the War Against Ukraine Reshaped Russia’s Elite’ wins special prize for political nonfiction",
-      "resumo": "The Russian edition of Alexandra Prokopenko’s “From Sovereigns to Servants: How the War Against Ukraine Reshaped Russia’s Elite” has won the special PolitProsvet prize at the Prosvetitel (“Enlightener”) awards. Prokopenko is a fellow at the Carnegie Russia Eurasia Center in…",
-      "link": "https://meduza.io/en/news/2026/11/19/russian-edition-of-alexandra-prokopenko-s-from-sovereigns-to-servants-how-the-war-against-ukraine-reshaped-russia-s-elite-wins-special-prize-for-political-nonfiction",
-      "fonte": "meduza",
-      "fonteNome": "Meduza",
-      "pais": "Rússia",
-      "visao": "Site russo independente, no exílio, oposição ao Kremlin",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T20:54:18.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://meduza.io/imgly/share/1795121781/en/news/2026/11/19/russian-edition-of-alexandra-prokopenko-s-from-sovereigns-to-servants-how-the-war-against-ukraine-reshaped-russia-s-elite-wins-special-prize-for-political-nonfiction",
-      "imagemCredito": "Meduza",
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "conflitos"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "2f50068d9d55",
-      "titulo": "Putin proposes second humanitarian ceasefire — is it a trap?",
-      "resumo": "Russian President Putin has suggested evacuating civilians from the embattled Ukrainian city of Kostiantynivka. But experts warn this could serve military, not humanitarian, aims. What should Kyiv do?",
-      "link": "https://www.dw.com/en/putin-proposes-second-humanitarian-ceasefire-is-it-a-trap/a-79996772?maca=en-rss-en-world-4025-rdf",
-      "fonte": "dw",
-      "fonteNome": "DW",
-      "pais": "Alemanha",
-      "visao": "Emissora internacional pública alemã",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T20:53:00.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "",
-      "imagemCredito": "",
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "conflitos",
-        "politica",
-        "direitos"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "4a3424f49cdb",
-      "titulo": "South Korea’s Coal Use Is Surging – and Not Just Because of the Iran War",
-      "resumo": "Data suggests the country's current energy transition pains began before the war in the Gulf.",
-      "link": "https://thediplomat.com/2026/11/south-koreas-coal-use-is-surging-and-not-just-because-of-the-iran-war/",
-      "fonte": "thediplomat",
-      "fonteNome": "The Diplomat",
-      "pais": "Japão",
-      "visao": "Revista de análise sobre Ásia-Pacífico",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "analise",
-      "publicadoEm": "2026-11-19T20:49:00.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2026/11/thediplomat_2026-11-20-055209.jpg",
-      "imagemCredito": "The Diplomat",
-      "regioes": [
-        "oriente-medio",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "energia",
-        "conflitos"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "c0df60649105",
-      "titulo": "White House largely mum in aftermath of historic three-way summit",
-      "resumo": "Trump schedules a news conference for Friday but has little to say in the immediate aftermath of an historic trilateral meeting.",
-      "link": "https://www.washingtonpost.com/politics/2026/11/19/white-house-offers-little-information-summit-outcome/",
-      "fonte": "wapo",
-      "fonteNome": "The Washington Post",
-      "pais": "EUA",
-      "visao": "Jornal de referência dos EUA, centro",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T20:48:28.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "",
-      "imagemCredito": "",
-      "regioes": [
-        "america-norte"
-      ],
-      "temas": [
-        "diplomacia"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-20T20:46:12.688Z",
+  "geradoEm": "2026-11-20T21:17:00.434Z",
   "fontesOk": 69,
   "fontesComErro": 1,
-  "noticiasNovasNestaRodada": 3,
+  "noticiasNovasNestaRodada": 30,
   "porFonte": [
     {
       "id": "nyt",
@@ -27,9 +27,9 @@
       "nome": "Fox News",
       "status": "ok",
       "itensNoFeed": 25,
-      "aceitas": 17,
-      "descartadasPorIdade": 8,
-      "comImagem": 17
+      "aceitas": 16,
+      "descartadasPorIdade": 9,
+      "comImagem": 16
     },
     {
       "id": "npr",
@@ -64,17 +64,17 @@
       "nome": "Foreign Policy",
       "status": "ok",
       "itensNoFeed": 25,
-      "aceitas": 20,
-      "descartadasPorIdade": 5,
-      "comImagem": 20
+      "aceitas": 21,
+      "descartadasPorIdade": 4,
+      "comImagem": 21
     },
     {
       "id": "atlanticcouncil",
       "nome": "Atlantic Council",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 24,
-      "descartadasPorIdade": 76,
+      "aceitas": 22,
+      "descartadasPorIdade": 78,
       "comImagem": 0
     },
     {
@@ -153,8 +153,8 @@
       "id": "dw",
       "nome": "DW",
       "status": "ok",
-      "itensNoFeed": 11,
-      "aceitas": 11,
+      "itensNoFeed": 12,
+      "aceitas": 12,
       "descartadasPorIdade": 0,
       "comImagem": 0
     },
@@ -162,9 +162,9 @@
       "id": "dwbrasil",
       "nome": "DW Brasil",
       "status": "ok",
-      "itensNoFeed": 63,
+      "itensNoFeed": 64,
       "aceitas": 19,
-      "descartadasPorIdade": 44,
+      "descartadasPorIdade": 45,
       "comImagem": 0
     },
     {
@@ -271,9 +271,9 @@
       "nome": "Kyiv Post",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 88,
-      "descartadasPorIdade": 12,
-      "comImagem": 88
+      "aceitas": 89,
+      "descartadasPorIdade": 11,
+      "comImagem": 89
     },
     {
       "id": "pravdaua",
@@ -469,8 +469,8 @@
       "nome": "AllAfrica",
       "status": "ok",
       "itensNoFeed": 33,
-      "aceitas": 32,
-      "descartadasPorIdade": 1,
+      "aceitas": 31,
+      "descartadasPorIdade": 2,
       "comImagem": 0
     },
     {
@@ -496,9 +496,9 @@
       "nome": "g1 Mundo",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 70,
-      "descartadasPorIdade": 30,
-      "comImagem": 70
+      "aceitas": 71,
+      "descartadasPorIdade": 29,
+      "comImagem": 71
     },
     {
       "id": "folha",
@@ -541,9 +541,9 @@
       "nome": "CartaCapital Mundo",
       "status": "ok",
       "itensNoFeed": 20,
-      "aceitas": 18,
-      "descartadasPorIdade": 2,
-      "comImagem": 18
+      "aceitas": 19,
+      "descartadasPorIdade": 1,
+      "comImagem": 19
     },
     {
       "id": "operamundi",
@@ -577,9 +577,9 @@
       "nome": "Buenos Aires Times",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 13,
-      "descartadasPorIdade": 87,
-      "comImagem": 13
+      "aceitas": 14,
+      "descartadasPorIdade": 86,
+      "comImagem": 14
     },
     {
       "id": "mexiconews",
@@ -622,9 +622,9 @@
       "nome": "UN News",
       "status": "ok",
       "itensNoFeed": 30,
-      "aceitas": 10,
-      "descartadasPorIdade": 20,
-      "comImagem": 10
+      "aceitas": 11,
+      "descartadasPorIdade": 19,
+      "comImagem": 11
     },
     {
       "id": "crisisgroup",
