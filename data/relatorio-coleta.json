@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-20T20:36:59.091Z",
-  "fontesOk": 70,
+  "geradoEm": "2026-11-20T20:38:32.716Z",
+  "fontesOk": 69,
   "fontesComErro": 1,
-  "noticiasNovasNestaRodada": 1107,
+  "noticiasNovasNestaRodada": 4,
   "porFonte": [
     {
       "id": "nyt",
@@ -366,15 +366,6 @@
       "comImagem": 45
     },
     {
-      "id": "globaltimes",
-      "nome": "Global Times",
-      "status": "ok",
-      "itensNoFeed": 50,
-      "aceitas": 0,
-      "descartadasPorIdade": 50,
-      "comImagem": 0
-    },
-    {
       "id": "scmp",
       "nome": "South China Morning Post",
       "status": "ok",
@@ -478,8 +469,8 @@
       "nome": "AllAfrica",
       "status": "ok",
       "itensNoFeed": 33,
-      "aceitas": 31,
-      "descartadasPorIdade": 2,
+      "aceitas": 30,
+      "descartadasPorIdade": 3,
       "comImagem": 0
     },
     {
