@@ -1,0 +1,72 @@
+<!doctype html>
+<!--
+  Onda — do mundo até você.
+  Esta é a única página do site. O conteúdo é montado pelo JavaScript
+  (js/app.js) a partir do arquivo data/app/hoje.json, que o robô atualiza.
+-->
+<html lang="pt-BR" data-tema="escuro">
+<head>
+  <meta charset="utf-8">
+  <!-- viewport-fit=cover: usa a tela inteira do iPhone, inclusive perto do "notch" -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Onda</title>
+  <meta name="description" content="Onda — do mundo até você. Radar geopolítico pessoal.">
+
+  <!-- App instalável (PWA) -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#061A2E">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Onda">
+  <link rel="apple-touch-icon" href="assets/icones/apple-touch-icon.png">
+  <link rel="icon" href="assets/logo/onda-mini.svg" type="image/svg+xml">
+
+  <!-- Fontes: Fraunces (títulos) e Inter (texto), gratuitas do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="css/estilo.css">
+
+  <!-- Aplica o tema salvo ANTES de desenhar a página (evita piscar). -->
+  <script>
+    try {
+      const salvo = localStorage.getItem('onda-tema');
+      const prefereClaro = matchMedia('(prefers-color-scheme: light)').matches;
+      document.documentElement.dataset.tema = salvo || (prefereClaro ? 'claro' : 'escuro');
+    } catch (e) { /* sem acesso ao armazenamento: fica no tema escuro */ }
+  </script>
+</head>
+<body>
+  <!-- Cabeçalho fixo no topo -->
+  <header class="topo">
+    <div class="marca">
+      <img src="assets/logo/onda-mini.svg" alt="" width="30" height="30">
+      <div>
+        <h1>Onda</h1>
+        <p class="frase">do mundo até você</p>
+      </div>
+    </div>
+    <button id="botao-tema" class="botao-icone" type="button" aria-label="Alternar modo noite e dia"></button>
+  </header>
+
+  <!-- Área principal: cada aba desenha o seu conteúdo aqui -->
+  <main id="conteudo" class="conteudo" tabindex="-1">
+    <p class="carregando">Carregando o radar…</p>
+  </main>
+
+  <!-- Painel da notícia aberta (no iPad fica na coluna da direita) -->
+  <aside id="painel" class="painel" aria-live="polite" hidden></aside>
+
+  <!-- Abas no rodapé, ao alcance do polegar -->
+  <nav class="abas" aria-label="Seções">
+    <a href="#hoje" data-aba="hoje"><span class="icone icone-hoje" aria-hidden="true"></span>Hoje</a>
+    <a href="#acompanhando" data-aba="acompanhando"><span class="icone icone-estrela" aria-hidden="true"></span>Acompanhando</a>
+    <a href="#biblioteca" data-aba="biblioteca"><span class="icone icone-livros" aria-hidden="true"></span>Biblioteca</a>
+    <a href="#historico" data-aba="historico"><span class="icone icone-relogio" aria-hidden="true"></span>Histórico</a>
+  </nav>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

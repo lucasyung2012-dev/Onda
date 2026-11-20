@@ -98,6 +98,67 @@ async function baixarFeed(url) {
   }
 }
 
+/**
+ * Escolhe o DESTAQUE provisório do dia.
+ * Até a IA chegar (etapa 7), a regra é simples e transparente:
+ * o fato coberto pelo maior número de fontes diferentes, contando só
+ * notícias (não análises) e ignorando o tema "outros" (variedades).
+ */
+function escolherDestaque(fatos, porId) {
+  const candidatos = fatos.filter((f) => {
+    const noticias = f.noticias.map((id) => porId.get(id)).filter((n) => n.tipo === 'noticia');
+    return new Set(noticias.map((n) => n.fonte)).size >= 2 && f.temas[0] !== 'outros';
+  });
+  return candidatos[0] || fatos[0] || null;
+}
+
+/** Monta o arquivo enxuto que o app lê. */
+function montarParaApp(agora, hoje, fatos, recentes) {
+  const porId = new Map(recentes.map((n) => [n.id, n]));
+  const destaque = escolherDestaque(fatos, porId);
+  return {
+    geradoEm: agora.toISOString(),
+    dataReferencia: hoje,
+    fuso: FUSO,
+    totalNoticias: recentes.length,
+    totalFontes: new Set(recentes.map((n) => n.fonte)).size,
+    nomesRegioes: NOMES_REGIOES,
+    nomesTemas: NOMES_TEMAS,
+    destaque: destaque
+      ? { id: destaque.id, motivo: `Coberto por ${destaque.fontes} fontes diferentes nas últimas ${JANELA_HOJE_HORAS} horas. Critério provisório: a partir da etapa 7, a escolha passa a ser feita por análise.` }
+      : null,
+    fatos: fatos.map((f) => {
+      const materias = f.noticias.map((id) => porId.get(id));
+      const principal = materias.find((m) => m.id === f.id) || materias[0];
+      const comImagem = materias.find((m) => m.imagem);
+      return {
+        id: f.id,
+        titulo: f.titulo,
+        resumo: principal.resumo,
+        imagem: comImagem ? comImagem.imagem : '',
+        credito: comImagem ? comImagem.fonteNome : '',
+        regioes: f.regioes,
+        temas: f.temas,
+        fontes: f.fontes,
+        paises: new Set(materias.map((m) => m.pais)).size,
+        maisRecente: f.maisRecente,
+        materias: materias.map((m) => ({
+          fonte: m.fonteNome,
+          pais: m.pais,
+          visao: m.visao,
+          estatal: m.estatal,
+          tipo: m.tipo,
+          idioma: m.idioma,
+          titulo: m.titulo,
+          link: m.link,
+          publicadoEm: m.publicadoEm,
+          semData: m.semData,
+        })),
+      };
+    }),
+  };
+}
+
 // ---------- Programa principal ----------
 
 async function principal() {
@@ -232,6 +293,11 @@ async function principal() {
     fatos,
     noticias: recentes,
   });
+
+  // 7b. Versão enxuta para o app (data/app/hoje.json).
+  //     O hoje.json completo passa de 2 MB, pesado para o celular. O app só
+  //     precisa do essencial de cada fato, com as matérias já embutidas.
+  await gravarJson('data/app/hoje.json', montarParaApp(agora, hoje, fatos, recentes));
 
   // 8. Relatório da coleta.
   const comErro = relatorio.filter((r) => r.status === 'erro');

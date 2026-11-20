@@ -1,0 +1,526 @@
+/* =============================================================
+   estilo.css — Visual do Onda.
+
+   Organização:
+     1. Cores (modo noite e modo dia)
+     2. Base (página, textos)
+     3. Cabeçalho e abas do rodapé
+     4. Tela Hoje (destaque, tema do dia, filtros, lista)
+     5. Painel da notícia
+     6. iPad e telas grandes (duas colunas)
+
+   Regra das cores: cada cor tem significado. Turquesa = ação e
+   destaque; dourado = "você" e o que mais importa; as cores das
+   regiões ajudam a reconhecer de onde vem cada fato.
+   ============================================================= */
+
+/* ---------- 1. Cores ---------- */
+:root,
+:root[data-tema="escuro"] {
+  --fundo: #061A2E;
+  --superficie: #0B2540;
+  --superficie-2: #11304F;
+  --borda: rgba(230, 246, 255, 0.12);
+  --texto: #E6F6FF;
+  --texto-2: #A9C0D3;
+  --texto-3: #7891A6;
+  --acento: #45D0C4;        /* turquesa: ações e destaques */
+  --acento-fundo: rgba(69, 208, 196, 0.14);
+  --ouro: #FFD166;          /* dourado: "você" e o principal */
+  --ouro-fundo: rgba(255, 209, 102, 0.14);
+  --alerta: #F2A65A;
+  --sombra: 0 10px 30px rgba(0, 0, 0, 0.35);
+  color-scheme: dark;
+}
+
+:root[data-tema="claro"] {
+  --fundo: #F3F7F9;
+  --superficie: #FFFFFF;
+  --superficie-2: #E9F1F5;
+  --borda: rgba(6, 26, 46, 0.12);
+  --texto: #0B2238;
+  --texto-2: #43596C;
+  --texto-3: #6B8092;
+  --acento: #0E7C80;
+  --acento-fundo: rgba(14, 124, 128, 0.1);
+  --ouro: #A87400;
+  --ouro-fundo: rgba(201, 145, 10, 0.12);
+  --alerta: #B05A12;
+  --sombra: 0 10px 30px rgba(6, 26, 46, 0.12);
+  color-scheme: light;
+}
+
+/* Cores das regiões (iguais nos dois modos) */
+:root {
+  --r-brasil: #2E9E5B;
+  --r-america-latina: #23A595;
+  --r-america-norte: #4F86C6;
+  --r-europa: #6A7FD9;
+  --r-oriente-medio: #D98B3A;
+  --r-africa: #C9A227;
+  --r-asia-pacifico: #C2557A;
+  --r-global: #8A7FD1;
+  --r-mundo: #6B7F92;
+
+  --fonte-titulo: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --fonte-texto: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --raio: 14px;
+  --altura-abas: 64px;
+}
+
+/* ---------- 2. Base ---------- */
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: var(--fonte-texto);
+  font-size: 16px;
+  line-height: 1.55;
+  /* espaço para as abas fixas + a "barra" do iPhone */
+  padding-bottom: calc(var(--altura-abas) + env(safe-area-inset-bottom));
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, h3 { font-family: var(--fonte-titulo); font-weight: 650; line-height: 1.2; margin: 0; }
+
+a { color: var(--acento); }
+
+button { font: inherit; color: inherit; }
+
+img { max-width: 100%; display: block; }
+
+.carregando, .vazio {
+  color: var(--texto-2);
+  text-align: center;
+  padding: 48px 16px;
+}
+
+/* ---------- 3. Cabeçalho e abas ---------- */
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: calc(10px + env(safe-area-inset-top)) 16px 10px;
+  background: color-mix(in srgb, var(--fundo) 88%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--borda);
+}
+
+.marca { display: flex; align-items: center; gap: 10px; }
+.marca img { border-radius: 8px; }
+.marca h1 { font-size: 21px; letter-spacing: 0.2px; }
+.frase { margin: 0; font-size: 12px; color: var(--texto-3); line-height: 1.2; }
+
+.botao-icone {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--borda);
+  background: var(--superficie);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.botao-icone::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  background: var(--texto);
+  /* Lua no modo noite, sol no modo dia */
+  -webkit-mask: var(--icone-lua) center / contain no-repeat;
+  mask: var(--icone-lua) center / contain no-repeat;
+}
+:root[data-tema="claro"] .botao-icone::before {
+  -webkit-mask-image: var(--icone-sol);
+  mask-image: var(--icone-sol);
+}
+
+.abas {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: calc(var(--altura-abas) + env(safe-area-inset-bottom));
+  padding-bottom: env(safe-area-inset-bottom);
+  background: color-mix(in srgb, var(--superficie) 92%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--borda);
+}
+.abas a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--texto-3);
+  text-decoration: none;
+}
+.abas a[aria-current="page"] { color: var(--acento); }
+
+.icone {
+  width: 22px;
+  height: 22px;
+  background: currentColor;
+  -webkit-mask: center / contain no-repeat;
+  mask: center / contain no-repeat;
+}
+.icone-hoje     { -webkit-mask-image: var(--icone-radar);   mask-image: var(--icone-radar); }
+.icone-estrela  { -webkit-mask-image: var(--icone-estrela); mask-image: var(--icone-estrela); }
+.icone-livros   { -webkit-mask-image: var(--icone-livros);  mask-image: var(--icone-livros); }
+.icone-relogio  { -webkit-mask-image: var(--icone-relogio); mask-image: var(--icone-relogio); }
+
+/* Ícones desenhados em SVG (traço simples, combinam com o texto) */
+:root {
+  --icone-radar: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Ccircle cx='12' cy='12' r='5'/%3E%3Ccircle cx='12' cy='12' r='1' fill='black'/%3E%3Cpath d='M12 12l6-6'/%3E%3C/svg%3E");
+  --icone-estrela: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linejoin='round'%3E%3Cpath d='M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z'/%3E%3C/svg%3E");
+  --icone-livros: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linejoin='round'%3E%3Cpath d='M4 4h5v16H4zM10 4h5v16h-5z'/%3E%3Cpath d='M16 5l4-1 2 15-4 1z'/%3E%3C/svg%3E");
+  --icone-relogio: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M12 7v5l3 2'/%3E%3C/svg%3E");
+  --icone-lua: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z' fill='black'/%3E%3C/svg%3E");
+  --icone-sol: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='12' cy='12' r='4.5' fill='black'/%3E%3Cpath d='M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4'/%3E%3C/svg%3E");
+}
+
+/* ---------- 4. Tela Hoje ---------- */
+.conteudo { padding: 16px; max-width: 760px; margin: 0 auto; outline: none; }
+
+.secao-titulo {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 24px 2px 10px;
+}
+.secao-titulo h2 { font-size: 20px; }
+.secao-titulo span { font-size: 13px; color: var(--texto-3); }
+
+.rotulo {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--ouro);
+}
+
+.resumo-dia { font-size: 13px; color: var(--texto-3); margin: 2px 2px 14px; }
+
+/* Etiquetas (região, tema, avisos) */
+.etiquetas { display: flex; flex-wrap: wrap; gap: 6px; }
+.etiqueta {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: var(--superficie-2);
+  color: var(--texto-2);
+  white-space: nowrap;
+}
+.etiqueta.regiao { background: color-mix(in srgb, var(--cor-regiao) 22%, transparent); color: var(--texto); }
+.etiqueta.aviso { background: var(--ouro-fundo); color: var(--ouro); }
+.etiqueta.estatal { background: rgba(242, 166, 90, 0.16); color: var(--alerta); }
+
+/* Cartão do destaque */
+.destaque {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--borda);
+  border-radius: calc(var(--raio) + 4px);
+  background: var(--superficie);
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+  box-shadow: var(--sombra);
+}
+.destaque .imagem { aspect-ratio: 16 / 9; }
+.destaque .corpo { padding: 14px 16px 16px; display: grid; gap: 8px; }
+.destaque h3 { font-size: 22px; }
+.destaque .motivo { font-size: 13px; color: var(--texto-2); margin: 0; }
+.destaque .fontes-linha { font-size: 13px; color: var(--texto-3); margin: 0; }
+
+/* Imagem com crédito, ou ilustração da região quando não há foto */
+.imagem {
+  position: relative;
+  background:
+    radial-gradient(circle at 30% 30%, color-mix(in srgb, var(--cor-regiao) 70%, white 10%), transparent 60%),
+    linear-gradient(135deg, color-mix(in srgb, var(--cor-regiao) 55%, #061A2E), #061A2E);
+  overflow: hidden;
+}
+.imagem img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+.imagem .credito { z-index: 2; }
+.imagem .credito {
+  position: absolute;
+  right: 8px;
+  bottom: 6px;
+  font-size: 11px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1px 6px;
+  border-radius: 6px;
+}
+.imagem .sem-foto {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-family: var(--fonte-titulo);
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  padding: 6px;
+}
+
+/* Cartão do tema do dia */
+.tema-dia {
+  margin-top: 12px;
+  padding: 14px 16px;
+  border-radius: var(--raio);
+  background: var(--acento-fundo);
+  border: 1px dashed color-mix(in srgb, var(--acento) 50%, transparent);
+}
+.tema-dia h3 { font-size: 17px; margin: 4px 0; }
+.tema-dia p { margin: 0; font-size: 13px; color: var(--texto-2); }
+.tema-dia .rotulo { color: var(--acento); }
+
+/* Filtros */
+.filtros { position: sticky; top: 62px; z-index: 5; background: var(--fundo); padding: 6px 0 10px; margin: 0 -16px; padding-left: 16px; padding-right: 16px; }
+.alternador {
+  display: inline-flex;
+  padding: 3px;
+  border-radius: 999px;
+  background: var(--superficie-2);
+  margin-bottom: 10px;
+}
+.alternador button {
+  border: 0;
+  background: transparent;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--texto-2);
+  cursor: pointer;
+}
+.alternador button[aria-pressed="true"] { background: var(--superficie); color: var(--texto); box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); }
+
+.chips {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin: 0 -16px;
+  padding: 0 16px;
+}
+.chips::-webkit-scrollbar { display: none; }
+.chip {
+  flex: none;
+  border: 1px solid var(--borda);
+  background: var(--superficie);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 13px;
+  color: var(--texto-2);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.chip b { font-weight: 600; color: var(--texto-3); margin-left: 4px; }
+.chip[aria-pressed="true"] { background: var(--acento); border-color: var(--acento); color: #04202A; }
+.chip[aria-pressed="true"] b { color: #04202A; }
+.chip .ponto { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--cor-regiao); margin-right: 6px; vertical-align: 1px; }
+
+/* Lista de fatos */
+.lista { list-style: none; margin: 0; padding: 0; }
+.item {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  border-bottom: 1px solid var(--borda);
+  background: transparent;
+  padding: 12px 2px;
+  cursor: pointer;
+}
+.item .imagem { width: 76px; height: 76px; border-radius: 10px; }
+.item .imagem .sem-foto { font-size: 11px; }
+.item h3 {
+  font-family: var(--fonte-texto);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.item .meta { margin-top: 4px; font-size: 12px; color: var(--texto-3); display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; }
+.item .meta .forte { color: var(--acento); font-weight: 600; }
+.item[aria-current="true"] { background: var(--acento-fundo); border-radius: 10px; }
+
+.mais {
+  display: block;
+  width: 100%;
+  margin: 16px 0;
+  padding: 12px;
+  border-radius: var(--raio);
+  border: 1px solid var(--borda);
+  background: var(--superficie);
+  color: var(--acento);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.rodape-dados { font-size: 12px; color: var(--texto-3); text-align: center; margin: 24px 0 8px; }
+
+/* Abas que ainda vão ser construídas */
+.em-breve { text-align: center; padding: 56px 16px; color: var(--texto-2); }
+.em-breve h2 { font-size: 22px; color: var(--texto); margin-bottom: 8px; }
+
+/* ---------- 5. Painel da notícia ---------- */
+/* No celular: cobre a tela inteira e desliza da direita. */
+.painel {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  background: var(--fundo);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: calc(24px + env(safe-area-inset-bottom));
+  animation: entrar 0.22s ease-out;
+}
+@keyframes entrar { from { transform: translateX(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+
+.painel-topo {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: calc(10px + env(safe-area-inset-top)) 12px 10px;
+  background: color-mix(in srgb, var(--fundo) 90%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--borda);
+}
+.voltar {
+  border: 0;
+  background: transparent;
+  color: var(--acento);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 8px 6px;
+  cursor: pointer;
+}
+.painel .imagem { aspect-ratio: 16 / 9; }
+.painel-corpo { padding: 16px; display: grid; gap: 14px; max-width: 760px; margin: 0 auto; }
+.painel h2 { font-size: 24px; }
+.painel .resumo { margin: 0; color: var(--texto-2); }
+
+.datas {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 12px;
+  font-size: 13px;
+  padding: 12px 14px;
+  border-radius: var(--raio);
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+}
+.datas dt { color: var(--texto-3); }
+.datas dd { margin: 0; }
+
+.bloco-titulo { font-size: 16px; font-family: var(--fonte-texto); font-weight: 600; margin-top: 6px; }
+.bloco-nota { margin: -6px 0 0; font-size: 13px; color: var(--texto-3); }
+
+.materias { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.materia {
+  padding: 12px 14px;
+  border-radius: var(--raio);
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  display: grid;
+  gap: 6px;
+}
+.materia .fonte { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 13px; }
+.materia .fonte strong { font-weight: 600; }
+.materia .visao { font-size: 12px; color: var(--texto-3); margin: 0; }
+.materia a { font-size: 15px; font-weight: 500; text-decoration: none; color: var(--texto); }
+.materia a::after { content: ' ↗'; color: var(--acento); }
+.materia time { font-size: 12px; color: var(--texto-3); }
+
+.em-construcao {
+  padding: 14px 16px;
+  border-radius: var(--raio);
+  border: 1px dashed var(--borda);
+  color: var(--texto-2);
+  font-size: 14px;
+}
+.em-construcao strong { color: var(--texto); }
+
+/* ---------- 6. iPad e telas grandes: duas colunas ---------- */
+@media (min-width: 900px) {
+  body { padding-bottom: 0; }
+
+  /* As abas viram uma barra lateral fina à esquerda */
+  .abas {
+    top: 0;
+    right: auto;
+    width: 92px;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 84px;
+    align-content: center;
+    border-top: 0;
+    border-right: 1px solid var(--borda);
+    padding-bottom: 0;
+  }
+  .topo { margin-left: 92px; }
+
+  /* Lista à esquerda, notícia aberta à direita */
+  .conteudo {
+    margin: 0 0 0 92px;
+    width: min(440px, 42vw);
+    max-width: none;
+    height: calc(100vh - 62px);
+    overflow-y: auto;
+    border-right: 1px solid var(--borda);
+  }
+  .painel {
+    position: fixed;
+    top: 62px;
+    left: calc(92px + min(440px, 42vw));
+    right: 0;
+    bottom: 0;
+    inset-inline-end: 0;
+    animation: none;
+  }
+  .painel[hidden] { display: block; }
+  .painel-topo .voltar { display: none; }
+  .painel-topo { padding-top: 10px; }
+  .destaque h3 { font-size: 20px; }
+}
+
+/* Painel vazio (iPad, nenhuma notícia escolhida ainda) */
+.painel-vazio {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: var(--texto-3);
+  padding: 32px;
+}
+.painel-vazio img { width: 96px; margin: 0 auto 12px; opacity: 0.9; border-radius: 22px; }

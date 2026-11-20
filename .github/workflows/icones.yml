@@ -1,0 +1,52 @@
+# =============================================================
+# Gera os ícones PNG do app a partir do logo em SVG.
+#
+# Por que um robô para isso: o iPhone e o Android pedem ícones em PNG,
+# em tamanhos fixos. Desenhamos o logo uma vez (SVG) e este robô cria
+# todos os tamanhos sempre que o logo mudar.
+# =============================================================
+name: Gerar ícones do app
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/logo/**'
+      - '.github/workflows/icones.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  icones:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar o conversor de SVG para PNG
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq librsvg2-bin
+
+      - name: Gerar os PNGs
+        run: |
+          mkdir -p assets/icones
+          rsvg-convert -w 180 -h 180 assets/logo/onda-icone.svg    -o assets/icones/apple-touch-icon.png
+          rsvg-convert -w 192 -h 192 assets/logo/onda-icone.svg    -o assets/icones/icone-192.png
+          rsvg-convert -w 512 -h 512 assets/logo/onda-icone.svg    -o assets/icones/icone-512.png
+          rsvg-convert -w 512 -h 512 assets/logo/onda-maskable.svg -o assets/icones/icone-maskable-512.png
+          rsvg-convert -w 32  -h 32  assets/logo/onda-mini.svg     -o assets/icones/favicon-32.png
+          ls -la assets/icones
+
+      - name: Salvar os ícones no repositório
+        run: |
+          git config user.name "onda-robo"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/icones
+          if git diff --cached --quiet; then
+            echo "Ícones já estavam atualizados."
+          else
+            git commit -m "Ícones do app gerados a partir do logo"
+            git pull --rebase
+            git push
+          fi
