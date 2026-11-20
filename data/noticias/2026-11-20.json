@@ -2,6 +2,41 @@
   "data": "2026-11-20",
   "noticias": [
     {
+      "id": "b53594c5c796",
+      "titulo": "Inside the Iraqi Kurdish city caught between the US and Iran",
+      "resumo": "Submitted by Sean Mathews on Fri, 11/20/2026 - 19:37 Sulaymaniyah is reeling from the economic toll of the Iran war and grappling with an emboldened regional power next door A market in the city of Sulaymaniyah in Iraq's Kurdistan Region is said to be the largest bazaar in the…",
+      "link": "https://www.middleeasteye.net/news/inside-iraqi-kurdish-city-caught-between-us-and-iran",
+      "fonte": "middleeasteye",
+      "fonteNome": "Middle East Eye",
+      "pais": "Reino Unido",
+      "visao": "Site focado no Oriente Médio, crítico de governos da região",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:48:28.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://www.middleeasteye.net/sites/default/files/styles/crop_16_9/public/images-story/Sulaymaniyah-market-Sean-Mathews-AFP.jpg.jpg?itok=lxg3q4AD",
+      "imagemCredito": "Middle East Eye",
+      "regioes": [
+        "oriente-medio",
+        "america-norte",
+        "europa",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "conflitos",
+        "economia",
+        "politica",
+        "diplomacia",
+        "energia",
+        "direitos",
+        "midia"
+      ],
+      "coletadoEm": "2026-11-20T21:50:22.340Z"
+    },
+    {
       "id": "441b3a54efb3",
       "titulo": "US sanctions Iranian 'oil trustees' it accuses of evading sanctions",
       "resumo": "The US Treasury on Friday imposed sanctions on four Iranians who served as \"oil trustees\". It said they had sought to collect funds from illicit international oil sales and pass them to the Iranian government, to evade earlier sanctions and a US naval blockade. In many cases, the…",
@@ -169,6 +204,32 @@
       "coletadoEm": "2026-11-20T21:34:56.860Z"
     },
     {
+      "id": "ecbdbeb54b3c",
+      "titulo": "Platte County treasurer faces lawsuit over alleged $1.3 million bank transaction",
+      "resumo": "Kimberlie Miller has initiated legal action against Treasurer Chris Kendall and Platte County following her dismissal. She asserts that her firing occurred after she flagged a suspicious transaction linked to a $1.3 million cheque directed to an unauthorized account. Miller's…",
+      "link": "https://timesofindia.indiatimes.com/world/us/a-former-platte-county-missouri-deputy-treasurer-says-she-was-fired-after-reporting-that-her-boss-allegedly-wrote-a-1-3-million-cheque-from-a-county-account-to-himself-and-told-her-to-keep-it-in-a-safe-she-is-now-suing/articleshow/136022541.cms",
+      "fonte": "timesofindia",
+      "fonteNome": "The Times of India",
+      "pais": "Índia",
+      "visao": "Maior jornal indiano em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:29:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://static.toiimg.com/photo/msid-136022679,imgsize-136802.cms",
+      "imagemCredito": "The Times of India",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "economia"
+      ],
+      "coletadoEm": "2026-11-20T21:50:22.340Z"
+    },
+    {
       "id": "3da4a5753626",
       "titulo": "Iraq PM targets militia stronghold in bid to assert state control",
       "resumo": "Iraqi PM Ali al-Zaidi said an operation in Jurf al-Sakhar marks the start of a nationwide push to assert state control.",
@@ -219,6 +280,32 @@
         "direitos"
       ],
       "coletadoEm": "2026-11-20T21:34:56.860Z"
+    },
+    {
+      "id": "6fc70e963035",
+      "titulo": "Kansas family harvesting crops 13 miles north of Syracuse filmed a rare piebald black bear with patchy light and dark fur, the first a state wildlife biologist says he has ever seen in Kansas.",
+      "resumo": "A family in Kansas spotted a rare piebald black bear while harvesting crops in their field. The unusual bear had distinct patches of light and dark fur, surprising wildlife experts. Typically, black bears in the region are known to have cinnamon-colored fur. Wildlife biologists…",
+      "link": "https://timesofindia.indiatimes.com/world/us/kansas-family-harvesting-crops-13-miles-north-of-syracuse-filmed-a-rare-piebald-black-bear-with-patchy-light-and-dark-fur-the-first-a-state-wildlife-biologist-says-he-has-ever-seen-in-kansas/articleshow/136015727.cms",
+      "fonte": "timesofindia",
+      "fonteNome": "The Times of India",
+      "pais": "Índia",
+      "visao": "Maior jornal indiano em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:26:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://static.toiimg.com/photo/msid-136016988,imgsize-130152.cms",
+      "imagemCredito": "The Times of India",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-20T21:50:22.340Z"
     },
     {
       "id": "2521bcb3abac",
@@ -826,6 +913,32 @@
         "conflitos"
       ],
       "coletadoEm": "2026-11-20T21:32:55.518Z"
+    },
+    {
+      "id": "f00d247b061f",
+      "titulo": "Morocco thrash Fiji 6-0 in FIFA U-17 World Cup opener",
+      "resumo": "MorocMorocco made an emphatic start to their FIFA U-17 World Cup campaign, thrashing Fiji 6-0 to move top of Group co made an emphatic start to their FIFA U-17 World Cup campaign, thrashing Fiji 6-0 to move top of group",
+      "link": "http://www.africanews.com/2026/11/20/morocco-thrash-fiji-6-0-in-fifa-u-17-world-cup-opener/",
+      "fonte": "africanews",
+      "fonteNome": "Africanews",
+      "pais": "Congo",
+      "visao": "Canal pan-africano de notícias",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:58:24.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "http://images.euronews.com/articles/stories/10/00/22/83/640x360_cmsv2_e9fe2aa1-241c-5845-a3f9-28d948ec11a2-10002283.jpg?1795203384",
+      "imagemCredito": "Africanews",
+      "regioes": [
+        "africa"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-20T21:50:22.340Z"
     },
     {
       "id": "f8b119151642",
@@ -5046,6 +5159,32 @@
         "outros"
       ],
       "coletadoEm": "2026-11-20T20:27:30.953Z"
+    },
+    {
+      "id": "079bea18345a",
+      "titulo": "After ‘Wild Horse Nine,’ 5 of the Best Movies About the CIA",
+      "resumo": "Listed in order from least to most zany.",
+      "link": "https://foreignpolicy.com/2026/11/20/cia-movies-wild-horse-nine-review-espionage-us-intelligence/",
+      "fonte": "foreignpolicy",
+      "fonteNome": "Foreign Policy",
+      "pais": "EUA",
+      "visao": "Revista de análise de política externa",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "analise",
+      "publicadoEm": "2026-11-20T19:00:51.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://foreignpolicy.com/wp-content/uploads/2026/11/CIA-spy-movies-wild-horse-nine.jpg",
+      "imagemCredito": "Foreign Policy",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-20T21:50:22.340Z"
     },
     {
       "id": "a0e75fa3755b",
@@ -34404,5 +34543,5 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     }
   ],
-  "atualizadoEm": "2026-11-20T21:41:13.738Z"
+  "atualizadoEm": "2026-11-20T21:50:22.340Z"
 }

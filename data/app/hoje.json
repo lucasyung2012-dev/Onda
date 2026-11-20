@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-20T21:41:13.738Z",
+  "geradoEm": "2026-11-20T21:50:22.340Z",
   "dataReferencia": "2026-11-20",
   "fuso": "America/Sao_Paulo",
-  "totalNoticias": 1420,
+  "totalNoticias": 1421,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -271,18 +271,6 @@
           "titulo": "3 takeaways from Trump, Xi and Putin's historic summit",
           "link": "https://www.pbs.org/newshour/world/3-takeaways-from-trump-xi-and-putins-historic-summit",
           "publicadoEm": "2026-11-19T22:58:31.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The Washington Post",
-          "pais": "EUA",
-          "visao": "Jornal de referência dos EUA, centro",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Trump says Putin wants peace in Ukraine even as Putin vows to fight",
-          "link": "https://www.washingtonpost.com/world/2026/11/19/trump-says-putin-wants-peace-ukraine-even-putin-vows-fight/",
-          "publicadoEm": "2026-11-19T21:44:18.000Z",
           "semData": false
         }
       ]
@@ -6978,6 +6966,45 @@
       ]
     },
     {
+      "id": "b53594c5c796",
+      "titulo": "Inside the Iraqi Kurdish city caught between the US and Iran",
+      "resumo": "Submitted by Sean Mathews on Fri, 11/20/2026 - 19:37 Sulaymaniyah is reeling from the economic toll of the Iran war and grappling with an emboldened regional power next door A market in the city of Sulaymaniyah in Iraq's Kurdistan Region is said to be the largest bazaar in the…",
+      "imagem": "https://www.middleeasteye.net/sites/default/files/styles/crop_16_9/public/images-story/Sulaymaniyah-market-Sean-Mathews-AFP.jpg.jpg?itok=lxg3q4AD",
+      "credito": "Middle East Eye",
+      "regioes": [
+        "oriente-medio",
+        "america-norte",
+        "europa",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "conflitos",
+        "economia",
+        "politica",
+        "diplomacia",
+        "energia",
+        "direitos",
+        "midia"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T21:48:28.000Z",
+      "materias": [
+        {
+          "fonte": "Middle East Eye",
+          "pais": "Reino Unido",
+          "visao": "Site focado no Oriente Médio, crítico de governos da região",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Inside the Iraqi Kurdish city caught between the US and Iran",
+          "link": "https://www.middleeasteye.net/news/inside-iraqi-kurdish-city-caught-between-us-and-iran",
+          "publicadoEm": "2026-11-20T21:48:28.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
       "id": "441b3a54efb3",
       "titulo": "US sanctions Iranian 'oil trustees' it accuses of evading sanctions",
       "resumo": "The US Treasury on Friday imposed sanctions on four Iranians who served as \"oil trustees\". It said they had sought to collect funds from illicit international oil sales and pass them to the Iranian government, to evade earlier sanctions and a US naval blockade. In many cases, the…",
@@ -7169,6 +7196,36 @@
       ]
     },
     {
+      "id": "ecbdbeb54b3c",
+      "titulo": "Platte County treasurer faces lawsuit over alleged $1.3 million bank transaction",
+      "resumo": "Kimberlie Miller has initiated legal action against Treasurer Chris Kendall and Platte County following her dismissal. She asserts that her firing occurred after she flagged a suspicious transaction linked to a $1.3 million cheque directed to an unauthorized account. Miller's…",
+      "imagem": "https://static.toiimg.com/photo/msid-136022679,imgsize-136802.cms",
+      "credito": "The Times of India",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "economia"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T21:29:00.000Z",
+      "materias": [
+        {
+          "fonte": "The Times of India",
+          "pais": "Índia",
+          "visao": "Maior jornal indiano em inglês",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Platte County treasurer faces lawsuit over alleged $1.3 million bank transaction",
+          "link": "https://timesofindia.indiatimes.com/world/us/a-former-platte-county-missouri-deputy-treasurer-says-she-was-fired-after-reporting-that-her-boss-allegedly-wrote-a-1-3-million-cheque-from-a-county-account-to-himself-and-told-her-to-keep-it-in-a-safe-she-is-now-suing/articleshow/136022541.cms",
+          "publicadoEm": "2026-11-20T21:29:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
       "id": "3da4a5753626",
       "titulo": "Iraq PM targets militia stronghold in bid to assert state control",
       "resumo": "Iraqi PM Ali al-Zaidi said an operation in Jurf al-Sakhar marks the start of a nationwide push to assert state control.",
@@ -7224,6 +7281,36 @@
           "titulo": "Lawyer says ex-client confessed missing boy Loan’s body is in lagoon",
           "link": "https://www.batimes.com.ar/news/argentina/lawyer-says-ex-client-confessed-missing-boy-loans-body-is-in-lagoon.phtml",
           "publicadoEm": "2026-11-20T21:27:55.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "6fc70e963035",
+      "titulo": "Kansas family harvesting crops 13 miles north of Syracuse filmed a rare piebald black bear with patchy light and dark fur, the first a state wildlife biologist says he has ever seen in Kansas.",
+      "resumo": "A family in Kansas spotted a rare piebald black bear while harvesting crops in their field. The unusual bear had distinct patches of light and dark fur, surprising wildlife experts. Typically, black bears in the region are known to have cinnamon-colored fur. Wildlife biologists…",
+      "imagem": "https://static.toiimg.com/photo/msid-136016988,imgsize-130152.cms",
+      "credito": "The Times of India",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T21:26:00.000Z",
+      "materias": [
+        {
+          "fonte": "The Times of India",
+          "pais": "Índia",
+          "visao": "Maior jornal indiano em inglês",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Kansas family harvesting crops 13 miles north of Syracuse filmed a rare piebald black bear with patchy light and dark fur, the first a state wildlife biologist says he has ever seen in Kansas.",
+          "link": "https://timesofindia.indiatimes.com/world/us/kansas-family-harvesting-crops-13-miles-north-of-syracuse-filmed-a-rare-piebald-black-bear-with-patchy-light-and-dark-fur-the-first-a-state-wildlife-biologist-says-he-has-ever-seen-in-kansas/articleshow/136015727.cms",
+          "publicadoEm": "2026-11-20T21:26:00.000Z",
           "semData": false
         }
       ]
@@ -7668,6 +7755,36 @@
           "titulo": "Geração Z impulsiona radicalização política global à esquerda e à direita",
           "link": "https://www.estadao.com.br/internacional/geracao-z-impulsiona-mudanca-politica-global-apoiando-tanto-a-esquerda-quanto-a-direita-radicais/",
           "publicadoEm": "2026-11-20T21:00:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "f00d247b061f",
+      "titulo": "Morocco thrash Fiji 6-0 in FIFA U-17 World Cup opener",
+      "resumo": "MorocMorocco made an emphatic start to their FIFA U-17 World Cup campaign, thrashing Fiji 6-0 to move top of Group co made an emphatic start to their FIFA U-17 World Cup campaign, thrashing Fiji 6-0 to move top of group",
+      "imagem": "http://images.euronews.com/articles/stories/10/00/22/83/640x360_cmsv2_e9fe2aa1-241c-5845-a3f9-28d948ec11a2-10002283.jpg?1795203384",
+      "credito": "Africanews",
+      "regioes": [
+        "africa"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T20:58:24.000Z",
+      "materias": [
+        {
+          "fonte": "Africanews",
+          "pais": "Congo",
+          "visao": "Canal pan-africano de notícias",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Morocco thrash Fiji 6-0 in FIFA U-17 World Cup opener",
+          "link": "http://www.africanews.com/2026/11/20/morocco-thrash-fiji-6-0-in-fifa-u-17-world-cup-opener/",
+          "publicadoEm": "2026-11-20T20:58:24.000Z",
           "semData": false
         }
       ]
@@ -10854,6 +10971,18 @@
           "idioma": "en",
           "titulo": "After ‘Wild Horse Nine,’ 5 of the Best Movies About the CIA",
           "link": "https://foreignpolicy.com/2026/11/20/movies-about-the-cia/",
+          "publicadoEm": "2026-11-20T19:00:51.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Foreign Policy",
+          "pais": "EUA",
+          "visao": "Revista de análise de política externa",
+          "estatal": false,
+          "tipo": "analise",
+          "idioma": "en",
+          "titulo": "After ‘Wild Horse Nine,’ 5 of the Best Movies About the CIA",
+          "link": "https://foreignpolicy.com/2026/11/20/cia-movies-wild-horse-nine-review-espionage-us-intelligence/",
           "publicadoEm": "2026-11-20T19:00:51.000Z",
           "semData": false
         }
@@ -38605,101 +38734,6 @@
           "titulo": "Entenda os 4 pontos da declaração conjunta de Trump, Xi e Putin",
           "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/entenda-os-4-pontos-da-declaracao-conjunta-de-trump-xi-e-putin.shtml",
           "publicadoEm": "2026-11-19T21:51:00.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "90ac66fae103",
-      "titulo": "Dispatch from Manama: The Iran war is not over for Bahrain",
-      "resumo": "A recent visit to Bahrain offers a window into the ongoing tensions with Iran and diplomatic maneuvering among Gulf nations. The post Dispatch from Manama: The Iran war is not over for Bahrain appeared first on Atlantic Council .",
-      "imagem": "",
-      "credito": "",
-      "regioes": [
-        "oriente-medio"
-      ],
-      "temas": [
-        "conflitos",
-        "diplomacia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T21:47:15.000Z",
-      "materias": [
-        {
-          "fonte": "Atlantic Council",
-          "pais": "EUA",
-          "visao": "Centro de estudos pró-OTAN e transatlântico",
-          "estatal": false,
-          "tipo": "analise",
-          "idioma": "en",
-          "titulo": "Dispatch from Manama: The Iran war is not over for Bahrain",
-          "link": "https://www.atlanticcouncil.org/dispatches/dispatch-from-manama-the-most-underappreciated-us-ally-in-the-gulf/",
-          "publicadoEm": "2026-11-19T21:47:15.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "7e5b3f3b68b7",
-      "titulo": "THE BIG STINK: Young otter’s death highlights Nelson Mandela Bay’s ‘haemorrhaging sewage’ crisis",
-      "resumo": "Nelson Mandela Bay’s crumbling sewage infrastructure is turning its coastline into a pollution hazard, threatening marine life and local businesses.",
-      "imagem": "https://cdn.dailymaverick.co.za/i/hZlqNTL-sVS1eSw7kOIm590V1Po=/800x0/smart/filters:strip_exif()/file/attachments/orphans/Kyran-SewageProblems_329099.jpg",
-      "credito": "Daily Maverick",
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T21:43:22.000Z",
-      "materias": [
-        {
-          "fonte": "Daily Maverick",
-          "pais": "África do Sul",
-          "visao": "Jornal sul-africano independente",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "THE BIG STINK: Young otter’s death highlights Nelson Mandela Bay’s ‘haemorrhaging sewage’ crisis",
-          "link": "https://www.dailymaverick.co.za/article/2026-11-19-young-otters-death-highlights-nelson-mandela-bays-haemorrhaging-sewage-crisis/",
-          "publicadoEm": "2026-11-19T21:43:22.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "fe8016bd369c",
-      "titulo": "Príncipe Harry diz estar disposto a voltar ao Exército para lutar contra a Rússia",
-      "resumo": "Príncipe Harry, esposa e filhos vão voltar a morar no Reino Unido após anos nos EUA O príncipe Harry afirmou estar disposto a voltar a servir no Exército britânico e lutar contra a Rússia, \"se fosse necessário\". A declaração foi feita em entrevista ao jornal The Telegraph…",
-      "imagem": "https://s2-g1.glbimg.com/46vMzKEdhw5HAaDV9DdO9FQMgWI=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/B/E/cATdLgTFKK2d51W300nA/2026-11-18t121654z-554418599-rc2booag8dxq-rtrmadp-3-britain-royals-harry-ukraine.jpg",
-      "credito": "g1 Mundo",
-      "regioes": [
-        "europa",
-        "america-norte",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "conflitos",
-        "politica",
-        "saude"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T21:42:02.000Z",
-      "materias": [
-        {
-          "fonte": "g1 Mundo",
-          "pais": "Brasil",
-          "visao": "Portal do Grupo Globo",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "pt",
-          "titulo": "Príncipe Harry diz estar disposto a voltar ao Exército para lutar contra a Rússia",
-          "link": "https://g1.globo.com/mundo/noticia/2026/11/19/principe-harry-diz-estar-disposto-a-voltar-ao-exercito-para-lutar-contra-a-russia.ghtml",
-          "publicadoEm": "2026-11-19T21:42:02.000Z",
           "semData": false
         }
       ]

@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-20T21:41:13.738Z",
+  "geradoEm": "2026-11-20T21:50:22.340Z",
   "fontesOk": 69,
   "fontesComErro": 1,
-  "noticiasNovasNestaRodada": 4,
+  "noticiasNovasNestaRodada": 5,
   "porFonte": [
     {
       "id": "nyt",
@@ -271,9 +271,9 @@
       "nome": "Kyiv Post",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 88,
-      "descartadasPorIdade": 12,
-      "comImagem": 88
+      "aceitas": 87,
+      "descartadasPorIdade": 13,
+      "comImagem": 87
     },
     {
       "id": "pravdaua",
@@ -298,9 +298,9 @@
       "nome": "Haaretz",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 71,
-      "descartadasPorIdade": 29,
-      "comImagem": 71
+      "aceitas": 70,
+      "descartadasPorIdade": 30,
+      "comImagem": 70
     },
     {
       "id": "middleeasteye",
@@ -309,7 +309,7 @@
       "itensNoFeed": 20,
       "aceitas": 20,
       "descartadasPorIdade": 0,
-      "comImagem": 11
+      "comImagem": 12
     },
     {
       "id": "almonitor",
@@ -622,9 +622,9 @@
       "nome": "UN News",
       "status": "ok",
       "itensNoFeed": 30,
-      "aceitas": 11,
-      "descartadasPorIdade": 19,
-      "comImagem": 11
+      "aceitas": 12,
+      "descartadasPorIdade": 18,
+      "comImagem": 12
     },
     {
       "id": "crisisgroup",
