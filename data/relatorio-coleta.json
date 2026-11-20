@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-20T22:56:13.187Z",
+  "geradoEm": "2026-11-20T23:05:29.561Z",
   "fontesOk": 69,
   "fontesComErro": 1,
-  "noticiasNovasNestaRodada": 1,
+  "noticiasNovasNestaRodada": 7,
   "porFonte": [
     {
       "id": "nyt",
@@ -17,8 +17,8 @@
       "id": "wapo",
       "nome": "The Washington Post",
       "status": "ok",
-      "itensNoFeed": 14,
-      "aceitas": 14,
+      "itensNoFeed": 15,
+      "aceitas": 15,
       "descartadasPorIdade": 0,
       "comImagem": 0
     },
@@ -298,9 +298,9 @@
       "nome": "Haaretz",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 71,
-      "descartadasPorIdade": 29,
-      "comImagem": 71
+      "aceitas": 69,
+      "descartadasPorIdade": 31,
+      "comImagem": 69
     },
     {
       "id": "middleeasteye",
@@ -451,9 +451,9 @@
       "nome": "Lowy Interpreter",
       "status": "ok",
       "itensNoFeed": 50,
-      "aceitas": 8,
-      "descartadasPorIdade": 42,
-      "comImagem": 8
+      "aceitas": 7,
+      "descartadasPorIdade": 43,
+      "comImagem": 7
     },
     {
       "id": "africanews",
@@ -469,8 +469,8 @@
       "nome": "AllAfrica",
       "status": "ok",
       "itensNoFeed": 33,
-      "aceitas": 30,
-      "descartadasPorIdade": 3,
+      "aceitas": 31,
+      "descartadasPorIdade": 2,
       "comImagem": 0
     },
     {
@@ -559,9 +559,9 @@
       "nome": "Agência Brasil",
       "status": "ok",
       "itensNoFeed": 10,
-      "aceitas": 6,
-      "descartadasPorIdade": 4,
-      "comImagem": 6
+      "aceitas": 5,
+      "descartadasPorIdade": 5,
+      "comImagem": 5
     },
     {
       "id": "mercopress",

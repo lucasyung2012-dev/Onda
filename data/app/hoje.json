@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-20T22:56:13.187Z",
+  "geradoEm": "2026-11-20T23:05:29.561Z",
   "dataReferencia": "2026-11-20",
   "fuso": "America/Sao_Paulo",
-  "totalNoticias": 1435,
+  "totalNoticias": 1436,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -307,18 +307,6 @@
           "titulo": "In summit with Trump and Putin, Xi put himself and China at center stage",
           "link": "https://www.washingtonpost.com/world/2026/11/19/summit-with-trump-putin-xi-put-himself-china-center-stage/",
           "publicadoEm": "2026-11-19T23:23:22.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "PBS NewsHour",
-          "pais": "EUA",
-          "visao": "TV pública dos EUA",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "3 takeaways from Trump, Xi and Putin's historic summit",
-          "link": "https://www.pbs.org/newshour/world/3-takeaways-from-trump-xi-and-putins-historic-summit",
-          "publicadoEm": "2026-11-19T22:58:31.000Z",
           "semData": false
         }
       ]
@@ -2997,64 +2985,6 @@
       ]
     },
     {
-      "id": "95d46de3f283",
-      "titulo": "Ataque huti atinge sede do fundo soberano da Arábia Saudita, arranha-céu mais alto do país",
-      "resumo": "Rebeldes do Iêmen, apoiados pelo Irã, fazem disparos contra o centro financeiro de Riad; vários andares da PIF Tower foram danificados",
-      "imagem": "https://veja.abril.com.br/wp-content/uploads/2026/11/HXgBPS8WgAEJ8Wd.jpg",
-      "credito": "Veja Mundo",
-      "regioes": [
-        "oriente-medio",
-        "america-norte"
-      ],
-      "temas": [
-        "conflitos",
-        "economia",
-        "energia",
-        "politica"
-      ],
-      "fontes": 3,
-      "paises": 1,
-      "maisRecente": "2026-11-20T16:53:31.000Z",
-      "materias": [
-        {
-          "fonte": "Veja Mundo",
-          "pais": "Brasil",
-          "visao": "Revista brasileira, centro-direita",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "pt",
-          "titulo": "Ataque huti atinge sede do fundo soberano da Arábia Saudita, arranha-céu mais alto do país",
-          "link": "https://veja.abril.com.br/mundo/ataque-huti-atinge-sede-do-fundo-soberano-da-arabia-saudita-arranha-ceu-mais-alto-do-pais/",
-          "publicadoEm": "2026-11-20T16:53:31.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "g1 Mundo",
-          "pais": "Brasil",
-          "visao": "Portal do Grupo Globo",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "pt",
-          "titulo": "Prédio mais alto da Arábia Saudita é atingido em ataque dos houthis à sede de fundo soberano do país",
-          "link": "https://g1.globo.com/mundo/noticia/2026/11/20/predio-mais-alto-da-arabia-saudita-e-atingido-em-ataque-dos-houthis-a-sede-de-fundo-soberano-do-pais.ghtml",
-          "publicadoEm": "2026-11-20T14:42:33.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Estadão Internacional",
-          "pais": "Brasil",
-          "visao": "Jornal de referência brasileiro, centro-direita",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "pt",
-          "titulo": "Arranha-céu mais alto de Riad, na Arábia Saudita, é danificado por bombardeio dos houthis do Iêmen",
-          "link": "https://www.estadao.com.br/internacional/arranha-ceu-mais-alto-riad-arabia-saudita-danificado-bombardeio-houthis-iemen-npr/",
-          "publicadoEm": "2026-11-19T23:00:06.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
       "id": "7db600dee5b4",
       "titulo": "Yemen targets Saudi Arabia’s financial hub",
       "resumo": "The Yemeni Armed Forces (YAF) targeted the financial district in the Saudi capital on Thursday. The attack on the Saudi hallmark came as YAF makes battlefield advances against the Saudi-backed forces inside Yemen.",
@@ -3346,6 +3276,49 @@
           "titulo": "Russia Hits 3 Kyiv Bridges in Overnight Ballistic Attack",
           "link": "https://www.kyivpost.com/post/90654",
           "publicadoEm": "2026-11-20T01:31:05.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "1ef61dc716cf",
+      "titulo": "Germany: Berlin student protest targets rearmament and compulsory service",
+      "resumo": "Thousands of students marched through Berlin, on Friday 20 November 2026, protesting against the country's rapid military rearmament and fears of a return to compulsory military service. Their protest formed part of a wider wave of youth demonstrations across Europe.",
+      "imagem": "http://images.euronews.com/articles/stories/10/00/22/24/640x360_cmsv2_bb42be7a-183f-53ef-93ff-ae7c7db5e7f3-10002224.jpg?1795195742",
+      "credito": "Africanews",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "politica"
+      ],
+      "fontes": 2,
+      "paises": 2,
+      "maisRecente": "2026-11-20T22:54:31.000Z",
+      "materias": [
+        {
+          "fonte": "Africanews",
+          "pais": "Congo",
+          "visao": "Canal pan-africano de notícias",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Germany: Berlin student protest targets rearmament and compulsory service",
+          "link": "http://www.africanews.com/2026/11/20/germany-berlin-student-protest-targets-rearmament-and-compulsory-service/",
+          "publicadoEm": "2026-11-20T22:54:31.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Euronews",
+          "pais": "União Europeia",
+          "visao": "Canal de notícias pan-europeu",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Germany: Berlin student protest targets rearmament and compulsory service",
+          "link": "https://www.euronews.com/video/2026/11/20/germany-berlin-student-protest-targets-rearmament-and-compulsory-service",
+          "publicadoEm": "2026-11-20T22:54:22.000Z",
           "semData": false
         }
       ]
@@ -5025,6 +4998,52 @@
           "titulo": "Italian workers and students protest over wages and public services",
           "link": "https://www.straitstimes.com/world/europe/thousands-protest-across-italy-in-strike-over-wages-public-spending",
           "publicadoEm": "2026-11-20T10:20:37.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "95d46de3f283",
+      "titulo": "Ataque huti atinge sede do fundo soberano da Arábia Saudita, arranha-céu mais alto do país",
+      "resumo": "Rebeldes do Iêmen, apoiados pelo Irã, fazem disparos contra o centro financeiro de Riad; vários andares da PIF Tower foram danificados",
+      "imagem": "https://veja.abril.com.br/wp-content/uploads/2026/11/HXgBPS8WgAEJ8Wd.jpg",
+      "credito": "Veja Mundo",
+      "regioes": [
+        "oriente-medio",
+        "america-norte"
+      ],
+      "temas": [
+        "conflitos",
+        "economia",
+        "energia",
+        "politica"
+      ],
+      "fontes": 2,
+      "paises": 1,
+      "maisRecente": "2026-11-20T16:53:31.000Z",
+      "materias": [
+        {
+          "fonte": "Veja Mundo",
+          "pais": "Brasil",
+          "visao": "Revista brasileira, centro-direita",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "pt",
+          "titulo": "Ataque huti atinge sede do fundo soberano da Arábia Saudita, arranha-céu mais alto do país",
+          "link": "https://veja.abril.com.br/mundo/ataque-huti-atinge-sede-do-fundo-soberano-da-arabia-saudita-arranha-ceu-mais-alto-do-pais/",
+          "publicadoEm": "2026-11-20T16:53:31.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "g1 Mundo",
+          "pais": "Brasil",
+          "visao": "Portal do Grupo Globo",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "pt",
+          "titulo": "Prédio mais alto da Arábia Saudita é atingido em ataque dos houthis à sede de fundo soberano do país",
+          "link": "https://g1.globo.com/mundo/noticia/2026/11/20/predio-mais-alto-da-arabia-saudita-e-atingido-em-ataque-dos-houthis-a-sede-de-fundo-soberano-do-pais.ghtml",
+          "publicadoEm": "2026-11-20T14:42:33.000Z",
           "semData": false
         }
       ]
@@ -7068,32 +7087,183 @@
       ]
     },
     {
-      "id": "cb23a4933324",
-      "titulo": "Germany: Berlin student protest targets rearmament and compulsory service",
-      "resumo": "Thousands of students marched through Berlin, on Friday 20 November 2026, protesting against the country's rapid military rearmament and fears of a return to compulsory military service. Their protest formed part of a wider wave of youth demonstrations across Europe.",
-      "imagem": "",
-      "credito": "",
+      "id": "11277c1f5cdd",
+      "titulo": "Hong Kong looks to community networks to support Tai Po fire survivors’ mental health",
+      "resumo": "More than 3,000 survivors of Hong Kong’s deadly Wang Fuk Court fire have received mental health support from authorities in the past year, with some experiencing fewer symptoms of post-traumatic stress disorder (PTSD) after psychological intervention. Dr Lam Ching-choi, chairman…",
+      "imagem": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/20/bad6b0d9-9c1b-4f0c-857a-0ab78290882a_ff60b63b.jpg?itok=h44HdD8I&v=1795186897",
+      "credito": "South China Morning Post",
       "regioes": [
-        "europa"
+        "asia-pacifico"
       ],
       "temas": [
-        "conflitos",
-        "politica"
+        "politica",
+        "direitos",
+        "saude"
       ],
       "fontes": 1,
       "paises": 1,
-      "maisRecente": "2026-11-20T22:54:22.000Z",
+      "maisRecente": "2026-11-20T23:01:04.000Z",
       "materias": [
         {
-          "fonte": "Euronews",
-          "pais": "União Europeia",
-          "visao": "Canal de notícias pan-europeu",
+          "fonte": "South China Morning Post",
+          "pais": "Hong Kong",
+          "visao": "Jornal de Hong Kong sobre China e Ásia",
           "estatal": false,
           "tipo": "noticia",
           "idioma": "en",
-          "titulo": "Germany: Berlin student protest targets rearmament and compulsory service",
-          "link": "https://www.euronews.com/video/2026/11/20/germany-berlin-student-protest-targets-rearmament-and-compulsory-service",
-          "publicadoEm": "2026-11-20T22:54:22.000Z",
+          "titulo": "Hong Kong looks to community networks to support Tai Po fire survivors’ mental health",
+          "link": "https://www.scmp.com/news/hong-kong/health-environment/article/3375288/hong-kong-looks-community-networks-support-tai-po-fire-survivors-mental-health",
+          "publicadoEm": "2026-11-20T23:01:04.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "9825640b814a",
+      "titulo": "Sixty years ago, the public service 'marriage bar' lifted",
+      "resumo": "When Elizabeth Scrivener said yes to a marriage proposal in 1966, she knew she would have to leave her job with the Australian Public Service.",
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/b78092822ec0cf242083c255e32a3af7?impolicy=wcms_crop_resize&cropH=2395&cropW=4258&xPos=0&yPos=197&width=862&height=485",
+      "credito": "ABC News Austrália",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:00:17.000Z",
+      "materias": [
+        {
+          "fonte": "ABC News Austrália",
+          "pais": "Austrália",
+          "visao": "Emissora pública australiana",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Sixty years ago, the public service 'marriage bar' lifted",
+          "link": "https://www.abc.net.au/news/2026-11-21/60-years-since-ban-married-women-public-service-lifted/107406214",
+          "publicadoEm": "2026-11-20T23:00:17.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "a2364171fd79",
+      "titulo": "‘All the Lovers in the Night’: A poetic and perceptive Mieko Kawakami adaptation",
+      "resumo": "Yukino Kishii plays a complex character to layered perfection in Yukiko Sode's adaptation of the eponymous Mieko Kawakami novel.",
+      "imagem": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/20/574567.jpg",
+      "credito": "The Japan Times",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:00:00.000Z",
+      "materias": [
+        {
+          "fonte": "The Japan Times",
+          "pais": "Japão",
+          "visao": "Jornal japonês em inglês",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "‘All the Lovers in the Night’: A poetic and perceptive Mieko Kawakami adaptation",
+          "link": "https://www.japantimes.co.jp/culture/2026/11/21/film/all-the-lovers-in-the-night/",
+          "publicadoEm": "2026-11-20T23:00:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "8ea2a8cf99cb",
+      "titulo": "GTA made its name satirizing America — then reality caught up",
+      "resumo": "Out Nov. 18, \"Grand Theft Auto VI\" once again takes aim at the excesses of modern American through a stylistic depiction of the cities, swamps and strip malls of Florida.",
+      "imagem": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/20/574913.jpg",
+      "credito": "The Japan Times",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:00:00.000Z",
+      "materias": [
+        {
+          "fonte": "The Japan Times",
+          "pais": "Japão",
+          "visao": "Jornal japonês em inglês",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "GTA made its name satirizing America — then reality caught up",
+          "link": "https://www.japantimes.co.jp/life/2026/11/21/digital/grand-theft-auto-6-satire-america-video-games/",
+          "publicadoEm": "2026-11-20T23:00:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "b160af3354b7",
+      "titulo": "Farmer hopes MND trial could give her more time with family",
+      "resumo": "A Queensland farmer recently diagnosed with MND hopes to take part in what could be a \"game changer\" clinical trial aimed at halting the disease and restoring lost function.",
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/beb429353dcdaf5f1344a946be02e6ec?impolicy=wcms_crop_resize&cropH=998&cropW=1774&xPos=0&yPos=1291&width=862&height=485",
+      "credito": "ABC News Austrália",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T22:59:07.000Z",
+      "materias": [
+        {
+          "fonte": "ABC News Austrália",
+          "pais": "Austrália",
+          "visao": "Emissora pública australiana",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Farmer hopes MND trial could give her more time with family",
+          "link": "https://www.abc.net.au/news/2026-11-21/kilkivan-farmer-places-hope-in-national-mnd-trial/107400112",
+          "publicadoEm": "2026-11-20T22:59:07.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "b4a02b67a5b0",
+      "titulo": "Secret Hegseth memo restricts U.S.-Canada defense relationship",
+      "resumo": "The classified directive is another provocation in the Trump administration’s feud with Ottawa. One U.S. official said it’s sure to be seen as a “slap in the face.”",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "america-norte"
+      ],
+      "temas": [
+        "conflitos"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T22:57:39.000Z",
+      "materias": [
+        {
+          "fonte": "The Washington Post",
+          "pais": "EUA",
+          "visao": "Jornal de referência dos EUA, centro",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Secret Hegseth memo restricts U.S.-Canada defense relationship",
+          "link": "https://www.washingtonpost.com/national-security/2026/11/20/secret-hegseth-memo-restricts-us-canada-defense-relationship/",
+          "publicadoEm": "2026-11-20T22:57:39.000Z",
           "semData": false
         }
       ]
@@ -39068,132 +39238,6 @@
           "titulo": "Bispos católicos dos EUA criam dia nacional de oração contra racismo",
           "link": "https://www.gazetadopovo.com.br/mundo/bispos-catolicos-dos-eua-criam-dia-nacional-de-oracao-contra-racismo/",
           "publicadoEm": "2026-11-19T23:07:07.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "031c7c357823",
-      "titulo": "UK Pledges to Stand With Ukraine ‘For as Long as It Takes,’ Burnham Says in Berlin",
-      "resumo": "At the Coalition of the Willing summit in Berlin, Burnham said Europe was ready for peace negotiations but would discuss wider European security with Moscow only after Ukraine and Russia reached a peace agreement.",
-      "imagem": "https://static.kyivpost.com/storage/2026/11/20/6c6297a8a91bbcd34fe71387fb836f5f.jpg?w=640&q=90&f=jpg",
-      "credito": "Kyiv Post",
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "diplomacia",
-        "conflitos",
-        "energia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T23:04:15.000Z",
-      "materias": [
-        {
-          "fonte": "Kyiv Post",
-          "pais": "Ucrânia",
-          "visao": "Jornal ucraniano",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "UK Pledges to Stand With Ukraine ‘For as Long as It Takes,’ Burnham Says in Berlin",
-          "link": "https://www.kyivpost.com/post/90650",
-          "publicadoEm": "2026-11-19T23:04:15.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "cfb8c0b24e18",
-      "titulo": "US signed off on sales of nearly 900,000 AI chips to China in six months, House committee says",
-      "resumo": "The US approved shipments of AI chips made by Nvidia and AMD to companies on the Pentagon's list of alleged Chinese military-backed companies.",
-      "imagem": "https://dam.mediacorp.sg/image/upload/s--3KV-OIFB--/c_crop,h_450,w_800,x_0,y_0/fl_relative,g_south_east,l_mediacorp:cna:watermark:2024-04:reuters_1,w_0.1/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/one-cms/core/2026-11-03T234957Z_1_LYNXNPEMA220B_RTROPTP_3_SCALEWAY-DATACENTER-SWEDEN.JPG?itok=nFqgSyel",
-      "credito": "CNA",
-      "regioes": [
-        "asia-pacifico",
-        "america-norte"
-      ],
-      "temas": [
-        "tecnologia",
-        "conflitos",
-        "economia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T23:04:00.000Z",
-      "materias": [
-        {
-          "fonte": "CNA",
-          "pais": "Singapura",
-          "visao": "Canal de Singapura, foco no Sudeste Asiático",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "US signed off on sales of nearly 900,000 AI chips to China in six months, House committee says",
-          "link": "https://www.channelnewsasia.com/world/us-signed-sales-ai-chips-china-6567216",
-          "publicadoEm": "2026-11-19T23:04:00.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "5a13d776aa20",
-      "titulo": "'There's already a decision': Israel's asylum system is rigged against Ethiopians",
-      "resumo": "A Haaretz Hebrew investigation revealed how a veteran Israeli immigration official denied asylum seekers due process and showed little regard for their dignity",
-      "imagem": "https://img.haarets.co.il/bs/00000191-fa19-d5f5-a7f9-ff3f76f10001/a8/f5/35111ceb4f57afc67c3f15d317e1/587861.jpg?width=108&height=81",
-      "credito": "Haaretz",
-      "regioes": [
-        "oriente-medio",
-        "africa"
-      ],
-      "temas": [
-        "direitos"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T23:01:23.000Z",
-      "materias": [
-        {
-          "fonte": "Haaretz",
-          "pais": "Israel",
-          "visao": "Jornal israelense, centro-esquerda",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "'There's already a decision': Israel's asylum system is rigged against Ethiopians",
-          "link": "https://www.haaretz.com/opinion/editorial/2026-11-20/ty-article-opinion/theres-already-a-decision-israeli-asylum-system-is-rigged-against-ethiopians/000001a1-f587-d287-adbb-f79f99f30000",
-          "publicadoEm": "2026-11-19T23:01:23.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "80f9091de118",
-      "titulo": "The yttrium squeeze: How a little-known rare earth became China’s latest geopolitical lever",
-      "resumo": "A 98% collapse in sales to one buyer highlights how industrial system power can translate into influence.",
-      "imagem": "https://cdn.sanity.io/images/5dcouzig/production/1ff1fea552966c6bd04580e33e42b0a9a0b26d56-6000x4000.jpg?rect=0,425,6000,3150&w=1200&h=630&fm=webp&q=85&fit=crop",
-      "credito": "Lowy Interpreter",
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "economia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T23:00:00.000Z",
-      "materias": [
-        {
-          "fonte": "Lowy Interpreter",
-          "pais": "Austrália",
-          "visao": "Análise do Lowy Institute sobre Indo-Pacífico",
-          "estatal": false,
-          "tipo": "analise",
-          "idioma": "en",
-          "titulo": "The yttrium squeeze: How a little-known rare earth became China’s latest geopolitical lever",
-          "link": "https://www.lowyinstitute.org/the-interpreter/the-yttrium-squeeze-how-a-little-known-rare-earth-became-china-s-latest-geopolitical-lever",
-          "publicadoEm": "2026-11-19T23:00:00.000Z",
           "semData": false
         }
       ]

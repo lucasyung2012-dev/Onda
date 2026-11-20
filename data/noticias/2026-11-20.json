@@ -2,6 +2,191 @@
   "data": "2026-11-20",
   "noticias": [
     {
+      "id": "11277c1f5cdd",
+      "titulo": "Hong Kong looks to community networks to support Tai Po fire survivors’ mental health",
+      "resumo": "More than 3,000 survivors of Hong Kong’s deadly Wang Fuk Court fire have received mental health support from authorities in the past year, with some experiencing fewer symptoms of post-traumatic stress disorder (PTSD) after psychological intervention. Dr Lam Ching-choi, chairman…",
+      "link": "https://www.scmp.com/news/hong-kong/health-environment/article/3375288/hong-kong-looks-community-networks-support-tai-po-fire-survivors-mental-health",
+      "fonte": "scmp",
+      "fonteNome": "South China Morning Post",
+      "pais": "Hong Kong",
+      "visao": "Jornal de Hong Kong sobre China e Ásia",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:01:04.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/20/bad6b0d9-9c1b-4f0c-857a-0ab78290882a_ff60b63b.jpg?itok=h44HdD8I&v=1795186897",
+      "imagemCredito": "South China Morning Post",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "politica",
+        "direitos",
+        "saude"
+      ],
+      "coletadoEm": "2026-11-20T23:05:29.561Z"
+    },
+    {
+      "id": "9825640b814a",
+      "titulo": "Sixty years ago, the public service 'marriage bar' lifted",
+      "resumo": "When Elizabeth Scrivener said yes to a marriage proposal in 1966, she knew she would have to leave her job with the Australian Public Service.",
+      "link": "https://www.abc.net.au/news/2026-11-21/60-years-since-ban-married-women-public-service-lifted/107406214",
+      "fonte": "abcau",
+      "fonteNome": "ABC News Austrália",
+      "pais": "Austrália",
+      "visao": "Emissora pública australiana",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:00:17.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/b78092822ec0cf242083c255e32a3af7?impolicy=wcms_crop_resize&cropH=2395&cropW=4258&xPos=0&yPos=197&width=862&height=485",
+      "imagemCredito": "ABC News Austrália",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-20T23:05:29.561Z"
+    },
+    {
+      "id": "a2364171fd79",
+      "titulo": "‘All the Lovers in the Night’: A poetic and perceptive Mieko Kawakami adaptation",
+      "resumo": "Yukino Kishii plays a complex character to layered perfection in Yukiko Sode's adaptation of the eponymous Mieko Kawakami novel.",
+      "link": "https://www.japantimes.co.jp/culture/2026/11/21/film/all-the-lovers-in-the-night/",
+      "fonte": "japantimes",
+      "fonteNome": "The Japan Times",
+      "pais": "Japão",
+      "visao": "Jornal japonês em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:00:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/20/574567.jpg",
+      "imagemCredito": "The Japan Times",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-20T23:05:29.561Z"
+    },
+    {
+      "id": "8ea2a8cf99cb",
+      "titulo": "GTA made its name satirizing America — then reality caught up",
+      "resumo": "Out Nov. 18, \"Grand Theft Auto VI\" once again takes aim at the excesses of modern American through a stylistic depiction of the cities, swamps and strip malls of Florida.",
+      "link": "https://www.japantimes.co.jp/life/2026/11/21/digital/grand-theft-auto-6-satire-america-video-games/",
+      "fonte": "japantimes",
+      "fonteNome": "The Japan Times",
+      "pais": "Japão",
+      "visao": "Jornal japonês em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:00:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/20/574913.jpg",
+      "imagemCredito": "The Japan Times",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-20T23:05:29.561Z"
+    },
+    {
+      "id": "b160af3354b7",
+      "titulo": "Farmer hopes MND trial could give her more time with family",
+      "resumo": "A Queensland farmer recently diagnosed with MND hopes to take part in what could be a \"game changer\" clinical trial aimed at halting the disease and restoring lost function.",
+      "link": "https://www.abc.net.au/news/2026-11-21/kilkivan-farmer-places-hope-in-national-mnd-trial/107400112",
+      "fonte": "abcau",
+      "fonteNome": "ABC News Austrália",
+      "pais": "Austrália",
+      "visao": "Emissora pública australiana",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T22:59:07.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/beb429353dcdaf5f1344a946be02e6ec?impolicy=wcms_crop_resize&cropH=998&cropW=1774&xPos=0&yPos=1291&width=862&height=485",
+      "imagemCredito": "ABC News Austrália",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-20T23:05:29.561Z"
+    },
+    {
+      "id": "b4a02b67a5b0",
+      "titulo": "Secret Hegseth memo restricts U.S.-Canada defense relationship",
+      "resumo": "The classified directive is another provocation in the Trump administration’s feud with Ottawa. One U.S. official said it’s sure to be seen as a “slap in the face.”",
+      "link": "https://www.washingtonpost.com/national-security/2026/11/20/secret-hegseth-memo-restricts-us-canada-defense-relationship/",
+      "fonte": "wapo",
+      "fonteNome": "The Washington Post",
+      "pais": "EUA",
+      "visao": "Jornal de referência dos EUA, centro",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T22:57:39.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "america-norte"
+      ],
+      "temas": [
+        "conflitos"
+      ],
+      "coletadoEm": "2026-11-20T23:05:29.561Z"
+    },
+    {
+      "id": "1ef61dc716cf",
+      "titulo": "Germany: Berlin student protest targets rearmament and compulsory service",
+      "resumo": "Thousands of students marched through Berlin, on Friday 20 November 2026, protesting against the country's rapid military rearmament and fears of a return to compulsory military service. Their protest formed part of a wider wave of youth demonstrations across Europe.",
+      "link": "http://www.africanews.com/2026/11/20/germany-berlin-student-protest-targets-rearmament-and-compulsory-service/",
+      "fonte": "africanews",
+      "fonteNome": "Africanews",
+      "pais": "Congo",
+      "visao": "Canal pan-africano de notícias",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T22:54:31.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "http://images.euronews.com/articles/stories/10/00/22/24/640x360_cmsv2_bb42be7a-183f-53ef-93ff-ae7c7db5e7f3-10002224.jpg?1795195742",
+      "imagemCredito": "Africanews",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-20T23:05:29.561Z"
+    },
+    {
       "id": "cb23a4933324",
       "titulo": "Germany: Berlin student protest targets rearmament and compulsory service",
       "resumo": "Thousands of students marched through Berlin, on Friday 20 November 2026, protesting against the country's rapid military rearmament and fears of a return to compulsory military service. Their protest formed part of a wider wave of youth demonstrations across Europe.",
@@ -35832,5 +36017,5 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     }
   ],
-  "atualizadoEm": "2026-11-20T22:56:13.187Z"
+  "atualizadoEm": "2026-11-20T23:05:29.561Z"
 }

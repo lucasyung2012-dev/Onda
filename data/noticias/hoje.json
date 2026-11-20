@@ -1,10 +1,10 @@
 {
-  "geradoEm": "2026-11-20T22:56:13.187Z",
+  "geradoEm": "2026-11-20T23:05:29.561Z",
   "fuso": "America/Sao_Paulo",
   "dataReferencia": "2026-11-20",
   "janelaHoras": 24,
-  "totalNoticias": 1435,
-  "totalFatos": 1148,
+  "totalNoticias": 1436,
+  "totalFatos": 1150,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -73,8 +73,7 @@
         "8a17df9865e3",
         "84ee1f14a44e",
         "f7b693592314",
-        "4fe49d780de8",
-        "3cc8a3bc44d4"
+        "4fe49d780de8"
       ]
     },
     {
@@ -872,29 +871,6 @@
       ]
     },
     {
-      "id": "95d46de3f283",
-      "titulo": "Ataque huti atinge sede do fundo soberano da Arábia Saudita, arranha-céu mais alto do país",
-      "imagem": "https://veja.abril.com.br/wp-content/uploads/2026/11/HXgBPS8WgAEJ8Wd.jpg",
-      "fontes": 3,
-      "umaFonteSo": false,
-      "regioes": [
-        "oriente-medio",
-        "america-norte"
-      ],
-      "temas": [
-        "conflitos",
-        "economia",
-        "energia",
-        "politica"
-      ],
-      "maisRecente": "2026-11-20T16:53:31.000Z",
-      "noticias": [
-        "95d46de3f283",
-        "39e6263fdcf5",
-        "b3164fe9d4fb"
-      ]
-    },
-    {
       "id": "7db600dee5b4",
       "titulo": "Yemen targets Saudi Arabia’s financial hub",
       "imagem": "https://media.tehrantimes.com/d/t/2026/11/20/4/6270756.jpg",
@@ -1002,6 +978,25 @@
         "8c2c1d5a86f2",
         "66d0fc6e1526",
         "3fe6fbac963c"
+      ]
+    },
+    {
+      "id": "1ef61dc716cf",
+      "titulo": "Germany: Berlin student protest targets rearmament and compulsory service",
+      "imagem": "http://images.euronews.com/articles/stories/10/00/22/24/640x360_cmsv2_bb42be7a-183f-53ef-93ff-ae7c7db5e7f3-10002224.jpg?1795195742",
+      "fontes": 2,
+      "umaFonteSo": false,
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "politica"
+      ],
+      "maisRecente": "2026-11-20T22:54:31.000Z",
+      "noticias": [
+        "1ef61dc716cf",
+        "cb23a4933324"
       ]
     },
     {
@@ -1760,6 +1755,28 @@
       "noticias": [
         "0f9086fc0e50",
         "f41133174720"
+      ]
+    },
+    {
+      "id": "95d46de3f283",
+      "titulo": "Ataque huti atinge sede do fundo soberano da Arábia Saudita, arranha-céu mais alto do país",
+      "imagem": "https://veja.abril.com.br/wp-content/uploads/2026/11/HXgBPS8WgAEJ8Wd.jpg",
+      "fontes": 2,
+      "umaFonteSo": false,
+      "regioes": [
+        "oriente-medio",
+        "america-norte"
+      ],
+      "temas": [
+        "conflitos",
+        "economia",
+        "energia",
+        "politica"
+      ],
+      "maisRecente": "2026-11-20T16:53:31.000Z",
+      "noticias": [
+        "95d46de3f283",
+        "39e6263fdcf5"
       ]
     },
     {
@@ -2675,21 +2692,107 @@
       ]
     },
     {
-      "id": "cb23a4933324",
-      "titulo": "Germany: Berlin student protest targets rearmament and compulsory service",
+      "id": "11277c1f5cdd",
+      "titulo": "Hong Kong looks to community networks to support Tai Po fire survivors’ mental health",
+      "imagem": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/20/bad6b0d9-9c1b-4f0c-857a-0ab78290882a_ff60b63b.jpg?itok=h44HdD8I&v=1795186897",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "politica",
+        "direitos",
+        "saude"
+      ],
+      "maisRecente": "2026-11-20T23:01:04.000Z",
+      "noticias": [
+        "11277c1f5cdd"
+      ]
+    },
+    {
+      "id": "9825640b814a",
+      "titulo": "Sixty years ago, the public service 'marriage bar' lifted",
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/b78092822ec0cf242083c255e32a3af7?impolicy=wcms_crop_resize&cropH=2395&cropW=4258&xPos=0&yPos=197&width=862&height=485",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "maisRecente": "2026-11-20T23:00:17.000Z",
+      "noticias": [
+        "9825640b814a"
+      ]
+    },
+    {
+      "id": "a2364171fd79",
+      "titulo": "‘All the Lovers in the Night’: A poetic and perceptive Mieko Kawakami adaptation",
+      "imagem": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/20/574567.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "maisRecente": "2026-11-20T23:00:00.000Z",
+      "noticias": [
+        "a2364171fd79"
+      ]
+    },
+    {
+      "id": "8ea2a8cf99cb",
+      "titulo": "GTA made its name satirizing America — then reality caught up",
+      "imagem": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/20/574913.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "maisRecente": "2026-11-20T23:00:00.000Z",
+      "noticias": [
+        "8ea2a8cf99cb"
+      ]
+    },
+    {
+      "id": "b160af3354b7",
+      "titulo": "Farmer hopes MND trial could give her more time with family",
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/beb429353dcdaf5f1344a946be02e6ec?impolicy=wcms_crop_resize&cropH=998&cropW=1774&xPos=0&yPos=1291&width=862&height=485",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "maisRecente": "2026-11-20T22:59:07.000Z",
+      "noticias": [
+        "b160af3354b7"
+      ]
+    },
+    {
+      "id": "b4a02b67a5b0",
+      "titulo": "Secret Hegseth memo restricts U.S.-Canada defense relationship",
       "imagem": "",
       "fontes": 1,
       "umaFonteSo": true,
       "regioes": [
-        "europa"
+        "america-norte"
       ],
       "temas": [
-        "conflitos",
-        "politica"
+        "conflitos"
       ],
-      "maisRecente": "2026-11-20T22:54:22.000Z",
+      "maisRecente": "2026-11-20T22:57:39.000Z",
       "noticias": [
-        "cb23a4933324"
+        "b4a02b67a5b0"
       ]
     },
     {
@@ -21040,83 +21143,194 @@
       "noticias": [
         "35207374d29c"
       ]
-    },
+    }
+  ],
+  "noticias": [
     {
-      "id": "031c7c357823",
-      "titulo": "UK Pledges to Stand With Ukraine ‘For as Long as It Takes,’ Burnham Says in Berlin",
-      "imagem": "https://static.kyivpost.com/storage/2026/11/20/6c6297a8a91bbcd34fe71387fb836f5f.jpg?w=640&q=90&f=jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "diplomacia",
-        "conflitos",
-        "energia"
-      ],
-      "maisRecente": "2026-11-19T23:04:15.000Z",
-      "noticias": [
-        "031c7c357823"
-      ]
-    },
-    {
-      "id": "cfb8c0b24e18",
-      "titulo": "US signed off on sales of nearly 900,000 AI chips to China in six months, House committee says",
-      "imagem": "https://dam.mediacorp.sg/image/upload/s--3KV-OIFB--/c_crop,h_450,w_800,x_0,y_0/fl_relative,g_south_east,l_mediacorp:cna:watermark:2024-04:reuters_1,w_0.1/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/one-cms/core/2026-11-03T234957Z_1_LYNXNPEMA220B_RTROPTP_3_SCALEWAY-DATACENTER-SWEDEN.JPG?itok=nFqgSyel",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "asia-pacifico",
-        "america-norte"
-      ],
-      "temas": [
-        "tecnologia",
-        "conflitos",
-        "economia"
-      ],
-      "maisRecente": "2026-11-19T23:04:00.000Z",
-      "noticias": [
-        "cfb8c0b24e18"
-      ]
-    },
-    {
-      "id": "5a13d776aa20",
-      "titulo": "'There's already a decision': Israel's asylum system is rigged against Ethiopians",
-      "imagem": "https://img.haarets.co.il/bs/00000191-fa19-d5f5-a7f9-ff3f76f10001/a8/f5/35111ceb4f57afc67c3f15d317e1/587861.jpg?width=108&height=81",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "oriente-medio",
-        "africa"
-      ],
-      "temas": [
-        "direitos"
-      ],
-      "maisRecente": "2026-11-19T23:01:23.000Z",
-      "noticias": [
-        "5a13d776aa20"
-      ]
-    },
-    {
-      "id": "80f9091de118",
-      "titulo": "The yttrium squeeze: How a little-known rare earth became China’s latest geopolitical lever",
-      "imagem": "https://cdn.sanity.io/images/5dcouzig/production/1ff1fea552966c6bd04580e33e42b0a9a0b26d56-6000x4000.jpg?rect=0,425,6000,3150&w=1200&h=630&fm=webp&q=85&fit=crop",
-      "fontes": 1,
-      "umaFonteSo": true,
+      "id": "11277c1f5cdd",
+      "titulo": "Hong Kong looks to community networks to support Tai Po fire survivors’ mental health",
+      "resumo": "More than 3,000 survivors of Hong Kong’s deadly Wang Fuk Court fire have received mental health support from authorities in the past year, with some experiencing fewer symptoms of post-traumatic stress disorder (PTSD) after psychological intervention. Dr Lam Ching-choi, chairman…",
+      "link": "https://www.scmp.com/news/hong-kong/health-environment/article/3375288/hong-kong-looks-community-networks-support-tai-po-fire-survivors-mental-health",
+      "fonte": "scmp",
+      "fonteNome": "South China Morning Post",
+      "pais": "Hong Kong",
+      "visao": "Jornal de Hong Kong sobre China e Ásia",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:01:04.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/20/bad6b0d9-9c1b-4f0c-857a-0ab78290882a_ff60b63b.jpg?itok=h44HdD8I&v=1795186897",
+      "imagemCredito": "South China Morning Post",
       "regioes": [
         "asia-pacifico"
       ],
       "temas": [
-        "economia"
+        "politica",
+        "direitos",
+        "saude"
       ],
-      "maisRecente": "2026-11-19T23:00:00.000Z",
-      "noticias": [
-        "80f9091de118"
-      ]
-    }
-  ],
-  "noticias": [
+      "coletadoEm": "2026-11-20T23:05:29.561Z"
+    },
+    {
+      "id": "9825640b814a",
+      "titulo": "Sixty years ago, the public service 'marriage bar' lifted",
+      "resumo": "When Elizabeth Scrivener said yes to a marriage proposal in 1966, she knew she would have to leave her job with the Australian Public Service.",
+      "link": "https://www.abc.net.au/news/2026-11-21/60-years-since-ban-married-women-public-service-lifted/107406214",
+      "fonte": "abcau",
+      "fonteNome": "ABC News Austrália",
+      "pais": "Austrália",
+      "visao": "Emissora pública australiana",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:00:17.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/b78092822ec0cf242083c255e32a3af7?impolicy=wcms_crop_resize&cropH=2395&cropW=4258&xPos=0&yPos=197&width=862&height=485",
+      "imagemCredito": "ABC News Austrália",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-20T23:05:29.561Z"
+    },
+    {
+      "id": "a2364171fd79",
+      "titulo": "‘All the Lovers in the Night’: A poetic and perceptive Mieko Kawakami adaptation",
+      "resumo": "Yukino Kishii plays a complex character to layered perfection in Yukiko Sode's adaptation of the eponymous Mieko Kawakami novel.",
+      "link": "https://www.japantimes.co.jp/culture/2026/11/21/film/all-the-lovers-in-the-night/",
+      "fonte": "japantimes",
+      "fonteNome": "The Japan Times",
+      "pais": "Japão",
+      "visao": "Jornal japonês em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:00:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/20/574567.jpg",
+      "imagemCredito": "The Japan Times",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-20T23:05:29.561Z"
+    },
+    {
+      "id": "8ea2a8cf99cb",
+      "titulo": "GTA made its name satirizing America — then reality caught up",
+      "resumo": "Out Nov. 18, \"Grand Theft Auto VI\" once again takes aim at the excesses of modern American through a stylistic depiction of the cities, swamps and strip malls of Florida.",
+      "link": "https://www.japantimes.co.jp/life/2026/11/21/digital/grand-theft-auto-6-satire-america-video-games/",
+      "fonte": "japantimes",
+      "fonteNome": "The Japan Times",
+      "pais": "Japão",
+      "visao": "Jornal japonês em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:00:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/20/574913.jpg",
+      "imagemCredito": "The Japan Times",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-20T23:05:29.561Z"
+    },
+    {
+      "id": "b160af3354b7",
+      "titulo": "Farmer hopes MND trial could give her more time with family",
+      "resumo": "A Queensland farmer recently diagnosed with MND hopes to take part in what could be a \"game changer\" clinical trial aimed at halting the disease and restoring lost function.",
+      "link": "https://www.abc.net.au/news/2026-11-21/kilkivan-farmer-places-hope-in-national-mnd-trial/107400112",
+      "fonte": "abcau",
+      "fonteNome": "ABC News Austrália",
+      "pais": "Austrália",
+      "visao": "Emissora pública australiana",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T22:59:07.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/beb429353dcdaf5f1344a946be02e6ec?impolicy=wcms_crop_resize&cropH=998&cropW=1774&xPos=0&yPos=1291&width=862&height=485",
+      "imagemCredito": "ABC News Austrália",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-20T23:05:29.561Z"
+    },
+    {
+      "id": "b4a02b67a5b0",
+      "titulo": "Secret Hegseth memo restricts U.S.-Canada defense relationship",
+      "resumo": "The classified directive is another provocation in the Trump administration’s feud with Ottawa. One U.S. official said it’s sure to be seen as a “slap in the face.”",
+      "link": "https://www.washingtonpost.com/national-security/2026/11/20/secret-hegseth-memo-restricts-us-canada-defense-relationship/",
+      "fonte": "wapo",
+      "fonteNome": "The Washington Post",
+      "pais": "EUA",
+      "visao": "Jornal de referência dos EUA, centro",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T22:57:39.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "america-norte"
+      ],
+      "temas": [
+        "conflitos"
+      ],
+      "coletadoEm": "2026-11-20T23:05:29.561Z"
+    },
+    {
+      "id": "1ef61dc716cf",
+      "titulo": "Germany: Berlin student protest targets rearmament and compulsory service",
+      "resumo": "Thousands of students marched through Berlin, on Friday 20 November 2026, protesting against the country's rapid military rearmament and fears of a return to compulsory military service. Their protest formed part of a wider wave of youth demonstrations across Europe.",
+      "link": "http://www.africanews.com/2026/11/20/germany-berlin-student-protest-targets-rearmament-and-compulsory-service/",
+      "fonte": "africanews",
+      "fonteNome": "Africanews",
+      "pais": "Congo",
+      "visao": "Canal pan-africano de notícias",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T22:54:31.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "http://images.euronews.com/articles/stories/10/00/22/24/640x360_cmsv2_bb42be7a-183f-53ef-93ff-ae7c7db5e7f3-10002224.jpg?1795195742",
+      "imagemCredito": "Africanews",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-20T23:05:29.561Z"
+    },
     {
       "id": "cb23a4933324",
       "titulo": "Germany: Berlin student protest targets rearmament and compulsory service",
@@ -59733,171 +59947,6 @@
         "politica"
       ],
       "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "031c7c357823",
-      "titulo": "UK Pledges to Stand With Ukraine ‘For as Long as It Takes,’ Burnham Says in Berlin",
-      "resumo": "At the Coalition of the Willing summit in Berlin, Burnham said Europe was ready for peace negotiations but would discuss wider European security with Moscow only after Ukraine and Russia reached a peace agreement.",
-      "link": "https://www.kyivpost.com/post/90650",
-      "fonte": "kyivpost",
-      "fonteNome": "Kyiv Post",
-      "pais": "Ucrânia",
-      "visao": "Jornal ucraniano",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T23:04:15.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://static.kyivpost.com/storage/2026/11/20/6c6297a8a91bbcd34fe71387fb836f5f.jpg?w=640&q=90&f=jpg",
-      "imagemCredito": "Kyiv Post",
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "diplomacia",
-        "conflitos",
-        "energia"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "cfb8c0b24e18",
-      "titulo": "US signed off on sales of nearly 900,000 AI chips to China in six months, House committee says",
-      "resumo": "The US approved shipments of AI chips made by Nvidia and AMD to companies on the Pentagon's list of alleged Chinese military-backed companies.",
-      "link": "https://www.channelnewsasia.com/world/us-signed-sales-ai-chips-china-6567216",
-      "fonte": "cna",
-      "fonteNome": "CNA",
-      "pais": "Singapura",
-      "visao": "Canal de Singapura, foco no Sudeste Asiático",
-      "idioma": "en",
-      "estatal": true,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T23:04:00.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://dam.mediacorp.sg/image/upload/s--3KV-OIFB--/c_crop,h_450,w_800,x_0,y_0/fl_relative,g_south_east,l_mediacorp:cna:watermark:2024-04:reuters_1,w_0.1/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/one-cms/core/2026-11-03T234957Z_1_LYNXNPEMA220B_RTROPTP_3_SCALEWAY-DATACENTER-SWEDEN.JPG?itok=nFqgSyel",
-      "imagemCredito": "CNA",
-      "regioes": [
-        "asia-pacifico",
-        "america-norte"
-      ],
-      "temas": [
-        "tecnologia",
-        "conflitos",
-        "economia"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "5a13d776aa20",
-      "titulo": "'There's already a decision': Israel's asylum system is rigged against Ethiopians",
-      "resumo": "A Haaretz Hebrew investigation revealed how a veteran Israeli immigration official denied asylum seekers due process and showed little regard for their dignity",
-      "link": "https://www.haaretz.com/opinion/editorial/2026-11-20/ty-article-opinion/theres-already-a-decision-israeli-asylum-system-is-rigged-against-ethiopians/000001a1-f587-d287-adbb-f79f99f30000",
-      "fonte": "haaretz",
-      "fonteNome": "Haaretz",
-      "pais": "Israel",
-      "visao": "Jornal israelense, centro-esquerda",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T23:01:23.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://img.haarets.co.il/bs/00000191-fa19-d5f5-a7f9-ff3f76f10001/a8/f5/35111ceb4f57afc67c3f15d317e1/587861.jpg?width=108&height=81",
-      "imagemCredito": "Haaretz",
-      "regioes": [
-        "oriente-medio",
-        "africa"
-      ],
-      "temas": [
-        "direitos"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "b3164fe9d4fb",
-      "titulo": "Arranha-céu mais alto de Riad, na Arábia Saudita, é danificado por bombardeio dos houthis do Iêmen",
-      "resumo": "",
-      "link": "https://www.estadao.com.br/internacional/arranha-ceu-mais-alto-riad-arabia-saudita-danificado-bombardeio-houthis-iemen-npr/",
-      "fonte": "estadao",
-      "fonteNome": "Estadão Internacional",
-      "pais": "Brasil",
-      "visao": "Jornal de referência brasileiro, centro-direita",
-      "idioma": "pt",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T23:00:06.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "",
-      "imagemCredito": "",
-      "regioes": [
-        "oriente-medio"
-      ],
-      "temas": [
-        "conflitos"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "80f9091de118",
-      "titulo": "The yttrium squeeze: How a little-known rare earth became China’s latest geopolitical lever",
-      "resumo": "A 98% collapse in sales to one buyer highlights how industrial system power can translate into influence.",
-      "link": "https://www.lowyinstitute.org/the-interpreter/the-yttrium-squeeze-how-a-little-known-rare-earth-became-china-s-latest-geopolitical-lever",
-      "fonte": "lowy",
-      "fonteNome": "Lowy Interpreter",
-      "pais": "Austrália",
-      "visao": "Análise do Lowy Institute sobre Indo-Pacífico",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "analise",
-      "publicadoEm": "2026-11-19T23:00:00.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://cdn.sanity.io/images/5dcouzig/production/1ff1fea552966c6bd04580e33e42b0a9a0b26d56-6000x4000.jpg?rect=0,425,6000,3150&w=1200&h=630&fm=webp&q=85&fit=crop",
-      "imagemCredito": "Lowy Interpreter",
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "economia"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "3cc8a3bc44d4",
-      "titulo": "3 takeaways from Trump, Xi and Putin's historic summit",
-      "resumo": "The meeting between U.S. President Donald Trump, China's Xi Jinping and Russia's Vladimir Putin on Thursday was the first-ever sit-down for the leaders of the three countries.",
-      "link": "https://www.pbs.org/newshour/world/3-takeaways-from-trump-xi-and-putins-historic-summit",
-      "fonte": "pbs",
-      "fonteNome": "PBS NewsHour",
-      "pais": "EUA",
-      "visao": "TV pública dos EUA",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T22:58:31.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://d3i6fh83elv35t.cloudfront.net/static/2026/11/2026-11-19T094249Z_358983148_RC2RQOAV77JW_RTRMADP_3_APEC-SUMMIT-1024x716.jpg",
-      "imagemCredito": "PBS NewsHour",
-      "regioes": [
-        "america-norte",
-        "europa",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "diplomacia",
-        "politica"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
     }
   ]
 }
