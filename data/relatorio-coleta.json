@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-20T21:36:02.787Z",
+  "geradoEm": "2026-11-20T21:41:13.738Z",
   "fontesOk": 69,
   "fontesComErro": 1,
-  "noticiasNovasNestaRodada": 2,
+  "noticiasNovasNestaRodada": 4,
   "porFonte": [
     {
       "id": "nyt",
@@ -36,9 +36,9 @@
       "nome": "NPR",
       "status": "ok",
       "itensNoFeed": 10,
-      "aceitas": 9,
-      "descartadasPorIdade": 1,
-      "comImagem": 9
+      "aceitas": 10,
+      "descartadasPorIdade": 0,
+      "comImagem": 10
     },
     {
       "id": "pbs",
@@ -271,9 +271,9 @@
       "nome": "Kyiv Post",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 89,
-      "descartadasPorIdade": 11,
-      "comImagem": 89
+      "aceitas": 88,
+      "descartadasPorIdade": 12,
+      "comImagem": 88
     },
     {
       "id": "pravdaua",
@@ -469,8 +469,8 @@
       "nome": "AllAfrica",
       "status": "ok",
       "itensNoFeed": 33,
-      "aceitas": 30,
-      "descartadasPorIdade": 3,
+      "aceitas": 31,
+      "descartadasPorIdade": 2,
       "comImagem": 0
     },
     {
@@ -622,9 +622,9 @@
       "nome": "UN News",
       "status": "ok",
       "itensNoFeed": 30,
-      "aceitas": 12,
-      "descartadasPorIdade": 18,
-      "comImagem": 12
+      "aceitas": 11,
+      "descartadasPorIdade": 19,
+      "comImagem": 11
     },
     {
       "id": "crisisgroup",

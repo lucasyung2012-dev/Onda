@@ -1,10 +1,10 @@
 {
-  "geradoEm": "2026-11-20T21:36:02.787Z",
+  "geradoEm": "2026-11-20T21:41:13.738Z",
   "fuso": "America/Sao_Paulo",
   "dataReferencia": "2026-11-20",
   "janelaHoras": 24,
-  "totalNoticias": 1422,
-  "totalFatos": 1135,
+  "totalNoticias": 1420,
+  "totalFatos": 1133,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -2624,6 +2624,61 @@
       ]
     },
     {
+      "id": "441b3a54efb3",
+      "titulo": "US sanctions Iranian 'oil trustees' it accuses of evading sanctions",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "diplomacia",
+        "politica",
+        "energia"
+      ],
+      "maisRecente": "2026-11-20T21:39:12.000Z",
+      "noticias": [
+        "441b3a54efb3"
+      ]
+    },
+    {
+      "id": "2e7724cf069e",
+      "titulo": "Austrian foreign ministry says its website was hacked, staff details viewed",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "conflitos",
+        "tecnologia"
+      ],
+      "maisRecente": "2026-11-20T21:35:21.000Z",
+      "noticias": [
+        "2e7724cf069e"
+      ]
+    },
+    {
+      "id": "3d4928456c2e",
+      "titulo": "Another day of survival for a family in Ukraine",
+      "imagem": "https://media.npr.org/include/images/tracking/npr-rss-pixel.png?story=nx-s1-6042206",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "energia"
+      ],
+      "maisRecente": "2026-11-20T21:32:31.000Z",
+      "noticias": [
+        "3d4928456c2e"
+      ]
+    },
+    {
       "id": "b727d0fb148c",
       "titulo": "America’s electoral blue wave brings only the illusion of change",
       "imagem": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/19/255cbcb7-c91a-4e23-868d-91e67c0935e5_f6a2db0e.jpg?itok=4B2SqsEi&v=1795075550",
@@ -2679,6 +2734,23 @@
       "maisRecente": "2026-11-20T21:29:22.000Z",
       "noticias": [
         "d63b2f82bb2d"
+      ]
+    },
+    {
+      "id": "3da4a5753626",
+      "titulo": "Iraq PM targets militia stronghold in bid to assert state control",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "maisRecente": "2026-11-20T21:28:25.000Z",
+      "noticias": [
+        "3da4a5753626"
       ]
     },
     {
@@ -20743,126 +20815,91 @@
       "noticias": [
         "fe8016bd369c"
       ]
-    },
+    }
+  ],
+  "noticias": [
     {
-      "id": "00e1e1f1ea02",
-      "titulo": "Unexpected Fallout From the Iran War",
-      "imagem": "https://static01.nyt.com/images/2026/11/19/multimedia/19cli-newsletter-energy-lzwh/19cli-newsletter-energy-lzwh-mediumSquareAt3X.jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
+      "id": "441b3a54efb3",
+      "titulo": "US sanctions Iranian 'oil trustees' it accuses of evading sanctions",
+      "resumo": "The US Treasury on Friday imposed sanctions on four Iranians who served as \"oil trustees\". It said they had sought to collect funds from illicit international oil sales and pass them to the Iranian government, to evade earlier sanctions and a US naval blockade. In many cases, the…",
+      "link": "https://www.middleeasteye.net/live-blog/live-blog-update/us-sanctions-iranian-oil-trustees-it-accuses-evading-sanctions",
+      "fonte": "middleeasteye",
+      "fonteNome": "Middle East Eye",
+      "pais": "Reino Unido",
+      "visao": "Site focado no Oriente Médio, crítico de governos da região",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:39:12.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
       "regioes": [
         "oriente-medio"
       ],
       "temas": [
-        "energia",
-        "conflitos",
-        "politica"
+        "diplomacia",
+        "politica",
+        "energia"
       ],
-      "maisRecente": "2026-11-19T21:40:38.000Z",
-      "noticias": [
-        "00e1e1f1ea02"
-      ]
+      "coletadoEm": "2026-11-20T21:41:13.738Z"
     },
     {
-      "id": "39f1bebc1584",
-      "titulo": "Relatório aponta risco grave de acidentes em Lisboa como o que matou 16 pessoas no Elevador da Glória",
+      "id": "2e7724cf069e",
+      "titulo": "Austrian foreign ministry says its website was hacked, staff details viewed",
+      "resumo": "VIENNA, Nov 20 - Austria's foreign ministry said on Friday its website was hacked last week and records containing the contact details of its staff were viewed, though it did not say whom it suspected of penetrating its cyber defences.",
+      "link": "https://www.straitstimes.com/world/europe/austrian-foreign-ministry-says-its-website-was-hacked-staff-details-viewed",
+      "fonte": "straitstimes",
+      "fonteNome": "The Straits Times",
+      "pais": "Singapura",
+      "visao": "Jornal de referência de Singapura",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:35:21.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
       "imagem": "",
-      "fontes": 1,
-      "umaFonteSo": true,
+      "imagemCredito": "",
       "regioes": [
         "mundo"
       ],
       "temas": [
-        "tecnologia",
-        "clima"
-      ],
-      "maisRecente": "2026-11-19T21:40:00.000Z",
-      "noticias": [
-        "39f1bebc1584"
-      ]
-    },
-    {
-      "id": "e616dc45fe08",
-      "titulo": "China barra repórter da Bloomberg de cúpula trilateral após pergunta a Trump",
-      "imagem": "",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "asia-pacifico",
-        "america-norte"
-      ],
-      "temas": [
-        "politica",
-        "diplomacia",
+        "conflitos",
         "tecnologia"
       ],
-      "maisRecente": "2026-11-19T21:39:00.000Z",
-      "noticias": [
-        "e616dc45fe08"
-      ]
+      "coletadoEm": "2026-11-20T21:41:13.738Z"
     },
     {
-      "id": "9493d3722313",
-      "titulo": "China é a grande vencedora de reunião entre Xi, Trump e Putin, avalia Jamil Chade",
-      "imagem": "https://www.cartacapital.com.br/wp-content/uploads/2026/11/China.jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
+      "id": "3d4928456c2e",
+      "titulo": "Another day of survival for a family in Ukraine",
+      "resumo": "On the outskirts of Kyiv, one family prepares for the fifth winter of war against Russia -- stockpiling food and fuel and trying to maintain as much a sense of normalcy as possible.",
+      "link": "https://www.npr.org/2026/11/20/nx-s1-6042206/another-day-of-survival-for-a-family-in-ukraine",
+      "fonte": "npr",
+      "fonteNome": "NPR",
+      "pais": "EUA",
+      "visao": "Rádio pública dos EUA",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:32:31.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://media.npr.org/include/images/tracking/npr-rss-pixel.png?story=nx-s1-6042206",
+      "imagemCredito": "NPR",
       "regioes": [
-        "america-norte",
-        "europa",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "diplomacia",
-        "economia"
-      ],
-      "maisRecente": "2026-11-19T21:37:08.000Z",
-      "noticias": [
-        "9493d3722313"
-      ]
-    },
-    {
-      "id": "a8e19874599b",
-      "titulo": "Operação de segurança no Haiti deixa 34 membros de gangues mortos, segundo a polícia",
-      "imagem": "https://s2-g1.glbimg.com/rsbgbmEo_j8cjd2Nrouy8mdAHZc=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/z/K/eQHbphTaG5TzmghN4B6g/afp-20261118-d7x44zw-v1-highres-haitielsalvadorunrestgangs.jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "america-latina",
-        "america-norte",
-        "global",
         "europa"
       ],
       "temas": [
         "conflitos",
-        "politica",
-        "diplomacia",
-        "direitos"
+        "energia"
       ],
-      "maisRecente": "2026-11-19T21:36:43.000Z",
-      "noticias": [
-        "a8e19874599b"
-      ]
+      "coletadoEm": "2026-11-20T21:41:13.738Z"
     },
-    {
-      "id": "f38c2e36b122",
-      "titulo": "Wall Street ends sharply lower as Anthropic’s debut fails to revive AI fervour",
-      "imagem": "https://th-i.thgim.com/public/incoming/y38lur/article71721959.ece/alternates/LANDSCAPE_1200/2026-11-19T164121Z_1052802186_RC22ROAU8AOI_RTRMADP_3_USA-IPO-ANTHROPIC.JPG",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "america-norte"
-      ],
-      "temas": [
-        "tecnologia"
-      ],
-      "maisRecente": "2026-11-19T21:36:10.000Z",
-      "noticias": [
-        "f38c2e36b122"
-      ]
-    }
-  ],
-  "noticias": [
     {
       "id": "b727d0fb148c",
       "titulo": "America’s electoral blue wave brings only the illusion of change",
@@ -20947,6 +20984,32 @@
         "conflitos"
       ],
       "coletadoEm": "2026-11-20T21:34:56.860Z"
+    },
+    {
+      "id": "3da4a5753626",
+      "titulo": "Iraq PM targets militia stronghold in bid to assert state control",
+      "resumo": "Iraqi PM Ali al-Zaidi said an operation in Jurf al-Sakhar marks the start of a nationwide push to assert state control.",
+      "link": "https://www.aljazeera.com/video/newsfeed/2026/11/20/aje-onl-nf_iraq-pm-targets-militia-stronghold-jurf-al-sakhar-201126?traffic_source=rss",
+      "fonte": "aljazeera",
+      "fonteNome": "Al Jazeera",
+      "pais": "Catar",
+      "visao": "Rede do Catar (financiada pelo governo), foco no Sul Global e no mundo árabe",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:28:25.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-20T21:41:13.738Z"
     },
     {
       "id": "d562fc59ba44",
@@ -59102,177 +59165,6 @@
         "conflitos",
         "politica",
         "saude"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "00e1e1f1ea02",
-      "titulo": "Unexpected Fallout From the Iran War",
-      "resumo": "Global oil shocks are accelerating the shift to electric vehicles and renewable energy, a new report finds.",
-      "link": "https://www.nytimes.com/2026/11/19/climate/iea-energy-transition-electric-cars.html",
-      "fonte": "nyt",
-      "fonteNome": "The New York Times",
-      "pais": "EUA",
-      "visao": "Jornal de referência dos EUA, centro-esquerda",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T21:40:38.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://static01.nyt.com/images/2026/11/19/multimedia/19cli-newsletter-energy-lzwh/19cli-newsletter-energy-lzwh-mediumSquareAt3X.jpg",
-      "imagemCredito": "The New York Times",
-      "regioes": [
-        "oriente-medio"
-      ],
-      "temas": [
-        "energia",
-        "conflitos",
-        "politica"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "39f1bebc1584",
-      "titulo": "Relatório aponta risco grave de acidentes em Lisboa como o que matou 16 pessoas no Elevador da Glória",
-      "resumo": "O desastre do Elevador da Glória , que no ano passado matou 16 pessoas em Lisboa , poderia ter ocorrido em outros dois funiculares da cidade. Esta é a conclusão de um relatório do Centro de Apoio Tecnológico à Indústria Metalomecânica (CATIM), concluído entre outubro e novembro…",
-      "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/relatorio-aponta-risco-grave-de-acidentes-em-lisboa-como-o-que-matou-16-pessoas-no-elevador-da-gloria.shtml",
-      "fonte": "folha",
-      "fonteNome": "Folha Mundo",
-      "pais": "Brasil",
-      "visao": "Jornal de referência brasileiro",
-      "idioma": "pt",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T21:40:00.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "",
-      "imagemCredito": "",
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "tecnologia",
-        "clima"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "e616dc45fe08",
-      "titulo": "China barra repórter da Bloomberg de cúpula trilateral após pergunta a Trump",
-      "resumo": "À mesa diante do líder chinês, Xi Jinping , o presidente Donald Trump acabara de agradecer ao anfitrião quando uma repórter gritou uma pergunta: Jensen Huang, ex-presidente-executivo da Nvidia , foi desleal aos Estados Unidos ? Leia mais (11/19/2026 - 18h39)",
-      "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/china-barra-reporter-da-bloomberg-de-cupula-trilateral-apos-pergunta-a-trump.shtml",
-      "fonte": "folha",
-      "fonteNome": "Folha Mundo",
-      "pais": "Brasil",
-      "visao": "Jornal de referência brasileiro",
-      "idioma": "pt",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T21:39:00.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "",
-      "imagemCredito": "",
-      "regioes": [
-        "asia-pacifico",
-        "america-norte"
-      ],
-      "temas": [
-        "politica",
-        "diplomacia",
-        "tecnologia"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "9493d3722313",
-      "titulo": "China é a grande vencedora de reunião entre Xi, Trump e Putin, avalia Jamil Chade",
-      "resumo": "A cúpula ocorreu nesta quinta-feira 19 em Shenzhen, às margens do Fórum de Cooperação Econômica Ásia-Pacífico.",
-      "link": "https://www.cartacapital.com.br/mundo/china-e-a-grande-vencedora-de-reuniao-entre-xi-trump-e-putin-avalia-jamil-chade/",
-      "fonte": "cartacapital",
-      "fonteNome": "CartaCapital Mundo",
-      "pais": "Brasil",
-      "visao": "Revista brasileira, esquerda",
-      "idioma": "pt",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T21:37:08.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://www.cartacapital.com.br/wp-content/uploads/2026/11/China.jpg",
-      "imagemCredito": "CartaCapital Mundo",
-      "regioes": [
-        "america-norte",
-        "europa",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "diplomacia",
-        "economia"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "a8e19874599b",
-      "titulo": "Operação de segurança no Haiti deixa 34 membros de gangues mortos, segundo a polícia",
-      "resumo": "Pessoas se reúnem em apoio às tropas do Exército salvadorenho em sua missão de ajudar na luta contra gangues, em Porto Príncipe, Haiti, em 18 de novembro de 2026. CLARENS SIFFROY/AFP A Polícia Nacional do Haiti anunciou a morte de 34 integrantes de uma gangue durante uma operação…",
-      "link": "https://g1.globo.com/mundo/noticia/2026/11/19/operacao-de-seguranca-no-haiti-deixa-34-membros-de-gangues-mortos-segundo-a-policia.ghtml",
-      "fonte": "g1",
-      "fonteNome": "g1 Mundo",
-      "pais": "Brasil",
-      "visao": "Portal do Grupo Globo",
-      "idioma": "pt",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T21:36:43.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://s2-g1.glbimg.com/rsbgbmEo_j8cjd2Nrouy8mdAHZc=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/z/K/eQHbphTaG5TzmghN4B6g/afp-20261118-d7x44zw-v1-highres-haitielsalvadorunrestgangs.jpg",
-      "imagemCredito": "g1 Mundo",
-      "regioes": [
-        "america-latina",
-        "america-norte",
-        "global",
-        "europa"
-      ],
-      "temas": [
-        "conflitos",
-        "politica",
-        "diplomacia",
-        "direitos"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "f38c2e36b122",
-      "titulo": "Wall Street ends sharply lower as Anthropic’s debut fails to revive AI fervour",
-      "resumo": "All three major U.S. stock indexes ended the session ⁠sharply lower, with the benchmark S&P 500 logging its fifth straight session of losses",
-      "link": "https://www.thehindu.com/business/markets/wall-street-ends-sharply-lower-as-anthropics-debut-fails-to-revive-ai-fervour/article71721814.ece",
-      "fonte": "thehindu",
-      "fonteNome": "The Hindu",
-      "pais": "Índia",
-      "visao": "Jornal de referência indiano",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T21:36:10.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://th-i.thgim.com/public/incoming/y38lur/article71721959.ece/alternates/LANDSCAPE_1200/2026-11-19T164121Z_1052802186_RC22ROAU8AOI_RTRMADP_3_USA-IPO-ANTHROPIC.JPG",
-      "imagemCredito": "The Hindu",
-      "regioes": [
-        "america-norte"
-      ],
-      "temas": [
-        "tecnologia"
       ],
       "coletadoEm": "2026-11-20T20:27:30.953Z"
     }
