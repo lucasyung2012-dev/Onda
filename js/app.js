@@ -9,6 +9,9 @@
 // =============================================================
 
 import * as telas from './telas.js';
+import * as meus from './meus.js';
+import * as dropbox from './dropbox.js';
+import { gerarPrompt, lerResposta } from './prompt.js';
 
 // ---------- Estado: o que está acontecendo agora ----------
 const estado = {
@@ -79,22 +82,24 @@ function rotaAtual() {
 function abaDaTela(tela) {
   if (['analise', 'edicoes', 'edicao'].includes(tela)) return 'hoje';
   if (tela === 'tema') return 'temas';
+  if (tela === 'cadeia') return 'meu';
   return ['hoje', 'temas', 'explorar', 'meu'].includes(tela) ? tela : 'hoje';
 }
 
 function htmlDaRota({ tela, partes }) {
   const { dados, analise } = estado;
   switch (tela) {
-    case 'analise': return telas.telaAnalise(analise, dados);
+    case 'analise': return telas.telaAnalise(analise, dados, { botao: analise?.destaque ? botaoPara(analise.destaque.fatoId) : '' });
     case 'temas': return telas.telaTemas(estado.tema, estado.temas);
     case 'edicoes': return telas.telaEdicoes(estado.edicoes, dados);
     // Telas de dias antigos: baixam o arquivo do dia e depois se desenham.
-    case 'edicao': return carregarDepois('analises', partes[1], (ed) => { estado.edicaoAberta = ed; return telas.telaAnalise(ed, dados, { comOutros: true }); });
+    case 'edicao': return carregarDepois('analises', partes[1], (ed) => { estado.edicaoAberta = ed; return telas.telaAnalise(ed, dados, { comOutros: true, botao: botaoPara(ed.destaque.fatoId) }); });
     case 'tema': {
       if (estado.tema?.dataReferencia === partes[1]) return telas.telaTema(estado.tema);
       return carregarDepois('temas', partes[1], (t) => telas.telaTema(t));
     }
-    case 'meu': return telas.telaMeu();
+    case 'meu': return htmlMeu();
+    case 'cadeia': return telas.telaCadeia(meus.pegar(partes[1]), dados);
     case 'explorar': {
       if (partes.length >= 3) {
         const chave = `${partes[1]}/${partes[2]}`;
@@ -155,8 +160,9 @@ function abrirFolha(id) {
   if (!fato && !guardado) return;
   folhaRotulo.textContent = 'Notícia';
   folhaCorpo.innerHTML = fato
-    ? telas.folhaFato(fato, estado.dados, contextoDoFato(id))
-    : telas.folhaArquivo(guardado, estado.dados);
+    ? telas.folhaFato(fato, estado.dados, { ...contextoDoFato(id), botao: botaoPara(id) })
+    : telas.folhaArquivo(guardado, estado.dados, botaoPara(id));
+  folha.dataset.fato = id;
   folhaCorpo.scrollTop = 0;
   folha.hidden = false;
   veu.hidden = false;
@@ -207,6 +213,140 @@ function fecharFolha({ veioDoVoltar = false } = {}) {
   folha.addEventListener('pointercancel', soltar);
 })();
 
+// ---------- Acompanhar e Meu Onda ----------
+
+/** Aviso rápido no rodapé da tela ("Acompanhando!", "Prompt copiado"...). */
+function aviso(texto) {
+  document.querySelector('.aviso-flutuante')?.remove();
+  const el = document.createElement('div');
+  el.className = 'aviso-flutuante';
+  el.textContent = texto;
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 2400);
+}
+
+const hojeData = () => estado.dados.dataReferencia;
+
+/** Botão "Acompanhar" já com o estado certo (ativo? limite do dia?). */
+function botaoPara(id) {
+  const contagem = meus.doDia(hojeData()).length;
+  return telas.botaoAcompanhar(id, meus.acompanhando(id), contagem, meus.LIMITE_POR_DIA, contagem >= meus.LIMITE_POR_DIA);
+}
+
+/**
+ * Junta tudo que sabemos sobre uma notícia para guardar no Meu Onda:
+ * título, resumo, região e as fontes com link (para o prompt e para reler depois).
+ */
+function itemParaAcompanhar(id) {
+  const base = { id, data: hojeData() };
+  const materias = (lista) => (lista || []).slice(0, 6).map((m) => ({ fonte: m.fonte, pais: m.pais, titulo: m.titulo, link: m.link, publicadoEm: m.publicadoEm }));
+  for (const ed of [estado.analise, estado.edicaoAberta]) {
+    if (ed?.destaque?.fatoId === id) {
+      const d = ed.destaque;
+      return { ...base, origem: 'destaque', titulo: d.titulo, resumo: d.emUmaFrase, regioes: d.regioes, temas: d.temas, imagem: d.imagem, materias: materias(d.fontesUsadas) };
+    }
+  }
+  const fato = estado.dados.fatos.find((f) => f.id === id);
+  const importa = [estado.analise, estado.edicaoAberta].flatMap((e) => e?.tambemImporta || []).find((t) => t.fatoId === id);
+  if (fato) {
+    return { ...base, origem: importa ? 'importa' : 'explorar', titulo: importa?.tituloPt || fato.titulo, resumo: importa?.porQueImporta || fato.resumo, regioes: fato.regioes, temas: fato.temas, imagem: fato.imagem, materias: materias(fato.materias) };
+  }
+  if (importa) {
+    return { ...base, origem: 'importa', titulo: importa.tituloPt, resumo: importa.porQueImporta, regioes: importa.regioes, temas: importa.temas, imagem: importa.imagem, materias: materias(importa.materias) };
+  }
+  return null;
+}
+
+function alternarAcompanhar(botao) {
+  const id = botao.dataset.acompanhar;
+  if (meus.acompanhando(id)) {
+    meus.deixarDeAcompanhar(id);
+    aviso('Deixou de acompanhar');
+    if (rotaAtual().tela === 'cadeia') { location.hash = 'meu'; return; }
+  } else {
+    const item = itemParaAcompanhar(id);
+    if (!item) return;
+    if (!meus.acompanhar(item)) { aviso(`Limite de ${meus.LIMITE_POR_DIA} por dia atingido`); return; }
+    aviso('★ Acompanhando');
+  }
+  // Atualiza todos os botões dessa notícia que estão na tela
+  document.querySelectorAll(`[data-acompanhar="${CSS.escape(id)}"]`).forEach((b) => {
+    const linha = b.closest('.acompanhar-linha');
+    if (linha) {
+      linha.outerHTML = botaoPara(id);
+      document.querySelector(`[data-acompanhar="${CSS.escape(id)}"]`)?.classList.add('pulsar');
+    }
+  });
+}
+
+function htmlMeu() {
+  const todos = meus.todos();
+  return telas.telaMeu({
+    situacao: meus.situacao(),
+    nomeConta: estado.nomeConta,
+    hoje: todos.filter((i) => i.data === hojeData()),
+    anteriores: todos.filter((i) => i.data !== hojeData()),
+    limite: meus.LIMITE_POR_DIA,
+    dados: estado.dados,
+  });
+}
+
+// Quando os seus dados mudam (ou sincronizam), a aba Meu Onda se redesenha.
+meus.aoMudar(() => {
+  if (rotaAtual().tela === 'meu') conteudo.innerHTML = htmlMeu();
+});
+
+// ---------- Editor da cadeia: salva enquanto você digita ----------
+
+/** Grava um campo do editor. "efeitos.precos" vira cadeia.efeitos.precos. */
+function gravarCampo(id, caminho, valor) {
+  const item = meus.pegar(id);
+  if (!item) return;
+  const cadeia = structuredClone(item.cadeia || {});
+  const [a, b] = caminho.split('.');
+  if (b) cadeia[a] = { ...(cadeia[a] || {}), [b]: valor };
+  else cadeia[a] = valor;
+  meus.atualizar(id, { cadeia });
+  const salvo = document.getElementById('estado-salvo');
+  if (salvo) salvo.textContent = meus.situacao().conectado ? 'salvando no Dropbox…' : 'salvo neste aparelho';
+}
+
+let esperaDigitacao = null;
+document.addEventListener('input', (e) => {
+  const editor = e.target.closest('.editor');
+  const campo = e.target.dataset?.campo;
+  if (!editor || !campo) return;
+  const id = editor.dataset.item;
+  if (e.target.type === 'range') {
+    e.target.removeAttribute('data-vazia');
+    e.target.nextElementSibling.textContent = e.target.value;
+    gravarCampo(id, campo, Number(e.target.value));
+    return;
+  }
+  clearTimeout(esperaDigitacao);
+  esperaDigitacao = setTimeout(() => gravarCampo(id, campo, e.target.value), 600);
+});
+
+/** "Colar resposta": preenche os campos com o que a IA respondeu. */
+function preencherComResposta(id) {
+  const texto = document.getElementById('resposta-ia')?.value || '';
+  const campos = lerResposta(texto);
+  const total = Object.keys(campos).length;
+  if (!total) { aviso('Não achei as seções na resposta'); return; }
+  const item = meus.pegar(id);
+  const cadeia = structuredClone(item.cadeia || {});
+  for (const c of ['oQueAconteceu', 'afetados', 'chegaEmMim', 'impacto']) if (campos[c]) cadeia[c] = campos[c];
+  cadeia.efeitos = { ...(cadeia.efeitos || {}) };
+  for (const c of ['economia', 'politica', 'precos', 'midia', 'outros']) if (campos[c]) cadeia.efeitos[c] = campos[c];
+  cadeia.notas = { ...(cadeia.notas || {}) };
+  if (campos.notaGeral != null) cadeia.notas.geral = campos.notaGeral;
+  if (campos.notaMundo != null) cadeia.notas.mundo = campos.notaMundo;
+  if (campos.notaVoce != null) cadeia.notas.voce = campos.notaVoce;
+  meus.atualizar(id, { cadeia, rascunhoIA: true });
+  conteudo.innerHTML = telas.telaCadeia(meus.pegar(id), estado.dados);
+  aviso(`${total} campos preenchidos — revise antes de marcar como pronta`);
+}
+
 // ---------- Explorar: atualizações parciais (sem redesenhar a tela toda) ----------
 
 function atualizarExplorarCorpo() {
@@ -233,10 +373,31 @@ document.addEventListener('input', (e) => {
 // ---------- Toques e cliques ----------
 
 document.addEventListener('click', (e) => {
-  const alvo = e.target.closest('[data-fato], [data-gaveta], [data-modo], [data-sub], [data-mais], [data-voltar], [data-fechar-folha], [data-recarregar], #veu');
+  const alvo = e.target.closest('[data-fato], [data-gaveta], [data-modo], [data-sub], [data-mais], [data-voltar], [data-fechar-folha], [data-recarregar], [data-acompanhar], [data-dropbox], [data-copiar-prompt], [data-mostrar-colar], [data-preencher], [data-impacto], [data-status], #veu');
   if (!alvo) return;
+  const idEditor = alvo.closest('.editor')?.dataset.item;
 
-  if (alvo.dataset.fato) abrirFolha(alvo.dataset.fato);
+  if (alvo.dataset.acompanhar) alternarAcompanhar(alvo);
+  else if (alvo.dataset.dropbox === 'conectar') dropbox.conectar();
+  else if (alvo.dataset.dropbox === 'sincronizar') { meus.sincronizar(); aviso('Sincronizando…'); }
+  else if (alvo.dataset.dropbox === 'desconectar') dropbox.desconectar().then(() => { estado.nomeConta = ''; conteudo.innerHTML = htmlMeu(); aviso('Dropbox desconectado deste aparelho'); });
+  else if (alvo.hasAttribute('data-copiar-prompt')) {
+    navigator.clipboard.writeText(gerarPrompt(meus.pegar(idEditor)))
+      .then(() => aviso('Prompt copiado — cole na IA'))
+      .catch(() => aviso('Não deu para copiar neste navegador'));
+  } else if (alvo.hasAttribute('data-mostrar-colar')) {
+    const area = document.getElementById('area-colar');
+    area.hidden = !area.hidden;
+    if (!area.hidden) document.getElementById('resposta-ia').focus();
+  } else if (alvo.hasAttribute('data-preencher')) preencherComResposta(idEditor);
+  else if (alvo.dataset.impacto) {
+    gravarCampo(idEditor, 'impacto', alvo.dataset.impacto);
+    alvo.parentElement.querySelectorAll('[data-impacto]').forEach((b) => b.setAttribute('aria-pressed', String(b === alvo)));
+  } else if (alvo.dataset.status) {
+    meus.atualizar(idEditor, { status: alvo.dataset.status });
+    conteudo.innerHTML = telas.telaCadeia(meus.pegar(idEditor), estado.dados);
+    aviso(alvo.dataset.status === 'pronta' ? 'Cadeia marcada como pronta' : 'Voltou para rascunho');
+  } else if (alvo.dataset.fato) abrirFolha(alvo.dataset.fato);
   else if (alvo.id === 'veu' || alvo.hasAttribute('data-fechar-folha')) fecharFolha();
   else if (alvo.dataset.gaveta) location.hash = `explorar/${alvo.dataset.gaveta}`;
   else if (alvo.hasAttribute('data-recarregar')) location.reload();
@@ -286,13 +447,34 @@ window.addEventListener('popstate', () => {
 // ---------- Início ----------
 
 async function iniciar() {
+  // Voltando do Dropbox com o código de autorização? Termina a conexão.
+  let acabouDeConectar = false;
+  try { acabouDeConectar = await dropbox.concluirConexao(); } catch (erro) { setTimeout(() => aviso(erro.message), 500); }
+  if (acabouDeConectar) location.hash = 'meu';
+
   try {
     await carregar();
     desenhar({ animar: false });
   } catch (erro) {
     conteudo.innerHTML = telas.telaErro(`Sem conexão e sem cópia salva ainda. (${erro.message})`);
+    return;
+  }
+
+  // Sincroniza com o Dropbox em segundo plano (o app já está na tela).
+  if (dropbox.conectado()) {
+    if (acabouDeConectar) aviso('Dropbox conectado');
+    meus.sincronizar();
+    dropbox.nomeDaConta().then((nome) => {
+      estado.nomeConta = nome;
+      if (rotaAtual().tela === 'meu') conteudo.innerHTML = htmlMeu();
+    }).catch(() => {});
   }
 }
+
+// Ao voltar para o app (trocou de aba ou de app), busca o que mudou no outro aparelho.
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible' && dropbox.conectado()) meus.sincronizar();
+});
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js').catch(() => { /* sem service worker, o app funciona online */ });

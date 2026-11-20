@@ -131,7 +131,7 @@ para mostrar a versão oficial daqueles governos, e são marcadas como estatais.
 | Site | HTML, CSS e JavaScript puro, sem build | Nada para instalar; dá para ler e entender cada arquivo. |
 | Hospedagem | GitHub Pages | Gratuita (exige repositório público). |
 | Robô | GitHub Actions | Gratuito e ilimitado em repositório público; o navegador não lê RSS de outros sites (CORS). |
-| Dados do usuário | Firebase Auth + Firestore | Gratuito, sincroniza celular e iPad, funciona offline. Só o dono lê e escreve. |
+| Dados do usuário | Dropbox (arquivo onda.json na pasta do app) | Gratuito, o usuário já usa, os dados ficam com ele; login seguro (OAuth PKCE). |
 | IA | Groq (principal) e OpenRouter (reserva), planos gratuitos | O GitHub Models foi desligado em 30/07/2026. Chaves ficam nos Secrets do GitHub. |
 
 ## 7. Etapas
@@ -146,8 +146,11 @@ Cada etapa termina com instruções de teste no celular antes de seguir.
    destaque (por peso geopolítico, nunca por quantidade de fontes; exige duas
    fontes independentes para confirmar) e escreve a análise; abas Hoje, Temas,
    Explorar e Meu Onda; visual novo com animações.
-4. **Login e Meu Onda** — Google + Firestore; 3 a 5 notícias por dia.
-5. **Cadeia de efeitos sua** — formulário, notas, etiquetas e "copiar prompt".
+4. **Edições e temas** ✓ — destaque + 5 por dia, edições anteriores, tema do dia
+   "entender o mundo" com fontes da Wikipedia, Explorar com mapas e ícones.
+5. **Meu Onda com Dropbox** — até 5 notícias por dia para acompanhar, editor da
+   cadeia de efeitos (com "copiar prompt" e "colar resposta"), sincronizado pelo
+   Dropbox entre celular e iPad (o Dropbox substituiu o Firebase).
 6. **Temas e biblioteca** — base pronta dos temas, tema do dia em rodízio.
 7. **Histórico e busca** — por tema, região, país, data e importância.
 
