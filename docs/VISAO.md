@@ -132,25 +132,24 @@ para mostrar a versão oficial daqueles governos, e são marcadas como estatais.
 | Hospedagem | GitHub Pages | Gratuita (exige repositório público). |
 | Robô | GitHub Actions | Gratuito e ilimitado em repositório público; o navegador não lê RSS de outros sites (CORS). |
 | Dados do usuário | Firebase Auth + Firestore | Gratuito, sincroniza celular e iPad, funciona offline. Só o dono lê e escreve. |
-| IA | GitHub Models (principal), Gemini/Groq gratuitos (reserva) | Sem custo. Condições verificadas antes de usar. |
+| IA | Groq (principal) e OpenRouter (reserva), planos gratuitos | O GitHub Models foi desligado em 30/07/2026. Chaves ficam nos Secrets do GitHub. |
 
 ## 7. Etapas
 
 Cada etapa termina com instruções de teste no celular antes de seguir.
+(Ordem revista em 20/11/2026: a análise por IA veio antes do login.)
 
-1. **Coleta** — robô lê os feeds a cada 3 horas, agrupa matérias do mesmo
+1. **Coleta** ✓ — robô lê os feeds a cada 3 horas, agrupa matérias do mesmo
    fato, classifica por região e tema, grava `data/noticias/`.
-2. **Tela do dia** — PWA com destaque, tema do dia e lista; abas; modos
-   noite e dia; ícones do app.
-3. **Login e acompanhar** — Google + Firestore; 3 a 5 notícias por dia.
-4. **Cadeia de efeitos** — formulário, notas, etiquetas e "copiar prompt".
-5. **Biblioteca** — 42 temas com base pronta, rodízio, ligação com notícias,
-   sugestão de temas novos.
-6. **Histórico** — busca por tema, região, país, data e importância.
-7. **Pesquisa e IA automáticas** — GDELT e Google Notícias para achar mais
-   matérias, leitura das abertas, Wikipedia para contexto, IA gratuita
-   escolhe o destaque e escreve rascunhos (marcados "rascunho da IA"),
-   cada afirmação ligada a um link.
+2. **Primeira tela** ✓ — PWA instalável, modos noite e dia, ícones.
+3. **Destaque analisado + nova organização** — todo dia às 7h a IA escolhe o
+   destaque (por peso geopolítico, nunca por quantidade de fontes; exige duas
+   fontes independentes para confirmar) e escreve a análise; abas Hoje, Temas,
+   Explorar e Meu Onda; visual novo com animações.
+4. **Login e Meu Onda** — Google + Firestore; 3 a 5 notícias por dia.
+5. **Cadeia de efeitos sua** — formulário, notas, etiquetas e "copiar prompt".
+6. **Temas e biblioteca** — base pronta dos temas, tema do dia em rodízio.
+7. **Histórico e busca** — por tema, região, país, data e importância.
 
 ## 8. Fica para depois
 

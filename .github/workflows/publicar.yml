@@ -18,7 +18,7 @@ on:
   push:
     branches: [main]
   workflow_run:
-    workflows: ['Coletar notícias', 'Gerar ícones do app']
+    workflows: ['Coletar notícias', 'Gerar ícones do app', 'Analisar destaque']
     types: [completed]
   workflow_dispatch:
 

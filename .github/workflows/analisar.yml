@@ -1,0 +1,58 @@
+# =============================================================
+# Analista do Onda: escolhe e analisa o destaque do dia com IA.
+#
+# Roda todo dia às 7h de Brasília (10h UTC) e também pelo botão
+# "Run workflow". Antes de analisar, faz uma coleta nova.
+#
+# Precisa de pelo menos uma chave gratuita nos Secrets do repositório
+# (Settings → Secrets and variables → Actions → New repository secret):
+#   GROQ_API_KEY       (principal)
+#   OPENROUTER_API_KEY (reserva, opcional)
+# =============================================================
+name: Analisar destaque
+
+on:
+  schedule:
+    - cron: '0 10 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: coleta
+  cancel-in-progress: false
+
+jobs:
+  analisar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Coletar as notícias mais recentes
+        run: node coletor/coletar.mjs
+
+      - name: Escolher e analisar o destaque do dia
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: node coletor/analisar.mjs
+
+      - name: Salvar no repositório
+        if: always()
+        run: |
+          git config user.name "onda-robo"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "Nada de novo para salvar."
+          else
+            git commit -m "Análise do dia: $(TZ=America/Sao_Paulo date '+%d/%m/%Y %H:%M') (Brasília)"
+            git pull --rebase
+            git push
+          fi

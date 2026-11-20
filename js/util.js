@@ -50,6 +50,17 @@ export function dataPorExtenso(aaaammdd) {
   return new Intl.DateTimeFormat('pt-BR', { timeZone: FUSO, weekday: 'long', day: 'numeric', month: 'long' }).format(data);
 }
 
+/** "2026-11-20" → "20/11" */
+export function dataCurta(aaaammdd) {
+  const [, m, d] = aaaammdd.split('-');
+  return `${d}/${m}`;
+}
+
+/** Tira acentos (para a busca achar "Irã" digitando "ira"). */
+export function semAcento(texto) {
+  return texto.normalize('NFD').replace(/[̀-ͯ]/g, '');
+}
+
 /** 1376 → "1.376" */
 export function numero(n) {
   return new Intl.NumberFormat('pt-BR').format(n);

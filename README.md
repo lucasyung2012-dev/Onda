@@ -24,9 +24,9 @@ A visão completa do projeto está em [`docs/VISAO.md`](docs/VISAO.md).
 ## Etapas
 
 - [x] 1. Coleta de notícias
-- [ ] 2. Tela do dia (app instalável)
-- [ ] 3. Login e "acompanhar"
-- [ ] 4. Cadeia de efeitos
-- [ ] 5. Biblioteca de temas
-- [ ] 6. Histórico
-- [ ] 7. Pesquisa e IA automáticas
+- [x] 2. Primeira tela (app instalável)
+- [x] 3. Destaque analisado pela IA, nova organização e visual
+- [ ] 4. Login e Meu Onda
+- [ ] 5. Cadeia de efeitos sua
+- [ ] 6. Temas e biblioteca
+- [ ] 7. Histórico e busca

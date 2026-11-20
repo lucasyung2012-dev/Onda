@@ -12,7 +12,7 @@
 // aparelhos baixarem a versão nova.
 // =============================================================
 
-const VERSAO = 'onda-v1';
+const VERSAO = 'onda-v2';
 
 const ARQUIVOS_DO_APP = [
   './',
@@ -21,6 +21,7 @@ const ARQUIVOS_DO_APP = [
   'js/app.js',
   'js/telas.js',
   'js/util.js',
+  'js/biblioteca.js',
   'manifest.webmanifest',
   'assets/logo/onda.svg',
   'assets/logo/onda-mini.svg',
@@ -64,14 +65,20 @@ self.addEventListener('fetch', (evento) => {
     return;
   }
 
-  // Arquivos do app e fontes: cópia guardada primeiro (mais rápido).
+  // Arquivos do app e fontes: mostra a cópia guardada na hora (rápido) e,
+  // ao mesmo tempo, busca a versão nova para a próxima abertura.
   if (url.origin === location.origin || url.hostname.endsWith('gstatic.com') || url.hostname.endsWith('googleapis.com')) {
     evento.respondWith(
-      caches.match(pedido).then((guardado) => guardado || fetch(pedido).then((resposta) => {
-        const copia = resposta.clone();
-        caches.open(VERSAO).then((cache) => cache.put(pedido, copia));
-        return resposta;
-      })),
+      caches.match(pedido).then((guardado) => {
+        const daInternet = fetch(pedido).then((resposta) => {
+          if (resposta.ok) {
+            const copia = resposta.clone();
+            caches.open(VERSAO).then((cache) => cache.put(pedido, copia));
+          }
+          return resposta;
+        }).catch(() => guardado);
+        return guardado || daInternet;
+      }),
     );
   }
   // Fotos das notícias: vêm direto dos sites das fontes, sem guardar cópia.
