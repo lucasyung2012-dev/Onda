@@ -11,7 +11,7 @@
 import * as telas from './telas.js';
 import * as meus from './meus.js';
 import * as dropbox from './dropbox.js';
-import { gerarPrompt, lerResposta } from './prompt.js';
+import { gerarPrompt } from './prompt.js';
 
 // ---------- Estado: o que está acontecendo agora ----------
 const estado = {
@@ -82,7 +82,7 @@ function rotaAtual() {
 function abaDaTela(tela) {
   if (['analise', 'edicoes', 'edicao'].includes(tela)) return 'hoje';
   if (tela === 'tema') return 'temas';
-  if (tela === 'cadeia') return 'meu';
+  if (tela === 'analise-minha') return 'meu';
   return ['hoje', 'temas', 'explorar', 'meu'].includes(tela) ? tela : 'hoje';
 }
 
@@ -99,7 +99,7 @@ function htmlDaRota({ tela, partes }) {
       return carregarDepois('temas', partes[1], (t) => telas.telaTema(t));
     }
     case 'meu': return htmlMeu();
-    case 'cadeia': return telas.telaCadeia(meus.pegar(partes[1]), dados);
+    case 'analise-minha': return telas.telaMinhaAnalise(meus.pegar(partes[1]), dados);
     case 'explorar': {
       if (partes.length >= 3) {
         const chave = `${partes[1]}/${partes[2]}`;
@@ -262,7 +262,7 @@ function alternarAcompanhar(botao) {
   if (meus.acompanhando(id)) {
     meus.deixarDeAcompanhar(id);
     aviso('Deixou de acompanhar');
-    if (rotaAtual().tela === 'cadeia') { location.hash = 'meu'; return; }
+    if (rotaAtual().tela === 'analise-minha') { location.hash = 'meu'; return; }
   } else {
     const item = itemParaAcompanhar(id);
     if (!item) return;
@@ -296,56 +296,28 @@ meus.aoMudar(() => {
   if (rotaAtual().tela === 'meu') conteudo.innerHTML = htmlMeu();
 });
 
-// ---------- Editor da cadeia: salva enquanto você digita ----------
+// ---------- Minha análise: salva enquanto você digita ----------
 
-/** Grava um campo do editor. "efeitos.precos" vira cadeia.efeitos.precos. */
-function gravarCampo(id, caminho, valor) {
+/** Grava o palpite ou o texto da sua análise. */
+function gravarCampo(id, campo, valor) {
   const item = meus.pegar(id);
   if (!item) return;
-  const cadeia = structuredClone(item.cadeia || {});
-  const [a, b] = caminho.split('.');
-  if (b) cadeia[a] = { ...(cadeia[a] || {}), [b]: valor };
-  else cadeia[a] = valor;
-  meus.atualizar(id, { cadeia });
+  meus.atualizar(id, { minha: { ...(item.minha || {}), [campo]: valor } });
   const salvo = document.getElementById('estado-salvo');
-  if (salvo) salvo.textContent = meus.situacao().conectado ? 'salvando no Dropbox…' : 'salvo neste aparelho';
+  if (salvo) salvo.textContent = meus.situacao().conectado ? 'salvo e enviando ao Dropbox' : 'salvo neste aparelho';
 }
 
-let esperaDigitacao = null;
+// Uma espera para cada campo: digitar no texto não cancela o salvamento do palpite.
+const esperaDigitacao = {};
 document.addEventListener('input', (e) => {
   const editor = e.target.closest('.editor');
   const campo = e.target.dataset?.campo;
   if (!editor || !campo) return;
-  const id = editor.dataset.item;
-  if (e.target.type === 'range') {
-    e.target.removeAttribute('data-vazia');
-    e.target.nextElementSibling.textContent = e.target.value;
-    gravarCampo(id, campo, Number(e.target.value));
-    return;
-  }
-  clearTimeout(esperaDigitacao);
-  esperaDigitacao = setTimeout(() => gravarCampo(id, campo, e.target.value), 600);
+  const salvo = document.getElementById('estado-salvo');
+  if (salvo) salvo.textContent = 'digitando…';
+  clearTimeout(esperaDigitacao[campo]);
+  esperaDigitacao[campo] = setTimeout(() => gravarCampo(editor.dataset.item, campo, e.target.value), 600);
 });
-
-/** "Colar resposta": preenche os campos com o que a IA respondeu. */
-function preencherComResposta(id) {
-  const texto = document.getElementById('resposta-ia')?.value || '';
-  const campos = lerResposta(texto);
-  const total = Object.keys(campos).length;
-  if (!total) { aviso('Não achei as seções na resposta'); return; }
-  const item = meus.pegar(id);
-  const cadeia = structuredClone(item.cadeia || {});
-  for (const c of ['oQueAconteceu', 'afetados', 'chegaEmMim', 'impacto']) if (campos[c]) cadeia[c] = campos[c];
-  cadeia.efeitos = { ...(cadeia.efeitos || {}) };
-  for (const c of ['economia', 'politica', 'precos', 'midia', 'outros']) if (campos[c]) cadeia.efeitos[c] = campos[c];
-  cadeia.notas = { ...(cadeia.notas || {}) };
-  if (campos.notaGeral != null) cadeia.notas.geral = campos.notaGeral;
-  if (campos.notaMundo != null) cadeia.notas.mundo = campos.notaMundo;
-  if (campos.notaVoce != null) cadeia.notas.voce = campos.notaVoce;
-  meus.atualizar(id, { cadeia, rascunhoIA: true });
-  conteudo.innerHTML = telas.telaCadeia(meus.pegar(id), estado.dados);
-  aviso(`${total} campos preenchidos — revise antes de marcar como pronta`);
-}
 
 // ---------- Explorar: atualizações parciais (sem redesenhar a tela toda) ----------
 
@@ -373,7 +345,7 @@ document.addEventListener('input', (e) => {
 // ---------- Toques e cliques ----------
 
 document.addEventListener('click', (e) => {
-  const alvo = e.target.closest('[data-fato], [data-gaveta], [data-modo], [data-sub], [data-mais], [data-voltar], [data-fechar-folha], [data-recarregar], [data-acompanhar], [data-dropbox], [data-copiar-prompt], [data-mostrar-colar], [data-preencher], [data-impacto], [data-status], #veu');
+  const alvo = e.target.closest('[data-fato], [data-gaveta], [data-modo], [data-sub], [data-mais], [data-voltar], [data-fechar-folha], [data-recarregar], [data-acompanhar], [data-dropbox], [data-copiar-prompt], #veu');
   if (!alvo) return;
   const idEditor = alvo.closest('.editor')?.dataset.item;
 
@@ -385,18 +357,6 @@ document.addEventListener('click', (e) => {
     navigator.clipboard.writeText(gerarPrompt(meus.pegar(idEditor)))
       .then(() => aviso('Prompt copiado — cole na IA'))
       .catch(() => aviso('Não deu para copiar neste navegador'));
-  } else if (alvo.hasAttribute('data-mostrar-colar')) {
-    const area = document.getElementById('area-colar');
-    area.hidden = !area.hidden;
-    if (!area.hidden) document.getElementById('resposta-ia').focus();
-  } else if (alvo.hasAttribute('data-preencher')) preencherComResposta(idEditor);
-  else if (alvo.dataset.impacto) {
-    gravarCampo(idEditor, 'impacto', alvo.dataset.impacto);
-    alvo.parentElement.querySelectorAll('[data-impacto]').forEach((b) => b.setAttribute('aria-pressed', String(b === alvo)));
-  } else if (alvo.dataset.status) {
-    meus.atualizar(idEditor, { status: alvo.dataset.status });
-    conteudo.innerHTML = telas.telaCadeia(meus.pegar(idEditor), estado.dados);
-    aviso(alvo.dataset.status === 'pronta' ? 'Cadeia marcada como pronta' : 'Voltou para rascunho');
   } else if (alvo.dataset.fato) abrirFolha(alvo.dataset.fato);
   else if (alvo.id === 'veu' || alvo.hasAttribute('data-fechar-folha')) fecharFolha();
   else if (alvo.dataset.gaveta) location.hash = `explorar/${alvo.dataset.gaveta}`;

@@ -148,9 +148,10 @@ Cada etapa termina com instruções de teste no celular antes de seguir.
    Explorar e Meu Onda; visual novo com animações.
 4. **Edições e temas** ✓ — destaque + 5 por dia, edições anteriores, tema do dia
    "entender o mundo" com fontes da Wikipedia, Explorar com mapas e ícones.
-5. **Meu Onda com Dropbox** — até 5 notícias por dia para acompanhar, editor da
-   cadeia de efeitos (com "copiar prompt" e "colar resposta"), sincronizado pelo
-   Dropbox entre celular e iPad (o Dropbox substituiu o Firebase).
+5. **Meu Onda com Dropbox** — até 5 notícias por dia para acompanhar e, se quiser,
+   a "Minha análise": um palpite opcional (para exercitar o raciocínio), o botão
+   "copiar prompt" com tudo que a análise precisa ter e uma caixa de texto livre.
+   Sincronizado pelo Dropbox entre celular e iPad (substituiu o Firebase).
 6. **Temas e biblioteca** — base pronta dos temas, tema do dia em rodízio.
 7. **Histórico e busca** — por tema, região, país, data e importância.
 

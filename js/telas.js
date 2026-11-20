@@ -543,7 +543,7 @@ export function botaoAcompanhar(id, ativo, contagem, limite, cheio) {
   if (ativo) {
     return `<div class="acompanhar-linha">
       <button class="botao acompanhar ativo" type="button" data-acompanhar="${esc(id)}"><span class="estrela" aria-hidden="true">★</span>Acompanhando</button>
-      <a class="botao principal" href="#cadeia/${esc(id)}">Escrever a cadeia <span class="icone i-seta" aria-hidden="true"></span></a>
+      <a class="botao principal" href="#analise-minha/${esc(id)}">Minha análise <span class="icone i-seta" aria-hidden="true"></span></a>
     </div>`;
   }
   return `<div class="acompanhar-linha">
@@ -554,16 +554,21 @@ export function botaoAcompanhar(id, ativo, contagem, limite, cheio) {
 
 // ---------- MEU ONDA ----------
 
-const STATUS = { rascunho: 'Rascunho', pronta: 'Pronta' };
+/** Primeira linha do texto, para mostrar na lista. */
+function previa(texto, max = 110) {
+  const linha = (texto || '').split('\n').map((l) => l.replace(/[#*]/g, '').trim()).find(Boolean) || '';
+  return linha.length > max ? `${linha.slice(0, max - 1)}…` : linha;
+}
 
 function linhaMeu(item, dados, i) {
   const regiao = item.regioes?.[0];
-  const preenchidos = ['oQueAconteceu', 'afetados', 'chegaEmMim'].filter((c) => item.cadeia?.[c]).length;
+  const m = item.minha || {};
+  const resumo = m.texto ? previa(m.texto) : m.palpite ? `Palpite: ${previa(m.palpite)}` : 'Ainda sem análise';
   return `
-    <a class="cartao-importa" href="#cadeia/${esc(item.id)}" style="--i:${Math.min(i, 10)};grid-template-columns:1fr 64px;text-decoration:none;color:inherit">
+    <a class="cartao-importa" href="#analise-minha/${esc(item.id)}" style="--i:${Math.min(i, 10)};grid-template-columns:1fr 64px;text-decoration:none;color:inherit">
       <div>
         <h3>${esc(item.titulo)}</h3>
-        <p><span class="etiqueta ${item.status === 'pronta' ? 'pronta' : ''}">${STATUS[item.status] || 'Rascunho'}</span> · ${preenchidos}/3 partes principais${item.cadeia?.notas?.voce != null ? ` · você <b style="color:var(--ouro)">${item.cadeia.notas.voce}</b>` : ''}</p>
+        <p>${m.texto ? '<span class="etiqueta pronta">Salva</span> ' : ''}${esc(resumo)}</p>
       </div>
       ${imagem({ url: item.imagem, regiao, nomeRegiao: dados.nomesRegioes[regiao], comCredito: false })}
     </a>`;
@@ -573,10 +578,10 @@ export function telaMeu({ situacao, nomeConta, hoje, anteriores, limite, dados }
   let conta;
   if (!situacao.configurado) {
     conta = `<div class="cartao meu-cartao"><div class="avatar"><span class="icone i-pessoa" aria-hidden="true"></span></div>
-      <h2>Falta ligar o Dropbox</h2><p>Por enquanto, o que você acompanha fica salvo só neste aparelho. Quando a App key do Dropbox for configurada, aparece aqui o botão para conectar e sincronizar com o iPad.</p></div>`;
+      <h2>Falta ligar o Dropbox</h2><p>Por enquanto, o que você acompanha fica salvo só neste aparelho.</p></div>`;
   } else if (!situacao.conectado) {
     conta = `<div class="cartao meu-cartao"><div class="avatar"><span class="icone i-pessoa" aria-hidden="true"></span></div>
-      <h2>Conecte o seu Dropbox</h2><p>Assim o que você acompanha e as suas cadeias ficam iguais no celular e no iPad. O Onda só enxerga a pasta dele, dentro de Apps.</p>
+      <h2>Conecte o seu Dropbox</h2><p>Assim o que você acompanha e as suas análises ficam iguais no celular e no iPad. O Onda só enxerga a pasta dele, dentro de Apps.</p>
       <button class="botao principal" type="button" data-dropbox="conectar" style="margin-top:6px">Conectar o Dropbox</button></div>`;
   } else {
     const quando = situacao.ultimaSincronizacao ? `sincronizado às ${hora(situacao.ultimaSincronizacao.toISOString())}` : 'sincronizando…';
@@ -588,7 +593,7 @@ export function telaMeu({ situacao, nomeConta, hoje, anteriores, limite, dados }
 
   return `
     <div class="tela">
-      ${cabecalho('Meu Onda', 'O que você acompanha', `Escolha até ${limite} notícias por dia e escreva a cadeia de efeitos de cada uma.`)}
+      ${cabecalho('Meu Onda', 'O que você acompanha', `Até ${limite} notícias por dia. Em cada uma, se quiser, a sua análise fica guardada.`)}
       <div style="margin-top:16px">${conta}</div>
       <div class="secao">
         <div class="secao-cabeca"><h2>Hoje</h2><span>${hoje.length}/${limite}</span></div>
@@ -598,71 +603,49 @@ export function telaMeu({ situacao, nomeConta, hoje, anteriores, limite, dados }
       <div class="secao">
         <div class="secao-cabeca"><h2>Anteriores</h2><span>${anteriores.length}</span></div>
         ${anteriores.length ? `<div class="importa cascata">${anteriores.map((it, i) => linhaMeu(it, dados, i)).join('')}</div>`
-          : '<p class="vazio">As cadeias dos dias anteriores ficam guardadas aqui.</p>'}
+          : '<p class="vazio">As notícias e análises dos dias anteriores ficam guardadas aqui.</p>'}
       </div>
       ${situacao.conectado ? '<button class="botao largo" type="button" data-dropbox="desconectar" style="margin-top:28px">Desconectar este aparelho</button>' : ''}
     </div>`;
 }
 
-// ---------- EDITOR DA CADEIA DE EFEITOS ----------
+// ---------- MINHA ANÁLISE ----------
+// Opcional, para exercitar o raciocínio: um palpite curto (antes de ler a IA)
+// e uma caixa de texto livre, onde você escreve ou cola a resposta da IA.
 
-export function telaCadeia(item, dados) {
+export function telaMinhaAnalise(item, dados) {
   if (!item) return `<div class="tela"><button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>Meu Onda</button><p class="vazio">Essa notícia não está mais na sua lista.</p></div>`;
-  const c = item.cadeia || {};
-  const ef = c.efeitos || {};
-  const notas = c.notas || {};
-  const campo = (nome, rotulo, dica, valor, linhas = 3) => `
-    <label class="campo"><span>${rotulo}</span>${dica ? `<small>${dica}</small>` : ''}
-      <textarea data-campo="${nome}" rows="${linhas}">${esc(valor || '')}</textarea></label>`;
-  const nota = (nome, rotulo, classe = '') => `
-    <label class="campo-nota ${classe}"><span>${rotulo}</span>
-      <input type="range" min="0" max="10" step="1" data-campo="notas.${nome}" value="${notas[nome] ?? 5}" ${notas[nome] == null ? 'data-vazia' : ''}>
-      <output>${notas[nome] ?? '–'}</output></label>`;
-  const impacto = ['direto', 'indireto', 'risco', 'nenhum'].map((t) =>
-    `<button type="button" class="chip" data-impacto="${t}" aria-pressed="${c.impacto === t}">${IMPACTO[t]}</button>`).join('');
+  const m = item.minha || {};
   const regiao = item.regioes?.[0];
-
   return `
     <div class="tela editor" data-item="${esc(item.id)}">
       <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>Meu Onda</button>
-      <div class="etiquetas" style="margin-top:6px">${regiao ? etiquetaRegiao(regiao, dados) : ''}<span class="etiqueta ${item.status === 'pronta' ? 'pronta' : ''}">${STATUS[item.status] || 'Rascunho'}</span></div>
+      <div class="etiquetas" style="margin-top:6px">${regiao ? etiquetaRegiao(regiao, dados) : ''}</div>
       <h1 class="titulo-tela" style="font-size:24px;margin-top:8px">${esc(item.titulo)}</h1>
-      <p class="subtitulo">Acompanhando desde ${esc(dataCurta(item.data))} · <span id="estado-salvo">salvo</span></p>
+      <p class="subtitulo">Acompanhando desde ${esc(dataCurta(item.data))} · <span id="estado-salvo">${m.texto || m.palpite ? 'salvo' : 'nada escrito ainda'}</span></p>
 
-      <div class="cartao ajuda-ia">
-        <strong>Peça um rascunho a uma IA</strong>
-        <p class="subtitulo">Copie o prompt, cole no ChatGPT ou no Claude, e depois cole a resposta aqui: o Onda preenche os campos para você revisar.</p>
-        <div class="acompanhar-linha"><button class="botao principal" type="button" data-copiar-prompt>Copiar prompt</button><button class="botao" type="button" data-mostrar-colar>Colar resposta</button></div>
-        <div id="area-colar" hidden>
-          <textarea id="resposta-ia" rows="6" placeholder="Cole aqui a resposta da IA"></textarea>
-          <button class="botao largo" type="button" data-preencher>Preencher os campos</button>
-        </div>
-      </div>
+      <section class="bloco">
+        <div class="bloco-cabeca"><span class="num">1</span><h2>Meu palpite</h2></div>
+        <label class="campo"><small>Opcional. Antes de ler qualquer análise: em uma frase, como você acha que isso chega em você?</small>
+          <textarea data-campo="palpite" rows="2" placeholder="Ex.: pode encarecer a gasolina daqui a algumas semanas">${esc(m.palpite || '')}</textarea></label>
+      </section>
 
-      <section class="bloco"><div class="bloco-cabeca"><span class="num">1</span><h2>O que aconteceu</h2></div>
-        ${campo('oQueAconteceu', 'O fato', 'O quê, onde, quando (a data do fato, não da notícia) e quem.', c.oQueAconteceu, 4)}</section>
-      <section class="bloco"><div class="bloco-cabeca"><span class="num">2</span><h2>Quem é afetado</h2></div>
-        ${campo('afetados', 'Diretamente', 'Países, empresas, pessoas.', c.afetados)}</section>
-      <section class="bloco"><div class="bloco-cabeca"><span class="num">3</span><h2>Efeitos em seguida</h2></div>
-        ${campo('efeitos.economia', 'Economia', '', ef.economia, 2)}
-        ${campo('efeitos.politica', 'Política', '', ef.politica, 2)}
-        ${campo('efeitos.precos', 'Preços', '', ef.precos, 2)}
-        ${campo('efeitos.midia', 'Mídia', '', ef.midia, 2)}
-        ${campo('efeitos.outros', 'Outros', '', ef.outros, 2)}</section>
-      <section class="bloco"><div class="bloco-cabeca"><span class="num">4</span><h2>Como chega em mim</h2></div>
-        <div class="chips" style="margin:0 0 10px;flex-wrap:wrap">${impacto}</div>
-        ${campo('chegaEmMim', 'No Brasil e no meu dia a dia', 'Sem exagero: se não chega, diga.', c.chegaEmMim, 4)}</section>
-      <section class="bloco"><div class="bloco-cabeca"><span class="num">5</span><h2>Notas de 0 a 10</h2></div>
-        ${nota('geral', 'Importância geral')}${nota('mundo', 'Impacto no mundo')}${nota('voce', 'Impacto no meu dia a dia', 'voce')}
-        <details class="regua"><summary>Ver a régua</summary><p>0–2 mínima · 3–4 regional · 5–6 internacional relevante · 7–8 grande acontecimento · 9 excepcional · 10 raríssima, transforma a ordem mundial.</p></details></section>
+      <section class="bloco">
+        <div class="bloco-cabeca"><span class="num">2</span><h2>Peça a análise a uma IA</h2></div>
+        <p class="subtitulo" style="margin-bottom:10px">O prompt já leva a notícia, as fontes e tudo que a análise precisa ter: o que aconteceu, quem é afetado, os efeitos, como chega em você e as notas.</p>
+        <button class="botao principal" type="button" data-copiar-prompt>Copiar prompt</button>
+      </section>
 
-      <div class="acompanhar-linha" style="margin-top:26px">
-        <button class="botao principal" type="button" data-status="${item.status === 'pronta' ? 'rascunho' : 'pronta'}">${item.status === 'pronta' ? 'Voltar para rascunho' : 'Marcar como pronta'}</button>
-        <button class="botao" type="button" data-acompanhar="${esc(item.id)}">Deixar de acompanhar</button>
-      </div>
+      <section class="bloco">
+        <div class="bloco-cabeca"><span class="num">3</span><h2>Minha análise</h2></div>
+        <label class="campo"><small>Cole aqui a resposta da IA, escreva do seu jeito, ou os dois. Fica salvo.</small>
+          <textarea data-campo="texto" rows="14" placeholder="Cole ou escreva aqui">${esc(m.texto || '')}</textarea></label>
+      </section>
+
+      <button class="botao largo" type="button" data-acompanhar="${esc(item.id)}" style="margin-top:20px">Deixar de acompanhar</button>
 
       ${(item.materias || []).length ? `<div class="secao"><div class="secao-cabeca"><h2 style="font-size:18px">Fontes</h2></div>
-        <ul class="fontes-usadas">${item.materias.map((m, i) => `<li><a class="fonte-usada" href="${esc(m.link)}" target="_blank" rel="noopener noreferrer"><span class="idx">${i + 1}</span><div><strong>${esc(m.fonte)}</strong><p>${esc(m.titulo)}</p></div><span class="icone i-externo" aria-hidden="true"></span></a></li>`).join('')}</ul></div>` : ''}
+        <ul class="fontes-usadas">${item.materias.map((f, i) => `<li><a class="fonte-usada" href="${esc(f.link)}" target="_blank" rel="noopener noreferrer"><span class="idx">${i + 1}</span><div><strong>${esc(f.fonte)}</strong><p>${esc(f.titulo)}</p></div><span class="icone i-externo" aria-hidden="true"></span></a></li>`).join('')}</ul></div>` : ''}
     </div>`;
 }
 
