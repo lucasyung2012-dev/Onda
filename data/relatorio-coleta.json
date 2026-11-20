@@ -1,17 +1,35 @@
 {
-  "geradoEm": "2026-11-20T20:27:30.953Z",
-  "fontesOk": 32,
+  "geradoEm": "2026-11-20T20:36:59.091Z",
+  "fontesOk": 70,
   "fontesComErro": 1,
-  "noticiasNovasNestaRodada": 887,
+  "noticiasNovasNestaRodada": 1107,
   "porFonte": [
     {
       "id": "nyt",
       "nome": "The New York Times",
       "status": "ok",
-      "itensNoFeed": 55,
-      "aceitas": 55,
+      "itensNoFeed": 54,
+      "aceitas": 54,
       "descartadasPorIdade": 0,
-      "comImagem": 50
+      "comImagem": 49
+    },
+    {
+      "id": "wapo",
+      "nome": "The Washington Post",
+      "status": "ok",
+      "itensNoFeed": 13,
+      "aceitas": 13,
+      "descartadasPorIdade": 0,
+      "comImagem": 0
+    },
+    {
+      "id": "fox",
+      "nome": "Fox News",
+      "status": "ok",
+      "itensNoFeed": 25,
+      "aceitas": 17,
+      "descartadasPorIdade": 8,
+      "comImagem": 17
     },
     {
       "id": "npr",
@@ -32,6 +50,16 @@
       "comImagem": 15
     },
     {
+      "id": "cbc",
+      "nome": "CBC News",
+      "status": "erro",
+      "erro": "demorou demais para responder",
+      "itensNoFeed": 0,
+      "aceitas": 0,
+      "descartadasPorIdade": 0,
+      "comImagem": 0
+    },
+    {
       "id": "foreignpolicy",
       "nome": "Foreign Policy",
       "status": "ok",
@@ -41,12 +69,57 @@
       "comImagem": 20
     },
     {
-      "id": "csis",
-      "nome": "CSIS",
+      "id": "atlanticcouncil",
+      "nome": "Atlantic Council",
       "status": "ok",
-      "itensNoFeed": 10,
+      "itensNoFeed": 100,
+      "aceitas": 24,
+      "descartadasPorIdade": 76,
+      "comImagem": 0
+    },
+    {
+      "id": "warontherocks",
+      "nome": "War on the Rocks",
+      "status": "ok",
+      "itensNoFeed": 100,
+      "aceitas": 4,
+      "descartadasPorIdade": 96,
+      "comImagem": 0
+    },
+    {
+      "id": "responsiblestatecraft",
+      "nome": "Responsible Statecraft",
+      "status": "ok",
+      "itensNoFeed": 30,
+      "aceitas": 6,
+      "descartadasPorIdade": 24,
+      "comImagem": 6
+    },
+    {
+      "id": "stimson",
+      "nome": "Stimson Center",
+      "status": "ok",
+      "itensNoFeed": 12,
       "aceitas": 0,
-      "descartadasPorIdade": 10,
+      "descartadasPorIdade": 12,
+      "comImagem": 0
+    },
+    {
+      "id": "restofworld",
+      "nome": "Rest of World",
+      "status": "ok",
+      "itensNoFeed": 12,
+      "aceitas": 1,
+      "descartadasPorIdade": 11,
+      "comImagem": 1
+    },
+    {
+      "id": "oilprice",
+      "nome": "OilPrice.com",
+      "status": "ok",
+      "itensNoFeed": 15,
+      "aceitas": 15,
+      "descartadasPorIdade": 0,
       "comImagem": 0
     },
     {
@@ -113,6 +186,15 @@
       "comImagem": 23
     },
     {
+      "id": "rfien",
+      "nome": "RFI (inglês)",
+      "status": "ok",
+      "itensNoFeed": 20,
+      "aceitas": 16,
+      "descartadasPorIdade": 4,
+      "comImagem": 16
+    },
+    {
       "id": "lemonde",
       "nome": "Le Monde (inglês)",
       "status": "ok",
@@ -140,6 +222,24 @@
       "comImagem": 0
     },
     {
+      "id": "politicoeu",
+      "nome": "Politico Europe",
+      "status": "ok",
+      "itensNoFeed": 10,
+      "aceitas": 10,
+      "descartadasPorIdade": 0,
+      "comImagem": 0
+    },
+    {
+      "id": "balkaninsight",
+      "nome": "Balkan Insight",
+      "status": "ok",
+      "itensNoFeed": 90,
+      "aceitas": 16,
+      "descartadasPorIdade": 74,
+      "comImagem": 16
+    },
+    {
       "id": "tass",
       "nome": "TASS",
       "status": "ok",
@@ -158,6 +258,33 @@
       "comImagem": 0
     },
     {
+      "id": "meduza",
+      "nome": "Meduza",
+      "status": "ok",
+      "itensNoFeed": 30,
+      "aceitas": 30,
+      "descartadasPorIdade": 0,
+      "comImagem": 30
+    },
+    {
+      "id": "kyivpost",
+      "nome": "Kyiv Post",
+      "status": "ok",
+      "itensNoFeed": 100,
+      "aceitas": 89,
+      "descartadasPorIdade": 11,
+      "comImagem": 89
+    },
+    {
+      "id": "pravdaua",
+      "nome": "Ukrainska Pravda",
+      "status": "ok",
+      "itensNoFeed": 20,
+      "aceitas": 20,
+      "descartadasPorIdade": 0,
+      "comImagem": 20
+    },
+    {
       "id": "aljazeera",
       "nome": "Al Jazeera",
       "status": "ok",
@@ -167,14 +294,13 @@
       "comImagem": 0
     },
     {
-      "id": "timesofisrael",
-      "nome": "The Times of Israel",
-      "status": "erro",
-      "erro": "o site respondeu HTTP 403",
-      "itensNoFeed": 0,
-      "aceitas": 0,
-      "descartadasPorIdade": 0,
-      "comImagem": 0
+      "id": "haaretz",
+      "nome": "Haaretz",
+      "status": "ok",
+      "itensNoFeed": 100,
+      "aceitas": 71,
+      "descartadasPorIdade": 29,
+      "comImagem": 71
     },
     {
       "id": "middleeasteye",
@@ -186,6 +312,51 @@
       "comImagem": 11
     },
     {
+      "id": "almonitor",
+      "nome": "Al-Monitor",
+      "status": "ok",
+      "itensNoFeed": 20,
+      "aceitas": 20,
+      "descartadasPorIdade": 0,
+      "comImagem": 0
+    },
+    {
+      "id": "thenational",
+      "nome": "The National",
+      "status": "ok",
+      "itensNoFeed": 100,
+      "aceitas": 100,
+      "descartadasPorIdade": 0,
+      "comImagem": 100
+    },
+    {
+      "id": "aawsat",
+      "nome": "Asharq Al-Awsat",
+      "status": "ok",
+      "itensNoFeed": 300,
+      "aceitas": 111,
+      "descartadasPorIdade": 189,
+      "comImagem": 111
+    },
+    {
+      "id": "tehrantimes",
+      "nome": "Tehran Times",
+      "status": "ok",
+      "itensNoFeed": 30,
+      "aceitas": 30,
+      "descartadasPorIdade": 0,
+      "comImagem": 30
+    },
+    {
+      "id": "dailysabah",
+      "nome": "Daily Sabah",
+      "status": "ok",
+      "itensNoFeed": 48,
+      "aceitas": 16,
+      "descartadasPorIdade": 32,
+      "comImagem": 16
+    },
+    {
       "id": "cgtn",
       "nome": "CGTN",
       "status": "ok",
@@ -195,12 +366,12 @@
       "comImagem": 45
     },
     {
-      "id": "xinhua",
-      "nome": "Xinhua",
+      "id": "globaltimes",
+      "nome": "Global Times",
       "status": "ok",
-      "itensNoFeed": 20,
+      "itensNoFeed": 50,
       "aceitas": 0,
-      "descartadasPorIdade": 20,
+      "descartadasPorIdade": 50,
       "comImagem": 0
     },
     {
@@ -213,6 +384,24 @@
       "comImagem": 50
     },
     {
+      "id": "japantimes",
+      "nome": "The Japan Times",
+      "status": "ok",
+      "itensNoFeed": 30,
+      "aceitas": 30,
+      "descartadasPorIdade": 0,
+      "comImagem": 30
+    },
+    {
+      "id": "yonhap",
+      "nome": "Yonhap",
+      "status": "ok",
+      "itensNoFeed": 100,
+      "aceitas": 100,
+      "descartadasPorIdade": 0,
+      "comImagem": 95
+    },
+    {
       "id": "thehindu",
       "nome": "The Hindu",
       "status": "ok",
@@ -220,6 +409,42 @@
       "aceitas": 60,
       "descartadasPorIdade": 0,
       "comImagem": 58
+    },
+    {
+      "id": "timesofindia",
+      "nome": "The Times of India",
+      "status": "ok",
+      "itensNoFeed": 20,
+      "aceitas": 20,
+      "descartadasPorIdade": 0,
+      "comImagem": 20
+    },
+    {
+      "id": "straitstimes",
+      "nome": "The Straits Times",
+      "status": "ok",
+      "itensNoFeed": 50,
+      "aceitas": 50,
+      "descartadasPorIdade": 0,
+      "comImagem": 0
+    },
+    {
+      "id": "cna",
+      "nome": "CNA",
+      "status": "ok",
+      "itensNoFeed": 20,
+      "aceitas": 20,
+      "descartadasPorIdade": 0,
+      "comImagem": 20
+    },
+    {
+      "id": "abcau",
+      "nome": "ABC News Austrália",
+      "status": "ok",
+      "itensNoFeed": 25,
+      "aceitas": 25,
+      "descartadasPorIdade": 0,
+      "comImagem": 25
     },
     {
       "id": "thediplomat",
@@ -231,6 +456,15 @@
       "comImagem": 20
     },
     {
+      "id": "lowy",
+      "nome": "Lowy Interpreter",
+      "status": "ok",
+      "itensNoFeed": 50,
+      "aceitas": 8,
+      "descartadasPorIdade": 42,
+      "comImagem": 8
+    },
+    {
       "id": "africanews",
       "nome": "Africanews",
       "status": "ok",
@@ -240,13 +474,40 @@
       "comImagem": 50
     },
     {
+      "id": "allafrica",
+      "nome": "AllAfrica",
+      "status": "ok",
+      "itensNoFeed": 33,
+      "aceitas": 31,
+      "descartadasPorIdade": 2,
+      "comImagem": 0
+    },
+    {
+      "id": "dailymaverick",
+      "nome": "Daily Maverick",
+      "status": "ok",
+      "itensNoFeed": 53,
+      "aceitas": 34,
+      "descartadasPorIdade": 19,
+      "comImagem": 31
+    },
+    {
+      "id": "premiumtimes",
+      "nome": "Premium Times",
+      "status": "ok",
+      "itensNoFeed": 15,
+      "aceitas": 15,
+      "descartadasPorIdade": 0,
+      "comImagem": 15
+    },
+    {
       "id": "g1",
       "nome": "g1 Mundo",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 68,
-      "descartadasPorIdade": 32,
-      "comImagem": 68
+      "aceitas": 70,
+      "descartadasPorIdade": 30,
+      "comImagem": 70
     },
     {
       "id": "folha",
@@ -255,6 +516,51 @@
       "itensNoFeed": 100,
       "aceitas": 38,
       "descartadasPorIdade": 62,
+      "comImagem": 0
+    },
+    {
+      "id": "estadao",
+      "nome": "Estadão Internacional",
+      "status": "ok",
+      "itensNoFeed": 20,
+      "aceitas": 20,
+      "descartadasPorIdade": 0,
+      "comImagem": 11
+    },
+    {
+      "id": "veja",
+      "nome": "Veja Mundo",
+      "status": "ok",
+      "itensNoFeed": 20,
+      "aceitas": 20,
+      "descartadasPorIdade": 0,
+      "comImagem": 20
+    },
+    {
+      "id": "gazetadopovo",
+      "nome": "Gazeta do Povo Mundo",
+      "status": "ok",
+      "itensNoFeed": 61,
+      "aceitas": 60,
+      "descartadasPorIdade": 1,
+      "comImagem": 60
+    },
+    {
+      "id": "cartacapital",
+      "nome": "CartaCapital Mundo",
+      "status": "ok",
+      "itensNoFeed": 20,
+      "aceitas": 18,
+      "descartadasPorIdade": 2,
+      "comImagem": 18
+    },
+    {
+      "id": "operamundi",
+      "nome": "Opera Mundi",
+      "status": "ok",
+      "itensNoFeed": 10,
+      "aceitas": 10,
+      "descartadasPorIdade": 0,
       "comImagem": 0
     },
     {
@@ -276,6 +582,42 @@
       "comImagem": 10
     },
     {
+      "id": "batimes",
+      "nome": "Buenos Aires Times",
+      "status": "ok",
+      "itensNoFeed": 100,
+      "aceitas": 13,
+      "descartadasPorIdade": 87,
+      "comImagem": 13
+    },
+    {
+      "id": "mexiconews",
+      "nome": "Mexico News Daily",
+      "status": "ok",
+      "itensNoFeed": 10,
+      "aceitas": 10,
+      "descartadasPorIdade": 0,
+      "comImagem": 0
+    },
+    {
+      "id": "colombiareports",
+      "nome": "Colombia Reports",
+      "status": "ok",
+      "itensNoFeed": 10,
+      "aceitas": 3,
+      "descartadasPorIdade": 7,
+      "comImagem": 0
+    },
+    {
+      "id": "insightcrime",
+      "nome": "InSight Crime",
+      "status": "ok",
+      "itensNoFeed": 11,
+      "aceitas": 8,
+      "descartadasPorIdade": 3,
+      "comImagem": 8
+    },
+    {
       "id": "onunews",
       "nome": "ONU News",
       "status": "ok",
@@ -289,9 +631,9 @@
       "nome": "UN News",
       "status": "ok",
       "itensNoFeed": 30,
-      "aceitas": 10,
-      "descartadasPorIdade": 20,
-      "comImagem": 10
+      "aceitas": 11,
+      "descartadasPorIdade": 19,
+      "comImagem": 11
     },
     {
       "id": "crisisgroup",
