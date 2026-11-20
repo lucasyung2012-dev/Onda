@@ -2,6 +2,173 @@
   "data": "2026-11-20",
   "noticias": [
     {
+      "id": "04471859b97d",
+      "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
+      "resumo": "Nov 20 - Iran's Foreign Minister Abbas Araqchi said Tehran still hoped diplomacy could end its war with the United States, while US President Donald Trump said Iran wanted a deal but one that was not acceptable to him.",
+      "link": "https://www.straitstimes.com/world/middle-east/araqchi-says-iran-wants-diplomacy-to-end-war-trump-says-terms-unacceptable",
+      "fonte": "straitstimes",
+      "fonteNome": "The Straits Times",
+      "pais": "Singapura",
+      "visao": "Jornal de referência de Singapura",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:15:29.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "america-norte",
+        "oriente-medio"
+      ],
+      "temas": [
+        "diplomacia",
+        "conflitos",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-20T23:20:56.990Z"
+    },
+    {
+      "id": "16c2a3dbb52b",
+      "titulo": "US declassifies more UFO footage filmed in the Middle East",
+      "resumo": "The Pentagon has released an eighth tranche of UFO records, which includes three video clips recorded in 2020, 2023 and 2026.",
+      "link": "https://www.bbc.co.uk/news/videos/cqdr1x8mypnko?at_medium=RSS&at_campaign=rss",
+      "fonte": "bbc",
+      "fonteNome": "BBC News",
+      "pais": "Reino Unido",
+      "visao": "Emissora pública britânica",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:15:20.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/029f/live/9fdeb250-e537-11f1-99b6-a35a62fa4264.jpg",
+      "imagemCredito": "BBC News",
+      "regioes": [
+        "america-norte",
+        "oriente-medio"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-20T23:20:56.990Z"
+    },
+    {
+      "id": "6db0fde3718c",
+      "titulo": "NSW passes Mount Pleasant coalmine law as Greens claim change an attempt to head off One Nation",
+      "resumo": "Labor says allowing mine to increase production reflects ‘gravity of situation facing hundreds of workers’ – but critics call it ‘unprecedented and dangerous’ Get our breaking news email , free app or daily news podcast The New South Wales government has passed special…",
+      "link": "https://www.theguardian.com/australia-news/2026/nov/21/nsw-passes-hunter-valley-coalmine-law-as-greens-claim-change-an-attempt-to-head-off-one-nation-ntwnfb",
+      "fonte": "guardian",
+      "fonteNome": "The Guardian",
+      "pais": "Reino Unido",
+      "visao": "Jornal britânico, centro-esquerda",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:09:57.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://i.guim.co.uk/img/media/b24b376c3c4ded825f413fd2ac48655f5fcb5e3c/480_0_4800_3840/master/4800.jpg?width=140&quality=85&auto=format&fit=max&s=0bf10c399ce4d8386b40e0e8eef67063",
+      "imagemCredito": "The Guardian",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "politica",
+        "energia"
+      ],
+      "coletadoEm": "2026-11-20T23:20:56.990Z"
+    },
+    {
+      "id": "97715f31a473",
+      "titulo": "In a year of AI solving maths problems, Anthropic may have just solved the biggest",
+      "resumo": "A mathematician at Anthropic says he used an AI to prove the famed Riemann hypothesis, though verification will take some time.",
+      "link": "https://www.bbc.co.uk/news/articles/c6pqr2g7w059o?at_medium=RSS&at_campaign=rss",
+      "fonte": "bbc",
+      "fonteNome": "BBC News",
+      "pais": "Reino Unido",
+      "visao": "Emissora pública britânica",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:08:57.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/78a0/live/a0688a80-e531-11f1-99b6-a35a62fa4264.jpg",
+      "imagemCredito": "BBC News",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "tecnologia"
+      ],
+      "coletadoEm": "2026-11-20T23:20:56.990Z"
+    },
+    {
+      "id": "fd72ae54f858",
+      "titulo": "Activists, leaders criticize COP31 climate talks as fossil fuels go unmentioned in draft deal",
+      "resumo": "United Nations climate talks in Turkey stretched into overtime Friday and delegates put off some decisions to next year, unable to find common ground on multiple issues with mutterings and protests about failure.",
+      "link": "https://www.pbs.org/newshour/world/activists-leaders-criticize-cop31-climate-talks-as-fossil-fuels-go-unmentioned-in-draft-deal",
+      "fonte": "pbs",
+      "fonteNome": "PBS NewsHour",
+      "pais": "EUA",
+      "visao": "TV pública dos EUA",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:06:45.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://d3i6fh83elv35t.cloudfront.net/static/2026/11/2026-11-20T173520Z_1819819024_RC2SROAT8WYP_RTRMADP_3_CLIMATE-COP31-1024x683.jpg",
+      "imagemCredito": "PBS NewsHour",
+      "regioes": [
+        "global",
+        "europa"
+      ],
+      "temas": [
+        "clima",
+        "diplomacia",
+        "energia",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-20T23:20:56.990Z"
+    },
+    {
+      "id": "b85a5fc66bb6",
+      "titulo": "US police departments warn GTA VI users to ‘keep it in the game’",
+      "resumo": "Although there is no definitive link between violent video games and behavior, departments take to social media While critics have been raving after the recent and long-awaited arrival of Grand Theft Auto VI, the latest entry in the famously violent video game series has also…",
+      "link": "https://www.theguardian.com/us-news/2026/nov/20/grand-theft-auto-vi-us-police-psa",
+      "fonte": "guardian",
+      "fonteNome": "The Guardian",
+      "pais": "Reino Unido",
+      "visao": "Jornal britânico, centro-esquerda",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:02:30.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://i.guim.co.uk/img/media/589ef3157396f2a51452956b4b33336ffae07539/584_0_5840_4672/master/5840.jpg?width=140&quality=85&auto=format&fit=max&s=6d06ed40a662fe8d7f67a83204af9ba6",
+      "imagemCredito": "The Guardian",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "midia",
+        "conflitos",
+        "tecnologia"
+      ],
+      "coletadoEm": "2026-11-20T23:20:56.990Z"
+    },
+    {
       "id": "11277c1f5cdd",
       "titulo": "Hong Kong looks to community networks to support Tai Po fire survivors’ mental health",
       "resumo": "More than 3,000 survivors of Hong Kong’s deadly Wang Fuk Court fire have received mental health support from authorities in the past year, with some experiencing fewer symptoms of post-traumatic stress disorder (PTSD) after psychological intervention. Dr Lam Ching-choi, chairman…",
@@ -28,6 +195,61 @@
         "saude"
       ],
       "coletadoEm": "2026-11-20T23:05:29.561Z"
+    },
+    {
+      "id": "0bd8bc13c8d2",
+      "titulo": "Takaichi to meet ICC president on Tuesday",
+      "resumo": "Takaichi and Akane will meet for the first time since U.S. President Donald Trump added the ICC president to its sanctions list in August.",
+      "link": "https://www.japantimes.co.jp/news/2026/11/21/japan/takaichi-akane-meeting-tuesday/",
+      "fonte": "japantimes",
+      "fonteNome": "The Japan Times",
+      "pais": "Japão",
+      "visao": "Jornal japonês em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:01:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/21/575283.jpg",
+      "imagemCredito": "The Japan Times",
+      "regioes": [
+        "america-norte"
+      ],
+      "temas": [
+        "diplomacia",
+        "politica",
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-20T23:20:56.990Z"
+    },
+    {
+      "id": "5b5ea70c2ff6",
+      "titulo": "AI-fueled cyberattacks drive claims surge at Japan insurers",
+      "resumo": "Major property insurers are reporting a sharp jump in cyber insurance claims as artificial intelligence-driven hacking incidents surge nationwide.",
+      "link": "https://www.japantimes.co.jp/business/2026/11/21/ai-property-insurer-claims-surge/",
+      "fonte": "japantimes",
+      "fonteNome": "The Japan Times",
+      "pais": "Japão",
+      "visao": "Jornal japonês em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:01:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/21/575282.jpg",
+      "imagemCredito": "The Japan Times",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "tecnologia",
+        "energia"
+      ],
+      "coletadoEm": "2026-11-20T23:20:56.990Z"
     },
     {
       "id": "9825640b814a",
@@ -212,6 +434,32 @@
         "politica"
       ],
       "coletadoEm": "2026-11-20T22:56:13.187Z"
+    },
+    {
+      "id": "049c056d8a1b",
+      "titulo": "GTA VI sales reach $3.79 bln on first day of release, company says",
+      "resumo": "The game became the most successful product in the history of the entertainment industry",
+      "link": "https://tass.com/economy/2222773",
+      "fonte": "tass",
+      "fonteNome": "TASS",
+      "pais": "Rússia",
+      "visao": "Agência estatal russa (versão oficial do Kremlin)",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T22:52:01.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "economia"
+      ],
+      "coletadoEm": "2026-11-20T23:20:56.990Z"
     },
     {
       "id": "b672b7920a8e",
@@ -36017,5 +36265,5 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     }
   ],
-  "atualizadoEm": "2026-11-20T23:05:29.561Z"
+  "atualizadoEm": "2026-11-20T23:20:56.990Z"
 }

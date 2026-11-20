@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-20T23:05:29.561Z",
+  "geradoEm": "2026-11-20T23:20:56.990Z",
   "dataReferencia": "2026-11-20",
   "fuso": "America/Sao_Paulo",
-  "totalNoticias": 1436,
+  "totalNoticias": 1433,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -30,7 +30,7 @@
   },
   "destaque": {
     "id": "97f1ff305240",
-    "motivo": "Coberto por 16 fontes diferentes nas últimas 24 horas. Critério provisório: a partir da etapa 7, a escolha passa a ser feita por análise."
+    "motivo": "Coberto por 15 fontes diferentes nas últimas 24 horas. Critério provisório: a partir da etapa 7, a escolha passa a ser feita por análise."
   },
   "fatos": [
     {
@@ -53,7 +53,7 @@
         "direitos",
         "economia"
       ],
-      "fontes": 16,
+      "fontes": 15,
       "paises": 8,
       "maisRecente": "2026-11-20T22:35:07.000Z",
       "materias": [
@@ -115,18 +115,6 @@
           "titulo": "Trump says he, Russia’s Putin had ‘very good’ talks on Ukraine",
           "link": "https://www.straitstimes.com/world/europe/trump-says-he-putin-had-very-good-talks-on-ukraine",
           "publicadoEm": "2026-11-20T18:50:46.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Ukrainska Pravda",
-          "pais": "Ucrânia",
-          "visao": "Site ucraniano de jornalismo independente",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Trump says Putin wants to end Russia's war against Ukraine through diplomacy",
-          "link": "https://www.pravda.com.ua/eng/news/2026/11/20/8063876/",
-          "publicadoEm": "2026-11-20T18:25:00.000Z",
           "semData": false
         },
         {
@@ -271,18 +259,6 @@
           "titulo": "Trump, Xi and Putin release 'peace declaration' from unprecedented summit",
           "link": "https://www.channelnewsasia.com/world/china-russia-us-peace-declaration-nuclear-trilateral-talks-6565716",
           "publicadoEm": "2026-11-20T03:16:00.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Kyiv Post",
-          "pais": "Ucrânia",
-          "visao": "Jornal ucraniano",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Kushner Says Trump Wants Europe ‘By His Side’ on Ukraine",
-          "link": "https://www.kyivpost.com/post/90651",
-          "publicadoEm": "2026-11-20T00:18:38.000Z",
           "semData": false
         },
         {
@@ -1306,6 +1282,89 @@
       ]
     },
     {
+      "id": "fd72ae54f858",
+      "titulo": "Activists, leaders criticize COP31 climate talks as fossil fuels go unmentioned in draft deal",
+      "resumo": "United Nations climate talks in Turkey stretched into overtime Friday and delegates put off some decisions to next year, unable to find common ground on multiple issues with mutterings and protests about failure.",
+      "imagem": "https://d3i6fh83elv35t.cloudfront.net/static/2026/11/2026-11-20T173520Z_1819819024_RC2SROAT8WYP_RTRMADP_3_CLIMATE-COP31-1024x683.jpg",
+      "credito": "PBS NewsHour",
+      "regioes": [
+        "europa",
+        "global",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "clima",
+        "diplomacia",
+        "energia",
+        "politica"
+      ],
+      "fontes": 5,
+      "paises": 5,
+      "maisRecente": "2026-11-20T23:06:45.000Z",
+      "materias": [
+        {
+          "fonte": "PBS NewsHour",
+          "pais": "EUA",
+          "visao": "TV pública dos EUA",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Activists, leaders criticize COP31 climate talks as fossil fuels go unmentioned in draft deal",
+          "link": "https://www.pbs.org/newshour/world/activists-leaders-criticize-cop31-climate-talks-as-fossil-fuels-go-unmentioned-in-draft-deal",
+          "publicadoEm": "2026-11-20T23:06:45.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "South China Morning Post",
+          "pais": "Hong Kong",
+          "visao": "Jornal de Hong Kong sobre China e Ásia",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "COP31 climate talks go into overtime as nations quarrel over fossil fuels",
+          "link": "https://www.scmp.com/news/world/article/3375291/cop31-climate-talks-go-overtime-nations-quarrel-over-fossil-fuels",
+          "publicadoEm": "2026-11-20T15:34:06.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "France 24",
+          "pais": "França",
+          "visao": "Emissora internacional pública francesa",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "COP31 wrapping up in Turkey: Climate deal elusive as fossil fuels go unmentioned",
+          "link": "https://www.france24.com/en/video/20261120-cop31-wrapping-up-in-turkey-climate-deal-elusive-as-fossil-fuels-go-unmentioned",
+          "publicadoEm": "2026-11-20T14:38:56.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "UN climate talks in Turkey risk being ‘worst COP ever’ as fossil fuels go unmentioned",
+          "link": "https://www.straitstimes.com/world/un-climate-talks-in-turkey-risk-being-worst-cop-ever-as-fossil-fuels-go-unmentioned",
+          "publicadoEm": "2026-11-20T14:19:04.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Japan Times",
+          "pais": "Japão",
+          "visao": "Jornal japonês em inglês",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Climate talks ditch call to quit fossil fuels as deal nears",
+          "link": "https://www.japantimes.co.jp/environment/2026/11/20/climate-change/cop-fossil-fuel-language/",
+          "publicadoEm": "2026-11-20T03:17:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
       "id": "6953481fcf20",
       "titulo": "NATO calls Russian missiles landing in Poland a 'grave violation' of airspace",
       "resumo": "Two Russian missiles and a suspected drone came down in Poland on Friday in what its prime minister said was likely a provocation timed to coincide with European military exercises in his country for a possible postwar mission in Ukraine.",
@@ -1381,88 +1440,6 @@
           "titulo": "Explosion in Poland Sparks Airspace Breach Probe as Russian Attacks Kill Civilians in Ukraine",
           "link": "https://www.kyivpost.com/post/90676",
           "publicadoEm": "2026-11-20T07:50:15.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "bf43304ad1a6",
-      "titulo": "COP31: Fossil fuels and climate funding take center stage in final stretch of negotiations",
-      "resumo": "The talks at the 31st World Climate Conference (COP31) in Antalya, Turkey, were scheduled to conclude on November 20. Deliberations continued into overtime due to lack of agreement on key issues such as fossil fuels and funding.",
-      "imagem": "https://img.lemde.fr/2026/11/20/747/0/5500/2750/644/322/60/0/f139425_ftp-1-jffoew2a5gyb-2026-11-20t143649z-1236454159-rc2proagsqo7-rtrmadp-3-climate-cop31.JPG",
-      "credito": "Le Monde (inglês)",
-      "regioes": [
-        "europa",
-        "global",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "diplomacia",
-        "clima",
-        "energia"
-      ],
-      "fontes": 5,
-      "paises": 4,
-      "maisRecente": "2026-11-20T22:35:30.000Z",
-      "materias": [
-        {
-          "fonte": "Le Monde (inglês)",
-          "pais": "França",
-          "visao": "Jornal de referência francês",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "COP31: Fossil fuels and climate funding take center stage in final stretch of negotiations",
-          "link": "https://www.lemonde.fr/en/environment/article/2026/11/20/cop31-fossil-fuels-and-climate-funding-take-center-stage-in-final-stretch-of-negotiations_6785737_114.html",
-          "publicadoEm": "2026-11-20T22:35:30.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "South China Morning Post",
-          "pais": "Hong Kong",
-          "visao": "Jornal de Hong Kong sobre China e Ásia",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "COP31 climate talks go into overtime as nations quarrel over fossil fuels",
-          "link": "https://www.scmp.com/news/world/article/3375291/cop31-climate-talks-go-overtime-nations-quarrel-over-fossil-fuels",
-          "publicadoEm": "2026-11-20T15:34:06.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "France 24",
-          "pais": "França",
-          "visao": "Emissora internacional pública francesa",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "COP31 wrapping up in Turkey: Climate deal elusive as fossil fuels go unmentioned",
-          "link": "https://www.france24.com/en/video/20261120-cop31-wrapping-up-in-turkey-climate-deal-elusive-as-fossil-fuels-go-unmentioned",
-          "publicadoEm": "2026-11-20T14:38:56.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The Straits Times",
-          "pais": "Singapura",
-          "visao": "Jornal de referência de Singapura",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "UN climate talks in Turkey risk being ‘worst COP ever’ as fossil fuels go unmentioned",
-          "link": "https://www.straitstimes.com/world/un-climate-talks-in-turkey-risk-being-worst-cop-ever-as-fossil-fuels-go-unmentioned",
-          "publicadoEm": "2026-11-20T14:19:04.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The Japan Times",
-          "pais": "Japão",
-          "visao": "Jornal japonês em inglês",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Climate talks ditch call to quit fossil fuels as deal nears",
-          "link": "https://www.japantimes.co.jp/environment/2026/11/20/climate-change/cop-fossil-fuel-language/",
-          "publicadoEm": "2026-11-20T03:17:00.000Z",
           "semData": false
         }
       ]
@@ -1909,6 +1886,77 @@
           "titulo": "French Ex-PM Villepin Announces Presidential Run",
           "link": "https://english.aawsat.com/node/5343554",
           "publicadoEm": "2026-11-20T10:56:45.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "04471859b97d",
+      "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
+      "resumo": "Nov 20 - Iran's Foreign Minister Abbas Araqchi said Tehran still hoped diplomacy could end its war with the United States, while US President Donald Trump said Iran wanted a deal but one that was not acceptable to him.",
+      "imagem": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/8/c/961118/8cc01a98d2d5cea34ea6b373beb3af30.jpeg",
+      "credito": "Ukrainska Pravda",
+      "regioes": [
+        "america-norte",
+        "oriente-medio",
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia",
+        "politica",
+        "direitos"
+      ],
+      "fontes": 4,
+      "paises": 3,
+      "maisRecente": "2026-11-20T23:15:29.000Z",
+      "materias": [
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
+          "link": "https://www.straitstimes.com/world/middle-east/araqchi-says-iran-wants-diplomacy-to-end-war-trump-says-terms-unacceptable",
+          "publicadoEm": "2026-11-20T23:15:29.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Ukrainska Pravda",
+          "pais": "Ucrânia",
+          "visao": "Site ucraniano de jornalismo independente",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Trump says Putin wants to end Russia's war against Ukraine through diplomacy",
+          "link": "https://www.pravda.com.ua/eng/news/2026/11/20/8063876/",
+          "publicadoEm": "2026-11-20T18:25:00.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Haaretz",
+          "pais": "Israel",
+          "visao": "Jornal israelense, centro-esquerda",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Trump's Iran choice: A deal or another war he can't end",
+          "link": "https://www.haaretz.com/middle-east-news/iran/2026-11-20/ty-article/.premium/trump-may-start-a-war-but-iran-will-decide-how-and-when-it-ends/000001a1-f4ee-d175-abf5-fefed8990000",
+          "publicadoEm": "2026-11-20T04:00:51.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Kyiv Post",
+          "pais": "Ucrânia",
+          "visao": "Jornal ucraniano",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Kushner Says Trump Wants Europe ‘By His Side’ on Ukraine",
+          "link": "https://www.kyivpost.com/post/90651",
+          "publicadoEm": "2026-11-20T00:18:38.000Z",
           "semData": false
         }
       ]
@@ -7087,6 +7135,130 @@
       ]
     },
     {
+      "id": "16c2a3dbb52b",
+      "titulo": "US declassifies more UFO footage filmed in the Middle East",
+      "resumo": "The Pentagon has released an eighth tranche of UFO records, which includes three video clips recorded in 2020, 2023 and 2026.",
+      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/029f/live/9fdeb250-e537-11f1-99b6-a35a62fa4264.jpg",
+      "credito": "BBC News",
+      "regioes": [
+        "america-norte",
+        "oriente-medio"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:15:20.000Z",
+      "materias": [
+        {
+          "fonte": "BBC News",
+          "pais": "Reino Unido",
+          "visao": "Emissora pública britânica",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "US declassifies more UFO footage filmed in the Middle East",
+          "link": "https://www.bbc.co.uk/news/videos/cqdr1x8mypnko?at_medium=RSS&at_campaign=rss",
+          "publicadoEm": "2026-11-20T23:15:20.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "6db0fde3718c",
+      "titulo": "NSW passes Mount Pleasant coalmine law as Greens claim change an attempt to head off One Nation",
+      "resumo": "Labor says allowing mine to increase production reflects ‘gravity of situation facing hundreds of workers’ – but critics call it ‘unprecedented and dangerous’ Get our breaking news email , free app or daily news podcast The New South Wales government has passed special…",
+      "imagem": "https://i.guim.co.uk/img/media/b24b376c3c4ded825f413fd2ac48655f5fcb5e3c/480_0_4800_3840/master/4800.jpg?width=140&quality=85&auto=format&fit=max&s=0bf10c399ce4d8386b40e0e8eef67063",
+      "credito": "The Guardian",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "politica",
+        "energia"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:09:57.000Z",
+      "materias": [
+        {
+          "fonte": "The Guardian",
+          "pais": "Reino Unido",
+          "visao": "Jornal britânico, centro-esquerda",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "NSW passes Mount Pleasant coalmine law as Greens claim change an attempt to head off One Nation",
+          "link": "https://www.theguardian.com/australia-news/2026/nov/21/nsw-passes-hunter-valley-coalmine-law-as-greens-claim-change-an-attempt-to-head-off-one-nation-ntwnfb",
+          "publicadoEm": "2026-11-20T23:09:57.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "97715f31a473",
+      "titulo": "In a year of AI solving maths problems, Anthropic may have just solved the biggest",
+      "resumo": "A mathematician at Anthropic says he used an AI to prove the famed Riemann hypothesis, though verification will take some time.",
+      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/78a0/live/a0688a80-e531-11f1-99b6-a35a62fa4264.jpg",
+      "credito": "BBC News",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "tecnologia"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:08:57.000Z",
+      "materias": [
+        {
+          "fonte": "BBC News",
+          "pais": "Reino Unido",
+          "visao": "Emissora pública britânica",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "In a year of AI solving maths problems, Anthropic may have just solved the biggest",
+          "link": "https://www.bbc.co.uk/news/articles/c6pqr2g7w059o?at_medium=RSS&at_campaign=rss",
+          "publicadoEm": "2026-11-20T23:08:57.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "b85a5fc66bb6",
+      "titulo": "US police departments warn GTA VI users to ‘keep it in the game’",
+      "resumo": "Although there is no definitive link between violent video games and behavior, departments take to social media While critics have been raving after the recent and long-awaited arrival of Grand Theft Auto VI, the latest entry in the famously violent video game series has also…",
+      "imagem": "https://i.guim.co.uk/img/media/589ef3157396f2a51452956b4b33336ffae07539/584_0_5840_4672/master/5840.jpg?width=140&quality=85&auto=format&fit=max&s=6d06ed40a662fe8d7f67a83204af9ba6",
+      "credito": "The Guardian",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "midia",
+        "conflitos",
+        "tecnologia"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:02:30.000Z",
+      "materias": [
+        {
+          "fonte": "The Guardian",
+          "pais": "Reino Unido",
+          "visao": "Jornal britânico, centro-esquerda",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "US police departments warn GTA VI users to ‘keep it in the game’",
+          "link": "https://www.theguardian.com/us-news/2026/nov/20/grand-theft-auto-vi-us-police-psa",
+          "publicadoEm": "2026-11-20T23:02:30.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
       "id": "11277c1f5cdd",
       "titulo": "Hong Kong looks to community networks to support Tai Po fire survivors’ mental health",
       "resumo": "More than 3,000 survivors of Hong Kong’s deadly Wang Fuk Court fire have received mental health support from authorities in the past year, with some experiencing fewer symptoms of post-traumatic stress disorder (PTSD) after psychological intervention. Dr Lam Ching-choi, chairman…",
@@ -7114,6 +7286,69 @@
           "titulo": "Hong Kong looks to community networks to support Tai Po fire survivors’ mental health",
           "link": "https://www.scmp.com/news/hong-kong/health-environment/article/3375288/hong-kong-looks-community-networks-support-tai-po-fire-survivors-mental-health",
           "publicadoEm": "2026-11-20T23:01:04.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "0bd8bc13c8d2",
+      "titulo": "Takaichi to meet ICC president on Tuesday",
+      "resumo": "Takaichi and Akane will meet for the first time since U.S. President Donald Trump added the ICC president to its sanctions list in August.",
+      "imagem": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/21/575283.jpg",
+      "credito": "The Japan Times",
+      "regioes": [
+        "america-norte"
+      ],
+      "temas": [
+        "diplomacia",
+        "politica",
+        "direitos"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:01:00.000Z",
+      "materias": [
+        {
+          "fonte": "The Japan Times",
+          "pais": "Japão",
+          "visao": "Jornal japonês em inglês",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Takaichi to meet ICC president on Tuesday",
+          "link": "https://www.japantimes.co.jp/news/2026/11/21/japan/takaichi-akane-meeting-tuesday/",
+          "publicadoEm": "2026-11-20T23:01:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "5b5ea70c2ff6",
+      "titulo": "AI-fueled cyberattacks drive claims surge at Japan insurers",
+      "resumo": "Major property insurers are reporting a sharp jump in cyber insurance claims as artificial intelligence-driven hacking incidents surge nationwide.",
+      "imagem": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/21/575282.jpg",
+      "credito": "The Japan Times",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "tecnologia",
+        "energia"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:01:00.000Z",
+      "materias": [
+        {
+          "fonte": "The Japan Times",
+          "pais": "Japão",
+          "visao": "Jornal japonês em inglês",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "AI-fueled cyberattacks drive claims surge at Japan insurers",
+          "link": "https://www.japantimes.co.jp/business/2026/11/21/ai-property-insurer-claims-surge/",
+          "publicadoEm": "2026-11-20T23:01:00.000Z",
           "semData": false
         }
       ]
@@ -7269,6 +7504,49 @@
       ]
     },
     {
+      "id": "049c056d8a1b",
+      "titulo": "GTA VI sales reach $3.79 bln on first day of release, company says",
+      "resumo": "The game became the most successful product in the history of the entertainment industry",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "economia",
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T22:52:01.000Z",
+      "materias": [
+        {
+          "fonte": "TASS",
+          "pais": "Rússia",
+          "visao": "Agência estatal russa (versão oficial do Kremlin)",
+          "estatal": true,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "GTA VI sales reach $3.79 bln on first day of release, company says",
+          "link": "https://tass.com/economy/2222773",
+          "publicadoEm": "2026-11-20T22:52:01.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "TASS",
+          "pais": "Rússia",
+          "visao": "Agência estatal russa (versão oficial do Kremlin)",
+          "estatal": true,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "GTA VI sales exceed $2.3 billion one day after release — SensorTower",
+          "link": "https://tass.com/economy/2222565",
+          "publicadoEm": "2026-11-20T14:17:43.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
       "id": "b672b7920a8e",
       "titulo": "Will Putin achieve by guile what Stalin achieved with millions of troops?",
       "resumo": "When a trilateral meeting between the leaders of China, the United States, and Russia was announced, commentators with an eye for history were soon asking whether this Shenzhen summit was going to be a second Yalta allowing Vladimir Putin to advance his revisionist agenda, writes…",
@@ -7280,8 +7558,8 @@
         "asia-pacifico"
       ],
       "temas": [
-        "diplomacia",
-        "conflitos"
+        "conflitos",
+        "diplomacia"
       ],
       "fontes": 1,
       "paises": 1,
@@ -7297,18 +7575,6 @@
           "titulo": "Will Putin achieve by guile what Stalin achieved with millions of troops?",
           "link": "https://www.atlanticcouncil.org/blogs/ukrainealert/will-putin-achieve-by-guile-what-stalin-achieved-with-millions-of-troops/",
           "publicadoEm": "2026-11-20T22:51:01.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Atlantic Council",
-          "pais": "EUA",
-          "visao": "Centro de estudos pró-OTAN e transatlântico",
-          "estatal": false,
-          "tipo": "analise",
-          "idioma": "en",
-          "titulo": "What the Trump-Putin-Xi meeting actually achieved",
-          "link": "https://www.atlanticcouncil.org/content-series/fastthinking/what-the-trump-putin-xi-meeting-actually-achieved/",
-          "publicadoEm": "2026-11-19T23:16:48.000Z",
           "semData": false
         }
       ]
@@ -7433,6 +7699,39 @@
           "titulo": "Católicos dos EUA levam ao Vaticano crítica ao individualismo americano",
           "link": "https://www.gazetadopovo.com.br/mundo/catolicos-dos-eua-levam-ao-vaticano-critica-ao-individualismo-americano/",
           "publicadoEm": "2026-11-20T22:36:50.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "bf43304ad1a6",
+      "titulo": "COP31: Fossil fuels and climate funding take center stage in final stretch of negotiations",
+      "resumo": "The talks at the 31st World Climate Conference (COP31) in Antalya, Turkey, were scheduled to conclude on November 20. Deliberations continued into overtime due to lack of agreement on key issues such as fossil fuels and funding.",
+      "imagem": "https://img.lemde.fr/2026/11/20/747/0/5500/2750/644/322/60/0/f139425_ftp-1-jffoew2a5gyb-2026-11-20t143649z-1236454159-rc2proagsqo7-rtrmadp-3-climate-cop31.JPG",
+      "credito": "Le Monde (inglês)",
+      "regioes": [
+        "europa",
+        "global"
+      ],
+      "temas": [
+        "diplomacia",
+        "clima",
+        "energia"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T22:35:30.000Z",
+      "materias": [
+        {
+          "fonte": "Le Monde (inglês)",
+          "pais": "França",
+          "visao": "Jornal de referência francês",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "COP31: Fossil fuels and climate funding take center stage in final stretch of negotiations",
+          "link": "https://www.lemonde.fr/en/environment/article/2026/11/20/cop31-fossil-fuels-and-climate-funding-take-center-stage-in-final-stretch-of-negotiations_6785737_114.html",
+          "publicadoEm": "2026-11-20T22:35:30.000Z",
           "semData": false
         }
       ]
@@ -23200,36 +23499,6 @@
       ]
     },
     {
-      "id": "f31dff08501e",
-      "titulo": "GTA VI sales exceed $2.3 billion one day after release — SensorTower",
-      "resumo": "About 75% of players purchased the PlayStation 5 version of GTA VI",
-      "imagem": "",
-      "credito": "",
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-20T14:17:43.000Z",
-      "materias": [
-        {
-          "fonte": "TASS",
-          "pais": "Rússia",
-          "visao": "Agência estatal russa (versão oficial do Kremlin)",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "GTA VI sales exceed $2.3 billion one day after release — SensorTower",
-          "link": "https://tass.com/economy/2222565",
-          "publicadoEm": "2026-11-20T14:17:43.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
       "id": "dac362452d12",
       "titulo": "Gen Z Is Driving Global Political Change, Aiding Far Left and Far Right",
       "resumo": "Protests across Europe are the latest example of global youth anger that has driven demonstrations and election upsets.",
@@ -36286,39 +36555,6 @@
       ]
     },
     {
-      "id": "ed80357e7168",
-      "titulo": "Trump's Iran choice: A deal or another war he can't end",
-      "resumo": "Iran is courting its neighbors while retaining leverage over the Strait of Hormuz. Gulf leaders cannot lift U.S. sanctions or veto an American attack, while another air campaign could deepen the deadlock and spread destruction",
-      "imagem": "https://img.haarets.co.il/bs/000001a1-fa55-d9ff-a7b5-fbff0bb60000/01/49/ef92539f43c6abb87108f03b7288/244401.jpg?width=108&height=81",
-      "credito": "Haaretz",
-      "regioes": [
-        "america-norte",
-        "oriente-medio"
-      ],
-      "temas": [
-        "diplomacia",
-        "conflitos",
-        "direitos"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-20T04:00:51.000Z",
-      "materias": [
-        {
-          "fonte": "Haaretz",
-          "pais": "Israel",
-          "visao": "Jornal israelense, centro-esquerda",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Trump's Iran choice: A deal or another war he can't end",
-          "link": "https://www.haaretz.com/middle-east-news/iran/2026-11-20/ty-article/.premium/trump-may-start-a-war-but-iran-will-decide-how-and-when-it-ends/000001a1-f4ee-d175-abf5-fefed8990000",
-          "publicadoEm": "2026-11-20T04:00:51.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
       "id": "66817caad456",
       "titulo": "As Israeli opposition makes gains in Knesset, Palestinians count mounting losses in West Bank",
       "resumo": "",
@@ -38458,18 +38694,6 @@
           "link": "https://newsus.cgtn.com/news/2026-11-20/Tariff-disputes-on-hold-but-unresolved-as-APEC-meeting-gets-underway-1SduogRwLKg/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
           "publicadoEm": "2026-11-20T00:05:44.000Z",
           "semData": false
-        },
-        {
-          "fonte": "CGTN",
-          "pais": "China",
-          "visao": "TV estatal chinesa (versão oficial de Pequim)",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Tariff disputes on hold, but unresolved as APEC meeting gets underway",
-          "link": "https://newsus.cgtn.com/news/2026-11-20/Tariff-disputes-on-hold-but-unresolved-as-APEC-meeting-gets-underway-1Sdm0SeIGMU/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-          "publicadoEm": "2026-11-19T23:08:28.000Z",
-          "semData": false
         }
       ]
     },
@@ -38935,309 +39159,6 @@
           "titulo": "EU Governments Sign Off on Previously-agreed Trade Deal With Indonesia",
           "link": "https://thediplomat.com/2026/11/eu-governments-sign-off-on-previously-agreed-trade-deal-with-indonesia/",
           "publicadoEm": "2026-11-19T23:21:00.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "d04459ab9190",
-      "titulo": "N. Korea, Laos vow deeper cooperation in Pyongyang meeting",
-      "resumo": "SEOUL, Nov. 20 (Yonhap) -- Officials from North Korea and Laos have met in Pyong...",
-      "imagem": "https://img.yna.co.kr/etc/inner/EN/2026/11/20/AEN20261120000800315_01_i_P2.jpg",
-      "credito": "Yonhap",
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "diplomacia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T23:20:36.000Z",
-      "materias": [
-        {
-          "fonte": "Yonhap",
-          "pais": "Coreia do Sul",
-          "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "N. Korea, Laos vow deeper cooperation in Pyongyang meeting",
-          "link": "https://en.yna.co.kr/view/AEN20261120000800315",
-          "publicadoEm": "2026-11-19T23:20:36.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "89a5826a1cc8",
-      "titulo": "Zelenskyy presses US for expanded Russia talks as Kushner announces breakthrough",
-      "resumo": "Jared Kushner said Russia agreed to multilateral Ukraine war talks involving Europe after Zelenskyy urged the Trump administration to move quickly.",
-      "imagem": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/11/931/523/zelenskyy.jpg?ve=1&tl=1",
-      "credito": "Fox News",
-      "regioes": [
-        "europa",
-        "america-norte"
-      ],
-      "temas": [
-        "conflitos",
-        "diplomacia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T23:20:13.000Z",
-      "materias": [
-        {
-          "fonte": "Fox News",
-          "pais": "EUA",
-          "visao": "Canal dos EUA, direita conservadora",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Zelenskyy presses US for expanded Russia talks as Kushner announces breakthrough",
-          "link": "https://www.foxnews.com/world/zelenskyy-presses-us-expanded-russia-talks-kushner-announces-breakthrough",
-          "publicadoEm": "2026-11-19T23:20:13.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "203a8f359dba",
-      "titulo": "US nationwide ground stop remains under investigation",
-      "resumo": "",
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/US-nationwide-ground-stop-remains-under-investigation-1SdjOJjUvF6/img/3640f69e1cda4fd28ff988ccfd07d1f4/3640f69e1cda4fd28ff988ccfd07d1f4-1280.jpeg",
-      "credito": "CGTN",
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T23:09:37.000Z",
-      "materias": [
-        {
-          "fonte": "CGTN",
-          "pais": "China",
-          "visao": "TV estatal chinesa (versão oficial de Pequim)",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "US nationwide ground stop remains under investigation",
-          "link": "https://newsus.cgtn.com/news/2026-11-20/US-nationwide-ground-stop-remains-under-investigation-1SdjOJjUvF6/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-          "publicadoEm": "2026-11-19T23:09:37.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "dda0f2818c9a",
-      "titulo": "Mexico sees opportunities for business at APEC in Shenzhen",
-      "resumo": "",
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/Mexico-sees-opportunities-for-business-at-APEC-in-Shenzhen-1Sdk1deFshW/img/4771d1af51b44886b6b91727a9b11a0d/4771d1af51b44886b6b91727a9b11a0d-1280.jpeg",
-      "credito": "CGTN",
-      "regioes": [
-        "america-latina"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T23:09:28.000Z",
-      "materias": [
-        {
-          "fonte": "CGTN",
-          "pais": "China",
-          "visao": "TV estatal chinesa (versão oficial de Pequim)",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Mexico sees opportunities for business at APEC in Shenzhen",
-          "link": "https://newsus.cgtn.com/news/2026-11-20/Mexico-sees-opportunities-for-business-at-APEC-in-Shenzhen-1Sdk1deFshW/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-          "publicadoEm": "2026-11-19T23:09:28.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "96cc43438a23",
-      "titulo": "Chancay megaport celebrates two years of operation",
-      "resumo": "",
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/Chancay-megaport-celebrates-two-years-of-operation-1Sdk9Lpo304/img/5ba75f48641247bf8e05d2400df6d3a2/5ba75f48641247bf8e05d2400df6d3a2-1280.jpeg",
-      "credito": "CGTN",
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T23:09:13.000Z",
-      "materias": [
-        {
-          "fonte": "CGTN",
-          "pais": "China",
-          "visao": "TV estatal chinesa (versão oficial de Pequim)",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Chancay megaport celebrates two years of operation",
-          "link": "https://newsus.cgtn.com/news/2026-11-20/Chancay-megaport-celebrates-two-years-of-operation-1Sdk9Lpo304/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-          "publicadoEm": "2026-11-19T23:09:13.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "d66ad09c3a3f",
-      "titulo": "US companies form the largest overseas contingent at APEC CEO Summit",
-      "resumo": "",
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/US-companies-form-the-largest-overseas-contingent-at-APEC-CEO-Summit-1SdktPJajeM/img/fca30147014040369c8379bb73d18d78/fca30147014040369c8379bb73d18d78-1280.jpeg",
-      "credito": "CGTN",
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "diplomacia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T23:09:01.000Z",
-      "materias": [
-        {
-          "fonte": "CGTN",
-          "pais": "China",
-          "visao": "TV estatal chinesa (versão oficial de Pequim)",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "US companies form the largest overseas contingent at APEC CEO Summit",
-          "link": "https://newsus.cgtn.com/news/2026-11-20/US-companies-form-the-largest-overseas-contingent-at-APEC-CEO-Summit-1SdktPJajeM/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-          "publicadoEm": "2026-11-19T23:09:01.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "b02f7fddce6d",
-      "titulo": "Cyber disruptions continue to plague the US, hitting NSA and Apple",
-      "resumo": "",
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/Cyber-disruptions-continue-to-plague-the-US-hitting-NSA-and-Apple-1SdkBesE6ha/img/6fa9916d4b764daf8b068483c0f6aa69/6fa9916d4b764daf8b068483c0f6aa69-1280.jpeg",
-      "credito": "CGTN",
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "tecnologia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T23:08:50.000Z",
-      "materias": [
-        {
-          "fonte": "CGTN",
-          "pais": "China",
-          "visao": "TV estatal chinesa (versão oficial de Pequim)",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Cyber disruptions continue to plague the US, hitting NSA and Apple",
-          "link": "https://newsus.cgtn.com/news/2026-11-20/Cyber-disruptions-continue-to-plague-the-US-hitting-NSA-and-Apple-1SdkBesE6ha/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-          "publicadoEm": "2026-11-19T23:08:50.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "7553b1e8a126",
-      "titulo": "NVIDIA’s bumpy road ahead",
-      "resumo": "",
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/NVIDIA-s-bumpy-road-ahead-1Sdjz2Cy8o0/img/edbd0b47221947e2b89fba2c9a41daa1/edbd0b47221947e2b89fba2c9a41daa1-1920.png",
-      "credito": "CGTN",
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "tecnologia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T23:08:40.000Z",
-      "materias": [
-        {
-          "fonte": "CGTN",
-          "pais": "China",
-          "visao": "TV estatal chinesa (versão oficial de Pequim)",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "NVIDIA’s bumpy road ahead",
-          "link": "https://newsus.cgtn.com/news/2026-11-20/NVIDIA-s-bumpy-road-ahead-1Sdjz2Cy8o0/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-          "publicadoEm": "2026-11-19T23:08:40.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "a0872593480a",
-      "titulo": "One appointment in 2028 will decide Israeli democracy's fate",
-      "resumo": "Attorney General Baharav-Miara did little to prevent Israel's war crimes. But few matched her courage in defending Israeli democracy",
-      "imagem": "https://img.haarets.co.il/bs/000001a1-f492-dad7-a9fd-f6db598a0000/5b/67/de40fe424d6babccef20938115ee/432490.jpg?width=108&height=81",
-      "credito": "Haaretz",
-      "regioes": [
-        "oriente-medio"
-      ],
-      "temas": [
-        "conflitos",
-        "direitos"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T23:07:59.000Z",
-      "materias": [
-        {
-          "fonte": "Haaretz",
-          "pais": "Israel",
-          "visao": "Jornal israelense, centro-esquerda",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "One appointment in 2028 will decide Israeli democracy's fate",
-          "link": "https://www.haaretz.com/opinion/2026-11-20/ty-article-opinion/.premium/why-the-ags-fast-approaching-exit-could-determine-israels-democratic-fate/000001a1-f521-dad7-a9fd-f76be6730000",
-          "publicadoEm": "2026-11-19T23:07:59.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "35207374d29c",
-      "titulo": "Bispos católicos dos EUA criam dia nacional de oração contra racismo",
-      "resumo": "USCCB aprovou por 180 a 15 votos observância anual no último domingo de outubro. Estudo mostra que até 75% dos católicos indígenas já sofreram discriminação racial.",
-      "imagem": "https://media.gazetadopovo.com.br/2026/04/16155009/Vaticano-3-1-960x540.jpg",
-      "credito": "Gazeta do Povo Mundo",
-      "regioes": [
-        "america-norte"
-      ],
-      "temas": [
-        "politica"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T23:07:07.000Z",
-      "materias": [
-        {
-          "fonte": "Gazeta do Povo Mundo",
-          "pais": "Brasil",
-          "visao": "Jornal brasileiro, direita conservadora",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "pt",
-          "titulo": "Bispos católicos dos EUA criam dia nacional de oração contra racismo",
-          "link": "https://www.gazetadopovo.com.br/mundo/bispos-catolicos-dos-eua-criam-dia-nacional-de-oracao-contra-racismo/",
-          "publicadoEm": "2026-11-19T23:07:07.000Z",
           "semData": false
         }
       ]

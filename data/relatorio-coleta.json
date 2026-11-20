@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-20T23:05:29.561Z",
+  "geradoEm": "2026-11-20T23:20:56.990Z",
   "fontesOk": 69,
   "fontesComErro": 1,
-  "noticiasNovasNestaRodada": 7,
+  "noticiasNovasNestaRodada": 9,
   "porFonte": [
     {
       "id": "nyt",
@@ -45,9 +45,9 @@
       "nome": "PBS NewsHour",
       "status": "ok",
       "itensNoFeed": 20,
-      "aceitas": 16,
-      "descartadasPorIdade": 4,
-      "comImagem": 16
+      "aceitas": 17,
+      "descartadasPorIdade": 3,
+      "comImagem": 17
     },
     {
       "id": "cbc",
@@ -126,10 +126,10 @@
       "id": "bbc",
       "nome": "BBC News",
       "status": "ok",
-      "itensNoFeed": 26,
-      "aceitas": 26,
+      "itensNoFeed": 25,
+      "aceitas": 25,
       "descartadasPorIdade": 0,
-      "comImagem": 26
+      "comImagem": 25
     },
     {
       "id": "bbcbrasil",
@@ -298,9 +298,9 @@
       "nome": "Haaretz",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 69,
-      "descartadasPorIdade": 31,
-      "comImagem": 69
+      "aceitas": 68,
+      "descartadasPorIdade": 32,
+      "comImagem": 68
     },
     {
       "id": "middleeasteye",
@@ -442,9 +442,9 @@
       "nome": "The Diplomat",
       "status": "ok",
       "itensNoFeed": 96,
-      "aceitas": 30,
-      "descartadasPorIdade": 66,
-      "comImagem": 30
+      "aceitas": 29,
+      "descartadasPorIdade": 67,
+      "comImagem": 29
     },
     {
       "id": "lowy",
@@ -469,8 +469,8 @@
       "nome": "AllAfrica",
       "status": "ok",
       "itensNoFeed": 33,
-      "aceitas": 31,
-      "descartadasPorIdade": 2,
+      "aceitas": 32,
+      "descartadasPorIdade": 1,
       "comImagem": 0
     },
     {
@@ -496,9 +496,9 @@
       "nome": "g1 Mundo",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 72,
-      "descartadasPorIdade": 28,
-      "comImagem": 72
+      "aceitas": 71,
+      "descartadasPorIdade": 29,
+      "comImagem": 71
     },
     {
       "id": "folha",
@@ -532,9 +532,9 @@
       "nome": "Gazeta do Povo Mundo",
       "status": "ok",
       "itensNoFeed": 61,
-      "aceitas": 60,
-      "descartadasPorIdade": 1,
-      "comImagem": 60
+      "aceitas": 57,
+      "descartadasPorIdade": 4,
+      "comImagem": 57
     },
     {
       "id": "cartacapital",
@@ -577,9 +577,9 @@
       "nome": "Buenos Aires Times",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 15,
-      "descartadasPorIdade": 85,
-      "comImagem": 15
+      "aceitas": 14,
+      "descartadasPorIdade": 86,
+      "comImagem": 14
     },
     {
       "id": "mexiconews",
