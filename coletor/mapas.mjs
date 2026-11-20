@@ -38,8 +38,11 @@ function regiaoDoPais(p) {
 }
 
 /** Desenha um conjunto de países ajustado a uma caixa de 240 x 160. */
-function svg(features, projecao) {
+function svg(features, projecao, centralizar = true) {
   const colecao = { type: 'FeatureCollection', features };
+  // Gira o globo para a região ficar no meio (evita que a Rússia ou o
+  // Alasca apareçam cortados nas duas pontas do desenho).
+  if (centralizar) projecao.rotate([-geoCentroid(colecao)[0], 0]);
   projecao.fitExtent([[6, 6], [234, 154]], colecao);
   const caminho = geoPath(projecao);
   const d = features.map((f) => caminho(f)).filter(Boolean).join('');
@@ -56,7 +59,7 @@ for (const [regiao, lista] of Object.entries(grupos)) {
   console.log(`${regiao}: ${lista.length} países`);
 }
 // "Mundo" e "Organismos globais": o planeta inteiro.
-const mapaMundo = svg(paises, geoEqualEarth());
+const mapaMundo = svg(paises, geoEqualEarth(), false);
 await writeFile(new URL('../assets/regioes/mundo.svg', import.meta.url), mapaMundo);
 await writeFile(new URL('../assets/regioes/global.svg', import.meta.url), mapaMundo);
 console.log('mundo e global: planeta inteiro');
