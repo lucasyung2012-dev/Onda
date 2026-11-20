@@ -1,0 +1,40 @@
+# =============================================================
+# Gera os mapas das regiões (assets/regioes/*.svg) para o Explorar.
+# Só precisa rodar quando as regiões mudarem (ou pelo botão).
+# =============================================================
+name: Gerar mapas das regiões
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'coletor/mapas.mjs'
+      - '.github/workflows/mapas.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  mapas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Instalar o mapa-múndi e as ferramentas de desenho
+        run: npm install --no-save --no-package-lock d3-geo@3 topojson-client@3 world-atlas@2
+      - name: Desenhar os mapas
+        run: node coletor/mapas.mjs
+      - name: Salvar no repositório
+        run: |
+          git config user.name "onda-robo"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/regioes
+          if git diff --cached --quiet; then echo "Mapas já atualizados."; else
+            git commit -m "Mapas das regiões gerados (Natural Earth)"
+            git pull --rebase
+            git push
+          fi

@@ -14,6 +14,11 @@ import * as telas from './telas.js';
 const estado = {
   dados: null,        // data/app/hoje.json
   analise: null,      // data/app/analise.json
+  tema: null,         // data/app/tema.json (tema do dia)
+  temas: null,        // data/app/temas.json (índice dos temas anteriores)
+  edicoes: null,      // data/app/edicoes.json (índice das edições anteriores)
+  arquivos: {},       // edições e temas antigos já baixados (para não baixar de novo)
+  edicaoAberta: null, // edição antiga que está na tela (para abrir as notícias dela)
   explorar: { modo: 'regioes', busca: '', limite: 30 },
   gaveta: { chave: '', sub: '', limite: 30 },
 };
@@ -34,12 +39,33 @@ async function lerJson(caminho) {
 }
 
 async function carregar() {
-  const [dados, analise] = await Promise.all([
+  const opcional = (c) => lerJson(c).catch(() => null); // sem esses, o app funciona mesmo assim
+  const [dados, analise, tema, temas, edicoes, fontes] = await Promise.all([
     lerJson('data/app/hoje.json'),
-    lerJson('data/app/analise.json').catch(() => null), // sem análise, o app funciona mesmo assim
+    opcional('data/app/analise.json'),
+    opcional('data/app/tema.json'),
+    opcional('data/app/temas.json'),
+    opcional('data/app/edicoes.json'),
+    opcional('data/fontes.json'),
   ]);
-  estado.dados = dados;
-  estado.analise = analise;
+  // Domínio de cada fonte (para mostrar o logotipo dela no Explorar)
+  dados.dominios = {};
+  for (const f of fontes?.fontes || []) {
+    const partes = new URL(f.feed).hostname.split('.');
+    if (partes.length > 2 && ['www', 'rss', 'feeds', 'feed', 'moxie', 'english', 'en'].includes(partes[0])) partes.shift();
+    dados.dominios[f.nome] = partes.join('.');
+  }
+  Object.assign(estado, { dados, analise, tema, temas, edicoes });
+}
+
+/** Baixa (uma vez só) a edição ou o tema de um dia antigo e guarda a última versão. */
+async function arquivoDoDia(pasta, data) {
+  const chave = `${pasta}/${data}`;
+  if (!estado.arquivos[chave]) {
+    const doDia = await lerJson(`data/${pasta}/${data}.json`);
+    estado.arquivos[chave] = doDia.versoes[doDia.versoes.length - 1];
+  }
+  return estado.arquivos[chave];
 }
 
 // ---------- Rotas (o que vem depois do # no endereço) ----------
@@ -51,7 +77,8 @@ function rotaAtual() {
 
 /** Qual aba do rodapé fica acesa para cada tela */
 function abaDaTela(tela) {
-  if (tela === 'analise') return 'hoje';
+  if (['analise', 'edicoes', 'edicao'].includes(tela)) return 'hoje';
+  if (tela === 'tema') return 'temas';
   return ['hoje', 'temas', 'explorar', 'meu'].includes(tela) ? tela : 'hoje';
 }
 
@@ -59,7 +86,14 @@ function htmlDaRota({ tela, partes }) {
   const { dados, analise } = estado;
   switch (tela) {
     case 'analise': return telas.telaAnalise(analise, dados);
-    case 'temas': return telas.telaTemas();
+    case 'temas': return telas.telaTemas(estado.tema, estado.temas);
+    case 'edicoes': return telas.telaEdicoes(estado.edicoes, dados);
+    // Telas de dias antigos: baixam o arquivo do dia e depois se desenham.
+    case 'edicao': return carregarDepois('analises', partes[1], (ed) => { estado.edicaoAberta = ed; return telas.telaAnalise(ed, dados, { comOutros: true }); });
+    case 'tema': {
+      if (estado.tema?.dataReferencia === partes[1]) return telas.telaTema(estado.tema);
+      return carregarDepois('temas', partes[1], (t) => telas.telaTema(t));
+    }
     case 'meu': return telas.telaMeu();
     case 'explorar': {
       if (partes.length >= 3) {
@@ -71,6 +105,15 @@ function htmlDaRota({ tela, partes }) {
     }
     default: return telas.telaHoje(analise, dados);
   }
+}
+
+/** Mostra "carregando" e, quando o arquivo do dia chegar, desenha a tela. */
+function carregarDepois(pasta, data, montar) {
+  const chave = location.hash;
+  arquivoDoDia(pasta, data)
+    .then((arq) => { if (location.hash === chave) conteudo.innerHTML = montar(arq); })
+    .catch(() => { if (location.hash === chave) conteudo.innerHTML = telas.telaErro('Não achei esse dia. Confira a conexão.'); });
+  return '<p class="carregando">Carregando…</p>';
 }
 
 /** Desenha a tela do endereço atual, com transição suave. */
@@ -86,7 +129,8 @@ function desenhar({ animar = true } = {}) {
   };
   // "View Transitions": o navegador anima a troca entre a tela velha e a nova.
   if (animar && document.startViewTransition && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.startViewTransition(trocar);
+    const transicao = document.startViewTransition(trocar);
+    transicao.ready.catch(() => {}); // se a animação for pulada (app em segundo plano), tudo bem
   } else {
     trocar();
   }
@@ -104,9 +148,15 @@ function contextoDoFato(id) {
 
 function abrirFolha(id) {
   const fato = estado.dados.fatos.find((f) => f.id === id);
-  if (!fato) return;
+  // Se o fato não está mais nas últimas 24 h, procura nas edições guardadas.
+  const guardado = !fato && [estado.edicaoAberta, estado.analise]
+    .flatMap((e) => e?.tambemImporta || [])
+    .find((t) => t.fatoId === id && t.materias);
+  if (!fato && !guardado) return;
   folhaRotulo.textContent = 'Notícia';
-  folhaCorpo.innerHTML = telas.folhaFato(fato, estado.dados, contextoDoFato(id));
+  folhaCorpo.innerHTML = fato
+    ? telas.folhaFato(fato, estado.dados, contextoDoFato(id))
+    : telas.folhaArquivo(guardado, estado.dados);
   folhaCorpo.scrollTop = 0;
   folha.hidden = false;
   veu.hidden = false;
@@ -192,8 +242,9 @@ document.addEventListener('click', (e) => {
   else if (alvo.hasAttribute('data-recarregar')) location.reload();
   else if (alvo.hasAttribute('data-voltar')) {
     const { tela } = rotaAtual();
+    const pai = { explorar: 'explorar', tema: 'temas', edicao: 'edicoes' }[tela] || 'hoje';
     if (history.length > 1) history.back();
-    else location.hash = tela === 'explorar' ? 'explorar' : 'hoje';
+    else location.hash = pai;
   } else if (alvo.dataset.modo) {
     // Troca Regiões / Assuntos / Fontes: a pílula desliza e o conteúdo muda.
     estado.explorar.modo = alvo.dataset.modo;

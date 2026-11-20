@@ -584,6 +584,24 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 0 0 14px rgba(255, 255, 255, 0.06), 0 0 0 28px rgba(255, 255, 255, 0.04);
 }
 
+/* Arte dos cartões: mapa da região ou ícone do assunto */
+.cartao-regiao > div, .cartao-regiao .manchete { position: relative; z-index: 1; }
+.cartao-regiao .mapa { position: absolute; right: -8px; bottom: -6px; width: 68%; opacity: 0.3; pointer-events: none; }
+.cartao-regiao .ilustra { position: absolute; right: 10px; top: 10px; color: #fff; opacity: 0.5; pointer-events: none; }
+.cartao-regiao:has(.mapa)::after, .cartao-regiao:has(.ilustra)::after { display: none; }
+
+/* Logotipo das fontes */
+.nome-fonte { display: flex; align-items: center; gap: 10px; }
+.logo-fonte {
+  position: relative; flex: none;
+  width: 32px; height: 32px; border-radius: 9px;
+  display: inline-grid; place-items: center;
+  background: var(--superficie-2);
+  font-size: 11px; font-weight: 700; color: var(--texto-3);
+  overflow: hidden;
+}
+.logo-fonte img { position: absolute; inset: 0; width: 100%; height: 100%; padding: 5px; background: #fff; object-fit: contain; }
+
 .lista-fontes { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 8px; }
 .linha-fonte { display: grid; grid-template-columns: 1fr auto 16px; gap: 10px; align-items: center; width: 100%; padding: 12px 14px; border-radius: var(--raio-p); border: 1px solid var(--borda); background: var(--superficie); text-align: left; cursor: pointer; }
 .linha-fonte small { display: block; font-size: 12px; color: var(--texto-3); }

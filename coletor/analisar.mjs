@@ -6,7 +6,7 @@
 //   1. SELEÇÃO: pega os fatos das últimas 24 h que têm pelo menos duas
 //      fontes jornalísticas independentes (para estarem CONFIRMADOS) e
 //      pede à IA para escolher o mais importante do dia — por peso
-//      geopolítico, nunca por quantos sites publicaram — e mais quatro
+//      geopolítico, nunca por quantos sites publicaram — e mais cinco
 //      que também importam.
 //   2. ANÁLISE: entrega à IA as matérias do destaque e pede a análise
 //      completa: o que aconteceu, por que importa, como chega em você,
@@ -77,7 +77,7 @@ ${linhas.join('\n')}
 
 Tarefa:
 1. Escolha o ÚNICO acontecimento geopolítico mais importante do dia. Compare: importância estratégica, quantidade e peso dos países envolvidos, consequências militares, diplomáticas e econômicas, impacto regional e internacional, potencial de mudar a ordem mundial, consequências imediatas e futuras. Não privilegie guerras automaticamente: um acordo histórico pode valer mais que um confronto isolado. Ignore esportes, celebridades, crimes comuns e curiosidades.
-2. Escolha mais 4 acontecimentos que também importam hoje, de preferência de regiões e temas diferentes do destaque.
+2. Escolha mais 5 acontecimentos que também importam hoje, de preferência de regiões e temas diferentes do destaque.
 
 Responda neste formato JSON:
 {"destaque": {"indice": <número>, "tituloPt": "<título curto em português>", "criterio": "<1 frase com o principal motivo da escolha, sem citar quantidade de fontes>"},
@@ -91,7 +91,7 @@ Responda neste formato JSON:
       const ok = (i) => Number.isInteger(i) && i >= 0 && i < lista.length;
       if (!r.destaque || !ok(r.destaque.indice) || !r.destaque.tituloPt) throw new Error('seleção sem destaque válido');
       if (!Array.isArray(r.tambemImporta)) throw new Error('seleção sem "tambemImporta"');
-      r.tambemImporta = r.tambemImporta.filter((t) => ok(t.indice) && t.indice !== r.destaque.indice && t.tituloPt).slice(0, 4);
+      r.tambemImporta = r.tambemImporta.filter((t) => ok(t.indice) && t.indice !== r.destaque.indice && t.tituloPt).slice(0, 5);
     },
   });
 }
@@ -219,6 +219,13 @@ async function principal() {
       return {
         fatoId: f.id, tituloPt: t.tituloPt, porQueImporta: t.porQueImporta || '',
         regioes: f.regioes, temas: f.temas, imagem: comImagem?.imagem || '', credito: comImagem?.fonteNome || '',
+        // As matérias ficam guardadas junto, para a edição poder ser relida
+        // no histórico mesmo depois que a notícia sair do "hoje".
+        resumo: (f.materias.find((m) => m.resumo) || {}).resumo || '',
+        materias: f.materias.slice(0, 8).map((m) => ({
+          fonte: m.fonteNome, pais: m.pais, visao: m.visao, estatal: m.estatal, tipo: m.tipo,
+          titulo: m.titulo, link: m.link, publicadoEm: m.publicadoEm,
+        })),
       };
     }),
   };
@@ -228,6 +235,20 @@ async function principal() {
   doDia.versoes.push(edicao);
   await gravarJson(`data/analises/${hojeData}.json`, doDia);
   await gravarJson('data/app/analise.json', { ...edicao, versao: doDia.versoes.length });
+
+  // Índice das edições (para a tela "Edições anteriores").
+  const indice = await lerJson('data/app/edicoes.json', { edicoes: [] });
+  indice.edicoes = indice.edicoes.filter((e) => e.data !== hojeData);
+  indice.edicoes.unshift({
+    data: hojeData,
+    titulo: analise.titulo,
+    regiao: destaque.regioes[0],
+    imagem: edicao.destaque.imagem,
+    notas: { geral: analise.notas.geral.nota, mundo: analise.notas.mundo.nota, voce: analise.notas.voce.nota },
+    outros: edicao.tambemImporta.map((t) => t.tituloPt),
+  });
+  indice.edicoes.sort((a, b) => b.data.localeCompare(a.data));
+  await gravarJson('data/app/edicoes.json', indice);
 
   console.log(`Análise gravada (versão ${doDia.versoes.length} do dia, via ${provedor} / ${modelo}).`);
 }

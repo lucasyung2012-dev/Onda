@@ -12,7 +12,7 @@
 // aparelhos baixarem a versão nova.
 // =============================================================
 
-const VERSAO = 'onda-v2';
+const VERSAO = 'onda-v3';
 
 const ARQUIVOS_DO_APP = [
   './',
@@ -21,7 +21,6 @@ const ARQUIVOS_DO_APP = [
   'js/app.js',
   'js/telas.js',
   'js/util.js',
-  'js/biblioteca.js',
   'manifest.webmanifest',
   'assets/logo/onda.svg',
   'assets/logo/onda-mini.svg',

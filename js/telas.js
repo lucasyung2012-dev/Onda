@@ -6,7 +6,6 @@
 // =============================================================
 
 import { esc, tempoRelativo, dataHora, hora, dataPorExtenso, dataCurta, numero, corRegiao, semAcento } from './util.js';
-import { GRUPOS } from './biblioteca.js';
 
 // ---------- Nomes bonitos ----------
 
@@ -25,6 +24,33 @@ const COR_TEMA = {
   conflitos: '#C2554F', diplomacia: '#4F86C6', economia: '#2E9E5B', energia: '#D98B3A', politica: '#8A7FD1',
   tecnologia: '#1FA594', clima: '#5A9E3A', direitos: '#C2557A', midia: '#B07ACC', saude: '#3FA3C9', outros: '#6B7F92',
 };
+
+// Ícone desenhado para cada assunto (traço simples, cor do texto)
+const ICONES_TEMA = {
+  conflitos: '<path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/>',
+  diplomacia: '<path d="M3 12l4-4 4 3 3-3 7 4"/><path d="M7 8l-4 4 6 6 2-2M21 12l-6 6-2-2"/><path d="M11 16l2 2"/>',
+  economia: '<path d="M4 20V4M4 20h16"/><path d="M7 15l4-4 3 3 5-6"/><path d="M15 8h4v4"/>',
+  energia: '<path d="M13 2L5 14h6l-1 8 8-12h-6z"/>',
+  politica: '<path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10"/><path d="M2 10l10-6 10 6z"/>',
+  tecnologia: '<rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/>',
+  clima: '<path d="M5 19c8 0 14-6 14-15C10 4 5 9 5 15c0 1.5.4 2.8 1 4"/><path d="M5 19c2-4 5-7 9-9"/>',
+  direitos: '<path d="M12 3v18M6 21h12M4 7h16"/><path d="M6 7l-3 6a3 3 0 0 0 6 0zM18 7l-3 6a3 3 0 0 0 6 0z"/>',
+  midia: '<path d="M3 10v4h3l7 4V6L6 10z"/><path d="M17 8a5 5 0 0 1 0 8M20 5a9 9 0 0 1 0 14"/>',
+  saude: '<path d="M20.8 6.6a5 5 0 0 0-8.8-2.4 5 5 0 0 0-8.8 2.4C2.5 11 12 20 12 20s9.5-9 8.8-13.4z"/><path d="M7 11h3l1.5-2.5 2 5 1.5-2.5h2"/>',
+  outros: '<circle cx="6" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="18" cy="12" r="1.6"/>',
+};
+function iconeTema(id, tamanho = 54) {
+  return `<svg class="ilustra" width="${tamanho}" height="${tamanho}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONES_TEMA[id] || ICONES_TEMA.outros}</svg>`;
+}
+
+/** Logotipo da fonte (o ícone do próprio site dela); se falhar, as iniciais. */
+function logoFonte(nome, dominio) {
+  const iniciais = nome.replace(/^The /, '').split(/\s+/).map((p) => p[0]).join('').slice(0, 2).toUpperCase();
+  const img = dominio
+    ? `<img src="https://icons.duckduckgo.com/ip3/${esc(dominio)}.ico" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`
+    : '';
+  return `<span class="logo-fonte"><span>${esc(iniciais)}</span>${img}</span>`;
+}
 
 // ---------- Peças reaproveitadas ----------
 
@@ -93,8 +119,9 @@ export function telaHoje(analise, dados) {
   const atalhos = `
     <div class="atalhos cascata">
       <a class="atalho" href="#explorar" style="--i:1"><strong>${numero(dados.fatos.length)}</strong><span>fatos para explorar por região, assunto ou fonte</span></a>
-      <a class="atalho tema" href="#temas" style="--i:2"><span>Tema do dia</span><strong style="font-size:17px">Biblioteca de temas</strong></a>
-    </div>`;
+      <a class="atalho tema" href="#temas" style="--i:2"><span>Tema do dia</span><strong style="font-size:17px">Entender o mundo</strong></a>
+    </div>
+    <a class="botao largo" href="#edicoes" style="margin-top:10px">Edições anteriores <span class="icone i-seta" aria-hidden="true"></span></a>`;
 
   if (!temAnalise) return `<div class="tela">${topo}${semAnalise(analise, dados)}<div class="secao">${atalhos}</div></div>`;
 
@@ -177,7 +204,7 @@ function semAnalise(analise, dados) {
 
 // ---------- ANÁLISE COMPLETA ----------
 
-export function telaAnalise(analise, dados) {
+export function telaAnalise(analise, dados, opcoes = {}) {
   if (!analise?.destaque) return `<div class="tela"><p class="vazio">Ainda não há análise.</p></div>`;
   const d = analise.destaque;
   const regiao = d.regioes[0];
@@ -250,6 +277,12 @@ export function telaAnalise(analise, dados) {
       ${bloco(7, 'O que acompanhar', `<ul class="lista-pontos">${d.oQueAcompanhar.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`)}
       ${bloco(8, `As fontes (${d.fontesUsadas.length})`, fontes)}
 
+      ${opcoes.comOutros && analise.tambemImporta?.length ? `
+        <section class="secao">
+          <div class="secao-cabeca"><h2>Também importou neste dia</h2></div>
+          <div class="importa cascata">${analise.tambemImporta.map((t, i) => cartaoImporta(t, i + 2, dados)).join('')}</div>
+        </section>` : ''}
+
       <p class="aviso-ia"><span class="icone i-ia" aria-hidden="true"></span>${esc(analise.ia.aviso)} Gerada em ${dataHora(analise.geradoEm)} por ${esc(analise.ia.provedor)} (${esc(analise.ia.modelo)}).</p>
     </div>`;
 }
@@ -295,8 +328,13 @@ export function corpoExplorar(dados, modo, busca, limite = 30) {
     <div class="grade-regioes cascata">
       ${ordem.map((id, i) => {
         const cor = modo === 'regioes' ? corRegiao(id) : (COR_TEMA[id] || COR_TEMA.outros);
+        // Regiões ganham o mapa da região; assuntos, um ícone próprio.
+        const arte = modo === 'regioes'
+          ? `<img class="mapa" src="assets/regioes/${esc(id)}.svg" alt="" loading="lazy" onerror="this.remove()">`
+          : iconeTema(id);
         return `
           <button class="cartao-regiao" type="button" data-gaveta="${modo === 'regioes' ? 'regiao' : 'assunto'}/${esc(id)}" style="--cor:${cor};--i:${Math.min(i, 10)}">
+            ${arte}
             <div><strong>${esc(nomes[id] || id)}</strong><div class="conta">${numero(grupos[id].length)} fatos</div></div>
             <span class="manchete">${esc(grupos[id][0].titulo)}</span>
           </button>`;
@@ -319,7 +357,7 @@ function gradeFontes(dados) {
       <ul class="lista-fontes cascata" style="margin-top:8px">
         ${porPais[pais].sort((a, b) => b.total - a.total).map((c, i) => `
           <li style="--i:${Math.min(i, 8)}"><button class="linha-fonte" type="button" data-gaveta="fonte/${encodeURIComponent(c.nome)}">
-            <span>${esc(c.nome)}${c.estatal ? ' <span class="etiqueta estatal" style="margin-left:4px">Estatal</span>' : ''}</span>
+            <span class="nome-fonte">${logoFonte(c.nome, dados.dominios?.[c.nome])}<span>${esc(c.nome)}${c.estatal ? ' <span class="etiqueta estatal" style="margin-left:4px">Estatal</span>' : ''}</span></span>
             <span class="conta">${c.total}</span>
             <span class="icone i-seta" aria-hidden="true"></span>
           </button></li>`).join('')}
@@ -369,24 +407,131 @@ export function dadosDaGaveta(dados, tipo, id) {
 
 // ---------- TEMAS ----------
 
-export function telaTemas() {
-  const total = GRUPOS.reduce((s, g) => s + g.temas.length, 0);
+/** Aba Temas: o tema do dia e os temas anteriores (que vão se acumulando). */
+export function telaTemas(tema, indice) {
+  const temHoje = tema?.status === 'ok';
+  const anteriores = (indice?.temas || []).filter((t) => !temHoje || t.data !== tema.dataReferencia);
+  const capa = temHoje ? `
+    <a class="tema-do-dia" href="#tema/${esc(tema.dataReferencia)}" style="margin-top:18px;display:block;text-decoration:none">
+      <p class="rotulo">Tema do dia · ${esc(dataCurta(tema.dataReferencia))}</p>
+      <h2>${esc(tema.titulo)}</h2>
+      <p style="font-family:var(--fonte-titulo);font-size:17px;color:#fff;margin-bottom:10px">${esc(tema.pergunta)}</p>
+      <div class="passos-tema">${tema.cadeia.slice(0, 4).map((c) => `<span>${esc(curto(c.passo))}</span>`).join('<i>›</i>')}<i>›</i><span>Você</span></div>
+      <p>${esc(tema.emUmaFrase)}</p>
+      <span class="botao" style="margin-top:14px;background:rgba(255,255,255,.14);border:0;color:#fff">Ler a explicação <span class="icone i-seta" aria-hidden="true"></span></span>
+    </a>` : `
+    <div class="tema-do-dia" style="margin-top:18px">
+      <p class="rotulo">Tema do dia</p>
+      <h2>O primeiro tema chega com a primeira análise</h2>
+      <p>Todo dia, às 7h, o Onda escolhe um assunto para entender o mundo — de qualquer época — e explica do começo até você, usando só fontes que dá para conferir (Wikipedia e notícias). Precisa da chave da IA configurada.</p>
+    </div>`;
+
   return `
     <div class="tela">
-      ${cabecalho('Temas', 'Entender o mundo', 'Assuntos que não acabam num dia, explicados do começo até você.')}
-      <div class="tema-do-dia" style="margin-top:18px">
-        <p class="rotulo">Tema do dia · em breve</p>
-        <h2>Ucrânia → petróleo → sua gasolina</h2>
-        <div class="passos-tema"><span>Guerra</span><i>›</i><span>Sanções</span><i>›</i><span>Barril</span><i>›</i><span>Petrobras</span><i>›</i><span>Bomba</span></div>
-        <p>Exemplo de como vai ficar. Na etapa 6, todo dia um tema da biblioteca ganha análise, ligado às notícias do momento.</p>
+      ${cabecalho('Temas', 'Entender o mundo', 'Não é notícia: é a explicação de um assunto, do começo até o seu dia a dia.')}
+      ${capa}
+      <div class="secao">
+        <div class="secao-cabeca"><h2>Temas anteriores</h2><span>${anteriores.length}</span></div>
+        ${anteriores.length
+          ? `<div class="temas-lista cascata">${anteriores.map((t, i) => `
+              <a class="tema-item" href="#tema/${esc(t.data)}" style="--i:${Math.min(i, 10)};text-decoration:none;color:inherit">
+                <span><strong style="display:block;font-weight:600">${esc(t.titulo)}</strong><small style="white-space:normal">${esc(t.pergunta)}</small></span>
+                <small>${esc(dataCurta(t.data))}</small>
+              </a>`).join('')}</div>`
+          : '<p class="vazio">Os temas vão se acumulando aqui, um por dia.</p>'}
       </div>
-      <div class="secao-cabeca" style="margin-top:26px"><h2>Biblioteca</h2><span>${total} temas</span></div>
-      ${GRUPOS.map((g) => `
-        <div class="grupo-temas">
-          <h3>${esc(g.nome)}</h3>
-          <div class="temas-lista cascata">${g.temas.map((t, i) => `<div class="tema-item" style="--i:${i}"><span>${esc(t)}</span><small>em breve</small></div>`).join('')}</div>
-        </div>`).join('')}
     </div>`;
+}
+
+/** Corta um texto longo para caber numa pílula. */
+function curto(texto, max = 28) {
+  return texto.length > max ? `${texto.slice(0, max - 1).trim()}…` : texto;
+}
+
+/** Explicação completa de um tema. */
+export function telaTema(tema) {
+  if (!tema?.titulo) return `<div class="tela"><p class="vazio">Tema não encontrado.</p></div>`;
+  const paragrafos = (texto) => texto.split(/\n+/).filter(Boolean).map((p) => `<p>${esc(p)}</p>`).join('');
+  const bloco = (num, titulo, corpo) => `
+    <section class="bloco entrar-lado">
+      <div class="bloco-cabeca"><span class="num">${num}</span><h2>${titulo}</h2></div>${corpo}
+    </section>`;
+  let n = 0;
+  return `
+    <div class="tela">
+      <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>Temas</button>
+      <div class="tema-do-dia" style="margin-top:8px">
+        <p class="rotulo">Tema do dia · ${esc(dataCurta(tema.dataReferencia))}</p>
+        <h2>${esc(tema.titulo)}</h2>
+        <p style="font-family:var(--fonte-titulo);font-size:18px;color:#fff">${esc(tema.pergunta)}</p>
+      </div>
+      <div class="uma-frase"><p class="rotulo ouro">A resposta em uma frase</p><p>${esc(tema.emUmaFrase)}</p></div>
+
+      ${bloco(++n, 'A explicação', `<div class="texto-longo">${paragrafos(tema.explicacao)}</div>`)}
+      ${tema.linhaDoTempo.length ? bloco(++n, 'Linha do tempo', `
+        <ol class="cadeia">${tema.linhaDoTempo.map((l) => `
+          <li class="elo"><span class="ponto" style="width:28px;font-size:9px">•</span><div class="caixa"><span class="camada">${esc(l.quando)}</span><p>${esc(l.oQue)}</p>${l.fonte ? `<small class="subtitulo">${esc(l.fonte)}</small>` : ''}</div></li>`).join('')}
+        </ol>`) : ''}
+      ${tema.atores.length ? bloco(++n, 'Quem está envolvido', `
+        <div class="temas-lista">${tema.atores.map((a) => `<div class="tema-item" style="display:block"><strong style="font-weight:600">${esc(a.nome)}</strong><p class="subtitulo" style="font-size:14px;margin-top:2px">${esc(a.papel)}</p></div>`).join('')}</div>`) : ''}
+      ${bloco(++n, 'Como chega em você', `
+        <ol class="cadeia">
+          ${tema.cadeia.map((c, i) => `<li class="elo"><span class="ponto">${i + 1}</span><div class="caixa"><span class="camada">${esc(CAMADAS[c.camada] || c.camada)}</span><p>${esc(c.passo)}</p></div></li>`).join('')}
+          <li class="elo voce"><span class="ponto">★</span><div class="caixa"><span class="camada">Você · ${esc(IMPACTO[tema.chegaEmVoce.tipo])}</span><p>${esc(tema.chegaEmVoce.texto)}</p></div></li>
+        </ol>`)}
+      ${tema.eHoje ? bloco(++n, 'E hoje?', `<div class="texto-longo">${paragrafos(tema.eHoje)}</div>`) : ''}
+      ${tema.paraPensar ? `<div class="uma-frase" style="margin-top:24px"><p class="rotulo ouro">Para pensar</p><p>${esc(tema.paraPensar)}</p></div>` : ''}
+      ${bloco(++n, `As fontes (${tema.fontes.length})`, `
+        <ul class="fontes-usadas">${tema.fontes.map((f, i) => `
+          <li><a class="fonte-usada" href="${esc(f.link)}" target="_blank" rel="noopener noreferrer">
+            <span class="idx">${i + 1}</span><div><strong>${esc(f.fonte)}</strong><p>${esc(f.titulo)}</p></div><span class="icone i-externo" aria-hidden="true"></span>
+          </a></li>`).join('')}</ul>`)}
+      <p class="aviso-ia"><span class="icone i-ia" aria-hidden="true"></span>${esc(tema.ia?.aviso || '')} Gerado em ${dataHora(tema.geradoEm)}.</p>
+    </div>`;
+}
+
+// ---------- EDIÇÕES ANTERIORES ----------
+
+export function telaEdicoes(indice, dados) {
+  const edicoes = indice?.edicoes || [];
+  return `
+    <div class="tela">
+      <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>Hoje</button>
+      ${cabecalho('Histórico', 'Edições anteriores', 'O destaque e os outros 5 fatos de cada dia, guardados para reler.')}
+      ${edicoes.length ? `
+        <div class="importa cascata" style="margin-top:18px">
+          ${edicoes.map((e, i) => `
+            <a class="cartao-importa" href="#edicao/${esc(e.data)}" style="--i:${Math.min(i, 10)};grid-template-columns:52px 1fr 64px;text-decoration:none;color:inherit">
+              <span class="numero" style="font-size:15px;line-height:1.1">${esc(dataCurta(e.data))}</span>
+              <div>
+                <h3>${esc(e.titulo)}</h3>
+                <p>Notas ${e.notas.geral} · ${e.notas.mundo} · <span style="color:var(--ouro)">${e.notas.voce}</span> — e mais ${e.outros.length} fatos</p>
+              </div>
+              ${imagem({ url: e.imagem, regiao: e.regiao, nomeRegiao: dados.nomesRegioes[e.regiao], comCredito: false })}
+            </a>`).join('')}
+        </div>` : '<p class="vazio">As edições vão se acumulando aqui, uma por dia, a partir da primeira análise.</p>'}
+    </div>`;
+}
+
+/** Folha de um fato guardado numa edição (pode não estar mais no "hoje"). */
+export function folhaArquivo(item, dados) {
+  const regiao = item.regioes[0];
+  return `
+    ${imagem({ url: item.imagem, credito: item.credito, regiao, nomeRegiao: dados.nomesRegioes[regiao], classe: 'grande' })}
+    <div class="etiquetas">${item.regioes.slice(0, 2).map((r) => etiquetaRegiao(r, dados)).join('')}${etiquetaTema(item.temas[0], dados)}</div>
+    <h2>${esc(item.tituloPt)}</h2>
+    <div class="uma-frase" style="margin:0 0 12px"><p class="rotulo ouro">Por que importa</p><p style="font-size:16px">${esc(item.porQueImporta)}</p></div>
+    ${item.resumo ? `<p class="resumo">${esc(item.resumo)}</p>` : ''}
+    <div class="secao-cabeca" style="margin-top:22px"><h2 style="font-size:18px">Como cada fonte contou</h2><span>${(item.materias || []).length}</span></div>
+    <ul class="materias">
+      ${(item.materias || []).map((m) => `
+        <li class="materia">
+          <div class="fonte"><strong>${esc(m.fonte)}</strong><span class="etiqueta">${esc(m.pais)}</span>${m.estatal ? '<span class="etiqueta estatal">Estatal</span>' : ''}</div>
+          <p class="visao">${esc(m.visao || '')}</p>
+          <a href="${esc(m.link)}" target="_blank" rel="noopener noreferrer">${esc(m.titulo)}<span class="icone i-externo" aria-hidden="true"></span></a>
+          <time datetime="${esc(m.publicadoEm)}">${dataHora(m.publicadoEm)}</time>
+        </li>`).join('')}
+    </ul>`;
 }
 
 // ---------- MEU ONDA ----------
