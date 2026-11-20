@@ -2,6 +2,384 @@
   "data": "2026-11-20",
   "noticias": [
     {
+      "id": "531970a17042",
+      "titulo": "Secret police recording of parent murderer released",
+      "resumo": "A month after she murdered her elderly father by injecting him with a lethal dose of insulin, double murderer Raelene Polymiadis begged God for forgiveness.",
+      "link": "https://www.abc.net.au/news/2026-11-21/court-releases-murderer-raelene-polymiadis-secret-recordings/107410402",
+      "fonte": "abcau",
+      "fonteNome": "ABC News Austrália",
+      "pais": "Austrália",
+      "visao": "Emissora pública australiana",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:30:21.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/302cfd38dc0a59701124b89ac4c44107?impolicy=wcms_crop_resize&cropH=1969&cropW=3500&xPos=0&yPos=182&width=862&height=485",
+      "imagemCredito": "ABC News Austrália",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-20T23:36:55.664Z"
+    },
+    {
+      "id": "6e123d942a9f",
+      "titulo": "Sabotagem e planos de assassinatos: Rússia mira indústria de defesa europeia por armar Ucrânia",
+      "resumo": "Rússia está escalando as hostilidades contra vizinhos europeus por meio de ações contra empresas do setor de defesa",
+      "link": "https://www.gazetadopovo.com.br/mundo/russia-mira-industria-defesa-europeia-armar-ucrania/",
+      "fonte": "gazetadopovo",
+      "fonteNome": "Gazeta do Povo Mundo",
+      "pais": "Brasil",
+      "visao": "Jornal brasileiro, direita conservadora",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:30:11.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://media.gazetadopovo.com.br/2026/11/19142701/sabotagem.russia-960x540.jpg",
+      "imagemCredito": "Gazeta do Povo Mundo",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "economia",
+        "conflitos"
+      ],
+      "coletadoEm": "2026-11-20T23:36:55.664Z"
+    },
+    {
+      "id": "f77681be5154",
+      "titulo": "Honda to recall 810,000 US vehicles over Takata air bag rupture risk",
+      "resumo": "There have been at least 28 deaths in the US stemming from defective Takata air bag inflators since 2009.",
+      "link": "https://www.straitstimes.com/world/united-states/honda-to-recall-810000-us-vehicles-over-takata-air-bag-rupture-risk",
+      "fonte": "straitstimes",
+      "fonteNome": "The Straits Times",
+      "pais": "Singapura",
+      "visao": "Jornal de referência de Singapura",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:30:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-20T23:36:55.664Z"
+    },
+    {
+      "id": "b83ce3c442ac",
+      "titulo": "Sem citar a Rússia, governo Lula condena ataque que atingiu embaixada do Brasil na Ucrânia",
+      "resumo": "Governo Lula condena ataque russo que atingiu a embaixada brasileira em Kiev, mas evita responsabilizar Moscou pela ofensiva.",
+      "link": "https://www.gazetadopovo.com.br/mundo/sem-citar-a-russia-governo-lula-condena-ataque-que-atingiu-embaixada-do-brasil-na-ucrania/",
+      "fonte": "gazetadopovo",
+      "fonteNome": "Gazeta do Povo Mundo",
+      "pais": "Brasil",
+      "visao": "Jornal brasileiro, direita conservadora",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:29:57.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://media.gazetadopovo.com.br/2026/11/20202835/brasil-embaixada-ucrania-ataque-russia-lula-960x540.jpg",
+      "imagemCredito": "Gazeta do Povo Mundo",
+      "regioes": [
+        "europa",
+        "brasil"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia",
+        "politica",
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-20T23:36:55.664Z"
+    },
+    {
+      "id": "47bb527195f2",
+      "titulo": "Conmebol admite ter R$ 88 milhões aplicados no Ueno, banco paraguaio que quebrou após crise",
+      "resumo": "Vista aérea mostra a sede do Ueno Bank, em Assunção, no Paraguai. Reuters A Conmebol (Confederação Sul-Americana de Futebol) admitiu nesta sexta-feira (20) ter US$ 15 milhões (cerca de R$ 88 milhões) aplicados no Ueno Bank, banco paraguaio que quebrou após uma crise financeira…",
+      "link": "https://g1.globo.com/economia/noticia/2026/11/20/conmebol-recursos-banco-ueno.ghtml",
+      "fonte": "g1",
+      "fonteNome": "g1 Mundo",
+      "pais": "Brasil",
+      "visao": "Portal do Grupo Globo",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:29:32.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://s2-g1.glbimg.com/KcGYEVzmUBtKM_2wlS4Y0O4dU3w=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/p/m/lKx1ABRxGBmB5JVBUefA/2026-11-03t212644z-1474208164-rc2cgoa6cu4v-rtrmadp-3-paraguay-finance-1-.jpg",
+      "imagemCredito": "g1 Mundo",
+      "regioes": [
+        "america-latina",
+        "europa"
+      ],
+      "temas": [
+        "economia",
+        "politica",
+        "conflitos",
+        "diplomacia",
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-20T23:36:55.664Z"
+    },
+    {
+      "id": "431bce6b89d2",
+      "titulo": "A new Nepal, an old neighbour - Balendra Shah's India test",
+      "resumo": "Trade, connectivity and regional cooperation will be on top of the agenda when Nepal's PM meets his India counterpart.",
+      "link": "https://www.bbc.co.uk/news/articles/c6jre8xd83qgo?at_medium=RSS&at_campaign=rss",
+      "fonte": "bbc",
+      "fonteNome": "BBC News",
+      "pais": "Reino Unido",
+      "visao": "Emissora pública britânica",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:28:17.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6ce4/live/0cd0ed60-e3e9-11f1-a16c-7de3762c094b.jpg",
+      "imagemCredito": "BBC News",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "diplomacia",
+        "economia"
+      ],
+      "coletadoEm": "2026-11-20T23:36:55.664Z"
+    },
+    {
+      "id": "b9f8ebc95b7e",
+      "titulo": "US in talks with several countries on force to verify Hezbollah disarmament in Lebanon, says envoy",
+      "resumo": "",
+      "link": "https://www.thenationalnews.com/news/2026/11/20/us-in-talks-with-several-countries-on-force-to-verify-hezbollah-disarmament-in-lebanon-says-envoy/",
+      "fonte": "thenational",
+      "fonteNome": "The National",
+      "pais": "Emirados Árabes",
+      "visao": "Jornal dos Emirados, ligado ao governo",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:25:58.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://www.thenationalnews.com/resizer/v2/OOZYXMJAPQ76BGRD6ZFBHHVHDY.jpg?auth=09cbbedb2f5066de5f96d9fd26c331f68cb879463e19d8e482912be0b50182d2&smart=true&width=8192&height=5464",
+      "imagemCredito": "The National",
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia"
+      ],
+      "coletadoEm": "2026-11-20T23:36:55.664Z"
+    },
+    {
+      "id": "59424235b41a",
+      "titulo": "US judge approves $7.25 billion Roundup cancer settlement",
+      "resumo": "It is among the largest class recoveries in US history, and clears the way for guaranteed compensation for tens of thousands of cancer victims.",
+      "link": "https://www.lemonde.fr/en/environment/article/2026/11/21/us-judge-approves-7-25-billion-roundup-cancer-settlement_6785770_114.html",
+      "fonte": "lemonde",
+      "fonteNome": "Le Monde (inglês)",
+      "pais": "França",
+      "visao": "Jornal de referência francês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:23:16.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://img.lemde.fr/2026/11/20/251/0/3000/1500/644/322/60/0/b55db19_ftp-1-nwiyguiqxi3g-e3a6c38ce3f34d2697f00bf0bca7242b-0-d9854aa8d41c4bb4ba7a30ebec143fee.jpg",
+      "imagemCredito": "Le Monde (inglês)",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-20T23:36:55.664Z"
+    },
+    {
+      "id": "c42f2093c1f5",
+      "titulo": "Loud explosion heard in Riyadh after Saudi civil defence alerts",
+      "resumo": "A loud boom was heard in the Saudi capital Riyadh late hours on Friday, a witness told Reuters, shortly after the kingdom’s civil defence issued an alert warning of potential danger in the city. The civil defence sent a second message soon afterwards saying the danger had passed…",
+      "link": "https://www.middleeasteye.net/live-blog/live-blog-update/loud-explosion-heard-riyadh-after-saudi-civil-defence-alerts",
+      "fonte": "middleeasteye",
+      "fonteNome": "Middle East Eye",
+      "pais": "Reino Unido",
+      "visao": "Site focado no Oriente Médio, crítico de governos da região",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:22:18.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "conflitos",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-20T23:36:55.664Z"
+    },
+    {
+      "id": "62af8b3763ef",
+      "titulo": "White Police Officers Are Convicted of Beating a Black Man in France",
+      "resumo": "The three officers were filmed beating Michel Zecler, a music producer, inside his Paris studio in 2020, setting off a national backlash.",
+      "link": "https://www.nytimes.com/2026/11/20/world/europe/france-police-brutality-black-producer.html",
+      "fonte": "nyt",
+      "fonteNome": "The New York Times",
+      "pais": "EUA",
+      "visao": "Jornal de referência dos EUA, centro-esquerda",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:21:51.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://static01.nyt.com/images/2026/11/20/multimedia/20france-police-01-wclq/20france-police-01-wclq-mediumSquareAt3X.jpg",
+      "imagemCredito": "The New York Times",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-20T23:36:55.664Z"
+    },
+    {
+      "id": "cdedd122f848",
+      "titulo": "Dead pets were meant to be cremated - then their bodies appeared on a livestream",
+      "resumo": "Grieving Filipinos confront a distressing reality: their dogs and cats may not have received the send-off they paid for.",
+      "link": "https://www.bbc.co.uk/news/articles/cmn502ek17yvo?at_medium=RSS&at_campaign=rss",
+      "fonte": "bbc",
+      "fonteNome": "BBC News",
+      "pais": "Reino Unido",
+      "visao": "Emissora pública britânica",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:20:33.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c4bc/live/7ab356d0-e4f5-11f1-a094-5fdc692f3e33.jpg",
+      "imagemCredito": "BBC News",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-20T23:36:55.664Z"
+    },
+    {
+      "id": "973aadc16719",
+      "titulo": "Man accused of sparking deadly Los Angeles wildfire found guilty",
+      "resumo": "Verdict in case against former Uber driver Jonathan Rinderknecht comes after first trial ended with hung jury The 30-year-old accused of sparking the deadly Palisades fire in Los Angeles was found guilty of two federal arson charges in a Friday verdict that came months after his…",
+      "link": "https://www.theguardian.com/us-news/2026/nov/20/los-angeles-palisades-wildfire-trial-verdict",
+      "fonte": "guardian",
+      "fonteNome": "The Guardian",
+      "pais": "Reino Unido",
+      "visao": "Jornal britânico, centro-esquerda",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:20:29.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://i.guim.co.uk/img/media/9ac7a13c61ac09c8989f886adde8097c03d0fc03/720_0_7200_5760/master/7200.jpg?width=140&quality=85&auto=format&fit=max&s=4513785efb37d1da06beb027b45f87f7",
+      "imagemCredito": "The Guardian",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "clima",
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-20T23:36:55.664Z"
+    },
+    {
+      "id": "3f635ad689b0",
+      "titulo": "Hazlewood backs Cummins as sandpaper saga continues",
+      "resumo": "Josh Hazlewood defends Pat Cummins amid speculation about his future as Australian men's captain following the resurfacing of the ball-tampering scandal.",
+      "link": "https://www.abc.net.au/news/2026-11-21/pat-cummins-josh-hazlewood-sandpaper-ball-tampering-cricket/107412300",
+      "fonte": "abcau",
+      "fonteNome": "ABC News Austrália",
+      "pais": "Austrália",
+      "visao": "Emissora pública australiana",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:20:08.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/c74dc6243738e81560cca4e417e59b22?impolicy=wcms_crop_resize&cropH=1802&cropW=3204&xPos=0&yPos=14&width=862&height=485",
+      "imagemCredito": "ABC News Austrália",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-20T23:36:55.664Z"
+    },
+    {
+      "id": "e315ecd54630",
+      "titulo": "One 'beautiful step' helps NT family escape homelessness",
+      "resumo": "Getting a room at Darwin's largest short-stay hostel was an essential circuit breaker for one woman. She is worried the shelter's recent closure means others won't have the same chance.",
+      "link": "https://www.abc.net.au/news/2026-11-21/transitional-housing-yissa-helps-nt-family-escape-homelessness/107359370",
+      "fonte": "abcau",
+      "fonteNome": "ABC News Austrália",
+      "pais": "Austrália",
+      "visao": "Emissora pública australiana",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:18:07.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/2e318ac97e20685773aa43fc65f539e9?impolicy=wcms_crop_resize&cropH=2813&cropW=5000&xPos=0&yPos=174&width=862&height=485",
+      "imagemCredito": "ABC News Austrália",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-20T23:36:55.664Z"
+    },
+    {
       "id": "04471859b97d",
       "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
       "resumo": "Nov 20 - Iran's Foreign Minister Abbas Araqchi said Tehran still hoped diplomacy could end its war with the United States, while US President Donald Trump said Iran wanted a deal but one that was not acceptable to him.",
@@ -139,6 +517,35 @@
         "politica"
       ],
       "coletadoEm": "2026-11-20T23:20:56.990Z"
+    },
+    {
+      "id": "4e24f14be340",
+      "titulo": "Fossil fuel talks deadlock pushes COP31 climate summit into overtime",
+      "resumo": "EU warns COP31 risks turning into a 'fossil summit' as critical climate commitments are omitted from the draft deal.",
+      "link": "https://www.aljazeera.com/news/2026/11/20/fossil-fuel-talks-deadlock-pushes-cop31-climate-summit-into-overtime?traffic_source=rss",
+      "fonte": "aljazeera",
+      "fonteNome": "Al Jazeera",
+      "pais": "Catar",
+      "visao": "Rede do Catar (financiada pelo governo), foco no Sul Global e no mundo árabe",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:06:41.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "global"
+      ],
+      "temas": [
+        "diplomacia",
+        "clima",
+        "conflitos",
+        "energia"
+      ],
+      "coletadoEm": "2026-11-20T23:36:55.664Z"
     },
     {
       "id": "b85a5fc66bb6",
@@ -36265,5 +36672,5 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     }
   ],
-  "atualizadoEm": "2026-11-20T23:20:56.990Z"
+  "atualizadoEm": "2026-11-20T23:36:55.664Z"
 }

@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-20T23:20:56.990Z",
+  "geradoEm": "2026-11-20T23:36:55.664Z",
   "fontesOk": 69,
   "fontesComErro": 1,
-  "noticiasNovasNestaRodada": 9,
+  "noticiasNovasNestaRodada": 15,
   "porFonte": [
     {
       "id": "nyt",
@@ -11,7 +11,7 @@
       "itensNoFeed": 54,
       "aceitas": 54,
       "descartadasPorIdade": 0,
-      "comImagem": 49
+      "comImagem": 50
     },
     {
       "id": "wapo",
@@ -27,9 +27,9 @@
       "nome": "Fox News",
       "status": "ok",
       "itensNoFeed": 25,
-      "aceitas": 14,
-      "descartadasPorIdade": 11,
-      "comImagem": 14
+      "aceitas": 13,
+      "descartadasPorIdade": 12,
+      "comImagem": 13
     },
     {
       "id": "npr",
@@ -309,7 +309,7 @@
       "itensNoFeed": 20,
       "aceitas": 20,
       "descartadasPorIdade": 0,
-      "comImagem": 12
+      "comImagem": 11
     },
     {
       "id": "almonitor",
@@ -469,8 +469,8 @@
       "nome": "AllAfrica",
       "status": "ok",
       "itensNoFeed": 33,
-      "aceitas": 32,
-      "descartadasPorIdade": 1,
+      "aceitas": 30,
+      "descartadasPorIdade": 3,
       "comImagem": 0
     },
     {
@@ -531,10 +531,10 @@
       "id": "gazetadopovo",
       "nome": "Gazeta do Povo Mundo",
       "status": "ok",
-      "itensNoFeed": 61,
-      "aceitas": 57,
-      "descartadasPorIdade": 4,
-      "comImagem": 57
+      "itensNoFeed": 59,
+      "aceitas": 59,
+      "descartadasPorIdade": 0,
+      "comImagem": 59
     },
     {
       "id": "cartacapital",

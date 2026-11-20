@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-20T23:20:56.990Z",
+  "geradoEm": "2026-11-20T23:36:55.664Z",
   "dataReferencia": "2026-11-20",
   "fuso": "America/Sao_Paulo",
-  "totalNoticias": 1433,
+  "totalNoticias": 1439,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -30,7 +30,7 @@
   },
   "destaque": {
     "id": "97f1ff305240",
-    "motivo": "Coberto por 15 fontes diferentes nas últimas 24 horas. Critério provisório: a partir da etapa 7, a escolha passa a ser feita por análise."
+    "motivo": "Coberto por 14 fontes diferentes nas últimas 24 horas. Critério provisório: a partir da etapa 7, a escolha passa a ser feita por análise."
   },
   "fatos": [
     {
@@ -53,7 +53,7 @@
         "direitos",
         "economia"
       ],
-      "fontes": 15,
+      "fontes": 14,
       "paises": 8,
       "maisRecente": "2026-11-20T22:35:07.000Z",
       "materias": [
@@ -272,18 +272,6 @@
           "link": "https://www.pbs.org/newshour/show/inside-the-historic-summit-between-trump-xi-and-putin",
           "publicadoEm": "2026-11-19T23:55:57.000Z",
           "semData": false
-        },
-        {
-          "fonte": "The Washington Post",
-          "pais": "EUA",
-          "visao": "Jornal de referência dos EUA, centro",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "In summit with Trump and Putin, Xi put himself and China at center stage",
-          "link": "https://www.washingtonpost.com/world/2026/11/19/summit-with-trump-putin-xi-put-himself-china-center-stage/",
-          "publicadoEm": "2026-11-19T23:23:22.000Z",
-          "semData": false
         }
       ]
     },
@@ -301,10 +289,10 @@
       "temas": [
         "direitos",
         "politica",
-        "conflitos",
-        "diplomacia"
+        "diplomacia",
+        "conflitos"
       ],
-      "fontes": 11,
+      "fontes": 10,
       "paises": 10,
       "maisRecente": "2026-11-20T19:42:58.000Z",
       "materias": [
@@ -438,18 +426,6 @@
           "titulo": "INTERNATIONAL JUSTICE: SA sold weapons to Myanmar while it was committing genocide, sparking calls for charges",
           "link": "https://www.dailymaverick.co.za/article/2026-11-20-rights-group-calls-for-criminal-probe-into-sa-arms-sales-to-genocide-linked-myanmar/",
           "publicadoEm": "2026-11-20T00:08:03.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "PBS NewsHour",
-          "pais": "EUA",
-          "visao": "TV pública dos EUA",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "International Court of Justice finds Myanmar guilty of genocide against Rohingya",
-          "link": "https://www.pbs.org/newshour/show/international-court-of-justice-finds-myanmar-guilty-of-genocide-against-rohingya",
-          "publicadoEm": "2026-11-19T23:35:01.000Z",
           "semData": false
         }
       ]
@@ -2624,68 +2600,59 @@
       ]
     },
     {
-      "id": "b1e50734d032",
-      "titulo": "France calls for UN Security Council meeting over Russian strikes on Kyiv and embassies",
-      "resumo": "France is calling for a meeting of the UN Security Council following a series of Russian strikes on Ukraine that killed civilians in Kyiv and damaged the diplomatic missions of Austria and the Netherlands.",
-      "imagem": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/5/f/960911/5fc564b2b3b529b959b2e788e0660fb1.jpeg",
-      "credito": "Ukrainska Pravda",
+      "id": "4e24f14be340",
+      "titulo": "Fossil fuel talks deadlock pushes COP31 climate summit into overtime",
+      "resumo": "EU warns COP31 risks turning into a 'fossil summit' as critical climate commitments are omitted from the draft deal.",
+      "imagem": "https://s.rfi.fr/media/display/d38cd700-e4fe-11f1-b775-13439ca2fe89/w:1024/p:16x9/AP26323433339470.jpg",
+      "credito": "RFI (inglês)",
       "regioes": [
+        "global",
         "europa"
       ],
       "temas": [
         "diplomacia",
-        "conflitos"
+        "clima",
+        "conflitos",
+        "energia"
       ],
-      "fontes": 4,
-      "paises": 4,
-      "maisRecente": "2026-11-20T13:20:00.000Z",
+      "fontes": 3,
+      "paises": 3,
+      "maisRecente": "2026-11-20T23:06:41.000Z",
       "materias": [
         {
-          "fonte": "Ukrainska Pravda",
-          "pais": "Ucrânia",
-          "visao": "Site ucraniano de jornalismo independente",
-          "estatal": false,
+          "fonte": "Al Jazeera",
+          "pais": "Catar",
+          "visao": "Rede do Catar (financiada pelo governo), foco no Sul Global e no mundo árabe",
+          "estatal": true,
           "tipo": "noticia",
           "idioma": "en",
-          "titulo": "France calls for UN Security Council meeting over Russian strikes on Kyiv and embassies",
-          "link": "https://www.pravda.com.ua/eng/news/2026/11/20/8063820/",
-          "publicadoEm": "2026-11-20T13:20:00.000Z",
+          "titulo": "Fossil fuel talks deadlock pushes COP31 climate summit into overtime",
+          "link": "https://www.aljazeera.com/news/2026/11/20/fossil-fuel-talks-deadlock-pushes-cop31-climate-summit-into-overtime?traffic_source=rss",
+          "publicadoEm": "2026-11-20T23:06:41.000Z",
           "semData": false
         },
         {
-          "fonte": "The Straits Times",
-          "pais": "Singapura",
-          "visao": "Jornal de referência de Singapura",
+          "fonte": "RFI (inglês)",
+          "pais": "França",
+          "visao": "Rádio pública francesa, forte cobertura da África",
           "estatal": false,
           "tipo": "noticia",
           "idioma": "en",
-          "titulo": "France seeks UN Security Council meeting after strikes in Kyiv",
-          "link": "https://www.straitstimes.com/world/europe/france-seeks-un-security-council-meeting-after-strikes-in-kyiv",
-          "publicadoEm": "2026-11-20T12:15:26.000Z",
+          "titulo": "UN climate talks run into overtime as countries clash over fossil fuel cuts",
+          "link": "https://www.rfi.fr/en/environment/20261120-un-climate-talks-run-into-overtime-as-countries-clash-over-fossil-fuel-cuts-cop31",
+          "publicadoEm": "2026-11-20T16:38:58.000Z",
           "semData": false
         },
         {
-          "fonte": "Africanews",
-          "pais": "Congo",
-          "visao": "Canal pan-africano de notícias",
+          "fonte": "Politico Europe",
+          "pais": "Bélgica",
+          "visao": "Bastidores da política da União Europeia",
           "estatal": false,
           "tipo": "noticia",
           "idioma": "en",
-          "titulo": "Ukraine: Russian strikes damage Austrian and Dutch embassies in Kyiv",
-          "link": "http://www.africanews.com/2026/11/20/ukraine-russian-strikes-damage-austrian-and-dutch-embassies-in-kyiv/",
-          "publicadoEm": "2026-11-19T23:21:26.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Euronews",
-          "pais": "União Europeia",
-          "visao": "Canal de notícias pan-europeu",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Ukraine: Russian strikes damage Austrian and Dutch embassies in Kyiv",
-          "link": "https://www.euronews.com/video/2026/11/20/ukraine-russian-strikes-damage-austrian-and-dutch-embassies-in-kyiv",
-          "publicadoEm": "2026-11-19T23:21:18.000Z",
+          "titulo": "EU warns against COP31 becoming a ‘fossil fuel summit’",
+          "link": "https://www.politico.eu/article/eu-warns-against-cop31-becoming-a-fossil-fuel-summit/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+          "publicadoEm": "2026-11-20T16:03:22.000Z",
           "semData": false
         }
       ]
@@ -3324,6 +3291,106 @@
           "titulo": "Russia Hits 3 Kyiv Bridges in Overnight Ballistic Attack",
           "link": "https://www.kyivpost.com/post/90654",
           "publicadoEm": "2026-11-20T01:31:05.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "431bce6b89d2",
+      "titulo": "A new Nepal, an old neighbour - Balendra Shah's India test",
+      "resumo": "Trade, connectivity and regional cooperation will be on top of the agenda when Nepal's PM meets his India counterpart.",
+      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6ce4/live/0cd0ed60-e3e9-11f1-a16c-7de3762c094b.jpg",
+      "credito": "BBC News",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "diplomacia",
+        "economia",
+        "politica",
+        "clima",
+        "direitos"
+      ],
+      "fontes": 2,
+      "paises": 2,
+      "maisRecente": "2026-11-20T23:28:17.000Z",
+      "materias": [
+        {
+          "fonte": "BBC News",
+          "pais": "Reino Unido",
+          "visao": "Emissora pública britânica",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "A new Nepal, an old neighbour - Balendra Shah's India test",
+          "link": "https://www.bbc.co.uk/news/articles/c6jre8xd83qgo?at_medium=RSS&at_campaign=rss",
+          "publicadoEm": "2026-11-20T23:28:17.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Hindu",
+          "pais": "Índia",
+          "visao": "Jornal de referência indiano",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Nepal PM Balendra Shah to visit India on November 22-23",
+          "link": "https://www.thehindu.com/news/national/nepal-pm-balendra-shah-to-visit-india-on-november-2223/article71723493.ece",
+          "publicadoEm": "2026-11-20T17:09:29.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Hindu",
+          "pais": "Índia",
+          "visao": "Jornal de referência indiano",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Foreign Secretary Misri sets stage for Nepal PM’s upcoming India visit",
+          "link": "https://www.thehindu.com/news/national/foreign-secretary-misri-sets-stage-for-nepal-pms-upcoming-india-visit/article71671036.ece",
+          "publicadoEm": "2026-11-20T07:46:49.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "62af8b3763ef",
+      "titulo": "White Police Officers Are Convicted of Beating a Black Man in France",
+      "resumo": "The three officers were filmed beating Michel Zecler, a music producer, inside his Paris studio in 2020, setting off a national backlash.",
+      "imagem": "https://static01.nyt.com/images/2026/11/20/multimedia/20france-police-01-wclq/20france-police-01-wclq-mediumSquareAt3X.jpg",
+      "credito": "The New York Times",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "fontes": 2,
+      "paises": 2,
+      "maisRecente": "2026-11-20T23:21:51.000Z",
+      "materias": [
+        {
+          "fonte": "The New York Times",
+          "pais": "EUA",
+          "visao": "Jornal de referência dos EUA, centro-esquerda",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "White Police Officers Are Convicted of Beating a Black Man in France",
+          "link": "https://www.nytimes.com/2026/11/20/world/europe/france-police-brutality-black-producer.html",
+          "publicadoEm": "2026-11-20T23:21:51.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "France 24",
+          "pais": "França",
+          "visao": "Emissora internacional pública francesa",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Paris police officers sentenced to prison over 2020 beating of Black man",
+          "link": "https://www.france24.com/en/france/20261120-paris-police-officers-sentenced-to-prison-over-2020-beating-of-black-man-michel-zecler",
+          "publicadoEm": "2026-11-20T22:04:45.000Z",
           "semData": false
         }
       ]
@@ -5952,6 +6019,49 @@
       ]
     },
     {
+      "id": "b1e50734d032",
+      "titulo": "France calls for UN Security Council meeting over Russian strikes on Kyiv and embassies",
+      "resumo": "France is calling for a meeting of the UN Security Council following a series of Russian strikes on Ukraine that killed civilians in Kyiv and damaged the diplomatic missions of Austria and the Netherlands.",
+      "imagem": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/5/f/960911/5fc564b2b3b529b959b2e788e0660fb1.jpeg",
+      "credito": "Ukrainska Pravda",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia"
+      ],
+      "fontes": 2,
+      "paises": 2,
+      "maisRecente": "2026-11-20T13:20:00.000Z",
+      "materias": [
+        {
+          "fonte": "Ukrainska Pravda",
+          "pais": "Ucrânia",
+          "visao": "Site ucraniano de jornalismo independente",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "France calls for UN Security Council meeting over Russian strikes on Kyiv and embassies",
+          "link": "https://www.pravda.com.ua/eng/news/2026/11/20/8063820/",
+          "publicadoEm": "2026-11-20T13:20:00.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "France seeks UN Security Council meeting after strikes in Kyiv",
+          "link": "https://www.straitstimes.com/world/europe/france-seeks-un-security-council-meeting-after-strikes-in-kyiv",
+          "publicadoEm": "2026-11-20T12:15:26.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
       "id": "5f3c0d418e38",
       "titulo": "Bukele busca 3º mandato após mudar regra que limitava reeleição em El Salvador",
       "resumo": "Presidente é favorito nas eleições marcadas para fevereiro de 2027, apesar de acusações de autoritarismo",
@@ -7135,6 +7245,379 @@
       ]
     },
     {
+      "id": "531970a17042",
+      "titulo": "Secret police recording of parent murderer released",
+      "resumo": "A month after she murdered her elderly father by injecting him with a lethal dose of insulin, double murderer Raelene Polymiadis begged God for forgiveness.",
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/302cfd38dc0a59701124b89ac4c44107?impolicy=wcms_crop_resize&cropH=1969&cropW=3500&xPos=0&yPos=182&width=862&height=485",
+      "credito": "ABC News Austrália",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:30:21.000Z",
+      "materias": [
+        {
+          "fonte": "ABC News Austrália",
+          "pais": "Austrália",
+          "visao": "Emissora pública australiana",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Secret police recording of parent murderer released",
+          "link": "https://www.abc.net.au/news/2026-11-21/court-releases-murderer-raelene-polymiadis-secret-recordings/107410402",
+          "publicadoEm": "2026-11-20T23:30:21.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "6e123d942a9f",
+      "titulo": "Sabotagem e planos de assassinatos: Rússia mira indústria de defesa europeia por armar Ucrânia",
+      "resumo": "Rússia está escalando as hostilidades contra vizinhos europeus por meio de ações contra empresas do setor de defesa",
+      "imagem": "https://media.gazetadopovo.com.br/2026/11/19142701/sabotagem.russia-960x540.jpg",
+      "credito": "Gazeta do Povo Mundo",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "economia",
+        "conflitos"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:30:11.000Z",
+      "materias": [
+        {
+          "fonte": "Gazeta do Povo Mundo",
+          "pais": "Brasil",
+          "visao": "Jornal brasileiro, direita conservadora",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "pt",
+          "titulo": "Sabotagem e planos de assassinatos: Rússia mira indústria de defesa europeia por armar Ucrânia",
+          "link": "https://www.gazetadopovo.com.br/mundo/russia-mira-industria-defesa-europeia-armar-ucrania/",
+          "publicadoEm": "2026-11-20T23:30:11.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "f77681be5154",
+      "titulo": "Honda to recall 810,000 US vehicles over Takata air bag rupture risk",
+      "resumo": "There have been at least 28 deaths in the US stemming from defective Takata air bag inflators since 2009.",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:30:00.000Z",
+      "materias": [
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Honda to recall 810,000 US vehicles over Takata air bag rupture risk",
+          "link": "https://www.straitstimes.com/world/united-states/honda-to-recall-810000-us-vehicles-over-takata-air-bag-rupture-risk",
+          "publicadoEm": "2026-11-20T23:30:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "b83ce3c442ac",
+      "titulo": "Sem citar a Rússia, governo Lula condena ataque que atingiu embaixada do Brasil na Ucrânia",
+      "resumo": "Governo Lula condena ataque russo que atingiu a embaixada brasileira em Kiev, mas evita responsabilizar Moscou pela ofensiva.",
+      "imagem": "https://media.gazetadopovo.com.br/2026/11/20202835/brasil-embaixada-ucrania-ataque-russia-lula-960x540.jpg",
+      "credito": "Gazeta do Povo Mundo",
+      "regioes": [
+        "europa",
+        "brasil"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia",
+        "politica",
+        "direitos"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:29:57.000Z",
+      "materias": [
+        {
+          "fonte": "Gazeta do Povo Mundo",
+          "pais": "Brasil",
+          "visao": "Jornal brasileiro, direita conservadora",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "pt",
+          "titulo": "Sem citar a Rússia, governo Lula condena ataque que atingiu embaixada do Brasil na Ucrânia",
+          "link": "https://www.gazetadopovo.com.br/mundo/sem-citar-a-russia-governo-lula-condena-ataque-que-atingiu-embaixada-do-brasil-na-ucrania/",
+          "publicadoEm": "2026-11-20T23:29:57.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "47bb527195f2",
+      "titulo": "Conmebol admite ter R$ 88 milhões aplicados no Ueno, banco paraguaio que quebrou após crise",
+      "resumo": "Vista aérea mostra a sede do Ueno Bank, em Assunção, no Paraguai. Reuters A Conmebol (Confederação Sul-Americana de Futebol) admitiu nesta sexta-feira (20) ter US$ 15 milhões (cerca de R$ 88 milhões) aplicados no Ueno Bank, banco paraguaio que quebrou após uma crise financeira…",
+      "imagem": "https://s2-g1.glbimg.com/KcGYEVzmUBtKM_2wlS4Y0O4dU3w=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/p/m/lKx1ABRxGBmB5JVBUefA/2026-11-03t212644z-1474208164-rc2cgoa6cu4v-rtrmadp-3-paraguay-finance-1-.jpg",
+      "credito": "g1 Mundo",
+      "regioes": [
+        "america-latina",
+        "europa"
+      ],
+      "temas": [
+        "economia",
+        "politica",
+        "conflitos",
+        "diplomacia",
+        "direitos"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:29:32.000Z",
+      "materias": [
+        {
+          "fonte": "g1 Mundo",
+          "pais": "Brasil",
+          "visao": "Portal do Grupo Globo",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "pt",
+          "titulo": "Conmebol admite ter R$ 88 milhões aplicados no Ueno, banco paraguaio que quebrou após crise",
+          "link": "https://g1.globo.com/economia/noticia/2026/11/20/conmebol-recursos-banco-ueno.ghtml",
+          "publicadoEm": "2026-11-20T23:29:32.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "b9f8ebc95b7e",
+      "titulo": "US in talks with several countries on force to verify Hezbollah disarmament in Lebanon, says envoy",
+      "resumo": "",
+      "imagem": "https://www.thenationalnews.com/resizer/v2/OOZYXMJAPQ76BGRD6ZFBHHVHDY.jpg?auth=09cbbedb2f5066de5f96d9fd26c331f68cb879463e19d8e482912be0b50182d2&smart=true&width=8192&height=5464",
+      "credito": "The National",
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:25:58.000Z",
+      "materias": [
+        {
+          "fonte": "The National",
+          "pais": "Emirados Árabes",
+          "visao": "Jornal dos Emirados, ligado ao governo",
+          "estatal": true,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "US in talks with several countries on force to verify Hezbollah disarmament in Lebanon, says envoy",
+          "link": "https://www.thenationalnews.com/news/2026/11/20/us-in-talks-with-several-countries-on-force-to-verify-hezbollah-disarmament-in-lebanon-says-envoy/",
+          "publicadoEm": "2026-11-20T23:25:58.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "59424235b41a",
+      "titulo": "US judge approves $7.25 billion Roundup cancer settlement",
+      "resumo": "It is among the largest class recoveries in US history, and clears the way for guaranteed compensation for tens of thousands of cancer victims.",
+      "imagem": "https://img.lemde.fr/2026/11/20/251/0/3000/1500/644/322/60/0/b55db19_ftp-1-nwiyguiqxi3g-e3a6c38ce3f34d2697f00bf0bca7242b-0-d9854aa8d41c4bb4ba7a30ebec143fee.jpg",
+      "credito": "Le Monde (inglês)",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:23:16.000Z",
+      "materias": [
+        {
+          "fonte": "Le Monde (inglês)",
+          "pais": "França",
+          "visao": "Jornal de referência francês",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "US judge approves $7.25 billion Roundup cancer settlement",
+          "link": "https://www.lemonde.fr/en/environment/article/2026/11/21/us-judge-approves-7-25-billion-roundup-cancer-settlement_6785770_114.html",
+          "publicadoEm": "2026-11-20T23:23:16.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "c42f2093c1f5",
+      "titulo": "Loud explosion heard in Riyadh after Saudi civil defence alerts",
+      "resumo": "A loud boom was heard in the Saudi capital Riyadh late hours on Friday, a witness told Reuters, shortly after the kingdom’s civil defence issued an alert warning of potential danger in the city. The civil defence sent a second message soon afterwards saying the danger had passed…",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "conflitos",
+        "politica"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:22:18.000Z",
+      "materias": [
+        {
+          "fonte": "Middle East Eye",
+          "pais": "Reino Unido",
+          "visao": "Site focado no Oriente Médio, crítico de governos da região",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Loud explosion heard in Riyadh after Saudi civil defence alerts",
+          "link": "https://www.middleeasteye.net/live-blog/live-blog-update/loud-explosion-heard-riyadh-after-saudi-civil-defence-alerts",
+          "publicadoEm": "2026-11-20T23:22:18.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "cdedd122f848",
+      "titulo": "Dead pets were meant to be cremated - then their bodies appeared on a livestream",
+      "resumo": "Grieving Filipinos confront a distressing reality: their dogs and cats may not have received the send-off they paid for.",
+      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c4bc/live/7ab356d0-e4f5-11f1-a094-5fdc692f3e33.jpg",
+      "credito": "BBC News",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:20:33.000Z",
+      "materias": [
+        {
+          "fonte": "BBC News",
+          "pais": "Reino Unido",
+          "visao": "Emissora pública britânica",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Dead pets were meant to be cremated - then their bodies appeared on a livestream",
+          "link": "https://www.bbc.co.uk/news/articles/cmn502ek17yvo?at_medium=RSS&at_campaign=rss",
+          "publicadoEm": "2026-11-20T23:20:33.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "973aadc16719",
+      "titulo": "Man accused of sparking deadly Los Angeles wildfire found guilty",
+      "resumo": "Verdict in case against former Uber driver Jonathan Rinderknecht comes after first trial ended with hung jury The 30-year-old accused of sparking the deadly Palisades fire in Los Angeles was found guilty of two federal arson charges in a Friday verdict that came months after his…",
+      "imagem": "https://i.guim.co.uk/img/media/9ac7a13c61ac09c8989f886adde8097c03d0fc03/720_0_7200_5760/master/7200.jpg?width=140&quality=85&auto=format&fit=max&s=4513785efb37d1da06beb027b45f87f7",
+      "credito": "The Guardian",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "clima",
+        "direitos"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:20:29.000Z",
+      "materias": [
+        {
+          "fonte": "The Guardian",
+          "pais": "Reino Unido",
+          "visao": "Jornal britânico, centro-esquerda",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Man accused of sparking deadly Los Angeles wildfire found guilty",
+          "link": "https://www.theguardian.com/us-news/2026/nov/20/los-angeles-palisades-wildfire-trial-verdict",
+          "publicadoEm": "2026-11-20T23:20:29.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "3f635ad689b0",
+      "titulo": "Hazlewood backs Cummins as sandpaper saga continues",
+      "resumo": "Josh Hazlewood defends Pat Cummins amid speculation about his future as Australian men's captain following the resurfacing of the ball-tampering scandal.",
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/c74dc6243738e81560cca4e417e59b22?impolicy=wcms_crop_resize&cropH=1802&cropW=3204&xPos=0&yPos=14&width=862&height=485",
+      "credito": "ABC News Austrália",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:20:08.000Z",
+      "materias": [
+        {
+          "fonte": "ABC News Austrália",
+          "pais": "Austrália",
+          "visao": "Emissora pública australiana",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Hazlewood backs Cummins as sandpaper saga continues",
+          "link": "https://www.abc.net.au/news/2026-11-21/pat-cummins-josh-hazlewood-sandpaper-ball-tampering-cricket/107412300",
+          "publicadoEm": "2026-11-20T23:20:08.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "e315ecd54630",
+      "titulo": "One 'beautiful step' helps NT family escape homelessness",
+      "resumo": "Getting a room at Darwin's largest short-stay hostel was an essential circuit breaker for one woman. She is worried the shelter's recent closure means others won't have the same chance.",
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/2e318ac97e20685773aa43fc65f539e9?impolicy=wcms_crop_resize&cropH=2813&cropW=5000&xPos=0&yPos=174&width=862&height=485",
+      "credito": "ABC News Austrália",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:18:07.000Z",
+      "materias": [
+        {
+          "fonte": "ABC News Austrália",
+          "pais": "Austrália",
+          "visao": "Emissora pública australiana",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "One 'beautiful step' helps NT family escape homelessness",
+          "link": "https://www.abc.net.au/news/2026-11-21/transitional-housing-yissa-helps-nt-family-escape-homelessness/107359370",
+          "publicadoEm": "2026-11-20T23:18:07.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
       "id": "16c2a3dbb52b",
       "titulo": "US declassifies more UFO footage filmed in the Middle East",
       "resumo": "The Pentagon has released an eighth tranche of UFO records, which includes three video clips recorded in 2020, 2023 and 2026.",
@@ -8261,36 +8744,6 @@
           "titulo": "Bispos espanhóis aprovam texto sobre eleições e remetem eleitores ao Papa Leão XIV",
           "link": "https://www.gazetadopovo.com.br/mundo/bispos-espanhois-aprovam-texto-sobre-eleicoes-e-remetem-eleitores-ao-papa-leao-xiv/",
           "publicadoEm": "2026-11-20T22:07:02.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "03427f29ff60",
-      "titulo": "Paris police officers sentenced to prison over 2020 beating of Black man",
-      "resumo": "A Paris court on Friday sentenced three policemen to serve time over the 2020 beating of Black music producer Michel Zecler, a rare such ruling. The assault, which was captured on camera, sparked nationwide outrage and renewed scrutiny of police violence and racism in France.",
-      "imagem": "https://s.france24.com/media/display/dba8d6a2-dc23-11f1-9698-695cb59fade5/w:1024/p:16x9/000-D6VU4CT.jpg",
-      "credito": "France 24",
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "direitos"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-20T22:04:45.000Z",
-      "materias": [
-        {
-          "fonte": "France 24",
-          "pais": "França",
-          "visao": "Emissora internacional pública francesa",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Paris police officers sentenced to prison over 2020 beating of Black man",
-          "link": "https://www.france24.com/en/france/20261120-paris-police-officers-sentenced-to-prison-over-2020-beating-of-black-man-michel-zecler",
-          "publicadoEm": "2026-11-20T22:04:45.000Z",
           "semData": false
         }
       ]
@@ -17249,50 +17702,6 @@
       ]
     },
     {
-      "id": "506645420b7d",
-      "titulo": "Nepal PM Balendra Shah to visit India on November 22-23",
-      "resumo": "In his first India visit, Nepal Prime Minister is expected to sign several MoUs and inaugurate projects",
-      "imagem": "https://th-i.thgim.com/public/incoming/n4la88/article71723481.ece/alternates/LANDSCAPE_1200/2026-09-25T021749Z_692952358_RC20QNAQ5683_RTRMADP_3_NEPAL-FLOODS-BALEN-UN.JPG",
-      "credito": "The Hindu",
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "politica",
-        "clima",
-        "direitos"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-20T17:09:29.000Z",
-      "materias": [
-        {
-          "fonte": "The Hindu",
-          "pais": "Índia",
-          "visao": "Jornal de referência indiano",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Nepal PM Balendra Shah to visit India on November 22-23",
-          "link": "https://www.thehindu.com/news/national/nepal-pm-balendra-shah-to-visit-india-on-november-2223/article71723493.ece",
-          "publicadoEm": "2026-11-20T17:09:29.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The Hindu",
-          "pais": "Índia",
-          "visao": "Jornal de referência indiano",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Foreign Secretary Misri sets stage for Nepal PM’s upcoming India visit",
-          "link": "https://www.thehindu.com/news/national/foreign-secretary-misri-sets-stage-for-nepal-pms-upcoming-india-visit/article71671036.ece",
-          "publicadoEm": "2026-11-20T07:46:49.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
       "id": "06425de2472a",
       "titulo": "Poland issues air raid alerts as Russia attacks Ukraine. Poland’s defense minister says two Russian missiles and a drone fell on Polish soil.",
       "resumo": "Air raid alerts went out in two Polish provinces bordering Ukraine as Russia attacked Ukraine overnight into November 20.",
@@ -18815,40 +19224,6 @@
       ]
     },
     {
-      "id": "481d8fea9264",
-      "titulo": "UN climate talks run into overtime as countries clash over fossil fuel cuts",
-      "resumo": "Deep divisions over fossil fuels and financial support for poorer nations pushed the Cop31 climate summit in Turkey beyond its scheduled closing day on Friday, as nearly 200 countries struggled to agree on how to tackle global warming.",
-      "imagem": "https://s.rfi.fr/media/display/d38cd700-e4fe-11f1-b775-13439ca2fe89/w:1024/p:16x9/AP26323433339470.jpg",
-      "credito": "RFI (inglês)",
-      "regioes": [
-        "europa",
-        "global"
-      ],
-      "temas": [
-        "clima",
-        "diplomacia",
-        "conflitos",
-        "energia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-20T16:38:58.000Z",
-      "materias": [
-        {
-          "fonte": "RFI (inglês)",
-          "pais": "França",
-          "visao": "Rádio pública francesa, forte cobertura da África",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "UN climate talks run into overtime as countries clash over fossil fuel cuts",
-          "link": "https://www.rfi.fr/en/environment/20261120-un-climate-talks-run-into-overtime-as-countries-clash-over-fossil-fuel-cuts-cop31",
-          "publicadoEm": "2026-11-20T16:38:58.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
       "id": "5cd84caf77c3",
       "titulo": "Abdelatty: We Are Working to Hold Hamas to Its Commitments on Confining Weapons",
       "resumo": "",
@@ -20071,40 +20446,6 @@
           "titulo": "Myanmar is the first state found responsible for genocide. Here's how the ICJ ruled in other cases",
           "link": "https://www.pbs.org/newshour/world/myanmar-is-the-first-state-found-responsible-for-genocide-heres-how-the-icj-ruled-in-other-cases",
           "publicadoEm": "2026-11-20T16:03:40.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "b86411e1f917",
-      "titulo": "EU warns against COP31 becoming a ‘fossil fuel summit’",
-      "resumo": "The current draft decision text discussed in Antalya would represent \"a substantive step backwards\" on climate action, European Union leaders said.",
-      "imagem": "",
-      "credito": "",
-      "regioes": [
-        "europa",
-        "global"
-      ],
-      "temas": [
-        "clima",
-        "conflitos",
-        "diplomacia",
-        "energia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-20T16:03:22.000Z",
-      "materias": [
-        {
-          "fonte": "Politico Europe",
-          "pais": "Bélgica",
-          "visao": "Bastidores da política da União Europeia",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "EU warns against COP31 becoming a ‘fossil fuel summit’",
-          "link": "https://www.politico.eu/article/eu-warns-against-cop31-becoming-a-fossil-fuel-summit/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-          "publicadoEm": "2026-11-20T16:03:22.000Z",
           "semData": false
         }
       ]
@@ -38998,167 +39339,6 @@
           "titulo": "Ataques russos contra Kiev deixam um morto e causam danos em duas embaixadas",
           "link": "https://www.estadao.com.br/internacional/ataques-russos-contra-kiev-morte-danos-embaixadas-npr/",
           "publicadoEm": "2026-11-19T23:39:35.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "2145a303e43a",
-      "titulo": "Guiana afirma que EUA apoiam decisão da Corte Internacional em disputa com a Venezuela por Essequibo",
-      "resumo": "Essequibo é alvo de disputa entre Venezuela e Guiana JN O presidente da Guiana, Irfaan Ali, afirmou nesta quinta-feira (19) que os Estados Unidos apoiam que a disputa pelo Essequibo entre Guiana e Venezuela seja resolvida por meio de uma decisão da Corte Internacional de Justiça…",
-      "imagem": "https://s2-g1.glbimg.com/lm_RcM7jNh-RCAeW4YdkvRqlu4k=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2023/S/M/Yo5EjBQLOEEAt2oz0EJg/globo-canal-4-20231130-2000-frame-77062.jpeg",
-      "credito": "g1 Mundo",
-      "regioes": [
-        "america-norte",
-        "europa",
-        "america-latina",
-        "asia-pacifico",
-        "global"
-      ],
-      "temas": [
-        "diplomacia",
-        "politica",
-        "conflitos",
-        "energia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T23:30:07.000Z",
-      "materias": [
-        {
-          "fonte": "g1 Mundo",
-          "pais": "Brasil",
-          "visao": "Portal do Grupo Globo",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "pt",
-          "titulo": "Guiana afirma que EUA apoiam decisão da Corte Internacional em disputa com a Venezuela por Essequibo",
-          "link": "https://g1.globo.com/mundo/noticia/2026/11/19/guiana-eua-decisao-corte-internacional-disputa-venezuela-essequibo.ghtml",
-          "publicadoEm": "2026-11-19T23:30:07.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "bac251cd51b8",
-      "titulo": "Cumin-laced fizzy sodas are giving cola giants a tough fight in India",
-      "resumo": "Cumin-laced sodas are capturing a bigger market share in India as demand for homegrown flavours goes up.",
-      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9306/live/f4b27990-e31d-11f1-baab-4b3b35d174b7.jpg",
-      "credito": "BBC News",
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "economia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T23:29:00.000Z",
-      "materias": [
-        {
-          "fonte": "BBC News",
-          "pais": "Reino Unido",
-          "visao": "Emissora pública britânica",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Cumin-laced fizzy sodas are giving cola giants a tough fight in India",
-          "link": "https://www.bbc.co.uk/news/articles/cw1m4ym7ez2eo?at_medium=RSS&at_campaign=rss",
-          "publicadoEm": "2026-11-19T23:29:00.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "ba1f76697452",
-      "titulo": "União Europeia diz ter sido alvo de ataque cibernético que utilizou ferramenta de inteligência artificial",
-      "resumo": "UE confirmou que foi alvo de um ataque cibernético com uso de inteligência artificial em outubro e investiga possível vazamento de dados.",
-      "imagem": "https://media.gazetadopovo.com.br/2026/09/04201517/europa-imigrantes-960x540.jpg",
-      "credito": "Gazeta do Povo Mundo",
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "tecnologia",
-        "conflitos"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T23:26:36.000Z",
-      "materias": [
-        {
-          "fonte": "Gazeta do Povo Mundo",
-          "pais": "Brasil",
-          "visao": "Jornal brasileiro, direita conservadora",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "pt",
-          "titulo": "União Europeia diz ter sido alvo de ataque cibernético que utilizou ferramenta de inteligência artificial",
-          "link": "https://www.gazetadopovo.com.br/mundo/uniao-europeia-diz-ter-sido-alvo-de-ataque-cibernetico-que-utilizou-ferramenta-de-inteligencia-artificial/",
-          "publicadoEm": "2026-11-19T23:26:36.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "8b2bae816ede",
-      "titulo": "Trump administration weighs forcing US firms to disclose Chinese AI use",
-      "resumo": "",
-      "imagem": "https://dam.mediacorp.sg/image/upload/s--Xh6_HbOY--/c_crop,h_449,w_799,x_1,y_19/fl_relative,g_south_east,l_mediacorp:cna:watermark:2024-04:reuters_1,w_0.1/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/one-cms/core/2026-07-24T141334Z_1_LYNXMPEM6N1B8_RTROPTP_3_CHINA-USA.JPG?itok=BPC3mw8L",
-      "credito": "CNA",
-      "regioes": [
-        "asia-pacifico",
-        "america-norte"
-      ],
-      "temas": [
-        "tecnologia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T23:26:00.000Z",
-      "materias": [
-        {
-          "fonte": "CNA",
-          "pais": "Singapura",
-          "visao": "Canal de Singapura, foco no Sudeste Asiático",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Trump administration weighs forcing US firms to disclose Chinese AI use",
-          "link": "https://www.channelnewsasia.com/world/us-weighs-forcing-us-firms-disclose-chinese-ai-use-6562396",
-          "publicadoEm": "2026-11-19T23:26:00.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "c39239d0dc89",
-      "titulo": "EU Governments Sign Off on Previously-agreed Trade Deal With Indonesia",
-      "resumo": "The Comprehensive Economic Partnership Agreement marks an important milestone in the relationship between the EU and Southeast Asia’s most populous nation.",
-      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2025/07/thediplomat_2025-07-14-022413.jpg",
-      "credito": "The Diplomat",
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "economia",
-        "diplomacia",
-        "politica"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T23:21:00.000Z",
-      "materias": [
-        {
-          "fonte": "The Diplomat",
-          "pais": "Japão",
-          "visao": "Revista de análise sobre Ásia-Pacífico",
-          "estatal": false,
-          "tipo": "analise",
-          "idioma": "en",
-          "titulo": "EU Governments Sign Off on Previously-agreed Trade Deal With Indonesia",
-          "link": "https://thediplomat.com/2026/11/eu-governments-sign-off-on-previously-agreed-trade-deal-with-indonesia/",
-          "publicadoEm": "2026-11-19T23:21:00.000Z",
           "semData": false
         }
       ]

@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "geradoEm": "2026-11-20T23:04:39.752Z",
+  "geradoEm": "2026-11-20T23:43:01.997Z",
   "dataReferencia": "2026-11-20",
   "ia": {
     "provedor": "Groq",
@@ -8,266 +8,266 @@
     "aviso": "Aula gerada por IA a partir das fontes listadas. Pode conter erros: confira nas fontes."
   },
   "formato": 2,
-  "titulo": "Fundo Monetário Internacional (FMI)",
-  "pergunta": "Como o FMI influencia a economia global e o Brasil, e por que seus programas são tão controversos?",
-  "emUmaFrase": "O FMI atua como credor de última instância, orientando políticas macroeconômicas dos países membros, mas suas condições de empréstimo – frequentemente austeras e impostas por um sistema de voto desigual – geram críticas sobre soberania e impacto social.",
-  "paraComecar": "O Fundo Monetário Internacional (FMI) nasceu em 1944, na Conferência de Bretton Woods, com o objetivo de reconstruir o sistema monetário internacional após a Segunda Guerra Mundial. Reunindo hoje 191 países-membros, ele funciona como uma espécie de \"banco central\" global: os países contribuem com recursos por meio de cotas, que também determinam seu peso nas decisões do Fundo.\n\nQuando um país enfrenta dificuldades no balanço de pagamentos – ou seja, não consegue pagar suas contas externas – o FMI pode conceder empréstimos de emergência. Em troca, costuma exigir a adoção de reformas econômicas, chamadas de ajuste estrutural ou ajuste de políticas, que podem incluir cortes de gastos públicos, reformas fiscais e mudanças regulatórias.\n\nEssas exigências são a principal fonte de controvérsia. Críticos apontam que as medidas de austeridade podem aprofundar a recessão, reduzir serviços essenciais e limitar a autonomia dos governos na definição de políticas. Além disso, o poder de voto no FMI é distribuído de forma desigual, favorecendo países ricos, o que alimenta o debate sobre legitimidade e representatividade da instituição.\n\nPara o Brasil, como membro do FMI, o mesmo conjunto de regras se aplica: o país pode recorrer ao Fundo em caso de crise de balanço de pagamentos, mas também está sujeito às mesmas condições que geram críticas em outras nações. Assim, o FMI influencia a economia global ao coordenar políticas macroeconômicas e ao oferecer recursos de última instância, mas sua abordagem tem gerado debates intensos sobre soberania nacional e justiça social.",
+  "titulo": "O Supremo Tribunal Federal: estrutura e funcionamento",
+  "pergunta": "Como o Supremo Tribunal Federal brasileiro funciona e qual o seu papel na geopolítica nacional?",
+  "emUmaFrase": "O STF é a última instância judicial do Brasil e guardião da Constituição, decidindo questões constitucionais que afetam todo o país.",
+  "paraComecar": "O Supremo Tribunal Federal (STF) é a corte suprema do Brasil, ou seja, a última instância do Poder Judiciário. Ele reúne as funções típicas de uma suprema corte – julgar recursos que chegam ao fim do sistema – e as de um tribunal constitucional, avaliando a compatibilidade das leis e atos com a Constituição de 1988.\n\nCriado após a Independência como Supremo Tribunal de Justiça e renomeado após a proclamação da República, o STF é composto por onze juízes chamados de Ministros. Eles são indicados pelo Presidente da República e precisam ser aprovados pelo Senado Federal. Não há mandato fixo; o limite máximo é a aposentadoria compulsória ao completar 75 anos.\n\nEntre as competências mais conhecidas está o controle concentrado de constitucionalidade, exercido principalmente por meio das Ações Diretas de Inconstitucionalidade (ADIs). Nessas ações, o STF pode declarar uma lei ou ato normativo inconstitucional independentemente de um caso concreto. Todas as sessões judiciais e administrativas são transmitidas ao vivo pela TV Justiça desde 2002 e pela Rádio Justiça desde 2004, e o público pode assistir aos julgamentos presencialmente.\n\nNa geopolítica nacional, o STF tem papel decisivo porque suas interpretações da Constituição moldam políticas públicas, regulam relações entre os poderes e influenciam decisões que afetam a ordem econômica e social do país. Ao garantir a supremacia da Constituição, o tribunal contribui para a estabilidade institucional, elemento essencial para a atuação do Brasil no cenário internacional.",
   "glossario": [
     {
-      "termo": "cota",
-      "definicao": "Participação financeira que cada país aporta ao FMI; determina também seu poder de voto nas decisões da instituição."
+      "termo": "instância",
+      "definicao": "Nível ou grau dentro do sistema judicial; a última instância é a que encerra o processo."
     },
     {
-      "termo": "balanço de pagamentos",
-      "definicao": "Conjunto de transações econômicas de um país com o resto do mundo, incluindo exportações, importações e fluxos de capital."
+      "termo": "controle concentrado de constitucionalidade",
+      "definicao": "Mecanismo pelo qual o STF analisa a constitucionalidade de leis ou atos normativos de forma direta, sem depender de um caso concreto."
     },
     {
-      "termo": "ajuste estrutural",
-      "definicao": "Conjunto de reformas econômicas exigidas pelo FMI como condição para conceder empréstimos, geralmente envolvendo cortes de gastos e mudanças fiscais."
+      "termo": "ação direta de inconstitucionalidade (ADI)",
+      "definicao": "Processo judicial que permite ao STF declarar uma lei inconstitucional."
     },
     {
-      "termo": "austeridade",
-      "definicao": "Política de redução de despesas públicas e aumento de impostos, usada para equilibrar as contas públicas, mas que pode gerar impactos sociais negativos."
+      "termo": "ministro",
+      "definicao": "Nome dado aos juízes que compõem o STF; não tem relação com os ministros do Executivo."
     },
     {
-      "termo": "voto ponderado",
-      "definicao": "Sistema de votação no FMI em que o peso de cada país depende da sua cota, dando mais influência a economias maiores."
+      "termo": "aposentadoria compulsória",
+      "definicao": "Obrigatoriedade de deixar o cargo ao atingir a idade de 75 anos."
     },
     {
-      "termo": "credor de última instância",
-      "definicao": "Instituição que oferece empréstimos quando outras fontes de financiamento se esgotam, como o FMI faz em crises de balanço de pagamentos."
+      "termo": "TV Justiça",
+      "definicao": "Canal de televisão que transmite ao vivo as sessões do STF desde 2002."
+    },
+    {
+      "termo": "Rádio Justiça",
+      "definicao": "Serviço de rádio que transmite ao vivo as sessões do STF desde 2004."
     }
   ],
   "ligacoes": [],
-  "historia": "Capítulo 1 – As origens (1944‑1945)\n\nEm julho de 1944, representantes de 44 países aliados se reuniram no hotel Mount Washington, em Bretton Woods, para discutir a reconstrução do comércio e dos pagamentos internacionais após a Segunda Guerra Mundial. Da conferência nasceram os Acordos de Bretton Woods, que criaram o Fundo Monetário Internacional (FMI) como guardião das taxas de câmbio e fornecedor de recursos a países em dificuldade de balanço de pagamentos. O FMI foi formalmente constituído em 27 de dezembro de 1945, com 29 membros fundadores, cumprindo a missão de promover cooperação monetária e estabilidade financeira global.\n\nCapítulo 2 – Os primeiros anos (1947‑1960)\n\nAs operações do Fundo começaram em 1º de março de 1947, e, poucos meses depois, em 8 de maio, a França recebeu o primeiro empréstimo do FMI, marcando o início da prática de apoio financeiro a nações que enfrentavam desequilíbrios externos. Durante as primeiras décadas, o FMI supervisionou o regime de taxas de câmbio fixas estabelecido em Bretton Woods, ajudando a manter a previsibilidade cambial que facilitava o comércio internacional.\n\nCapítulo 3 – Crise do padrão dólar‑ouro e nova ordem (1971‑1978)\n\nEm 1971, os Estados Unidos suspenderam a conversibilidade do dólar em ouro, episódio conhecido como Choque Nixon, encerrando o sistema de taxas fixas que o FMI havia monitorado. Para adaptar‑se à nova realidade, os Acordos da Jamaica, negociados em 1976 e incorporados ao estatuto do FMI em 1978, institucionalizaram a livre flutuação das moedas, ampliando o foco do Fundo para a gestão de crises de balanço de pagamentos.\n\nCapítulo 4 – Ajustes estruturais e controvérsias (década de 1980‑1990)\n\nA partir da metade da década de 1980, o FMI passou a condicionar seus empréstimos a programas de ajuste estrutural, exigindo reformas econômicas que muitas vezes incluíam austeridade e liberalização de mercados. Exemplos desse modelo aparecem nas intervenções ao longo da década, como o grande acordo de Extended Fund Facility concedido à Índia em 1981 e o empréstimo de 1991 que ajudou o país a superar uma grave crise de balanço de pagamentos.\n\nCapítulo 5 – Governança e desafios atuais (2019‑presente)\n\nEm 1º de outubro de 2019, a economista búlgara Kristalina Georgieva assumiu a direção‑geral do FMI, iniciando um segundo mandato em 1º de outubro de 2024. Sua gestão tem sido marcada por debates sobre a distribuição desigual de poder de voto entre países ricos e emergentes, bem como críticas às condições de austeridade que ainda acompanham muitos dos programas de empréstimo do Fundo.",
+  "historia": "Capítulo 1 – As origens (1808)\n\nEm 10 de maio de 1808, durante o período colonial, foi inaugurada a Casa de Suplicação do Brasil, a primeira instância de apelação do país, logo após a chegada da família real portuguesa ao Rio de Janeiro. Essa corte serviu de antecedente ao futuro Supremo Tribunal de Justiça.\n\nCapítulo 2 – O Império (1824‑1829)\n\nCom a Constituição Imperial de 1824, o Brasil consolidou seu ordenamento jurídico, e, em 1829, foi criado o Supremo Tribunal de Justiça, que atuou como a corte suprema do Império.\n\nCapítulo 3 – A República e as mudanças de composição (1891‑1969)\n\nA Constituição Republicana de 1891 estabeleceu o Supremo Tribunal Federal com quinze ministros. Durante o governo de Getúlio Vargas, o número foi reduzido para onze (sem data específica nos textos). Em 1965, a composição foi ampliada para dezesseis membros, mas, apenas quatro anos depois, em 1969, voltou a ser de onze ministros, número que permanece até hoje.\n\nCapítulo 4 – Transparência, ataques e segurança (2002‑2024)\n\nA partir de 11 de agosto de 2002, todas as sessões do STF passaram a ser transmitidas ao vivo pela TV Justiça, e, em 5 de maio de 2004, a Rádio Justiça começou a fazer o mesmo, permitindo que a população acompanhasse os julgamentos. Em 8 de janeiro de 2023, o edifício foi alvo de um ataque de apoiadores do ex‑presidente Jair Bolsonaro, e, em 13 de novembro de 2024, uma bomba explodiu nas proximidades, resultando em uma fatalidade.",
   "linhaDoTempo": [
     {
-      "quando": "July 1944",
-      "oQue": "Conferência de Bretton Woods reúne 44 países e cria o FMI",
-      "fonte": "Wikipedia (português)"
-    },
-    {
-      "quando": "27 December 1945",
-      "oQue": "FMI passa a existir juridicamente com 29 membros fundadores",
-      "fonte": "Wikipedia (português)"
-    },
-    {
-      "quando": "1 March 1947",
-      "oQue": "Início das operações financeiras do FMI",
-      "fonte": "Wikipedia (português)"
-    },
-    {
-      "quando": "8 May 1947",
-      "oQue": "França recebe o primeiro empréstimo do FMI",
-      "fonte": "Wikipedia (português)"
-    },
-    {
-      "quando": "1971",
-      "oQue": "Estados Unidos suspendem a conversibilidade do dólar em ouro (Choque Nixon) e termina o regime de taxas fixas",
-      "fonte": "Wikipedia (português)"
-    },
-    {
-      "quando": "1976",
-      "oQue": "Acordos da Jamaica formalizam a mudança para moedas flutuantes",
-      "fonte": "Wikipedia (português)"
-    },
-    {
-      "quando": "1981",
-      "oQue": "Índia obtém grande acordo de Extended Fund Facility com o FMI",
+      "quando": "10 de maio de 1808",
+      "oQue": "Inauguração da Casa de Suplicação do Brasil, antecedente do STF",
       "fonte": "Wikipedia (inglês)"
     },
     {
-      "quando": "1991",
-      "oQue": "Índia recorre ao FMI para superar crise de balanço de pagamentos",
+      "quando": "1824",
+      "oQue": "Adoção da Constituição Imperial, preparando a criação do Supremo Tribunal de Justiça",
       "fonte": "Wikipedia (inglês)"
     },
     {
-      "quando": "1 October 2019",
-      "oQue": "Kristalina Georgieva assume a direção‑geral do FMI",
+      "quando": "1829",
+      "oQue": "Criação do Supremo Tribunal de Justiça como corte suprema do Império",
+      "fonte": "Wikipedia (inglês)"
+    },
+    {
+      "quando": "1891",
+      "oQue": "Constituição Republicana estabelece o STF com 15 ministros",
+      "fonte": "Wikipedia (inglês)"
+    },
+    {
+      "quando": "1965",
+      "oQue": "Aumento da composição do STF para 16 ministros",
+      "fonte": "Wikipedia (inglês)"
+    },
+    {
+      "quando": "1969",
+      "oQue": "Redução da composição do STF para 11 ministros, número atual",
+      "fonte": "Wikipedia (inglês)"
+    },
+    {
+      "quando": "11 de agosto de 2002",
+      "oQue": "Início da transmissão ao vivo das sessões do STF pela TV Justiça",
       "fonte": "Wikipedia (português)"
     },
     {
-      "quando": "1 October 2024",
-      "oQue": "Início do segundo mandato de Kristalina Georgieva como diretora‑geral",
+      "quando": "5 de maio de 2004",
+      "oQue": "Início da transmissão ao vivo das sessões do STF pela Rádio Justiça",
       "fonte": "Wikipedia (português)"
+    },
+    {
+      "quando": "8 de janeiro de 2023",
+      "oQue": "Ataque ao prédio do STF por apoiadores de Jair Bolsonaro",
+      "fonte": "Wikipedia (inglês)"
+    },
+    {
+      "quando": "13 de novembro de 2024",
+      "oQue": "Explosão de bomba nas proximidades do STF, causando uma fatalidade",
+      "fonte": "Wikipedia (inglês)"
     }
   ],
-  "comoFunciona": "O Fundo Monetário Internacional (FMI) foi criado na Conferência de Bretton Woods, em julho de 1944, e passou a existir formalmente em 1945, com 29 países‑fundadores, para apoiar a reconstrução do sistema monetário internacional e, depois, lidar com desequilíbrios externos e crises financeiras. Seu objetivo declarado é promover a cooperação monetária internacional, preservar a estabilidade financeira, facilitar o comércio, estimular o emprego, o crescimento sustentável e reduzir a pobreza.\n\nOs recursos do FMI vêm das cotas que cada país‑membro paga; a cota determina tanto a contribuição financeira quanto o peso de voto nas decisões. Assim, os 191 membros contribuem a um fundo comum do qual podem tomar empréstimos quando enfrentam crises de balanço de pagamentos. O poder de voto é desproporcional, favorecendo países ricos, o que gera críticas sobre a governança.\n\nQuando concede crédito, o FMI costuma exigir reformas econômicas conhecidas como ajuste estrutural ou condições de empréstimo. Essas exigências podem incluir medidas de austeridade, redução de gastos públicos e mudanças nas políticas macroeconômicas, o que gera controvérsia por supostamente limitar a soberania dos governos e impactar populações vulneráveis.\n\nA direção‑geral do FMI está a cargo da managing director, atualmente Kristalina Georgieva (mandato iniciado em 1 de outubro 2019 e renovado em 1 de outubro 2024). As decisões são tomadas pelos países‑membros, cujo voto varia conforme a cota, e o Fundo também oferece assistência técnica, treinamento e monitoramento das políticas econômicas dos seus integrantes.",
+  "comoFunciona": "O Supremo Tribunal Federal (STF) é a última instância do Poder Judiciário brasileiro e, ao mesmo tempo, o tribunal constitucional do país. Sua função institucional fundamental é ser guardião da Constituição Federal de 1988, analisando casos que impliquem lesão ou ameaça a suas disposições; das suas decisões não cabe recurso a nenhum outro órgão.\n\nO STF compõe‑se de onze Ministros, que não têm relação com os ministros do Executivo. Eles são indicados pelo Presidente da República e precisam ser aprovados pelo Senado Federal, exigindo maioria absoluta de 41 votos. Não há mandato fixo; o limite máximo de exercício é a aposentadoria compulsória aos 75 anos.\n\nAlém de julgar recursos extraordinários (Recurso Extraordinário) sobre questões constitucionais, o STF tem competência de origem para ações como a Ação Direta de Inconstitucionalidade (ADI), a Ação Declaratória de Constitucionalidade (ADC) e a Ação Direta de Inconstitucionalidade por Omissão (ADO). Essas ferramentas permitem que o Tribunal examine a constitucionalidade de leis e atos normativos sem que haja um litígio prévio.\n\nAs sessões do STF são públicas e transmitidas ao vivo pela TV Justiça e pela Rádio Justiça, permitindo que a sociedade acompanhe os julgamentos. O Tribunal não recebe recursos financeiros próprios; seu orçamento vem do Poder Executivo, como parte do orçamento geral da Justiça, mas isso não interfere em sua independência institucional.\n\nHistoricamente, o número de ministros variou (por exemplo, chegou a 16 durante a ditadura militar), mas desde a redemocratização voltou ao patamar de 11, garantindo um colegiado estável para exercer o controle de constitucionalidade e a interpretação final das leis brasileiras.",
   "numeros": [
     {
-      "valor": "191 países‑membros",
-      "significado": "Número total de países que compõem o FMI",
+      "valor": "11",
+      "significado": "quantidade de Ministros que compõem o STF",
       "fonte": "Wikipedia (português)",
-      "link": "https://pt.wikipedia.org/wiki/Fundo_Monet%C3%A1rio_Internacional"
+      "link": "https://pt.wikipedia.org/wiki/Supremo_Tribunal_Federal"
     },
     {
-      "valor": "29 membros fundadores",
-      "significado": "Quantidade de países que criaram o FMI em 1945",
+      "valor": "75 anos",
+      "significado": "idade limite para aposentadoria compulsória dos Ministros",
       "fonte": "Wikipedia (português)",
-      "link": "https://pt.wikipedia.org/wiki/Fundo_Monet%C3%A1rio_Internacional"
+      "link": "https://pt.wikipedia.org/wiki/Supremo_Tribunal_Federal"
     },
     {
-      "valor": "1971",
-      "significado": "Ano em que colapsou o sistema de taxas de câmbio fixas de Bretton Woods",
+      "valor": "16",
+      "significado": "número de assentos do STF durante a ditadura militar (aumento temporário)",
       "fonte": "Wikipedia (português)",
-      "link": "https://pt.wikipedia.org/wiki/Fundo_Monet%C3%A1rio_Internacional"
+      "link": "https://pt.wikipedia.org/wiki/Supremo_Tribunal_Federal"
     },
     {
-      "valor": "1944",
-      "significado": "Ano da Conferência de Bretton Woods que deu origem ao FMI",
+      "valor": "5",
+      "significado": "número de Ministros forçados a aposentar-se em 1969 pelo AI‑5",
       "fonte": "Wikipedia (português)",
-      "link": "https://pt.wikipedia.org/wiki/Fundo_Monet%C3%A1rio_Internacional"
+      "link": "https://pt.wikipedia.org/wiki/Supremo_Tribunal_Federal"
     },
     {
-      "valor": "1978",
-      "significado": "Ano em que os Acordos da Jamaica foram incorporados aos estatutos do FMI, formalizando a mudança para moedas flutuantes",
-      "fonte": "Wikipedia (português)",
-      "link": "https://pt.wikipedia.org/wiki/Acordos_de_Bretton_Woods"
+      "valor": "41",
+      "significado": "votos absolutos necessários no Senado para aprovar a nomeação de um Ministro",
+      "fonte": "Wikipedia (inglês)",
+      "link": "https://en.wikipedia.org/wiki/Supreme_Federal_Court"
     }
   ],
   "atores": [
     {
-      "nome": "Fundo Monetário Internacional (FMI)",
-      "quer": "promover cooperação monetária internacional, estabilidade financeira e oferecer empréstimos de última instância",
-      "porque": "é seu mandato institucional, conforme descrito nos textos de origem"
+      "nome": "Presidente da República",
+      "quer": "indicar ministros para o STF",
+      "porque": "é a autoridade constitucionalmente prevista para a indicação"
     },
     {
-      "nome": "Países desenvolvidos",
-      "quer": "manter influência nas decisões do FMI",
-      "porque": "o sistema de cotas determina poder de voto proporcional à contribuição, favorecendo quem aporta mais recursos"
+      "nome": "Senado Federal",
+      "quer": "aprovar os indicados pelo Presidente",
+      "porque": "exerce a função de controle e legitimação dos ministros"
     },
     {
-      "nome": "Países em desenvolvimento (ex.: Brasil, Índia, Argentina)",
-      "quer": "acessar recursos financeiros e condições flexíveis para enfrentar crises de balanço de pagamentos",
-      "porque": "necessitam de apoio para evitar colapsos econômicos sem perder soberania plena"
+      "nome": "Parlamentares (congressistas)",
+      "quer": "evitar ou influenciar processos penais no STF",
+      "porque": "são sujeitos a julgamento pelo STF em casos de infrações penais previstas no art. 102"
     },
     {
-      "nome": "Governos nacionais",
-      "quer": "implementar políticas econômicas que atendam às demandas internas de emprego, crescimento e bem‑estar social",
-      "porque": "precisam equilibrar pressões internas e externas ao gerir a economia"
+      "nome": "Sociedade civil e movimentos de direitos (ex.: grupos LGBT)",
+      "quer": "que o STF proteja direitos constitucionais",
+      "porque": "veem o STF como guardião da Constituição e das garantias das minorias"
     },
     {
-      "nome": "Organizações da sociedade civil (ex.: ODI, UNCTAD)",
-      "quer": "maior equidade nas políticas do FMI e redução de medidas de austeridade",
-      "porque": "as críticas apontam impactos sociais negativos e concentração de poder nas mãos de países ricos"
+      "nome": "Grupos políticos e religiosos (ex.: pastor Silas Malafaia e apoiadores)",
+      "quer": "limitar decisões do STF que consideram contrárias a seus valores",
+      "porque": "percebem o STF como agente de mudanças sociais (aborto, união civil) que desafiam suas convicções"
     }
   ],
   "debate": [
     {
-      "visao": "O FMI como estabilizador global",
-      "quemDefende": "FMI e países que valorizam a estabilidade financeira",
-      "argumento": "atua como credor de última instância, evitando colapsos de balanço de pagamentos e facilitando o comércio internacional"
+      "visao": "STF como guardião da Constituição, necessário papel contramajoritário",
+      "quemDefende": "juristas, constitucionalistas, defensores de direitos humanos",
+      "argumento": "garante a supremacia da Constituição e protege minorias contra maiorias temporárias"
     },
     {
-      "visao": "Condicionalidades de austeridade são prejudiciais",
-      "quemDefende": "ODI, UNCTAD e governos de países em desenvolvimento",
-      "argumento": "as exigências de ajuste estrutural podem reduzir produção, emprego e agravar a pobreza, além de limitar a autonomia política"
+      "visao": "STF como corte politizada, alvo de críticas por decisões que favorecem certas correntes",
+      "quemDefende": "críticos políticos, setores conservadores, pastor Silas Malafaia",
+      "argumento": "as decisões refletem posicionamentos ideológicos e geram tensão com grupos políticos"
     },
     {
-      "visao": "Governança desigual do FMI",
-      "quemDefende": "Países em desenvolvimento e organizações da sociedade civil",
-      "argumento": "o peso de voto concentrado nos países ricos gera decisões que favorecem seus interesses, criando desequilíbrio entre membros"
+      "visao": "STF como instância acima dos interesses corporativos da classe política, fortalecendo a democracia",
+      "quemDefende": "parte da sociedade que valoriza a independência judicial",
+      "argumento": "processa parlamentares sem prévia autorização do Congresso, mostrando autonomia e controle dos abusos de poder"
+    },
+    {
+      "visao": "STF não decide sobre questões exclusivamente não constitucionais",
+      "quemDefende": "especialistas em direito processual",
+      "argumento": "a Constituição delimita que essas matérias são da competência da Superior Court of Justice, evitando sobrecarga ao STF"
     }
   ],
   "mitos": [
     {
-      "mito": "O FMI só ajuda países ricos",
-      "verdade": "O FMI reúne 191 membros, inclusive nações em desenvolvimento, e concede empréstimos de última instância a quem enfrenta crises de balanço de pagamentos, como a Argentina em 2001"
+      "mito": "STF é um órgão do Poder Executivo",
+      "verdade": "os ministros são indicados pelo Presidente, mas precisam ser aprovados pelo Senado e atuam com independência judicial"
     },
     {
-      "mito": "Todas as políticas do FMI são austeras",
-      "verdade": "Embora haja críticas sobre austeridade, o FMI também oferece assistência técnica, treinamento e pode adaptar programas; nem todas as intervenções são exclusivamente de corte austero"
+      "mito": "STF decide apenas questões constitucionais",
+      "verdade": "além do controle concentrado, julga infrações penais de parlamentares e outros casos previstos no art. 102 da Constituição"
+    },
+    {
+      "mito": "Decisões do STF podem ser recorridas",
+      "verdade": "não cabe recurso a nenhum outro tribunal; as decisões são definitivas"
     }
   ],
   "eHoje": "",
   "cadeia": [
     {
-      "passo": "O FMI nasce em 1944‑1945 para garantir estabilidade monetária internacional e servir de guardião das taxas de câmbio",
-      "camada": "economia"
-    },
-    {
-      "passo": "Passa a conceder empréstimos de emergência a países com desequilíbrios de balanço de pagamentos, exigindo ajustes estruturais (cortes de gastos, reformas fiscais)",
+      "passo": "O STF, como guardião da Constituição de 1988, decide se leis e atos do governo respeitam a Carta Magna",
       "camada": "politica"
     },
     {
-      "passo": "O Brasil, como membro, pode recorrer ao FMI em crises, ficando sujeito às mesmas condições de austeridade",
-      "camada": "brasil"
+      "passo": "Ao declarar a constitucionalidade ou inconstitucionalidade de normas, o Tribunal influencia áreas como economia, energia e preços ao consumidor",
+      "camada": "economia"
     },
     {
-      "passo": "As medidas de austeridade podem reduzir gastos públicos, impactando serviços sociais, preços e emprego no país",
+      "passo": "Essas decisões moldam políticas públicas que afetam a vida cotidiana dos brasileiros, como direitos trabalhistas e tributação",
       "camada": "sociedade"
+    },
+    {
+      "passo": "A estabilidade institucional garantida pelo STF cria um ambiente previsível para investidores e para as relações internacionais do Brasil",
+      "camada": "politica"
     }
   ],
   "chegaEmVoce": {
-    "tipo": "indireto",
-    "texto": "Quando o governo brasileiro precisa de recursos do FMI, as exigências de corte de gastos podem chegar ao seu bolso: menos investimentos em saúde ou educação, aumento de impostos ou redução de benefícios, o que altera o cotidiano sem que você veja o Fundo diretamente."
+    "tipo": "direto",
+    "texto": "Quando o STF declara inconstitucional uma lei que aumenta impostos, o preço dos produtos que você compra pode mudar; quando decide sobre direitos trabalhistas, isso altera as regras do seu contrato de trabalho."
   },
-  "paraPensar": "Até que ponto a necessidade de estabilidade macroeconômica justifica a perda de autonomia nas decisões de políticas públicas?",
+  "paraPensar": "Até que ponto a interpretação do STF deve influenciar decisões econômicas e sociais do país?",
   "teste": [
     {
-      "pergunta": "Em que ano o FMI foi formalmente constituído?",
+      "pergunta": "Quantos ministros compõem o STF atualmente?",
       "opcoes": [
-        "1944",
-        "1945",
-        "1947",
-        "1950"
+        "9",
+        "11",
+        "15",
+        "16"
       ],
       "correta": 1,
-      "explicacao": "O texto indica que o FMI foi formalmente constituído em 27 de dezembro de 1945."
+      "explicacao": "O texto indica que o STF tem onze ministros desde 1969 até hoje."
     },
     {
-      "pergunta": "Qual foi o primeiro país a receber um empréstimo do FMI?",
+      "pergunta": "Qual é o limite máximo de idade para o exercício de um ministro do STF?",
       "opcoes": [
-        "França",
-        "Brasil",
-        "Estados Unidos",
-        "Reino Unido"
+        "70 anos",
+        "72 anos",
+        "75 anos",
+        "80 anos"
       ],
-      "correta": 0,
-      "explicacao": "A primeira operação de crédito do FMI ocorreu em 8 de maio de 1947, quando a França recebeu o empréstimo inaugural."
+      "correta": 2,
+      "explicacao": "A aposentadoria compulsória ocorre ao completar 75 anos, conforme o texto."
     },
     {
-      "pergunta": "Qual evento marcou o fim do regime de taxas de câmbio fixas supervisionado pelo FMI?",
+      "pergunta": "Em que ano as sessões do STF começaram a ser transmitidas ao vivo pela TV Justiça?",
       "opcoes": [
-        "Crise do petróleo",
-        "Choque Nixon (suspensão do dólar‑ouro)",
-        "Acordos da Jamaica",
-        "Crise da dívida latino‑americana"
+        "1999",
+        "2002",
+        "2005",
+        "2010"
       ],
       "correta": 1,
-      "explicacao": "Em 1971, os EUA suspenderam a conversibilidade do dólar em ouro (Choque Nixon), encerrando o sistema de taxas fixas que o FMI monitorava."
+      "explicacao": "A transmissão ao vivo pela TV Justiça iniciou em 11 de agosto de 2002, segundo o material fornecido."
     }
   ],
   "fontes": [
     {
       "fonte": "Wikipedia (português)",
-      "titulo": "Fundo Monetário Internacional",
-      "link": "https://pt.wikipedia.org/wiki/Fundo_Monet%C3%A1rio_Internacional"
+      "titulo": "Supremo Tribunal Federal",
+      "link": "https://pt.wikipedia.org/wiki/Supremo_Tribunal_Federal"
     },
     {
       "fonte": "Wikipedia (inglês)",
-      "titulo": "International Monetary Fund",
-      "link": "https://en.wikipedia.org/wiki/International_Monetary_Fund"
-    },
-    {
-      "fonte": "Wikipedia (inglês)",
-      "titulo": "India and the International Monetary Fund",
-      "link": "https://en.wikipedia.org/wiki/India_and_the_International_Monetary_Fund"
-    },
-    {
-      "fonte": "Wikipedia (português)",
-      "titulo": "Acordos de Bretton Woods",
-      "link": "https://pt.wikipedia.org/wiki/Acordos_de_Bretton_Woods"
-    },
-    {
-      "fonte": "Le Monde (inglês)",
-      "titulo": "COP31: Fossil fuels and climate funding take center stage in final stretch of negotiations",
-      "link": "https://www.lemonde.fr/en/environment/article/2026/11/20/cop31-fossil-fuels-and-climate-funding-take-center-stage-in-final-stretch-of-negotiations_6785737_114.html"
+      "titulo": "Supreme Federal Court",
+      "link": "https://en.wikipedia.org/wiki/Supreme_Federal_Court"
     }
   ],
   "imagem": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/IMF-Seal_ENG_RGB.svg/1280px-IMF-Seal_ENG_RGB.svg.png?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Supremo_Brasil.jpg/1280px-Supremo_Brasil.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "credito": "Wikimedia Commons, via Wikipedia",
-    "link": "https://pt.wikipedia.org/wiki/File:IMF-Seal_ENG_RGB.svg"
-  }
+    "link": "https://pt.wikipedia.org/wiki/File:Supremo_Brasil.jpg"
+  },
+  "sugeridoPorVoce": "Como funciona o Supremo Tribunal Federal?",
+  "filaConectada": true
 }

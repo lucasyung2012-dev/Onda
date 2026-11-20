@@ -496,6 +496,279 @@
         "credito": "Wikimedia Commons, via Wikipedia",
         "link": "https://pt.wikipedia.org/wiki/File:IMF-Seal_ENG_RGB.svg"
       }
+    },
+    {
+      "status": "ok",
+      "geradoEm": "2026-11-20T23:43:01.997Z",
+      "dataReferencia": "2026-11-20",
+      "ia": {
+        "provedor": "Groq",
+        "modelo": "openai/gpt-oss-120b",
+        "aviso": "Aula gerada por IA a partir das fontes listadas. Pode conter erros: confira nas fontes."
+      },
+      "formato": 2,
+      "titulo": "O Supremo Tribunal Federal: estrutura e funcionamento",
+      "pergunta": "Como o Supremo Tribunal Federal brasileiro funciona e qual o seu papel na geopolítica nacional?",
+      "emUmaFrase": "O STF é a última instância judicial do Brasil e guardião da Constituição, decidindo questões constitucionais que afetam todo o país.",
+      "paraComecar": "O Supremo Tribunal Federal (STF) é a corte suprema do Brasil, ou seja, a última instância do Poder Judiciário. Ele reúne as funções típicas de uma suprema corte – julgar recursos que chegam ao fim do sistema – e as de um tribunal constitucional, avaliando a compatibilidade das leis e atos com a Constituição de 1988.\n\nCriado após a Independência como Supremo Tribunal de Justiça e renomeado após a proclamação da República, o STF é composto por onze juízes chamados de Ministros. Eles são indicados pelo Presidente da República e precisam ser aprovados pelo Senado Federal. Não há mandato fixo; o limite máximo é a aposentadoria compulsória ao completar 75 anos.\n\nEntre as competências mais conhecidas está o controle concentrado de constitucionalidade, exercido principalmente por meio das Ações Diretas de Inconstitucionalidade (ADIs). Nessas ações, o STF pode declarar uma lei ou ato normativo inconstitucional independentemente de um caso concreto. Todas as sessões judiciais e administrativas são transmitidas ao vivo pela TV Justiça desde 2002 e pela Rádio Justiça desde 2004, e o público pode assistir aos julgamentos presencialmente.\n\nNa geopolítica nacional, o STF tem papel decisivo porque suas interpretações da Constituição moldam políticas públicas, regulam relações entre os poderes e influenciam decisões que afetam a ordem econômica e social do país. Ao garantir a supremacia da Constituição, o tribunal contribui para a estabilidade institucional, elemento essencial para a atuação do Brasil no cenário internacional.",
+      "glossario": [
+        {
+          "termo": "instância",
+          "definicao": "Nível ou grau dentro do sistema judicial; a última instância é a que encerra o processo."
+        },
+        {
+          "termo": "controle concentrado de constitucionalidade",
+          "definicao": "Mecanismo pelo qual o STF analisa a constitucionalidade de leis ou atos normativos de forma direta, sem depender de um caso concreto."
+        },
+        {
+          "termo": "ação direta de inconstitucionalidade (ADI)",
+          "definicao": "Processo judicial que permite ao STF declarar uma lei inconstitucional."
+        },
+        {
+          "termo": "ministro",
+          "definicao": "Nome dado aos juízes que compõem o STF; não tem relação com os ministros do Executivo."
+        },
+        {
+          "termo": "aposentadoria compulsória",
+          "definicao": "Obrigatoriedade de deixar o cargo ao atingir a idade de 75 anos."
+        },
+        {
+          "termo": "TV Justiça",
+          "definicao": "Canal de televisão que transmite ao vivo as sessões do STF desde 2002."
+        },
+        {
+          "termo": "Rádio Justiça",
+          "definicao": "Serviço de rádio que transmite ao vivo as sessões do STF desde 2004."
+        }
+      ],
+      "ligacoes": [],
+      "historia": "Capítulo 1 – As origens (1808)\n\nEm 10 de maio de 1808, durante o período colonial, foi inaugurada a Casa de Suplicação do Brasil, a primeira instância de apelação do país, logo após a chegada da família real portuguesa ao Rio de Janeiro. Essa corte serviu de antecedente ao futuro Supremo Tribunal de Justiça.\n\nCapítulo 2 – O Império (1824‑1829)\n\nCom a Constituição Imperial de 1824, o Brasil consolidou seu ordenamento jurídico, e, em 1829, foi criado o Supremo Tribunal de Justiça, que atuou como a corte suprema do Império.\n\nCapítulo 3 – A República e as mudanças de composição (1891‑1969)\n\nA Constituição Republicana de 1891 estabeleceu o Supremo Tribunal Federal com quinze ministros. Durante o governo de Getúlio Vargas, o número foi reduzido para onze (sem data específica nos textos). Em 1965, a composição foi ampliada para dezesseis membros, mas, apenas quatro anos depois, em 1969, voltou a ser de onze ministros, número que permanece até hoje.\n\nCapítulo 4 – Transparência, ataques e segurança (2002‑2024)\n\nA partir de 11 de agosto de 2002, todas as sessões do STF passaram a ser transmitidas ao vivo pela TV Justiça, e, em 5 de maio de 2004, a Rádio Justiça começou a fazer o mesmo, permitindo que a população acompanhasse os julgamentos. Em 8 de janeiro de 2023, o edifício foi alvo de um ataque de apoiadores do ex‑presidente Jair Bolsonaro, e, em 13 de novembro de 2024, uma bomba explodiu nas proximidades, resultando em uma fatalidade.",
+      "linhaDoTempo": [
+        {
+          "quando": "10 de maio de 1808",
+          "oQue": "Inauguração da Casa de Suplicação do Brasil, antecedente do STF",
+          "fonte": "Wikipedia (inglês)"
+        },
+        {
+          "quando": "1824",
+          "oQue": "Adoção da Constituição Imperial, preparando a criação do Supremo Tribunal de Justiça",
+          "fonte": "Wikipedia (inglês)"
+        },
+        {
+          "quando": "1829",
+          "oQue": "Criação do Supremo Tribunal de Justiça como corte suprema do Império",
+          "fonte": "Wikipedia (inglês)"
+        },
+        {
+          "quando": "1891",
+          "oQue": "Constituição Republicana estabelece o STF com 15 ministros",
+          "fonte": "Wikipedia (inglês)"
+        },
+        {
+          "quando": "1965",
+          "oQue": "Aumento da composição do STF para 16 ministros",
+          "fonte": "Wikipedia (inglês)"
+        },
+        {
+          "quando": "1969",
+          "oQue": "Redução da composição do STF para 11 ministros, número atual",
+          "fonte": "Wikipedia (inglês)"
+        },
+        {
+          "quando": "11 de agosto de 2002",
+          "oQue": "Início da transmissão ao vivo das sessões do STF pela TV Justiça",
+          "fonte": "Wikipedia (português)"
+        },
+        {
+          "quando": "5 de maio de 2004",
+          "oQue": "Início da transmissão ao vivo das sessões do STF pela Rádio Justiça",
+          "fonte": "Wikipedia (português)"
+        },
+        {
+          "quando": "8 de janeiro de 2023",
+          "oQue": "Ataque ao prédio do STF por apoiadores de Jair Bolsonaro",
+          "fonte": "Wikipedia (inglês)"
+        },
+        {
+          "quando": "13 de novembro de 2024",
+          "oQue": "Explosão de bomba nas proximidades do STF, causando uma fatalidade",
+          "fonte": "Wikipedia (inglês)"
+        }
+      ],
+      "comoFunciona": "O Supremo Tribunal Federal (STF) é a última instância do Poder Judiciário brasileiro e, ao mesmo tempo, o tribunal constitucional do país. Sua função institucional fundamental é ser guardião da Constituição Federal de 1988, analisando casos que impliquem lesão ou ameaça a suas disposições; das suas decisões não cabe recurso a nenhum outro órgão.\n\nO STF compõe‑se de onze Ministros, que não têm relação com os ministros do Executivo. Eles são indicados pelo Presidente da República e precisam ser aprovados pelo Senado Federal, exigindo maioria absoluta de 41 votos. Não há mandato fixo; o limite máximo de exercício é a aposentadoria compulsória aos 75 anos.\n\nAlém de julgar recursos extraordinários (Recurso Extraordinário) sobre questões constitucionais, o STF tem competência de origem para ações como a Ação Direta de Inconstitucionalidade (ADI), a Ação Declaratória de Constitucionalidade (ADC) e a Ação Direta de Inconstitucionalidade por Omissão (ADO). Essas ferramentas permitem que o Tribunal examine a constitucionalidade de leis e atos normativos sem que haja um litígio prévio.\n\nAs sessões do STF são públicas e transmitidas ao vivo pela TV Justiça e pela Rádio Justiça, permitindo que a sociedade acompanhe os julgamentos. O Tribunal não recebe recursos financeiros próprios; seu orçamento vem do Poder Executivo, como parte do orçamento geral da Justiça, mas isso não interfere em sua independência institucional.\n\nHistoricamente, o número de ministros variou (por exemplo, chegou a 16 durante a ditadura militar), mas desde a redemocratização voltou ao patamar de 11, garantindo um colegiado estável para exercer o controle de constitucionalidade e a interpretação final das leis brasileiras.",
+      "numeros": [
+        {
+          "valor": "11",
+          "significado": "quantidade de Ministros que compõem o STF",
+          "fonte": "Wikipedia (português)",
+          "link": "https://pt.wikipedia.org/wiki/Supremo_Tribunal_Federal"
+        },
+        {
+          "valor": "75 anos",
+          "significado": "idade limite para aposentadoria compulsória dos Ministros",
+          "fonte": "Wikipedia (português)",
+          "link": "https://pt.wikipedia.org/wiki/Supremo_Tribunal_Federal"
+        },
+        {
+          "valor": "16",
+          "significado": "número de assentos do STF durante a ditadura militar (aumento temporário)",
+          "fonte": "Wikipedia (português)",
+          "link": "https://pt.wikipedia.org/wiki/Supremo_Tribunal_Federal"
+        },
+        {
+          "valor": "5",
+          "significado": "número de Ministros forçados a aposentar-se em 1969 pelo AI‑5",
+          "fonte": "Wikipedia (português)",
+          "link": "https://pt.wikipedia.org/wiki/Supremo_Tribunal_Federal"
+        },
+        {
+          "valor": "41",
+          "significado": "votos absolutos necessários no Senado para aprovar a nomeação de um Ministro",
+          "fonte": "Wikipedia (inglês)",
+          "link": "https://en.wikipedia.org/wiki/Supreme_Federal_Court"
+        }
+      ],
+      "atores": [
+        {
+          "nome": "Presidente da República",
+          "quer": "indicar ministros para o STF",
+          "porque": "é a autoridade constitucionalmente prevista para a indicação"
+        },
+        {
+          "nome": "Senado Federal",
+          "quer": "aprovar os indicados pelo Presidente",
+          "porque": "exerce a função de controle e legitimação dos ministros"
+        },
+        {
+          "nome": "Parlamentares (congressistas)",
+          "quer": "evitar ou influenciar processos penais no STF",
+          "porque": "são sujeitos a julgamento pelo STF em casos de infrações penais previstas no art. 102"
+        },
+        {
+          "nome": "Sociedade civil e movimentos de direitos (ex.: grupos LGBT)",
+          "quer": "que o STF proteja direitos constitucionais",
+          "porque": "veem o STF como guardião da Constituição e das garantias das minorias"
+        },
+        {
+          "nome": "Grupos políticos e religiosos (ex.: pastor Silas Malafaia e apoiadores)",
+          "quer": "limitar decisões do STF que consideram contrárias a seus valores",
+          "porque": "percebem o STF como agente de mudanças sociais (aborto, união civil) que desafiam suas convicções"
+        }
+      ],
+      "debate": [
+        {
+          "visao": "STF como guardião da Constituição, necessário papel contramajoritário",
+          "quemDefende": "juristas, constitucionalistas, defensores de direitos humanos",
+          "argumento": "garante a supremacia da Constituição e protege minorias contra maiorias temporárias"
+        },
+        {
+          "visao": "STF como corte politizada, alvo de críticas por decisões que favorecem certas correntes",
+          "quemDefende": "críticos políticos, setores conservadores, pastor Silas Malafaia",
+          "argumento": "as decisões refletem posicionamentos ideológicos e geram tensão com grupos políticos"
+        },
+        {
+          "visao": "STF como instância acima dos interesses corporativos da classe política, fortalecendo a democracia",
+          "quemDefende": "parte da sociedade que valoriza a independência judicial",
+          "argumento": "processa parlamentares sem prévia autorização do Congresso, mostrando autonomia e controle dos abusos de poder"
+        },
+        {
+          "visao": "STF não decide sobre questões exclusivamente não constitucionais",
+          "quemDefende": "especialistas em direito processual",
+          "argumento": "a Constituição delimita que essas matérias são da competência da Superior Court of Justice, evitando sobrecarga ao STF"
+        }
+      ],
+      "mitos": [
+        {
+          "mito": "STF é um órgão do Poder Executivo",
+          "verdade": "os ministros são indicados pelo Presidente, mas precisam ser aprovados pelo Senado e atuam com independência judicial"
+        },
+        {
+          "mito": "STF decide apenas questões constitucionais",
+          "verdade": "além do controle concentrado, julga infrações penais de parlamentares e outros casos previstos no art. 102 da Constituição"
+        },
+        {
+          "mito": "Decisões do STF podem ser recorridas",
+          "verdade": "não cabe recurso a nenhum outro tribunal; as decisões são definitivas"
+        }
+      ],
+      "eHoje": "",
+      "cadeia": [
+        {
+          "passo": "O STF, como guardião da Constituição de 1988, decide se leis e atos do governo respeitam a Carta Magna",
+          "camada": "politica"
+        },
+        {
+          "passo": "Ao declarar a constitucionalidade ou inconstitucionalidade de normas, o Tribunal influencia áreas como economia, energia e preços ao consumidor",
+          "camada": "economia"
+        },
+        {
+          "passo": "Essas decisões moldam políticas públicas que afetam a vida cotidiana dos brasileiros, como direitos trabalhistas e tributação",
+          "camada": "sociedade"
+        },
+        {
+          "passo": "A estabilidade institucional garantida pelo STF cria um ambiente previsível para investidores e para as relações internacionais do Brasil",
+          "camada": "politica"
+        }
+      ],
+      "chegaEmVoce": {
+        "tipo": "direto",
+        "texto": "Quando o STF declara inconstitucional uma lei que aumenta impostos, o preço dos produtos que você compra pode mudar; quando decide sobre direitos trabalhistas, isso altera as regras do seu contrato de trabalho."
+      },
+      "paraPensar": "Até que ponto a interpretação do STF deve influenciar decisões econômicas e sociais do país?",
+      "teste": [
+        {
+          "pergunta": "Quantos ministros compõem o STF atualmente?",
+          "opcoes": [
+            "9",
+            "11",
+            "15",
+            "16"
+          ],
+          "correta": 1,
+          "explicacao": "O texto indica que o STF tem onze ministros desde 1969 até hoje."
+        },
+        {
+          "pergunta": "Qual é o limite máximo de idade para o exercício de um ministro do STF?",
+          "opcoes": [
+            "70 anos",
+            "72 anos",
+            "75 anos",
+            "80 anos"
+          ],
+          "correta": 2,
+          "explicacao": "A aposentadoria compulsória ocorre ao completar 75 anos, conforme o texto."
+        },
+        {
+          "pergunta": "Em que ano as sessões do STF começaram a ser transmitidas ao vivo pela TV Justiça?",
+          "opcoes": [
+            "1999",
+            "2002",
+            "2005",
+            "2010"
+          ],
+          "correta": 1,
+          "explicacao": "A transmissão ao vivo pela TV Justiça iniciou em 11 de agosto de 2002, segundo o material fornecido."
+        }
+      ],
+      "fontes": [
+        {
+          "fonte": "Wikipedia (português)",
+          "titulo": "Supremo Tribunal Federal",
+          "link": "https://pt.wikipedia.org/wiki/Supremo_Tribunal_Federal"
+        },
+        {
+          "fonte": "Wikipedia (inglês)",
+          "titulo": "Supreme Federal Court",
+          "link": "https://en.wikipedia.org/wiki/Supreme_Federal_Court"
+        }
+      ],
+      "imagem": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Supremo_Brasil.jpg/1280px-Supremo_Brasil.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "credito": "Wikimedia Commons, via Wikipedia",
+        "link": "https://pt.wikipedia.org/wiki/File:Supremo_Brasil.jpg"
+      },
+      "sugeridoPorVoce": "Como funciona o Supremo Tribunal Federal?",
+      "filaConectada": true
     }
   ]
 }
