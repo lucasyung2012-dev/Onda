@@ -1,10 +1,10 @@
 {
-  "geradoEm": "2026-11-20T21:32:55.518Z",
+  "geradoEm": "2026-11-20T21:34:56.860Z",
   "fuso": "America/Sao_Paulo",
   "dataReferencia": "2026-11-20",
   "janelaHoras": 24,
-  "totalNoticias": 1420,
-  "totalFatos": 1132,
+  "totalNoticias": 1422,
+  "totalFatos": 1135,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -1564,32 +1564,6 @@
       ]
     },
     {
-      "id": "efe464779e63",
-      "titulo": "Trump elogia reunião com Putin e Xi Jinping e diz que tem \"ótima\" relação com os líderes",
-      "imagem": "https://s2-g1.glbimg.com/Vad02KxTwEUCVOTuoq4Ug61du1c=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/B/A/yxYdKOS2mRfxIH3M4BFw/2026-11-20t180212z-1698863269-rc2uroayz9hc-rtrmadp-3-usa-trump.jpg",
-      "fontes": 2,
-      "umaFonteSo": false,
-      "regioes": [
-        "europa",
-        "america-norte",
-        "asia-pacifico",
-        "brasil",
-        "oriente-medio"
-      ],
-      "temas": [
-        "diplomacia",
-        "economia",
-        "conflitos",
-        "politica",
-        "energia"
-      ],
-      "maisRecente": "2026-11-20T17:39:24.000Z",
-      "noticias": [
-        "efe464779e63",
-        "027810cfb5b4"
-      ]
-    },
-    {
       "id": "1562d2c14de6",
       "titulo": "Somalia: UAE Condemns What It Calls Somalia's Escalating Hostile Conduct",
       "imagem": "https://static.srpcdigital.com/styles/414x217/public/2026-11/1885518.jpeg.webp?VersionId=wsqWP7VDNcYGUjMDEl3vX9S7_B5TngUp",
@@ -2668,6 +2642,41 @@
       ]
     },
     {
+      "id": "d63b2f82bb2d",
+      "titulo": "Calls to fund Indigenous disaster response ahead of more flooding",
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/be6fa14e2d2ff65965a65569d44ab278?impolicy=wcms_crop_resize&cropH=2813&cropW=5000&xPos=0&yPos=521&width=862&height=485",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "clima",
+        "conflitos"
+      ],
+      "maisRecente": "2026-11-20T21:29:22.000Z",
+      "noticias": [
+        "d63b2f82bb2d"
+      ]
+    },
+    {
+      "id": "d562fc59ba44",
+      "titulo": "Lawyer says ex-client confessed missing boy Loan’s body is in lagoon",
+      "imagem": "https://fotos.perfil.com/2025/11/26/trim/540/304/loan-danilo-pena-2143079.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "maisRecente": "2026-11-20T21:27:55.000Z",
+      "noticias": [
+        "d562fc59ba44"
+      ]
+    },
+    {
       "id": "a1be826d98f2",
       "titulo": "Palestinian man killed near Ramallah as Israeli raids sweep occupied West Bank",
       "imagem": "https://www.middleeasteye.net/sites/default/files/westbank-palestine-israel.jpg",
@@ -2737,6 +2746,23 @@
       "maisRecente": "2026-11-20T21:19:08.000Z",
       "noticias": [
         "b8b826b40d0e"
+      ]
+    },
+    {
+      "id": "74cda6868d18",
+      "titulo": "Video shows dramatic helicopter rescue of woman trapped in flood channel",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "clima"
+      ],
+      "maisRecente": "2026-11-20T21:18:14.000Z",
+      "noticias": [
+        "74cda6868d18"
       ]
     },
     {
@@ -6589,6 +6615,31 @@
       "maisRecente": "2026-11-20T17:40:15.000Z",
       "noticias": [
         "f887c42a0da7"
+      ]
+    },
+    {
+      "id": "efe464779e63",
+      "titulo": "Trump elogia reunião com Putin e Xi Jinping e diz que tem \"ótima\" relação com os líderes",
+      "imagem": "https://s2-g1.glbimg.com/Vad02KxTwEUCVOTuoq4Ug61du1c=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/B/A/yxYdKOS2mRfxIH3M4BFw/2026-11-20t180212z-1698863269-rc2uroayz9hc-rtrmadp-3-usa-trump.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "europa",
+        "america-norte",
+        "asia-pacifico",
+        "brasil",
+        "oriente-medio"
+      ],
+      "temas": [
+        "economia",
+        "conflitos",
+        "diplomacia",
+        "politica",
+        "energia"
+      ],
+      "maisRecente": "2026-11-20T17:39:24.000Z",
+      "noticias": [
+        "efe464779e63"
       ]
     },
     {
@@ -14085,6 +14136,23 @@
       ]
     },
     {
+      "id": "639fd7899e19",
+      "titulo": "Paris summit against oligarchy draws inspiration from 1938 conference that invented neoliberalism",
+      "imagem": "https://img.lemde.fr/2026/11/18/201/0/1121/560/644/322/60/0/2b2a719_upload-1-biign0f9bbkv-lemonde-2026-novembre-oligarques-bonhomme-de-tail1.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "diplomacia"
+      ],
+      "maisRecente": "2026-11-20T10:51:21.000Z",
+      "noticias": [
+        "639fd7899e19"
+      ]
+    },
+    {
       "id": "db23d0821eb2",
       "titulo": "‘We are not just a fair-weather friend’: Harrods boss on the importance of the Middle East",
       "imagem": "https://www.thenationalnews.com/resizer/v2/CBMFVFKJC5H55DI6HIKAK2QJAU.jpg?auth=09124f01d4b3897c2de989ad555551d8ef8d6ecf9e6db4b5174565630f1e90cb&smart=true&width=3600&height=2025",
@@ -20788,23 +20856,6 @@
       "noticias": [
         "862b058520c7"
       ]
-    },
-    {
-      "id": "a29f01793153",
-      "titulo": "NovaPay Completes Acquisition of BTA Bank, Rebrands to NovaBank",
-      "imagem": "https://static.kyivpost.com/storage/2026/11/19/d421775073358c12d2e04beb7d6e0f46.png?w=640&q=90&f=jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "tecnologia"
-      ],
-      "maisRecente": "2026-11-19T21:33:47.000Z",
-      "noticias": [
-        "a29f01793153"
-      ]
     }
   ],
   "noticias": [
@@ -20834,6 +20885,59 @@
         "politica"
       ],
       "coletadoEm": "2026-11-20T21:32:55.518Z"
+    },
+    {
+      "id": "d63b2f82bb2d",
+      "titulo": "Calls to fund Indigenous disaster response ahead of more flooding",
+      "resumo": "As Central Australia faces another wet season, researchers warn Aboriginal organisations are being left without the resources they need to prepare communities for disasters.",
+      "link": "https://www.abc.net.au/news/2026-11-21/calls-to-fund-indigenous-disaster-response/107404992",
+      "fonte": "abcau",
+      "fonteNome": "ABC News Austrália",
+      "pais": "Austrália",
+      "visao": "Emissora pública australiana",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:29:22.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/be6fa14e2d2ff65965a65569d44ab278?impolicy=wcms_crop_resize&cropH=2813&cropW=5000&xPos=0&yPos=521&width=862&height=485",
+      "imagemCredito": "ABC News Austrália",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "clima",
+        "conflitos"
+      ],
+      "coletadoEm": "2026-11-20T21:34:56.860Z"
+    },
+    {
+      "id": "d562fc59ba44",
+      "titulo": "Lawyer says ex-client confessed missing boy Loan’s body is in lagoon",
+      "resumo": "Former lawyer for Laudelina Peña, the aunt of missing five-year-old Loan Danilo Peña, says she confessed to him that child’s body lies in a lagoon and that she admitted to misleading investigators; Allegation throws ongoing trial into disarray. Leer más",
+      "link": "https://www.batimes.com.ar/news/argentina/lawyer-says-ex-client-confessed-missing-boy-loans-body-is-in-lagoon.phtml",
+      "fonte": "batimes",
+      "fonteNome": "Buenos Aires Times",
+      "pais": "Argentina",
+      "visao": "Jornal argentino em inglês (grupo Perfil)",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:27:55.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://fotos.perfil.com/2025/11/26/trim/540/304/loan-danilo-pena-2143079.jpg",
+      "imagemCredito": "Buenos Aires Times",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-20T21:34:56.860Z"
     },
     {
       "id": "a1be826d98f2",
@@ -20971,6 +21075,32 @@
         "outros"
       ],
       "coletadoEm": "2026-11-20T21:32:55.518Z"
+    },
+    {
+      "id": "74cda6868d18",
+      "titulo": "Video shows dramatic helicopter rescue of woman trapped in flood channel",
+      "resumo": "Los Angeles County firefighters rescued a woman trapped in a fast-moving flood control channel using a helicopter and an airborne paramedic.",
+      "link": "https://www.euronews.com/2026/11/20/video-shows-dramatic-helicopter-rescue-of-woman-trapped-in-flood-channel",
+      "fonte": "euronews",
+      "fonteNome": "Euronews",
+      "pais": "União Europeia",
+      "visao": "Canal de notícias pan-europeu",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:18:14.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "clima"
+      ],
+      "coletadoEm": "2026-11-20T21:34:56.860Z"
     },
     {
       "id": "b4e3f5a9b125",
@@ -45356,6 +45486,32 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     },
     {
+      "id": "639fd7899e19",
+      "titulo": "Paris summit against oligarchy draws inspiration from 1938 conference that invented neoliberalism",
+      "resumo": "The organizers of the summit scheduled for November 21 hope to have an impact as significant as the Lippmann Colloquium's, which redefined liberalism.",
+      "link": "https://www.lemonde.fr/en/opinion/article/2026/11/20/paris-summit-against-oligarchy-draws-inspiration-from-1938-conference-that-invented-neoliberalism_6785341_23.html",
+      "fonte": "lemonde",
+      "fonteNome": "Le Monde (inglês)",
+      "pais": "França",
+      "visao": "Jornal de referência francês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T10:51:21.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://img.lemde.fr/2026/11/18/201/0/1121/560/644/322/60/0/2b2a719_upload-1-biign0f9bbkv-lemonde-2026-novembre-oligarques-bonhomme-de-tail1.jpg",
+      "imagemCredito": "Le Monde (inglês)",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "diplomacia"
+      ],
+      "coletadoEm": "2026-11-20T21:34:56.860Z"
+    },
+    {
       "id": "e86fda5ef98b",
       "titulo": "US: Protesters demand human control over AI after Anthropic's IPO",
       "resumo": "Protesters gathered outside Anthropic’s San Francisco headquarters on 19 November 2026 to demand tighter regulation and greater human control over artificial intelligence, following the company’s $2 trillion stock market debut.",
@@ -59109,60 +59265,6 @@
       ],
       "temas": [
         "midia"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "027810cfb5b4",
-      "titulo": "Líderes europeus criticam reunião de Trump com Putin e Xi e alertam para riscos à Ucrânia",
-      "resumo": "Líderes europeus criticaram encontro de Trump, Putin e Xi na China e temem que negociações sobre a Ucrânia avancem sem participação de Kiev.",
-      "link": "https://www.gazetadopovo.com.br/mundo/lideres-europeus-criticam-reuniao-de-trump-com-putin-e-xi-e-alertam-para-riscos-a-ucrania/",
-      "fonte": "gazetadopovo",
-      "fonteNome": "Gazeta do Povo Mundo",
-      "pais": "Brasil",
-      "visao": "Jornal brasileiro, direita conservadora",
-      "idioma": "pt",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T21:34:53.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://media.gazetadopovo.com.br/2026/11/19183153/lideres-europeus-encontro-trump-putin-xi-960x540.jpg",
-      "imagemCredito": "Gazeta do Povo Mundo",
-      "regioes": [
-        "europa",
-        "america-norte",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "diplomacia"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "a29f01793153",
-      "titulo": "NovaPay Completes Acquisition of BTA Bank, Rebrands to NovaBank",
-      "resumo": "Ukrainian logistics group Nova, via its subsidiary NovaPay Invest, has finalized the acquisition of BTA Bank to launch NovaBank. Following NBU approval on Nov. 12, the integration will combine NovaPay's technology with a banking license to expand digital and physical financial…",
-      "link": "https://www.kyivpost.com/post/90646",
-      "fonte": "kyivpost",
-      "fonteNome": "Kyiv Post",
-      "pais": "Ucrânia",
-      "visao": "Jornal ucraniano",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T21:33:47.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://static.kyivpost.com/storage/2026/11/19/d421775073358c12d2e04beb7d6e0f46.png?w=640&q=90&f=jpg",
-      "imagemCredito": "Kyiv Post",
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "tecnologia"
       ],
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     }

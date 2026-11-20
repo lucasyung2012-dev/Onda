@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-20T21:32:55.518Z",
-  "fontesOk": 68,
-  "fontesComErro": 2,
-  "noticiasNovasNestaRodada": 28,
+  "geradoEm": "2026-11-20T21:34:56.860Z",
+  "fontesOk": 69,
+  "fontesComErro": 1,
+  "noticiasNovasNestaRodada": 4,
   "porFonte": [
     {
       "id": "nyt",
@@ -215,10 +215,9 @@
     {
       "id": "euronews",
       "nome": "Euronews",
-      "status": "erro",
-      "erro": "o site respondeu HTTP 406",
-      "itensNoFeed": 0,
-      "aceitas": 0,
+      "status": "ok",
+      "itensNoFeed": 50,
+      "aceitas": 50,
       "descartadasPorIdade": 0,
       "comImagem": 0
     },
@@ -470,8 +469,8 @@
       "nome": "AllAfrica",
       "status": "ok",
       "itensNoFeed": 33,
-      "aceitas": 31,
-      "descartadasPorIdade": 2,
+      "aceitas": 32,
+      "descartadasPorIdade": 1,
       "comImagem": 0
     },
     {
@@ -578,9 +577,9 @@
       "nome": "Buenos Aires Times",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 14,
-      "descartadasPorIdade": 86,
-      "comImagem": 14
+      "aceitas": 15,
+      "descartadasPorIdade": 85,
+      "comImagem": 15
     },
     {
       "id": "mexiconews",
@@ -623,9 +622,9 @@
       "nome": "UN News",
       "status": "ok",
       "itensNoFeed": 30,
-      "aceitas": 12,
-      "descartadasPorIdade": 18,
-      "comImagem": 12
+      "aceitas": 11,
+      "descartadasPorIdade": 19,
+      "comImagem": 11
     },
     {
       "id": "crisisgroup",
