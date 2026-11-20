@@ -79,6 +79,7 @@ async function buscarArtigos(buscas) {
 
 async function escolherAssunto(anteriores, manchetes, evitar) {
   const usuario = `Escolha o "Tema do dia" do Onda: um assunto de fundo para ENTENDER O MUNDO. Não é uma notícia: é a explicação de algo de qualquer época (história, economia, instituições, geografia, recursos, tecnologia, alianças, conflitos antigos ou atuais) que ajuda a entender a geopolítica e como ela chega ao dia a dia no Brasil.
+Prefira assuntos de fundo e duradouros (ex.: como funciona a OTAN, por que o petróleo pesa tanto na economia, a história do Oriente Médio, o que é o FMI). NÃO transforme a notícia do dia ou um fato da última semana no tema: ligar o tema às manchetes é opcional e serve só para a seção "E hoje?".
 
 Temas já feitos (não repita nem faça um muito parecido):
 ${anteriores.length ? anteriores.map((t) => `- ${t}`).join('\n') : '- (nenhum ainda)'}
@@ -135,7 +136,7 @@ Responda neste formato JSON (todos os campos obrigatórios):
  "paraPensar": "<uma pergunta para o leitor refletir>",
  "fontesUsadas": [<índices dos textos realmente usados>]
 }
-Linha do tempo: 3 a 7 itens, só com datas que estão nos textos. Cadeia: 3 a 5 passos. Atores: 2 a 5.`;
+Linha do tempo: 3 a 7 itens, só com datas que estão nos textos, focando na história do assunto (o que é recente vai em "eHoje"). Cadeia: 3 a 5 passos. Atores: 2 a 5.`;
 
   const { resposta, provedor, modelo } = await perguntarIA({
     sistema: REGRAS,

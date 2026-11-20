@@ -77,7 +77,7 @@ ${linhas.join('\n')}
 
 Tarefa:
 1. Escolha o ÚNICO acontecimento geopolítico mais importante do dia. Compare: importância estratégica, quantidade e peso dos países envolvidos, consequências militares, diplomáticas e econômicas, impacto regional e internacional, potencial de mudar a ordem mundial, consequências imediatas e futuras. Não privilegie guerras automaticamente: um acordo histórico pode valer mais que um confronto isolado. Ignore esportes, celebridades, crimes comuns e curiosidades.
-2. Escolha mais 5 acontecimentos que também importam hoje, de preferência de regiões e temas diferentes do destaque.
+2. Escolha mais 5 acontecimentos que também importam hoje, de preferência de regiões e temas diferentes do destaque. Eles precisam ser acontecimentos DIFERENTES do destaque e diferentes entre si: não repita o mesmo encontro, guerra ou negociação visto de outro ângulo.
 
 Responda neste formato JSON:
 {"destaque": {"indice": <número>, "tituloPt": "<título curto em português>", "criterio": "<1 frase com o principal motivo da escolha, sem citar quantidade de fontes>"},
@@ -134,7 +134,7 @@ Responda neste formato JSON (todos os campos são obrigatórios):
  "oQueNaoSabemos": "<o que ainda não está claro>",
  "oQueAcompanhar": ["<o que observar nos próximos dias>"]
 }
-A "cadeia" deve ter de 3 a 6 passos, do fato até o Brasil/você. Em "afirmacoes", coloque de 4 a 8 itens.`;
+A "cadeia" deve ter de 3 a 6 passos, do fato até o Brasil/você. A cadeia, "chegaEmVoce" e "emUmaFrase" precisam ser coerentes entre si. Efeito que as matérias não confirmam (ex.: alta de preço) deve ser descrito como risco potencial, com "pode", nunca como fato. Em "afirmacoes", coloque de 4 a 8 itens.`;
 
   const { resposta, provedor, modelo } = await perguntarIA({
     sistema: REGRAS,
