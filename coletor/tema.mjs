@@ -143,8 +143,8 @@ ${manchetes.map((m, i) => `[${i}] ${m}`).join('\n')}
 Responda neste formato JSON:
 {"titulo": "<nome curto do tema>",
  "pergunta": "<a grande pergunta que a aula responde>",
- "buscas": [<5 ou 6 itens {"idioma": "pt" ou "en", "termo": "<título provável de um artigo da Wikipedia>"}: o artigo principal em português e em inglês e artigos sobre a história, o funcionamento e os principais atores do tema>],
- "manchetesLigadas": [<índices das manchetes ligadas ao tema, ou lista vazia>]}`;
+ "buscas": [<5 ou 6 itens {"idioma": "pt" ou "en", "termo": "<título provável de um artigo da Wikipedia>"}: o artigo principal em português e em inglês, artigos sobre a história, o funcionamento e os principais atores do tema e, se existir, um artigo sobre a relação do Brasil com o tema (ex.: "Brasil e o FMI", "Relações entre Brasil e China")>],
+ "manchetesLigadas": [<índices APENAS das manchetes que tratam diretamente do tema; na dúvida, deixe a lista vazia>]}`;
 
   return perguntarIA({
     sistema: REGRAS,
@@ -221,7 +221,7 @@ ${material(artigos, PALAVRAS.historia)}
 Conte como chegamos até aqui. JSON:
 {"historia": "<4 a 6 parágrafos separados por \\n\\n, em ordem cronológica, como capítulos de uma história>",
  "linhaDoTempo": [{"quando": "<ano ou data que está nos textos>", "oQue": "<o que aconteceu>", "fonte": <índice [n] do texto>}]}
-Linha do tempo: 6 a 12 marcos, só com datas que aparecem nos textos.`, 4000, (r) => {
+Linha do tempo: 6 a 12 marcos, só com datas que aparecem nos textos, escritas em português (ex.: "julho de 1944", "27 de dezembro de 1945").`, 4000, (r) => {
     if (!r.historia) throw new Error('sem história');
     r.linhaDoTempo = (r.linhaDoTempo || []).filter((l) => l.quando && l.oQue).map((l) => ({ ...l, fonte: fonteValida(l.fonte) ? l.fonte : null }));
   }));
@@ -235,7 +235,7 @@ ${material(artigos, PALAVRAS.funcionamento)}
 Explique como o tema funciona por dentro. JSON:
 {"comoFunciona": "<3 a 5 parágrafos separados por \\n\\n: regras, quem decide, quem paga, quem manda, como as peças se encaixam>",
  "numeros": [{"valor": "<número exatamente como nos textos, com unidade>", "significado": "<o que ele mostra>", "fonte": <índice [n]>}]}
-Números: 3 a 6, só os que aparecem nos textos.`, 3500, (r) => {
+Números: 3 a 6, só os que aparecem nos textos. Têm de ser QUANTIDADES que ajudam a entender o tema (valores em dinheiro, porcentagens, número de membros, população, produção...), nunca um ano sozinho.`, 3500, (r) => {
     if (!r.comoFunciona) throw new Error('sem funcionamento');
     r.numeros = (r.numeros || []).filter((n) => n.valor && n.significado && fonteValida(n.fonte)).slice(0, 6);
   }));
@@ -285,7 +285,8 @@ Cadeia: 3 a 5 passos. Teste: 3 perguntas, cuja resposta esteja no texto da aula.
   const nomeFonte = (i) => (fonteValida(i) ? fontes[i].fonte : '');
   aula.linhaDoTempo = (aula.linhaDoTempo || []).map((l) => ({ ...l, fonte: nomeFonte(l.fonte) }));
   aula.numeros = (aula.numeros || []).map((n) => ({ ...n, fonte: nomeFonte(n.fonte), link: fonteValida(n.fonte) ? fontes[n.fonte].link : '' }));
-  aula.fontes = fontes;
+  // Se a aula não usou as notícias (sem "E hoje?"), elas não entram na lista de fontes.
+  aula.fontes = aula.eHoje ? fontes : fontes.slice(0, artigos.length);
   aula.imagem = (artigos.find((x) => x.imagem) || {}).imagem || null;
   return { aula, ia };
 }
