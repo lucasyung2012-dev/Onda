@@ -133,6 +133,8 @@ function desenhar({ animar = true } = {}) {
   const rota = rotaAtual();
   const aba = abaDaTela(rota.tela);
   document.querySelectorAll('.abas a').forEach((a) => a.setAttribute('aria-current', a.dataset.aba === aba ? 'page' : 'false'));
+  // Abriu Temas ou Meu Onda? Busca no Dropbox o que mudou (ex.: o robô tirou um tema da fila).
+  if (['temas', 'meu'].includes(rota.tela) && dropbox.conectado()) meus.sincronizar();
 
   const trocar = () => {
     conteudo.innerHTML = htmlDaRota(rota);
