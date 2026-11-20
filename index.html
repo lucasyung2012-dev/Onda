@@ -30,23 +30,30 @@
 
   <link rel="stylesheet" href="css/estilo.css">
 
-  <!-- Aplica o tema salvo ANTES de desenhar a página (evita piscar). -->
+  <!-- Aplica as configurações salvas ANTES de desenhar a página (evita piscar). -->
   <script>
     try {
-      const salvo = localStorage.getItem('onda-tema');
+      const c = JSON.parse(localStorage.getItem('onda-config') || '{}');
+      const antigo = localStorage.getItem('onda-tema'); // escolha da versão anterior do app
+      const aparencia = c.aparencia || antigo || 'auto';
       const prefereClaro = matchMedia('(prefers-color-scheme: light)').matches;
-      document.documentElement.dataset.tema = salvo || (prefereClaro ? 'claro' : 'escuro');
-    } catch (e) { /* sem armazenamento: fica no escuro */ }
+      const raiz = document.documentElement;
+      raiz.dataset.tema = aparencia === 'auto' ? (prefereClaro ? 'claro' : 'escuro') : aparencia;
+      raiz.dataset.letra = c.letra || 'm';
+      raiz.dataset.contraste = c.contraste || 'normal';
+      raiz.dataset.movimento = c.movimento || 'normal';
+    } catch (e) { /* sem armazenamento: fica no padrão */ }
   </script>
 </head>
 <body>
   <header class="topo">
     <a class="marca" href="#hoje" aria-label="Onda — ir para Hoje">
       <img src="assets/logo/onda-mini.svg" alt="">
-      <span><strong>Onda</strong><small>do mundo até você</small></span>
+      <span><strong>Onda</strong><small data-t="do mundo até você">do mundo até você</small></span>
     </a>
     <div class="topo-acoes">
       <button id="botao-tema" class="botao-icone" type="button" aria-label="Alternar modo noite e dia"></button>
+      <a id="botao-config" class="botao-icone" href="#config" aria-label="Configurações"></a>
     </div>
   </header>
 
@@ -68,10 +75,10 @@
 
   <!-- Abas: no rodapé do celular, na lateral do iPad -->
   <nav class="abas" aria-label="Seções">
-    <a href="#hoje" data-aba="hoje"><span class="icone i-radar" aria-hidden="true"></span>Hoje</a>
-    <a href="#temas" data-aba="temas"><span class="icone i-temas" aria-hidden="true"></span>Temas</a>
-    <a href="#explorar" data-aba="explorar"><span class="icone i-explorar" aria-hidden="true"></span>Explorar</a>
-    <a href="#meu" data-aba="meu"><span class="icone i-pessoa" aria-hidden="true"></span>Meu Onda</a>
+    <a href="#hoje" data-aba="hoje"><span class="icone i-radar" aria-hidden="true"></span><span data-t="Hoje">Hoje</span></a>
+    <a href="#temas" data-aba="temas"><span class="icone i-temas" aria-hidden="true"></span><span data-t="Temas">Temas</span></a>
+    <a href="#explorar" data-aba="explorar"><span class="icone i-explorar" aria-hidden="true"></span><span data-t="Explorar">Explorar</span></a>
+    <a href="#meu" data-aba="meu"><span class="icone i-pessoa" aria-hidden="true"></span><span data-t="Meu Onda">Meu Onda</span></a>
   </nav>
 
   <script type="module" src="js/app.js"></script>

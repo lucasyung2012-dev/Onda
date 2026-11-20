@@ -12,6 +12,8 @@ import * as telas from './telas.js';
 import * as meus from './meus.js';
 import * as dropbox from './dropbox.js';
 import { gerarPrompt } from './prompt.js';
+import * as config from './config.js';
+import { t, emIngles, REGIOES_EN, TEMAS_EN } from './textos.js';
 
 // ---------- Estado: o que está acontecendo agora ----------
 const estado = {
@@ -101,6 +103,7 @@ function htmlDaRota({ tela, partes }) {
       return carregarDepois('temas', partes[1], (t) => telas.telaTema(t, anteriores));
     }
     case 'meu': return htmlMeu();
+    case 'config': return telas.telaConfig(config.ler());
     case 'analise-minha': return telas.telaMinhaAnalise(meus.pegar(partes[1]), dados);
     case 'explorar': {
       if (partes.length >= 3) {
@@ -135,7 +138,7 @@ function desenhar({ animar = true } = {}) {
     window.scrollTo(0, 0);
   };
   // "View Transitions": o navegador anima a troca entre a tela velha e a nova.
-  if (animar && document.startViewTransition && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if (animar && document.startViewTransition && !config.menosMovimento()) {
     const transicao = document.startViewTransition(trocar);
     transicao.ready.catch(() => {}); // se a animação for pulada (app em segundo plano), tudo bem
   } else {
@@ -377,11 +380,16 @@ document.addEventListener('input', (e) => {
 // ---------- Toques e cliques ----------
 
 document.addEventListener('click', (e) => {
-  const alvo = e.target.closest('[data-fato], [data-gaveta], [data-modo], [data-sub], [data-mais], [data-voltar], [data-fechar-folha], [data-recarregar], [data-acompanhar], [data-dropbox], [data-copiar-prompt], [data-mes], [data-dia], [data-resposta], [data-pular], #veu');
+  const alvo = e.target.closest('[data-fato], [data-gaveta], [data-modo], [data-sub], [data-mais], [data-voltar], [data-fechar-folha], [data-recarregar], [data-acompanhar], [data-dropbox], [data-copiar-prompt], [data-mes], [data-dia], [data-resposta], [data-pular], [data-config], #veu');
   if (!alvo) return;
   const idEditor = alvo.closest('.editor')?.dataset.item;
 
-  if (alvo.dataset.pular) {
+  if (alvo.dataset.config) {
+    // Configurações: grava, aplica e redesenha a tela
+    config.salvar({ [alvo.dataset.config]: alvo.dataset.valor });
+    if (alvo.dataset.config === 'idioma') { aplicarIdiomaNosDados(); traduzirFixos(); }
+    desenhar({ animar: false });
+  } else if (alvo.dataset.pular) {
     // Índice da aula: rola até a parte, sem mudar de tela
     e.preventDefault();
     document.getElementById(alvo.dataset.pular)?.scrollIntoView({ behavior: 'smooth' });
@@ -430,16 +438,31 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// Modo noite / dia (a escolha fica salva neste aparelho)
+// Atalho de noite / dia no topo (grava a escolha nas configurações)
 document.getElementById('botao-tema').addEventListener('click', () => {
   const novo = document.documentElement.dataset.tema === 'escuro' ? 'claro' : 'escuro';
-  const aplicar = () => {
-    document.documentElement.dataset.tema = novo;
-    document.querySelector('meta[name="theme-color"]').content = novo === 'escuro' ? '#051526' : '#F2F6F8';
-  };
-  if (document.startViewTransition) document.startViewTransition(aplicar); else aplicar();
-  try { localStorage.setItem('onda-tema', novo); } catch (err) { /* sem armazenamento */ }
+  const aplicar = () => config.salvar({ aparencia: novo });
+  if (document.startViewTransition && !config.menosMovimento()) document.startViewTransition(aplicar).ready.catch(() => {});
+  else aplicar();
+  if (rotaAtual().tela === 'config') desenhar({ animar: false });
 });
+
+// ---------- Idioma ----------
+
+/** Troca os textos fixos da página (abas, frase do topo) pelo idioma escolhido. */
+function traduzirFixos() {
+  document.querySelectorAll('[data-t]').forEach((el) => { el.textContent = t(el.dataset.t); });
+  document.getElementById('botao-config')?.setAttribute('aria-label', t('Configurações'));
+}
+
+/** Nomes de regiões e assuntos no idioma escolhido. */
+function aplicarIdiomaNosDados() {
+  const d = estado.dados;
+  if (!d) return;
+  d.nomesPt ||= { regioes: d.nomesRegioes, temas: d.nomesTemas };
+  d.nomesRegioes = emIngles() ? REGIOES_EN : d.nomesPt.regioes;
+  d.nomesTemas = emIngles() ? TEMAS_EN : d.nomesPt.temas;
+}
 
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') fecharFolha(); });
 
@@ -454,6 +477,8 @@ window.addEventListener('popstate', () => {
 // ---------- Início ----------
 
 async function iniciar() {
+  config.aplicar();
+  traduzirFixos();
   // Voltando do Dropbox com o código de autorização? Termina a conexão.
   let acabouDeConectar = false;
   try { acabouDeConectar = await dropbox.concluirConexao(); } catch (erro) { setTimeout(() => aviso(erro.message), 500); }
@@ -461,6 +486,7 @@ async function iniciar() {
 
   try {
     await carregar();
+    aplicarIdiomaNosDados();
     desenhar({ animar: false });
   } catch (erro) {
     conteudo.innerHTML = telas.telaErro(`Sem conexão e sem cópia salva ainda. (${erro.message})`);

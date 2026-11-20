@@ -12,7 +12,7 @@
 // aparelhos baixarem a versão nova.
 // =============================================================
 
-const VERSAO = 'onda-v9';
+const VERSAO = 'onda-v10';
 
 const ARQUIVOS_DO_APP = [
   './',
@@ -24,6 +24,8 @@ const ARQUIVOS_DO_APP = [
   'js/meus.js',
   'js/dropbox.js',
   'js/prompt.js',
+  'js/config.js',
+  'js/textos.js',
   'manifest.webmanifest',
   'assets/logo/onda.svg',
   'assets/logo/onda-mini.svg',

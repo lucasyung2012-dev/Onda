@@ -6,19 +6,23 @@
 // =============================================================
 
 import { esc, tempoRelativo, dataHora, hora, dataPorExtenso, dataCurta, numero, corRegiao, semAcento } from './util.js';
+import { t, emIngles } from './textos.js';
 
 // ---------- Nomes bonitos ----------
 
-const CAMADAS = {
+// Os nomes passam pelo t() na hora de mostrar (para o inglês funcionar).
+const traduzido = (obj) => new Proxy(obj, { get: (alvo, chave) => (typeof alvo[chave] === 'string' ? t(alvo[chave]) : alvo[chave]) });
+
+const CAMADAS = traduzido({
   economia: 'Economia', precos: 'Preços', energia: 'Energia', politica: 'Política', seguranca: 'Segurança',
   tecnologia: 'Tecnologia', midia: 'Mídia', sociedade: 'Sociedade', brasil: 'Brasil',
-};
-const IMPACTO = {
+});
+const IMPACTO = traduzido({
   direto: 'Impacto direto', indireto: 'Impacto indireto', risco: 'Risco potencial', nenhum: 'Sem impacto imediato',
-};
-const AFIRMACAO = {
+});
+const AFIRMACAO = traduzido({
   fato: 'Fato confirmado', declaracao: 'Declaração oficial', alegacao: 'Alegação', nao_confirmado: 'Não confirmado', analise: 'Análise',
-};
+});
 // Cor de cada tema na aba Explorar
 const COR_TEMA = {
   conflitos: '#C2554F', diplomacia: '#4F86C6', economia: '#2E9E5B', energia: '#D98B3A', politica: '#8A7FD1',
@@ -78,8 +82,8 @@ function etiquetaTema(tema, dados, extra = '') {
 /** Cabeçalho comum das telas */
 function cabecalho(rotulo, titulo, subtitulo = '', classeRotulo = '') {
   return `
-    <p class="rotulo ${classeRotulo}">${rotulo}</p>
-    <h1 class="titulo-tela">${titulo}</h1>
+    <p class="rotulo ${classeRotulo}">${t(rotulo)}</p>
+    <h1 class="titulo-tela">${t(titulo)}</h1>
     ${subtitulo ? `<p class="subtitulo">${subtitulo}</p>` : ''}`;
 }
 
@@ -102,7 +106,7 @@ function itemFato(fato, dados, i) {
 }
 
 export function listaDeFatos(fatos, dados, limite) {
-  if (!fatos.length) return '<p class="vazio">Nada por aqui.</p>';
+  if (!fatos.length) return '<p class="vazio">' + t('Nada por aqui.') + '</p>';
   const resto = fatos.length - limite;
   return `
     <ul class="lista cascata">${fatos.slice(0, limite).map((f, i) => itemFato(f, dados, i)).join('')}</ul>
@@ -118,16 +122,16 @@ export function telaHoje(analise, dados) {
   const temAnalise = analise && analise.status === 'ok' && analise.destaque;
   const atalhos = `
     <div class="atalhos cascata">
-      <a class="atalho" href="#explorar" style="--i:1"><strong>${numero(dados.fatos.length)}</strong><span>fatos para explorar por região, assunto ou fonte</span></a>
-      <a class="atalho tema" href="#temas" style="--i:2"><span>Tema do dia</span><strong style="font-size:17px">Entender o mundo</strong></a>
+      <a class="atalho" href="#explorar" style="--i:1"><strong>${numero(dados.fatos.length)}</strong><span>${t('fatos para explorar por região, assunto ou fonte')}</span></a>
+      <a class="atalho tema" href="#temas" style="--i:2"><span>${t('Tema do dia')}</span><strong style="font-size:17px">${t('Entender o mundo')}</strong></a>
     </div>
-    <a class="botao largo" href="#edicoes" style="margin-top:10px">Edições anteriores <span class="icone i-seta" aria-hidden="true"></span></a>`;
+    <a class="botao largo" href="#edicoes" style="margin-top:10px">${t('Edições anteriores')} <span class="icone i-seta" aria-hidden="true"></span></a>`;
 
   if (!temAnalise) return `<div class="tela">${topo}${semAnalise(analise, dados)}<div class="secao">${atalhos}</div></div>`;
 
   const d = analise.destaque;
   const deOutroDia = analise.dataReferencia !== dados.dataReferencia;
-  const rotuloCapa = deOutroDia ? `Destaque de ${dataCurta(analise.dataReferencia)}` : 'Destaque do dia';
+  const rotuloCapa = deOutroDia ? `${t('Destaque de')} ${dataCurta(analise.dataReferencia)}` : t('Destaque do dia');
   const regiao = d.regioes[0];
 
   return `
@@ -145,14 +149,14 @@ export function telaHoje(analise, dados) {
           </a>
           ${notas(d.notas)}
           <div class="uma-frase">
-            <p class="rotulo ouro">Como chega em você</p>
+            <p class="rotulo ouro">${t('Como chega em você')}</p>
             <p>${esc(d.emUmaFrase)}</p>
           </div>
-          <a class="botao principal largo" href="#analise" style="margin-top:14px">Ler a análise completa <span class="icone i-seta" aria-hidden="true"></span></a>
+          <a class="botao principal largo" href="#analise" style="margin-top:14px">${t('Ler a análise completa')} <span class="icone i-seta" aria-hidden="true"></span></a>
           <p class="aviso-ia"><span class="icone i-ia" aria-hidden="true"></span>${analise.versao > 1 ? `Versão ${analise.versao} · refeita às ${hora(analise.geradoEm)}` : `Análise feita por IA às ${hora(analise.geradoEm)}`} a partir de ${d.fontesUsadas.length} matérias. Confira nas fontes.</p>
         </div>
         <div class="secao">
-          <div class="secao-cabeca"><h2>Também importa hoje</h2></div>
+          <div class="secao-cabeca"><h2>${t('Também importa hoje')}</h2></div>
           <div class="importa cascata">
             ${analise.tambemImporta.map((t, i) => cartaoImporta(t, i + 2, dados)).join('')}
           </div>
@@ -165,7 +169,7 @@ export function telaHoje(analise, dados) {
 function notas(n) {
   const caixa = (chave, rotulo, classe = '') => `
     <div class="nota ${classe}">
-      <strong>${n[chave].nota}</strong><span>${rotulo}</span>
+      <strong>${n[chave].nota}</strong><span>${t(rotulo)}</span>
       <div class="barra"><i style="--n:${n[chave].nota}"></i></div>
     </div>`;
   return `<div class="notas">${caixa('geral', 'Importância')}${caixa('mundo', 'No mundo')}${caixa('voce', 'Em você', 'voce')}</div>`;
@@ -191,12 +195,12 @@ function semAnalise(analise, dados) {
   const confirmados = dados.fatos.filter((f) => f.fontes >= 2 && f.temas[0] !== 'outros').slice(0, 5);
   return `
     <div class="cartao sem-analise" style="margin-top:18px">
-      <p class="rotulo ouro">Destaque do dia</p>
+      <p class="rotulo ouro">${t('Destaque do dia')}</p>
       <h2>A análise do dia ainda não chegou</h2>
       <p>${motivo}</p>
     </div>
     <div class="secao">
-      <div class="secao-cabeca"><h2>Fatos confirmados por várias fontes</h2></div>
+      <div class="secao-cabeca"><h2>${t('Fatos confirmados por várias fontes')}</h2></div>
       <p class="subtitulo" style="margin:-6px 0 12px">Sem análise ainda: a ordem abaixo não significa importância.</p>
       <ul class="lista cascata">${confirmados.map((f, i) => itemFato(f, dados, i)).join('')}</ul>
     </div>`;
@@ -211,7 +215,7 @@ export function telaAnalise(analise, dados, opcoes = {}) {
   const paragrafos = (texto) => texto.split(/\n+/).filter(Boolean).map((p) => `<p>${esc(p)}</p>`).join('');
   const bloco = (num, titulo, corpo) => `
     <section class="bloco entrar-lado">
-      <div class="bloco-cabeca"><span class="num">${num}</span><h2>${titulo}</h2></div>
+      <div class="bloco-cabeca"><span class="num">${num}</span><h2>${t(titulo)}</h2></div>
       ${corpo}
     </section>`;
 
@@ -261,13 +265,13 @@ export function telaAnalise(analise, dados, opcoes = {}) {
         <button class="voltar-flutuante" type="button" data-voltar aria-label="Voltar"><span class="icone i-voltar" aria-hidden="true"></span></button>
       </div>
       <div class="analise-cabeca">
-        <p class="rotulo ouro">${analise.dataReferencia === dados.dataReferencia ? 'Destaque do dia' : `Destaque de ${dataCurta(analise.dataReferencia)}`}</p>
+        <p class="rotulo ouro">${analise.dataReferencia === dados.dataReferencia ? t('Destaque do dia') : `${t('Destaque de')} ${dataCurta(analise.dataReferencia)}`}</p>
         <div class="etiquetas">${etiquetaRegiao(regiao, dados)}${etiquetaTema(d.temas[0], dados)}</div>
         <h1>${esc(d.titulo)}</h1>
       </div>
       ${notas(d.notas)}
       ${opcoes.botao || ''}
-      <div class="uma-frase"><p class="rotulo ouro">Em uma frase</p><p>${esc(d.emUmaFrase)}</p></div>
+      <div class="uma-frase"><p class="rotulo ouro">${t('Em uma frase')}</p><p>${esc(d.emUmaFrase)}</p></div>
 
       ${bloco(1, 'O que aconteceu', `<div class="texto-longo">${paragrafos(d.oQueAconteceu)}</div><p class="data-fato">${dataFato}</p>`)}
       ${bloco(2, 'Por que é o destaque do dia', `<div class="texto-longo">${paragrafos(d.porQueImporta)}</div>`)}
@@ -280,7 +284,7 @@ export function telaAnalise(analise, dados, opcoes = {}) {
 
       ${opcoes.comOutros && analise.tambemImporta?.length ? `
         <section class="secao">
-          <div class="secao-cabeca"><h2>Também importou neste dia</h2></div>
+          <div class="secao-cabeca"><h2>${t('Também importou neste dia')}</h2></div>
           <div class="importa cascata">${analise.tambemImporta.map((t, i) => cartaoImporta(t, i + 2, dados)).join('')}</div>
         </section>` : ''}
 
@@ -303,9 +307,9 @@ export function telaExplorar(dados, modo, busca) {
       </label>
       <div class="segmentos" style="--qtd:3;--pos:${pos}" role="group" aria-label="Organizar por">
         <span class="indicador"></span>
-        <button type="button" data-modo="regioes" aria-pressed="${modo === 'regioes'}">Regiões</button>
-        <button type="button" data-modo="assuntos" aria-pressed="${modo === 'assuntos'}">Assuntos</button>
-        <button type="button" data-modo="fontes" aria-pressed="${modo === 'fontes'}">Fontes</button>
+        <button type="button" data-modo="regioes" aria-pressed="${modo === 'regioes'}">${t('Regiões')}</button>
+        <button type="button" data-modo="assuntos" aria-pressed="${modo === 'assuntos'}">${t('Assuntos')}</button>
+        <button type="button" data-modo="fontes" aria-pressed="${modo === 'fontes'}">${t('Fontes')}</button>
       </div>
       <div id="explorar-corpo">${corpoExplorar(dados, modo, busca)}</div>
     </div>`;
@@ -358,7 +362,7 @@ function gradeFontes(dados) {
       <ul class="lista-fontes cascata" style="margin-top:8px">
         ${porPais[pais].sort((a, b) => b.total - a.total).map((c, i) => `
           <li style="--i:${Math.min(i, 8)}"><button class="linha-fonte" type="button" data-gaveta="fonte/${encodeURIComponent(c.nome)}">
-            <span class="nome-fonte">${logoFonte(c.nome, dados.dominios?.[c.nome])}<span>${esc(c.nome)}${c.estatal ? ' <span class="etiqueta estatal" style="margin-left:4px">Estatal</span>' : ''}</span></span>
+            <span class="nome-fonte">${logoFonte(c.nome, dados.dominios?.[c.nome])}<span>${esc(c.nome)}${c.estatal ? ' <span class="etiqueta estatal" style="margin-left:4px">' + t('Estatal') + '</span>' : ''}</span></span>
             <span class="conta">${c.total}</span>
             <span class="icone i-seta" aria-hidden="true"></span>
           </button></li>`).join('')}
@@ -386,7 +390,7 @@ export function telaGaveta(dados, tipo, id, sub, limite) {
   return `
     <div class="tela">
       <div class="cabeca-gaveta" style="--cor:${cor}">
-        <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>Explorar</button>
+        <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>${t('Explorar')}</button>
         <h1 class="titulo-tela">${esc(titulo)}</h1>
         <p class="subtitulo">${numero(fatos.length)} fatos nas últimas 24 h · os mais repercutidos primeiro</p>
       </div>
@@ -417,12 +421,12 @@ export function telaTemas(tema, indice) {
       <p class="rotulo">Tema do dia · ${esc(dataCurta(tema.dataReferencia))}</p>
       <h2>${esc(tema.titulo)}</h2>
       <p style="font-family:var(--fonte-titulo);font-size:17px;color:#fff;margin-bottom:10px">${esc(tema.pergunta)}</p>
-      <div class="passos-tema">${tema.cadeia.slice(0, 4).map((c) => `<span>${esc(curto(c.passo))}</span>`).join('<i>›</i>')}<i>›</i><span>Você</span></div>
+      <div class="passos-tema">${tema.cadeia.slice(0, 4).map((c) => `<span>${esc(curto(c.passo))}</span>`).join('<i>›</i>')}<i>›</i><span>${t('Você')}</span></div>
       <p>${esc(tema.emUmaFrase)}</p>
-      <span class="botao" style="margin-top:14px;background:rgba(255,255,255,.14);border:0;color:#fff">Ler a explicação <span class="icone i-seta" aria-hidden="true"></span></span>
+      <span class="botao" style="margin-top:14px;background:rgba(255,255,255,.14);border:0;color:#fff">${t('Ler a explicação')} <span class="icone i-seta" aria-hidden="true"></span></span>
     </a>` : `
     <div class="tema-do-dia" style="margin-top:18px">
-      <p class="rotulo">Tema do dia</p>
+      <p class="rotulo">${t('Tema do dia')}</p>
       <h2>O primeiro tema chega com a primeira análise</h2>
       <p>Todo dia, às 7h, o Onda escolhe um assunto para entender o mundo — de qualquer época — e explica do começo até você, usando só fontes que dá para conferir (Wikipedia e notícias). Precisa da chave da IA configurada.</p>
     </div>`;
@@ -432,14 +436,14 @@ export function telaTemas(tema, indice) {
       ${cabecalho('Temas', 'Entender o mundo', 'Não é notícia: é a explicação de um assunto, do começo até o seu dia a dia.')}
       ${capa}
       <div class="secao">
-        <div class="secao-cabeca"><h2>Temas anteriores</h2><span>${anteriores.length}</span></div>
+        <div class="secao-cabeca"><h2>${t('Temas anteriores')}</h2><span>${anteriores.length}</span></div>
         ${anteriores.length
           ? `<div class="temas-lista cascata">${anteriores.map((t, i) => `
               <a class="tema-item" href="#tema/${esc(t.data)}" style="--i:${Math.min(i, 10)};text-decoration:none;color:inherit">
                 <span><strong style="display:block;font-weight:600">${esc(t.titulo)}</strong><small style="white-space:normal">${esc(t.pergunta)}</small></span>
                 <small>${esc(dataCurta(t.data))}</small>
               </a>`).join('')}</div>`
-          : '<p class="vazio">Os temas vão se acumulando aqui, um por dia.</p>'}
+          : '<p class="vazio">' + t('Os temas vão se acumulando aqui, um por dia.') + '</p>'}
       </div>
     </div>`;
 }
@@ -456,7 +460,7 @@ export function telaTema(tema, temasAnteriores = []) {
 
   const paragrafos = (texto) => (texto || '').split(/\n+/).filter(Boolean).map((p) => `<p>${esc(p)}</p>`).join('');
   const blocos = [];
-  const bloco = (titulo, corpo) => blocos.push({ titulo, corpo });
+  const bloco = (titulo, corpo) => blocos.push({ titulo: t(titulo), corpo });
 
   if (tema.paraComecar) {
     bloco('Para começar do zero', `<div class="texto-longo">${paragrafos(tema.paraComecar)}</div>
@@ -509,7 +513,7 @@ export function telaTema(tema, temasAnteriores = []) {
 
   return `
     <div class="tela aula">
-      <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>Temas</button>
+      <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>${t('Temas')}</button>
       <div class="tema-do-dia aula-capa" style="margin-top:8px">
         ${tema.imagem ? `<img class="aula-imagem" src="${esc(tema.imagem.url)}" alt="" loading="lazy" referrerpolicy="no-referrer" onload="this.classList.add('carregou')" onerror="this.remove()">` : ''}
         <div class="aula-capa-texto">
@@ -519,13 +523,13 @@ export function telaTema(tema, temasAnteriores = []) {
         </div>
         ${tema.imagem ? `<a class="credito" href="${esc(tema.imagem.link)}" target="_blank" rel="noopener noreferrer">Imagem: ${esc(tema.imagem.credito)}</a>` : ''}
       </div>
-      <div class="uma-frase"><p class="rotulo ouro">A resposta em uma frase</p><p>${esc(tema.emUmaFrase)}</p></div>
-      <nav class="indice-aula" aria-label="Partes da aula"><p class="rotulo">Nesta aula</p>${indice}</nav>
+      <div class="uma-frase"><p class="rotulo ouro">${t('A resposta em uma frase')}</p><p>${esc(tema.emUmaFrase)}</p></div>
+      <nav class="indice-aula" aria-label="Partes da aula"><p class="rotulo">${t('Nesta aula')}</p>${indice}</nav>
       ${blocos.map((b, i) => `
         <section class="bloco" id="bloco-${i}">
           <div class="bloco-cabeca"><span class="num">${i + 1}</span><h2>${b.titulo}</h2></div>${b.corpo}
         </section>`).join('')}
-      ${tema.paraPensar ? `<div class="uma-frase" style="margin-top:24px"><p class="rotulo ouro">Para pensar</p><p>${esc(tema.paraPensar)}</p></div>` : ''}
+      ${tema.paraPensar ? `<div class="uma-frase" style="margin-top:24px"><p class="rotulo ouro">${t('Para pensar')}</p><p>${esc(tema.paraPensar)}</p></div>` : ''}
       <p class="aviso-ia"><span class="icone i-ia" aria-hidden="true"></span>${esc(tema.ia?.aviso || '')} Gerada em ${dataHora(tema.geradoEm)}.</p>
     </div>`;
 }
@@ -536,18 +540,18 @@ function telaTemaV1(tema) {
   const paragrafos = (texto) => texto.split(/\n+/).filter(Boolean).map((p) => `<p>${esc(p)}</p>`).join('');
   const bloco = (num, titulo, corpo) => `
     <section class="bloco entrar-lado">
-      <div class="bloco-cabeca"><span class="num">${num}</span><h2>${titulo}</h2></div>${corpo}
+      <div class="bloco-cabeca"><span class="num">${num}</span><h2>${t(titulo)}</h2></div>${corpo}
     </section>`;
   let n = 0;
   return `
     <div class="tela">
-      <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>Temas</button>
+      <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>${t('Temas')}</button>
       <div class="tema-do-dia" style="margin-top:8px">
         <p class="rotulo">Tema do dia · ${esc(dataCurta(tema.dataReferencia))}</p>
         <h2>${esc(tema.titulo)}</h2>
         <p style="font-family:var(--fonte-titulo);font-size:18px;color:#fff">${esc(tema.pergunta)}</p>
       </div>
-      <div class="uma-frase"><p class="rotulo ouro">A resposta em uma frase</p><p>${esc(tema.emUmaFrase)}</p></div>
+      <div class="uma-frase"><p class="rotulo ouro">${t('A resposta em uma frase')}</p><p>${esc(tema.emUmaFrase)}</p></div>
 
       ${bloco(++n, 'A explicação', `<div class="texto-longo">${paragrafos(tema.explicacao)}</div>`)}
       ${tema.linhaDoTempo.length ? bloco(++n, 'Linha do tempo', `
@@ -562,7 +566,7 @@ function telaTemaV1(tema) {
           <li class="elo voce"><span class="ponto">★</span><div class="caixa"><span class="camada">Você · ${esc(IMPACTO[tema.chegaEmVoce.tipo])}</span><p>${esc(tema.chegaEmVoce.texto)}</p></div></li>
         </ol>`)}
       ${tema.eHoje ? bloco(++n, 'E hoje?', `<div class="texto-longo">${paragrafos(tema.eHoje)}</div>`) : ''}
-      ${tema.paraPensar ? `<div class="uma-frase" style="margin-top:24px"><p class="rotulo ouro">Para pensar</p><p>${esc(tema.paraPensar)}</p></div>` : ''}
+      ${tema.paraPensar ? `<div class="uma-frase" style="margin-top:24px"><p class="rotulo ouro">${t('Para pensar')}</p><p>${esc(tema.paraPensar)}</p></div>` : ''}
       ${bloco(++n, `As fontes (${tema.fontes.length})`, `
         <ul class="fontes-usadas">${tema.fontes.map((f, i) => `
           <li><a class="fonte-usada" href="${esc(f.link)}" target="_blank" rel="noopener noreferrer">
@@ -576,7 +580,9 @@ function telaTemaV1(tema) {
 // Cada dia guarda, automaticamente, a edição do Onda (destaque + 5 fatos)
 // e o que você acompanhou. Toque num dia para ver tudo de forma compacta.
 
-const MESES = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+// Nome do mês e letras da semana no idioma escolhido
+const nomeMes = (ano, m) => new Intl.DateTimeFormat(emIngles() ? "en-US" : "pt-BR", { month: "long", year: "numeric", timeZone: "UTC" }).format(new Date(Date.UTC(ano, m - 1, 15)));
+const SEMANA = () => (emIngles() ? ["S", "M", "T", "W", "T", "F", "S"] : ["D", "S", "T", "Q", "Q", "S", "S"]);
 
 /** Calendário de um mês. mes = "AAAA-MM". */
 function calendario({ mes, dia, diasEdicao, diasMeus, hoje }) {
@@ -594,7 +600,7 @@ function calendario({ mes, dia, diasEdicao, diasMeus, hoje }) {
       data === dia ? 'escolhido' : '',
       data === hoje ? 'hoje' : '',
     ].join(' ');
-    celulas.push(`<button type="button" class="dia ${classes}" data-dia="${data}" ${futuro ? 'disabled' : ''} aria-label="${d} de ${MESES[m - 1]}">${d}</button>`);
+    celulas.push(`<button type="button" class="dia ${classes}" data-dia="${data}" ${futuro ? 'disabled' : ''} aria-label="${d}">${d}</button>`);
   }
   const anterior = m === 1 ? `${ano - 1}-12` : `${ano}-${String(m - 1).padStart(2, '0')}`;
   const proximo = m === 12 ? `${ano + 1}-01` : `${ano}-${String(m + 1).padStart(2, '0')}`;
@@ -602,12 +608,12 @@ function calendario({ mes, dia, diasEdicao, diasMeus, hoje }) {
     <div class="calendario cartao">
       <div class="cal-topo">
         <button type="button" class="botao-icone" data-mes="${anterior}" aria-label="Mês anterior" style="--icone:var(--i-voltar)"></button>
-        <strong>${MESES[m - 1]} de ${ano}</strong>
+        <strong>${nomeMes(ano, m)}</strong>
         <button type="button" class="botao-icone" data-mes="${proximo}" aria-label="Próximo mês" style="--icone:var(--i-seta)" ${proximo > hoje.slice(0, 7) ? 'disabled' : ''}></button>
       </div>
-      <div class="cal-semana"><span>D</span><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span></div>
+      <div class="cal-semana">${SEMANA().map((l) => `<span>${l}</span>`).join("")}</div>
       <div class="cal-dias">${celulas.join('')}</div>
-      <div class="cal-legenda"><span class="l-edicao">edição do Onda</span><span class="l-meus">você acompanhou</span></div>
+      <div class="cal-legenda"><span class="l-edicao">${t('edição do Onda')}</span><span class="l-meus">${t('você acompanhou')}</span></div>
     </div>`;
 }
 
@@ -616,7 +622,7 @@ function diaCompacto({ dia, edicao, carregando, meusDoDia, dados }) {
   const titulo = `<h3 class="dia-titulo">${esc(dataPorExtenso(dia))}</h3>`;
   let corpo;
   if (carregando) corpo = '<p class="vazio" style="padding:16px">Carregando…</p>';
-  else if (!edicao) corpo = '<p class="subtitulo" style="margin:4px 0 8px">Sem edição do Onda neste dia.</p>';
+  else if (!edicao) corpo = '<p class="subtitulo" style="margin:4px 0 8px">' + t('Sem edição do Onda neste dia.') + '</p>';
   else {
     const d = edicao.destaque;
     corpo = `
@@ -633,7 +639,7 @@ function diaCompacto({ dia, edicao, carregando, meusDoDia, dados }) {
         </button>`).join('')}`;
   }
   const meus = meusDoDia.length ? `
-    <p class="rotulo ouro" style="margin:14px 0 6px">Você acompanhou</p>
+    <p class="rotulo ouro" style="margin:14px 0 6px">${t('Você acompanhou')}</p>
     ${meusDoDia.map((it) => `
       <a class="linha-compacta" href="#analise-minha/${esc(it.id)}">
         <span class="n" style="color:var(--ouro)">☆</span>
@@ -651,7 +657,7 @@ export function areaHistorico(params) {
 export function telaEdicoes(historicoHtml) {
   return `
     <div class="tela">
-      <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>Hoje</button>
+      <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>${t('Hoje')}</button>
       ${cabecalho('Histórico', 'Edições anteriores', 'Todo dia o Onda guarda o destaque e os outros 5 fatos. Toque num dia.')}
       <div style="margin-top:16px">${historicoHtml}</div>
     </div>`;
@@ -665,13 +671,13 @@ export function folhaArquivo(item, dados, botao = '') {
     <div class="etiquetas">${item.regioes.slice(0, 2).map((r) => etiquetaRegiao(r, dados)).join('')}${etiquetaTema(item.temas[0], dados)}</div>
     <h2>${esc(item.tituloPt)}</h2>
     ${botao}
-    <div class="uma-frase" style="margin:0 0 12px"><p class="rotulo ouro">Por que importa</p><p style="font-size:16px">${esc(item.porQueImporta)}</p></div>
+    <div class="uma-frase" style="margin:0 0 12px"><p class="rotulo ouro">${t('Por que importa')}</p><p style="font-size:16px">${esc(item.porQueImporta)}</p></div>
     ${item.resumo ? `<p class="resumo">${esc(item.resumo)}</p>` : ''}
-    <div class="secao-cabeca" style="margin-top:22px"><h2 style="font-size:18px">Como cada fonte contou</h2><span>${(item.materias || []).length}</span></div>
+    <div class="secao-cabeca" style="margin-top:22px"><h2 style="font-size:18px">${t('Como cada fonte contou')}</h2><span>${(item.materias || []).length}</span></div>
     <ul class="materias">
       ${(item.materias || []).map((m) => `
         <li class="materia">
-          <div class="fonte"><strong>${esc(m.fonte)}</strong><span class="etiqueta">${esc(m.pais)}</span>${m.estatal ? '<span class="etiqueta estatal">Estatal</span>' : ''}</div>
+          <div class="fonte"><strong>${esc(m.fonte)}</strong><span class="etiqueta">${esc(m.pais)}</span>${m.estatal ? '<span class="etiqueta estatal">' + t('Estatal') + '</span>' : ''}</div>
           <p class="visao">${esc(m.visao || '')}</p>
           <a href="${esc(m.link)}" target="_blank" rel="noopener noreferrer">${esc(m.titulo)}<span class="icone i-externo" aria-hidden="true"></span></a>
           <time datetime="${esc(m.publicadoEm)}">${dataHora(m.publicadoEm)}</time>
@@ -685,12 +691,12 @@ export function folhaArquivo(item, dados, botao = '') {
 export function botaoAcompanhar(id, ativo, contagem, limite, cheio) {
   if (ativo) {
     return `<div class="acompanhar-linha">
-      <button class="botao acompanhar ativo" type="button" data-acompanhar="${esc(id)}"><span class="estrela" aria-hidden="true">★</span>Acompanhando</button>
-      <a class="botao principal" href="#analise-minha/${esc(id)}">Minha análise <span class="icone i-seta" aria-hidden="true"></span></a>
+      <button class="botao acompanhar ativo" type="button" data-acompanhar="${esc(id)}"><span class="estrela" aria-hidden="true">★</span>${t('Acompanhando')}</button>
+      <a class="botao principal" href="#analise-minha/${esc(id)}">${t('Minha análise')} <span class="icone i-seta" aria-hidden="true"></span></a>
     </div>`;
   }
   return `<div class="acompanhar-linha">
-    <button class="botao acompanhar" type="button" data-acompanhar="${esc(id)}" ${cheio ? 'data-cheio' : ''}><span class="estrela" aria-hidden="true">☆</span>Acompanhar</button>
+    <button class="botao acompanhar" type="button" data-acompanhar="${esc(id)}" ${cheio ? 'data-cheio' : ''}><span class="estrela" aria-hidden="true">☆</span>${t('Acompanhar')}</button>
     <span class="subtitulo">${contagem}/${limite} hoje</span>
   </div>`;
 }
@@ -724,13 +730,13 @@ export function telaMeu({ situacao, nomeConta, hoje, anteriores, limite, dados, 
       <h2>Falta ligar o Dropbox</h2><p>Por enquanto, o que você acompanha fica salvo só neste aparelho.</p></div>`;
   } else if (!situacao.conectado) {
     conta = `<div class="cartao meu-cartao"><div class="avatar"><span class="icone i-pessoa" aria-hidden="true"></span></div>
-      <h2>Conecte o seu Dropbox</h2><p>Assim o que você acompanha e as suas análises ficam iguais no celular e no iPad. O Onda só enxerga a pasta dele, dentro de Apps.</p>
-      <button class="botao principal" type="button" data-dropbox="conectar" style="margin-top:6px">Conectar o Dropbox</button></div>`;
+      <h2>${t('Conecte o seu Dropbox')}</h2><p>Assim o que você acompanha e as suas análises ficam iguais no celular e no iPad. O Onda só enxerga a pasta dele, dentro de Apps.</p>
+      <button class="botao principal" type="button" data-dropbox="conectar" style="margin-top:6px">${t('Conectar o Dropbox')}</button></div>`;
   } else {
     const quando = situacao.ultimaSincronizacao ? `sincronizado às ${hora(situacao.ultimaSincronizacao.toISOString())}` : 'sincronizando…';
     conta = `<div class="cartao conta-linha">
-      <div><strong>Dropbox conectado</strong><p class="subtitulo">${esc(nomeConta || '')}${nomeConta ? ' · ' : ''}${situacao.ultimoErro ? `<span style="color:var(--perigo)">sem sincronizar: ${esc(situacao.ultimoErro)}</span>` : quando}</p></div>
-      <button class="botao" type="button" data-dropbox="sincronizar">Sincronizar</button>
+      <div><strong>${t('Dropbox conectado')}</strong><p class="subtitulo">${esc(nomeConta || '')}${nomeConta ? ' · ' : ''}${situacao.ultimoErro ? `<span style="color:var(--perigo)">sem sincronizar: ${esc(situacao.ultimoErro)}</span>` : quando}</p></div>
+      <button class="botao" type="button" data-dropbox="sincronizar">${t('Sincronizar')}</button>
     </div>`;
   }
 
@@ -739,16 +745,16 @@ export function telaMeu({ situacao, nomeConta, hoje, anteriores, limite, dados, 
       ${cabecalho('Meu Onda', 'O que você acompanha', `Até ${limite} notícias por dia. Em cada uma, se quiser, a sua análise fica guardada.`)}
       <div style="margin-top:16px">${conta}</div>
       <div class="secao">
-        <div class="secao-cabeca"><h2>Hoje</h2><span>${hoje.length}/${limite}</span></div>
+        <div class="secao-cabeca"><h2>${t('Hoje')}</h2><span>${hoje.length}/${limite}</span></div>
         ${hoje.length ? `<div class="importa cascata">${hoje.map((it, i) => linhaMeu(it, dados, i)).join('')}</div>`
           : '<p class="vazio">Toque em ☆ Acompanhar numa notícia (no destaque, nos 5 do dia ou no Explorar).</p>'}
       </div>
       <div class="secao">
-        <div class="secao-cabeca"><h2>Dia a dia</h2><span>${anteriores.length} acompanhadas antes</span></div>
+        <div class="secao-cabeca"><h2>${t('Dia a dia')}</h2><span>${anteriores.length} acompanhadas antes</span></div>
         <p class="subtitulo" style="margin:-6px 0 12px">Cada dia guarda sozinho a edição do Onda (destaque + 5) e o que você acompanhou.</p>
         ${historico}
       </div>
-      ${situacao.conectado ? '<button class="botao largo" type="button" data-dropbox="desconectar" style="margin-top:28px">Desconectar este aparelho</button>' : ''}
+      ${situacao.conectado ? '<button class="botao largo" type="button" data-dropbox="desconectar" style="margin-top:28px">' + t('Desconectar este aparelho') + '</button>' : ''}
     </div>`;
 }
 
@@ -757,37 +763,37 @@ export function telaMeu({ situacao, nomeConta, hoje, anteriores, limite, dados, 
 // e uma caixa de texto livre, onde você escreve ou cola a resposta da IA.
 
 export function telaMinhaAnalise(item, dados) {
-  if (!item) return `<div class="tela"><button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>Meu Onda</button><p class="vazio">Essa notícia não está mais na sua lista.</p></div>`;
+  if (!item) return `<div class="tela"><button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>${t('Meu Onda')}</button><p class="vazio">Essa notícia não está mais na sua lista.</p></div>`;
   const m = item.minha || {};
   const regiao = item.regioes?.[0];
   return `
     <div class="tela editor" data-item="${esc(item.id)}">
-      <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>Meu Onda</button>
+      <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>${t('Meu Onda')}</button>
       <div class="etiquetas" style="margin-top:6px">${regiao ? etiquetaRegiao(regiao, dados) : ''}</div>
       <h1 class="titulo-tela" style="font-size:24px;margin-top:8px">${esc(item.titulo)}</h1>
       <p class="subtitulo">Acompanhando desde ${esc(dataCurta(item.data))} · <span id="estado-salvo">${m.texto || m.palpite ? 'salvo' : 'nada escrito ainda'}</span></p>
 
       <section class="bloco">
-        <div class="bloco-cabeca"><span class="num">1</span><h2>Meu palpite</h2></div>
+        <div class="bloco-cabeca"><span class="num">1</span><h2>${t('Meu palpite')}</h2></div>
         <label class="campo"><small>Opcional. Antes de ler qualquer análise: em uma frase, como você acha que isso chega em você?</small>
           <textarea data-campo="palpite" rows="2" placeholder="Ex.: pode encarecer a gasolina daqui a algumas semanas">${esc(m.palpite || '')}</textarea></label>
       </section>
 
       <section class="bloco">
-        <div class="bloco-cabeca"><span class="num">2</span><h2>Peça a análise a uma IA</h2></div>
+        <div class="bloco-cabeca"><span class="num">2</span><h2>${t('Peça a análise a uma IA')}</h2></div>
         <p class="subtitulo" style="margin-bottom:10px">O prompt já leva a notícia, as fontes e tudo que a análise precisa ter: o que aconteceu, quem é afetado, os efeitos, como chega em você e as notas.</p>
-        <button class="botao principal" type="button" data-copiar-prompt>Copiar prompt</button>
+        <button class="botao principal" type="button" data-copiar-prompt>${t('Copiar prompt')}</button>
       </section>
 
       <section class="bloco">
-        <div class="bloco-cabeca"><span class="num">3</span><h2>Minha análise</h2></div>
+        <div class="bloco-cabeca"><span class="num">3</span><h2>${t('Minha análise')}</h2></div>
         <label class="campo"><small>Cole aqui a resposta da IA, escreva do seu jeito, ou os dois. Fica salvo.</small>
           <textarea data-campo="texto" rows="14" placeholder="Cole ou escreva aqui">${esc(m.texto || '')}</textarea></label>
       </section>
 
-      <button class="botao largo" type="button" data-acompanhar="${esc(item.id)}" style="margin-top:20px">Deixar de acompanhar</button>
+      <button class="botao largo" type="button" data-acompanhar="${esc(item.id)}" style="margin-top:20px">${t('Deixar de acompanhar')}</button>
 
-      ${(item.materias || []).length ? `<div class="secao"><div class="secao-cabeca"><h2 style="font-size:18px">Fontes</h2></div>
+      ${(item.materias || []).length ? `<div class="secao"><div class="secao-cabeca"><h2 style="font-size:18px">${t('Fontes')}</h2></div>
         <ul class="fontes-usadas">${item.materias.map((f, i) => `<li><a class="fonte-usada" href="${esc(f.link)}" target="_blank" rel="noopener noreferrer"><span class="idx">${i + 1}</span><div><strong>${esc(f.fonte)}</strong><p>${esc(f.titulo)}</p></div><span class="icone i-externo" aria-hidden="true"></span></a></li>`).join('')}</ul></div>` : ''}
     </div>`;
 }
@@ -800,25 +806,25 @@ export function folhaFato(fato, dados, contexto = {}) {
   const titulo = contexto.tituloPt || fato.titulo;
   return `
     ${imagem({ url: fato.imagem, credito: fato.credito, regiao, nomeRegiao: dados.nomesRegioes[regiao], classe: 'grande' })}
-    <div class="etiquetas">${fato.regioes.slice(0, 2).map((r) => etiquetaRegiao(r, dados)).join('')}${etiquetaTema(fato.temas[0], dados)}${fato.fontes === 1 ? '<span class="etiqueta aviso">Uma fonte só</span>' : ''}</div>
+    <div class="etiquetas">${fato.regioes.slice(0, 2).map((r) => etiquetaRegiao(r, dados)).join('')}${etiquetaTema(fato.temas[0], dados)}${fato.fontes === 1 ? '<span class="etiqueta aviso">' + t('Uma fonte só') + '</span>' : ''}</div>
     <h2>${esc(titulo)}</h2>
     ${contexto.botao || ''}
-    ${contexto.porQueImporta ? `<div class="uma-frase" style="margin:0 0 12px"><p class="rotulo ouro">Por que importa</p><p style="font-size:16px">${esc(contexto.porQueImporta)}</p></div>` : ''}
+    ${contexto.porQueImporta ? `<div class="uma-frase" style="margin:0 0 12px"><p class="rotulo ouro">${t('Por que importa')}</p><p style="font-size:16px">${esc(contexto.porQueImporta)}</p></div>` : ''}
     ${fato.resumo ? `<p class="resumo">${esc(fato.resumo)}</p>` : ''}
     <dl class="datas">
       <dt>1ª publicação</dt><dd>${dataHora(materias[0].publicadoEm)}</dd>
       <dt>Última matéria</dt><dd>${dataHora(fato.maisRecente)}</dd>
       <dt>Consultado em</dt><dd>${dataHora(dados.geradoEm)} (Brasília)</dd>
     </dl>
-    <div class="secao-cabeca" style="margin-top:22px"><h2 style="font-size:18px">Como cada fonte contou</h2><span>${fato.materias.length}</span></div>
+    <div class="secao-cabeca" style="margin-top:22px"><h2 style="font-size:18px">${t('Como cada fonte contou')}</h2><span>${fato.materias.length}</span></div>
     <p class="subtitulo" style="margin:-6px 0 12px">${fato.fontes === 1 ? 'Só uma fonte publicou: ainda sem confirmação independente.' : `${fato.fontes} fontes diferentes, de ${fato.paises} países.`}</p>
     <ul class="materias">
       ${materias.map((m) => `
         <li class="materia">
           <div class="fonte">
             <strong>${esc(m.fonte)}</strong><span class="etiqueta">${esc(m.pais)}</span>
-            ${m.estatal ? '<span class="etiqueta estatal">Estatal</span>' : ''}
-            ${m.tipo === 'analise' ? '<span class="etiqueta">Análise</span>' : ''}
+            ${m.estatal ? '<span class="etiqueta estatal">' + t('Estatal') + '</span>' : ''}
+            ${m.tipo === 'analise' ? '<span class="etiqueta">' + t('Análise') + '</span>' : ''}
             ${m.tipo === 'institucional' ? '<span class="etiqueta">Institucional</span>' : ''}
           </div>
           <p class="visao">${esc(m.visao)}</p>
@@ -830,4 +836,50 @@ export function folhaFato(fato, dados, contexto = {}) {
 
 export function telaErro(mensagem) {
   return `<div class="tela"><div class="cartao sem-analise" style="margin-top:24px"><h2>Não deu para carregar</h2><p>${esc(mensagem)}</p><button class="botao principal" type="button" data-recarregar style="margin-top:8px">Tentar de novo</button></div></div>`;
+}
+
+// ---------- CONFIGURAÇÕES ----------
+
+export function telaConfig(config) {
+  // Grupo de opções lado a lado (como um seletor). Cada botão grava uma escolha.
+  const opcoes = (chave, lista) => `
+    <div class="opcoes" role="group">
+      ${lista.map(([valor, rotulo]) => `<button type="button" data-config="${chave}" data-valor="${valor}" aria-pressed="${config[chave] === valor}">${t(rotulo)}</button>`).join('')}
+    </div>`;
+  const interruptor = (chave, ligado, rotulo, dica) => `
+    <button type="button" class="interruptor" data-config="${chave}" data-valor="${ligado ? 'normal' : (chave === 'contraste' ? 'alto' : 'reduzido')}" aria-pressed="${ligado}">
+      <span><strong>${t(rotulo)}</strong><small>${dica}</small></span><i aria-hidden="true"></i>
+    </button>`;
+  const en = config.idioma === 'en';
+  return `
+    <div class="tela">
+      <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>${t('Hoje')}</button>
+      <h1 class="titulo-tela">${t('Configurações')}</h1>
+
+      <section class="grupo-config">
+        <h2>${t('Aparência')}</h2>
+        ${opcoes('aparencia', [['auto', 'Automático'], ['escuro', 'Noite'], ['claro', 'Dia']])}
+        <p class="subtitulo">${en ? 'Automatic follows your phone (dark at night, light during the day).' : 'Automático segue o celular (escuro à noite, claro de dia).'}</p>
+      </section>
+
+      <section class="grupo-config">
+        <h2>${t('Idioma')}</h2>
+        ${opcoes('idioma', [['pt', 'Português'], ['en', 'English']])}
+        <p class="subtitulo">${en ? 'Menus and buttons switch now. The daily analysis and topics are translated by the robot each morning.' : 'Menus e botões mudam na hora. A análise e o tema do dia são traduzidos pelo robô toda manhã.'}</p>
+      </section>
+
+      <section class="grupo-config">
+        <h2>${t('Acessibilidade')}</h2>
+        <p class="rotulo" style="margin-bottom:8px">${t('Tamanho da letra')}</p>
+        ${opcoes('letra', [['p', 'A−'], ['m', 'A'], ['g', 'A+'], ['gg', 'A++']])}
+        <p class="previa-letra">${en ? 'This is how the text will look.' : 'É assim que o texto vai ficar.'}</p>
+        ${interruptor('contraste', config.contraste === 'alto', 'Mais contraste', en ? 'Brighter text and stronger borders.' : 'Textos mais fortes e bordas mais visíveis.')}
+        ${interruptor('movimento', config.movimento === 'reduzido', 'Menos movimento', en ? 'Turns off animations and transitions.' : 'Desliga animações e transições.')}
+      </section>
+
+      <section class="grupo-config">
+        <h2>${t('Sobre o Onda')}</h2>
+        <p class="subtitulo">${en ? 'Onda — from the world to you. Free, open source:' : 'Onda — do mundo até você. Gratuito e de código aberto:'} <a href="https://github.com/lucasyung2012-dev/Onda" target="_blank" rel="noopener noreferrer">github.com/lucasyung2012-dev/Onda</a></p>
+      </section>
+    </div>`;
 }
