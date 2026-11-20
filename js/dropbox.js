@@ -15,7 +15,7 @@
 // acesso a nada sozinha.
 // =============================================================
 
-export const APP_KEY = ''; // ← preencher com a App key do Dropbox
+export const APP_KEY = 'su4ar3bli5d9fgs'; // App key do app "Onda" no Dropbox (pública)
 
 const CAMINHO = '/onda.json';
 const CHAVE_TOKEN = 'onda-dropbox';
