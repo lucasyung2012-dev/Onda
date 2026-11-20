@@ -2,6 +2,33 @@
   "data": "2026-11-20",
   "noticias": [
     {
+      "id": "cb23a4933324",
+      "titulo": "Germany: Berlin student protest targets rearmament and compulsory service",
+      "resumo": "Thousands of students marched through Berlin, on Friday 20 November 2026, protesting against the country's rapid military rearmament and fears of a return to compulsory military service. Their protest formed part of a wider wave of youth demonstrations across Europe.",
+      "link": "https://www.euronews.com/video/2026/11/20/germany-berlin-student-protest-targets-rearmament-and-compulsory-service",
+      "fonte": "euronews",
+      "fonteNome": "Euronews",
+      "pais": "União Europeia",
+      "visao": "Canal de notícias pan-europeu",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T22:54:22.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-20T22:56:13.187Z"
+    },
+    {
       "id": "b672b7920a8e",
       "titulo": "Will Putin achieve by guile what Stalin achieved with millions of troops?",
       "resumo": "When a trilateral meeting between the leaders of China, the United States, and Russia was announced, commentators with an eye for history were soon asking whether this Shenzhen summit was going to be a second Yalta allowing Vladimir Putin to advance his revisionist agenda, writes…",
@@ -35805,5 +35832,5 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     }
   ],
-  "atualizadoEm": "2026-11-20T22:54:55.629Z"
+  "atualizadoEm": "2026-11-20T22:56:13.187Z"
 }

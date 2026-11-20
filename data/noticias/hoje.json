@@ -1,10 +1,10 @@
 {
-  "geradoEm": "2026-11-20T22:54:55.629Z",
+  "geradoEm": "2026-11-20T22:56:13.187Z",
   "fuso": "America/Sao_Paulo",
   "dataReferencia": "2026-11-20",
   "janelaHoras": 24,
-  "totalNoticias": 1434,
-  "totalFatos": 1147,
+  "totalNoticias": 1435,
+  "totalFatos": 1148,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -2672,6 +2672,24 @@
       "noticias": [
         "3108ce6aeed3",
         "e15866f2229f"
+      ]
+    },
+    {
+      "id": "cb23a4933324",
+      "titulo": "Germany: Berlin student protest targets rearmament and compulsory service",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "politica"
+      ],
+      "maisRecente": "2026-11-20T22:54:22.000Z",
+      "noticias": [
+        "cb23a4933324"
       ]
     },
     {
@@ -21099,6 +21117,33 @@
     }
   ],
   "noticias": [
+    {
+      "id": "cb23a4933324",
+      "titulo": "Germany: Berlin student protest targets rearmament and compulsory service",
+      "resumo": "Thousands of students marched through Berlin, on Friday 20 November 2026, protesting against the country's rapid military rearmament and fears of a return to compulsory military service. Their protest formed part of a wider wave of youth demonstrations across Europe.",
+      "link": "https://www.euronews.com/video/2026/11/20/germany-berlin-student-protest-targets-rearmament-and-compulsory-service",
+      "fonte": "euronews",
+      "fonteNome": "Euronews",
+      "pais": "União Europeia",
+      "visao": "Canal de notícias pan-europeu",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T22:54:22.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-20T22:56:13.187Z"
+    },
     {
       "id": "b672b7920a8e",
       "titulo": "Will Putin achieve by guile what Stalin achieved with millions of troops?",

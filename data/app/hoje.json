@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-20T22:54:55.629Z",
+  "geradoEm": "2026-11-20T22:56:13.187Z",
   "dataReferencia": "2026-11-20",
   "fuso": "America/Sao_Paulo",
-  "totalNoticias": 1434,
+  "totalNoticias": 1435,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -7063,6 +7063,37 @@
           "titulo": "Russian strikes damage two bridges in Kyiv: Mayor",
           "link": "https://www.thehindu.com/news/international/russia-missile-strike-on-kyiv-ukraine/article71723381.ece",
           "publicadoEm": "2026-11-20T06:52:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "cb23a4933324",
+      "titulo": "Germany: Berlin student protest targets rearmament and compulsory service",
+      "resumo": "Thousands of students marched through Berlin, on Friday 20 November 2026, protesting against the country's rapid military rearmament and fears of a return to compulsory military service. Their protest formed part of a wider wave of youth demonstrations across Europe.",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "politica"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T22:54:22.000Z",
+      "materias": [
+        {
+          "fonte": "Euronews",
+          "pais": "União Europeia",
+          "visao": "Canal de notícias pan-europeu",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Germany: Berlin student protest targets rearmament and compulsory service",
+          "link": "https://www.euronews.com/video/2026/11/20/germany-berlin-student-protest-targets-rearmament-and-compulsory-service",
+          "publicadoEm": "2026-11-20T22:54:22.000Z",
           "semData": false
         }
       ]

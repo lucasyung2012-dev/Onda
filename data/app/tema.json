@@ -1,104 +1,273 @@
 {
   "status": "ok",
-  "geradoEm": "2026-11-20T21:53:48.185Z",
+  "geradoEm": "2026-11-20T23:04:39.752Z",
   "dataReferencia": "2026-11-20",
   "ia": {
     "provedor": "Groq",
     "modelo": "openai/gpt-oss-120b",
-    "aviso": "Explicação gerada por IA a partir das fontes listadas. Pode conter erros: confira nas fontes."
+    "aviso": "Aula gerada por IA a partir das fontes listadas. Pode conter erros: confira nas fontes."
   },
-  "titulo": "OTAN e a segurança coletiva",
-  "pergunta": "Como funciona a OTAN e por que ela influencia a segurança global?",
-  "emUmaFrase": "A OTAN é uma aliança militar intergovernamental que garante defesa coletiva dos seus membros, atuando como mecanismo de dissuasão e intervenção que afeta a segurança mundial.",
-  "explicacao": "A Organização do Tratado do Atlântico Norte (OTAN) foi criada em 4 de abril de 1949 a partir do Tratado do Atlântico Norte, estabelecendo um sistema de defesa coletiva: o Artigo 5 obriga os Estados‑membros a considerarem um ataque a qualquer deles como ataque a todos [0].\n\nDurante a Guerra Fria, a OTAN serviu como principal baluarte contra o Pacto de Varsóvia, desenvolvendo uma estrutura militar integrada liderada pelos Estados‑Unidos e, apesar de dúvidas internas, manteve a dissuasão contra uma possível invasão soviética [0].\n\nCom o fim da União Soviética, a aliança passou a intervir em crises regionais, como as missões na Bósnia (1992‑1995) e no Kosovo (1999), além de aplicar a zona de exclusão aérea sobre a Líbia em 2011, demonstrando que a segurança coletiva pode ser usada também para operações fora do território dos membros [0].\n\nNos últimos anos, a OTAN ampliou seu quadro com novos membros europeus – Finlândia (ratificada em 2023) e Suécia (admissão em 2024) – e reforçou seu flanco oriental após a invasão russa da Ucrânia em 2022, enviando apoio militar e aumentando a presença de tropas na região [1][0].\n\nCom mais de 55 % dos gastos militares mundiais concentrados em seus 32 países, a OTAN exerce grande influência nas decisões de defesa, nos mercados de energia e nas políticas de segurança de países fora da aliança, inclusive do Brasil, que acompanha seus desdobramentos nas discussões internacionais.",
+  "formato": 2,
+  "titulo": "Fundo Monetário Internacional (FMI)",
+  "pergunta": "Como o FMI influencia a economia global e o Brasil, e por que seus programas são tão controversos?",
+  "emUmaFrase": "O FMI atua como credor de última instância, orientando políticas macroeconômicas dos países membros, mas suas condições de empréstimo – frequentemente austeras e impostas por um sistema de voto desigual – geram críticas sobre soberania e impacto social.",
+  "paraComecar": "O Fundo Monetário Internacional (FMI) nasceu em 1944, na Conferência de Bretton Woods, com o objetivo de reconstruir o sistema monetário internacional após a Segunda Guerra Mundial. Reunindo hoje 191 países-membros, ele funciona como uma espécie de \"banco central\" global: os países contribuem com recursos por meio de cotas, que também determinam seu peso nas decisões do Fundo.\n\nQuando um país enfrenta dificuldades no balanço de pagamentos – ou seja, não consegue pagar suas contas externas – o FMI pode conceder empréstimos de emergência. Em troca, costuma exigir a adoção de reformas econômicas, chamadas de ajuste estrutural ou ajuste de políticas, que podem incluir cortes de gastos públicos, reformas fiscais e mudanças regulatórias.\n\nEssas exigências são a principal fonte de controvérsia. Críticos apontam que as medidas de austeridade podem aprofundar a recessão, reduzir serviços essenciais e limitar a autonomia dos governos na definição de políticas. Além disso, o poder de voto no FMI é distribuído de forma desigual, favorecendo países ricos, o que alimenta o debate sobre legitimidade e representatividade da instituição.\n\nPara o Brasil, como membro do FMI, o mesmo conjunto de regras se aplica: o país pode recorrer ao Fundo em caso de crise de balanço de pagamentos, mas também está sujeito às mesmas condições que geram críticas em outras nações. Assim, o FMI influencia a economia global ao coordenar políticas macroeconômicas e ao oferecer recursos de última instância, mas sua abordagem tem gerado debates intensos sobre soberania nacional e justiça social.",
+  "glossario": [
+    {
+      "termo": "cota",
+      "definicao": "Participação financeira que cada país aporta ao FMI; determina também seu poder de voto nas decisões da instituição."
+    },
+    {
+      "termo": "balanço de pagamentos",
+      "definicao": "Conjunto de transações econômicas de um país com o resto do mundo, incluindo exportações, importações e fluxos de capital."
+    },
+    {
+      "termo": "ajuste estrutural",
+      "definicao": "Conjunto de reformas econômicas exigidas pelo FMI como condição para conceder empréstimos, geralmente envolvendo cortes de gastos e mudanças fiscais."
+    },
+    {
+      "termo": "austeridade",
+      "definicao": "Política de redução de despesas públicas e aumento de impostos, usada para equilibrar as contas públicas, mas que pode gerar impactos sociais negativos."
+    },
+    {
+      "termo": "voto ponderado",
+      "definicao": "Sistema de votação no FMI em que o peso de cada país depende da sua cota, dando mais influência a economias maiores."
+    },
+    {
+      "termo": "credor de última instância",
+      "definicao": "Instituição que oferece empréstimos quando outras fontes de financiamento se esgotam, como o FMI faz em crises de balanço de pagamentos."
+    }
+  ],
+  "ligacoes": [],
+  "historia": "Capítulo 1 – As origens (1944‑1945)\n\nEm julho de 1944, representantes de 44 países aliados se reuniram no hotel Mount Washington, em Bretton Woods, para discutir a reconstrução do comércio e dos pagamentos internacionais após a Segunda Guerra Mundial. Da conferência nasceram os Acordos de Bretton Woods, que criaram o Fundo Monetário Internacional (FMI) como guardião das taxas de câmbio e fornecedor de recursos a países em dificuldade de balanço de pagamentos. O FMI foi formalmente constituído em 27 de dezembro de 1945, com 29 membros fundadores, cumprindo a missão de promover cooperação monetária e estabilidade financeira global.\n\nCapítulo 2 – Os primeiros anos (1947‑1960)\n\nAs operações do Fundo começaram em 1º de março de 1947, e, poucos meses depois, em 8 de maio, a França recebeu o primeiro empréstimo do FMI, marcando o início da prática de apoio financeiro a nações que enfrentavam desequilíbrios externos. Durante as primeiras décadas, o FMI supervisionou o regime de taxas de câmbio fixas estabelecido em Bretton Woods, ajudando a manter a previsibilidade cambial que facilitava o comércio internacional.\n\nCapítulo 3 – Crise do padrão dólar‑ouro e nova ordem (1971‑1978)\n\nEm 1971, os Estados Unidos suspenderam a conversibilidade do dólar em ouro, episódio conhecido como Choque Nixon, encerrando o sistema de taxas fixas que o FMI havia monitorado. Para adaptar‑se à nova realidade, os Acordos da Jamaica, negociados em 1976 e incorporados ao estatuto do FMI em 1978, institucionalizaram a livre flutuação das moedas, ampliando o foco do Fundo para a gestão de crises de balanço de pagamentos.\n\nCapítulo 4 – Ajustes estruturais e controvérsias (década de 1980‑1990)\n\nA partir da metade da década de 1980, o FMI passou a condicionar seus empréstimos a programas de ajuste estrutural, exigindo reformas econômicas que muitas vezes incluíam austeridade e liberalização de mercados. Exemplos desse modelo aparecem nas intervenções ao longo da década, como o grande acordo de Extended Fund Facility concedido à Índia em 1981 e o empréstimo de 1991 que ajudou o país a superar uma grave crise de balanço de pagamentos.\n\nCapítulo 5 – Governança e desafios atuais (2019‑presente)\n\nEm 1º de outubro de 2019, a economista búlgara Kristalina Georgieva assumiu a direção‑geral do FMI, iniciando um segundo mandato em 1º de outubro de 2024. Sua gestão tem sido marcada por debates sobre a distribuição desigual de poder de voto entre países ricos e emergentes, bem como críticas às condições de austeridade que ainda acompanham muitos dos programas de empréstimo do Fundo.",
   "linhaDoTempo": [
     {
-      "quando": "1949-04-04",
-      "oQue": "Assinatura do Tratado do Atlântico Norte, criação da OTAN",
+      "quando": "July 1944",
+      "oQue": "Conferência de Bretton Woods reúne 44 países e cria o FMI",
       "fonte": "Wikipedia (português)"
     },
     {
-      "quando": "1992-1995",
-      "oQue": "Primeiras intervenções militares da OTAN na Bósnia",
+      "quando": "27 December 1945",
+      "oQue": "FMI passa a existir juridicamente com 29 membros fundadores",
       "fonte": "Wikipedia (português)"
     },
     {
-      "quando": "2001-09-11",
-      "oQue": "Invocação do Artigo 5 após os ataques aos EUA – única vez na história",
+      "quando": "1 March 1947",
+      "oQue": "Início das operações financeiras do FMI",
       "fonte": "Wikipedia (português)"
     },
     {
-      "quando": "2011",
-      "oQue": "Imposição de zona de exclusão aérea sobre a Líbia",
+      "quando": "8 May 1947",
+      "oQue": "França recebe o primeiro empréstimo do FMI",
       "fonte": "Wikipedia (português)"
     },
     {
-      "quando": "2022",
-      "oQue": "Invasão russa da Ucrânia; OTAN reforça flanco oriental",
+      "quando": "1971",
+      "oQue": "Estados Unidos suspendem a conversibilidade do dólar em ouro (Choque Nixon) e termina o regime de taxas fixas",
+      "fonte": "Wikipedia (português)"
+    },
+    {
+      "quando": "1976",
+      "oQue": "Acordos da Jamaica formalizam a mudança para moedas flutuantes",
+      "fonte": "Wikipedia (português)"
+    },
+    {
+      "quando": "1981",
+      "oQue": "Índia obtém grande acordo de Extended Fund Facility com o FMI",
       "fonte": "Wikipedia (inglês)"
     },
     {
-      "quando": "2023-03",
-      "oQue": "Ratificação da adesão da Finlândia à OTAN por todos os 30 países",
+      "quando": "1991",
+      "oQue": "Índia recorre ao FMI para superar crise de balanço de pagamentos",
+      "fonte": "Wikipedia (inglês)"
+    },
+    {
+      "quando": "1 October 2019",
+      "oQue": "Kristalina Georgieva assume a direção‑geral do FMI",
       "fonte": "Wikipedia (português)"
+    },
+    {
+      "quando": "1 October 2024",
+      "oQue": "Início do segundo mandato de Kristalina Georgieva como diretora‑geral",
+      "fonte": "Wikipedia (português)"
+    }
+  ],
+  "comoFunciona": "O Fundo Monetário Internacional (FMI) foi criado na Conferência de Bretton Woods, em julho de 1944, e passou a existir formalmente em 1945, com 29 países‑fundadores, para apoiar a reconstrução do sistema monetário internacional e, depois, lidar com desequilíbrios externos e crises financeiras. Seu objetivo declarado é promover a cooperação monetária internacional, preservar a estabilidade financeira, facilitar o comércio, estimular o emprego, o crescimento sustentável e reduzir a pobreza.\n\nOs recursos do FMI vêm das cotas que cada país‑membro paga; a cota determina tanto a contribuição financeira quanto o peso de voto nas decisões. Assim, os 191 membros contribuem a um fundo comum do qual podem tomar empréstimos quando enfrentam crises de balanço de pagamentos. O poder de voto é desproporcional, favorecendo países ricos, o que gera críticas sobre a governança.\n\nQuando concede crédito, o FMI costuma exigir reformas econômicas conhecidas como ajuste estrutural ou condições de empréstimo. Essas exigências podem incluir medidas de austeridade, redução de gastos públicos e mudanças nas políticas macroeconômicas, o que gera controvérsia por supostamente limitar a soberania dos governos e impactar populações vulneráveis.\n\nA direção‑geral do FMI está a cargo da managing director, atualmente Kristalina Georgieva (mandato iniciado em 1 de outubro 2019 e renovado em 1 de outubro 2024). As decisões são tomadas pelos países‑membros, cujo voto varia conforme a cota, e o Fundo também oferece assistência técnica, treinamento e monitoramento das políticas econômicas dos seus integrantes.",
+  "numeros": [
+    {
+      "valor": "191 países‑membros",
+      "significado": "Número total de países que compõem o FMI",
+      "fonte": "Wikipedia (português)",
+      "link": "https://pt.wikipedia.org/wiki/Fundo_Monet%C3%A1rio_Internacional"
+    },
+    {
+      "valor": "29 membros fundadores",
+      "significado": "Quantidade de países que criaram o FMI em 1945",
+      "fonte": "Wikipedia (português)",
+      "link": "https://pt.wikipedia.org/wiki/Fundo_Monet%C3%A1rio_Internacional"
+    },
+    {
+      "valor": "1971",
+      "significado": "Ano em que colapsou o sistema de taxas de câmbio fixas de Bretton Woods",
+      "fonte": "Wikipedia (português)",
+      "link": "https://pt.wikipedia.org/wiki/Fundo_Monet%C3%A1rio_Internacional"
+    },
+    {
+      "valor": "1944",
+      "significado": "Ano da Conferência de Bretton Woods que deu origem ao FMI",
+      "fonte": "Wikipedia (português)",
+      "link": "https://pt.wikipedia.org/wiki/Fundo_Monet%C3%A1rio_Internacional"
+    },
+    {
+      "valor": "1978",
+      "significado": "Ano em que os Acordos da Jamaica foram incorporados aos estatutos do FMI, formalizando a mudança para moedas flutuantes",
+      "fonte": "Wikipedia (português)",
+      "link": "https://pt.wikipedia.org/wiki/Acordos_de_Bretton_Woods"
     }
   ],
   "atores": [
     {
-      "nome": "OTAN",
-      "papel": "Aliança que coordena a defesa coletiva dos seus membros"
+      "nome": "Fundo Monetário Internacional (FMI)",
+      "quer": "promover cooperação monetária internacional, estabilidade financeira e oferecer empréstimos de última instância",
+      "porque": "é seu mandato institucional, conforme descrito nos textos de origem"
     },
     {
-      "nome": "Estados Unidos",
-      "papel": "Maior contribuinte e líder militar da OTAN"
+      "nome": "Países desenvolvidos",
+      "quer": "manter influência nas decisões do FMI",
+      "porque": "o sistema de cotas determina poder de voto proporcional à contribuição, favorecendo quem aporta mais recursos"
     },
     {
-      "nome": "Rússia",
-      "papel": "Principal rival histórico, cujas ações motivam a expansão e o reforço da OTAN"
+      "nome": "Países em desenvolvimento (ex.: Brasil, Índia, Argentina)",
+      "quer": "acessar recursos financeiros e condições flexíveis para enfrentar crises de balanço de pagamentos",
+      "porque": "necessitam de apoio para evitar colapsos econômicos sem perder soberania plena"
     },
     {
-      "nome": "Finlândia",
-      "papel": "Novo membro que amplia a presença da aliança no norte da Europa"
+      "nome": "Governos nacionais",
+      "quer": "implementar políticas econômicas que atendam às demandas internas de emprego, crescimento e bem‑estar social",
+      "porque": "precisam equilibrar pressões internas e externas ao gerir a economia"
+    },
+    {
+      "nome": "Organizações da sociedade civil (ex.: ODI, UNCTAD)",
+      "quer": "maior equidade nas políticas do FMI e redução de medidas de austeridade",
+      "porque": "as críticas apontam impactos sociais negativos e concentração de poder nas mãos de países ricos"
     }
   ],
+  "debate": [
+    {
+      "visao": "O FMI como estabilizador global",
+      "quemDefende": "FMI e países que valorizam a estabilidade financeira",
+      "argumento": "atua como credor de última instância, evitando colapsos de balanço de pagamentos e facilitando o comércio internacional"
+    },
+    {
+      "visao": "Condicionalidades de austeridade são prejudiciais",
+      "quemDefende": "ODI, UNCTAD e governos de países em desenvolvimento",
+      "argumento": "as exigências de ajuste estrutural podem reduzir produção, emprego e agravar a pobreza, além de limitar a autonomia política"
+    },
+    {
+      "visao": "Governança desigual do FMI",
+      "quemDefende": "Países em desenvolvimento e organizações da sociedade civil",
+      "argumento": "o peso de voto concentrado nos países ricos gera decisões que favorecem seus interesses, criando desequilíbrio entre membros"
+    }
+  ],
+  "mitos": [
+    {
+      "mito": "O FMI só ajuda países ricos",
+      "verdade": "O FMI reúne 191 membros, inclusive nações em desenvolvimento, e concede empréstimos de última instância a quem enfrenta crises de balanço de pagamentos, como a Argentina em 2001"
+    },
+    {
+      "mito": "Todas as políticas do FMI são austeras",
+      "verdade": "Embora haja críticas sobre austeridade, o FMI também oferece assistência técnica, treinamento e pode adaptar programas; nem todas as intervenções são exclusivamente de corte austero"
+    }
+  ],
+  "eHoje": "",
   "cadeia": [
     {
-      "passo": "A OTAN concentra mais da metade dos gastos militares globais",
+      "passo": "O FMI nasce em 1944‑1945 para garantir estabilidade monetária internacional e servir de guardião das taxas de câmbio",
       "camada": "economia"
     },
     {
-      "passo": "Conflitos envolvendo a OTAN (ex.: Ucrânia) alteram preços de energia mundial",
-      "camada": "energia"
-    },
-    {
-      "passo": "Variações nos preços de energia e nas políticas de segurança afetam a inflação e o debate político no Brasil",
+      "passo": "Passa a conceder empréstimos de emergência a países com desequilíbrios de balanço de pagamentos, exigindo ajustes estruturais (cortes de gastos, reformas fiscais)",
       "camada": "politica"
     },
     {
-      "passo": "A presença da OTAN reduz a probabilidade de grandes guerras que poderiam envolver alianças latino‑americanas",
-      "camada": "seguranca"
+      "passo": "O Brasil, como membro, pode recorrer ao FMI em crises, ficando sujeito às mesmas condições de austeridade",
+      "camada": "brasil"
     },
     {
-      "passo": "Cobertura midiática constante sobre decisões da OTAN influencia a opinião pública brasileira sobre defesa e relações exteriores",
-      "camada": "midia"
+      "passo": "As medidas de austeridade podem reduzir gastos públicos, impactando serviços sociais, preços e emprego no país",
+      "camada": "sociedade"
     }
   ],
   "chegaEmVoce": {
     "tipo": "indireto",
-    "texto": "As decisões da OTAN, como o apoio à Ucrânia ou a expansão para novos membros, podem elevar os preços do petróleo e do gás, refletindo na conta de luz e na gasolina que você paga no dia a dia, além de aparecer nos debates políticos sobre a postura do Brasil no cenário internacional."
+    "texto": "Quando o governo brasileiro precisa de recursos do FMI, as exigências de corte de gastos podem chegar ao seu bolso: menos investimentos em saúde ou educação, aumento de impostos ou redução de benefícios, o que altera o cotidiano sem que você veja o Fundo diretamente."
   },
-  "eHoje": "",
-  "paraPensar": "Se a OTAN continuar se expandindo para o leste, como isso pode mudar o equilíbrio de poder e a estabilidade econômica nas regiões que dependem de energia russa?",
+  "paraPensar": "Até que ponto a necessidade de estabilidade macroeconômica justifica a perda de autonomia nas decisões de políticas públicas?",
+  "teste": [
+    {
+      "pergunta": "Em que ano o FMI foi formalmente constituído?",
+      "opcoes": [
+        "1944",
+        "1945",
+        "1947",
+        "1950"
+      ],
+      "correta": 1,
+      "explicacao": "O texto indica que o FMI foi formalmente constituído em 27 de dezembro de 1945."
+    },
+    {
+      "pergunta": "Qual foi o primeiro país a receber um empréstimo do FMI?",
+      "opcoes": [
+        "França",
+        "Brasil",
+        "Estados Unidos",
+        "Reino Unido"
+      ],
+      "correta": 0,
+      "explicacao": "A primeira operação de crédito do FMI ocorreu em 8 de maio de 1947, quando a França recebeu o empréstimo inaugural."
+    },
+    {
+      "pergunta": "Qual evento marcou o fim do regime de taxas de câmbio fixas supervisionado pelo FMI?",
+      "opcoes": [
+        "Crise do petróleo",
+        "Choque Nixon (suspensão do dólar‑ouro)",
+        "Acordos da Jamaica",
+        "Crise da dívida latino‑americana"
+      ],
+      "correta": 1,
+      "explicacao": "Em 1971, os EUA suspenderam a conversibilidade do dólar em ouro (Choque Nixon), encerrando o sistema de taxas fixas que o FMI monitorava."
+    }
+  ],
   "fontes": [
     {
       "fonte": "Wikipedia (português)",
-      "titulo": "Organização do Tratado do Atlântico Norte",
-      "link": "https://pt.wikipedia.org/wiki/Organiza%C3%A7%C3%A3o_do_Tratado_do_Atl%C3%A2ntico_Norte"
+      "titulo": "Fundo Monetário Internacional",
+      "link": "https://pt.wikipedia.org/wiki/Fundo_Monet%C3%A1rio_Internacional"
     },
     {
       "fonte": "Wikipedia (inglês)",
-      "titulo": "NATO",
-      "link": "https://en.wikipedia.org/wiki/NATO"
+      "titulo": "International Monetary Fund",
+      "link": "https://en.wikipedia.org/wiki/International_Monetary_Fund"
+    },
+    {
+      "fonte": "Wikipedia (inglês)",
+      "titulo": "India and the International Monetary Fund",
+      "link": "https://en.wikipedia.org/wiki/India_and_the_International_Monetary_Fund"
+    },
+    {
+      "fonte": "Wikipedia (português)",
+      "titulo": "Acordos de Bretton Woods",
+      "link": "https://pt.wikipedia.org/wiki/Acordos_de_Bretton_Woods"
+    },
+    {
+      "fonte": "Le Monde (inglês)",
+      "titulo": "COP31: Fossil fuels and climate funding take center stage in final stretch of negotiations",
+      "link": "https://www.lemonde.fr/en/environment/article/2026/11/20/cop31-fossil-fuels-and-climate-funding-take-center-stage-in-final-stretch-of-negotiations_6785737_114.html"
     }
-  ]
+  ],
+  "imagem": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/IMF-Seal_ENG_RGB.svg/1280px-IMF-Seal_ENG_RGB.svg.png?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "credito": "Wikimedia Commons, via Wikipedia",
+    "link": "https://pt.wikipedia.org/wiki/File:IMF-Seal_ENG_RGB.svg"
+  }
 }

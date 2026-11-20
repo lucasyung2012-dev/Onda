@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "geradoEm": "2026-11-20T21:51:30.104Z",
+  "geradoEm": "2026-11-20T22:56:34.124Z",
   "dataReferencia": "2026-11-20",
   "fuso": "America/Sao_Paulo",
   "ia": {
@@ -9,186 +9,241 @@
     "aviso": "Análise gerada por IA a partir das matérias listadas. Pode conter erros: confira nas fontes."
   },
   "destaque": {
-    "fatoId": "acf404f6e9c1",
+    "fatoId": "97f1ff305240",
     "regioes": [
       "europa",
+      "america-norte",
       "asia-pacifico",
-      "america-norte"
+      "global"
     ],
     "temas": [
-      "conflitos",
       "diplomacia",
-      "politica"
+      "conflitos",
+      "politica",
+      "energia",
+      "direitos",
+      "economia"
     ],
-    "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cbb7/live/b5de9720-e4ea-11f1-99b6-a35a62fa4264.jpg",
-    "credito": "BBC News",
-    "criterio": "Violação direta do território da OTAN por parte da Rússia, elevando risco de escalada militar e redefinindo a segurança europeia",
-    "titulo": "Míssil russo cai na Polônia durante ataques massivos à Ucrânia",
-    "emUmaFrase": "Um míssil russo atingiu a Polônia, lembrando que conflitos na Europa podem elevar tensões e impactar preços de energia no Brasil.",
-    "oQueAconteceu": "Na tarde de 20 de novembro de 2026, um míssil de cruzeiro russo caiu na região sudeste da Polônia, país membro da OTAN. O incidente ocorreu enquanto Moscou lançava uma campanha de mais de 80 mísseis e 400 drones contra a Ucrânia, que já havia causado dezenas de mortes nas cidades de Kiev e Lviv.\n\nO governo polonês, liderado pelo primeiro‑ministro Donald Tusk, descreveu a queda como uma \"provocação\" e sugeriu que não se tratou de um acidente. A Rússia não comentou o incidente, mas continuou seus ataques intensos contra alvos ucranianos.\n\nA Ucrânia, por sua vez, informou que destruiu um lançador balístico russo e abatou 79 mísseis de cruzeiro durante a madrugada, como resposta aos bombardeios. O clima de tensão aumentou na região, com a OTAN monitorando de perto a situação.",
+    "imagem": "https://meduza.io/image/attachments/images/012/997/222/small/lNbPu_QWgjASQyab-CKhgQ",
+    "credito": "Meduza",
+    "criterio": "Escalada militar que pode ampliar o conflito na Ucrânia, envolver grandes potências e alterar a segurança europeia e os mercados de energia",
+    "titulo": "Rússia intensifica ataques a Kiev após cúpula Trump‑Putin‑Xi",
+    "emUmaFrase": "Os novos bombardeios podem elevar os preços de energia e gerar instabilidade nos mercados que afetam o Brasil.",
+    "oQueAconteceu": "Na madrugada de 19 para 20 de novembro de 2026, forças russas lançaram mais de 400 drones e 110 mísseis contra a Ucrânia, atingindo a capital Kiev. O ataque danificou pontes estratégicas, como a Podilsko‑Voskresenskyi, a Darnytskyi e a Pivdennyi, interrompendo o tráfego entre as margens da cidade.\n\nO bombardeio ocorreu poucas horas depois da cúpula trilateral em Pequim, onde Donald Trump, Vladimir Putin e Xi Jinping se encontraram. Na reunião, os líderes discutiram segurança global e, segundo relatos, a cláusula sobre a Ucrânia foi retirada da declaração conjunta.\n\nA ofensiva russa foi apresentada como resposta ao encontro, embora nenhum dos veículos cite uma justificativa oficial direta. O ataque marca uma escalada significativa no conflito que já dura anos.\n\nAutoridades ucranianas alertam para possíveis novos alvos e para a continuidade das hostilidades, enquanto a comunidade internacional observa a repercussão diplomática da cúpula e das ações militares subsequentes.",
     "dataDoFato": "2026-11-20",
-    "dataDoFatoObs": "O fato foi noticiado no mesmo dia; as matérias indicam que o míssil caiu na tarde de 20 de novembro de 2026.",
-    "porQueImporta": "O incidente demonstra que a guerra entre Rússia e Ucrânia está se expandindo para territórios da OTAN, o que pode desencadear respostas militares coletivas e elevar o risco de um conflito mais amplo. Para o Brasil, a instabilidade na Europa afeta diretamente os mercados de energia e commodities, já que a Rússia é grande fornecedora de gás e petróleo.\n\nAlém disso, a percepção de risco geopolítico pode influenciar as decisões de investidores internacionais, impactando a cotação do dólar e, indiretamente, os preços de produtos importados no Brasil.",
+    "dataDoFatoObs": "O ataque ocorreu durante a madrugada de 19‑20 de novembro; as matérias foram publicadas em 20 de novembro, relatando o ocorrido.",
+    "porQueImporta": "A intensificação dos bombardeios russos eleva o risco de uma nova fase do conflito, afetando a segurança energética da Europa e, por extensão, os mercados globais de petróleo e gás. Como grande importador de energia, o Brasil sente pressão nos preços de combustíveis e eletricidade.\n\nAlém disso, a cúpula Trump‑Putin‑Xi demonstra um realinhamento geopolítico que pode influenciar decisões de sanções e acordos comerciais, impactando indiretamente a economia brasileira e a percepção de estabilidade internacional.",
     "cadeia": [
       {
-        "passo": "Míssil russo atinge território polonês",
+        "passo": "Ataque russo a infraestrutura ucraniana",
         "camada": "seguranca"
       },
       {
-        "passo": "Aumento da tensão entre OTAN e Rússia",
-        "camada": "politica"
-      },
-      {
-        "passo": "Possível elevação dos preços internacionais de energia",
+        "passo": "Interrupção de exportações de energia e grãos da Ucrânia",
         "camada": "energia"
       },
       {
-        "passo": "Impacto nos custos de energia e combustíveis no Brasil",
+        "passo": "Elevação dos preços internacionais de petróleo e gás",
         "camada": "precos"
       },
       {
-        "passo": "Repercussão nos preços ao consumidor e nas contas de energia",
+        "passo": "Aumento do custo de importação de combustíveis no Brasil",
+        "camada": "economia"
+      },
+      {
+        "passo": "Pressão inflacionária sobre consumidores em São Paulo",
         "camada": "sociedade"
       }
     ],
     "chegaEmVoce": {
       "tipo": "indireto",
-      "texto": "A elevação dos preços internacionais de energia pode encarecer a conta de luz e o preço da gasolina em São Paulo, embora não haja impacto direto imediato."
+      "texto": "O aumento nos preços do petróleo pode encarecer a gasolina e a energia elétrica, refletindo na conta de luz e no custo de transporte em São Paulo."
     },
     "notas": {
       "geral": {
-        "nota": 7,
-        "porque": "Evento de grande relevância regional que pode mudar o equilíbrio de segurança na Europa."
+        "nota": 8,
+        "porque": "Escalada militar que pode mudar o equilíbrio regional."
       },
       "mundo": {
         "nota": 7,
-        "porque": "Afeta a relação Rússia‑OTAN e tem repercussões nos mercados globais de energia."
+        "porque": "Afeta mercados de energia e demonstra nova dinâmica entre potências."
       },
       "voce": {
-        "nota": 3,
-        "porque": "Impacto indireto e potencial nos preços de energia e no custo de vida no Brasil."
+        "nota": 2,
+        "porque": "Impacto direto no cotidiano brasileiro ainda é limitado."
       }
     },
     "afirmacoes": [
       {
         "tipo": "fato",
-        "texto": "Um míssil russo caiu no sudeste da Polônia",
+        "texto": "Forças russas lançaram mais de 400 drones e 110 mísseis contra a Ucrânia",
         "fontes": [
-          0,
-          1,
-          2,
-          3,
-          5
-        ]
-      },
-      {
-        "tipo": "declaracao",
-        "texto": "Donald Tusk classificou o incidente como provocação intencional",
-        "fontes": [
-          0,
-          3
-        ]
-      },
-      {
-        "tipo": "alegacao",
-        "texto": "A Rússia lançou mais de 80 mísseis e 400 drones contra a Ucrânia no mesmo dia",
-        "fontes": [
-          2
+          0
         ]
       },
       {
         "tipo": "fato",
-        "texto": "Pelo menos oito civis foram mortos em ataques russos a Kiev",
+        "texto": "Pontes importantes de Kiev foram danificadas e fechadas ao tráfego",
         "fontes": [
-          2,
-          5
+          0
         ]
       },
       {
-        "tipo": "analise",
-        "texto": "A queda do míssil na Polônia pode levar a respostas militares da OTAN",
-        "fontes": [
-          3
-        ]
-      },
-      {
-        "tipo": "analise",
-        "texto": "O episódio pode pressionar os mercados globais de energia, elevando preços",
+        "tipo": "declaracao",
+        "texto": "Donald Trump afirmou que teve \"muito boas\" conversas com Putin sobre a Ucrânia",
         "fontes": [
           1,
-          5
+          3,
+          4
+        ]
+      },
+      {
+        "tipo": "declaracao",
+        "texto": "A cláusula sobre a Ucrânia foi removida da declaração conjunta da cúpula trilateral",
+        "fontes": [
+          9
+        ]
+      },
+      {
+        "tipo": "declaracao",
+        "texto": "Putin declarou que os três líderes compartilham responsabilidade pela segurança global",
+        "fontes": [
+          11
+        ]
+      },
+      {
+        "tipo": "analise",
+        "texto": "O ataque ocorreu poucas horas após a cúpula Trump‑Putin‑Xi",
+        "fontes": [
+          0,
+          6,
+          11
         ]
       }
     ],
-    "oQueNaoSabemos": "Se a Polônia solicitará uma resposta militar da OTAN ou se haverá sanções econômicas adicionais contra a Rússia.",
+    "oQueNaoSabemos": "O número exato de vítimas civis, a extensão dos danos econômicos na Ucrânia e as respostas concretas dos EUA e da UE ao ataque.",
     "oQueAcompanhar": [
-      "Reações oficiais da OTAN e da União Europeia",
-      "Possíveis retaliações militares russas",
-      "Flutuações nos preços internacionais de gás e petróleo",
-      "Impactos nos contratos de energia do Brasil"
+      "Variação dos preços internacionais de petróleo e gás",
+      "Reações de sanções ou medidas diplomáticas da União Europeia e dos EUA",
+      "Possíveis novos desdobramentos da cúpula trilateral",
+      "Desenvolvimentos nas negociações de paz entre Rússia e Ucrânia"
     ],
     "fontesUsadas": [
       {
-        "fonte": "BBC News",
-        "pais": "Reino Unido",
-        "visao": "Emissora pública britânica",
+        "fonte": "Meduza",
+        "pais": "Rússia",
+        "visao": "Site russo independente, no exílio, oposição ao Kremlin",
         "estatal": false,
-        "titulo": "Russian missile hits Poland as Ukraine's allies hold military exercise, says Tusk",
-        "link": "https://www.bbc.co.uk/news/articles/cqx2x9dklxnro?at_medium=RSS&at_campaign=rss",
-        "publicadoEm": "2026-11-20T16:54:29.000Z"
+        "titulo": "Russia launches massive attack on Ukraine a day after Putin’s meeting with Trump and Xi",
+        "link": "https://meduza.io/en/feature/2026/11/21/russia-launches-massive-attack-on-ukraine-a-day-after-putin-s-meeting-with-trump-and-xi",
+        "publicadoEm": "2026-11-20T22:35:07.000Z"
       },
       {
-        "fonte": "France 24",
-        "pais": "França",
-        "visao": "Emissora internacional pública francesa",
+        "fonte": "Al-Monitor",
+        "pais": "EUA",
+        "visao": "Site especializado em Oriente Médio",
         "estatal": false,
-        "titulo": "Russia pummels Ukraine with massive strikes, missile hits Poland",
-        "link": "https://www.france24.com/en/video/20261120-russia-pummels-ukraine-with-massive-strikes-missile-hits-poland",
-        "publicadoEm": "2026-11-20T14:36:48.000Z"
+        "titulo": "Trump says he, Putin had very good talks on Ukraine",
+        "link": "https://www.al-monitor.com/originals/2026/11/trump-says-he-putin-had-very-good-talks-ukraine",
+        "publicadoEm": "2026-11-20T19:46:32.000Z"
+      },
+      {
+        "fonte": "TASS",
+        "pais": "Rússia",
+        "visao": "Agência estatal russa (versão oficial do Kremlin)",
+        "estatal": true,
+        "titulo": "Trump dubs talks with Putin, Xi ‘summit of three’",
+        "link": "https://tass.com/world/2222729",
+        "publicadoEm": "2026-11-20T19:41:51.000Z"
       },
       {
         "fonte": "The Straits Times",
         "pais": "Singapura",
         "visao": "Jornal de referência de Singapura",
         "estatal": false,
-        "titulo": "Russia pounds Ukraine, killing 8, as missile lands in Poland",
-        "link": "https://www.straitstimes.com/world/europe/russia-pounds-ukraine-killing-8-as-missile-lands-in-poland",
-        "publicadoEm": "2026-11-20T13:32:55.000Z"
+        "titulo": "Trump says he, Russia’s Putin had ‘very good’ talks on Ukraine",
+        "link": "https://www.straitstimes.com/world/europe/trump-says-he-putin-had-very-good-talks-on-ukraine",
+        "publicadoEm": "2026-11-20T18:50:46.000Z"
       },
       {
-        "fonte": "Politico Europe",
-        "pais": "Bélgica",
-        "visao": "Bastidores da política da União Europeia",
+        "fonte": "Ukrainska Pravda",
+        "pais": "Ucrânia",
+        "visao": "Site ucraniano de jornalismo independente",
         "estatal": false,
-        "titulo": "Tusk: Russian cruise missile incursion into Poland seems ‘intentional’",
-        "link": "https://www.politico.eu/article/russian-missile-incursion-into-poland-seems-intentional-tusk-says/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-        "publicadoEm": "2026-11-20T12:43:31.000Z"
+        "titulo": "Trump says Putin wants to end Russia's war against Ukraine through diplomacy",
+        "link": "https://www.pravda.com.ua/eng/news/2026/11/20/8063876/",
+        "publicadoEm": "2026-11-20T18:25:00.000Z"
+      },
+      {
+        "fonte": "The Hindu",
+        "pais": "Índia",
+        "visao": "Jornal de referência indiano",
+        "estatal": false,
+        "titulo": "Three to tango: On Trump, Xi, Putin trilateral summit",
+        "link": "https://www.thehindu.com/opinion/editorial/three-to-tango-on-trump-xi-putin-trilateral-summit/article71725845.ece",
+        "publicadoEm": "2026-11-20T18:22:45.000Z"
+      },
+      {
+        "fonte": "Fox News",
+        "pais": "EUA",
+        "visao": "Canal dos EUA, direita conservadora",
+        "estatal": false,
+        "titulo": "Putin launches Ukraine barrage hours after Trump meeting amid alleged Russian missile breach of NATO airspace",
+        "link": "https://www.foxnews.com/world/putin-launches-ukraine-barrage-hours-after-trump-meeting-amid-alleged-russian-missile-breach-nato-airspace",
+        "publicadoEm": "2026-11-20T15:13:39.000Z"
+      },
+      {
+        "fonte": "The Moscow Times",
+        "pais": "Rússia",
+        "visao": "Jornal russo independente, no exílio",
+        "estatal": false,
+        "titulo": "Russian Stocks Fall After No Breakthrough at Putin-Trump-Xi Summit",
+        "link": "https://www.themoscowtimes.com/2026/11/20/russian-stocks-fall-after-no-breakthrough-at-putin-trump-xi-summit-a94334",
+        "publicadoEm": "2026-11-20T14:20:46.000Z"
+      },
+      {
+        "fonte": "The New York Times",
+        "pais": "EUA",
+        "visao": "Jornal de referência dos EUA, centro-esquerda",
+        "estatal": false,
+        "titulo": "Putin Exits Summit With Symbolic Win, Saying He and Trump Share ‘Values’",
+        "link": "https://www.nytimes.com/2026/11/20/world/europe/putin-trump-xi-summit-apec.html",
+        "publicadoEm": "2026-11-20T13:56:56.000Z"
       },
       {
         "fonte": "Kyiv Post",
         "pais": "Ucrânia",
         "visao": "Jornal ucraniano",
         "estatal": false,
-        "titulo": "Ukraine Hits Back: 3 Russian Missile Launchers Targeted Overnight",
-        "link": "https://www.kyivpost.com/post/90708",
-        "publicadoEm": "2026-11-20T11:23:00.000Z"
+        "titulo": "US Asked Trump-Putin-Xi Summit to Drop Ukraine Clause From ‘Peace Declaration,’ Stubb Says",
+        "link": "https://www.kyivpost.com/post/90722",
+        "publicadoEm": "2026-11-20T13:18:12.000Z"
       },
       {
-        "fonte": "Le Monde (inglês)",
-        "pais": "França",
-        "visao": "Jornal de referência francês",
+        "fonte": "Asharq Al-Awsat",
+        "pais": "Arábia Saudita",
+        "visao": "Jornal pan-árabe de dono saudita",
         "estatal": false,
-        "titulo": "Massive Russian strikes kill at least eight in Ukraine, missile lands in Poland",
-        "link": "https://www.lemonde.fr/en/international/article/2026/11/20/russian-strikes-on-kyiv-kill-at-least-six_6785275_4.html",
-        "publicadoEm": "2026-11-20T10:12:47.000Z"
+        "titulo": "Xi-Putin-Trump Summit: What Comes Next?",
+        "link": "https://english.aawsat.com/node/5343528",
+        "publicadoEm": "2026-11-20T09:31:41.000Z"
+      },
+      {
+        "fonte": "CNA",
+        "pais": "Singapura",
+        "visao": "Canal de Singapura, foco no Sudeste Asiático",
+        "estatal": true,
+        "titulo": "Russia pummels Ukraine after Putin vowed 'painful' attack",
+        "link": "https://www.channelnewsasia.com/world/russia-strike-ukraine-invasion-putin-missile-drone-6568896",
+        "publicadoEm": "2026-11-20T09:21:00.000Z"
       }
     ]
   },
   "tambemImporta": [
     {
       "fatoId": "9095096ce73c",
-      "tituloPt": "Acordo histórico entre UE e Reino Unido",
-      "porQueImporta": "Reaproximação comercial que pode abrir oportunidades de exportação para empresas brasileiras nos mercados europeu e britânico",
+      "tituloPt": "UE e Reino Unido assinam acordo histórico para reconstruir laços",
+      "porQueImporta": "Reaproximação UE‑Reino Unido abre oportunidades comerciais para o Brasil, especialmente em alimentos e serviços",
       "regioes": [
         "europa",
         "mundo"
@@ -278,8 +333,8 @@
     },
     {
       "fatoId": "6cc38668b794",
-      "tituloPt": "Repercussões da decisão da CIJ sobre genocídio Rohingya",
-      "porQueImporta": "Define precedentes de responsabilidade internacional que influenciam políticas de direitos humanos e comércio com países da Ásia",
+      "tituloPt": "Tribunal Internacional da Justiça reconhece genocídio contra os Rohingya",
+      "porQueImporta": "Decisão reforça precedentes de responsabilidade por genocídio, influenciando políticas de direitos humanos que o Brasil acompanha",
       "regioes": [
         "oriente-medio",
         "asia-pacifico",
@@ -379,119 +434,95 @@
       ]
     },
     {
-      "fatoId": "77ce998683fd",
-      "tituloPt": "White House demite chefe de cibersegurança após apagões",
-      "porQueImporta": "Afeta infraestrutura digital global, incluindo serviços que empresas brasileiras utilizam para exportação e fintechs",
+      "fatoId": "8e3ceec613f9",
+      "tituloPt": "Trump ameaça penalidades a empresas de tecnologia dos EUA por data centers no exterior",
+      "porQueImporta": "Restrição à expansão de data centers estrangeiros pode impactar investimentos brasileiros no setor de nuvem e infraestrutura digital",
       "regioes": [
         "america-norte",
-        "africa"
+        "europa",
+        "oriente-medio",
+        "asia-pacifico"
       ],
       "temas": [
-        "tecnologia",
         "politica",
-        "conflitos"
+        "economia",
+        "tecnologia",
+        "conflitos",
+        "midia"
       ],
-      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/76fa/live/ea62ee60-e4bd-11f1-87df-79d8910e0f29.jpg",
-      "credito": "BBC News",
-      "resumo": "He has been fired after losing the confidence of new White House chief of staff Stephen Miller, according to reports.",
+      "imagem": "https://i.guim.co.uk/img/media/9532d886df85f2ca4c23d7e6a6341c606f995971/357_0_3572_2857/master/3572.jpg?width=140&quality=85&auto=format&fit=max&s=07ff49e86c3162c2f8cbd055b6230888",
+      "credito": "The Guardian",
+      "resumo": "President gives wide-ranging White House press conference and says he has ‘fantastic relationships’ with Putin and Xi Donald Trump threatened on Friday to impose “tremendous penalties” on American tech companies that build datacenters outside the US, though he gave no details and…",
       "materias": [
+        {
+          "fonte": "The Guardian",
+          "pais": "Reino Unido",
+          "visao": "Jornal britânico, centro-esquerda",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "Trump threatens ‘tremendous penalties’ on US tech firms that build datacenters abroad",
+          "link": "https://www.theguardian.com/us-news/2026/nov/20/trump-datacenters-white-house",
+          "publicadoEm": "2026-11-20T21:47:41.000Z"
+        },
+        {
+          "fonte": "Al Jazeera",
+          "pais": "Catar",
+          "visao": "Rede do Catar (financiada pelo governo), foco no Sul Global e no mundo árabe",
+          "estatal": true,
+          "tipo": "noticia",
+          "titulo": "Trump threatens tax on US tech firms building AI data centres abroad",
+          "link": "https://www.aljazeera.com/video/newsfeed/2026/11/20/aje-onl-nf_trump-tax-us-tech-firms-ai-data-centres-abroad-201126?traffic_source=rss",
+          "publicadoEm": "2026-11-20T21:10:53.000Z"
+        },
+        {
+          "fonte": "ABC News Austrália",
+          "pais": "Austrália",
+          "visao": "Emissora pública australiana",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "Trump vows 'tremendous tax' on companies building data centres abroad",
+          "link": "https://www.abc.net.au/news/2026-11-21/trump-vows-tax-companies-building-data-centres-overseas/107412162",
+          "publicadoEm": "2026-11-20T20:27:15.000Z"
+        },
         {
           "fonte": "BBC News",
           "pais": "Reino Unido",
           "visao": "Emissora pública britânica",
           "estatal": false,
           "tipo": "noticia",
-          "titulo": "White House removes cyber-security chief after series of tech outages",
-          "link": "https://www.bbc.co.uk/news/articles/cwz0k3nn5p5mo?at_medium=RSS&at_campaign=rss",
-          "publicadoEm": "2026-11-20T19:03:56.000Z"
-        },
-        {
-          "fonte": "The Hindu",
-          "pais": "Índia",
-          "visao": "Jornal de referência indiano",
-          "estatal": false,
-          "tipo": "noticia",
-          "titulo": "White House fires cybersecurity chief after widespread outages",
-          "link": "https://www.thehindu.com/news/international/white-house-fires-cybersecurity-chief-after-widespread-outages/article71722952.ece",
-          "publicadoEm": "2026-11-20T08:05:47.000Z"
-        },
-        {
-          "fonte": "Euronews",
-          "pais": "União Europeia",
-          "visao": "Canal de notícias pan-europeu",
-          "estatal": false,
-          "tipo": "noticia",
-          "titulo": "White House national cyber director fired after wave of tech outages",
-          "link": "https://www.euronews.com/2026/11/20/white-house-national-cyber-director-fired-after-wave-of-tech-outages",
-          "publicadoEm": "2026-11-20T07:03:40.000Z"
-        },
-        {
-          "fonte": "Asharq Al-Awsat",
-          "pais": "Arábia Saudita",
-          "visao": "Jornal pan-árabe de dono saudita",
-          "estatal": false,
-          "tipo": "noticia",
-          "titulo": "White House Taps Kirsten Davies as Cyber Chief After Outages Rattle Americans",
-          "link": "https://english.aawsat.com/node/5343475",
-          "publicadoEm": "2026-11-20T06:52:02.000Z"
-        },
-        {
-          "fonte": "Daily Maverick",
-          "pais": "África do Sul",
-          "visao": "Jornal sul-africano independente",
-          "estatal": false,
-          "tipo": "noticia",
-          "titulo": "Trump ousts cyber director after tech outages spark criticism",
-          "link": "https://www.dailymaverick.co.za/article/2026-11-20-trump-ousts-cyber-director-after-tech-outages-spark-criticism-friday-20th-november-2026-0338/",
-          "publicadoEm": "2026-11-20T05:07:59.000Z"
-        },
-        {
-          "fonte": "CNA",
-          "pais": "Singapura",
-          "visao": "Canal de Singapura, foco no Sudeste Asiático",
-          "estatal": true,
-          "tipo": "noticia",
-          "titulo": "Trump ousts cyber director after tech outages spark criticism",
-          "link": "https://www.channelnewsasia.com/world/white-house-fires-cybersecurity-chief-widespread-outages-6567801",
-          "publicadoEm": "2026-11-20T01:13:00.000Z"
+          "titulo": "Trump threatens ban on US firms building AI data centres overseas",
+          "link": "https://www.bbc.co.uk/news/articles/cmde1lw9y54ko?at_medium=RSS&at_campaign=rss",
+          "publicadoEm": "2026-11-20T19:51:52.000Z"
         }
       ]
     },
     {
-      "fatoId": "4224d9be550b",
-      "tituloPt": "IA Anthropic resolve grande desafio matemático",
-      "porQueImporta": "Avanço que pode acelerar adoção de IA no Brasil, impactando setores como agronegócio e educação",
+      "fatoId": "bf43304ad1a6",
+      "tituloPt": "COP31 discute combustíveis fósseis e financiamento climático",
+      "porQueImporta": "Negociações sobre fósseis e financiamento climático afetam as metas ambientais do Brasil e o acesso a recursos internacionais",
       "regioes": [
         "europa",
-        "mundo"
+        "global",
+        "asia-pacifico"
       ],
       "temas": [
-        "tecnologia",
-        "economia"
+        "diplomacia",
+        "clima",
+        "energia"
       ],
-      "imagem": "https://th-i.thgim.com/public/incoming/d9fw45/article71725961.ece/alternates/LANDSCAPE_1200/2026-11-10T184736Z_1618194784_RC2UNLANRGUU_RTRMADP_3_ANTHROPIC-CLAUDE-GOOGLE.JPG",
-      "credito": "The Hindu",
-      "resumo": "The claim regarding the Riemann Hypothesis has not been independently verified.",
+      "imagem": "https://img.lemde.fr/2026/11/20/747/0/5500/2750/644/322/60/0/f139425_ftp-1-jffoew2a5gyb-2026-11-20t143649z-1236454159-rc2proagsqo7-rtrmadp-3-climate-cop31.JPG",
+      "credito": "Le Monde (inglês)",
+      "resumo": "The talks at the 31st World Climate Conference (COP31) in Antalya, Turkey, were scheduled to conclude on November 20. Deliberations continued into overtime due to lack of agreement on key issues such as fossil fuels and funding.",
       "materias": [
         {
-          "fonte": "The Straits Times",
-          "pais": "Singapura",
-          "visao": "Jornal de referência de Singapura",
+          "fonte": "Le Monde (inglês)",
+          "pais": "França",
+          "visao": "Jornal de referência francês",
           "estatal": false,
           "tipo": "noticia",
-          "titulo": "Anthropic researcher says AI chatbot Claude solved math’s greatest riddle",
-          "link": "https://www.straitstimes.com/world/united-states/anthropic-researcher-says-ai-chatbot-claude-solved-maths-greatest-riddle",
-          "publicadoEm": "2026-11-20T20:00:30.000Z"
-        },
-        {
-          "fonte": "The Hindu",
-          "pais": "Índia",
-          "visao": "Jornal de referência indiano",
-          "estatal": false,
-          "tipo": "noticia",
-          "titulo": "Anthropic researcher says Claude solved maths’ greatest riddle",
-          "link": "https://www.thehindu.com/sci-tech/technology/anthropic-researcher-says-claude-solved-maths-greatest-riddle/article71725942.ece",
-          "publicadoEm": "2026-11-20T18:35:22.000Z"
+          "titulo": "COP31: Fossil fuels and climate funding take center stage in final stretch of negotiations",
+          "link": "https://www.lemonde.fr/en/environment/article/2026/11/20/cop31-fossil-fuels-and-climate-funding-take-center-stage-in-final-stretch-of-negotiations_6785737_114.html",
+          "publicadoEm": "2026-11-20T22:35:30.000Z"
         },
         {
           "fonte": "South China Morning Post",
@@ -499,51 +530,122 @@
           "visao": "Jornal de Hong Kong sobre China e Ásia",
           "estatal": false,
           "tipo": "noticia",
-          "titulo": "Anthropic researcher says Claude AI has solved maths’ greatest riddle: Riemann Hypothesis",
-          "link": "https://www.scmp.com/news/world/united-states-canada/article/3375294/anthropic-researcher-says-claude-has-solved-maths-greatest-riddle",
-          "publicadoEm": "2026-11-20T17:55:08.000Z"
+          "titulo": "COP31 climate talks go into overtime as nations quarrel over fossil fuels",
+          "link": "https://www.scmp.com/news/world/article/3375291/cop31-climate-talks-go-overtime-nations-quarrel-over-fossil-fuels",
+          "publicadoEm": "2026-11-20T15:34:06.000Z"
+        },
+        {
+          "fonte": "France 24",
+          "pais": "França",
+          "visao": "Emissora internacional pública francesa",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "COP31 wrapping up in Turkey: Climate deal elusive as fossil fuels go unmentioned",
+          "link": "https://www.france24.com/en/video/20261120-cop31-wrapping-up-in-turkey-climate-deal-elusive-as-fossil-fuels-go-unmentioned",
+          "publicadoEm": "2026-11-20T14:38:56.000Z"
+        },
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "UN climate talks in Turkey risk being ‘worst COP ever’ as fossil fuels go unmentioned",
+          "link": "https://www.straitstimes.com/world/un-climate-talks-in-turkey-risk-being-worst-cop-ever-as-fossil-fuels-go-unmentioned",
+          "publicadoEm": "2026-11-20T14:19:04.000Z"
+        },
+        {
+          "fonte": "The Japan Times",
+          "pais": "Japão",
+          "visao": "Jornal japonês em inglês",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "Climate talks ditch call to quit fossil fuels as deal nears",
+          "link": "https://www.japantimes.co.jp/environment/2026/11/20/climate-change/cop-fossil-fuel-language/",
+          "publicadoEm": "2026-11-20T03:17:00.000Z"
         }
       ]
     },
     {
-      "fatoId": "6546c0e16fcf",
-      "tituloPt": "Coalizão saudita lança operação especial no Iêmen",
-      "porQueImporta": "Intensifica conflito que afeta preços de energia e rotas de exportação de petróleo, influenciando a economia brasileira",
+      "fatoId": "acf404f6e9c1",
+      "tituloPt": "Míssil russo atinge a Polônia, violando espaço aéreo da OTAN",
+      "porQueImporta": "Violação do espaço aéreo da OTAN eleva risco de confrontos diretos na Europa, impactando a estabilidade econômica global que o Brasil sente",
       "regioes": [
-        "oriente-medio",
+        "europa",
+        "asia-pacifico",
         "america-norte"
       ],
       "temas": [
         "conflitos",
-        "energia",
+        "diplomacia",
         "politica"
       ],
-      "imagem": "",
-      "credito": "",
-      "resumo": "The Saudi-led coalition fighting Yemen's Houthis attacked the Red Sea port city of Hodeida and other targets in a \"special operation\" on Friday, as the group threatened reprisals. The coalition said it hit smuggling and weapons-transporting operations in Hodeida while also…",
+      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cbb7/live/b5de9720-e4ea-11f1-99b6-a35a62fa4264.jpg",
+      "credito": "BBC News",
+      "resumo": "Nobody was hurt and no damage has been reported, but Warsaw described the incident as a \"provocation\" from Moscow.",
       "materias": [
         {
-          "fonte": "Al-Monitor",
-          "pais": "EUA",
-          "visao": "Site especializado em Oriente Médio",
+          "fonte": "BBC News",
+          "pais": "Reino Unido",
+          "visao": "Emissora pública britânica",
           "estatal": false,
           "tipo": "noticia",
-          "titulo": "Saudi coalition launches 'special operation', Yemen's Houthis vow reprisals",
-          "link": "https://www.al-monitor.com/originals/2026/11/saudi-coalition-launches-special-operation-yemens-houthis-vow-reprisals",
-          "publicadoEm": "2026-11-20T19:30:24.000Z"
+          "titulo": "Russian missile hits Poland as Ukraine's allies hold military exercise, says Tusk",
+          "link": "https://www.bbc.co.uk/news/articles/cqx2x9dklxnro?at_medium=RSS&at_campaign=rss",
+          "publicadoEm": "2026-11-20T16:54:29.000Z"
         },
         {
-          "fonte": "Middle East Eye",
-          "pais": "Reino Unido",
-          "visao": "Site focado no Oriente Médio, crítico de governos da região",
+          "fonte": "France 24",
+          "pais": "França",
+          "visao": "Emissora internacional pública francesa",
           "estatal": false,
           "tipo": "noticia",
-          "titulo": "Houthis say 41 killed as Saudi-led coalition launches 'special operation' in Yemen",
-          "link": "https://www.middleeasteye.net/live-blog/live-blog-update/houthis-say-41-killed-saudi-led-coalition-launches-special-operation",
-          "publicadoEm": "2026-11-20T16:57:08.000Z"
+          "titulo": "Russia pummels Ukraine with massive strikes, missile hits Poland",
+          "link": "https://www.france24.com/en/video/20261120-russia-pummels-ukraine-with-massive-strikes-missile-hits-poland",
+          "publicadoEm": "2026-11-20T14:36:48.000Z"
+        },
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "Russia pounds Ukraine, killing 8, as missile lands in Poland",
+          "link": "https://www.straitstimes.com/world/europe/russia-pounds-ukraine-killing-8-as-missile-lands-in-poland",
+          "publicadoEm": "2026-11-20T13:32:55.000Z"
+        },
+        {
+          "fonte": "Politico Europe",
+          "pais": "Bélgica",
+          "visao": "Bastidores da política da União Europeia",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "Tusk: Russian cruise missile incursion into Poland seems ‘intentional’",
+          "link": "https://www.politico.eu/article/russian-missile-incursion-into-poland-seems-intentional-tusk-says/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+          "publicadoEm": "2026-11-20T12:43:31.000Z"
+        },
+        {
+          "fonte": "Kyiv Post",
+          "pais": "Ucrânia",
+          "visao": "Jornal ucraniano",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "Ukraine Hits Back: 3 Russian Missile Launchers Targeted Overnight",
+          "link": "https://www.kyivpost.com/post/90708",
+          "publicadoEm": "2026-11-20T11:23:00.000Z"
+        },
+        {
+          "fonte": "Le Monde (inglês)",
+          "pais": "França",
+          "visao": "Jornal de referência francês",
+          "estatal": false,
+          "tipo": "noticia",
+          "titulo": "Massive Russian strikes kill at least eight in Ukraine, missile lands in Poland",
+          "link": "https://www.lemonde.fr/en/international/article/2026/11/20/russian-strikes-on-kyiv-kill-at-least-six_6785275_4.html",
+          "publicadoEm": "2026-11-20T10:12:47.000Z"
         }
       ]
     }
   ],
-  "versao": 2
+  "versao": 3
 }

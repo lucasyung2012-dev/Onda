@@ -2,20 +2,20 @@
   "edicoes": [
     {
       "data": "2026-11-20",
-      "titulo": "Míssil russo cai na Polônia durante ataques massivos à Ucrânia",
+      "titulo": "Rússia intensifica ataques a Kiev após cúpula Trump‑Putin‑Xi",
       "regiao": "europa",
-      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cbb7/live/b5de9720-e4ea-11f1-99b6-a35a62fa4264.jpg",
+      "imagem": "https://meduza.io/image/attachments/images/012/997/222/small/lNbPu_QWgjASQyab-CKhgQ",
       "notas": {
-        "geral": 7,
+        "geral": 8,
         "mundo": 7,
-        "voce": 3
+        "voce": 2
       },
       "outros": [
-        "Acordo histórico entre UE e Reino Unido",
-        "Repercussões da decisão da CIJ sobre genocídio Rohingya",
-        "White House demite chefe de cibersegurança após apagões",
-        "IA Anthropic resolve grande desafio matemático",
-        "Coalizão saudita lança operação especial no Iêmen"
+        "UE e Reino Unido assinam acordo histórico para reconstruir laços",
+        "Tribunal Internacional da Justiça reconhece genocídio contra os Rohingya",
+        "Trump ameaça penalidades a empresas de tecnologia dos EUA por data centers no exterior",
+        "COP31 discute combustíveis fósseis e financiamento climático",
+        "Míssil russo atinge a Polônia, violando espaço aéreo da OTAN"
       ]
     }
   ]

@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-20T22:54:55.629Z",
-  "fontesOk": 68,
-  "fontesComErro": 2,
-  "noticiasNovasNestaRodada": 44,
+  "geradoEm": "2026-11-20T22:56:13.187Z",
+  "fontesOk": 69,
+  "fontesComErro": 1,
+  "noticiasNovasNestaRodada": 1,
   "porFonte": [
     {
       "id": "nyt",
@@ -215,10 +215,9 @@
     {
       "id": "euronews",
       "nome": "Euronews",
-      "status": "erro",
-      "erro": "o site respondeu HTTP 406",
-      "itensNoFeed": 0,
-      "aceitas": 0,
+      "status": "ok",
+      "itensNoFeed": 50,
+      "aceitas": 50,
       "descartadasPorIdade": 0,
       "comImagem": 0
     },
