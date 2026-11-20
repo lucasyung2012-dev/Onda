@@ -36,7 +36,8 @@ export const NOMES_TEMAS = {
   'politica': 'Política e eleições',
   'tecnologia': 'Tecnologia',
   'clima': 'Clima e meio ambiente',
-  'direitos': 'Direitos humanos e migração',
+  'direitos': 'Direitos humanos, justiça e migração',
+  'midia': 'Mídia e informação',
   'saude': 'Saúde',
   'outros': 'Outros',
 };
@@ -53,14 +54,15 @@ const REGIOES = {
 };
 
 const TEMAS = {
-  'conflitos': ['guerra', 'war', 'ataque', 'attack', 'militar', 'military', 'exercito', 'army', 'tropas', 'troops', 'missil', 'misseis', 'missile', 'drone', 'bombard', 'bomb', 'invas', 'invad', 'cessar fogo', 'ceasefire', 'cease fire', 'ofensiva', 'offensive', 'conflito', 'conflict', 'combate', 'fighting', 'mortos', 'killed', 'terror', 'insurg', 'rebel', 'golpe', 'coup', 'armas', 'weapon', 'arms '],
-  'diplomacia': ['acordo', 'agreement', 'deal', 'tratado', 'treaty', 'cupula', 'summit', 'diplomat', 'embaixad', 'embass', 'negocia', 'negotiat', 'talks', 'conversas', 'chanceler', 'foreign minister', 'sanc', 'sanction', 'alianca', 'alliance', 'aliados', 'allies', 'cooperacao', 'cooperation', 'state visit', 'visita oficial'],
-  'economia': ['economi', 'econom', 'tarifa', 'tariff', 'comercio', 'trade', 'exporta', 'export', 'importa', 'import', 'inflacao', 'inflation', 'juros', 'interest rate', 'banco central', 'central bank', 'mercado', 'market', 'dolar', 'dollar', 'moeda', 'currency', 'pib', 'gdp', 'recessao', 'recession', 'divida', 'debt', 'investiment', 'investment', 'bolsa', 'stocks', 'preco', 'price'],
+  'conflitos': ['guerra', 'war', 'ataque', 'attack', 'militar', 'military', 'exercito', 'army', 'tropas', 'troops', 'missil', 'misseis', 'missile', 'drone', 'bombard', 'bomb', 'invas', 'invad', 'cessar fogo', 'ceasefire', 'cease fire', 'ofensiva', 'offensive', 'conflito', 'conflict', 'combate', 'fighting', 'mortos', 'killed', 'terror', 'insurg', 'rebel', 'golpe', 'coup', 'armas', 'weapon', 'arms ', 'hamas', 'hezbollah', 'strike', 'assassin', 'seguranca', 'security', 'defesa', 'defense', 'defence'],
+  'diplomacia': ['acordo', 'agreement', 'deal', 'tratado', 'treaty', 'cupula', 'summit', 'diplomat', 'embaixad', 'embass', 'negocia', 'negotiat', 'talks', 'conversas', 'chanceler', 'foreign minister', 'sanc', 'sanction', 'alianca', 'alliance', 'aliados', 'allies', 'cooperacao', 'cooperation', 'state visit', 'visita oficial', 'ambassador', 'embaixador', 'fronteira', 'border', 'visto', 'visa ', 'visas', 'chancelaria', 'ministry of foreign'],
+  'economia': ['economi', 'econom', 'tarifa', 'tariff', 'comercio', 'trade', 'exporta', 'export', 'importa', 'import', 'inflacao', 'inflation', 'juros', 'interest rate', 'banco central', 'central bank', 'mercado', 'market', 'dolar', 'dollar', 'moeda', 'currency', 'pib', 'gdp', 'recessao', 'recession', 'divida', 'debt', 'investiment', 'investment', 'bolsa', 'stocks', 'preco', 'price', 'ipo', 'sell off', 'acoes', 'shares', 'wall street', 'nasdaq', 'empresa', 'company', 'companies', 'industria', 'industry', 'emprego', 'jobs', 'salario', 'wage', 'imposto', 'tax'],
   'energia': ['petroleo', 'oil', 'gas', 'gasoduto', 'pipeline', 'opep', 'opec', 'energia', 'energy', 'combustiv', 'fuel', 'gasolina', 'gasoline', 'diesel', 'nuclear', 'eletricidade', 'electricity', 'renovav', 'renewable', 'carvao', 'coal', 'solar', 'eolica', 'lng', 'gnl', 'refinaria', 'refinery', 'barril', 'barrel'],
   'politica': ['eleic', 'elect', 'vot', 'presidente', 'president', 'primeiro ministro', 'prime minister', 'parlamento', 'parliament', 'congresso', 'congress', 'governo', 'government', 'oposicao', 'opposition', 'partido', 'protest', 'manifesta', 'impeachment', 'renuncia', 'resign', 'posse', 'inaugurat'],
   'tecnologia': ['tecnolog', 'technolog', 'inteligencia artificial', 'artificial intelligence', 'ai ', 'chip', 'semicondut', 'semiconductor', 'ciber', 'cyber', 'hacker', 'satelite', 'satellite', 'internet', 'big tech', 'redes sociais', 'social media', 'tiktok', 'nvidia', 'huawei', '5g'],
   'clima': ['clima', 'climate', 'aquecimento', 'warming', 'enchente', 'flood', 'inunda', 'seca', 'drought', 'incendio', 'wildfire', 'furacao', 'hurricane', 'tufao', 'typhoon', 'terremoto', 'earthquake', 'desmatament', 'deforestation', 'amazon', 'emisso', 'emission', 'carbono', 'carbon', 'cop2', 'cop3', 'meio ambiente', 'environment', 'desastre', 'disaster'],
-  'direitos': ['direitos humanos', 'human rights', 'refugiad', 'refugee', 'migra', 'migrant', 'imigra', 'immigra', 'asilo', 'asylum', 'fome', 'hunger', 'famine', 'humanitar', 'genocid', 'crimes de guerra', 'war crimes', 'tribunal penal', 'presos', 'prisoner'],
+  'direitos': ['direitos humanos', 'human rights', 'refugiad', 'refugee', 'migra', 'migrant', 'imigra', 'immigra', 'asilo', 'asylum', 'fome', 'hunger', 'famine', 'humanitar', 'genocid', 'crimes de guerra', 'war crimes', 'tribunal', 'presos', 'prisoner', 'court', 'corte', 'icc', 'icj', 'cpi', 'julgament', 'trial', 'extradi', 'sentenc', 'condena', 'convicted', 'prisao', 'prison', 'jail', 'execucao', 'execution', 'pena de morte', 'death penalty', 'estupro', 'rape', 'abuso', 'abuse'],
+  'midia': ['jornalis', 'journalis', 'imprensa', 'press freedom', 'midia', 'media ', 'desinforma', 'disinformation', 'misinformation', 'fake news', 'censur', 'censorship', 'propagand', 'redes sociais', 'social media', 'tiktok', 'emissora', 'broadcaster', 'reporter'],
   'saude': ['saude', 'health', 'epidemi', 'pandemi', 'virus', 'surto', 'outbreak', 'vacina', 'vaccin', 'oms', 'ebola', 'mpox', 'dengue', 'colera', 'cholera'],
 };
 

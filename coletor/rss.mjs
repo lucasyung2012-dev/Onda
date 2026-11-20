@@ -90,8 +90,12 @@ function acharData(bloco) {
   for (const nome of ['pubDate', 'dc:date', 'published', 'updated', 'date']) {
     const texto = textoPuro(tag(bloco, nome));
     if (!texto) continue;
-    const data = new Date(texto);
-    if (!Number.isNaN(data.getTime())) return data;
+    // Alguns feeds brasileiros escrevem o dia da semana em português
+    // ("Sex, 20 Nov 2026 ..."), que o JavaScript não entende. Tiramos esse pedaço.
+    for (const tentativa of [texto, texto.replace(/^[^\d,]+,\s*/, '')]) {
+      const data = new Date(tentativa);
+      if (!Number.isNaN(data.getTime())) return data;
+    }
   }
   return null;
 }

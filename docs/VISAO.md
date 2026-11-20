@@ -24,7 +24,7 @@ Quem usa: só o autor, principalmente no celular e no iPad.
 
 | Parte | O que é |
 |---|---|
-| **Radar de hoje** | Todas as notícias do dia, de mais de 30 fontes de países e visões diferentes, organizadas por região e tema. |
+| **Radar de hoje** | Todas as notícias do dia, de mais de 70 fontes de países e visões diferentes, organizadas por região e tema. |
 | **Destaque do dia** | Um fato escolhido como o mais importante, com a justificativa da escolha e as três notas. |
 | **Tema do dia** | Uma análise de um assunto da biblioteca (ex.: "Ucrânia → petróleo → sua gasolina"), em rodízio. |
 | **Acompanhar** | Eu escolho de 3 a 5 notícias por dia para acompanhar e escrever a cadeia de efeitos. |
