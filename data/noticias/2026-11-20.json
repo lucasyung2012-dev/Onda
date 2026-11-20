@@ -37,6 +37,33 @@
       "coletadoEm": "2026-11-20T21:50:22.340Z"
     },
     {
+      "id": "504b0b4b2a8e",
+      "titulo": "Denmark Expels Russian Diplomat After Accusing Moscow of Planning a Hit",
+      "resumo": "Danish officials say Russian intelligence services recruited members of a violent gang to try to assassinate a Ukrainian rapper at a concert outside Copenhagen.",
+      "link": "https://www.nytimes.com/2026/11/20/world/europe/denmark-russia-ukraine-rapper-assassination.html",
+      "fonte": "nyt",
+      "fonteNome": "The New York Times",
+      "pais": "EUA",
+      "visao": "Jornal de referência dos EUA, centro-esquerda",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:47:21.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://static01.nyt.com/images/2026/11/20/multimedia/20int-denmark-ukraine-rapper-photo-pqwv/20int-denmark-ukraine-rapper-photo-pqwv-mediumSquareAt3X.jpg",
+      "imagemCredito": "The New York Times",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia"
+      ],
+      "coletadoEm": "2026-11-20T21:51:08.665Z"
+    },
+    {
       "id": "441b3a54efb3",
       "titulo": "US sanctions Iranian 'oil trustees' it accuses of evading sanctions",
       "resumo": "The US Treasury on Friday imposed sanctions on four Iranians who served as \"oil trustees\". It said they had sought to collect funds from illicit international oil sales and pass them to the Iranian government, to evade earlier sanctions and a US naval blockade. In many cases, the…",
@@ -392,6 +419,33 @@
         "economia"
       ],
       "coletadoEm": "2026-11-20T21:32:55.518Z"
+    },
+    {
+      "id": "d5eee848d1c4",
+      "titulo": "US must take decisive step in dialogue with Russia, Jeffrey Sachs says",
+      "resumo": "Director of Columbia University's Center for Sustainable Development Jeffrey Sachs expressed hope that the US will not enter a military alliance with Ukraine or Georgia and will not support their admission to NATO",
+      "link": "https://tass.com/politics/2222767",
+      "fonte": "tass",
+      "fonteNome": "TASS",
+      "pais": "Rússia",
+      "visao": "Agência estatal russa (versão oficial do Kremlin)",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:22:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia"
+      ],
+      "coletadoEm": "2026-11-20T21:51:08.665Z"
     },
     {
       "id": "907bb66957b9",
@@ -34543,5 +34597,5 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     }
   ],
-  "atualizadoEm": "2026-11-20T21:50:22.340Z"
+  "atualizadoEm": "2026-11-20T21:51:08.665Z"
 }

@@ -646,6 +646,554 @@
           ]
         }
       ]
+    },
+    {
+      "status": "ok",
+      "geradoEm": "2026-11-20T21:51:30.104Z",
+      "dataReferencia": "2026-11-20",
+      "fuso": "America/Sao_Paulo",
+      "ia": {
+        "provedor": "Groq",
+        "modelo": "openai/gpt-oss-120b",
+        "aviso": "Análise gerada por IA a partir das matérias listadas. Pode conter erros: confira nas fontes."
+      },
+      "destaque": {
+        "fatoId": "acf404f6e9c1",
+        "regioes": [
+          "europa",
+          "asia-pacifico",
+          "america-norte"
+        ],
+        "temas": [
+          "conflitos",
+          "diplomacia",
+          "politica"
+        ],
+        "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cbb7/live/b5de9720-e4ea-11f1-99b6-a35a62fa4264.jpg",
+        "credito": "BBC News",
+        "criterio": "Violação direta do território da OTAN por parte da Rússia, elevando risco de escalada militar e redefinindo a segurança europeia",
+        "titulo": "Míssil russo cai na Polônia durante ataques massivos à Ucrânia",
+        "emUmaFrase": "Um míssil russo atingiu a Polônia, lembrando que conflitos na Europa podem elevar tensões e impactar preços de energia no Brasil.",
+        "oQueAconteceu": "Na tarde de 20 de novembro de 2026, um míssil de cruzeiro russo caiu na região sudeste da Polônia, país membro da OTAN. O incidente ocorreu enquanto Moscou lançava uma campanha de mais de 80 mísseis e 400 drones contra a Ucrânia, que já havia causado dezenas de mortes nas cidades de Kiev e Lviv.\n\nO governo polonês, liderado pelo primeiro‑ministro Donald Tusk, descreveu a queda como uma \"provocação\" e sugeriu que não se tratou de um acidente. A Rússia não comentou o incidente, mas continuou seus ataques intensos contra alvos ucranianos.\n\nA Ucrânia, por sua vez, informou que destruiu um lançador balístico russo e abatou 79 mísseis de cruzeiro durante a madrugada, como resposta aos bombardeios. O clima de tensão aumentou na região, com a OTAN monitorando de perto a situação.",
+        "dataDoFato": "2026-11-20",
+        "dataDoFatoObs": "O fato foi noticiado no mesmo dia; as matérias indicam que o míssil caiu na tarde de 20 de novembro de 2026.",
+        "porQueImporta": "O incidente demonstra que a guerra entre Rússia e Ucrânia está se expandindo para territórios da OTAN, o que pode desencadear respostas militares coletivas e elevar o risco de um conflito mais amplo. Para o Brasil, a instabilidade na Europa afeta diretamente os mercados de energia e commodities, já que a Rússia é grande fornecedora de gás e petróleo.\n\nAlém disso, a percepção de risco geopolítico pode influenciar as decisões de investidores internacionais, impactando a cotação do dólar e, indiretamente, os preços de produtos importados no Brasil.",
+        "cadeia": [
+          {
+            "passo": "Míssil russo atinge território polonês",
+            "camada": "seguranca"
+          },
+          {
+            "passo": "Aumento da tensão entre OTAN e Rússia",
+            "camada": "politica"
+          },
+          {
+            "passo": "Possível elevação dos preços internacionais de energia",
+            "camada": "energia"
+          },
+          {
+            "passo": "Impacto nos custos de energia e combustíveis no Brasil",
+            "camada": "precos"
+          },
+          {
+            "passo": "Repercussão nos preços ao consumidor e nas contas de energia",
+            "camada": "sociedade"
+          }
+        ],
+        "chegaEmVoce": {
+          "tipo": "indireto",
+          "texto": "A elevação dos preços internacionais de energia pode encarecer a conta de luz e o preço da gasolina em São Paulo, embora não haja impacto direto imediato."
+        },
+        "notas": {
+          "geral": {
+            "nota": 7,
+            "porque": "Evento de grande relevância regional que pode mudar o equilíbrio de segurança na Europa."
+          },
+          "mundo": {
+            "nota": 7,
+            "porque": "Afeta a relação Rússia‑OTAN e tem repercussões nos mercados globais de energia."
+          },
+          "voce": {
+            "nota": 3,
+            "porque": "Impacto indireto e potencial nos preços de energia e no custo de vida no Brasil."
+          }
+        },
+        "afirmacoes": [
+          {
+            "tipo": "fato",
+            "texto": "Um míssil russo caiu no sudeste da Polônia",
+            "fontes": [
+              0,
+              1,
+              2,
+              3,
+              5
+            ]
+          },
+          {
+            "tipo": "declaracao",
+            "texto": "Donald Tusk classificou o incidente como provocação intencional",
+            "fontes": [
+              0,
+              3
+            ]
+          },
+          {
+            "tipo": "alegacao",
+            "texto": "A Rússia lançou mais de 80 mísseis e 400 drones contra a Ucrânia no mesmo dia",
+            "fontes": [
+              2
+            ]
+          },
+          {
+            "tipo": "fato",
+            "texto": "Pelo menos oito civis foram mortos em ataques russos a Kiev",
+            "fontes": [
+              2,
+              5
+            ]
+          },
+          {
+            "tipo": "analise",
+            "texto": "A queda do míssil na Polônia pode levar a respostas militares da OTAN",
+            "fontes": [
+              3
+            ]
+          },
+          {
+            "tipo": "analise",
+            "texto": "O episódio pode pressionar os mercados globais de energia, elevando preços",
+            "fontes": [
+              1,
+              5
+            ]
+          }
+        ],
+        "oQueNaoSabemos": "Se a Polônia solicitará uma resposta militar da OTAN ou se haverá sanções econômicas adicionais contra a Rússia.",
+        "oQueAcompanhar": [
+          "Reações oficiais da OTAN e da União Europeia",
+          "Possíveis retaliações militares russas",
+          "Flutuações nos preços internacionais de gás e petróleo",
+          "Impactos nos contratos de energia do Brasil"
+        ],
+        "fontesUsadas": [
+          {
+            "fonte": "BBC News",
+            "pais": "Reino Unido",
+            "visao": "Emissora pública britânica",
+            "estatal": false,
+            "titulo": "Russian missile hits Poland as Ukraine's allies hold military exercise, says Tusk",
+            "link": "https://www.bbc.co.uk/news/articles/cqx2x9dklxnro?at_medium=RSS&at_campaign=rss",
+            "publicadoEm": "2026-11-20T16:54:29.000Z"
+          },
+          {
+            "fonte": "France 24",
+            "pais": "França",
+            "visao": "Emissora internacional pública francesa",
+            "estatal": false,
+            "titulo": "Russia pummels Ukraine with massive strikes, missile hits Poland",
+            "link": "https://www.france24.com/en/video/20261120-russia-pummels-ukraine-with-massive-strikes-missile-hits-poland",
+            "publicadoEm": "2026-11-20T14:36:48.000Z"
+          },
+          {
+            "fonte": "The Straits Times",
+            "pais": "Singapura",
+            "visao": "Jornal de referência de Singapura",
+            "estatal": false,
+            "titulo": "Russia pounds Ukraine, killing 8, as missile lands in Poland",
+            "link": "https://www.straitstimes.com/world/europe/russia-pounds-ukraine-killing-8-as-missile-lands-in-poland",
+            "publicadoEm": "2026-11-20T13:32:55.000Z"
+          },
+          {
+            "fonte": "Politico Europe",
+            "pais": "Bélgica",
+            "visao": "Bastidores da política da União Europeia",
+            "estatal": false,
+            "titulo": "Tusk: Russian cruise missile incursion into Poland seems ‘intentional’",
+            "link": "https://www.politico.eu/article/russian-missile-incursion-into-poland-seems-intentional-tusk-says/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+            "publicadoEm": "2026-11-20T12:43:31.000Z"
+          },
+          {
+            "fonte": "Kyiv Post",
+            "pais": "Ucrânia",
+            "visao": "Jornal ucraniano",
+            "estatal": false,
+            "titulo": "Ukraine Hits Back: 3 Russian Missile Launchers Targeted Overnight",
+            "link": "https://www.kyivpost.com/post/90708",
+            "publicadoEm": "2026-11-20T11:23:00.000Z"
+          },
+          {
+            "fonte": "Le Monde (inglês)",
+            "pais": "França",
+            "visao": "Jornal de referência francês",
+            "estatal": false,
+            "titulo": "Massive Russian strikes kill at least eight in Ukraine, missile lands in Poland",
+            "link": "https://www.lemonde.fr/en/international/article/2026/11/20/russian-strikes-on-kyiv-kill-at-least-six_6785275_4.html",
+            "publicadoEm": "2026-11-20T10:12:47.000Z"
+          }
+        ]
+      },
+      "tambemImporta": [
+        {
+          "fatoId": "9095096ce73c",
+          "tituloPt": "Acordo histórico entre UE e Reino Unido",
+          "porQueImporta": "Reaproximação comercial que pode abrir oportunidades de exportação para empresas brasileiras nos mercados europeu e britânico",
+          "regioes": [
+            "europa",
+            "mundo"
+          ],
+          "temas": [
+            "diplomacia",
+            "economia",
+            "politica",
+            "clima",
+            "conflitos"
+          ],
+          "imagem": "https://dam.mediacorp.sg/image/upload/s--KhTQEj19--/fl_relative,g_south_east,l_mediacorp:cna:watermark:2024-04:reuters_1,w_0.1/f_auto,q_auto/c_fill,g_auto,h_468,w_830/v1/one-cms/core/2026-11-20T140638Z_1_LYNXNPEMAJ16P_RTROPTP_3_EU-BRITAIN-SUMMIT.JPG?itok=C6HtvZUl",
+          "credito": "CNA",
+          "resumo": "UK Prime Minister Andy Burnham and EU leaders have agreed on new deals to improve trade, travel and youth mobility after Brexit, but disagreements over university fees remain unresolved.",
+          "materias": [
+            {
+              "fonte": "CNA",
+              "pais": "Singapura",
+              "visao": "Canal de Singapura, foco no Sudeste Asiático",
+              "estatal": true,
+              "tipo": "noticia",
+              "titulo": "EU and UK hail 'landmark' deal to rebuild ties at Brussels summit",
+              "link": "https://www.channelnewsasia.com/world/burnham-eu-brexit-landmark-deal-brussels-summit-6570481",
+              "publicadoEm": "2026-11-20T20:10:00.000Z"
+            },
+            {
+              "fonte": "France 24",
+              "pais": "França",
+              "visao": "Emissora internacional pública francesa",
+              "estatal": false,
+              "tipo": "noticia",
+              "titulo": "UK and EU strike ‘landmark’ deal to rebuild ties after Brexit",
+              "link": "https://www.france24.com/en/video/20261120-uk-and-eu-strike-landmark-deal-to-rebuild-ties-after-brexit",
+              "publicadoEm": "2026-11-20T17:06:59.000Z"
+            },
+            {
+              "fonte": "The Straits Times",
+              "pais": "Singapura",
+              "visao": "Jornal de referência de Singapura",
+              "estatal": false,
+              "tipo": "noticia",
+              "titulo": "UK and EU strike deals on trade and travel, pledging to rebuild ties after Brexit",
+              "link": "https://www.straitstimes.com/world/europe/uk-and-eu-strike-deals-on-trade-and-travel-pledging-to-rebuild-ties-after-brexit",
+              "publicadoEm": "2026-11-20T17:03:51.000Z"
+            },
+            {
+              "fonte": "DW",
+              "pais": "Alemanha",
+              "visao": "Emissora internacional pública alemã",
+              "estatal": false,
+              "tipo": "noticia",
+              "titulo": "EU and UK strike 'landmark deal' to strengthen ties after Brexit",
+              "link": "https://www.dw.com/en/eu-and-uk-strike-landmark-deal-to-strengthen-ties-after-brexit/a-80001076?maca=en-rss-en-world-4025-rdf",
+              "publicadoEm": "2026-11-20T14:30:00.000Z"
+            },
+            {
+              "fonte": "Asharq Al-Awsat",
+              "pais": "Arábia Saudita",
+              "visao": "Jornal pan-árabe de dono saudita",
+              "estatal": false,
+              "tipo": "noticia",
+              "titulo": "UK, EU Hold Rare Summit to Strengthen Ties as Burnham Seeks to Mend Brexit Damage",
+              "link": "https://english.aawsat.com/node/5343563",
+              "publicadoEm": "2026-11-20T11:25:15.000Z"
+            },
+            {
+              "fonte": "NPR",
+              "pais": "EUA",
+              "visao": "Rádio pública dos EUA",
+              "estatal": false,
+              "tipo": "noticia",
+              "titulo": "The U.K. and EU hold a rare summit to strengthen ties",
+              "link": "https://www.npr.org/2026/11/20/g-s1-154576/uk-eu-summit",
+              "publicadoEm": "2026-11-20T09:14:41.000Z"
+            },
+            {
+              "fonte": "RFI (inglês)",
+              "pais": "França",
+              "visao": "Rádio pública francesa, forte cobertura da África",
+              "estatal": false,
+              "tipo": "noticia",
+              "titulo": "EU and UK agree 'landmark' deal at Burnham's Brussels summit",
+              "link": "https://www.rfi.fr/en/international/20261120-eu-and-uk-agree-landmark-deal-at-burnham-s-brussels-summit",
+              "publicadoEm": "2026-11-20T02:00:32.000Z"
+            }
+          ]
+        },
+        {
+          "fatoId": "6cc38668b794",
+          "tituloPt": "Repercussões da decisão da CIJ sobre genocídio Rohingya",
+          "porQueImporta": "Define precedentes de responsabilidade internacional que influenciam políticas de direitos humanos e comércio com países da Ásia",
+          "regioes": [
+            "oriente-medio",
+            "asia-pacifico",
+            "africa"
+          ],
+          "temas": [
+            "direitos",
+            "conflitos",
+            "economia",
+            "diplomacia",
+            "clima"
+          ],
+          "imagem": "https://www.thenationalnews.com/resizer/v2/6YEWN4MEKNBV5L6Y2XW4RSIK34.JPG?auth=1db353f9d73fe30f13ee2dea6a11772fe8da9e74868eccba73c4456fef81d021&smart=true&width=7856&height=5239",
+          "credito": "The National",
+          "resumo": "Verdict against Myanmar may have implications for Israel's genocide in Gaza.",
+          "materias": [
+            {
+              "fonte": "Al Jazeera",
+              "pais": "Catar",
+              "visao": "Rede do Catar, foco no Sul Global e no mundo árabe",
+              "estatal": false,
+              "tipo": "noticia",
+              "titulo": "What are the implications of the ICJ Rohingya genocide ruling?",
+              "link": "https://www.aljazeera.com/video/inside-story/2026/11/20/what-are-the-implications-of-the-icj-rohingya-genocide-ruling?traffic_source=rss",
+              "publicadoEm": "2026-11-20T19:12:14.000Z"
+            },
+            {
+              "fonte": "The National",
+              "pais": "Emirados Árabes",
+              "visao": "Jornal dos Emirados, ligado ao governo",
+              "estatal": true,
+              "tipo": "noticia",
+              "titulo": "Pictures of the week: From Rohingya refugees watching ICJ ruling to Dubai Future Week",
+              "link": "https://www.thenationalnews.com/news/2026/11/20/pictures-of-the-week-rohingya-genocide-ruling/",
+              "publicadoEm": "2026-11-20T17:51:00.000Z"
+            },
+            {
+              "fonte": "Tehran Times",
+              "pais": "Irã",
+              "visao": "Jornal iraniano alinhado ao governo (versão oficial de Teerã)",
+              "estatal": true,
+              "tipo": "noticia",
+              "titulo": "ICJ ruling against Myanmar brings Gaza genocide case into sharper focus",
+              "link": "https://www.tehrantimes.com/news/532347/ICJ-ruling-against-Myanmar-brings-Gaza-genocide-case-into-sharper",
+              "publicadoEm": "2026-11-20T16:45:32.000Z"
+            },
+            {
+              "fonte": "Foreign Policy",
+              "pais": "EUA",
+              "visao": "Revista de análise de política externa",
+              "estatal": false,
+              "tipo": "analise",
+              "titulo": "ICJ Finds Myanmar Committed Genocide. What Comes Next?",
+              "link": "https://foreignpolicy.com/2026/11/20/myanmar-genocide-icj-ruling-rohingya-muslims-ukraine-gaza-tom-andrews-un/",
+              "publicadoEm": "2026-11-20T15:57:04.000Z"
+            },
+            {
+              "fonte": "Al-Monitor",
+              "pais": "EUA",
+              "visao": "Site especializado em Oriente Médio",
+              "estatal": false,
+              "tipo": "noticia",
+              "titulo": "Myanmar genocide judgment may bolster Gaza case against Israel",
+              "link": "https://www.al-monitor.com/originals/2026/11/myanmar-genocide-judgment-may-bolster-gaza-case-against-israel",
+              "publicadoEm": "2026-11-20T15:46:30.000Z"
+            },
+            {
+              "fonte": "The Straits Times",
+              "pais": "Singapura",
+              "visao": "Jornal de referência de Singapura",
+              "estatal": false,
+              "tipo": "noticia",
+              "titulo": "Myanmar genocide judgment may bolster Gaza case against Israel",
+              "link": "https://www.straitstimes.com/world/middle-east/myanmar-genocide-judgment-may-bolster-gaza-case-against-israel",
+              "publicadoEm": "2026-11-20T15:30:40.000Z"
+            },
+            {
+              "fonte": "The Diplomat",
+              "pais": "Japão",
+              "visao": "Revista de análise sobre Ásia-Pacífico",
+              "estatal": false,
+              "tipo": "analise",
+              "titulo": "ICJ’s Genocide Verdict on Myanmar and the Ramifications for Israel",
+              "link": "https://thediplomat.com/2026/11/icjs-genocide-verdict-on-myanmar-and-the-ramifications-for-israel/",
+              "publicadoEm": "2026-11-20T14:08:00.000Z"
+            },
+            {
+              "fonte": "Middle East Eye",
+              "pais": "Reino Unido",
+              "visao": "Site focado no Oriente Médio, crítico de governos da região",
+              "estatal": false,
+              "tipo": "noticia",
+              "titulo": "Israeli experts warn Myanmar genocide ruling could strengthen Gaza case at ICJ",
+              "link": "https://www.middleeasteye.net/news/israeli-experts-warn-myanmar-genocide-ruling-could-strengthen-gaza-case-icj",
+              "publicadoEm": "2026-11-20T13:42:43.000Z"
+            }
+          ]
+        },
+        {
+          "fatoId": "77ce998683fd",
+          "tituloPt": "White House demite chefe de cibersegurança após apagões",
+          "porQueImporta": "Afeta infraestrutura digital global, incluindo serviços que empresas brasileiras utilizam para exportação e fintechs",
+          "regioes": [
+            "america-norte",
+            "africa"
+          ],
+          "temas": [
+            "tecnologia",
+            "politica",
+            "conflitos"
+          ],
+          "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/76fa/live/ea62ee60-e4bd-11f1-87df-79d8910e0f29.jpg",
+          "credito": "BBC News",
+          "resumo": "He has been fired after losing the confidence of new White House chief of staff Stephen Miller, according to reports.",
+          "materias": [
+            {
+              "fonte": "BBC News",
+              "pais": "Reino Unido",
+              "visao": "Emissora pública britânica",
+              "estatal": false,
+              "tipo": "noticia",
+              "titulo": "White House removes cyber-security chief after series of tech outages",
+              "link": "https://www.bbc.co.uk/news/articles/cwz0k3nn5p5mo?at_medium=RSS&at_campaign=rss",
+              "publicadoEm": "2026-11-20T19:03:56.000Z"
+            },
+            {
+              "fonte": "The Hindu",
+              "pais": "Índia",
+              "visao": "Jornal de referência indiano",
+              "estatal": false,
+              "tipo": "noticia",
+              "titulo": "White House fires cybersecurity chief after widespread outages",
+              "link": "https://www.thehindu.com/news/international/white-house-fires-cybersecurity-chief-after-widespread-outages/article71722952.ece",
+              "publicadoEm": "2026-11-20T08:05:47.000Z"
+            },
+            {
+              "fonte": "Euronews",
+              "pais": "União Europeia",
+              "visao": "Canal de notícias pan-europeu",
+              "estatal": false,
+              "tipo": "noticia",
+              "titulo": "White House national cyber director fired after wave of tech outages",
+              "link": "https://www.euronews.com/2026/11/20/white-house-national-cyber-director-fired-after-wave-of-tech-outages",
+              "publicadoEm": "2026-11-20T07:03:40.000Z"
+            },
+            {
+              "fonte": "Asharq Al-Awsat",
+              "pais": "Arábia Saudita",
+              "visao": "Jornal pan-árabe de dono saudita",
+              "estatal": false,
+              "tipo": "noticia",
+              "titulo": "White House Taps Kirsten Davies as Cyber Chief After Outages Rattle Americans",
+              "link": "https://english.aawsat.com/node/5343475",
+              "publicadoEm": "2026-11-20T06:52:02.000Z"
+            },
+            {
+              "fonte": "Daily Maverick",
+              "pais": "África do Sul",
+              "visao": "Jornal sul-africano independente",
+              "estatal": false,
+              "tipo": "noticia",
+              "titulo": "Trump ousts cyber director after tech outages spark criticism",
+              "link": "https://www.dailymaverick.co.za/article/2026-11-20-trump-ousts-cyber-director-after-tech-outages-spark-criticism-friday-20th-november-2026-0338/",
+              "publicadoEm": "2026-11-20T05:07:59.000Z"
+            },
+            {
+              "fonte": "CNA",
+              "pais": "Singapura",
+              "visao": "Canal de Singapura, foco no Sudeste Asiático",
+              "estatal": true,
+              "tipo": "noticia",
+              "titulo": "Trump ousts cyber director after tech outages spark criticism",
+              "link": "https://www.channelnewsasia.com/world/white-house-fires-cybersecurity-chief-widespread-outages-6567801",
+              "publicadoEm": "2026-11-20T01:13:00.000Z"
+            }
+          ]
+        },
+        {
+          "fatoId": "4224d9be550b",
+          "tituloPt": "IA Anthropic resolve grande desafio matemático",
+          "porQueImporta": "Avanço que pode acelerar adoção de IA no Brasil, impactando setores como agronegócio e educação",
+          "regioes": [
+            "europa",
+            "mundo"
+          ],
+          "temas": [
+            "tecnologia",
+            "economia"
+          ],
+          "imagem": "https://th-i.thgim.com/public/incoming/d9fw45/article71725961.ece/alternates/LANDSCAPE_1200/2026-11-10T184736Z_1618194784_RC2UNLANRGUU_RTRMADP_3_ANTHROPIC-CLAUDE-GOOGLE.JPG",
+          "credito": "The Hindu",
+          "resumo": "The claim regarding the Riemann Hypothesis has not been independently verified.",
+          "materias": [
+            {
+              "fonte": "The Straits Times",
+              "pais": "Singapura",
+              "visao": "Jornal de referência de Singapura",
+              "estatal": false,
+              "tipo": "noticia",
+              "titulo": "Anthropic researcher says AI chatbot Claude solved math’s greatest riddle",
+              "link": "https://www.straitstimes.com/world/united-states/anthropic-researcher-says-ai-chatbot-claude-solved-maths-greatest-riddle",
+              "publicadoEm": "2026-11-20T20:00:30.000Z"
+            },
+            {
+              "fonte": "The Hindu",
+              "pais": "Índia",
+              "visao": "Jornal de referência indiano",
+              "estatal": false,
+              "tipo": "noticia",
+              "titulo": "Anthropic researcher says Claude solved maths’ greatest riddle",
+              "link": "https://www.thehindu.com/sci-tech/technology/anthropic-researcher-says-claude-solved-maths-greatest-riddle/article71725942.ece",
+              "publicadoEm": "2026-11-20T18:35:22.000Z"
+            },
+            {
+              "fonte": "South China Morning Post",
+              "pais": "Hong Kong",
+              "visao": "Jornal de Hong Kong sobre China e Ásia",
+              "estatal": false,
+              "tipo": "noticia",
+              "titulo": "Anthropic researcher says Claude AI has solved maths’ greatest riddle: Riemann Hypothesis",
+              "link": "https://www.scmp.com/news/world/united-states-canada/article/3375294/anthropic-researcher-says-claude-has-solved-maths-greatest-riddle",
+              "publicadoEm": "2026-11-20T17:55:08.000Z"
+            }
+          ]
+        },
+        {
+          "fatoId": "6546c0e16fcf",
+          "tituloPt": "Coalizão saudita lança operação especial no Iêmen",
+          "porQueImporta": "Intensifica conflito que afeta preços de energia e rotas de exportação de petróleo, influenciando a economia brasileira",
+          "regioes": [
+            "oriente-medio",
+            "america-norte"
+          ],
+          "temas": [
+            "conflitos",
+            "energia",
+            "politica"
+          ],
+          "imagem": "",
+          "credito": "",
+          "resumo": "The Saudi-led coalition fighting Yemen's Houthis attacked the Red Sea port city of Hodeida and other targets in a \"special operation\" on Friday, as the group threatened reprisals. The coalition said it hit smuggling and weapons-transporting operations in Hodeida while also…",
+          "materias": [
+            {
+              "fonte": "Al-Monitor",
+              "pais": "EUA",
+              "visao": "Site especializado em Oriente Médio",
+              "estatal": false,
+              "tipo": "noticia",
+              "titulo": "Saudi coalition launches 'special operation', Yemen's Houthis vow reprisals",
+              "link": "https://www.al-monitor.com/originals/2026/11/saudi-coalition-launches-special-operation-yemens-houthis-vow-reprisals",
+              "publicadoEm": "2026-11-20T19:30:24.000Z"
+            },
+            {
+              "fonte": "Middle East Eye",
+              "pais": "Reino Unido",
+              "visao": "Site focado no Oriente Médio, crítico de governos da região",
+              "estatal": false,
+              "tipo": "noticia",
+              "titulo": "Houthis say 41 killed as Saudi-led coalition launches 'special operation' in Yemen",
+              "link": "https://www.middleeasteye.net/live-blog/live-blog-update/houthis-say-41-killed-saudi-led-coalition-launches-special-operation",
+              "publicadoEm": "2026-11-20T16:57:08.000Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

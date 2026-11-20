@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-20T21:50:22.340Z",
+  "geradoEm": "2026-11-20T21:51:08.665Z",
   "dataReferencia": "2026-11-20",
   "fuso": "America/Sao_Paulo",
-  "totalNoticias": 1421,
+  "totalNoticias": 1422,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -575,6 +575,110 @@
       ]
     },
     {
+      "id": "504b0b4b2a8e",
+      "titulo": "Denmark Expels Russian Diplomat After Accusing Moscow of Planning a Hit",
+      "resumo": "Danish officials say Russian intelligence services recruited members of a violent gang to try to assassinate a Ukrainian rapper at a concert outside Copenhagen.",
+      "imagem": "https://static01.nyt.com/images/2026/11/20/multimedia/20int-denmark-ukraine-rapper-photo-pqwv/20int-denmark-ukraine-rapper-photo-pqwv-mediumSquareAt3X.jpg",
+      "credito": "The New York Times",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "diplomacia",
+        "conflitos",
+        "politica"
+      ],
+      "fontes": 7,
+      "paises": 6,
+      "maisRecente": "2026-11-20T21:47:21.000Z",
+      "materias": [
+        {
+          "fonte": "The New York Times",
+          "pais": "EUA",
+          "visao": "Jornal de referência dos EUA, centro-esquerda",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Denmark Expels Russian Diplomat After Accusing Moscow of Planning a Hit",
+          "link": "https://www.nytimes.com/2026/11/20/world/europe/denmark-russia-ukraine-rapper-assassination.html",
+          "publicadoEm": "2026-11-20T21:47:21.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Denmark expels Russian diplomat over attempt to kill Ukrainian rapper",
+          "link": "https://www.straitstimes.com/world/europe/denmark-expels-russian-diplomat-over-attempt-to-kill-ukrainian-rapper",
+          "publicadoEm": "2026-11-20T19:40:03.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Meduza",
+          "pais": "Rússia",
+          "visao": "Site russo independente, no exílio, oposição ao Kremlin",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Denmark to expel Russia’s military attaché after arrests in alleged plot to kill Ukrainian rapper",
+          "link": "https://meduza.io/en/news/2026/11/20/denmark-to-expel-russia-s-military-attache-after-arrests-in-alleged-plot-to-kill-ukrainian-rapper",
+          "publicadoEm": "2026-11-20T19:34:10.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Guardian",
+          "pais": "Reino Unido",
+          "visao": "Jornal britânico, centro-esquerda",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Denmark to expel Russian diplomat over alleged Moscow link to attempted killing of rapper",
+          "link": "https://www.theguardian.com/world/2026/nov/20/denmark-russian-diplomat-us-ukrainian-rapper-attempted-killing",
+          "publicadoEm": "2026-11-20T18:16:12.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "South China Morning Post",
+          "pais": "Hong Kong",
+          "visao": "Jornal de Hong Kong sobre China e Ásia",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Denmark expels Russian diplomat over plot to kill Ukraine rapper",
+          "link": "https://www.scmp.com/news/world/europe/article/3375295/denmark-expels-russian-diplomat-over-plot-kill-ukraine-rapper",
+          "publicadoEm": "2026-11-20T18:14:12.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "TASS",
+          "pais": "Rússia",
+          "visao": "Agência estatal russa (versão oficial do Kremlin)",
+          "estatal": true,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Russia to respond to Denmark’s expulsion of military attache — diplomat",
+          "link": "https://tass.com/politics/2222681",
+          "publicadoEm": "2026-11-20T17:31:28.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Ukrainska Pravda",
+          "pais": "Ucrânia",
+          "visao": "Site ucraniano de jornalismo independente",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Denmark says Russia planned to assassinate Ukrainian rapper Kyivstoner",
+          "link": "https://www.pravda.com.ua/eng/news/2026/11/20/8063823/",
+          "publicadoEm": "2026-11-20T13:40:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
       "id": "7b1a23d32eff",
       "titulo": "Russia complains of ‘new Iron Curtain’ as Estonia shuts its borders",
       "resumo": "Tallinn's decision to shut road border crossings comes after an attack on a drone manufacturer.",
@@ -986,124 +1090,6 @@
           "titulo": "Reino Unido e União Europeia fecham acordo de reaproximação após Brexit",
           "link": "https://veja.abril.com.br/mundo/reino-unido-e-uniao-europeia-fecham-acordo-de-reaproximacao-apos-brexit/",
           "publicadoEm": "2026-11-20T12:13:25.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "3f8818fb4a99",
-      "titulo": "Two arrested in Denmark over alleged plot to kill a Ukrainian rapper",
-      "resumo": "Two Danish citizens have been arrested on charges of plotting to assassinate Ukrainian rapper Kyivstoner (real name Albert Vasiliev) during his trip to the country in September, Danish broadcaster DR reports.",
-      "imagem": "https://meduza.io/imgly/share/1795204892/en/news/2026/11/20/two-arrested-in-denmark-over-alleged-plot-to-kill-a-ukrainian-rapper",
-      "credito": "Meduza",
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "diplomacia",
-        "conflitos",
-        "politica",
-        "midia",
-        "direitos"
-      ],
-      "fontes": 6,
-      "paises": 5,
-      "maisRecente": "2026-11-20T20:01:32.000Z",
-      "materias": [
-        {
-          "fonte": "Meduza",
-          "pais": "Rússia",
-          "visao": "Site russo independente, no exílio, oposição ao Kremlin",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Two arrested in Denmark over alleged plot to kill a Ukrainian rapper",
-          "link": "https://meduza.io/en/news/2026/11/20/two-arrested-in-denmark-over-alleged-plot-to-kill-a-ukrainian-rapper",
-          "publicadoEm": "2026-11-20T20:01:32.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The Straits Times",
-          "pais": "Singapura",
-          "visao": "Jornal de referência de Singapura",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Denmark expels Russian diplomat over attempt to kill Ukrainian rapper",
-          "link": "https://www.straitstimes.com/world/europe/denmark-expels-russian-diplomat-over-attempt-to-kill-ukrainian-rapper",
-          "publicadoEm": "2026-11-20T19:40:03.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Meduza",
-          "pais": "Rússia",
-          "visao": "Site russo independente, no exílio, oposição ao Kremlin",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Denmark to expel Russia’s military attaché after arrests in alleged plot to kill Ukrainian rapper",
-          "link": "https://meduza.io/en/news/2026/11/20/denmark-to-expel-russia-s-military-attache-after-arrests-in-alleged-plot-to-kill-ukrainian-rapper",
-          "publicadoEm": "2026-11-20T19:34:10.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The Guardian",
-          "pais": "Reino Unido",
-          "visao": "Jornal britânico, centro-esquerda",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Denmark to expel Russian diplomat over alleged Moscow link to attempted killing of rapper",
-          "link": "https://www.theguardian.com/world/2026/nov/20/denmark-russian-diplomat-us-ukrainian-rapper-attempted-killing",
-          "publicadoEm": "2026-11-20T18:16:12.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "South China Morning Post",
-          "pais": "Hong Kong",
-          "visao": "Jornal de Hong Kong sobre China e Ásia",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Denmark expels Russian diplomat over plot to kill Ukraine rapper",
-          "link": "https://www.scmp.com/news/world/europe/article/3375295/denmark-expels-russian-diplomat-over-plot-kill-ukraine-rapper",
-          "publicadoEm": "2026-11-20T18:14:12.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "TASS",
-          "pais": "Rússia",
-          "visao": "Agência estatal russa (versão oficial do Kremlin)",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Russia to respond to Denmark’s expulsion of military attache — diplomat",
-          "link": "https://tass.com/politics/2222681",
-          "publicadoEm": "2026-11-20T17:31:28.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Ukrainska Pravda",
-          "pais": "Ucrânia",
-          "visao": "Site ucraniano de jornalismo independente",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Denmark says Russia planned to assassinate Ukrainian rapper Kyivstoner",
-          "link": "https://www.pravda.com.ua/eng/news/2026/11/20/8063823/",
-          "publicadoEm": "2026-11-20T13:40:00.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The Straits Times",
-          "pais": "Singapura",
-          "visao": "Jornal de referência de Singapura",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Two men suspected of being hired by Russia to kill Ukrainian rapper",
-          "link": "https://www.straitstimes.com/world/europe/two-danes-suspected-of-being-hired-by-russia-to-kill-ukrainian-rapper",
-          "publicadoEm": "2026-11-20T12:20:17.000Z",
           "semData": false
         }
       ]
@@ -3907,6 +3893,50 @@
           "titulo": "'Robôs assassinos' já são usados em guerras, mas países não chegam a acordo sobre limites na ONU",
           "link": "https://g1.globo.com/inovacao/noticia/2026/11/20/robos-assassinos-ja-sao-usados-em-guerras-mas-paises-nao-chegam-a-acordo-sobre-limites-na-onu.ghtml",
           "publicadoEm": "2026-11-20T14:00:27.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "3f8818fb4a99",
+      "titulo": "Two arrested in Denmark over alleged plot to kill a Ukrainian rapper",
+      "resumo": "Two Danish citizens have been arrested on charges of plotting to assassinate Ukrainian rapper Kyivstoner (real name Albert Vasiliev) during his trip to the country in September, Danish broadcaster DR reports.",
+      "imagem": "https://meduza.io/imgly/share/1795204892/en/news/2026/11/20/two-arrested-in-denmark-over-alleged-plot-to-kill-a-ukrainian-rapper",
+      "credito": "Meduza",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "midia",
+        "direitos"
+      ],
+      "fontes": 2,
+      "paises": 2,
+      "maisRecente": "2026-11-20T20:01:32.000Z",
+      "materias": [
+        {
+          "fonte": "Meduza",
+          "pais": "Rússia",
+          "visao": "Site russo independente, no exílio, oposição ao Kremlin",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Two arrested in Denmark over alleged plot to kill a Ukrainian rapper",
+          "link": "https://meduza.io/en/news/2026/11/20/two-arrested-in-denmark-over-alleged-plot-to-kill-a-ukrainian-rapper",
+          "publicadoEm": "2026-11-20T20:01:32.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Two men suspected of being hired by Russia to kill Ukrainian rapper",
+          "link": "https://www.straitstimes.com/world/europe/two-danes-suspected-of-being-hired-by-russia-to-kill-ukrainian-rapper",
+          "publicadoEm": "2026-11-20T12:20:17.000Z",
           "semData": false
         }
       ]
@@ -7409,6 +7439,37 @@
           "titulo": "Abu Dhabi's MGX emerges as major winner in Anthropic IPO",
           "link": "https://www.thenationalnews.com/future/technology/2026/11/20/mgx-anthropic-ipo-adif/",
           "publicadoEm": "2026-11-20T21:23:13.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "d5eee848d1c4",
+      "titulo": "US must take decisive step in dialogue with Russia, Jeffrey Sachs says",
+      "resumo": "Director of Columbia University's Center for Sustainable Development Jeffrey Sachs expressed hope that the US will not enter a military alliance with Ukraine or Georgia and will not support their admission to NATO",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T21:22:00.000Z",
+      "materias": [
+        {
+          "fonte": "TASS",
+          "pais": "Rússia",
+          "visao": "Agência estatal russa (versão oficial do Kremlin)",
+          "estatal": true,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "US must take decisive step in dialogue with Russia, Jeffrey Sachs says",
+          "link": "https://tass.com/politics/2222767",
+          "publicadoEm": "2026-11-20T21:22:00.000Z",
           "semData": false
         }
       ]
@@ -38703,37 +38764,6 @@
           "titulo": "Policial que matou homem negro em Wisconsin, nos EUA, não será indiciado, diz promotoria",
           "link": "https://www.estadao.com.br/internacional/policial-matou-homem-negro-wisconsin-eua-nao-sera-indiciado-npr/",
           "publicadoEm": "2026-11-19T21:58:20.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "22df3414e9a5",
-      "titulo": "Entenda os 4 pontos da declaração conjunta de Trump, Xi e Putin",
-      "resumo": "Esta é a edição da newsletter Lá Fora. Quer recebê-la no seu email? Inscreva-se abaixo : Leia mais (11/19/2026 - 18h51)",
-      "imagem": "",
-      "credito": "",
-      "regioes": [
-        "america-norte",
-        "europa"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T21:51:00.000Z",
-      "materias": [
-        {
-          "fonte": "Folha Mundo",
-          "pais": "Brasil",
-          "visao": "Jornal de referência brasileiro",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "pt",
-          "titulo": "Entenda os 4 pontos da declaração conjunta de Trump, Xi e Putin",
-          "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/entenda-os-4-pontos-da-declaracao-conjunta-de-trump-xi-e-putin.shtml",
-          "publicadoEm": "2026-11-19T21:51:00.000Z",
           "semData": false
         }
       ]

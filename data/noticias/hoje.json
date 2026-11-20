@@ -1,10 +1,10 @@
 {
-  "geradoEm": "2026-11-20T21:50:22.340Z",
+  "geradoEm": "2026-11-20T21:51:08.665Z",
   "fuso": "America/Sao_Paulo",
   "dataReferencia": "2026-11-20",
   "janelaHoras": 24,
-  "totalNoticias": 1421,
-  "totalFatos": 1134,
+  "totalNoticias": 1422,
+  "totalFatos": 1135,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -138,6 +138,31 @@
       ]
     },
     {
+      "id": "504b0b4b2a8e",
+      "titulo": "Denmark Expels Russian Diplomat After Accusing Moscow of Planning a Hit",
+      "imagem": "https://static01.nyt.com/images/2026/11/20/multimedia/20int-denmark-ukraine-rapper-photo-pqwv/20int-denmark-ukraine-rapper-photo-pqwv-mediumSquareAt3X.jpg",
+      "fontes": 7,
+      "umaFonteSo": false,
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "diplomacia",
+        "conflitos",
+        "politica"
+      ],
+      "maisRecente": "2026-11-20T21:47:21.000Z",
+      "noticias": [
+        "504b0b4b2a8e",
+        "7c7462cdf7f6",
+        "ad7ea8e66f28",
+        "80154fe65d34",
+        "487c1f22483b",
+        "0ffce361c510",
+        "e4cf90f11156"
+      ]
+    },
+    {
       "id": "7b1a23d32eff",
       "titulo": "Russia complains of ‘new Iron Curtain’ as Estonia shuts its borders",
       "imagem": "https://th-i.thgim.com/public/news/national/gzr8lv/article71725812.ece/alternates/LANDSCAPE_1200/iStock-1348141138.jpg",
@@ -246,34 +271,6 @@
         "d3bbdd510cff",
         "f1abe986ef18",
         "c1f34ebd8316"
-      ]
-    },
-    {
-      "id": "3f8818fb4a99",
-      "titulo": "Two arrested in Denmark over alleged plot to kill a Ukrainian rapper",
-      "imagem": "https://meduza.io/imgly/share/1795204892/en/news/2026/11/20/two-arrested-in-denmark-over-alleged-plot-to-kill-a-ukrainian-rapper",
-      "fontes": 6,
-      "umaFonteSo": false,
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "diplomacia",
-        "conflitos",
-        "politica",
-        "midia",
-        "direitos"
-      ],
-      "maisRecente": "2026-11-20T20:01:32.000Z",
-      "noticias": [
-        "3f8818fb4a99",
-        "7c7462cdf7f6",
-        "ad7ea8e66f28",
-        "80154fe65d34",
-        "487c1f22483b",
-        "0ffce361c510",
-        "e4cf90f11156",
-        "9085b6daf043"
       ]
     },
     {
@@ -1253,6 +1250,26 @@
       "noticias": [
         "ef0c03a57e04",
         "90364238795c"
+      ]
+    },
+    {
+      "id": "3f8818fb4a99",
+      "titulo": "Two arrested in Denmark over alleged plot to kill a Ukrainian rapper",
+      "imagem": "https://meduza.io/imgly/share/1795204892/en/news/2026/11/20/two-arrested-in-denmark-over-alleged-plot-to-kill-a-ukrainian-rapper",
+      "fontes": 2,
+      "umaFonteSo": false,
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "midia",
+        "direitos"
+      ],
+      "maisRecente": "2026-11-20T20:01:32.000Z",
+      "noticias": [
+        "3f8818fb4a99",
+        "9085b6daf043"
       ]
     },
     {
@@ -2886,6 +2903,24 @@
       "maisRecente": "2026-11-20T21:23:13.000Z",
       "noticias": [
         "7f3a9bebe980"
+      ]
+    },
+    {
+      "id": "d5eee848d1c4",
+      "titulo": "US must take decisive step in dialogue with Russia, Jeffrey Sachs says",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia"
+      ],
+      "maisRecente": "2026-11-20T21:22:00.000Z",
+      "noticias": [
+        "d5eee848d1c4"
       ]
     },
     {
@@ -20818,24 +20853,6 @@
       "noticias": [
         "5f5e9aaacadc"
       ]
-    },
-    {
-      "id": "22df3414e9a5",
-      "titulo": "Entenda os 4 pontos da declaração conjunta de Trump, Xi e Putin",
-      "imagem": "",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "america-norte",
-        "europa"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "maisRecente": "2026-11-19T21:51:00.000Z",
-      "noticias": [
-        "22df3414e9a5"
-      ]
     }
   ],
   "noticias": [
@@ -20873,6 +20890,33 @@
         "midia"
       ],
       "coletadoEm": "2026-11-20T21:50:22.340Z"
+    },
+    {
+      "id": "504b0b4b2a8e",
+      "titulo": "Denmark Expels Russian Diplomat After Accusing Moscow of Planning a Hit",
+      "resumo": "Danish officials say Russian intelligence services recruited members of a violent gang to try to assassinate a Ukrainian rapper at a concert outside Copenhagen.",
+      "link": "https://www.nytimes.com/2026/11/20/world/europe/denmark-russia-ukraine-rapper-assassination.html",
+      "fonte": "nyt",
+      "fonteNome": "The New York Times",
+      "pais": "EUA",
+      "visao": "Jornal de referência dos EUA, centro-esquerda",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:47:21.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://static01.nyt.com/images/2026/11/20/multimedia/20int-denmark-ukraine-rapper-photo-pqwv/20int-denmark-ukraine-rapper-photo-pqwv-mediumSquareAt3X.jpg",
+      "imagemCredito": "The New York Times",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia"
+      ],
+      "coletadoEm": "2026-11-20T21:51:08.665Z"
     },
     {
       "id": "441b3a54efb3",
@@ -21230,6 +21274,33 @@
         "economia"
       ],
       "coletadoEm": "2026-11-20T21:32:55.518Z"
+    },
+    {
+      "id": "d5eee848d1c4",
+      "titulo": "US must take decisive step in dialogue with Russia, Jeffrey Sachs says",
+      "resumo": "Director of Columbia University's Center for Sustainable Development Jeffrey Sachs expressed hope that the US will not enter a military alliance with Ukraine or Georgia and will not support their admission to NATO",
+      "link": "https://tass.com/politics/2222767",
+      "fonte": "tass",
+      "fonteNome": "TASS",
+      "pais": "Rússia",
+      "visao": "Agência estatal russa (versão oficial do Kremlin)",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:22:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia"
+      ],
+      "coletadoEm": "2026-11-20T21:51:08.665Z"
     },
     {
       "id": "907bb66957b9",
@@ -59188,33 +59259,6 @@
         "diplomacia"
       ],
       "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "22df3414e9a5",
-      "titulo": "Entenda os 4 pontos da declaração conjunta de Trump, Xi e Putin",
-      "resumo": "Esta é a edição da newsletter Lá Fora. Quer recebê-la no seu email? Inscreva-se abaixo : Leia mais (11/19/2026 - 18h51)",
-      "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/entenda-os-4-pontos-da-declaracao-conjunta-de-trump-xi-e-putin.shtml",
-      "fonte": "folha",
-      "fonteNome": "Folha Mundo",
-      "pais": "Brasil",
-      "visao": "Jornal de referência brasileiro",
-      "idioma": "pt",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T21:51:00.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "",
-      "imagemCredito": "",
-      "regioes": [
-        "america-norte",
-        "europa"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
     }
   ]
 }
