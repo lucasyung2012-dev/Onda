@@ -1,10 +1,10 @@
 {
-  "geradoEm": "2026-11-20T21:17:00.434Z",
+  "geradoEm": "2026-11-20T21:32:55.518Z",
   "fuso": "America/Sao_Paulo",
   "dataReferencia": "2026-11-20",
   "janelaHoras": 24,
-  "totalNoticias": 1398,
-  "totalFatos": 1117,
+  "totalNoticias": 1420,
+  "totalFatos": 1132,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -32,56 +32,53 @@
   },
   "fatos": [
     {
-      "id": "3642ab4c66d8",
-      "titulo": "Trump doesn’t want to talks about security guarantees for Ukraine until deal is reached",
-      "imagem": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/8/c/961118/8cc01a98d2d5cea34ea6b373beb3af30.jpeg",
-      "fontes": 17,
+      "id": "907bb66957b9",
+      "titulo": "‘This was no Yalta’: How the world’s press read the Trump–Putin–Xi summit in China",
+      "imagem": "https://meduza.io/image/attachments/images/012/997/359/small/4o1tfRvVOU0ghhkn8RwvCg",
+      "fontes": 15,
       "umaFonteSo": false,
       "regioes": [
-        "america-norte",
         "europa",
+        "america-norte",
         "asia-pacifico",
         "global"
       ],
       "temas": [
         "diplomacia",
-        "politica",
         "conflitos",
+        "politica",
         "energia",
-        "direitos",
-        "economia"
+        "economia",
+        "direitos"
       ],
-      "maisRecente": "2026-11-20T20:03:01.000Z",
+      "maisRecente": "2026-11-20T21:20:52.000Z",
       "noticias": [
-        "3642ab4c66d8",
-        "9901a664ab2b",
-        "77581637bbd4",
+        "907bb66957b9",
         "316ea496e5cb",
         "2679cd600bc2",
         "5447230f9e98",
         "14bc82f747ce",
-        "d4cad428210c",
-        "e806181d4f31",
         "827ea1de3427",
         "c940e829c87e",
         "cee65da7b236",
         "b6797dee7e1f",
+        "c00b02fc58bf",
         "a234d10a6f12",
         "146999adabf1",
         "8a17df9865e3",
         "84ee1f14a44e",
         "f7b693592314",
         "4fe49d780de8",
+        "ce25c631053a",
         "3cc8a3bc44d4",
-        "11fcd29f55f9",
-        "f9769f3205d7"
+        "11fcd29f55f9"
       ]
     },
     {
       "id": "3640a3fbb952",
       "titulo": "'Friends' But Who Benefits? Notes from an Historic Summit, Myanmar's Genocide Ruling, Time to 'Bre-join' the EU?",
       "imagem": "https://s.france24.com/media/display/cfefa95a-e518-11f1-b6ef-13439ca2fe89/w:1024/p:16x9/2026-11-19T230006Z-1256675834-RC2WQOACA4BG-RTRMADP-3-CYBERSECURITY-DRONES-RISK.jpg",
-      "fontes": 10,
+      "fontes": 11,
       "umaFonteSo": false,
       "regioes": [
         "asia-pacifico",
@@ -91,14 +88,15 @@
       "temas": [
         "direitos",
         "politica",
-        "diplomacia",
-        "conflitos"
+        "conflitos",
+        "diplomacia"
       ],
       "maisRecente": "2026-11-20T19:42:58.000Z",
       "noticias": [
         "3640a3fbb952",
         "83035937eb8b",
         "647fbb4b0802",
+        "9b9ee78ddf96",
         "1deeaf75e425",
         "f030512a350f",
         "c3c9f0569bbd",
@@ -106,8 +104,38 @@
         "1122161db4c7",
         "b5b5389eec49",
         "c77fcaf2e982",
-        "e2b8f21b595e",
-        "5609de10c658"
+        "e2b8f21b595e"
+      ]
+    },
+    {
+      "id": "6cc38668b794",
+      "titulo": "What are the implications of the ICJ Rohingya genocide ruling?",
+      "imagem": "https://www.thenationalnews.com/resizer/v2/6YEWN4MEKNBV5L6Y2XW4RSIK34.JPG?auth=1db353f9d73fe30f13ee2dea6a11772fe8da9e74868eccba73c4456fef81d021&smart=true&width=7856&height=5239",
+      "fontes": 9,
+      "umaFonteSo": false,
+      "regioes": [
+        "oriente-medio",
+        "asia-pacifico",
+        "africa"
+      ],
+      "temas": [
+        "direitos",
+        "conflitos",
+        "economia",
+        "diplomacia",
+        "clima"
+      ],
+      "maisRecente": "2026-11-20T19:12:14.000Z",
+      "noticias": [
+        "6cc38668b794",
+        "6ab57dae723b",
+        "548f344788d6",
+        "bbbcc7ffa943",
+        "4206ab86ff2d",
+        "7d6bcbdea648",
+        "406da3cf784a",
+        "e0b1167422c9",
+        "6c49addc3e67"
       ]
     },
     {
@@ -162,35 +190,6 @@
         "01ef6b7ec7ab",
         "6edc9b97feb8",
         "1bf1024bff2c"
-      ]
-    },
-    {
-      "id": "6cc38668b794",
-      "titulo": "What are the implications of the ICJ Rohingya genocide ruling?",
-      "imagem": "https://www.thenationalnews.com/resizer/v2/6YEWN4MEKNBV5L6Y2XW4RSIK34.JPG?auth=1db353f9d73fe30f13ee2dea6a11772fe8da9e74868eccba73c4456fef81d021&smart=true&width=7856&height=5239",
-      "fontes": 7,
-      "umaFonteSo": false,
-      "regioes": [
-        "oriente-medio",
-        "asia-pacifico",
-        "africa"
-      ],
-      "temas": [
-        "direitos",
-        "conflitos",
-        "economia",
-        "diplomacia",
-        "clima"
-      ],
-      "maisRecente": "2026-11-20T19:12:14.000Z",
-      "noticias": [
-        "6cc38668b794",
-        "6ab57dae723b",
-        "548f344788d6",
-        "bbbcc7ffa943",
-        "4206ab86ff2d",
-        "7d6bcbdea648",
-        "e0b1167422c9"
       ]
     },
     {
@@ -351,33 +350,6 @@
         "414c64b35bee",
         "9addc2b74745",
         "9249850e48d7"
-      ]
-    },
-    {
-      "id": "894961ec2a1c",
-      "titulo": "Trump Flaunts Camaraderie With Xi and Putin but Has Little to Show for It",
-      "imagem": "https://static01.nyt.com/images/2026/11/19/multimedia/19trump-summits-ledeall-01-cvbz/19trump-summits-ledeall-01-cvbz-mediumSquareAt3X.jpg",
-      "fontes": 5,
-      "umaFonteSo": false,
-      "regioes": [
-        "europa",
-        "america-norte",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "conflitos",
-        "diplomacia",
-        "politica",
-        "energia",
-        "outros"
-      ],
-      "maisRecente": "2026-11-20T20:20:51.000Z",
-      "noticias": [
-        "894961ec2a1c",
-        "f3238346ec92",
-        "d110e28f6dfb",
-        "6bd27c80378b",
-        "ce25c631053a"
       ]
     },
     {
@@ -584,6 +556,34 @@
       ]
     },
     {
+      "id": "8fc50c70f6f9",
+      "titulo": "Trump diz que Filipinas trocarão produtos agrícolas do Brasil pelos dos EUA",
+      "imagem": "https://veja.abril.com.br/wp-content/uploads/2026/04/lula-donald-trump.jpg",
+      "fontes": 4,
+      "umaFonteSo": false,
+      "regioes": [
+        "america-norte",
+        "brasil",
+        "asia-pacifico",
+        "europa",
+        "oriente-medio"
+      ],
+      "temas": [
+        "diplomacia",
+        "economia",
+        "politica",
+        "conflitos",
+        "energia"
+      ],
+      "maisRecente": "2026-11-20T21:16:00.000Z",
+      "noticias": [
+        "8fc50c70f6f9",
+        "67c411093ffb",
+        "1b707cd24368",
+        "04bb5e4bd9f9"
+      ]
+    },
+    {
       "id": "efd15946f176",
       "titulo": "France investigates actor Depardieu, author Houellebecq over alleged gang rape",
       "imagem": "https://img.lemde.fr/2026/11/20/0/97/1006/503/644/322/60/0/3449d3c_upload-1-fobb0c8ctxha-1217824.png",
@@ -624,6 +624,57 @@
         "890febee8946",
         "53d2353605b2",
         "f451b9b779d9"
+      ]
+    },
+    {
+      "id": "894961ec2a1c",
+      "titulo": "Trump Flaunts Camaraderie With Xi and Putin but Has Little to Show for It",
+      "imagem": "https://static01.nyt.com/images/2026/11/19/multimedia/19trump-summits-ledeall-01-cvbz/19trump-summits-ledeall-01-cvbz-mediumSquareAt3X.jpg",
+      "fontes": 4,
+      "umaFonteSo": false,
+      "regioes": [
+        "europa",
+        "america-norte",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "conflitos",
+        "politica",
+        "diplomacia",
+        "energia",
+        "outros"
+      ],
+      "maisRecente": "2026-11-20T20:20:51.000Z",
+      "noticias": [
+        "894961ec2a1c",
+        "f3238346ec92",
+        "d110e28f6dfb",
+        "6bd27c80378b"
+      ]
+    },
+    {
+      "id": "3642ab4c66d8",
+      "titulo": "Trump doesn’t want to talks about security guarantees for Ukraine until deal is reached",
+      "imagem": "https://meduza.io/imgly/share/1795195144/en/news/2026/11/20/ukraine-clause-dropped-from-trump-putin-and-xi-s-peace-declaration-at-u-s-request-finland-s-president-says",
+      "fontes": 4,
+      "umaFonteSo": false,
+      "regioes": [
+        "america-norte",
+        "europa",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "diplomacia",
+        "politica",
+        "conflitos"
+      ],
+      "maisRecente": "2026-11-20T20:03:01.000Z",
+      "noticias": [
+        "3642ab4c66d8",
+        "9901a664ab2b",
+        "77581637bbd4",
+        "d4cad428210c",
+        "e806181d4f31"
       ]
     },
     {
@@ -693,6 +744,29 @@
       ]
     },
     {
+      "id": "3d617bdf334a",
+      "titulo": "Trump threatens tax on US tech firms building AI data centres abroad",
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/d522adf378f0819aebc696fdcb7c2822?impolicy=wcms_crop_resize&cropH=1359&cropW=2416&xPos=0&yPos=128&width=862&height=485",
+      "fontes": 3,
+      "umaFonteSo": false,
+      "regioes": [
+        "america-norte",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "politica",
+        "tecnologia",
+        "economia",
+        "conflitos"
+      ],
+      "maisRecente": "2026-11-20T21:10:53.000Z",
+      "noticias": [
+        "3d617bdf334a",
+        "b0d8a67e7982",
+        "36fb31620a7c"
+      ]
+    },
+    {
       "id": "4224d9be550b",
       "titulo": "Anthropic researcher says AI chatbot Claude solved math’s greatest riddle",
       "imagem": "https://th-i.thgim.com/public/incoming/d9fw45/article71725961.ece/alternates/LANDSCAPE_1200/2026-11-10T184736Z_1618194784_RC2UNLANRGUU_RTRMADP_3_ANTHROPIC-CLAUDE-GOOGLE.JPG",
@@ -711,33 +785,6 @@
         "4224d9be550b",
         "cd3a5ef04e7d",
         "7e101c0e1076"
-      ]
-    },
-    {
-      "id": "67c411093ffb",
-      "titulo": "Trump diz que Filipinas vão trocar Brasil pelos EUA em importações de produtos agrícolas",
-      "imagem": "https://veja.abril.com.br/wp-content/uploads/2026/04/lula-donald-trump.jpg",
-      "fontes": 3,
-      "umaFonteSo": false,
-      "regioes": [
-        "brasil",
-        "america-norte",
-        "asia-pacifico",
-        "europa",
-        "oriente-medio"
-      ],
-      "temas": [
-        "diplomacia",
-        "economia",
-        "politica",
-        "conflitos",
-        "energia"
-      ],
-      "maisRecente": "2026-11-20T19:48:35.000Z",
-      "noticias": [
-        "67c411093ffb",
-        "1b707cd24368",
-        "04bb5e4bd9f9"
       ]
     },
     {
@@ -964,6 +1011,25 @@
       ]
     },
     {
+      "id": "b4e3f5a9b125",
+      "titulo": "'Licence to kill': French parliament adopts police shootings law slammed by activists",
+      "imagem": "https://s.france24.com/media/display/84d2817a-e524-11f1-9187-1bac47ab2f5d/w:1024/p:16x9/000-C8TV3VK.jpg",
+      "fontes": 2,
+      "umaFonteSo": false,
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "politica",
+        "conflitos"
+      ],
+      "maisRecente": "2026-11-20T21:17:59.000Z",
+      "noticias": [
+        "b4e3f5a9b125",
+        "777bb4e1a198"
+      ]
+    },
+    {
       "id": "cb8c3ef54bbf",
       "titulo": "Trump replaces US cyber chief after outages hit flights, banks and NSA",
       "imagem": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/21/baa74963-5f0f-4973-85f6-d1536abf6466_5022610b.jpg?itok=c4FQzzIM&v=1795209230",
@@ -980,6 +1046,46 @@
       "noticias": [
         "cb8c3ef54bbf",
         "fbff5ae02f69"
+      ]
+    },
+    {
+      "id": "ca7b21a1b795",
+      "titulo": "Two Salvadoran soldiers killed in Haiti while handling explosives",
+      "imagem": "",
+      "fontes": 2,
+      "umaFonteSo": false,
+      "regioes": [
+        "america-latina"
+      ],
+      "temas": [
+        "conflitos"
+      ],
+      "maisRecente": "2026-11-20T20:59:04.000Z",
+      "noticias": [
+        "ca7b21a1b795",
+        "0c0a28ba4003"
+      ]
+    },
+    {
+      "id": "f8b119151642",
+      "titulo": "Brazil's imprisoned ex-president Jair Bolsonaro taken to hospital with 'severe abdominal pain'",
+      "imagem": "https://static.toiimg.com/photo/msid-136039070,imgsize-66694.cms",
+      "fontes": 2,
+      "umaFonteSo": false,
+      "regioes": [
+        "brasil",
+        "america-norte"
+      ],
+      "temas": [
+        "politica",
+        "direitos",
+        "conflitos",
+        "saude"
+      ],
+      "maisRecente": "2026-11-20T20:56:39.000Z",
+      "noticias": [
+        "f8b119151642",
+        "8da05aa07f64"
       ]
     },
     {
@@ -1021,27 +1127,6 @@
       "noticias": [
         "c7d4603146ab",
         "5f2a7c56bef9"
-      ]
-    },
-    {
-      "id": "b0d8a67e7982",
-      "titulo": "Trump vows 'tremendous tax' on companies building data centres abroad",
-      "imagem": "https://live-production.wcms.abc-cdn.net.au/d522adf378f0819aebc696fdcb7c2822?impolicy=wcms_crop_resize&cropH=1359&cropW=2416&xPos=0&yPos=128&width=862&height=485",
-      "fontes": 2,
-      "umaFonteSo": false,
-      "regioes": [
-        "america-norte",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "politica",
-        "tecnologia",
-        "economia"
-      ],
-      "maisRecente": "2026-11-20T20:27:15.000Z",
-      "noticias": [
-        "b0d8a67e7982",
-        "36fb31620a7c"
       ]
     },
     {
@@ -2565,6 +2650,115 @@
       ]
     },
     {
+      "id": "b727d0fb148c",
+      "titulo": "America’s electoral blue wave brings only the illusion of change",
+      "imagem": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/19/255cbcb7-c91a-4e23-868d-91e67c0935e5_f6a2db0e.jpg?itok=4B2SqsEi&v=1795075550",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "america-norte"
+      ],
+      "temas": [
+        "diplomacia",
+        "politica"
+      ],
+      "maisRecente": "2026-11-20T21:30:06.000Z",
+      "noticias": [
+        "b727d0fb148c"
+      ]
+    },
+    {
+      "id": "a1be826d98f2",
+      "titulo": "Palestinian man killed near Ramallah as Israeli raids sweep occupied West Bank",
+      "imagem": "https://www.middleeasteye.net/sites/default/files/westbank-palestine-israel.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "conflitos",
+        "energia",
+        "politica",
+        "direitos",
+        "midia"
+      ],
+      "maisRecente": "2026-11-20T21:24:53.000Z",
+      "noticias": [
+        "a1be826d98f2"
+      ]
+    },
+    {
+      "id": "7f3a9bebe980",
+      "titulo": "Abu Dhabi's MGX emerges as major winner in Anthropic IPO",
+      "imagem": "https://www.thenationalnews.com/resizer/v2/4TYI3QJLGJ52CUJFXN2AQGGNNE.jpg?auth=99ba12b9d55a0c5e791b6f7f679be7459044250a8b000b9a2c5af11519604a39&smart=true&width=4000&height=2667",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "economia"
+      ],
+      "maisRecente": "2026-11-20T21:23:13.000Z",
+      "noticias": [
+        "7f3a9bebe980"
+      ]
+    },
+    {
+      "id": "e0b44b28c424",
+      "titulo": "Legislator apologizes for fumigating a Monterrey park full of migrating monarch butterflies",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "america-latina"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "maisRecente": "2026-11-20T21:19:15.000Z",
+      "noticias": [
+        "e0b44b28c424"
+      ]
+    },
+    {
+      "id": "b8b826b40d0e",
+      "titulo": "Salmon farm owner and lobbyist donate big to One Nation in Tasmania",
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/2f0cf279be8285e4ca216f6da35e4eca?impolicy=wcms_crop_resize&cropH=720&cropW=1280&xPos=0&yPos=0&width=862&height=485",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "maisRecente": "2026-11-20T21:19:08.000Z",
+      "noticias": [
+        "b8b826b40d0e"
+      ]
+    },
+    {
+      "id": "2ed7c97a24f5",
+      "titulo": "Geração Z volta a protestar em centenas de cidades da Europa",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "politica",
+        "conflitos",
+        "economia"
+      ],
+      "maisRecente": "2026-11-20T21:15:00.000Z",
+      "noticias": [
+        "2ed7c97a24f5"
+      ]
+    },
+    {
       "id": "de1da4aefa52",
       "titulo": "Ativista britânico de extrema direita é preso por atacar bote de migrantes",
       "imagem": "https://veja.abril.com.br/wp-content/uploads/2026/08/IMG_1468.jpg",
@@ -2642,6 +2836,28 @@
       ]
     },
     {
+      "id": "41857d96f900",
+      "titulo": "Trump defends Putin relationship, warns AI data centres must stay in US",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "america-norte",
+        "europa",
+        "oriente-medio",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "conflitos",
+        "politica",
+        "tecnologia"
+      ],
+      "maisRecente": "2026-11-20T21:05:07.000Z",
+      "noticias": [
+        "41857d96f900"
+      ]
+    },
+    {
       "id": "cd9c8bf3d290",
       "titulo": "'I won't give up': Widow's vow after 38-year fight for gambling reform",
       "imagem": "https://live-production.wcms.abc-cdn.net.au/b1ac401d57aa5be1183082c61abdf2e0?impolicy=wcms_crop_resize&cropH=1993&cropW=3543&xPos=9&yPos=94&width=862&height=485",
@@ -2673,6 +2889,24 @@
       "maisRecente": "2026-11-20T21:00:00.000Z",
       "noticias": [
         "295759004f0e"
+      ]
+    },
+    {
+      "id": "d78d2117a5c1",
+      "titulo": "Can the UK and EU turn the page on Brexit?",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "diplomacia",
+        "politica"
+      ],
+      "maisRecente": "2026-11-20T20:51:19.000Z",
+      "noticias": [
+        "d78d2117a5c1"
       ]
     },
     {
@@ -2784,6 +3018,40 @@
       ]
     },
     {
+      "id": "ce9ea2887c62",
+      "titulo": "Gaza’s displaced children celebrate World Children’s Day",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "maisRecente": "2026-11-20T20:45:09.000Z",
+      "noticias": [
+        "ce9ea2887c62"
+      ]
+    },
+    {
+      "id": "d74f383a965d",
+      "titulo": "Sudan’s war leaves disabled children missing out on education",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "africa"
+      ],
+      "temas": [
+        "conflitos"
+      ],
+      "maisRecente": "2026-11-20T20:45:08.000Z",
+      "noticias": [
+        "d74f383a965d"
+      ]
+    },
+    {
       "id": "663befa0c387",
       "titulo": "Russian ornithologist jailed over small donations to Navalny's foundation",
       "imagem": "",
@@ -2818,23 +3086,6 @@
       "maisRecente": "2026-11-20T20:45:00.000Z",
       "noticias": [
         "dede4df29b0f"
-      ]
-    },
-    {
-      "id": "8da05aa07f64",
-      "titulo": "Brazil ex-President Bolsonaro taken to hospital with abdominal pain, son says",
-      "imagem": "",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "brasil"
-      ],
-      "temas": [
-        "politica"
-      ],
-      "maisRecente": "2026-11-20T20:40:28.000Z",
-      "noticias": [
-        "8da05aa07f64"
       ]
     },
     {
@@ -3368,24 +3619,6 @@
       "maisRecente": "2026-11-20T20:07:01.000Z",
       "noticias": [
         "aac0fae77616"
-      ]
-    },
-    {
-      "id": "777bb4e1a198",
-      "titulo": "French Senate approves police shootings law dubbed 'licence to kill' by critics",
-      "imagem": "",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "conflitos",
-        "politica"
-      ],
-      "maisRecente": "2026-11-20T20:05:31.000Z",
-      "noticias": [
-        "777bb4e1a198"
       ]
     },
     {
@@ -4340,23 +4573,6 @@
       "maisRecente": "2026-11-20T19:11:21.000Z",
       "noticias": [
         "6dc7d0a078b4"
-      ]
-    },
-    {
-      "id": "0c0a28ba4003",
-      "titulo": "Two Salvadorans killed in Haiti handling explosives in first official deaths since deployment",
-      "imagem": "",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "america-latina"
-      ],
-      "temas": [
-        "conflitos"
-      ],
-      "maisRecente": "2026-11-20T19:10:37.000Z",
-      "noticias": [
-        "0c0a28ba4003"
       ]
     },
     {
@@ -5366,6 +5582,23 @@
       ]
     },
     {
+      "id": "ea12470f47d0",
+      "titulo": "A Moment of New Hope for the Rohingya Community",
+      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2026/11/thediplomat_2026-11-21-031932.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "maisRecente": "2026-11-20T18:20:00.000Z",
+      "noticias": [
+        "ea12470f47d0"
+      ]
+    },
+    {
       "id": "e82453de49a4",
       "titulo": "Ex-spokesperson doesn't see Ukrainian state making it past spring 2028",
       "imagem": "",
@@ -5882,6 +6115,24 @@
       "maisRecente": "2026-11-20T17:59:09.000Z",
       "noticias": [
         "c647b228f9ac"
+      ]
+    },
+    {
+      "id": "e3ea9a3721c2",
+      "titulo": "Russia’s Changing Positions on North Korea Sanctions and Denuclearization",
+      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2024/06/thediplomat_2024-06-20-133852.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "europa",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "diplomacia"
+      ],
+      "maisRecente": "2026-11-20T17:58:00.000Z",
+      "noticias": [
+        "e3ea9a3721c2"
       ]
     },
     {
@@ -8843,6 +9094,23 @@
       ]
     },
     {
+      "id": "6eb6dc7a740a",
+      "titulo": "Demography Is the Achilles’ Heel of Dictatorships – Including China",
+      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2022/04/thediplomat_2022-04-22-144618.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "politica"
+      ],
+      "maisRecente": "2026-11-20T15:53:00.000Z",
+      "noticias": [
+        "6eb6dc7a740a"
+      ]
+    },
+    {
       "id": "6141a5e6ce06",
       "titulo": "Iraq security forces deploy in Kataeb Hezbollah stronghold following 'compromise' deal",
       "imagem": "https://www.middleeasteye.net/sites/default/files/styles/crop_16_9/public/images-story/IRAQ_JURF_AFP.jpg.jpg?itok=QuNokgXj",
@@ -9059,6 +9327,23 @@
       "maisRecente": "2026-11-20T15:36:00.000Z",
       "noticias": [
         "0dbc7a2f40b5"
+      ]
+    },
+    {
+      "id": "020ec11dbc99",
+      "titulo": "Taiwan’s Local Elections: The Races to Watch",
+      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2026/11/thediplomat_2026-11-21-003956.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "politica"
+      ],
+      "maisRecente": "2026-11-20T15:35:00.000Z",
+      "noticias": [
+        "020ec11dbc99"
       ]
     },
     {
@@ -10046,6 +10331,24 @@
       ]
     },
     {
+      "id": "5590963b68ea",
+      "titulo": "China Is Investing in Africa’s Factory Moment. Will It Stay?",
+      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2026/11/thediplomat_2026-11-20-234746.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "asia-pacifico",
+        "africa"
+      ],
+      "temas": [
+        "economia"
+      ],
+      "maisRecente": "2026-11-20T14:43:00.000Z",
+      "noticias": [
+        "5590963b68ea"
+      ]
+    },
+    {
       "id": "91778f647d7d",
       "titulo": "Estonia to shut border with Russia over GRU-linked sabotage attack",
       "imagem": "",
@@ -10186,6 +10489,24 @@
       "maisRecente": "2026-11-20T14:35:18.000Z",
       "noticias": [
         "82ae0e00bb84"
+      ]
+    },
+    {
+      "id": "4447059ff9d8",
+      "titulo": "Uzbekistan’s Energy Sector Faces the Perfect Storm",
+      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2026/11/thediplomat_2026-11-20-233815.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "economia",
+        "energia"
+      ],
+      "maisRecente": "2026-11-20T14:35:00.000Z",
+      "noticias": [
+        "4447059ff9d8"
       ]
     },
     {
@@ -10894,6 +11215,23 @@
       ]
     },
     {
+      "id": "12f6af02e56d",
+      "titulo": "China’s Downstream Nations Need a Collective Voice",
+      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2024/07/thediplomat_2024-07-26-170602.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "maisRecente": "2026-11-20T13:59:00.000Z",
+      "noticias": [
+        "12f6af02e56d"
+      ]
+    },
+    {
       "id": "3e55c535dadc",
       "titulo": "'Everything fell apart' in Ukraine long before Russian military strikes — Putin",
       "imagem": "",
@@ -11414,6 +11752,23 @@
       ]
     },
     {
+      "id": "8029daa645af",
+      "titulo": "Jensen Huang, Alice Huang, and Gender Bias",
+      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2026/11/thediplomat_2026-11-17-225520.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "maisRecente": "2026-11-20T13:26:00.000Z",
+      "noticias": [
+        "8029daa645af"
+      ]
+    },
+    {
       "id": "81f0782a82a0",
       "titulo": "US prepares scenarios for 'rational use' of nukes in regional conflicts — Russian diplomat",
       "imagem": "",
@@ -11484,6 +11839,25 @@
       "maisRecente": "2026-11-20T13:21:54.000Z",
       "noticias": [
         "270bdeeda217"
+      ]
+    },
+    {
+      "id": "1a63955ee5c4",
+      "titulo": "From ASEAN to APEC: Highlights From a Busy Week of Asian Summitry",
+      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2026/11/thediplomat_2026-11-20-222317.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "america-norte",
+        "europa",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "diplomacia"
+      ],
+      "maisRecente": "2026-11-20T13:21:00.000Z",
+      "noticias": [
+        "1a63955ee5c4"
       ]
     },
     {
@@ -11896,25 +12270,6 @@
       "maisRecente": "2026-11-20T12:45:11.000Z",
       "noticias": [
         "eb1cf5889b4e"
-      ]
-    },
-    {
-      "id": "6c49addc3e67",
-      "titulo": "Myanmar's genocide defense failed at the ICJ. Israel made many of the same arguments",
-      "imagem": "https://img.haarets.co.il/bs/000001a1-f8ed-d175-abf5-fefd3b950000/81/49/94b784554d95b2379f1fe3c5077b/226254.jpg?width=108&height=81",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "oriente-medio",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "direitos",
-        "conflitos"
-      ],
-      "maisRecente": "2026-11-20T12:44:29.000Z",
-      "noticias": [
-        "6c49addc3e67"
       ]
     },
     {
@@ -13939,6 +14294,26 @@
       ]
     },
     {
+      "id": "fde30aac33d5",
+      "titulo": "What the Trump-Xi-Putin Meeting at Shenzhen Means for Pakistan",
+      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2026/11/thediplomat_2026-11-20-194007.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "america-norte",
+        "europa",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "conflitos",
+        "energia"
+      ],
+      "maisRecente": "2026-11-20T10:29:00.000Z",
+      "noticias": [
+        "fde30aac33d5"
+      ]
+    },
+    {
       "id": "8c768477fdb1",
       "titulo": "2027 presidential election: Socialists end talks with Greens over their leader's push for an alliance with Mélenchon",
       "imagem": "https://img.lemde.fr/2026/11/19/372/0/6000/3000/644/322/60/0/53e5fa1_ftp-1-0hmlcqfgwdsk-afp-d7zh8a8.jpg",
@@ -14985,25 +15360,6 @@
       "maisRecente": "2026-11-20T09:03:20.000Z",
       "noticias": [
         "34ed9397c7f7"
-      ]
-    },
-    {
-      "id": "c00b02fc58bf",
-      "titulo": "Putin Gets Trump’s Handshake and Support, but No ‘Yalta-2’",
-      "imagem": "https://static.kyivpost.com/storage/2026/11/20/de92b6f6f292dbe89a4c8dea913939da.jpg?w=640&q=90&f=jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "europa",
-        "america-norte"
-      ],
-      "temas": [
-        "diplomacia",
-        "conflitos"
-      ],
-      "maisRecente": "2026-11-20T09:01:38.000Z",
-      "noticias": [
-        "c00b02fc58bf"
       ]
     },
     {
@@ -20449,84 +20805,256 @@
       "noticias": [
         "a29f01793153"
       ]
-    },
+    }
+  ],
+  "noticias": [
     {
-      "id": "738bca701e34",
-      "titulo": "The Rohingya question: International solidarity, accountability and the missing road home",
-      "imagem": "https://th-i.thgim.com/public/incoming/sbq73/article71720934.ece/alternates/LANDSCAPE_1200/2026-11-19T140209Z_452359908_RC20ROAG317B_RTRMADP_3_MYANMAR-ROHINGYA-WORLD-COURT.JPG",
-      "fontes": 1,
-      "umaFonteSo": true,
+      "id": "b727d0fb148c",
+      "titulo": "America’s electoral blue wave brings only the illusion of change",
+      "resumo": "Don’t expect the Democratic blue wave to reverse the catastrophic decline in America’s global standing and domestic governance. That decline is structural and often self-inflicted. As Paul Krugman said in a recent podcast, “Two years of Trump have led to a catastrophic decline in…",
+      "link": "https://www.scmp.com/opinion/world-opinion/article/3375049/americas-electoral-blue-wave-brings-only-illusion-change",
+      "fonte": "scmp",
+      "fonteNome": "South China Morning Post",
+      "pais": "Hong Kong",
+      "visao": "Jornal de Hong Kong sobre China e Ásia",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:30:06.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/19/255cbcb7-c91a-4e23-868d-91e67c0935e5_f6a2db0e.jpg?itok=4B2SqsEi&v=1795075550",
+      "imagemCredito": "South China Morning Post",
       "regioes": [
-        "mundo"
+        "america-norte"
       ],
       "temas": [
-        "outros"
+        "diplomacia",
+        "politica"
       ],
-      "maisRecente": "2026-11-19T21:26:52.000Z",
-      "noticias": [
-        "738bca701e34"
-      ]
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
     },
     {
-      "id": "82d761fbf8e5",
-      "titulo": "Cinco formas surpreendentes de aumentar seus níveis de ferro sem depender da carne",
-      "imagem": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/61c2/live/63ebc1c0-e2bc-11f1-99b6-a35a62fa4264.jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
+      "id": "a1be826d98f2",
+      "titulo": "Palestinian man killed near Ramallah as Israeli raids sweep occupied West Bank",
+      "resumo": "A Palestinian man was killed by Israeli forces near Ramallah on Friday as the forces carried out raids, detentions and a home demolition across the occupied West Bank, the Palestinian news agency Wafa reported. Hamza Masoud Salim Abdo, 42, was killed in Dura al-Qare, northeast of…",
+      "link": "https://www.middleeasteye.net/live-blog/live-blog-update/palestinian-killed-near-ramallah-israeli-raids-sweep-occupied-west-bank",
+      "fonte": "middleeasteye",
+      "fonteNome": "Middle East Eye",
+      "pais": "Reino Unido",
+      "visao": "Site focado no Oriente Médio, crítico de governos da região",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:24:53.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://www.middleeasteye.net/sites/default/files/westbank-palestine-israel.jpg",
+      "imagemCredito": "Middle East Eye",
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "conflitos",
+        "energia",
+        "politica",
+        "direitos",
+        "midia"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
+    },
+    {
+      "id": "7f3a9bebe980",
+      "titulo": "Abu Dhabi's MGX emerges as major winner in Anthropic IPO",
+      "resumo": "",
+      "link": "https://www.thenationalnews.com/future/technology/2026/11/20/mgx-anthropic-ipo-adif/",
+      "fonte": "thenational",
+      "fonteNome": "The National",
+      "pais": "Emirados Árabes",
+      "visao": "Jornal dos Emirados, ligado ao governo",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:23:13.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://www.thenationalnews.com/resizer/v2/4TYI3QJLGJ52CUJFXN2AQGGNNE.jpg?auth=99ba12b9d55a0c5e791b6f7f679be7459044250a8b000b9a2c5af11519604a39&smart=true&width=4000&height=2667",
+      "imagemCredito": "The National",
       "regioes": [
         "mundo"
       ],
       "temas": [
         "economia"
       ],
-      "maisRecente": "2026-11-19T21:26:14.000Z",
-      "noticias": [
-        "82d761fbf8e5"
-      ]
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
     },
     {
-      "id": "2a72917e4517",
-      "titulo": "Aliados da Ucrânia alertam contra partilha ao estilo da 2ª Guerra Mundial enquanto Trump se reúne com 'amigo' Putin",
-      "imagem": "https://s2-g1.glbimg.com/A36-0BLPsXruu0REatMVCtv1BD8=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/B/P/VS7NyPS1AUoHKimxrHMw/2026-11-19t083332z-1813811123-rc2wqoau4zb0-rtrmadp-3-apec-summit.jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
+      "id": "907bb66957b9",
+      "titulo": "‘This was no Yalta’: How the world’s press read the Trump–Putin–Xi summit in China",
+      "resumo": "The leaders of Russia, the United States, and China met in person for the first time on November 19 in the Chinese city of Shenzhen. Symbolically, the meeting was unprecedented, but in substance it produced modest results: Vladimir Putin, Xi Jinping, and Donald Trump talked for…",
+      "link": "https://meduza.io/en/feature/2026/11/21/this-was-no-yalta-how-the-world-s-press-read-the-trump-putin-xi-summit-in-china",
+      "fonte": "meduza",
+      "fonteNome": "Meduza",
+      "pais": "Rússia",
+      "visao": "Site russo independente, no exílio, oposição ao Kremlin",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:20:52.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://meduza.io/image/attachments/images/012/997/359/small/4o1tfRvVOU0ghhkn8RwvCg",
+      "imagemCredito": "Meduza",
       "regioes": [
         "europa",
+        "asia-pacifico",
+        "america-norte"
+      ],
+      "temas": [
+        "economia",
+        "diplomacia"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
+    },
+    {
+      "id": "e0b44b28c424",
+      "titulo": "Legislator apologizes for fumigating a Monterrey park full of migrating monarch butterflies",
+      "resumo": "The spraying appears to have been an unfortunate mistake, but residents are upset and there could be legal consequences. An investigation is ongoing but the deputy reports that she found no dead butterflies. The post Legislator apologizes for fumigating a Monterrey park full of…",
+      "link": "https://mexiconewsdaily.com/news/legislator-apologizes-fumigatiing-monterrey-park-with-monarch-butterflies/",
+      "fonte": "mexiconews",
+      "fonteNome": "Mexico News Daily",
+      "pais": "México",
+      "visao": "Notícias do México em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:19:15.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "america-latina"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
+    },
+    {
+      "id": "b8b826b40d0e",
+      "titulo": "Salmon farm owner and lobbyist donate big to One Nation in Tasmania",
+      "resumo": "They are the largest donations received by a political party in Tasmania since new disclosure rules came into effect last year.",
+      "link": "https://www.abc.net.au/news/2026-11-21/salmon-farm-owner-lobbyist-donate-big-one-nation-tasmania/107407728",
+      "fonte": "abcau",
+      "fonteNome": "ABC News Austrália",
+      "pais": "Austrália",
+      "visao": "Emissora pública australiana",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:19:08.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/2f0cf279be8285e4ca216f6da35e4eca?impolicy=wcms_crop_resize&cropH=720&cropW=1280&xPos=0&yPos=0&width=862&height=485",
+      "imagemCredito": "ABC News Austrália",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
+    },
+    {
+      "id": "b4e3f5a9b125",
+      "titulo": "'Licence to kill': French parliament adopts police shootings law slammed by activists",
+      "resumo": "French senators gave final approval on Friday to controversial legislation granting police officers a presumption of legitimate self-defence when using firearms, fulfilling a long-standing demand of the far right even as weeks of student-led protests have thrust the issue of…",
+      "link": "https://www.france24.com/en/france/20261120-licence-to-kill-french-parliament-adopts-police-shootings-law-slammed-activists",
+      "fonte": "france24",
+      "fonteNome": "France 24",
+      "pais": "França",
+      "visao": "Emissora internacional pública francesa",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:17:59.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://s.france24.com/media/display/84d2817a-e524-11f1-9187-1bac47ab2f5d/w:1024/p:16x9/000-C8TV3VK.jpg",
+      "imagemCredito": "France 24",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "politica",
+        "conflitos"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
+    },
+    {
+      "id": "8fc50c70f6f9",
+      "titulo": "Trump diz que Filipinas trocarão produtos agrícolas do Brasil pelos dos EUA",
+      "resumo": "A declaração ocorreu após uma série de viagens à Ásia, durante as quais Trump teve encontros com líderes de pelo menos 20 países e disse ter encaminhado até 10 novos acordos comerciais.",
+      "link": "https://www.dw.com/pt-br/trump-diz-que-filipinas-trocarão-produtos-agrícolas-do-brasil-pelos-dos-eua/a-80007345?maca=bra-rss-br-all-1030-xml-mrss",
+      "fonte": "dwbrasil",
+      "fonteNome": "DW Brasil",
+      "pais": "Alemanha",
+      "visao": "Serviço em português da DW",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:16:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
         "america-norte",
+        "brasil",
         "asia-pacifico"
       ],
       "temas": [
-        "diplomacia",
-        "conflitos",
-        "politica",
-        "economia",
-        "energia"
+        "diplomacia"
       ],
-      "maisRecente": "2026-11-19T21:25:54.000Z",
-      "noticias": [
-        "2a72917e4517"
-      ]
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
     },
     {
-      "id": "0a9fb7eb3699",
-      "titulo": "How Shin Bet chief Zini cast Arab Israelis as a threat long before the election",
-      "imagem": "https://img.haarets.co.il/bs/000001a1-f586-d175-abf5-ffb618390003/60/b4/348db7c64c58897883de46dbb3aa/691489.jpg?width=108&height=81",
-      "fontes": 1,
-      "umaFonteSo": true,
+      "id": "2ed7c97a24f5",
+      "titulo": "Geração Z volta a protestar em centenas de cidades da Europa",
+      "resumo": "Manifestações também reúnem trabalhadores e tem como principais bandeiras mais investimentos em educação, contra o aumento no custo de vida e, principalmente na Alemanha, contra o serviço militar obrigatório.",
+      "link": "https://www.dw.com/pt-br/geração-z-volta-a-protestar-em-centenas-de-cidades-da-europa/a-80006746?maca=bra-rss-br-all-1030-xml-mrss",
+      "fonte": "dwbrasil",
+      "fonteNome": "DW Brasil",
+      "pais": "Alemanha",
+      "visao": "Serviço em português da DW",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:15:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
       "regioes": [
-        "oriente-medio"
+        "europa"
       ],
       "temas": [
+        "politica",
         "conflitos",
-        "politica"
+        "economia"
       ],
-      "maisRecente": "2026-11-19T21:22:36.000Z",
-      "noticias": [
-        "0a9fb7eb3699"
-      ]
-    }
-  ],
-  "noticias": [
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
+    },
     {
       "id": "cb8c3ef54bbf",
       "titulo": "Trump replaces US cyber chief after outages hit flights, banks and NSA",
@@ -20579,6 +21107,35 @@
         "direitos"
       ],
       "coletadoEm": "2026-11-20T21:17:00.434Z"
+    },
+    {
+      "id": "3d617bdf334a",
+      "titulo": "Trump threatens tax on US tech firms building AI data centres abroad",
+      "resumo": "US President Donald Trump warned US tech companies will face “a tremendous tax” if they build AI data centres abroad.",
+      "link": "https://www.aljazeera.com/video/newsfeed/2026/11/20/aje-onl-nf_trump-tax-us-tech-firms-ai-data-centres-abroad-201126?traffic_source=rss",
+      "fonte": "aljazeera",
+      "fonteNome": "Al Jazeera",
+      "pais": "Catar",
+      "visao": "Rede do Catar (financiada pelo governo), foco no Sul Global e no mundo árabe",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:10:53.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "america-norte"
+      ],
+      "temas": [
+        "economia",
+        "conflitos",
+        "politica",
+        "tecnologia"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
     },
     {
       "id": "2b5a725f10a9",
@@ -20721,6 +21278,37 @@
       "coletadoEm": "2026-11-20T21:17:00.434Z"
     },
     {
+      "id": "41857d96f900",
+      "titulo": "Trump defends Putin relationship, warns AI data centres must stay in US",
+      "resumo": "The US president also spoke about the war in Iran and praised trip to China during a wide-ranging news conference.",
+      "link": "https://www.aljazeera.com/news/2026/11/20/trump-defends-putin-relationship-warns-ai-data-centres-must-stay-in-us?traffic_source=rss",
+      "fonte": "aljazeera",
+      "fonteNome": "Al Jazeera",
+      "pais": "Catar",
+      "visao": "Rede do Catar (financiada pelo governo), foco no Sul Global e no mundo árabe",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:05:07.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "america-norte",
+        "europa",
+        "oriente-medio",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "conflitos",
+        "politica",
+        "tecnologia"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
+    },
+    {
       "id": "cd9c8bf3d290",
       "titulo": "'I won't give up': Widow's vow after 38-year fight for gambling reform",
       "resumo": "Janina Anstee's husband died by suicide, overwhelmed by debt acquired from gambling in 1987. She has since been calling for change.",
@@ -20773,6 +21361,62 @@
       "coletadoEm": "2026-11-20T21:17:00.434Z"
     },
     {
+      "id": "ca7b21a1b795",
+      "titulo": "Two Salvadoran soldiers killed in Haiti while handling explosives",
+      "resumo": "Two others were injured in the explosion, marking the first deaths among troops deployed to Haiti since late October.",
+      "link": "https://www.aljazeera.com/news/2026/11/20/two-salvadoran-soldiers-killed-in-haiti-while-handling-explosives?traffic_source=rss",
+      "fonte": "aljazeera",
+      "fonteNome": "Al Jazeera",
+      "pais": "Catar",
+      "visao": "Rede do Catar (financiada pelo governo), foco no Sul Global e no mundo árabe",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:59:04.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "america-latina"
+      ],
+      "temas": [
+        "conflitos"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
+    },
+    {
+      "id": "f8b119151642",
+      "titulo": "Brazil's imprisoned ex-president Jair Bolsonaro taken to hospital with 'severe abdominal pain'",
+      "resumo": "Jair Bolsonaro has been hospitalized due to intense abdominal pain linked to his declining health condition. Concerned for his father’s well-being, Carlos Bolsonaro has voiced worries over the treatment and persistent psychological pressure. After sustaining multiple stab wounds…",
+      "link": "https://timesofindia.indiatimes.com/world/rest-of-world/brazils-jailed-ex-president-jair-bolsonaro-taken-to-hospital-son-alleges-psychological-torture/articleshow/136039037.cms",
+      "fonte": "timesofindia",
+      "fonteNome": "The Times of India",
+      "pais": "Índia",
+      "visao": "Maior jornal indiano em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:56:39.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://static.toiimg.com/photo/msid-136039070,imgsize-66694.cms",
+      "imagemCredito": "The Times of India",
+      "regioes": [
+        "brasil",
+        "america-norte"
+      ],
+      "temas": [
+        "politica",
+        "direitos",
+        "conflitos",
+        "saude"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
+    },
+    {
       "id": "d62fe715ede0",
       "titulo": "UN warns against Yemen escalation after Saudi-led air strikes on Hodeidah port",
       "resumo": "",
@@ -20797,6 +21441,33 @@
         "conflitos"
       ],
       "coletadoEm": "2026-11-20T21:17:00.434Z"
+    },
+    {
+      "id": "d78d2117a5c1",
+      "titulo": "Can the UK and EU turn the page on Brexit?",
+      "resumo": "A decade after the Brexit vote, the UK and EU have struck deals. But divisions persist.",
+      "link": "https://www.aljazeera.com/video/newsfeed/2026/11/20/can-the-uk-and-eu-turn-the-page-on-brexit?traffic_source=rss",
+      "fonte": "aljazeera",
+      "fonteNome": "Al Jazeera",
+      "pais": "Catar",
+      "visao": "Rede do Catar (financiada pelo governo), foco no Sul Global e no mundo árabe",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:51:19.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "diplomacia",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
     },
     {
       "id": "f429c0b6d673",
@@ -21015,6 +21686,58 @@
         "energia"
       ],
       "coletadoEm": "2026-11-20T21:17:00.434Z"
+    },
+    {
+      "id": "ce9ea2887c62",
+      "titulo": "Gaza’s displaced children celebrate World Children’s Day",
+      "resumo": "Displaced children gathered in al-Nuseirat refugee camp to mark World Children’s Day.",
+      "link": "https://www.aljazeera.com/video/newsfeed/2026/11/20/gazas-displaced-children-celebrate-world-childrens-day?traffic_source=rss",
+      "fonte": "aljazeera",
+      "fonteNome": "Al Jazeera",
+      "pais": "Catar",
+      "visao": "Rede do Catar (financiada pelo governo), foco no Sul Global e no mundo árabe",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:45:09.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
+    },
+    {
+      "id": "d74f383a965d",
+      "titulo": "Sudan’s war leaves disabled children missing out on education",
+      "resumo": "War forces schools, rehabilitation centres to close, forcing children with disabilities to lose access to education.",
+      "link": "https://www.aljazeera.com/news/2026/11/20/sudans-war-leaves-disabled-children-missing-out-on-education?traffic_source=rss",
+      "fonte": "aljazeera",
+      "fonteNome": "Al Jazeera",
+      "pais": "Catar",
+      "visao": "Rede do Catar (financiada pelo governo), foco no Sul Global e no mundo árabe",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T20:45:08.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "africa"
+      ],
+      "temas": [
+        "conflitos"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
     },
     {
       "id": "663befa0c387",
@@ -26624,6 +27347,32 @@
       "coletadoEm": "2026-11-20T20:27:30.953Z"
     },
     {
+      "id": "ea12470f47d0",
+      "titulo": "A Moment of New Hope for the Rohingya Community",
+      "resumo": "Rohingya refugees who have spent nearly a decade in crowded camps finally see justice with the ICJ's ruling. Now they are hoping for meaningful action that will allow them to return home.",
+      "link": "https://thediplomat.com/2026/11/a-moment-of-new-hope-for-the-rohingya-community/",
+      "fonte": "thediplomat",
+      "fonteNome": "The Diplomat",
+      "pais": "Japão",
+      "visao": "Revista de análise sobre Ásia-Pacífico",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "analise",
+      "publicadoEm": "2026-11-20T18:20:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2026/11/thediplomat_2026-11-21-031932.jpg",
+      "imagemCredito": "The Diplomat",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
+    },
+    {
       "id": "e82453de49a4",
       "titulo": "Ex-spokesperson doesn't see Ukrainian state making it past spring 2028",
       "resumo": "Yulia Mendel argued that no country can sustain such enormous human losses indefinitely, as Ukraine has",
@@ -27509,6 +28258,33 @@
         "outros"
       ],
       "coletadoEm": "2026-11-20T20:36:59.091Z"
+    },
+    {
+      "id": "e3ea9a3721c2",
+      "titulo": "Russia’s Changing Positions on North Korea Sanctions and Denuclearization",
+      "resumo": "Russia once held firm on denuclearization and reluctantly accepted sanctions as a necessary tool. Those days are over.",
+      "link": "https://thediplomat.com/2026/11/russias-changing-positions-on-north-korea-sanctions-and-denuclearization/",
+      "fonte": "thediplomat",
+      "fonteNome": "The Diplomat",
+      "pais": "Japão",
+      "visao": "Revista de análise sobre Ásia-Pacífico",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "analise",
+      "publicadoEm": "2026-11-20T17:58:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2024/06/thediplomat_2024-06-20-133852.jpg",
+      "imagemCredito": "The Diplomat",
+      "regioes": [
+        "europa",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "diplomacia"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
     },
     {
       "id": "1efc3952f067",
@@ -33806,6 +34582,32 @@
       "coletadoEm": "2026-11-20T20:27:30.953Z"
     },
     {
+      "id": "6eb6dc7a740a",
+      "titulo": "Demography Is the Achilles’ Heel of Dictatorships – Including China",
+      "resumo": "The longer the Chinese government relied on bogus population figures, the more difficult it became to admit that it had been manipulating them.",
+      "link": "https://thediplomat.com/2026/11/demography-is-the-achilles-heel-of-dictatorships-including-china/",
+      "fonte": "thediplomat",
+      "fonteNome": "The Diplomat",
+      "pais": "Japão",
+      "visao": "Revista de análise sobre Ásia-Pacífico",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "analise",
+      "publicadoEm": "2026-11-20T15:53:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2022/04/thediplomat_2022-04-22-144618.jpg",
+      "imagemCredito": "The Diplomat",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "politica"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
+    },
+    {
       "id": "6141a5e6ce06",
       "titulo": "Iraq security forces deploy in Kataeb Hezbollah stronghold following 'compromise' deal",
       "resumo": "Submitted by Alex MacDonald on Fri, 11/20/2026 - 14:49 Despite the agreement with Baghdad, many still see a risk of open conflict with Iran-backed groups Members of the Iraqi Federal Police deploy in Jurf al-Sakhar, Babil governorate, south of Baghdad, on 20 November 2026 (Ahmad…",
@@ -34351,6 +35153,32 @@
         "energia"
       ],
       "coletadoEm": "2026-11-20T20:36:59.091Z"
+    },
+    {
+      "id": "020ec11dbc99",
+      "titulo": "Taiwan’s Local Elections: The Races to Watch",
+      "resumo": "Your guide to the most competitive races – and the ones that could impact the 2028 presidential election.",
+      "link": "https://thediplomat.com/2026/11/taiwans-local-elections-the-races-to-watch/",
+      "fonte": "thediplomat",
+      "fonteNome": "The Diplomat",
+      "pais": "Japão",
+      "visao": "Revista de análise sobre Ásia-Pacífico",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "analise",
+      "publicadoEm": "2026-11-20T15:35:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2026/11/thediplomat_2026-11-21-003956.jpg",
+      "imagemCredito": "The Diplomat",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "politica"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
     },
     {
       "id": "dfa83bbf6011",
@@ -36478,6 +37306,33 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     },
     {
+      "id": "5590963b68ea",
+      "titulo": "China Is Investing in Africa’s Factory Moment. Will It Stay?",
+      "resumo": "Chinese companies are increasing investments in African manufacturing and processing. Will they also buy from local suppliers and train local engineers?",
+      "link": "https://thediplomat.com/2026/11/china-is-investing-in-africas-factory-moment-will-it-stay/",
+      "fonte": "thediplomat",
+      "fonteNome": "The Diplomat",
+      "pais": "Japão",
+      "visao": "Revista de análise sobre Ásia-Pacífico",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "analise",
+      "publicadoEm": "2026-11-20T14:43:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2026/11/thediplomat_2026-11-20-234746.jpg",
+      "imagemCredito": "The Diplomat",
+      "regioes": [
+        "asia-pacifico",
+        "africa"
+      ],
+      "temas": [
+        "economia"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
+    },
+    {
       "id": "39e6263fdcf5",
       "titulo": "Prédio mais alto da Arábia Saudita é atingido em ataque dos houthis à sede de fundo soberano do país",
       "resumo": "Imagem mostra a torre danificada após ataque dos Houthis. SPA Agency/Divulgação O arranha-céu mais alto da Arábia Saudita, que abriga a sede do fundo soberano do país, foi atingido nesta quinta-feira (19) em um ataque dos houthis. A Defesa Civil da Arábia Saudita informou que o…",
@@ -36779,6 +37634,33 @@
         "direitos"
       ],
       "coletadoEm": "2026-11-20T20:36:59.091Z"
+    },
+    {
+      "id": "4447059ff9d8",
+      "titulo": "Uzbekistan’s Energy Sector Faces the Perfect Storm",
+      "resumo": "They way forward requires immense investment. But international investors need legal certainty and protection from political interference.",
+      "link": "https://thediplomat.com/2026/11/uzbekistans-energy-sector-faces-the-perfect-storm/",
+      "fonte": "thediplomat",
+      "fonteNome": "The Diplomat",
+      "pais": "Japão",
+      "visao": "Revista de análise sobre Ásia-Pacífico",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "analise",
+      "publicadoEm": "2026-11-20T14:35:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2026/11/thediplomat_2026-11-20-233815.jpg",
+      "imagemCredito": "The Diplomat",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "economia",
+        "energia"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
     },
     {
       "id": "ec0779d274b8",
@@ -37987,6 +38869,34 @@
       "coletadoEm": "2026-11-20T20:27:30.953Z"
     },
     {
+      "id": "406da3cf784a",
+      "titulo": "ICJ’s Genocide Verdict on Myanmar and the Ramifications for Israel",
+      "resumo": "Legal experts warn of a potential backlash against the ICJ after its Rohingya ruling.",
+      "link": "https://thediplomat.com/2026/11/icjs-genocide-verdict-on-myanmar-and-the-ramifications-for-israel/",
+      "fonte": "thediplomat",
+      "fonteNome": "The Diplomat",
+      "pais": "Japão",
+      "visao": "Revista de análise sobre Ásia-Pacífico",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "analise",
+      "publicadoEm": "2026-11-20T14:08:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2026/11/thediplomat_2026-11-20-144225.jpg",
+      "imagemCredito": "The Diplomat",
+      "regioes": [
+        "oriente-medio",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "direitos",
+        "conflitos"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
+    },
+    {
       "id": "fa7e718e15b9",
       "titulo": "Milfey confectionery workshop destroyed in Russian attack on Kyiv",
       "resumo": "Confectionery manufacturer Milfey has said its Kyiv production site suffered heavy damage after overnight Russian attacks on 19-20 November and posted a video showing the devastating effects of the fire.",
@@ -38153,6 +39063,32 @@
         "outros"
       ],
       "coletadoEm": "2026-11-20T20:27:30.953Z"
+    },
+    {
+      "id": "12f6af02e56d",
+      "titulo": "China’s Downstream Nations Need a Collective Voice",
+      "resumo": "Across Asia’s river basins, upper-riparian infrastructure proceeds unilaterally, without consultation to downstream states. China’s mega-dam in Tibet is just the latest example.",
+      "link": "https://thediplomat.com/2026/11/chinas-downstream-nations-need-a-collective-voice/",
+      "fonte": "thediplomat",
+      "fonteNome": "The Diplomat",
+      "pais": "Japão",
+      "visao": "Revista de análise sobre Ásia-Pacífico",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "analise",
+      "publicadoEm": "2026-11-20T13:59:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2024/07/thediplomat_2024-07-26-170602.jpg",
+      "imagemCredito": "The Diplomat",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
     },
     {
       "id": "3e55c535dadc",
@@ -39428,6 +40364,32 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     },
     {
+      "id": "8029daa645af",
+      "titulo": "Jensen Huang, Alice Huang, and Gender Bias",
+      "resumo": "Jensen Huang's affair acted as a magnet for controversial takes on gender dynamics, particularly in the workplace.",
+      "link": "https://thediplomat.com/2026/11/jensen-huang-alice-huang-and-gender-bias/",
+      "fonte": "thediplomat",
+      "fonteNome": "The Diplomat",
+      "pais": "Japão",
+      "visao": "Revista de análise sobre Ásia-Pacífico",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "analise",
+      "publicadoEm": "2026-11-20T13:26:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2026/11/thediplomat_2026-11-17-225520.jpg",
+      "imagemCredito": "The Diplomat",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
+    },
+    {
       "id": "81f0782a82a0",
       "titulo": "US prepares scenarios for 'rational use' of nukes in regional conflicts — Russian diplomat",
       "resumo": "According to Maria Zakharova, the United States is actively working to expand the range of weapons suitable for this purpose",
@@ -39535,6 +40497,34 @@
         "clima"
       ],
       "coletadoEm": "2026-11-20T20:36:59.091Z"
+    },
+    {
+      "id": "1a63955ee5c4",
+      "titulo": "From ASEAN to APEC: Highlights From a Busy Week of Asian Summitry",
+      "resumo": "The real action was on the sidelines, including a Quad leaders meeting in Manila and a Putin-Trump-Xi trilateral in Shenzhen.",
+      "link": "https://thediplomat.com/2026/11/from-asean-to-apec-highlights-from-a-busy-week-of-asian-summitry/",
+      "fonte": "thediplomat",
+      "fonteNome": "The Diplomat",
+      "pais": "Japão",
+      "visao": "Revista de análise sobre Ásia-Pacífico",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "analise",
+      "publicadoEm": "2026-11-20T13:21:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2026/11/thediplomat_2026-11-20-222317.jpg",
+      "imagemCredito": "The Diplomat",
+      "regioes": [
+        "america-norte",
+        "europa",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "diplomacia"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
     },
     {
       "id": "ea8741a8a4f4",
@@ -42471,6 +43461,33 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     },
     {
+      "id": "9b9ee78ddf96",
+      "titulo": "‘You will not be alone’: General Assembly President tells Rohingya refugees after genocide ruling",
+      "resumo": "A day after the UN’s highest court found that Myanmar had committed genocide against the Rohingya, the President of the General Assembly visited the refugee camps in Cox’s Bazar, Bangladesh, urging the world to turn the landmark judgement into action.",
+      "link": "https://news.un.org/feed/view/en/story/2026/11/1168853",
+      "fonte": "unnews",
+      "fonteNome": "UN News",
+      "pais": "ONU",
+      "visao": "Notícias oficiais das Nações Unidas, em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "institucional",
+      "publicadoEm": "2026-11-20T12:00:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Collections/Production%20Library/2026/11/20-11-2026_Rahman_Rohingya_visit.jpg/image560x340cropped.jpg",
+      "imagemCredito": "UN News",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "direitos",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
+    },
+    {
       "id": "d21a68cb35e5",
       "titulo": "New initiative seeks to bring Iranian handicrafts to global markets: Soleimani",
       "resumo": "TEHRAN – The Kimia handicrafts, launched by the Dafineh Museum Group of the Mostazafan Foundation, aims to add value to traditional Iranian crafts through storytelling and introduce products inspired by the country’s museum collections to international markets, the group's chief…",
@@ -44843,6 +45860,35 @@
         "outros"
       ],
       "coletadoEm": "2026-11-20T20:36:59.091Z"
+    },
+    {
+      "id": "fde30aac33d5",
+      "titulo": "What the Trump-Xi-Putin Meeting at Shenzhen Means for Pakistan",
+      "resumo": "Islamabad sees the consensus on nuclear risk reduction and non-use as a validation of its warnings over the dangers of confrontation between nuclear-armed states.",
+      "link": "https://thediplomat.com/2026/11/what-the-trump-xi-putin-meeting-at-shenzhen-means-for-pakistan/",
+      "fonte": "thediplomat",
+      "fonteNome": "The Diplomat",
+      "pais": "Japão",
+      "visao": "Revista de análise sobre Ásia-Pacífico",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "analise",
+      "publicadoEm": "2026-11-20T10:29:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2026/11/thediplomat_2026-11-20-194007.jpg",
+      "imagemCredito": "The Diplomat",
+      "regioes": [
+        "america-norte",
+        "europa",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "conflitos",
+        "energia"
+      ],
+      "coletadoEm": "2026-11-20T21:32:55.518Z"
     },
     {
       "id": "8c768477fdb1",
@@ -58119,172 +59165,6 @@
         "tecnologia"
       ],
       "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "f9769f3205d7",
-      "titulo": "Trump, Xi, Putin Hold Historic Trilateral Talks",
-      "resumo": "Initially framed as a peacemaking opportunity, the summit resulted in few tangible wins.",
-      "link": "https://foreignpolicy.com/2026/11/19/trump-xi-putin-trilateral-talks-nuclear-disarmament-un-icc-oil/",
-      "fonte": "foreignpolicy",
-      "fonteNome": "Foreign Policy",
-      "pais": "EUA",
-      "visao": "Revista de análise de política externa",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "analise",
-      "publicadoEm": "2026-11-19T21:28:32.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://foreignpolicy.com/wp-content/uploads/2026/11/TrilateralTalks-GettyImages-2305843300.jpg",
-      "imagemCredito": "Foreign Policy",
-      "regioes": [
-        "america-norte",
-        "europa"
-      ],
-      "temas": [
-        "diplomacia"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "738bca701e34",
-      "titulo": "The Rohingya question: International solidarity, accountability and the missing road home",
-      "resumo": "The fundamental question remains: how does a community that has been systematically marginalised, displaced and denied its identity reclaim its place in the country it considers home?",
-      "link": "https://www.thehindu.com/news/international/the-rohingya-question-international-solidarity-accountability-and-the-missing-road-home/article71720770.ece",
-      "fonte": "thehindu",
-      "fonteNome": "The Hindu",
-      "pais": "Índia",
-      "visao": "Jornal de referência indiano",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T21:26:52.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://th-i.thgim.com/public/incoming/sbq73/article71720934.ece/alternates/LANDSCAPE_1200/2026-11-19T140209Z_452359908_RC20ROAG317B_RTRMADP_3_MYANMAR-ROHINGYA-WORLD-COURT.JPG",
-      "imagemCredito": "The Hindu",
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "82d761fbf8e5",
-      "titulo": "Cinco formas surpreendentes de aumentar seus níveis de ferro sem depender da carne",
-      "resumo": "Fermentação natural, cozimento com água, regar com limão. Quando o assunto é a absorção de ferro, o importante não é só o que comemos, mas a forma de preparar e servir os alimentos.",
-      "link": "https://www.bbc.com/portuguese/articles/ckwy97l71v07o?at_medium=RSS&at_campaign=rss",
-      "fonte": "bbcbrasil",
-      "fonteNome": "BBC News Brasil",
-      "pais": "Reino Unido",
-      "visao": "Serviço em português da BBC",
-      "idioma": "pt",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T21:26:14.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/61c2/live/63ebc1c0-e2bc-11f1-99b6-a35a62fa4264.jpg",
-      "imagemCredito": "BBC News Brasil",
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "economia"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "2a72917e4517",
-      "titulo": "Aliados da Ucrânia alertam contra partilha ao estilo da 2ª Guerra Mundial enquanto Trump se reúne com 'amigo' Putin",
-      "resumo": "'Quem é esse? É meu amigo', diz Trump antes de cumprimentar Putin Os aliados europeus se reuniram em Berlim, na Alemanha, nesta quinta-feira (19), para apoiar a Ucrânia e alertaram contra qualquer tentativa de decidir sobre a paz sem consultá-los, depois que o presidente Donald…",
-      "link": "https://g1.globo.com/mundo/noticia/2026/11/19/aliados-da-ucrania-alertam-contra-partilha-ao-estilo-da-2a-guerra-mundial-enquanto-trump-se-reune-com-amigo-putin.ghtml",
-      "fonte": "g1",
-      "fonteNome": "g1 Mundo",
-      "pais": "Brasil",
-      "visao": "Portal do Grupo Globo",
-      "idioma": "pt",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T21:25:54.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://s2-g1.glbimg.com/A36-0BLPsXruu0REatMVCtv1BD8=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/B/P/VS7NyPS1AUoHKimxrHMw/2026-11-19t083332z-1813811123-rc2wqoau4zb0-rtrmadp-3-apec-summit.jpg",
-      "imagemCredito": "g1 Mundo",
-      "regioes": [
-        "europa",
-        "america-norte",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "diplomacia",
-        "conflitos",
-        "politica",
-        "economia",
-        "energia"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "0a9fb7eb3699",
-      "titulo": "How Shin Bet chief Zini cast Arab Israelis as a threat long before the election",
-      "resumo": "Since taking office, Zini and his deputy have tasked Shin Bet units with pursuing their chief concerns: Arab citizens changing the 'character of the state' and seeking to 'take over' Jewish cities, security and law enforcement sources tell Haaretz",
-      "link": "https://www.haaretz.com/israel-news/israel-security/2026-11-19/ty-article-magazine/.premium/how-shin-bet-chief-zini-cast-arab-israelis-as-a-threat-long-before-the-election/000001a1-f54a-dad7-a9fd-f74b1bff0000",
-      "fonte": "haaretz",
-      "fonteNome": "Haaretz",
-      "pais": "Israel",
-      "visao": "Jornal israelense, centro-esquerda",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T21:22:36.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://img.haarets.co.il/bs/000001a1-f586-d175-abf5-ffb618390003/60/b4/348db7c64c58897883de46dbb3aa/691489.jpg?width=108&height=81",
-      "imagemCredito": "Haaretz",
-      "regioes": [
-        "oriente-medio"
-      ],
-      "temas": [
-        "conflitos",
-        "politica"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "5609de10c658",
-      "titulo": "Myanmar Genocide Ruling Sets Up Court Fight Over Israel and Gaza",
-      "resumo": "The ruling by the International Court of Justice deals with issues relevant to the case brought against Israel alleging genocide in Gaza. Israel has rejected the charge.",
-      "link": "https://www.nytimes.com/2026/11/19/world/asia/icj-myanmar-gaza.html",
-      "fonte": "nyt",
-      "fonteNome": "The New York Times",
-      "pais": "EUA",
-      "visao": "Jornal de referência dos EUA, centro-esquerda",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-19T21:17:13.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://static01.nyt.com/images/2026/11/19/multimedia/19int-icj-gaza--qhlj/19int-icj-gaza--qhlj-mediumSquareAt3X.jpg",
-      "imagemCredito": "The New York Times",
-      "regioes": [
-        "oriente-medio",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "diplomacia",
-        "direitos"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
     }
   ]
 }

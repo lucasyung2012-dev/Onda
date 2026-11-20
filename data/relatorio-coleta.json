@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-20T21:17:00.434Z",
-  "fontesOk": 69,
-  "fontesComErro": 1,
-  "noticiasNovasNestaRodada": 30,
+  "geradoEm": "2026-11-20T21:32:55.518Z",
+  "fontesOk": 68,
+  "fontesComErro": 2,
+  "noticiasNovasNestaRodada": 28,
   "porFonte": [
     {
       "id": "nyt",
@@ -27,9 +27,9 @@
       "nome": "Fox News",
       "status": "ok",
       "itensNoFeed": 25,
-      "aceitas": 16,
-      "descartadasPorIdade": 9,
-      "comImagem": 16
+      "aceitas": 15,
+      "descartadasPorIdade": 10,
+      "comImagem": 15
     },
     {
       "id": "npr",
@@ -73,8 +73,8 @@
       "nome": "Atlantic Council",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 22,
-      "descartadasPorIdade": 78,
+      "aceitas": 21,
+      "descartadasPorIdade": 79,
       "comImagem": 0
     },
     {
@@ -162,8 +162,8 @@
       "id": "dwbrasil",
       "nome": "DW Brasil",
       "status": "ok",
-      "itensNoFeed": 64,
-      "aceitas": 19,
+      "itensNoFeed": 65,
+      "aceitas": 20,
       "descartadasPorIdade": 45,
       "comImagem": 0
     },
@@ -215,9 +215,10 @@
     {
       "id": "euronews",
       "nome": "Euronews",
-      "status": "ok",
-      "itensNoFeed": 50,
-      "aceitas": 50,
+      "status": "erro",
+      "erro": "o site respondeu HTTP 406",
+      "itensNoFeed": 0,
+      "aceitas": 0,
       "descartadasPorIdade": 0,
       "comImagem": 0
     },
@@ -442,9 +443,9 @@
       "nome": "The Diplomat",
       "status": "ok",
       "itensNoFeed": 96,
-      "aceitas": 19,
-      "descartadasPorIdade": 77,
-      "comImagem": 19
+      "aceitas": 30,
+      "descartadasPorIdade": 66,
+      "comImagem": 30
     },
     {
       "id": "lowy",
@@ -496,9 +497,9 @@
       "nome": "g1 Mundo",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 71,
-      "descartadasPorIdade": 29,
-      "comImagem": 71
+      "aceitas": 70,
+      "descartadasPorIdade": 30,
+      "comImagem": 70
     },
     {
       "id": "folha",
@@ -532,9 +533,9 @@
       "nome": "Gazeta do Povo Mundo",
       "status": "ok",
       "itensNoFeed": 61,
-      "aceitas": 60,
-      "descartadasPorIdade": 1,
-      "comImagem": 60
+      "aceitas": 59,
+      "descartadasPorIdade": 2,
+      "comImagem": 59
     },
     {
       "id": "cartacapital",
@@ -622,9 +623,9 @@
       "nome": "UN News",
       "status": "ok",
       "itensNoFeed": 30,
-      "aceitas": 11,
-      "descartadasPorIdade": 19,
-      "comImagem": 11
+      "aceitas": 12,
+      "descartadasPorIdade": 18,
+      "comImagem": 12
     },
     {
       "id": "crisisgroup",
