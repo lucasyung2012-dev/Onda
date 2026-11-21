@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-21T00:28:23.431Z",
+  "geradoEm": "2026-11-21T00:37:55.938Z",
   "dataReferencia": "2026-11-20",
   "fuso": "America/Sao_Paulo",
-  "totalNoticias": 1441,
+  "totalNoticias": 1453,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -29,440 +29,45 @@
     "outros": "Outros"
   },
   "destaque": {
-    "id": "0e0b6ada852d",
-    "motivo": "Coberto por 13 fontes diferentes nas últimas 24 horas. Critério provisório: a partir da etapa 7, a escolha passa a ser feita por análise."
+    "id": "f2443e656bc3",
+    "motivo": "Coberto por 17 fontes diferentes nas últimas 24 horas. Critério provisório: a partir da etapa 7, a escolha passa a ser feita por análise."
   },
   "fatos": [
     {
-      "id": "0e0b6ada852d",
-      "titulo": "Trump Claims Putin Wants Peace as Moscow Rejects NATO-Style Guarantees for Ukraine",
-      "resumo": "President Donald Trump claimed Vladimir Putin wants a diplomatic end to Russia’s war against Ukraine, describing their talks in China as “very good.” However, Trump declined to discuss security guarantees for Kyiv before a peace agreement, while Moscow rejected NATO-style…",
-      "imagem": "https://static.kyivpost.com/storage/2026/11/21/86b3b9882bed604bcacaa5acace4ffba.jpg?w=640&q=90&f=jpg",
-      "credito": "Kyiv Post",
-      "regioes": [
-        "europa",
-        "america-norte",
-        "asia-pacifico",
-        "global"
-      ],
-      "temas": [
-        "diplomacia",
-        "conflitos",
-        "politica",
-        "energia",
-        "direitos",
-        "economia",
-        "outros"
-      ],
-      "fontes": 13,
-      "paises": 8,
-      "maisRecente": "2026-11-20T23:36:56.000Z",
-      "materias": [
-        {
-          "fonte": "Kyiv Post",
-          "pais": "Ucrânia",
-          "visao": "Jornal ucraniano",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Trump Claims Putin Wants Peace as Moscow Rejects NATO-Style Guarantees for Ukraine",
-          "link": "https://www.kyivpost.com/post/90774",
-          "publicadoEm": "2026-11-20T23:36:56.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Al-Monitor",
-          "pais": "EUA",
-          "visao": "Site especializado em Oriente Médio",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Trump says he, Putin had very good talks on Ukraine",
-          "link": "https://www.al-monitor.com/originals/2026/11/trump-says-he-putin-had-very-good-talks-ukraine",
-          "publicadoEm": "2026-11-20T19:46:32.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Al-Monitor",
-          "pais": "EUA",
-          "visao": "Site especializado em Oriente Médio",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Trump cites good talks with Putin on Ukraine, holds back on security guarantees",
-          "link": "https://www.al-monitor.com/originals/2026/11/trump-cites-good-talks-putin-ukraine-holds-back-security-guarantees",
-          "publicadoEm": "2026-11-20T19:46:32.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "TASS",
-          "pais": "Rússia",
-          "visao": "Agência estatal russa (versão oficial do Kremlin)",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Trump dubs talks with Putin, Xi ‘summit of three’",
-          "link": "https://tass.com/world/2222729",
-          "publicadoEm": "2026-11-20T19:41:51.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The Straits Times",
-          "pais": "Singapura",
-          "visao": "Jornal de referência de Singapura",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Trump says he, Russia’s Putin had ‘very good’ talks on Ukraine",
-          "link": "https://www.straitstimes.com/world/europe/trump-says-he-putin-had-very-good-talks-on-ukraine",
-          "publicadoEm": "2026-11-20T18:50:46.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The Hindu",
-          "pais": "Índia",
-          "visao": "Jornal de referência indiano",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Three to tango: On Trump, Xi, Putin trilateral summit",
-          "link": "https://www.thehindu.com/opinion/editorial/three-to-tango-on-trump-xi-putin-trilateral-summit/article71725845.ece",
-          "publicadoEm": "2026-11-20T18:22:45.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Meduza",
-          "pais": "Rússia",
-          "visao": "Site russo independente, no exílio, oposição ao Kremlin",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Ukraine clause dropped from Trump, Putin, and Xi’s ‘peace declaration’ at U.S. request, Finland’s president says",
-          "link": "https://meduza.io/en/news/2026/11/20/ukraine-clause-dropped-from-trump-putin-and-xi-s-peace-declaration-at-u-s-request-finland-s-president-says",
-          "publicadoEm": "2026-11-20T17:17:25.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Fox News",
-          "pais": "EUA",
-          "visao": "Canal dos EUA, direita conservadora",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Putin launches Ukraine barrage hours after Trump meeting amid alleged Russian missile breach of NATO airspace",
-          "link": "https://www.foxnews.com/world/putin-launches-ukraine-barrage-hours-after-trump-meeting-amid-alleged-russian-missile-breach-nato-airspace",
-          "publicadoEm": "2026-11-20T15:13:39.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Kyiv Post",
-          "pais": "Ucrânia",
-          "visao": "Jornal ucraniano",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Russia Rejects NATO-Style Security Guarantees for Ukraine",
-          "link": "https://www.kyivpost.com/post/90735",
-          "publicadoEm": "2026-11-20T14:22:38.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The Moscow Times",
-          "pais": "Rússia",
-          "visao": "Jornal russo independente, no exílio",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Russian Stocks Fall After No Breakthrough at Putin-Trump-Xi Summit",
-          "link": "https://www.themoscowtimes.com/2026/11/20/russian-stocks-fall-after-no-breakthrough-at-putin-trump-xi-summit-a94334",
-          "publicadoEm": "2026-11-20T14:20:46.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The New York Times",
-          "pais": "EUA",
-          "visao": "Jornal de referência dos EUA, centro-esquerda",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Putin Exits Summit With Symbolic Win, Saying He and Trump Share ‘Values’",
-          "link": "https://www.nytimes.com/2026/11/20/world/europe/putin-trump-xi-summit-apec.html",
-          "publicadoEm": "2026-11-20T13:56:56.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Kyiv Post",
-          "pais": "Ucrânia",
-          "visao": "Jornal ucraniano",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "US Asked Trump-Putin-Xi Summit to Drop Ukraine Clause From ‘Peace Declaration,’ Stubb Says",
-          "link": "https://www.kyivpost.com/post/90722",
-          "publicadoEm": "2026-11-20T13:18:12.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The Moscow Times",
-          "pais": "Rússia",
-          "visao": "Jornal russo independente, no exílio",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Russia Pushes Back Against U.S. Idea of NATO-Style Security Guarantees for Ukraine",
-          "link": "https://www.themoscowtimes.com/2026/11/20/russia-pushes-back-against-us-idea-of-nato-style-security-guarantees-for-ukraine-a94326",
-          "publicadoEm": "2026-11-20T10:16:00.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Asharq Al-Awsat",
-          "pais": "Arábia Saudita",
-          "visao": "Jornal pan-árabe de dono saudita",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Xi-Putin-Trump Summit: What Comes Next?",
-          "link": "https://english.aawsat.com/node/5343528",
-          "publicadoEm": "2026-11-20T09:31:41.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Asharq Al-Awsat",
-          "pais": "Arábia Saudita",
-          "visao": "Jornal pan-árabe de dono saudita",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Russia Pushes Back Against US Idea of NATO-Style Security Guarantees for Ukraine",
-          "link": "https://english.aawsat.com/node/5343506",
-          "publicadoEm": "2026-11-20T08:49:47.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Daily Sabah",
-          "pais": "Turquia",
-          "visao": "Jornal turco pró-governo Erdogan",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Trump’s summit with Xi, Putin exposes limits of his personal diplomacy",
-          "link": "https://www.dailysabah.com/world/americas/trumps-summit-with-xi-putin-exposes-limits-of-his-personal-diplomacy",
-          "publicadoEm": "2026-11-20T08:47:44.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Daily Sabah",
-          "pais": "Turquia",
-          "visao": "Jornal turco pró-governo Erdogan",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "US says Russia open to NATO-style security guarantees for Ukraine",
-          "link": "https://www.dailysabah.com/world/europe/us-says-russia-open-to-nato-style-security-guarantees-for-ukraine",
-          "publicadoEm": "2026-11-20T08:44:00.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Kyiv Post",
-          "pais": "Ucrânia",
-          "visao": "Jornal ucraniano",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "US Says It Got Kremlin ‘Comfortable’ With NATO Article 5-Style Security Guarantees for Ukraine",
-          "link": "https://www.kyivpost.com/post/90681",
-          "publicadoEm": "2026-11-20T08:33:11.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The Diplomat",
-          "pais": "Japão",
-          "visao": "Revista de análise sobre Ásia-Pacífico",
-          "estatal": false,
-          "tipo": "analise",
-          "idioma": "en",
-          "titulo": "The ICJ’s Myanmar Genocide Ruling: What Comes Next?",
-          "link": "https://thediplomat.com/2026/11/the-icjs-myanmar-genocide-ruling-what-comes-next/",
-          "publicadoEm": "2026-11-20T05:15:00.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "CNA",
-          "pais": "Singapura",
-          "visao": "Canal de Singapura, foco no Sudeste Asiático",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Trump, Xi and Putin release 'peace declaration' from unprecedented summit",
-          "link": "https://www.channelnewsasia.com/world/china-russia-us-peace-declaration-nuclear-trilateral-talks-6565716",
-          "publicadoEm": "2026-11-20T03:16:00.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "3640a3fbb952",
-      "titulo": "'Friends' But Who Benefits? Notes from an Historic Summit, Myanmar's Genocide Ruling, Time to 'Bre-join' the EU?",
-      "resumo": "Welcome to the World This Week with Gavin Lee. You give us 45 minutes, we'll give you 7 days worth of crystal clear analysis. As ever, alongside a handpicked panel of four distinguished foreign correspondents.",
-      "imagem": "https://s.france24.com/media/display/cfefa95a-e518-11f1-b6ef-13439ca2fe89/w:1024/p:16x9/2026-11-19T230006Z-1256675834-RC2WQOACA4BG-RTRMADP-3-CYBERSECURITY-DRONES-RISK.jpg",
-      "credito": "France 24",
+      "id": "f2443e656bc3",
+      "titulo": "Rights groups urge sanctions after ICJ finds Myanmar guilty of genocide against Rohingya",
+      "resumo": "The International Court of Justice has no power to enforce Thursday's ruling, which orders Myanmar's military-supported government to allow those who fled the violence to return home safely, to pay reparations to the Rohingya Muslims and prosecute those suspected of having…",
+      "imagem": "https://d3i6fh83elv35t.cloudfront.net/static/2026/11/2026-11-20T122523Z_2121973952_RC2OROAHUBSK_RTRMADP_3_MYANMAR-ROHINGYA-1024x683.jpg",
+      "credito": "PBS NewsHour",
       "regioes": [
         "asia-pacifico",
-        "oriente-medio"
-      ],
-      "temas": [
-        "direitos",
-        "politica",
-        "diplomacia"
-      ],
-      "fontes": 9,
-      "paises": 9,
-      "maisRecente": "2026-11-20T19:42:58.000Z",
-      "materias": [
-        {
-          "fonte": "France 24",
-          "pais": "França",
-          "visao": "Emissora internacional pública francesa",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "'Friends' But Who Benefits? Notes from an Historic Summit, Myanmar's Genocide Ruling, Time to 'Bre-join' the EU?",
-          "link": "https://www.france24.com/en/tv-shows/the-world-this-week/20261120-friends-but-who-benefits-notes-from-an-historic-summit-myanmar-s-genocide-ruling-time-to-bre-join-the-eu",
-          "publicadoEm": "2026-11-20T19:42:58.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "DW",
-          "pais": "Alemanha",
-          "visao": "Emissora internacional pública alemã",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Myanmar genocide ruling: Rohingya say struggle for justice not over",
-          "link": "https://www.dw.com/en/myanmar-genocide-ruling-rohingya-say-struggle-for-justice-not-over/a-80003365?maca=en-rss-en-world-4025-rdf",
-          "publicadoEm": "2026-11-20T13:38:00.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Africanews",
-          "pais": "Congo",
-          "visao": "Canal pan-africano de notícias",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Myanmar rejects ICJ Rohingya genocide ruling as 'unfair'",
-          "link": "http://www.africanews.com/2026/11/20/myanmar-rejects-icj-rohingya-genocide-ruling-as-unfair/",
-          "publicadoEm": "2026-11-20T13:16:33.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "UN News",
-          "pais": "ONU",
-          "visao": "Notícias oficiais das Nações Unidas, em inglês",
-          "estatal": false,
-          "tipo": "institucional",
-          "idioma": "en",
-          "titulo": "‘You will not be alone’: General Assembly President tells Rohingya refugees after genocide ruling",
-          "link": "https://news.un.org/feed/view/en/story/2026/11/1168853",
-          "publicadoEm": "2026-11-20T12:00:00.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The Guardian",
-          "pais": "Reino Unido",
-          "visao": "Jornal britânico, centro-esquerda",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "US reacts cautiously to Myanmar genocide ruling as EU praises ‘critical’ role of UN’s top court",
-          "link": "https://www.theguardian.com/law/2026/nov/20/us-eu-reaction-myanmar-rohingya-genocide-icj-ruling-trump-international-law",
-          "publicadoEm": "2026-11-20T11:57:43.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The Hindu",
-          "pais": "Índia",
-          "visao": "Jornal de referência indiano",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Rohingya in Bangladesh welcome UN court’s genocide verdict but say they want to go home to Myanmar",
-          "link": "https://www.thehindu.com/news/international/rohingya-in-bangladesh-welcome-un-courts-genocide-verdict-but-say-they-want-to-go-home-to-myanmar/article71723495.ece",
-          "publicadoEm": "2026-11-20T09:47:20.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Haaretz",
-          "pais": "Israel",
-          "visao": "Jornal israelense, centro-esquerda",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Myanmar dismisses UN court's ruling of genocide against Rohingya as 'unfair'",
-          "link": "https://www.haaretz.com/world-news/asia-and-australia/2026-11-20/ty-article/myanmar-dismisses-un-courts-genocide-ruling-as-unfair/000001a1-f825-d9ff-a7b5-f9afd75a0000",
-          "publicadoEm": "2026-11-20T09:28:05.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The Hindu",
-          "pais": "Índia",
-          "visao": "Jornal de referência indiano",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Myanmar calls ICJ ruling on genocide 'unfair'",
-          "link": "https://www.thehindu.com/news/international/myanmar-calls-icj-ruling-on-genocide-unfair/article71723709.ece",
-          "publicadoEm": "2026-11-20T09:21:15.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Asharq Al-Awsat",
-          "pais": "Arábia Saudita",
-          "visao": "Jornal pan-árabe de dono saudita",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "For the 1st Time, ICJ Finds a Country Responsible for Genocide: Myanmar",
-          "link": "https://english.aawsat.com/node/5343458",
-          "publicadoEm": "2026-11-20T05:52:11.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The New York Times",
-          "pais": "EUA",
-          "visao": "Jornal de referência dos EUA, centro-esquerda",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Myanmar Committed Genocide Against the Rohingya, Top Global Court Finds",
-          "link": "https://www.nytimes.com/2026/11/19/world/europe/myanmar-genocide-icj-decision-.html",
-          "publicadoEm": "2026-11-20T01:37:20.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "6cc38668b794",
-      "titulo": "What are the implications of the ICJ Rohingya genocide ruling?",
-      "resumo": "Verdict against Myanmar may have implications for Israel's genocide in Gaza.",
-      "imagem": "https://www.thenationalnews.com/resizer/v2/6YEWN4MEKNBV5L6Y2XW4RSIK34.JPG?auth=1db353f9d73fe30f13ee2dea6a11772fe8da9e74868eccba73c4456fef81d021&smart=true&width=7856&height=5239",
-      "credito": "The National",
-      "regioes": [
         "oriente-medio",
-        "asia-pacifico",
         "africa"
       ],
       "temas": [
         "direitos",
         "conflitos",
-        "economia",
+        "politica",
         "diplomacia",
+        "economia",
         "clima"
       ],
-      "fontes": 9,
-      "paises": 8,
-      "maisRecente": "2026-11-20T19:12:14.000Z",
+      "fontes": 17,
+      "paises": 13,
+      "maisRecente": "2026-11-21T00:28:54.000Z",
       "materias": [
+        {
+          "fonte": "PBS NewsHour",
+          "pais": "EUA",
+          "visao": "TV pública dos EUA",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Rights groups urge sanctions after ICJ finds Myanmar guilty of genocide against Rohingya",
+          "link": "https://www.pbs.org/newshour/world/rights-groups-urge-sanctions-after-icj-finds-myanmar-guilty-of-genocide-against-rohingya",
+          "publicadoEm": "2026-11-21T00:28:54.000Z",
+          "semData": false
+        },
         {
           "fonte": "Al Jazeera",
           "pais": "Catar",
@@ -560,6 +165,30 @@
           "semData": false
         },
         {
+          "fonte": "DW",
+          "pais": "Alemanha",
+          "visao": "Emissora internacional pública alemã",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Myanmar genocide ruling: Rohingya say struggle for justice not over",
+          "link": "https://www.dw.com/en/myanmar-genocide-ruling-rohingya-say-struggle-for-justice-not-over/a-80003365?maca=en-rss-en-world-4025-rdf",
+          "publicadoEm": "2026-11-20T13:38:00.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Africanews",
+          "pais": "Congo",
+          "visao": "Canal pan-africano de notícias",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Myanmar rejects ICJ Rohingya genocide ruling as 'unfair'",
+          "link": "http://www.africanews.com/2026/11/20/myanmar-rejects-icj-rohingya-genocide-ruling-as-unfair/",
+          "publicadoEm": "2026-11-20T13:16:33.000Z",
+          "semData": false
+        },
+        {
           "fonte": "Haaretz",
           "pais": "Israel",
           "visao": "Jornal israelense, centro-esquerda",
@@ -569,6 +198,296 @@
           "titulo": "Myanmar's genocide defense failed at the ICJ. Israel made many of the same arguments",
           "link": "https://www.haaretz.com/world-news/asia-and-australia/2026-11-20/ty-article-magazine/.premium/the-icj-has-found-a-country-guilty-of-genocide-israel-should-be-worried/000001a1-f85f-d5b4-a3bd-f97f72a30000",
           "publicadoEm": "2026-11-20T12:44:29.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "UN News",
+          "pais": "ONU",
+          "visao": "Notícias oficiais das Nações Unidas, em inglês",
+          "estatal": false,
+          "tipo": "institucional",
+          "idioma": "en",
+          "titulo": "‘You will not be alone’: General Assembly President tells Rohingya refugees after genocide ruling",
+          "link": "https://news.un.org/feed/view/en/story/2026/11/1168853",
+          "publicadoEm": "2026-11-20T12:00:00.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Guardian",
+          "pais": "Reino Unido",
+          "visao": "Jornal britânico, centro-esquerda",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "US reacts cautiously to Myanmar genocide ruling as EU praises ‘critical’ role of UN’s top court",
+          "link": "https://www.theguardian.com/law/2026/nov/20/us-eu-reaction-myanmar-rohingya-genocide-icj-ruling-trump-international-law",
+          "publicadoEm": "2026-11-20T11:57:43.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Hindu",
+          "pais": "Índia",
+          "visao": "Jornal de referência indiano",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Rohingya in Bangladesh welcome UN court’s genocide verdict but say they want to go home to Myanmar",
+          "link": "https://www.thehindu.com/news/international/rohingya-in-bangladesh-welcome-un-courts-genocide-verdict-but-say-they-want-to-go-home-to-myanmar/article71723495.ece",
+          "publicadoEm": "2026-11-20T09:47:20.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Haaretz",
+          "pais": "Israel",
+          "visao": "Jornal israelense, centro-esquerda",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Myanmar dismisses UN court's ruling of genocide against Rohingya as 'unfair'",
+          "link": "https://www.haaretz.com/world-news/asia-and-australia/2026-11-20/ty-article/myanmar-dismisses-un-courts-genocide-ruling-as-unfair/000001a1-f825-d9ff-a7b5-f9afd75a0000",
+          "publicadoEm": "2026-11-20T09:28:05.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Hindu",
+          "pais": "Índia",
+          "visao": "Jornal de referência indiano",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Myanmar calls ICJ ruling on genocide 'unfair'",
+          "link": "https://www.thehindu.com/news/international/myanmar-calls-icj-ruling-on-genocide-unfair/article71723709.ece",
+          "publicadoEm": "2026-11-20T09:21:15.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Asharq Al-Awsat",
+          "pais": "Arábia Saudita",
+          "visao": "Jornal pan-árabe de dono saudita",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "For the 1st Time, ICJ Finds a Country Responsible for Genocide: Myanmar",
+          "link": "https://english.aawsat.com/node/5343458",
+          "publicadoEm": "2026-11-20T05:52:11.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The New York Times",
+          "pais": "EUA",
+          "visao": "Jornal de referência dos EUA, centro-esquerda",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Myanmar Committed Genocide Against the Rohingya, Top Global Court Finds",
+          "link": "https://www.nytimes.com/2026/11/19/world/europe/myanmar-genocide-icj-decision-.html",
+          "publicadoEm": "2026-11-20T01:37:20.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "0e6ea7bbfbcb",
+      "titulo": "What the historic Trump, Xi and Putin summit signals to the world",
+      "resumo": "President Trump meets with Xi Jinping and Vladimir Putin in an unprecedented show of three leaders who understand the power of grand diplomatic gestures. On a special edition of Compass Points, Nick Schifrin is in Shenzhen, China, and has details on the historic meeting and the…",
+      "imagem": "https://d3i6fh83elv35t.cloudfront.net/static/2026/11/cp-2-1024x683.jpg",
+      "credito": "PBS NewsHour",
+      "regioes": [
+        "america-norte",
+        "europa",
+        "asia-pacifico",
+        "global"
+      ],
+      "temas": [
+        "diplomacia",
+        "politica",
+        "conflitos",
+        "economia",
+        "energia",
+        "direitos"
+      ],
+      "fontes": 13,
+      "paises": 8,
+      "maisRecente": "2026-11-21T00:30:46.000Z",
+      "materias": [
+        {
+          "fonte": "PBS NewsHour",
+          "pais": "EUA",
+          "visao": "TV pública dos EUA",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "What the historic Trump, Xi and Putin summit signals to the world",
+          "link": "https://www.pbs.org/newshour/video/compass-points/2026/11/what-the-historic-trump-xi-and-putin-summit-signals-to-the-world",
+          "publicadoEm": "2026-11-21T00:30:46.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "PBS NewsHour",
+          "pais": "EUA",
+          "visao": "TV pública dos EUA",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "What the historic Trump, Xi and Putin summit signals to the world",
+          "link": "https://www.pbs.org/newshour/podcasts/compass-points-with-pbs-news/what-the-historic-trump-xi-and-putin-summit-signals-to-the-world",
+          "publicadoEm": "2026-11-21T00:30:26.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Meduza",
+          "pais": "Rússia",
+          "visao": "Site russo independente, no exílio, oposição ao Kremlin",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "‘This was no Yalta’: How the world’s press read the Trump–Putin–Xi summit in China",
+          "link": "https://meduza.io/en/feature/2026/11/21/this-was-no-yalta-how-the-world-s-press-read-the-trump-putin-xi-summit-in-china",
+          "publicadoEm": "2026-11-20T21:20:52.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "TASS",
+          "pais": "Rússia",
+          "visao": "Agência estatal russa (versão oficial do Kremlin)",
+          "estatal": true,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Trump dubs talks with Putin, Xi ‘summit of three’",
+          "link": "https://tass.com/world/2222729",
+          "publicadoEm": "2026-11-20T19:41:51.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Trump says he, Russia’s Putin had ‘very good’ talks on Ukraine",
+          "link": "https://www.straitstimes.com/world/europe/trump-says-he-putin-had-very-good-talks-on-ukraine",
+          "publicadoEm": "2026-11-20T18:50:46.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Ukrainska Pravda",
+          "pais": "Ucrânia",
+          "visao": "Site ucraniano de jornalismo independente",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Trump says Putin wants to end Russia's war against Ukraine through diplomacy",
+          "link": "https://www.pravda.com.ua/eng/news/2026/11/20/8063876/",
+          "publicadoEm": "2026-11-20T18:25:00.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Hindu",
+          "pais": "Índia",
+          "visao": "Jornal de referência indiano",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Three to tango: On Trump, Xi, Putin trilateral summit",
+          "link": "https://www.thehindu.com/opinion/editorial/three-to-tango-on-trump-xi-putin-trilateral-summit/article71725845.ece",
+          "publicadoEm": "2026-11-20T18:22:45.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Moscow Times",
+          "pais": "Rússia",
+          "visao": "Jornal russo independente, no exílio",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Russian Stocks Fall After No Breakthrough at Putin-Trump-Xi Summit",
+          "link": "https://www.themoscowtimes.com/2026/11/20/russian-stocks-fall-after-no-breakthrough-at-putin-trump-xi-summit-a94334",
+          "publicadoEm": "2026-11-20T14:20:46.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The New York Times",
+          "pais": "EUA",
+          "visao": "Jornal de referência dos EUA, centro-esquerda",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Putin Exits Summit With Symbolic Win, Saying He and Trump Share ‘Values’",
+          "link": "https://www.nytimes.com/2026/11/20/world/europe/putin-trump-xi-summit-apec.html",
+          "publicadoEm": "2026-11-20T13:56:56.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Kyiv Post",
+          "pais": "Ucrânia",
+          "visao": "Jornal ucraniano",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "US Asked Trump-Putin-Xi Summit to Drop Ukraine Clause From ‘Peace Declaration,’ Stubb Says",
+          "link": "https://www.kyivpost.com/post/90722",
+          "publicadoEm": "2026-11-20T13:18:12.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Asharq Al-Awsat",
+          "pais": "Arábia Saudita",
+          "visao": "Jornal pan-árabe de dono saudita",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Xi-Putin-Trump Summit: What Comes Next?",
+          "link": "https://english.aawsat.com/node/5343528",
+          "publicadoEm": "2026-11-20T09:31:41.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Kyiv Post",
+          "pais": "Ucrânia",
+          "visao": "Jornal ucraniano",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Putin Gets Trump’s Handshake and Support, but No ‘Yalta-2’",
+          "link": "https://www.kyivpost.com/analysis/90684",
+          "publicadoEm": "2026-11-20T09:01:38.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Daily Sabah",
+          "pais": "Turquia",
+          "visao": "Jornal turco pró-governo Erdogan",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Trump’s summit with Xi, Putin exposes limits of his personal diplomacy",
+          "link": "https://www.dailysabah.com/world/americas/trumps-summit-with-xi-putin-exposes-limits-of-his-personal-diplomacy",
+          "publicadoEm": "2026-11-20T08:47:44.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Diplomat",
+          "pais": "Japão",
+          "visao": "Revista de análise sobre Ásia-Pacífico",
+          "estatal": false,
+          "tipo": "analise",
+          "idioma": "en",
+          "titulo": "The ICJ’s Myanmar Genocide Ruling: What Comes Next?",
+          "link": "https://thediplomat.com/2026/11/the-icjs-myanmar-genocide-ruling-what-comes-next/",
+          "publicadoEm": "2026-11-20T05:15:00.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "CNA",
+          "pais": "Singapura",
+          "visao": "Canal de Singapura, foco no Sudeste Asiático",
+          "estatal": true,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Trump, Xi and Putin release 'peace declaration' from unprecedented summit",
+          "link": "https://www.channelnewsasia.com/world/china-russia-us-peace-declaration-nuclear-trilateral-talks-6565716",
+          "publicadoEm": "2026-11-20T03:16:00.000Z",
           "semData": false
         }
       ]
@@ -716,24 +635,36 @@
       ]
     },
     {
-      "id": "b7fdc1f987cb",
-      "titulo": "Mamdani announces plan to close New York's Rikers Island jail by 2032",
-      "resumo": "Plans to shutter the troubled facility date back to 2019, when the city council first voted to close it but delays arose over where to place inmates.",
+      "id": "e037aed8b524",
+      "titulo": "Mamdani sets plan to close NYC’s notorious Rikers Island jail",
+      "resumo": "Rikers will close and be replaced with four smaller, more modern jails by 2027.",
       "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4622/live/d8e189d0-e52b-11f1-964d-a1d5fe40573e.jpg",
       "credito": "BBC News",
       "regioes": [
         "mundo"
       ],
       "temas": [
-        "outros",
         "direitos",
+        "outros",
         "politica",
         "saude"
       ],
       "fontes": 7,
       "paises": 7,
-      "maisRecente": "2026-11-21T00:01:39.000Z",
+      "maisRecente": "2026-11-21T00:29:00.000Z",
       "materias": [
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Mamdani sets plan to close NYC’s notorious Rikers Island jail",
+          "link": "https://www.straitstimes.com/world/united-states/mamdani-sets-plan-to-close-nycs-notorious-rikers-island-jail",
+          "publicadoEm": "2026-11-21T00:29:00.000Z",
+          "semData": false
+        },
         {
           "fonte": "BBC News",
           "pais": "Reino Unido",
@@ -816,6 +747,149 @@
           "titulo": "Mamdani unveils plan to close Rikers Island, New York’s notorious jail plagued by allegations of abuse, violence and death",
           "link": "https://english.elpais.com/usa/2026-11-20/mamdani-unveils-plan-to-close-rikers-island-new-yorks-notorious-jail-plagued-by-allegations-of-abuse-violence-and-death.html",
           "publicadoEm": "2026-11-20T12:41:54.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "0e0b6ada852d",
+      "titulo": "Trump Claims Putin Wants Peace as Moscow Rejects NATO-Style Guarantees for Ukraine",
+      "resumo": "President Donald Trump claimed Vladimir Putin wants a diplomatic end to Russia’s war against Ukraine, describing their talks in China as “very good.” However, Trump declined to discuss security guarantees for Kyiv before a peace agreement, while Moscow rejected NATO-style…",
+      "imagem": "https://static.kyivpost.com/storage/2026/11/21/86b3b9882bed604bcacaa5acace4ffba.jpg?w=640&q=90&f=jpg",
+      "credito": "Kyiv Post",
+      "regioes": [
+        "europa",
+        "america-norte",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia",
+        "politica",
+        "outros"
+      ],
+      "fontes": 7,
+      "paises": 5,
+      "maisRecente": "2026-11-20T23:36:56.000Z",
+      "materias": [
+        {
+          "fonte": "Kyiv Post",
+          "pais": "Ucrânia",
+          "visao": "Jornal ucraniano",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Trump Claims Putin Wants Peace as Moscow Rejects NATO-Style Guarantees for Ukraine",
+          "link": "https://www.kyivpost.com/post/90774",
+          "publicadoEm": "2026-11-20T23:36:56.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Al-Monitor",
+          "pais": "EUA",
+          "visao": "Site especializado em Oriente Médio",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Trump says he, Putin had very good talks on Ukraine",
+          "link": "https://www.al-monitor.com/originals/2026/11/trump-says-he-putin-had-very-good-talks-ukraine",
+          "publicadoEm": "2026-11-20T19:46:32.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Al-Monitor",
+          "pais": "EUA",
+          "visao": "Site especializado em Oriente Médio",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Trump cites good talks with Putin on Ukraine, holds back on security guarantees",
+          "link": "https://www.al-monitor.com/originals/2026/11/trump-cites-good-talks-putin-ukraine-holds-back-security-guarantees",
+          "publicadoEm": "2026-11-20T19:46:32.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Meduza",
+          "pais": "Rússia",
+          "visao": "Site russo independente, no exílio, oposição ao Kremlin",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Ukraine clause dropped from Trump, Putin, and Xi’s ‘peace declaration’ at U.S. request, Finland’s president says",
+          "link": "https://meduza.io/en/news/2026/11/20/ukraine-clause-dropped-from-trump-putin-and-xi-s-peace-declaration-at-u-s-request-finland-s-president-says",
+          "publicadoEm": "2026-11-20T17:17:25.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Fox News",
+          "pais": "EUA",
+          "visao": "Canal dos EUA, direita conservadora",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Putin launches Ukraine barrage hours after Trump meeting amid alleged Russian missile breach of NATO airspace",
+          "link": "https://www.foxnews.com/world/putin-launches-ukraine-barrage-hours-after-trump-meeting-amid-alleged-russian-missile-breach-nato-airspace",
+          "publicadoEm": "2026-11-20T15:13:39.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Kyiv Post",
+          "pais": "Ucrânia",
+          "visao": "Jornal ucraniano",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Russia Rejects NATO-Style Security Guarantees for Ukraine",
+          "link": "https://www.kyivpost.com/post/90735",
+          "publicadoEm": "2026-11-20T14:22:38.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Moscow Times",
+          "pais": "Rússia",
+          "visao": "Jornal russo independente, no exílio",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Russia Pushes Back Against U.S. Idea of NATO-Style Security Guarantees for Ukraine",
+          "link": "https://www.themoscowtimes.com/2026/11/20/russia-pushes-back-against-us-idea-of-nato-style-security-guarantees-for-ukraine-a94326",
+          "publicadoEm": "2026-11-20T10:16:00.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Asharq Al-Awsat",
+          "pais": "Arábia Saudita",
+          "visao": "Jornal pan-árabe de dono saudita",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Russia Pushes Back Against US Idea of NATO-Style Security Guarantees for Ukraine",
+          "link": "https://english.aawsat.com/node/5343506",
+          "publicadoEm": "2026-11-20T08:49:47.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Daily Sabah",
+          "pais": "Turquia",
+          "visao": "Jornal turco pró-governo Erdogan",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "US says Russia open to NATO-style security guarantees for Ukraine",
+          "link": "https://www.dailysabah.com/world/europe/us-says-russia-open-to-nato-style-security-guarantees-for-ukraine",
+          "publicadoEm": "2026-11-20T08:44:00.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Kyiv Post",
+          "pais": "Ucrânia",
+          "visao": "Jornal ucraniano",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "US Says It Got Kremlin ‘Comfortable’ With NATO Article 5-Style Security Guarantees for Ukraine",
+          "link": "https://www.kyivpost.com/post/90681",
+          "publicadoEm": "2026-11-20T08:33:11.000Z",
           "semData": false
         }
       ]
@@ -1953,38 +2027,22 @@
       ]
     },
     {
-      "id": "1c69855faa1a",
-      "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
-      "resumo": "Nov 20 (Reuters) - Iran's Foreign Minister Abbas Araqchi said Tehran still hoped diplomacy could end its war with the United States, while US President Donald Trump said Iran wanted a deal but one that wasnot acceptable to him. Araqchi told the state-owned Iran newspaper that…",
-      "imagem": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/8/c/961118/8cc01a98d2d5cea34ea6b373beb3af30.jpeg",
-      "credito": "Ukrainska Pravda",
+      "id": "62a222d17488",
+      "titulo": "Saudi Arabia says it intercepts three Houthi missiles targeting Riyadh",
+      "resumo": "Nov 21 - The Saudi-led coalition fighting Yemen's Iran-aligned Houthis said on Saturday it had intercepted and destroyed three ballistic missiles fired towards Riyadh, marking the second Houthi attack on the Saudi capital in a few days, after its tallest skyscraper was struck on…",
+      "imagem": "https://static.srpcdigital.com/styles/414x217/public/2026-11/1885638_0.jpeg.webp?VersionId=Q451ibxl6Wleu9CYNYeIhCkLnMVxDAPC",
+      "credito": "Asharq Al-Awsat",
       "regioes": [
-        "america-norte",
-        "oriente-medio",
-        "europa"
+        "oriente-medio"
       ],
       "temas": [
         "conflitos",
-        "diplomacia",
-        "politica",
-        "direitos"
+        "energia"
       ],
       "fontes": 4,
       "paises": 4,
-      "maisRecente": "2026-11-20T23:46:29.000Z",
+      "maisRecente": "2026-11-21T00:20:23.000Z",
       "materias": [
-        {
-          "fonte": "Al-Monitor",
-          "pais": "EUA",
-          "visao": "Site especializado em Oriente Médio",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
-          "link": "https://www.al-monitor.com/originals/2026/11/araqchi-says-iran-wants-diplomacy-end-war-trump-says-terms-unacceptable",
-          "publicadoEm": "2026-11-20T23:46:29.000Z",
-          "semData": false
-        },
         {
           "fonte": "The Straits Times",
           "pais": "Singapura",
@@ -1992,33 +2050,45 @@
           "estatal": false,
           "tipo": "noticia",
           "idioma": "en",
-          "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
-          "link": "https://www.straitstimes.com/world/middle-east/araqchi-says-iran-wants-diplomacy-to-end-war-trump-says-terms-unacceptable",
-          "publicadoEm": "2026-11-20T23:15:29.000Z",
+          "titulo": "Saudi Arabia says it intercepts three Houthi missiles targeting Riyadh",
+          "link": "https://www.straitstimes.com/world/middle-east/saudi-arabia-says-it-intercepts-three-houthi-missiles-targeting-riyadh",
+          "publicadoEm": "2026-11-21T00:20:23.000Z",
           "semData": false
         },
         {
-          "fonte": "Ukrainska Pravda",
-          "pais": "Ucrânia",
-          "visao": "Site ucraniano de jornalismo independente",
+          "fonte": "Middle East Eye",
+          "pais": "Reino Unido",
+          "visao": "Site focado no Oriente Médio, crítico de governos da região",
           "estatal": false,
           "tipo": "noticia",
           "idioma": "en",
-          "titulo": "Trump says Putin wants to end Russia's war against Ukraine through diplomacy",
-          "link": "https://www.pravda.com.ua/eng/news/2026/11/20/8063876/",
-          "publicadoEm": "2026-11-20T18:25:00.000Z",
+          "titulo": "Three Houthi ballistic missiles intercepted over Riyadh, Saudi-led coalition says",
+          "link": "https://www.middleeasteye.net/live-blog/live-blog-update/three-houthi-ballistic-missiles-intercepted-over-riyadh-saudi-led",
+          "publicadoEm": "2026-11-21T00:00:08.000Z",
           "semData": false
         },
         {
-          "fonte": "Haaretz",
-          "pais": "Israel",
-          "visao": "Jornal israelense, centro-esquerda",
+          "fonte": "Al Jazeera",
+          "pais": "Catar",
+          "visao": "Rede do Catar (financiada pelo governo), foco no Sul Global e no mundo árabe",
+          "estatal": true,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Iran war live: Saudi-led coalition downs Houthi missiles",
+          "link": "https://www.aljazeera.com/news/liveblog/2026/11/21/iran-war-live-saudi-led-coalition-repels-houthi-missiles?traffic_source=rss",
+          "publicadoEm": "2026-11-21T00:00:06.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Asharq Al-Awsat",
+          "pais": "Arábia Saudita",
+          "visao": "Jornal pan-árabe de dono saudita",
           "estatal": false,
           "tipo": "noticia",
           "idioma": "en",
-          "titulo": "Trump's Iran choice: A deal or another war he can't end",
-          "link": "https://www.haaretz.com/middle-east-news/iran/2026-11-20/ty-article/.premium/trump-may-start-a-war-but-iran-will-decide-how-and-when-it-ends/000001a1-f4ee-d175-abf5-fefed8990000",
-          "publicadoEm": "2026-11-20T04:00:51.000Z",
+          "titulo": "Arab Coalition Intercepts More Houthi Missiles and Drones",
+          "link": "https://english.aawsat.com/node/5343537",
+          "publicadoEm": "2026-11-20T10:15:18.000Z",
           "semData": false
         }
       ]
@@ -2675,22 +2745,37 @@
       ]
     },
     {
-      "id": "62a222d17488",
-      "titulo": "Saudi Arabia says it intercepts three Houthi missiles targeting Riyadh",
-      "resumo": "Nov 21 - The Saudi-led coalition fighting Yemen's Iran-aligned Houthis said on Saturday it had intercepted and destroyed three ballistic missiles fired towards Riyadh, marking the second Houthi attack on the Saudi capital in a few days, after its tallest skyscraper was struck on…",
-      "imagem": "https://static.srpcdigital.com/styles/414x217/public/2026-11/1885638_0.jpeg.webp?VersionId=Q451ibxl6Wleu9CYNYeIhCkLnMVxDAPC",
-      "credito": "Asharq Al-Awsat",
+      "id": "1c69855faa1a",
+      "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
+      "resumo": "Nov 20 (Reuters) - Iran's Foreign Minister Abbas Araqchi said Tehran still hoped diplomacy could end its war with the United States, while US President Donald Trump said Iran wanted a deal but one that wasnot acceptable to him. Araqchi told the state-owned Iran newspaper that…",
+      "imagem": "https://img.haarets.co.il/bs/000001a1-fa55-d9ff-a7b5-fbff0bb60000/01/49/ef92539f43c6abb87108f03b7288/244401.jpg?width=108&height=81",
+      "credito": "Haaretz",
       "regioes": [
+        "america-norte",
         "oriente-medio"
       ],
       "temas": [
+        "diplomacia",
         "conflitos",
-        "energia"
+        "politica",
+        "direitos"
       ],
       "fontes": 3,
       "paises": 3,
-      "maisRecente": "2026-11-21T00:20:23.000Z",
+      "maisRecente": "2026-11-20T23:46:29.000Z",
       "materias": [
+        {
+          "fonte": "Al-Monitor",
+          "pais": "EUA",
+          "visao": "Site especializado em Oriente Médio",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
+          "link": "https://www.al-monitor.com/originals/2026/11/araqchi-says-iran-wants-diplomacy-end-war-trump-says-terms-unacceptable",
+          "publicadoEm": "2026-11-20T23:46:29.000Z",
+          "semData": false
+        },
         {
           "fonte": "The Straits Times",
           "pais": "Singapura",
@@ -2698,33 +2783,21 @@
           "estatal": false,
           "tipo": "noticia",
           "idioma": "en",
-          "titulo": "Saudi Arabia says it intercepts three Houthi missiles targeting Riyadh",
-          "link": "https://www.straitstimes.com/world/middle-east/saudi-arabia-says-it-intercepts-three-houthi-missiles-targeting-riyadh",
-          "publicadoEm": "2026-11-21T00:20:23.000Z",
+          "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
+          "link": "https://www.straitstimes.com/world/middle-east/araqchi-says-iran-wants-diplomacy-to-end-war-trump-says-terms-unacceptable",
+          "publicadoEm": "2026-11-20T23:15:29.000Z",
           "semData": false
         },
         {
-          "fonte": "Middle East Eye",
-          "pais": "Reino Unido",
-          "visao": "Site focado no Oriente Médio, crítico de governos da região",
+          "fonte": "Haaretz",
+          "pais": "Israel",
+          "visao": "Jornal israelense, centro-esquerda",
           "estatal": false,
           "tipo": "noticia",
           "idioma": "en",
-          "titulo": "Three Houthi ballistic missiles intercepted over Riyadh, Saudi-led coalition says",
-          "link": "https://www.middleeasteye.net/live-blog/live-blog-update/three-houthi-ballistic-missiles-intercepted-over-riyadh-saudi-led",
-          "publicadoEm": "2026-11-21T00:00:08.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Asharq Al-Awsat",
-          "pais": "Arábia Saudita",
-          "visao": "Jornal pan-árabe de dono saudita",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Arab Coalition Intercepts More Houthi Missiles and Drones",
-          "link": "https://english.aawsat.com/node/5343537",
-          "publicadoEm": "2026-11-20T10:15:18.000Z",
+          "titulo": "Trump's Iran choice: A deal or another war he can't end",
+          "link": "https://www.haaretz.com/middle-east-news/iran/2026-11-20/ty-article/.premium/trump-may-start-a-war-but-iran-will-decide-how-and-when-it-ends/000001a1-f4ee-d175-abf5-fefed8990000",
+          "publicadoEm": "2026-11-20T04:00:51.000Z",
           "semData": false
         }
       ]
@@ -3831,52 +3904,6 @@
           "titulo": "El Salvador's Bukele to run for third presidential term",
           "link": "https://www.lemonde.fr/en/international/article/2026/11/20/el-salvador-s-bukele-to-run-for-third-presidential-term_6785110_4.html",
           "publicadoEm": "2026-11-20T07:09:04.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "907bb66957b9",
-      "titulo": "‘This was no Yalta’: How the world’s press read the Trump–Putin–Xi summit in China",
-      "resumo": "The leaders of Russia, the United States, and China met in person for the first time on November 19 in the Chinese city of Shenzhen. Symbolically, the meeting was unprecedented, but in substance it produced modest results: Vladimir Putin, Xi Jinping, and Donald Trump talked for…",
-      "imagem": "https://meduza.io/image/attachments/images/012/997/359/small/4o1tfRvVOU0ghhkn8RwvCg",
-      "credito": "Meduza",
-      "regioes": [
-        "europa",
-        "america-norte",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "diplomacia",
-        "economia",
-        "conflitos"
-      ],
-      "fontes": 2,
-      "paises": 2,
-      "maisRecente": "2026-11-20T21:20:52.000Z",
-      "materias": [
-        {
-          "fonte": "Meduza",
-          "pais": "Rússia",
-          "visao": "Site russo independente, no exílio, oposição ao Kremlin",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "‘This was no Yalta’: How the world’s press read the Trump–Putin–Xi summit in China",
-          "link": "https://meduza.io/en/feature/2026/11/21/this-was-no-yalta-how-the-world-s-press-read-the-trump-putin-xi-summit-in-china",
-          "publicadoEm": "2026-11-20T21:20:52.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Kyiv Post",
-          "pais": "Ucrânia",
-          "visao": "Jornal ucraniano",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Putin Gets Trump’s Handshake and Support, but No ‘Yalta-2’",
-          "link": "https://www.kyivpost.com/analysis/90684",
-          "publicadoEm": "2026-11-20T09:01:38.000Z",
           "semData": false
         }
       ]
@@ -7232,6 +7259,127 @@
       ]
     },
     {
+      "id": "b8147bb77afa",
+      "titulo": "Freight train derails near Sejong, leaving Saemaeul, Mugunghwa services suspended",
+      "resumo": "PYEONGTAEK/SEJONG, Nov. 21 (Yonhap) -- Five cars of a freight train derailed nea...",
+      "imagem": "https://img.yna.co.kr/etc/inner/EN/2026/11/21/AEN20261121000400315_01_i_P2.jpg",
+      "credito": "Yonhap",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-21T00:32:53.000Z",
+      "materias": [
+        {
+          "fonte": "Yonhap",
+          "pais": "Coreia do Sul",
+          "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
+          "estatal": true,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Freight train derails near Sejong, leaving Saemaeul, Mugunghwa services suspended",
+          "link": "https://en.yna.co.kr/view/AEN20261121000400315",
+          "publicadoEm": "2026-11-21T00:32:53.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "22ab50155a67",
+      "titulo": "Peru registra terremoto de magnitude 6,7; tremor foi sentido em Lima",
+      "resumo": "Um terremoto de magnitude 6,7 foi registrado na região central do Peru, a cerca de 9 km a noroeste do distrito de Carhuamayo, nesta sexta-feira (20).",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "america-latina"
+      ],
+      "temas": [
+        "clima"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-21T00:32:20.000Z",
+      "materias": [
+        {
+          "fonte": "g1 Mundo",
+          "pais": "Brasil",
+          "visao": "Portal do Grupo Globo",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "pt",
+          "titulo": "Peru registra terremoto de magnitude 6,7; tremor foi sentido em Lima",
+          "link": "https://g1.globo.com/mundo/noticia/2026/11/20/peru-registra-terremoto-de-magnitude-67-tremor-foi-sentido-em-lima.ghtml",
+          "publicadoEm": "2026-11-21T00:32:20.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "12777fc634ce",
+      "titulo": "Lula tenta construir imagem de líder da reação da esquerda mundial contra a direita",
+      "resumo": "Lula tenta mostrar em sua primeira viagem internacional após as eleições que é modelo da esquerda mundial na reação ao avanço da direita.",
+      "imagem": "https://media.gazetadopovo.com.br/2026/11/17085056/vox.lula_-960x540.jpg",
+      "credito": "Gazeta do Povo Mundo",
+      "regioes": [
+        "brasil"
+      ],
+      "temas": [
+        "politica"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-21T00:31:07.000Z",
+      "materias": [
+        {
+          "fonte": "Gazeta do Povo Mundo",
+          "pais": "Brasil",
+          "visao": "Jornal brasileiro, direita conservadora",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "pt",
+          "titulo": "Lula tenta construir imagem de líder da reação da esquerda mundial contra a direita",
+          "link": "https://www.gazetadopovo.com.br/republica/lula-tenta-construir-imagem-de-lider-da-reacao-da-esquerda-mundial-contra-a-direita/",
+          "publicadoEm": "2026-11-21T00:31:07.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "ccc3ecbbe545",
+      "titulo": "North Carolina couple noticed kitchen floor dipping weeks after moving in; court rejects their claims",
+      "resumo": "After moving into their new home, Nate and Christine Holton noticed troubling dips in their kitchen floor. Despite reaching out to the builder, concerns about their foundation emerged again over time. In January 2025, they pursued a lawsuit claiming construction defects, but the…",
+      "imagem": "https://static.toiimg.com/photo/msid-135987141,imgsize-1208389.cms",
+      "credito": "The Times of India",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "conflitos",
+        "direitos"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-21T00:26:00.000Z",
+      "materias": [
+        {
+          "fonte": "The Times of India",
+          "pais": "Índia",
+          "visao": "Maior jornal indiano em inglês",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "North Carolina couple noticed kitchen floor dipping weeks after moving in; court rejects their claims",
+          "link": "https://timesofindia.indiatimes.com/world/us/a-north-carolina-couple-noticed-their-new-homes-kitchen-floor-dipping-within-weeks-of-moving-in-in-2016-then-sued-the-builder-years-later-an-appeals-court-has-rejected-their-defective-construction-claims/articleshow/135987043.cms",
+          "publicadoEm": "2026-11-21T00:26:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
       "id": "10ee907fc20e",
       "titulo": "Threats, insults, settlements: How Nvidia’s ex-CEO Jensen Huang made humiliation routine",
       "resumo": "The behaviour kept Nvidia’s human resources department busy fielding workplace complaints.",
@@ -7257,6 +7405,96 @@
           "titulo": "Threats, insults, settlements: How Nvidia’s ex-CEO Jensen Huang made humiliation routine",
           "link": "https://www.straitstimes.com/world/united-states/threats-insults-settlements-how-nvidias-ex-ceo-jensen-huang-made-humiliation-routine",
           "publicadoEm": "2026-11-21T00:22:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "162f09d7bc7e",
+      "titulo": "Former UK banker quit her job as wig business reached £15,000 monthly sales",
+      "resumo": "",
+      "imagem": "https://static.toiimg.com/photo/msid-136015247,imgsize-1365623.cms",
+      "credito": "The Times of India",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-21T00:22:00.000Z",
+      "materias": [
+        {
+          "fonte": "The Times of India",
+          "pais": "Índia",
+          "visao": "Maior jornal indiano em inglês",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Former UK banker quit her job as wig business reached £15,000 monthly sales",
+          "link": "https://timesofindia.indiatimes.com/world/uk/former-uk-banker-dominique-bogle-turned-her-wig-business-hair-anatomy-into-a-full-time-career-after-tiktok-sales-neared-15000-in-one-month-and-quit-her-job-eight-months-later/articleshow/136015175.cms",
+          "publicadoEm": "2026-11-21T00:22:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "410e68b06d66",
+      "titulo": "UK retailer fined £720,000, ordered to refund 40,000 shoppers over charge",
+      "resumo": "",
+      "imagem": "https://static.toiimg.com/photo/msid-135982668,imgsize-1711005.cms",
+      "credito": "The Times of India",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-21T00:18:00.000Z",
+      "materias": [
+        {
+          "fonte": "The Times of India",
+          "pais": "Índia",
+          "visao": "Maior jornal indiano em inglês",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "UK retailer fined £720,000, ordered to refund 40,000 shoppers over charge",
+          "link": "https://timesofindia.indiatimes.com/world/uk/customers-buying-washing-machines-dishwashers-and-cookers-from-a-uk-retailer-were-automatically-charged-for-optional-recycling-services-watchdog-orders-refunds-for-nearly-40000-shoppers-and-imposes-a-720000-fine/articleshow/135982454.cms",
+          "publicadoEm": "2026-11-21T00:18:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "d9d55b2a7cb9",
+      "titulo": "Trump turns White House press conference into a 2028 succession audition",
+      "resumo": "The president appeared to put Vance and Rubio through their paces as potential successors, though Stephen Miller unexpectedly stole the spotlight “Which of you shall we say doth love us most?” The ageing King Lear’s question to his daughters, expecting them to compete for his…",
+      "imagem": "https://i.guim.co.uk/img/media/13a779743e2a0f56e66622d1d81ea56493964bed/454_0_4537_3631/master/4537.jpg?width=140&quality=85&auto=format&fit=max&s=efa2f21711e4d5e1709b16fb42ade6ae",
+      "credito": "The Guardian",
+      "regioes": [
+        "america-norte"
+      ],
+      "temas": [
+        "politica"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-21T00:16:26.000Z",
+      "materias": [
+        {
+          "fonte": "The Guardian",
+          "pais": "Reino Unido",
+          "visao": "Jornal britânico, centro-esquerda",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Trump turns White House press conference into a 2028 succession audition",
+          "link": "https://www.theguardian.com/us-news/2026/nov/20/trump-republican-succession-battle-vance-rubio",
+          "publicadoEm": "2026-11-21T00:16:26.000Z",
           "semData": false
         }
       ]
@@ -7351,6 +7589,39 @@
           "titulo": "At more than 190cm, Tiny Tim could be a national cattle record breaker",
           "link": "https://www.abc.net.au/news/2026-11-21/tiny-tim-could-be-australias-next-biggest-steer/107396504",
           "publicadoEm": "2026-11-21T00:04:22.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "4b81632f1e0e",
+      "titulo": "Japan wary of U.S., Russia and China holding regular summits",
+      "resumo": "Japan is eager to maintain the existing international order, including by strengthening the rule of law.",
+      "imagem": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/21/575289.jpg",
+      "credito": "The Japan Times",
+      "regioes": [
+        "asia-pacifico",
+        "america-norte",
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-21T00:04:00.000Z",
+      "materias": [
+        {
+          "fonte": "The Japan Times",
+          "pais": "Japão",
+          "visao": "Jornal japonês em inglês",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Japan wary of U.S., Russia and China holding regular summits",
+          "link": "https://www.japantimes.co.jp/news/2026/11/21/japan/us-china-russia-summits-japan-wary/",
+          "publicadoEm": "2026-11-21T00:04:00.000Z",
           "semData": false
         }
       ]
@@ -8137,6 +8408,36 @@
           "titulo": "Hazlewood backs Cummins as sandpaper saga continues",
           "link": "https://www.abc.net.au/news/2026-11-21/pat-cummins-josh-hazlewood-sandpaper-ball-tampering-cricket/107412300",
           "publicadoEm": "2026-11-20T23:20:08.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "3d9afaf8811e",
+      "titulo": "Streamer Completion Race: Two creators finish GTA 6; marathon ending draws spoiler criticism",
+      "resumo": "BrycexD became the first streamer to complete GTA 6 in 39 hours and 38 minutes, with iShowSpeed finishing second after a 52-hour marathon. Both pushed through without sleep, but their experiences differed. While BrycexD planned to replay the game, iShowSpeed was left emotional…",
+      "imagem": "https://static.toiimg.com/photo/msid-136041813,imgsize-126794.cms",
+      "credito": "The Times of India",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:19:01.000Z",
+      "materias": [
+        {
+          "fonte": "The Times of India",
+          "pais": "Índia",
+          "visao": "Maior jornal indiano em inglês",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Streamer Completion Race: Two creators finish GTA 6; marathon ending draws spoiler criticism",
+          "link": "https://timesofindia.indiatimes.com/world/us-streamers/gta-6-makes-history-as-brycexd-and-ishowspeed-become-the-first-streamers-to-beat-rockstars-highly-anticipated-game/articleshow/136041812.cms",
+          "publicadoEm": "2026-11-20T23:19:01.000Z",
           "semData": false
         }
       ]
@@ -12506,6 +12807,37 @@
           "titulo": "Trump says discussed situation on Korean peninsula with Putin, Xi",
           "link": "https://tass.com/world/2222733",
           "publicadoEm": "2026-11-20T19:43:42.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "3640a3fbb952",
+      "titulo": "'Friends' But Who Benefits? Notes from an Historic Summit, Myanmar's Genocide Ruling, Time to 'Bre-join' the EU?",
+      "resumo": "Welcome to the World This Week with Gavin Lee. You give us 45 minutes, we'll give you 7 days worth of crystal clear analysis. As ever, alongside a handpicked panel of four distinguished foreign correspondents.",
+      "imagem": "https://s.france24.com/media/display/cfefa95a-e518-11f1-b6ef-13439ca2fe89/w:1024/p:16x9/2026-11-19T230006Z-1256675834-RC2WQOACA4BG-RTRMADP-3-CYBERSECURITY-DRONES-RISK.jpg",
+      "credito": "France 24",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "diplomacia",
+        "direitos"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T19:42:58.000Z",
+      "materias": [
+        {
+          "fonte": "France 24",
+          "pais": "França",
+          "visao": "Emissora internacional pública francesa",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "'Friends' But Who Benefits? Notes from an Historic Summit, Myanmar's Genocide Ruling, Time to 'Bre-join' the EU?",
+          "link": "https://www.france24.com/en/tv-shows/the-world-this-week/20261120-friends-but-who-benefits-notes-from-an-historic-summit-myanmar-s-genocide-ruling-time-to-bre-join-the-eu",
+          "publicadoEm": "2026-11-20T19:42:58.000Z",
           "semData": false
         }
       ]
@@ -39344,68 +39676,6 @@
           "titulo": "‘We Won’t Allow It Again’: Merz Says Europe Will Not Accept ‘Yalta 2’",
           "link": "https://www.kyivpost.com/post/90652",
           "publicadoEm": "2026-11-20T00:45:45.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "85bdfa5cf47c",
-      "titulo": "LOCAL ELECTIONS 2026: FF Plus fails to broker DA-ActionSA coalition after deadlocked Gauteng talks",
-      "resumo": "The FF Plus could not resolve tension between the DA and ActionSA as Gauteng coalition negotiations stall and ANC-led governing options gain support.",
-      "imagem": "https://cdn.dailymaverick.co.za/i/VBHzSuPaBnYjgTgWPbdfBHWkk9U=/800x0/smart/filters:strip_exif()/file/attachments/orphans/Blog-LGE-2026-Saturday2_307459.jpg",
-      "credito": "Daily Maverick",
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "diplomacia",
-        "energia",
-        "politica"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-20T00:35:22.000Z",
-      "materias": [
-        {
-          "fonte": "Daily Maverick",
-          "pais": "África do Sul",
-          "visao": "Jornal sul-africano independente",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "LOCAL ELECTIONS 2026: FF Plus fails to broker DA-ActionSA coalition after deadlocked Gauteng talks",
-          "link": "https://www.dailymaverick.co.za/article/2026-11-20-ff-plus-fails-to-broker-da-actionsa-coalition-as-gauteng-talks-stall/",
-          "publicadoEm": "2026-11-20T00:35:22.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "5e4a4c4a5f44",
-      "titulo": "BIGBANG teases new digital single",
-      "resumo": "SEOUL, Nov. 20 (Yonhap) -- Iconic K-pop group BIGBANG is set to drop a new digit...",
-      "imagem": "https://img.yna.co.kr/etc/inner/EN/2026/11/20/AEN20261120002100315_01_i_P2.jpg",
-      "credito": "Yonhap",
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-20T00:29:18.000Z",
-      "materias": [
-        {
-          "fonte": "Yonhap",
-          "pais": "Coreia do Sul",
-          "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "BIGBANG teases new digital single",
-          "link": "https://en.yna.co.kr/view/AEN20261120002100315",
-          "publicadoEm": "2026-11-20T00:29:18.000Z",
           "semData": false
         }
       ]

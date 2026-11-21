@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-21T00:28:23.431Z",
-  "fontesOk": 68,
-  "fontesComErro": 2,
-  "noticiasNovasNestaRodada": 5,
+  "geradoEm": "2026-11-21T00:37:55.938Z",
+  "fontesOk": 69,
+  "fontesComErro": 1,
+  "noticiasNovasNestaRodada": 14,
   "porFonte": [
     {
       "id": "nyt",
@@ -45,9 +45,9 @@
       "nome": "PBS NewsHour",
       "status": "ok",
       "itensNoFeed": 20,
-      "aceitas": 15,
-      "descartadasPorIdade": 5,
-      "comImagem": 15
+      "aceitas": 17,
+      "descartadasPorIdade": 3,
+      "comImagem": 17
     },
     {
       "id": "cbc",
@@ -215,10 +215,9 @@
     {
       "id": "euronews",
       "nome": "Euronews",
-      "status": "erro",
-      "erro": "o site respondeu HTTP 406",
-      "itensNoFeed": 0,
-      "aceitas": 0,
+      "status": "ok",
+      "itensNoFeed": 50,
+      "aceitas": 50,
       "descartadasPorIdade": 0,
       "comImagem": 0
     },
@@ -470,8 +469,8 @@
       "nome": "AllAfrica",
       "status": "ok",
       "itensNoFeed": 33,
-      "aceitas": 32,
-      "descartadasPorIdade": 1,
+      "aceitas": 31,
+      "descartadasPorIdade": 2,
       "comImagem": 0
     },
     {
@@ -499,7 +498,7 @@
       "itensNoFeed": 100,
       "aceitas": 71,
       "descartadasPorIdade": 29,
-      "comImagem": 71
+      "comImagem": 70
     },
     {
       "id": "folha",
@@ -532,10 +531,10 @@
       "id": "gazetadopovo",
       "nome": "Gazeta do Povo Mundo",
       "status": "ok",
-      "itensNoFeed": 59,
-      "aceitas": 57,
-      "descartadasPorIdade": 2,
-      "comImagem": 57
+      "itensNoFeed": 58,
+      "aceitas": 58,
+      "descartadasPorIdade": 0,
+      "comImagem": 58
     },
     {
       "id": "cartacapital",

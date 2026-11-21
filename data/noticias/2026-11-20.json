@@ -2,6 +2,224 @@
   "data": "2026-11-20",
   "noticias": [
     {
+      "id": "b8147bb77afa",
+      "titulo": "Freight train derails near Sejong, leaving Saemaeul, Mugunghwa services suspended",
+      "resumo": "PYEONGTAEK/SEJONG, Nov. 21 (Yonhap) -- Five cars of a freight train derailed nea...",
+      "link": "https://en.yna.co.kr/view/AEN20261121000400315",
+      "fonte": "yonhap",
+      "fonteNome": "Yonhap",
+      "pais": "Coreia do Sul",
+      "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:32:53.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://img.yna.co.kr/etc/inner/EN/2026/11/21/AEN20261121000400315_01_i_P2.jpg",
+      "imagemCredito": "Yonhap",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
+    },
+    {
+      "id": "22ab50155a67",
+      "titulo": "Peru registra terremoto de magnitude 6,7; tremor foi sentido em Lima",
+      "resumo": "Um terremoto de magnitude 6,7 foi registrado na região central do Peru, a cerca de 9 km a noroeste do distrito de Carhuamayo, nesta sexta-feira (20).",
+      "link": "https://g1.globo.com/mundo/noticia/2026/11/20/peru-registra-terremoto-de-magnitude-67-tremor-foi-sentido-em-lima.ghtml",
+      "fonte": "g1",
+      "fonteNome": "g1 Mundo",
+      "pais": "Brasil",
+      "visao": "Portal do Grupo Globo",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:32:20.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "america-latina"
+      ],
+      "temas": [
+        "clima"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
+    },
+    {
+      "id": "12777fc634ce",
+      "titulo": "Lula tenta construir imagem de líder da reação da esquerda mundial contra a direita",
+      "resumo": "Lula tenta mostrar em sua primeira viagem internacional após as eleições que é modelo da esquerda mundial na reação ao avanço da direita.",
+      "link": "https://www.gazetadopovo.com.br/republica/lula-tenta-construir-imagem-de-lider-da-reacao-da-esquerda-mundial-contra-a-direita/",
+      "fonte": "gazetadopovo",
+      "fonteNome": "Gazeta do Povo Mundo",
+      "pais": "Brasil",
+      "visao": "Jornal brasileiro, direita conservadora",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:31:07.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://media.gazetadopovo.com.br/2026/11/17085056/vox.lula_-960x540.jpg",
+      "imagemCredito": "Gazeta do Povo Mundo",
+      "regioes": [
+        "brasil"
+      ],
+      "temas": [
+        "politica"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
+    },
+    {
+      "id": "0e6ea7bbfbcb",
+      "titulo": "What the historic Trump, Xi and Putin summit signals to the world",
+      "resumo": "President Trump meets with Xi Jinping and Vladimir Putin in an unprecedented show of three leaders who understand the power of grand diplomatic gestures. On a special edition of Compass Points, Nick Schifrin is in Shenzhen, China, and has details on the historic meeting and the…",
+      "link": "https://www.pbs.org/newshour/video/compass-points/2026/11/what-the-historic-trump-xi-and-putin-summit-signals-to-the-world",
+      "fonte": "pbs",
+      "fonteNome": "PBS NewsHour",
+      "pais": "EUA",
+      "visao": "TV pública dos EUA",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:30:46.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://d3i6fh83elv35t.cloudfront.net/static/2026/11/cp-2-1024x683.jpg",
+      "imagemCredito": "PBS NewsHour",
+      "regioes": [
+        "asia-pacifico",
+        "america-norte",
+        "europa"
+      ],
+      "temas": [
+        "diplomacia",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
+    },
+    {
+      "id": "9a2ea320f1bb",
+      "titulo": "What the historic Trump, Xi and Putin summit signals to the world",
+      "resumo": "President Trump meets with Xi Jinping and Vladimir Putin in an unprecedented show of three leaders who understand the power of grand diplomatic gestures. On a special edition of Compass Points, Nick Schifrin is in Shenzhen, China, and has details on the historic meeting and the…",
+      "link": "https://www.pbs.org/newshour/podcasts/compass-points-with-pbs-news/what-the-historic-trump-xi-and-putin-summit-signals-to-the-world",
+      "fonte": "pbs",
+      "fonteNome": "PBS NewsHour",
+      "pais": "EUA",
+      "visao": "TV pública dos EUA",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:30:26.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://d3i6fh83elv35t.cloudfront.net/static/2026/11/cp-2-1024x683.jpg",
+      "imagemCredito": "PBS NewsHour",
+      "regioes": [
+        "asia-pacifico",
+        "america-norte",
+        "europa"
+      ],
+      "temas": [
+        "diplomacia",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
+    },
+    {
+      "id": "e037aed8b524",
+      "titulo": "Mamdani sets plan to close NYC’s notorious Rikers Island jail",
+      "resumo": "Rikers will close and be replaced with four smaller, more modern jails by 2027.",
+      "link": "https://www.straitstimes.com/world/united-states/mamdani-sets-plan-to-close-nycs-notorious-rikers-island-jail",
+      "fonte": "straitstimes",
+      "fonteNome": "The Straits Times",
+      "pais": "Singapura",
+      "visao": "Jornal de referência de Singapura",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:29:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
+    },
+    {
+      "id": "f2443e656bc3",
+      "titulo": "Rights groups urge sanctions after ICJ finds Myanmar guilty of genocide against Rohingya",
+      "resumo": "The International Court of Justice has no power to enforce Thursday's ruling, which orders Myanmar's military-supported government to allow those who fled the violence to return home safely, to pay reparations to the Rohingya Muslims and prosecute those suspected of having…",
+      "link": "https://www.pbs.org/newshour/world/rights-groups-urge-sanctions-after-icj-finds-myanmar-guilty-of-genocide-against-rohingya",
+      "fonte": "pbs",
+      "fonteNome": "PBS NewsHour",
+      "pais": "EUA",
+      "visao": "TV pública dos EUA",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:28:54.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://d3i6fh83elv35t.cloudfront.net/static/2026/11/2026-11-20T122523Z_2121973952_RC2OROAHUBSK_RTRMADP_3_MYANMAR-ROHINGYA-1024x683.jpg",
+      "imagemCredito": "PBS NewsHour",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "direitos",
+        "conflitos",
+        "diplomacia",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
+    },
+    {
+      "id": "ccc3ecbbe545",
+      "titulo": "North Carolina couple noticed kitchen floor dipping weeks after moving in; court rejects their claims",
+      "resumo": "After moving into their new home, Nate and Christine Holton noticed troubling dips in their kitchen floor. Despite reaching out to the builder, concerns about their foundation emerged again over time. In January 2025, they pursued a lawsuit claiming construction defects, but the…",
+      "link": "https://timesofindia.indiatimes.com/world/us/a-north-carolina-couple-noticed-their-new-homes-kitchen-floor-dipping-within-weeks-of-moving-in-in-2016-then-sued-the-builder-years-later-an-appeals-court-has-rejected-their-defective-construction-claims/articleshow/135987043.cms",
+      "fonte": "timesofindia",
+      "fonteNome": "The Times of India",
+      "pais": "Índia",
+      "visao": "Maior jornal indiano em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:26:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://static.toiimg.com/photo/msid-135987141,imgsize-1208389.cms",
+      "imagemCredito": "The Times of India",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "conflitos",
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
+    },
+    {
       "id": "9cd0be67c237",
       "titulo": "‘He’s a killer’: Zelensky on Putin after Trump calls Russian leader a ‘friend’",
       "resumo": "“For us he’s an enemy, and of course, for us, he is a killer,” Zelensky told CNN.",
@@ -55,6 +273,32 @@
       "coletadoEm": "2026-11-21T00:28:23.431Z"
     },
     {
+      "id": "162f09d7bc7e",
+      "titulo": "Former UK banker quit her job as wig business reached £15,000 monthly sales",
+      "resumo": "",
+      "link": "https://timesofindia.indiatimes.com/world/uk/former-uk-banker-dominique-bogle-turned-her-wig-business-hair-anatomy-into-a-full-time-career-after-tiktok-sales-neared-15000-in-one-month-and-quit-her-job-eight-months-later/articleshow/136015175.cms",
+      "fonte": "timesofindia",
+      "fonteNome": "The Times of India",
+      "pais": "Índia",
+      "visao": "Maior jornal indiano em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:22:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://static.toiimg.com/photo/msid-136015247,imgsize-1365623.cms",
+      "imagemCredito": "The Times of India",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
+    },
+    {
       "id": "62a222d17488",
       "titulo": "Saudi Arabia says it intercepts three Houthi missiles targeting Riyadh",
       "resumo": "Nov 21 - The Saudi-led coalition fighting Yemen's Iran-aligned Houthis said on Saturday it had intercepted and destroyed three ballistic missiles fired towards Riyadh, marking the second Houthi attack on the Saudi capital in a few days, after its tallest skyscraper was struck on…",
@@ -80,6 +324,58 @@
         "energia"
       ],
       "coletadoEm": "2026-11-21T00:28:23.431Z"
+    },
+    {
+      "id": "410e68b06d66",
+      "titulo": "UK retailer fined £720,000, ordered to refund 40,000 shoppers over charge",
+      "resumo": "",
+      "link": "https://timesofindia.indiatimes.com/world/uk/customers-buying-washing-machines-dishwashers-and-cookers-from-a-uk-retailer-were-automatically-charged-for-optional-recycling-services-watchdog-orders-refunds-for-nearly-40000-shoppers-and-imposes-a-720000-fine/articleshow/135982454.cms",
+      "fonte": "timesofindia",
+      "fonteNome": "The Times of India",
+      "pais": "Índia",
+      "visao": "Maior jornal indiano em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:18:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://static.toiimg.com/photo/msid-135982668,imgsize-1711005.cms",
+      "imagemCredito": "The Times of India",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
+    },
+    {
+      "id": "d9d55b2a7cb9",
+      "titulo": "Trump turns White House press conference into a 2028 succession audition",
+      "resumo": "The president appeared to put Vance and Rubio through their paces as potential successors, though Stephen Miller unexpectedly stole the spotlight “Which of you shall we say doth love us most?” The ageing King Lear’s question to his daughters, expecting them to compete for his…",
+      "link": "https://www.theguardian.com/us-news/2026/nov/20/trump-republican-succession-battle-vance-rubio",
+      "fonte": "guardian",
+      "fonteNome": "The Guardian",
+      "pais": "Reino Unido",
+      "visao": "Jornal britânico, centro-esquerda",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:16:26.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://i.guim.co.uk/img/media/13a779743e2a0f56e66622d1d81ea56493964bed/454_0_4537_3631/master/4537.jpg?width=140&quality=85&auto=format&fit=max&s=efa2f21711e4d5e1709b16fb42ade6ae",
+      "imagemCredito": "The Guardian",
+      "regioes": [
+        "america-norte"
+      ],
+      "temas": [
+        "politica"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
     },
     {
       "id": "eec2743f2c10",
@@ -162,6 +458,35 @@
         "outros"
       ],
       "coletadoEm": "2026-11-21T00:09:49.871Z"
+    },
+    {
+      "id": "4b81632f1e0e",
+      "titulo": "Japan wary of U.S., Russia and China holding regular summits",
+      "resumo": "Japan is eager to maintain the existing international order, including by strengthening the rule of law.",
+      "link": "https://www.japantimes.co.jp/news/2026/11/21/japan/us-china-russia-summits-japan-wary/",
+      "fonte": "japantimes",
+      "fonteNome": "The Japan Times",
+      "pais": "Japão",
+      "visao": "Jornal japonês em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:04:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/21/575289.jpg",
+      "imagemCredito": "The Japan Times",
+      "regioes": [
+        "asia-pacifico",
+        "america-norte",
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
     },
     {
       "id": "7dbf331b0d39",
@@ -269,6 +594,33 @@
         "politica"
       ],
       "coletadoEm": "2026-11-21T00:02:15.048Z"
+    },
+    {
+      "id": "8958d346f49c",
+      "titulo": "Iran war live: Saudi-led coalition downs Houthi missiles",
+      "resumo": "Saudi Arabia issues a flurry of emergency alerts for Riyadh, as the Saudi coalition says it intercepted three missiles.",
+      "link": "https://www.aljazeera.com/news/liveblog/2026/11/21/iran-war-live-saudi-led-coalition-repels-houthi-missiles?traffic_source=rss",
+      "fonte": "aljazeera",
+      "fonteNome": "Al Jazeera",
+      "pais": "Catar",
+      "visao": "Rede do Catar (financiada pelo governo), foco no Sul Global e no mundo árabe",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:00:06.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "conflitos",
+        "energia"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
     },
     {
       "id": "848e99a81fa1",
@@ -1110,6 +1462,32 @@
         "politica"
       ],
       "coletadoEm": "2026-11-21T00:02:15.048Z"
+    },
+    {
+      "id": "3d9afaf8811e",
+      "titulo": "Streamer Completion Race: Two creators finish GTA 6; marathon ending draws spoiler criticism",
+      "resumo": "BrycexD became the first streamer to complete GTA 6 in 39 hours and 38 minutes, with iShowSpeed finishing second after a 52-hour marathon. Both pushed through without sleep, but their experiences differed. While BrycexD planned to replay the game, iShowSpeed was left emotional…",
+      "link": "https://timesofindia.indiatimes.com/world/us-streamers/gta-6-makes-history-as-brycexd-and-ishowspeed-become-the-first-streamers-to-beat-rockstars-highly-anticipated-game/articleshow/136041812.cms",
+      "fonte": "timesofindia",
+      "fonteNome": "The Times of India",
+      "pais": "Índia",
+      "visao": "Maior jornal indiano em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:19:01.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://static.toiimg.com/photo/msid-136041813,imgsize-126794.cms",
+      "imagemCredito": "The Times of India",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
     },
     {
       "id": "e315ecd54630",
@@ -37510,5 +37888,5 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     }
   ],
-  "atualizadoEm": "2026-11-21T00:28:23.431Z"
+  "atualizadoEm": "2026-11-21T00:37:55.938Z"
 }

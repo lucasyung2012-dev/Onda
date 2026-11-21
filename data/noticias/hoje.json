@@ -1,10 +1,10 @@
 {
-  "geradoEm": "2026-11-21T00:28:23.431Z",
+  "geradoEm": "2026-11-21T00:37:55.938Z",
   "fuso": "America/Sao_Paulo",
   "dataReferencia": "2026-11-20",
   "janelaHoras": 24,
-  "totalNoticias": 1441,
-  "totalFatos": 1155,
+  "totalNoticias": 1453,
+  "totalFatos": 1162,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -32,70 +32,38 @@
   },
   "fatos": [
     {
-      "id": "0e0b6ada852d",
-      "titulo": "Trump Claims Putin Wants Peace as Moscow Rejects NATO-Style Guarantees for Ukraine",
-      "imagem": "https://static.kyivpost.com/storage/2026/11/21/86b3b9882bed604bcacaa5acace4ffba.jpg?w=640&q=90&f=jpg",
-      "fontes": 13,
+      "id": "f2443e656bc3",
+      "titulo": "Rights groups urge sanctions after ICJ finds Myanmar guilty of genocide against Rohingya",
+      "imagem": "https://d3i6fh83elv35t.cloudfront.net/static/2026/11/2026-11-20T122523Z_2121973952_RC2OROAHUBSK_RTRMADP_3_MYANMAR-ROHINGYA-1024x683.jpg",
+      "fontes": 17,
       "umaFonteSo": false,
       "regioes": [
-        "europa",
-        "america-norte",
         "asia-pacifico",
-        "global"
+        "oriente-medio",
+        "africa"
       ],
       "temas": [
-        "diplomacia",
+        "direitos",
         "conflitos",
         "politica",
-        "energia",
-        "direitos",
+        "diplomacia",
         "economia",
-        "outros"
+        "clima"
       ],
-      "maisRecente": "2026-11-20T23:36:56.000Z",
+      "maisRecente": "2026-11-21T00:28:54.000Z",
       "noticias": [
-        "0e0b6ada852d",
-        "9901a664ab2b",
-        "77581637bbd4",
-        "316ea496e5cb",
-        "2679cd600bc2",
-        "14bc82f747ce",
-        "d4cad428210c",
-        "e806181d4f31",
-        "53aaa183a671",
-        "827ea1de3427",
-        "c940e829c87e",
-        "cee65da7b236",
-        "43d7b17f23ed",
-        "b6797dee7e1f",
-        "e32f79496d62",
-        "a234d10a6f12",
-        "79ec57b3358f",
-        "8dc4008f9d55",
-        "146999adabf1",
-        "8a17df9865e3"
-      ]
-    },
-    {
-      "id": "3640a3fbb952",
-      "titulo": "'Friends' But Who Benefits? Notes from an Historic Summit, Myanmar's Genocide Ruling, Time to 'Bre-join' the EU?",
-      "imagem": "https://s.france24.com/media/display/cfefa95a-e518-11f1-b6ef-13439ca2fe89/w:1024/p:16x9/2026-11-19T230006Z-1256675834-RC2WQOACA4BG-RTRMADP-3-CYBERSECURITY-DRONES-RISK.jpg",
-      "fontes": 9,
-      "umaFonteSo": false,
-      "regioes": [
-        "asia-pacifico",
-        "oriente-medio"
-      ],
-      "temas": [
-        "direitos",
-        "politica",
-        "diplomacia"
-      ],
-      "maisRecente": "2026-11-20T19:42:58.000Z",
-      "noticias": [
-        "3640a3fbb952",
+        "f2443e656bc3",
+        "6cc38668b794",
+        "6ab57dae723b",
+        "548f344788d6",
+        "bbbcc7ffa943",
+        "4206ab86ff2d",
+        "7d6bcbdea648",
+        "406da3cf784a",
+        "e0b1167422c9",
         "83035937eb8b",
         "647fbb4b0802",
+        "6c49addc3e67",
         "9b9ee78ddf96",
         "1deeaf75e425",
         "f030512a350f",
@@ -106,34 +74,42 @@
       ]
     },
     {
-      "id": "6cc38668b794",
-      "titulo": "What are the implications of the ICJ Rohingya genocide ruling?",
-      "imagem": "https://www.thenationalnews.com/resizer/v2/6YEWN4MEKNBV5L6Y2XW4RSIK34.JPG?auth=1db353f9d73fe30f13ee2dea6a11772fe8da9e74868eccba73c4456fef81d021&smart=true&width=7856&height=5239",
-      "fontes": 9,
+      "id": "0e6ea7bbfbcb",
+      "titulo": "What the historic Trump, Xi and Putin summit signals to the world",
+      "imagem": "https://d3i6fh83elv35t.cloudfront.net/static/2026/11/cp-2-1024x683.jpg",
+      "fontes": 13,
       "umaFonteSo": false,
       "regioes": [
-        "oriente-medio",
+        "america-norte",
+        "europa",
         "asia-pacifico",
-        "africa"
+        "global"
       ],
       "temas": [
-        "direitos",
+        "diplomacia",
+        "politica",
         "conflitos",
         "economia",
-        "diplomacia",
-        "clima"
+        "energia",
+        "direitos"
       ],
-      "maisRecente": "2026-11-20T19:12:14.000Z",
+      "maisRecente": "2026-11-21T00:30:46.000Z",
       "noticias": [
-        "6cc38668b794",
-        "6ab57dae723b",
-        "548f344788d6",
-        "bbbcc7ffa943",
-        "4206ab86ff2d",
-        "7d6bcbdea648",
-        "406da3cf784a",
-        "e0b1167422c9",
-        "6c49addc3e67"
+        "0e6ea7bbfbcb",
+        "9a2ea320f1bb",
+        "907bb66957b9",
+        "316ea496e5cb",
+        "2679cd600bc2",
+        "5447230f9e98",
+        "14bc82f747ce",
+        "827ea1de3427",
+        "c940e829c87e",
+        "cee65da7b236",
+        "b6797dee7e1f",
+        "c00b02fc58bf",
+        "a234d10a6f12",
+        "146999adabf1",
+        "8a17df9865e3"
       ]
     },
     {
@@ -167,8 +143,8 @@
       ]
     },
     {
-      "id": "b7fdc1f987cb",
-      "titulo": "Mamdani announces plan to close New York's Rikers Island jail by 2032",
+      "id": "e037aed8b524",
+      "titulo": "Mamdani sets plan to close NYC’s notorious Rikers Island jail",
       "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4622/live/d8e189d0-e52b-11f1-964d-a1d5fe40573e.jpg",
       "fontes": 7,
       "umaFonteSo": false,
@@ -176,13 +152,14 @@
         "mundo"
       ],
       "temas": [
-        "outros",
         "direitos",
+        "outros",
         "politica",
         "saude"
       ],
-      "maisRecente": "2026-11-21T00:01:39.000Z",
+      "maisRecente": "2026-11-21T00:29:00.000Z",
       "noticias": [
+        "e037aed8b524",
         "b7fdc1f987cb",
         "e36ffc2479c4",
         "9850fda4b50d",
@@ -190,6 +167,37 @@
         "bea6757a09d1",
         "9051ff4ef067",
         "1f3046b4e817"
+      ]
+    },
+    {
+      "id": "0e0b6ada852d",
+      "titulo": "Trump Claims Putin Wants Peace as Moscow Rejects NATO-Style Guarantees for Ukraine",
+      "imagem": "https://static.kyivpost.com/storage/2026/11/21/86b3b9882bed604bcacaa5acace4ffba.jpg?w=640&q=90&f=jpg",
+      "fontes": 7,
+      "umaFonteSo": false,
+      "regioes": [
+        "europa",
+        "america-norte",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia",
+        "politica",
+        "outros"
+      ],
+      "maisRecente": "2026-11-20T23:36:56.000Z",
+      "noticias": [
+        "0e0b6ada852d",
+        "9901a664ab2b",
+        "77581637bbd4",
+        "d4cad428210c",
+        "e806181d4f31",
+        "53aaa183a671",
+        "43d7b17f23ed",
+        "e32f79496d62",
+        "79ec57b3358f",
+        "8dc4008f9d55"
       ]
     },
     {
@@ -509,28 +517,24 @@
       ]
     },
     {
-      "id": "1c69855faa1a",
-      "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
-      "imagem": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/8/c/961118/8cc01a98d2d5cea34ea6b373beb3af30.jpeg",
+      "id": "62a222d17488",
+      "titulo": "Saudi Arabia says it intercepts three Houthi missiles targeting Riyadh",
+      "imagem": "https://static.srpcdigital.com/styles/414x217/public/2026-11/1885638_0.jpeg.webp?VersionId=Q451ibxl6Wleu9CYNYeIhCkLnMVxDAPC",
       "fontes": 4,
       "umaFonteSo": false,
       "regioes": [
-        "america-norte",
-        "oriente-medio",
-        "europa"
+        "oriente-medio"
       ],
       "temas": [
         "conflitos",
-        "diplomacia",
-        "politica",
-        "direitos"
+        "energia"
       ],
-      "maisRecente": "2026-11-20T23:46:29.000Z",
+      "maisRecente": "2026-11-21T00:20:23.000Z",
       "noticias": [
-        "1c69855faa1a",
-        "04471859b97d",
-        "5447230f9e98",
-        "ed80357e7168"
+        "62a222d17488",
+        "8b2c2a617246",
+        "8958d346f49c",
+        "04271bf005c7"
       ]
     },
     {
@@ -749,23 +753,26 @@
       ]
     },
     {
-      "id": "62a222d17488",
-      "titulo": "Saudi Arabia says it intercepts three Houthi missiles targeting Riyadh",
-      "imagem": "https://static.srpcdigital.com/styles/414x217/public/2026-11/1885638_0.jpeg.webp?VersionId=Q451ibxl6Wleu9CYNYeIhCkLnMVxDAPC",
+      "id": "1c69855faa1a",
+      "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
+      "imagem": "https://img.haarets.co.il/bs/000001a1-fa55-d9ff-a7b5-fbff0bb60000/01/49/ef92539f43c6abb87108f03b7288/244401.jpg?width=108&height=81",
       "fontes": 3,
       "umaFonteSo": false,
       "regioes": [
+        "america-norte",
         "oriente-medio"
       ],
       "temas": [
+        "diplomacia",
         "conflitos",
-        "energia"
+        "politica",
+        "direitos"
       ],
-      "maisRecente": "2026-11-21T00:20:23.000Z",
+      "maisRecente": "2026-11-20T23:46:29.000Z",
       "noticias": [
-        "62a222d17488",
-        "8b2c2a617246",
-        "04271bf005c7"
+        "1c69855faa1a",
+        "04471859b97d",
+        "ed80357e7168"
       ]
     },
     {
@@ -1214,28 +1221,6 @@
       "noticias": [
         "0ea3af3d9a38",
         "fd8d641aea48"
-      ]
-    },
-    {
-      "id": "907bb66957b9",
-      "titulo": "‘This was no Yalta’: How the world’s press read the Trump–Putin–Xi summit in China",
-      "imagem": "https://meduza.io/image/attachments/images/012/997/359/small/4o1tfRvVOU0ghhkn8RwvCg",
-      "fontes": 2,
-      "umaFonteSo": false,
-      "regioes": [
-        "europa",
-        "america-norte",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "diplomacia",
-        "economia",
-        "conflitos"
-      ],
-      "maisRecente": "2026-11-20T21:20:52.000Z",
-      "noticias": [
-        "907bb66957b9",
-        "c00b02fc58bf"
       ]
     },
     {
@@ -2745,6 +2730,75 @@
       ]
     },
     {
+      "id": "b8147bb77afa",
+      "titulo": "Freight train derails near Sejong, leaving Saemaeul, Mugunghwa services suspended",
+      "imagem": "https://img.yna.co.kr/etc/inner/EN/2026/11/21/AEN20261121000400315_01_i_P2.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "maisRecente": "2026-11-21T00:32:53.000Z",
+      "noticias": [
+        "b8147bb77afa"
+      ]
+    },
+    {
+      "id": "22ab50155a67",
+      "titulo": "Peru registra terremoto de magnitude 6,7; tremor foi sentido em Lima",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "america-latina"
+      ],
+      "temas": [
+        "clima"
+      ],
+      "maisRecente": "2026-11-21T00:32:20.000Z",
+      "noticias": [
+        "22ab50155a67"
+      ]
+    },
+    {
+      "id": "12777fc634ce",
+      "titulo": "Lula tenta construir imagem de líder da reação da esquerda mundial contra a direita",
+      "imagem": "https://media.gazetadopovo.com.br/2026/11/17085056/vox.lula_-960x540.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "brasil"
+      ],
+      "temas": [
+        "politica"
+      ],
+      "maisRecente": "2026-11-21T00:31:07.000Z",
+      "noticias": [
+        "12777fc634ce"
+      ]
+    },
+    {
+      "id": "ccc3ecbbe545",
+      "titulo": "North Carolina couple noticed kitchen floor dipping weeks after moving in; court rejects their claims",
+      "imagem": "https://static.toiimg.com/photo/msid-135987141,imgsize-1208389.cms",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "conflitos",
+        "direitos"
+      ],
+      "maisRecente": "2026-11-21T00:26:00.000Z",
+      "noticias": [
+        "ccc3ecbbe545"
+      ]
+    },
+    {
       "id": "10ee907fc20e",
       "titulo": "Threats, insults, settlements: How Nvidia’s ex-CEO Jensen Huang made humiliation routine",
       "imagem": "",
@@ -2759,6 +2813,57 @@
       "maisRecente": "2026-11-21T00:22:00.000Z",
       "noticias": [
         "10ee907fc20e"
+      ]
+    },
+    {
+      "id": "162f09d7bc7e",
+      "titulo": "Former UK banker quit her job as wig business reached £15,000 monthly sales",
+      "imagem": "https://static.toiimg.com/photo/msid-136015247,imgsize-1365623.cms",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "maisRecente": "2026-11-21T00:22:00.000Z",
+      "noticias": [
+        "162f09d7bc7e"
+      ]
+    },
+    {
+      "id": "410e68b06d66",
+      "titulo": "UK retailer fined £720,000, ordered to refund 40,000 shoppers over charge",
+      "imagem": "https://static.toiimg.com/photo/msid-135982668,imgsize-1711005.cms",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "maisRecente": "2026-11-21T00:18:00.000Z",
+      "noticias": [
+        "410e68b06d66"
+      ]
+    },
+    {
+      "id": "d9d55b2a7cb9",
+      "titulo": "Trump turns White House press conference into a 2028 succession audition",
+      "imagem": "https://i.guim.co.uk/img/media/13a779743e2a0f56e66622d1d81ea56493964bed/454_0_4537_3631/master/4537.jpg?width=140&quality=85&auto=format&fit=max&s=efa2f21711e4d5e1709b16fb42ade6ae",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "america-norte"
+      ],
+      "temas": [
+        "politica"
+      ],
+      "maisRecente": "2026-11-21T00:16:26.000Z",
+      "noticias": [
+        "d9d55b2a7cb9"
       ]
     },
     {
@@ -2814,6 +2919,26 @@
       "maisRecente": "2026-11-21T00:04:22.000Z",
       "noticias": [
         "cb67e500f861"
+      ]
+    },
+    {
+      "id": "4b81632f1e0e",
+      "titulo": "Japan wary of U.S., Russia and China holding regular summits",
+      "imagem": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/21/575289.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "asia-pacifico",
+        "america-norte",
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia"
+      ],
+      "maisRecente": "2026-11-21T00:04:00.000Z",
+      "noticias": [
+        "4b81632f1e0e"
       ]
     },
     {
@@ -3264,6 +3389,23 @@
       "maisRecente": "2026-11-20T23:20:08.000Z",
       "noticias": [
         "3f635ad689b0"
+      ]
+    },
+    {
+      "id": "3d9afaf8811e",
+      "titulo": "Streamer Completion Race: Two creators finish GTA 6; marathon ending draws spoiler criticism",
+      "imagem": "https://static.toiimg.com/photo/msid-136041813,imgsize-126794.cms",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "maisRecente": "2026-11-20T23:19:01.000Z",
+      "noticias": [
+        "3d9afaf8811e"
       ]
     },
     {
@@ -5804,6 +5946,24 @@
       "maisRecente": "2026-11-20T19:43:42.000Z",
       "noticias": [
         "0fab840bf3cf"
+      ]
+    },
+    {
+      "id": "3640a3fbb952",
+      "titulo": "'Friends' But Who Benefits? Notes from an Historic Summit, Myanmar's Genocide Ruling, Time to 'Bre-join' the EU?",
+      "imagem": "https://s.france24.com/media/display/cfefa95a-e518-11f1-b6ef-13439ca2fe89/w:1024/p:16x9/2026-11-19T230006Z-1256675834-RC2WQOACA4BG-RTRMADP-3-CYBERSECURITY-DRONES-RISK.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "diplomacia",
+        "direitos"
+      ],
+      "maisRecente": "2026-11-20T19:42:58.000Z",
+      "noticias": [
+        "3640a3fbb952"
       ]
     },
     {
@@ -21210,45 +21370,227 @@
       "noticias": [
         "53fa3597d66c"
       ]
-    },
+    }
+  ],
+  "noticias": [
     {
-      "id": "85bdfa5cf47c",
-      "titulo": "LOCAL ELECTIONS 2026: FF Plus fails to broker DA-ActionSA coalition after deadlocked Gauteng talks",
-      "imagem": "https://cdn.dailymaverick.co.za/i/VBHzSuPaBnYjgTgWPbdfBHWkk9U=/800x0/smart/filters:strip_exif()/file/attachments/orphans/Blog-LGE-2026-Saturday2_307459.jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
+      "id": "b8147bb77afa",
+      "titulo": "Freight train derails near Sejong, leaving Saemaeul, Mugunghwa services suspended",
+      "resumo": "PYEONGTAEK/SEJONG, Nov. 21 (Yonhap) -- Five cars of a freight train derailed nea...",
+      "link": "https://en.yna.co.kr/view/AEN20261121000400315",
+      "fonte": "yonhap",
+      "fonteNome": "Yonhap",
+      "pais": "Coreia do Sul",
+      "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:32:53.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://img.yna.co.kr/etc/inner/EN/2026/11/21/AEN20261121000400315_01_i_P2.jpg",
+      "imagemCredito": "Yonhap",
       "regioes": [
         "mundo"
       ],
       "temas": [
-        "diplomacia",
-        "energia",
-        "politica"
+        "outros"
       ],
-      "maisRecente": "2026-11-20T00:35:22.000Z",
-      "noticias": [
-        "85bdfa5cf47c"
-      ]
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
     },
     {
-      "id": "5e4a4c4a5f44",
-      "titulo": "BIGBANG teases new digital single",
-      "imagem": "https://img.yna.co.kr/etc/inner/EN/2026/11/20/AEN20261120002100315_01_i_P2.jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
+      "id": "22ab50155a67",
+      "titulo": "Peru registra terremoto de magnitude 6,7; tremor foi sentido em Lima",
+      "resumo": "Um terremoto de magnitude 6,7 foi registrado na região central do Peru, a cerca de 9 km a noroeste do distrito de Carhuamayo, nesta sexta-feira (20).",
+      "link": "https://g1.globo.com/mundo/noticia/2026/11/20/peru-registra-terremoto-de-magnitude-67-tremor-foi-sentido-em-lima.ghtml",
+      "fonte": "g1",
+      "fonteNome": "g1 Mundo",
+      "pais": "Brasil",
+      "visao": "Portal do Grupo Globo",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:32:20.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "america-latina"
+      ],
+      "temas": [
+        "clima"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
+    },
+    {
+      "id": "12777fc634ce",
+      "titulo": "Lula tenta construir imagem de líder da reação da esquerda mundial contra a direita",
+      "resumo": "Lula tenta mostrar em sua primeira viagem internacional após as eleições que é modelo da esquerda mundial na reação ao avanço da direita.",
+      "link": "https://www.gazetadopovo.com.br/republica/lula-tenta-construir-imagem-de-lider-da-reacao-da-esquerda-mundial-contra-a-direita/",
+      "fonte": "gazetadopovo",
+      "fonteNome": "Gazeta do Povo Mundo",
+      "pais": "Brasil",
+      "visao": "Jornal brasileiro, direita conservadora",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:31:07.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://media.gazetadopovo.com.br/2026/11/17085056/vox.lula_-960x540.jpg",
+      "imagemCredito": "Gazeta do Povo Mundo",
+      "regioes": [
+        "brasil"
+      ],
+      "temas": [
+        "politica"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
+    },
+    {
+      "id": "0e6ea7bbfbcb",
+      "titulo": "What the historic Trump, Xi and Putin summit signals to the world",
+      "resumo": "President Trump meets with Xi Jinping and Vladimir Putin in an unprecedented show of three leaders who understand the power of grand diplomatic gestures. On a special edition of Compass Points, Nick Schifrin is in Shenzhen, China, and has details on the historic meeting and the…",
+      "link": "https://www.pbs.org/newshour/video/compass-points/2026/11/what-the-historic-trump-xi-and-putin-summit-signals-to-the-world",
+      "fonte": "pbs",
+      "fonteNome": "PBS NewsHour",
+      "pais": "EUA",
+      "visao": "TV pública dos EUA",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:30:46.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://d3i6fh83elv35t.cloudfront.net/static/2026/11/cp-2-1024x683.jpg",
+      "imagemCredito": "PBS NewsHour",
+      "regioes": [
+        "asia-pacifico",
+        "america-norte",
+        "europa"
+      ],
+      "temas": [
+        "diplomacia",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
+    },
+    {
+      "id": "9a2ea320f1bb",
+      "titulo": "What the historic Trump, Xi and Putin summit signals to the world",
+      "resumo": "President Trump meets with Xi Jinping and Vladimir Putin in an unprecedented show of three leaders who understand the power of grand diplomatic gestures. On a special edition of Compass Points, Nick Schifrin is in Shenzhen, China, and has details on the historic meeting and the…",
+      "link": "https://www.pbs.org/newshour/podcasts/compass-points-with-pbs-news/what-the-historic-trump-xi-and-putin-summit-signals-to-the-world",
+      "fonte": "pbs",
+      "fonteNome": "PBS NewsHour",
+      "pais": "EUA",
+      "visao": "TV pública dos EUA",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:30:26.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://d3i6fh83elv35t.cloudfront.net/static/2026/11/cp-2-1024x683.jpg",
+      "imagemCredito": "PBS NewsHour",
+      "regioes": [
+        "asia-pacifico",
+        "america-norte",
+        "europa"
+      ],
+      "temas": [
+        "diplomacia",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
+    },
+    {
+      "id": "e037aed8b524",
+      "titulo": "Mamdani sets plan to close NYC’s notorious Rikers Island jail",
+      "resumo": "Rikers will close and be replaced with four smaller, more modern jails by 2027.",
+      "link": "https://www.straitstimes.com/world/united-states/mamdani-sets-plan-to-close-nycs-notorious-rikers-island-jail",
+      "fonte": "straitstimes",
+      "fonteNome": "The Straits Times",
+      "pais": "Singapura",
+      "visao": "Jornal de referência de Singapura",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:29:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
+    },
+    {
+      "id": "f2443e656bc3",
+      "titulo": "Rights groups urge sanctions after ICJ finds Myanmar guilty of genocide against Rohingya",
+      "resumo": "The International Court of Justice has no power to enforce Thursday's ruling, which orders Myanmar's military-supported government to allow those who fled the violence to return home safely, to pay reparations to the Rohingya Muslims and prosecute those suspected of having…",
+      "link": "https://www.pbs.org/newshour/world/rights-groups-urge-sanctions-after-icj-finds-myanmar-guilty-of-genocide-against-rohingya",
+      "fonte": "pbs",
+      "fonteNome": "PBS NewsHour",
+      "pais": "EUA",
+      "visao": "TV pública dos EUA",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:28:54.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://d3i6fh83elv35t.cloudfront.net/static/2026/11/2026-11-20T122523Z_2121973952_RC2OROAHUBSK_RTRMADP_3_MYANMAR-ROHINGYA-1024x683.jpg",
+      "imagemCredito": "PBS NewsHour",
       "regioes": [
         "asia-pacifico"
       ],
       "temas": [
-        "outros"
+        "direitos",
+        "conflitos",
+        "diplomacia",
+        "politica"
       ],
-      "maisRecente": "2026-11-20T00:29:18.000Z",
-      "noticias": [
-        "5e4a4c4a5f44"
-      ]
-    }
-  ],
-  "noticias": [
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
+    },
+    {
+      "id": "ccc3ecbbe545",
+      "titulo": "North Carolina couple noticed kitchen floor dipping weeks after moving in; court rejects their claims",
+      "resumo": "After moving into their new home, Nate and Christine Holton noticed troubling dips in their kitchen floor. Despite reaching out to the builder, concerns about their foundation emerged again over time. In January 2025, they pursued a lawsuit claiming construction defects, but the…",
+      "link": "https://timesofindia.indiatimes.com/world/us/a-north-carolina-couple-noticed-their-new-homes-kitchen-floor-dipping-within-weeks-of-moving-in-in-2016-then-sued-the-builder-years-later-an-appeals-court-has-rejected-their-defective-construction-claims/articleshow/135987043.cms",
+      "fonte": "timesofindia",
+      "fonteNome": "The Times of India",
+      "pais": "Índia",
+      "visao": "Maior jornal indiano em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:26:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://static.toiimg.com/photo/msid-135987141,imgsize-1208389.cms",
+      "imagemCredito": "The Times of India",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "conflitos",
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
+    },
     {
       "id": "9cd0be67c237",
       "titulo": "‘He’s a killer’: Zelensky on Putin after Trump calls Russian leader a ‘friend’",
@@ -21303,6 +21645,32 @@
       "coletadoEm": "2026-11-21T00:28:23.431Z"
     },
     {
+      "id": "162f09d7bc7e",
+      "titulo": "Former UK banker quit her job as wig business reached £15,000 monthly sales",
+      "resumo": "",
+      "link": "https://timesofindia.indiatimes.com/world/uk/former-uk-banker-dominique-bogle-turned-her-wig-business-hair-anatomy-into-a-full-time-career-after-tiktok-sales-neared-15000-in-one-month-and-quit-her-job-eight-months-later/articleshow/136015175.cms",
+      "fonte": "timesofindia",
+      "fonteNome": "The Times of India",
+      "pais": "Índia",
+      "visao": "Maior jornal indiano em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:22:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://static.toiimg.com/photo/msid-136015247,imgsize-1365623.cms",
+      "imagemCredito": "The Times of India",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
+    },
+    {
       "id": "62a222d17488",
       "titulo": "Saudi Arabia says it intercepts three Houthi missiles targeting Riyadh",
       "resumo": "Nov 21 - The Saudi-led coalition fighting Yemen's Iran-aligned Houthis said on Saturday it had intercepted and destroyed three ballistic missiles fired towards Riyadh, marking the second Houthi attack on the Saudi capital in a few days, after its tallest skyscraper was struck on…",
@@ -21328,6 +21696,58 @@
         "energia"
       ],
       "coletadoEm": "2026-11-21T00:28:23.431Z"
+    },
+    {
+      "id": "410e68b06d66",
+      "titulo": "UK retailer fined £720,000, ordered to refund 40,000 shoppers over charge",
+      "resumo": "",
+      "link": "https://timesofindia.indiatimes.com/world/uk/customers-buying-washing-machines-dishwashers-and-cookers-from-a-uk-retailer-were-automatically-charged-for-optional-recycling-services-watchdog-orders-refunds-for-nearly-40000-shoppers-and-imposes-a-720000-fine/articleshow/135982454.cms",
+      "fonte": "timesofindia",
+      "fonteNome": "The Times of India",
+      "pais": "Índia",
+      "visao": "Maior jornal indiano em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:18:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://static.toiimg.com/photo/msid-135982668,imgsize-1711005.cms",
+      "imagemCredito": "The Times of India",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
+    },
+    {
+      "id": "d9d55b2a7cb9",
+      "titulo": "Trump turns White House press conference into a 2028 succession audition",
+      "resumo": "The president appeared to put Vance and Rubio through their paces as potential successors, though Stephen Miller unexpectedly stole the spotlight “Which of you shall we say doth love us most?” The ageing King Lear’s question to his daughters, expecting them to compete for his…",
+      "link": "https://www.theguardian.com/us-news/2026/nov/20/trump-republican-succession-battle-vance-rubio",
+      "fonte": "guardian",
+      "fonteNome": "The Guardian",
+      "pais": "Reino Unido",
+      "visao": "Jornal britânico, centro-esquerda",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:16:26.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://i.guim.co.uk/img/media/13a779743e2a0f56e66622d1d81ea56493964bed/454_0_4537_3631/master/4537.jpg?width=140&quality=85&auto=format&fit=max&s=efa2f21711e4d5e1709b16fb42ade6ae",
+      "imagemCredito": "The Guardian",
+      "regioes": [
+        "america-norte"
+      ],
+      "temas": [
+        "politica"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
     },
     {
       "id": "eec2743f2c10",
@@ -21410,6 +21830,35 @@
         "outros"
       ],
       "coletadoEm": "2026-11-21T00:09:49.871Z"
+    },
+    {
+      "id": "4b81632f1e0e",
+      "titulo": "Japan wary of U.S., Russia and China holding regular summits",
+      "resumo": "Japan is eager to maintain the existing international order, including by strengthening the rule of law.",
+      "link": "https://www.japantimes.co.jp/news/2026/11/21/japan/us-china-russia-summits-japan-wary/",
+      "fonte": "japantimes",
+      "fonteNome": "The Japan Times",
+      "pais": "Japão",
+      "visao": "Jornal japonês em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:04:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/21/575289.jpg",
+      "imagemCredito": "The Japan Times",
+      "regioes": [
+        "asia-pacifico",
+        "america-norte",
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
     },
     {
       "id": "7dbf331b0d39",
@@ -21517,6 +21966,33 @@
         "politica"
       ],
       "coletadoEm": "2026-11-21T00:02:15.048Z"
+    },
+    {
+      "id": "8958d346f49c",
+      "titulo": "Iran war live: Saudi-led coalition downs Houthi missiles",
+      "resumo": "Saudi Arabia issues a flurry of emergency alerts for Riyadh, as the Saudi coalition says it intercepted three missiles.",
+      "link": "https://www.aljazeera.com/news/liveblog/2026/11/21/iran-war-live-saudi-led-coalition-repels-houthi-missiles?traffic_source=rss",
+      "fonte": "aljazeera",
+      "fonteNome": "Al Jazeera",
+      "pais": "Catar",
+      "visao": "Rede do Catar (financiada pelo governo), foco no Sul Global e no mundo árabe",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:00:06.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "conflitos",
+        "energia"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
     },
     {
       "id": "848e99a81fa1",
@@ -22358,6 +22834,32 @@
         "politica"
       ],
       "coletadoEm": "2026-11-21T00:02:15.048Z"
+    },
+    {
+      "id": "3d9afaf8811e",
+      "titulo": "Streamer Completion Race: Two creators finish GTA 6; marathon ending draws spoiler criticism",
+      "resumo": "BrycexD became the first streamer to complete GTA 6 in 39 hours and 38 minutes, with iShowSpeed finishing second after a 52-hour marathon. Both pushed through without sleep, but their experiences differed. While BrycexD planned to replay the game, iShowSpeed was left emotional…",
+      "link": "https://timesofindia.indiatimes.com/world/us-streamers/gta-6-makes-history-as-brycexd-and-ishowspeed-become-the-first-streamers-to-beat-rockstars-highly-anticipated-game/articleshow/136041812.cms",
+      "fonte": "timesofindia",
+      "fonteNome": "The Times of India",
+      "pais": "Índia",
+      "visao": "Maior jornal indiano em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:19:01.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://static.toiimg.com/photo/msid-136041813,imgsize-126794.cms",
+      "imagemCredito": "The Times of India",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-21T00:37:55.938Z"
     },
     {
       "id": "e315ecd54630",
@@ -60140,60 +60642,6 @@
       "temas": [
         "conflitos",
         "diplomacia"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "85bdfa5cf47c",
-      "titulo": "LOCAL ELECTIONS 2026: FF Plus fails to broker DA-ActionSA coalition after deadlocked Gauteng talks",
-      "resumo": "The FF Plus could not resolve tension between the DA and ActionSA as Gauteng coalition negotiations stall and ANC-led governing options gain support.",
-      "link": "https://www.dailymaverick.co.za/article/2026-11-20-ff-plus-fails-to-broker-da-actionsa-coalition-as-gauteng-talks-stall/",
-      "fonte": "dailymaverick",
-      "fonteNome": "Daily Maverick",
-      "pais": "África do Sul",
-      "visao": "Jornal sul-africano independente",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-20T00:35:22.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://cdn.dailymaverick.co.za/i/VBHzSuPaBnYjgTgWPbdfBHWkk9U=/800x0/smart/filters:strip_exif()/file/attachments/orphans/Blog-LGE-2026-Saturday2_307459.jpg",
-      "imagemCredito": "Daily Maverick",
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "diplomacia",
-        "energia",
-        "politica"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "5e4a4c4a5f44",
-      "titulo": "BIGBANG teases new digital single",
-      "resumo": "SEOUL, Nov. 20 (Yonhap) -- Iconic K-pop group BIGBANG is set to drop a new digit...",
-      "link": "https://en.yna.co.kr/view/AEN20261120002100315",
-      "fonte": "yonhap",
-      "fonteNome": "Yonhap",
-      "pais": "Coreia do Sul",
-      "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
-      "idioma": "en",
-      "estatal": true,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-20T00:29:18.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://img.yna.co.kr/etc/inner/EN/2026/11/20/AEN20261120002100315_01_i_P2.jpg",
-      "imagemCredito": "Yonhap",
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "outros"
       ],
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     }
