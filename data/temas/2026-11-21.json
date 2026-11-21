@@ -291,6 +291,446 @@
       },
       "sugeridoPorVoce": null,
       "filaConectada": true
+    },
+    {
+      "status": "ok",
+      "geradoEm": "2026-11-21T15:09:07.996Z",
+      "dataReferencia": "2026-11-21",
+      "ia": {
+        "provedor": "Groq",
+        "modelo": "openai/gpt-oss-120b",
+        "aviso": "Aula gerada por IA a partir das fontes listadas. Pode conter erros: confira nas fontes."
+      },
+      "formato": 2,
+      "titulo": "União Europeia – estrutura e funcionamento",
+      "pergunta": "Como a União Europeia toma decisões e quais são suas principais instituições?",
+      "emUmaFrase": "A UE decide por meio de propostas da Comissão Europeia que são debatidas e aprovadas pelos Parlamento Europeu e pelos Conselhos (Europeu e da União), enquanto o Conselho Europeu define as grandes orientações políticas.",
+      "paraComecar": "A União Europeia (UE) é uma união econômica e política de 27 Estados‑membros independentes, criada a partir de acordos como o Tratado de Maastricht (1993) e consolidada pelo Tratado de Lisboa (2009). Ela funciona como um conjunto de instituições supranacionais – ou seja, órgãos que exercem autoridade acima dos governos nacionais – e também por meio de decisões intergovernamentais, onde os próprios Estados negociam entre si.\n\nAs instituições centrais da UE são sete: o Parlamento Europeu (único órgão eleito diretamente pelos cidadãos a cada cinco anos), o Conselho Europeu (chefes de Estado ou de governo que definem as linhas estratégicas), o Conselho da União Europeia (ministros dos Estados‑membros que deliberam em áreas específicas), a Comissão Europeia (responsável por propor leis e garantir sua aplicação), o Tribunal de Justiça da União Europeia (interpreta o direito comunitário), o Banco Central Europeu (gerencia a moeda única, o euro) e o Tribunal de Contas Europeu (vigia as finanças da UE). Cada uma tem um papel distinto, mas todas trabalham em conjunto para que a UE funcione como um todo.\n\nO processo decisório típico começa com a Comissão Europeia, que elabora propostas legislativas. Essas propostas são enviadas ao Parlamento Europeu e ao Conselho da União Europeia, que as analisam, emendam e, em regra, precisam concordar para que a lei seja adotada – o que se chama de procedimento legislativo ordinário. Enquanto isso, o Conselho Europeu estabelece as prioridades políticas que guiam todo o trabalho das demais instituições. Assim, a tomada de decisão combina iniciativa supranacional (Comissão) com aprovação intergovernamental (Conselho) e controle democrático (Parlamento).",
+      "glossario": [
+        {
+          "termo": "Supranacional",
+          "definicao": "Autoridade que atua acima dos governos nacionais, tomando decisões que os Estados‑membros devem seguir."
+        },
+        {
+          "termo": "Parlamento Europeu",
+          "definicao": "Órgão legislativo da UE eleito diretamente pelos cidadãos a cada cinco anos."
+        },
+        {
+          "termo": "Conselho da União Europeia",
+          "definicao": "Também chamado de Conselho de Ministros; reúne ministros dos Estados‑membros para decidir sobre propostas em áreas específicas."
+        },
+        {
+          "termo": "Conselho Europeu",
+          "definicao": "Encontro dos chefes de Estado ou de governo que define as grandes orientações políticas da UE."
+        },
+        {
+          "termo": "Comissão Europeia",
+          "definicao": "Instituição que propõe leis, garante que os tratados sejam cumpridos e representa a UE internacionalmente."
+        },
+        {
+          "termo": "Tratado de Lisboa",
+          "definicao": "Acordo que entrou em vigor em 2009, reforçando a personalidade jurídica única da UE e simplificando seu funcionamento institucional."
+        },
+        {
+          "termo": "Zona Schengen",
+          "definicao": "Espaço onde foram abolidos os controles de passaporte entre os países participantes, facilitando a livre circulação."
+        },
+        {
+          "termo": "Eurozona",
+          "definicao": "Conjunto de Estados‑membros que adotaram o euro como moeda única e são coordenados pelo Banco Central Europeu."
+        }
+      ],
+      "ligacoes": [
+        "O Supremo Tribunal Federal: estrutura e funcionamento"
+      ],
+      "historia": "Após o fim da Segunda Guerra Mundial, a Europa encontrava‑se devastada; a Alemanha estava em ruínas e a França, embora vencedora, sofria graves perdas econômicas (fonte [0]). Em 9 de maio de 1950, o ministro francês das Relações Exteriores, Robert Schuman, lançou a Declaração Schuman, propondo uma autoridade transnacional para gerir a produção de carvão e aço, marcando o início da integração europeia (fonte [0]).\n\nEm 1951 foi criada a Comunidade Europeia do Carvão e do Aço (CECA), seguida em 1957 pelo Tratado de Roma, que instituiu a Comunidade Económica Europeia (CEE), ampliando a cooperação para um mercado comum (fonte [0]).\n\nA década de 1990 trouxe a consolidação da união: o Tratado de Maastricht, assinado em 1992 e em vigor a partir de 1993, estabeleceu a União Europeia como a conhecemos hoje, introduzindo pilares como a política externa e a moeda única (fonte [0]). Em 1999 o euro foi lançado como a moeda única da zona euro, reforçando a integração econômica (fonte [0]).\n\nNos anos 2000, a UE passou por reformas institucionais: o Tratado de Lisboa, assinado em 2007, entrou em vigor em 2009, fundindo os três pilares em uma única entidade legal e reforçando o papel das instituições supranacionais (fonte [0]). Em 2020 o Reino Unido tornou‑se o único Estado‑membro a deixar a União, demonstrando que a integração, embora profunda, permanece baseada em decisões soberanas dos países (fonte [1]).",
+      "linhaDoTempo": [
+        {
+          "quando": "8 de maio de 1945",
+          "oQue": "Fim da Segunda Guerra Mundial na Europa",
+          "fonte": "Wikipedia (português)"
+        },
+        {
+          "quando": "9 de maio de 1950",
+          "oQue": "Declaração Schuman, proposta de autoridade transnacional para carvão e aço",
+          "fonte": "Wikipedia (português)"
+        },
+        {
+          "quando": "1951",
+          "oQue": "Criação da Comunidade Europeia do Carvão e do Aço (CECA)",
+          "fonte": "Wikipedia (inglês)"
+        },
+        {
+          "quando": "1957",
+          "oQue": "Assinatura do Tratado de Roma, fundando a Comunidade Económica Europeia (CEE)",
+          "fonte": "Wikipedia (português)"
+        },
+        {
+          "quando": "1993",
+          "oQue": "Entrada em vigor do Tratado de Maastricht, instituindo a União Europeia",
+          "fonte": "Wikipedia (português)"
+        },
+        {
+          "quando": "1999",
+          "oQue": "Lançamento do euro como moeda única da zona euro",
+          "fonte": "Wikipedia (português)"
+        },
+        {
+          "quando": "2002",
+          "oQue": "Expiração da CECA",
+          "fonte": "Wikipedia (inglês)"
+        },
+        {
+          "quando": "2009",
+          "oQue": "Entrada em vigor do Tratado de Lisboa, unificando a estrutura institucional da UE",
+          "fonte": "Wikipedia (português)"
+        },
+        {
+          "quando": "2020",
+          "oQue": "Saída do Reino Unido da União Europeia (Brexit)",
+          "fonte": "Wikipedia (inglês)"
+        }
+      ],
+      "comoFunciona": "A União Europeia funciona através de um conjunto de sete instituições supranacionais que operam de forma independente, mas interligada. São elas: o Parlamento Europeu (único órgão directamente eleito), o Conselho da União Europeia (ministros dos Estados‑membros), a Comissão Europeia (executiva), o Conselho Europeu (chefes de Estado ou de Governo), o Banco Central Europeu, o Tribunal de Justiça da União Europeia e o Tribunal de Contas Europeu. Cada instituição tem competências específicas, mas todas obedecem aos tratados que dão à UE personalidade jurídica própria (Tratado de Maastricht, Lisboa). \n\nNo processo legislativo, a Comissão Europeia tem o papel de iniciativa: elabora propostas de leis que são enviadas ao Parlamento Europeu e ao Conselho da União Europeia. Esses dois órgãos partilham o poder de decisão – o Parlamento representa os cidadãos (eleitos a cada cinco anos) e o Conselho representa os governos nacionais. Quando ambos aprovam o texto nas mesmas condições, a lei entra em vigor. O Conselho Europeu, embora não legisle, define as grandes orientações políticas que guiam a ação da Comissão e dos demais órgãos. \n\nA parte financeira da UE está centralizada num orçamento aprovado pelos Estados‑membros. O orçamento anual e plurianual é controlado pelo Tribunal de Contas Europeu, enquanto a aplicação das normas e a interpretação dos tratados ficam a cargo do Tribunal de Justiça. A política monetária da zona euro, que reúne os países que adotaram o euro, é conduzida pelo Banco Central Europeu, que define as taxas de juros e garante a estabilidade dos preços. \n\nAssim, as decisões da UE – desde a criação de normas de mercado único até à definição da política monetária – são fruto de um equilíbrio entre a iniciativa supranacional da Comissão, a representação democrática do Parlamento e a soberania dos Estados‑membros no Conselho. Esse arranjo permite que a UE regule a livre circulação de pessoas, bens, serviços e capitais, e que financie projetos comuns, ao mesmo tempo que cada país mantém autonomia em áreas não cedidas à esfera comunitária.",
+      "numeros": [
+        {
+          "valor": "27",
+          "significado": "Número de Estados‑membros da União Europeia",
+          "fonte": "Wikipedia (português)",
+          "link": "https://pt.wikipedia.org/wiki/Uni%C3%A3o_Europeia"
+        },
+        {
+          "valor": "448 milhões",
+          "significado": "População total da UE (aproximada)",
+          "fonte": "Wikipedia (português)",
+          "link": "https://pt.wikipedia.org/wiki/Uni%C3%A3o_Europeia"
+        },
+        {
+          "valor": "12,2 mil milhões de euros",
+          "significado": "Produto interno bruto da UE em 2010, representando cerca de 20% do PIB mundial",
+          "fonte": "Wikipedia (português)",
+          "link": "https://pt.wikipedia.org/wiki/Uni%C3%A3o_Europeia"
+        },
+        {
+          "valor": "20",
+          "significado": "Número de países que compõem a zona euro (união monetária)",
+          "fonte": "Wikipedia (português)",
+          "link": "https://pt.wikipedia.org/wiki/Uni%C3%A3o_Europeia"
+        },
+        {
+          "valor": "864,3 mil milhões de euros",
+          "significado": "Orçamento total aprovado para o período 2007–2013",
+          "fonte": "Wikipedia (português)",
+          "link": "https://pt.wikipedia.org/wiki/Uni%C3%A3o_Europeia"
+        }
+      ],
+      "atores": [
+        {
+          "nome": "União Europeia",
+          "quer": "Manter e aprofundar o mercado único, garantir a livre circulação de pessoas, bens, serviços e capitais, e coordenar políticas comuns como comércio, agricultura e segurança",
+          "porque": "Para promover a integração econômica e política dos 27 Estados‑membros, reforçar a paz e a competitividade global, conforme descrito nos tratados e nas competências da UE"
+        },
+        {
+          "nome": "Reino Unido",
+          "quer": "Reduzir burocracias nas exportações de alimentos, alinhar os regimes de comércio de emissões e ampliar oportunidades de residência e trabalho para jovens",
+          "porque": "Os acordos de 2024‑2025 visam restabelecer relações pós‑Brexit mais eficientes e atrair mão‑de‑obra jovem, conforme a notícia da France 24"
+        },
+        {
+          "nome": "Comissão Europeia",
+          "quer": "Propor legislação e garantir a aplicação uniforme das regras do mercado comum",
+          "porque": "É a instituição supranacional responsável por iniciar propostas legislativas e supervisionar a execução das políticas da UE, segundo o texto institucional"
+        },
+        {
+          "nome": "Parlamento Europeu",
+          "quer": "Representar os cidadãos da UE nas decisões legislativas e fiscalizar outras instituições",
+          "porque": "É o único órgão diretamente eleito pelos cidadãos a cada cinco anos, participando do processo decisório da UE"
+        },
+        {
+          "nome": "Conselho da União Europeia",
+          "quer": "Aprovar leis e coordenar políticas setoriais com base nas posições dos Estados‑membros",
+          "porque": "Reúne ministros dos governos nacionais e decide em conjunto com o Parlamento, conforme a descrição das instituições da UE"
+        }
+      ],
+      "mitos": [
+        {
+          "mito": "A UE funciona como um país único com um governo centralizado",
+          "verdade": "A UE combina competências supranacionais (ex.: Comissão, Parlamento) com decisões intergovernamentais (ex.: Conselho da UE), mantendo a soberania dos 27 Estados‑membros"
+        },
+        {
+          "mito": "O Parlamento Europeu não tem poder real nas decisões",
+          "verdade": "O Parlamento é o único órgão eleito diretamente e participa ativamente da aprovação de legislação, ao lado da Comissão e do Conselho, como indicado nos textos"
+        }
+      ],
+      "vertentes": [
+        {
+          "nome": "Visão institucional da UE",
+          "pensa": "A União Europeia decide por meio de instituições supranacionais e intergovernamentais, como Comissão, Parlamento e Conselho.",
+          "quemDefende": "Instituições da UE, acadêmicos e documentos oficiais da UE",
+          "porQue": "Essas instituições foram criadas pelos tratados (Maastricht, Lisboa) para garantir decisões conjuntas em áreas acordadas pelos Estados‑membros.",
+          "criticas": "A complexidade do sistema pode gerar lentidão e falta de transparência para os cidadãos.",
+          "fontes": [
+            {
+              "fonte": "Wikipedia (português)",
+              "link": "https://pt.wikipedia.org/wiki/Uni%C3%A3o_Europeia"
+            },
+            {
+              "fonte": "Wikipedia (inglês)",
+              "link": "https://en.wikipedia.org/wiki/European_Union"
+            },
+            {
+              "fonte": "Wikipedia (português)",
+              "link": "https://pt.wikipedia.org/wiki/Hist%C3%B3ria_da_Uni%C3%A3o_Europeia"
+            },
+            {
+              "fonte": "Wikipedia (inglês)",
+              "link": "https://en.wikipedia.org/wiki/History_of_the_European_Union"
+            }
+          ]
+        },
+        {
+          "nome": "Visão de reforma orçamentária da UE",
+          "pensa": "A UE deve reduzir gastos gerais e buscar novas receitas, como um imposto digital sobre grandes empresas de tecnologia.",
+          "quemDefende": "Presidente do Conselho Europeu António Costa, Comissão Europeia, alguns governos europeus",
+          "porQue": "Cortar 204‑100 bi € do orçamento permite equilibrar as contas e financiar prioridades como a defesa e a transição verde, enquanto o imposto digital garante recursos estáveis.",
+          "criticas": "Os cortes podem prejudicar programas sociais e a proposta de taxar Big Tech gera resistência de países que tem grandes empresas digitais.",
+          "fontes": [
+            {
+              "fonte": "Ukrainska Pravda",
+              "link": "https://www.pravda.com.ua/eng/news/2026/11/21/8063951/"
+            },
+            {
+              "fonte": "The Hindu",
+              "link": "https://www.thehindu.com/news/international/european-union-proposes-tax-on-big-tech-to-boost-budget/article71728111.ece"
+            },
+            {
+              "fonte": "The Straits Times",
+              "link": "https://www.straitstimes.com/world/eu-leaders-chair-proposes-new-cuts-to-eu-2028-2034-budget-draft-suggests-digital-tax"
+            },
+            {
+              "fonte": "South China Morning Post",
+              "link": "https://www.scmp.com/news/world/europe/article/3375333/eu-eyes-tax-big-tech-boost-budget"
+            }
+          ]
+        },
+        {
+          "nome": "Visão ucraniana",
+          "pensa": "A UE deve manter um grande bloco de recursos (cerca de €100 bi) para apoiar a Ucrânia na guerra contra a Rússia.",
+          "quemDefende": "Ucrânia, autoridades da UE que lidam com política externa, mídia ucraniana",
+          "porQue": "Sem esse apoio financeiro, a Ucrânia perderia capacidade de defesa e de reconstrução, comprometendo a segurança europeia.",
+          "criticas": "Destinar tanto dinheiro à Ucrânia pode limitar recursos para outras prioridades internas da UE.",
+          "fontes": [
+            {
+              "fonte": "Ukrainska Pravda",
+              "link": "https://www.pravda.com.ua/eng/news/2026/11/21/8063951/"
+            },
+            {
+              "fonte": "g1 Mundo",
+              "link": "https://g1.globo.com/mundo/noticia/2026/11/21/cupula-na-china-foi-muito-malsucedida-para-a-russia-diz-zelensky.ghtml"
+            }
+          ]
+        },
+        {
+          "nome": "Visão britânica",
+          "pensa": "O Reino Unido busca restabelecer uma relação próxima com a UE, negociando acordos comerciais e de mobilidade após o Brexit.",
+          "quemDefende": "Governo britânico (primeiro‑ministro Andy Burnham), representantes da UE em negociações bilaterais",
+          "porQue": "Um “reset” permite ao Reino Unido acessar mercados europeus e cooperar em áreas estratégicas como alimentos, carbono e mobilidade juvenil.",
+          "criticas": "A UE pode ver a proposta como tentativa de contornar regras do Brexit e exigir concessões que comprometam a integração interna.",
+          "fontes": [
+            {
+              "fonte": "RFI Brasil",
+              "link": "https://www.rfi.fr/br/podcasts/linha-direta/20261120-em-manobra-arriscada-reino-unido-tenta-rever-rela%C3%A7%C3%A3o-com-ue-e-recoloca-brexit-no-centro-do-debate"
+            },
+            {
+              "fonte": "MercoPress",
+              "link": "https://en.mercopress.com/2026/11/20/uk-and-eu-sign-their-biggest-deal-since-brexit-in-brussels?utm_source=feed&utm_medium=rss&utm_content=main&utm_campaign=rss"
+            },
+            {
+              "fonte": "The Guardian",
+              "link": "https://www.theguardian.com/world/live/2026/nov/20/uk-eu-european-union-brexit-deal-andy-burnham-latest-news-updates"
+            }
+          ]
+        },
+        {
+          "nome": "Visão russa",
+          "pensa": "A UE ignora os interesses russos ao equiparar a Europa à União Europeia e à OTAN, impedindo qualquer diálogo de segurança.",
+          "quemDefende": "Senador russo Konstantin Kosachev, mídia estatal russa (TASS)",
+          "porQue": "Enquanto a UE expande sua política de segurança, exclui a Rússia, o que, segundo eles, elimina a base para compromissos.",
+          "criticas": "A crítica ignora o fato de que a UE é uma união de Estados‑membros soberanos que definem sua própria política de segurança.",
+          "fontes": [
+            {
+              "fonte": "TASS",
+              "link": "https://tass.com/politics/2222805"
+            }
+          ]
+        },
+        {
+          "nome": "Visão indiana",
+          "pensa": "A proposta da UE de tributar grandes empresas digitais é vista como um meio legítimo de financiar o orçamento europeu.",
+          "quemDefende": "Jornal The Hindu, analistas indianos de centro‑esquerda",
+          "porQue": "Um imposto digital cria uma fonte de receita progressiva que pode ser usada para projetos comuns, sem sobrecarregar os contribuintes nacionais.",
+          "criticas": "A medida pode gerar disputas comerciais com países que consideram a taxação unilateral e afetar investimentos estrangeiros.",
+          "fontes": [
+            {
+              "fonte": "The Hindu",
+              "link": "https://www.thehindu.com/news/international/european-union-proposes-tax-on-big-tech-to-boost-budget/article71728111.ece"
+            }
+          ]
+        }
+      ],
+      "ondeConcordam": "Todas as vertentes reconhecem que a UE possui um conjunto de instituições (Comissão, Parlamento, Conselho) que participam das decisões e que o orçamento da UE é objeto de debate político.",
+      "ondeBrigam": "O ponto central de discordância está nas prioridades orçamentárias (cortes vs manutenção de fundos para a Ucrânia), na introdução de novos impostos digitais e na natureza da relação da UE com atores externos como o Reino Unido e a Rússia.",
+      "eHoje": "A France 24 (21/11/2026) noticiou que a UE e o Reino Unido assinaram três acordos para simplificar exportações de alimentos, alinhar esquemas de comércio de emissões e facilitar a mobilidade de jovens, mostrando como decisões da UE afetam relações comerciais recentes.",
+      "cadeia": [
+        {
+          "passo": "A Comissão Europeia elabora propostas de leis que afetam o mercado interno da UE",
+          "camada": "politica"
+        },
+        {
+          "passo": "Parlamento Europeu e Conselho da União Europeia analisam, emendam e aprovam essas propostas",
+          "camada": "politica"
+        },
+        {
+          "passo": "As leis aprovadas estabelecem normas comerciais e regulatórias para produtos que circulam na UE",
+          "camada": "economia"
+        },
+        {
+          "passo": "Essas normas determinam requisitos de acesso para exportadores brasileiros, como padrões sanitários ou tarifas",
+          "camada": "economia"
+        },
+        {
+          "passo": "Consequentemente, os exportadores do Brasil ajustam seus processos, o que pode alterar preços e volumes de exportação ao mercado europeu",
+          "camada": "economia"
+        }
+      ],
+      "chegaEmVoce": {
+        "tipo": "indireto",
+        "texto": "Quando a UE aprova uma nova regra sobre embalagens plásticas, as empresas brasileiras que vendem esses produtos para a Europa precisam adaptar a produção, o que pode refletir no preço final dos bens nas prateleiras brasileiras."
+      },
+      "paraPensar": "De que forma a escolha dos representantes no Parlamento Europeu pode influenciar políticas que afetam a competitividade dos produtos brasileiros no mercado europeu?",
+      "teste": [
+        {
+          "pergunta": "Qual instituição da UE tem o papel de iniciativa, elaborando propostas legislativas?",
+          "opcoes": [
+            "Parlamento Europeu",
+            "Conselho Europeu",
+            "Comissão Europeia",
+            "Banco Central Europeu"
+          ],
+          "correta": 2,
+          "explicacao": "O texto indica que a Comissão Europeia é responsável por propor leis e garantir sua aplicação."
+        },
+        {
+          "pergunta": "No procedimento legislativo ordinário, quem precisa concordar para que a lei seja adotada?",
+          "opcoes": [
+            "Apenas o Parlamento Europeu",
+            "Apenas o Conselho da União Europeia",
+            "Parlamento Europeu e Conselho da União Europeia",
+            "Conselho Europeu"
+          ],
+          "correta": 2,
+          "explicacao": "A lei só entra em vigor quando Parlamento e Conselho da União Europeia aprovam o texto nas mesmas condições."
+        },
+        {
+          "pergunta": "Qual tratado, em vigor a partir de 2009, reforçou o papel das instituições supranacionais da UE?",
+          "opcoes": [
+            "Tratado de Roma",
+            "Tratado de Maastricht",
+            "Tratado de Lisboa",
+            "Tratado de Paris"
+          ],
+          "correta": 2,
+          "explicacao": "O texto menciona que o Tratado de Lisboa, assinado em 2007 e vigente em 2009, fundiu os pilares e reforçou as instituições supranacionais."
+        }
+      ],
+      "fontes": [
+        {
+          "fonte": "Wikipedia (português)",
+          "titulo": "União Europeia",
+          "link": "https://pt.wikipedia.org/wiki/Uni%C3%A3o_Europeia"
+        },
+        {
+          "fonte": "Wikipedia (inglês)",
+          "titulo": "European Union",
+          "link": "https://en.wikipedia.org/wiki/European_Union"
+        },
+        {
+          "fonte": "Wikipedia (português)",
+          "titulo": "História da União Europeia",
+          "link": "https://pt.wikipedia.org/wiki/Hist%C3%B3ria_da_Uni%C3%A3o_Europeia"
+        },
+        {
+          "fonte": "Wikipedia (inglês)",
+          "titulo": "History of the European Union",
+          "link": "https://en.wikipedia.org/wiki/History_of_the_European_Union"
+        },
+        {
+          "fonte": "Wikipedia (português)",
+          "titulo": "Instituições da União Europeia",
+          "link": "https://pt.wikipedia.org/wiki/Institui%C3%A7%C3%B5es_da_Uni%C3%A3o_Europeia"
+        },
+        {
+          "fonte": "Wikipedia (inglês)",
+          "titulo": "Institutions of the European Union",
+          "link": "https://en.wikipedia.org/wiki/Institutions_of_the_European_Union"
+        },
+        {
+          "fonte": "France 24",
+          "titulo": "EU, UK reach reset deal after Brexit",
+          "link": "https://www.france24.com/en/eu-uk-reach-reset-deal-after-brexit"
+        },
+        {
+          "fonte": "Ukrainska Pravda",
+          "titulo": "European Council president unveils proposal for reduced EU budget, retaining €100 billion for Ukraine",
+          "link": "https://www.pravda.com.ua/eng/news/2026/11/21/8063951/"
+        },
+        {
+          "fonte": "The Hindu",
+          "titulo": "European Union proposes tax on Big Tech to boost budget",
+          "link": "https://www.thehindu.com/news/international/european-union-proposes-tax-on-big-tech-to-boost-budget/article71728111.ece"
+        },
+        {
+          "fonte": "RFI Brasil",
+          "titulo": "Em manobra arriscada, Reino Unido tenta rever relação com UE e recoloca Brexit no centro do debate",
+          "link": "https://www.rfi.fr/br/podcasts/linha-direta/20261120-em-manobra-arriscada-reino-unido-tenta-rever-rela%C3%A7%C3%A3o-com-ue-e-recoloca-brexit-no-centro-do-debate"
+        },
+        {
+          "fonte": "The Straits Times",
+          "titulo": "EU leaders' chair proposes new cuts to EU 2028-2034 budget draft, suggests digital tax",
+          "link": "https://www.straitstimes.com/world/eu-leaders-chair-proposes-new-cuts-to-eu-2028-2034-budget-draft-suggests-digital-tax"
+        },
+        {
+          "fonte": "MercoPress",
+          "titulo": "UK and EU sign their biggest deal since Brexit in Brussels",
+          "link": "https://en.mercopress.com/2026/11/20/uk-and-eu-sign-their-biggest-deal-since-brexit-in-brussels?utm_source=feed&utm_medium=rss&utm_content=main&utm_campaign=rss"
+        },
+        {
+          "fonte": "g1 Mundo",
+          "titulo": "Cúpula na China foi 'muito malsucedida' para a Rússia, diz Zelensky",
+          "link": "https://g1.globo.com/mundo/noticia/2026/11/21/cupula-na-china-foi-muito-malsucedida-para-a-russia-diz-zelensky.ghtml"
+        },
+        {
+          "fonte": "South China Morning Post",
+          "titulo": "EU eyes tax on Big Tech to boost budget",
+          "link": "https://www.scmp.com/news/world/europe/article/3375333/eu-eyes-tax-big-tech-boost-budget"
+        },
+        {
+          "fonte": "TASS",
+          "titulo": "EU must acknowledge for dialogue on security Europe wider than it — senior Russian senator",
+          "link": "https://tass.com/politics/2222805"
+        },
+        {
+          "fonte": "The Guardian",
+          "titulo": "EU wants ‘closest possible relationship’ with UK after agreeing Brexit reset deal – live",
+          "link": "https://www.theguardian.com/world/live/2026/nov/20/uk-eu-european-union-brexit-deal-andy-burnham-latest-news-updates"
+        }
+      ],
+      "imagem": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/1280px-Flag_of_Europe.svg.png?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "credito": "Wikimedia Commons, via Wikipedia",
+        "link": "https://pt.wikipedia.org/wiki/File:Flag_of_Europe.svg"
+      },
+      "sugeridoPorVoce": null,
+      "filaConectada": true
     }
   ]
 }
