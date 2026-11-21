@@ -14,7 +14,7 @@ import * as dropbox from './dropbox.js';
 import { gerarPrompt } from './prompt.js';
 import * as config from './config.js';
 import { dataCurta, semAcento } from './util.js';
-import { carregarIndicadores, EXPLICACOES } from './indicadores.js';
+import { carregarIndicadores, EXPLICACOES, explicacoesNoIdioma } from './indicadores.js';
 import { t, emIngles, REGIOES_EN, TEMAS_EN } from './textos.js';
 
 // ---------- Estado: o que está acontecendo agora ----------
@@ -46,12 +46,21 @@ async function lerJson(caminho) {
   return resposta.json();
 }
 
+/** No idioma inglês, tenta a versão traduzida pelo robô; se não houver, usa a em português. */
+async function noIdioma(base) {
+  if (emIngles()) {
+    const en = await lerJson(`data/app/${base}-en.json`).catch(() => null);
+    if (en) return en;
+  }
+  return lerJson(`data/app/${base}.json`).catch(() => null);
+}
+
 async function carregar() {
   const opcional = (c) => lerJson(c).catch(() => null); // sem esses, o app funciona mesmo assim
   const [dados, analise, tema, temas, edicoes, fontes] = await Promise.all([
     lerJson('data/app/hoje.json'),
-    opcional('data/app/analise.json'),
-    opcional('data/app/tema.json'),
+    noIdioma('analise'),
+    noIdioma('tema'),
     opcional('data/app/temas.json'),
     opcional('data/app/edicoes.json'),
     opcional('data/fontes.json'),
@@ -66,12 +75,22 @@ async function carregar() {
   Object.assign(estado, { dados, analise, tema, temas, edicoes });
 }
 
+/** Trocou o idioma: busca de novo a análise e o tema na língua escolhida. */
+async function recarregarConteudo() {
+  const [analise, tema] = await Promise.all([noIdioma('analise'), noIdioma('tema')]);
+  Object.assign(estado, { analise, tema, arquivos: {} });
+}
+
 /** Baixa (uma vez só) a edição ou o tema de um dia antigo e guarda a última versão. */
 async function arquivoDoDia(pasta, data) {
-  const chave = `${pasta}/${data}`;
+  const chave = `${pasta}/${data}/${emIngles() ? 'en' : 'pt'}`;
   if (!estado.arquivos[chave]) {
-    const doDia = await lerJson(`data/${pasta}/${data}.json`);
-    estado.arquivos[chave] = doDia.versoes[doDia.versoes.length - 1];
+    const traduzido = emIngles() ? await lerJson(`data/${pasta}-en/${data}.json`).catch(() => null) : null;
+    if (traduzido) estado.arquivos[chave] = traduzido;
+    else {
+      const doDia = await lerJson(`data/${pasta}/${data}.json`);
+      estado.arquivos[chave] = doDia.versoes[doDia.versoes.length - 1];
+    }
   }
   return estado.arquivos[chave];
 }
@@ -105,7 +124,7 @@ function htmlDaRota({ tela, partes }) {
       return carregarDepois('temas', partes[1], (t) => telas.telaTema(t, anteriores));
     }
     case 'meu': return htmlMeu();
-    case 'indicadores': return telas.telaIndicadores(estado.indicadores, EXPLICACOES, noticiasDoIndicador, partes[1]);
+    case 'indicadores': return telas.telaIndicadores(estado.indicadores, explicacoesNoIdioma(emIngles()), noticiasDoIndicador, partes[1]);
     case 'config': return telas.telaConfig(config.ler(), { conectado: dropbox.conectado(), roboLigado: Boolean(estado.tema?.filaConectada) });
     case 'analise-minha': return telas.telaMinhaAnalise(meus.pegar(partes[1]), dados);
     case 'explorar': {
@@ -368,7 +387,7 @@ function htmlHistorico() {
   let edicao = null;
   let carregando = false;
   if (estado.analise?.dataReferencia === dia && estado.analise.destaque) edicao = estado.analise;
-  else if (estado.arquivos[`analises/${dia}`]) edicao = estado.arquivos[`analises/${dia}`];
+  else if (estado.arquivos[`analises/${dia}/${emIngles() ? 'en' : 'pt'}`]) edicao = estado.arquivos[`analises/${dia}/${emIngles() ? 'en' : 'pt'}`];
   else if (diasEdicao.has(dia)) {
     carregando = true;
     arquivoDoDia('analises', dia).then(atualizarHistorico).catch(() => {});
@@ -454,7 +473,11 @@ document.addEventListener('click', (e) => {
   } else if (alvo.dataset.config) {
     // Configurações: grava, aplica e redesenha a tela
     config.salvar({ [alvo.dataset.config]: alvo.dataset.valor });
-    if (alvo.dataset.config === 'idioma') { aplicarIdiomaNosDados(); traduzirFixos(); }
+    if (alvo.dataset.config === 'idioma') {
+      aplicarIdiomaNosDados();
+      traduzirFixos();
+      recarregarConteudo().then(() => desenhar({ animar: false })); // análise e tema no idioma novo
+    }
     desenhar({ animar: false });
   } else if (alvo.dataset.pular) {
     // Índice da aula: rola até a parte, sem mudar de tela

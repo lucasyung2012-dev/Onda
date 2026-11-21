@@ -43,6 +43,41 @@ export const EXPLICACOES = {
   },
 };
 
+// Os mesmos textos em inglês (as palavras-chave das notícias continuam as de cima).
+const EN = {
+  dolar: {
+    oQueE: 'How much 1 US dollar costs in Brazilian reais (Central Bank selling rate).',
+    mundo: 'The dollar tends to rise when the world gets scared — wars, crises, tense elections — and when US interest rates go up, because money flows there.',
+    voce: 'A strong dollar makes phones, electronics, medicine, travel and even food and gasoline more expensive, since they depend on things priced in dollars.',
+  },
+  euro: {
+    oQueE: 'How much 1 euro costs in Brazilian reais. The euro is the currency of 20 European Union countries.',
+    mundo: 'It moves with the European economy, the war in Ukraine, energy in Europe and the decisions of the European Central Bank.',
+    voce: 'It weighs on travel, on European products (cars, machines, medicine) and on Brazil’s trade with Europe.',
+  },
+  petroleo: {
+    oQueE: 'The international price of a barrel of Brent crude (from the North Sea), the world’s main benchmark, in dollars.',
+    mundo: 'It rises with wars and tension in the Middle East, OPEC+ production cuts and sanctions on big producers (like Russia and Iran); it falls when the world economy cools down.',
+    voce: 'Petrobras uses the international price as a reference: it reaches gasoline, diesel, truck freight and, through them, food prices.',
+  },
+  selic: {
+    oQueE: 'Brazil’s basic interest rate, set by the Central Bank about every 45 days at the Copom meetings.',
+    mundo: 'Shocks abroad that push the dollar and prices up (wars, expensive oil, high US rates) can lead the Central Bank to raise the Selic to hold inflation back.',
+    voce: 'High rates make credit, installments and loans more expensive and usually slow down the economy and jobs.',
+  },
+  ipca: {
+    oQueE: 'Brazil’s official inflation, measured by IBGE: how much prices rose, on average, over the last 12 months.',
+    mundo: 'Wars, droughts, expensive oil and a strong dollar make food, energy and transport more expensive worldwide — and it shows up here.',
+    voce: 'It is how much less your money buys: the same grocery shopping costs more.',
+  },
+};
+
+/** Explicações no idioma escolhido (mantendo as palavras-chave). */
+export function explicacoesNoIdioma(ingles) {
+  if (!ingles) return EXPLICACOES;
+  return Object.fromEntries(Object.entries(EXPLICACOES).map(([id, ex]) => [id, { ...ex, ...(EN[id] || {}) }]));
+}
+
 const tresDias = 3 * 86400000;
 
 /** Busca direto nas fontes oficiais (plano B, se o arquivo do robô faltar). */

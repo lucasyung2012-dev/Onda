@@ -20,7 +20,7 @@ on:
         description: 'O que rodar'
         type: choice
         default: tudo
-        options: [tudo, 'só o tema do dia']
+        options: [tudo, 'só o tema do dia', 'só traduzir']
 
 permissions:
   contents: write
@@ -32,7 +32,7 @@ concurrency:
 jobs:
   analisar:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
 
@@ -44,7 +44,7 @@ jobs:
         run: node coletor/coletar.mjs
 
       - name: Escolher e analisar o destaque do dia
-        if: github.event.inputs.parte != 'só o tema do dia'
+        if: github.event.inputs.parte != 'só o tema do dia' && github.event.inputs.parte != 'só traduzir'
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
@@ -53,7 +53,7 @@ jobs:
       # Roda mesmo se o destaque falhar. O "sleep" respeita o limite
       # de uso por minuto do plano gratuito da IA.
       - name: Escrever o tema do dia
-        if: always()
+        if: always() && github.event.inputs.parte != 'só traduzir'
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
@@ -61,6 +61,16 @@ jobs:
         run: |
           if [ "${{ github.event.inputs.parte }}" != "só o tema do dia" ]; then sleep 65; fi
           node coletor/tema.mjs
+
+      # Versão em inglês da análise e do tema (para o app no idioma inglês)
+      - name: Traduzir para o inglês
+        if: always()
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          if [ "${{ github.event.inputs.parte }}" != "só traduzir" ]; then sleep 65; fi
+          node coletor/traduzir.mjs
 
       - name: Salvar no repositório
         if: always()
