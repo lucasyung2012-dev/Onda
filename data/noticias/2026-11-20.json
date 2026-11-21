@@ -2,6 +2,388 @@
   "data": "2026-11-20",
   "noticias": [
     {
+      "id": "8b2c2a617246",
+      "titulo": "Three Houthi ballistic missiles intercepted over Riyadh, Saudi-led coalition says",
+      "resumo": "Three ballistic missiles launched by Houthis towards Riyadh were intercepted and destroyed by Saudi-led coalition's air defences, spokesman for the coalition, Major General Turki Al Malki said on X. Turki's announcement comes after the Saudi Civil Defence agency issued, and later…",
+      "link": "https://www.middleeasteye.net/live-blog/live-blog-update/three-houthi-ballistic-missiles-intercepted-over-riyadh-saudi-led",
+      "fonte": "middleeasteye",
+      "fonteNome": "Middle East Eye",
+      "pais": "Reino Unido",
+      "visao": "Site focado no Oriente Médio, crítico de governos da região",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:00:08.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "conflitos",
+        "energia"
+      ],
+      "coletadoEm": "2026-11-21T00:02:15.048Z"
+    },
+    {
+      "id": "7167154fdb00",
+      "titulo": "Marcos Jnr promised a ‘new Philippines’. What happened?",
+      "resumo": "“I knew your parents very well and they were great,” US President Donald Trump told his Philippine counterpart at a dinner in Manila this week, offering a glowing tribute to a family that was once forced into exile in disgrace. Turning to his host, Ferdinand “Bongbong” Marcos…",
+      "link": "https://www.scmp.com/week-asia/people/article/3375235/marcos-jnr-promised-new-philippines-what-happened",
+      "fonte": "scmp",
+      "fonteNome": "South China Morning Post",
+      "pais": "Hong Kong",
+      "visao": "Jornal de Hong Kong sobre China e Ásia",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:00:08.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/20/8ccbee3a-fd5c-4ffb-9d36-f7291c710242_3940e47c.jpg?itok=5uaW0VO7&v=1795167418",
+      "imagemCredito": "South China Morning Post",
+      "regioes": [
+        "america-norte",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "politica"
+      ],
+      "coletadoEm": "2026-11-21T00:02:15.048Z"
+    },
+    {
+      "id": "848e99a81fa1",
+      "titulo": "Oil Prices Caught Between a Looming Glut and Middle East Turmoil",
+      "resumo": "Oil prices have traded in a narrow range over the past few sessions as forecasts of a coming surplus collide with continued attacks and stalled diplomacy in the Middle East. A run of agency reports this month has pushed expectations toward oversupply and weighed on crude. Brent…",
+      "link": "https://oilprice.com/Energy/Energy-General/Oil-Prices-Caught-Between-a-Looming-Glut-and-Middle-East-Turmoil.html",
+      "fonte": "oilprice",
+      "fonteNome": "OilPrice.com",
+      "pais": "EUA",
+      "visao": "Notícias de energia e petróleo",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:00:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "energia",
+        "economia",
+        "conflitos"
+      ],
+      "coletadoEm": "2026-11-21T00:02:15.048Z"
+    },
+    {
+      "id": "17c25968fdb4",
+      "titulo": "Man convicted of starting deadly 2025 LA Palisades Fire",
+      "resumo": "Jonathan Rinderknecht is found guilty at his second trial of sparking last year's deadly Palisades Fire, which killed 12 people.",
+      "link": "https://www.abc.net.au/news/2026-11-21/man-convicted-of-starting-2025-la-palisades-fire/107412326",
+      "fonte": "abcau",
+      "fonteNome": "ABC News Austrália",
+      "pais": "Austrália",
+      "visao": "Emissora pública australiana",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:53:06.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/3fe8f74c2bf88423fca0537ec6732648?impolicy=wcms_crop_resize&cropH=2387&cropW=4244&xPos=0&yPos=0&width=862&height=485",
+      "imagemCredito": "ABC News Austrália",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "direitos",
+        "conflitos"
+      ],
+      "coletadoEm": "2026-11-21T00:02:15.048Z"
+    },
+    {
+      "id": "ca01f496607a",
+      "titulo": "Concerns raised over AI cameras at junior basketball games",
+      "resumo": "Basketball Australia has started trialling AI-powered \"smart cameras\" at community games, ahead of a wider rollout, sparking concerns for some.",
+      "link": "https://www.abc.net.au/news/2026-11-21/concerns-over-basketball-australia-ai-cameras-junior-games/107406442",
+      "fonte": "abcau",
+      "fonteNome": "ABC News Austrália",
+      "pais": "Austrália",
+      "visao": "Emissora pública australiana",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:49:05.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/fba4612dee781a27118cd64fd80959a1?impolicy=wcms_crop_resize&cropH=810&cropW=1440&xPos=0&yPos=0&width=862&height=485",
+      "imagemCredito": "ABC News Austrália",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "tecnologia",
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-21T00:02:15.048Z"
+    },
+    {
+      "id": "19c0628393b8",
+      "titulo": "Republican senator blocks Trump cyber nominee over January 6 denial",
+      "resumo": "Thom Tillis move comes after Michael LoSapio, nominated for Cisa role, told hearing ‘I don’t believe it was an attack’ Senator Thom Tillis, the outgoing North Carolina Republican who is due to be replaced by a Democrat, has reportedly blocked a confirmation vote on Donald Trump’s…",
+      "link": "https://www.theguardian.com/us-news/2026/nov/20/tillis-republican-senator-trump-cyber-nominee",
+      "fonte": "guardian",
+      "fonteNome": "The Guardian",
+      "pais": "Reino Unido",
+      "visao": "Jornal britânico, centro-esquerda",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:48:38.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://i.guim.co.uk/img/media/cac7b215020ab17f2e1926d910d082e9f9ca8ad3/444_0_4416_3535/master/4416.jpg?width=140&quality=85&auto=format&fit=max&s=892fc0c8d9b7b741fcb53f80e10cc653",
+      "imagemCredito": "The Guardian",
+      "regioes": [
+        "america-norte"
+      ],
+      "temas": [
+        "politica",
+        "conflitos",
+        "tecnologia"
+      ],
+      "coletadoEm": "2026-11-21T00:02:15.048Z"
+    },
+    {
+      "id": "1c69855faa1a",
+      "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
+      "resumo": "Nov 20 (Reuters) - Iran's Foreign Minister Abbas Araqchi said Tehran still hoped diplomacy could end its war with the United States, while US President Donald Trump said Iran wanted a deal but one that wasnot acceptable to him. Araqchi told the state-owned Iran newspaper that…",
+      "link": "https://www.al-monitor.com/originals/2026/11/araqchi-says-iran-wants-diplomacy-end-war-trump-says-terms-unacceptable",
+      "fonte": "almonitor",
+      "fonteNome": "Al-Monitor",
+      "pais": "EUA",
+      "visao": "Site especializado em Oriente Médio",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:46:29.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "america-norte",
+        "oriente-medio"
+      ],
+      "temas": [
+        "diplomacia",
+        "conflitos",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-21T00:02:15.048Z"
+    },
+    {
+      "id": "041a64125a03",
+      "titulo": "Russian missiles land in Poland, as Europe holds military drills nearby",
+      "resumo": "Two Russian missiles and a suspected drone came down in Poland on Friday in what its prime minister said was likely to be a provocation timed to coincide with European military exercises in his country for a possible post-war mission in Ukraine. The incidents occurred while…",
+      "link": "https://www.scmp.com/news/world/russia-central-asia/article/3375302/russian-missiles-land-poland-europe-holds-military-drills-nearby",
+      "fonte": "scmp",
+      "fonteNome": "South China Morning Post",
+      "pais": "Hong Kong",
+      "visao": "Jornal de Hong Kong sobre China e Ásia",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:43:44.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/21/66884aa7-2b7c-4999-a3ce-4110cc3cf4ab_b5c8aaa1.jpg?itok=OWWRIKOI&v=1795218209",
+      "imagemCredito": "South China Morning Post",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-21T00:02:15.048Z"
+    },
+    {
+      "id": "96a7f9767d2d",
+      "titulo": "Judge approves $7.25bn Bayer payout to settle claims that Roundup causes cancer",
+      "resumo": "German company faced 65,000 claims from people who said they developed cancer after using weedkiller A Missouri judge on Friday approved Bayer ’s $7.25bn settlement of lawsuits ⁠alleging that its weedkiller ​Roundup causes cancer, potentially resolving litigation that has weighed…",
+      "link": "https://www.theguardian.com/business/2026/nov/20/bayer-roundup-cancer-litigation",
+      "fonte": "guardian",
+      "fonteNome": "The Guardian",
+      "pais": "Reino Unido",
+      "visao": "Jornal britânico, centro-esquerda",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:42:43.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://i.guim.co.uk/img/media/efbc188d676f119c98b60ce20d212a75264e7757/483_0_3333_2667/master/3333.jpg?width=140&quality=85&auto=format&fit=max&s=80be199f03da1f2774ebcc5eaf1c6cd0",
+      "imagemCredito": "The Guardian",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "economia",
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-21T00:02:15.048Z"
+    },
+    {
+      "id": "b9fd33b45ed1",
+      "titulo": "Waymo recalls self-driving cars over closed freeway lanes, manual traffic control",
+      "resumo": "This comes after a California regulator barred Waymo vehicles from freeways in the state.",
+      "link": "https://www.straitstimes.com/world/united-states/waymo-recalls-self-driving-cars-over-closed-freeway-lanes-manual-traffic-control",
+      "fonte": "straitstimes",
+      "fonteNome": "The Straits Times",
+      "pais": "Singapura",
+      "visao": "Jornal de referência de Singapura",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:40:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-21T00:02:15.048Z"
+    },
+    {
+      "id": "233a3654f89a",
+      "titulo": "How the Vikings and 49ers are training for Mexico City’s thin air",
+      "resumo": "Which team is better prepared for Sunday's 7:30 p.m. kickoff at Estadio Azteca? Both did thin-air training, but the 49ers (despite the neutral site) have home-field advantage, both as designated by the league and by their expected fan support. The post How the Vikings and 49ers…",
+      "link": "https://mexiconewsdaily.com/lifestyle/how-vikings-and-49ers-training-mexico-citys-thin-air/",
+      "fonte": "mexiconews",
+      "fonteNome": "Mexico News Daily",
+      "pais": "México",
+      "visao": "Notícias do México em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:37:48.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "america-latina"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-21T00:02:15.048Z"
+    },
+    {
+      "id": "0e0b6ada852d",
+      "titulo": "Trump Claims Putin Wants Peace as Moscow Rejects NATO-Style Guarantees for Ukraine",
+      "resumo": "President Donald Trump claimed Vladimir Putin wants a diplomatic end to Russia’s war against Ukraine, describing their talks in China as “very good.” However, Trump declined to discuss security guarantees for Kyiv before a peace agreement, while Moscow rejected NATO-style…",
+      "link": "https://www.kyivpost.com/post/90774",
+      "fonte": "kyivpost",
+      "fonteNome": "Kyiv Post",
+      "pais": "Ucrânia",
+      "visao": "Jornal ucraniano",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:36:56.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://static.kyivpost.com/storage/2026/11/21/86b3b9882bed604bcacaa5acace4ffba.jpg?w=640&q=90&f=jpg",
+      "imagemCredito": "Kyiv Post",
+      "regioes": [
+        "europa",
+        "america-norte",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "diplomacia",
+        "conflitos",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-21T00:02:15.048Z"
+    },
+    {
+      "id": "fabe8f110b31",
+      "titulo": "Overturned boat carrying mourners to funeral kills at least four in Nigeria",
+      "resumo": "Police say two children among dead as search continues for more victims.",
+      "link": "https://www.aljazeera.com/news/2026/11/20/overturned-boat-carrying-mourners-to-funeral-kills-at-least-four-in-nigeria?traffic_source=rss",
+      "fonte": "aljazeera",
+      "fonteNome": "Al Jazeera",
+      "pais": "Catar",
+      "visao": "Rede do Catar (financiada pelo governo), foco no Sul Global e no mundo árabe",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:36:36.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "africa"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-21T00:02:15.048Z"
+    },
+    {
+      "id": "109eb4f65d49",
+      "titulo": "Hatching a plan to ensure Australia's native turtles survive and thrive",
+      "resumo": "How a citizen science program is saving thousands of turtles even as researchers learn more about them.",
+      "link": "https://www.abc.net.au/news/2026-11-21/1-million-turtles-conservation-project-closing-in-on-milestone/107398472",
+      "fonte": "abcau",
+      "fonteNome": "ABC News Austrália",
+      "pais": "Austrália",
+      "visao": "Emissora pública australiana",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:32:49.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/bcb47c38c0f73f94992947f2444a62a4?impolicy=wcms_crop_resize&cropH=2205&cropW=3921&xPos=628&yPos=882&width=862&height=485",
+      "imagemCredito": "ABC News Austrália",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-21T00:02:15.048Z"
+    },
+    {
       "id": "531970a17042",
       "titulo": "Secret police recording of parent murderer released",
       "resumo": "A month after she murdered her elderly father by injecting him with a lethal dose of insulin, double murderer Raelene Polymiadis begged God for forgiveness.",
@@ -79,6 +461,58 @@
         "outros"
       ],
       "coletadoEm": "2026-11-20T23:36:55.664Z"
+    },
+    {
+      "id": "512f212aa60f",
+      "titulo": "Russia launches ballistic missile attack on central Kryvyi Rih: child and paramedic killed, at least 21 injured",
+      "resumo": "Russian forces attacked the centre of Kryvyi Rih with ballistic missiles on the evening of 20 November, injuring at least 21 people. A seven-year-old boy and a female paramedic have been killed in the attack.",
+      "link": "https://www.pravda.com.ua/eng/news/2026/11/21/8063886/",
+      "fonte": "pravdaua",
+      "fonteNome": "Ukrainska Pravda",
+      "pais": "Ucrânia",
+      "visao": "Site ucraniano de jornalismo independente",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:30:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/3/b/961152/3b829fbac1f54d29071fa375cc4592b9.jpeg",
+      "imagemCredito": "Ukrainska Pravda",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos"
+      ],
+      "coletadoEm": "2026-11-21T00:02:15.048Z"
+    },
+    {
+      "id": "7be3ad6f9d6d",
+      "titulo": "Tokyo is being reshaped by a historic real estate boom",
+      "resumo": "Rents are heating up across Tokyo, particularly in the historically industrial, working-class east side.",
+      "link": "https://www.japantimes.co.jp/business/2026/11/21/tokyo-real-estate-boom/",
+      "fonte": "japantimes",
+      "fonteNome": "The Japan Times",
+      "pais": "Japão",
+      "visao": "Jornal japonês em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:30:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/21/575285.jpg",
+      "imagemCredito": "The Japan Times",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "economia"
+      ],
+      "coletadoEm": "2026-11-21T00:02:15.048Z"
     },
     {
       "id": "b83ce3c442ac",
@@ -196,6 +630,32 @@
       "coletadoEm": "2026-11-20T23:36:55.664Z"
     },
     {
+      "id": "b8c773849786",
+      "titulo": "Louisiana farmer wins 13-year land dispute after neighbours clear trees; court awards him $59,966",
+      "resumo": "In a landmark ruling, Louisiana farmer Benjamin Lee Bird emerged victorious in a lengthy 13-year battle over a disputed land strip. The court upheld his ownership, leading to a damages award against his neighbours for their actions, which included tree removal and altering…",
+      "link": "https://timesofindia.indiatimes.com/world/us/a-louisiana-farmer-returned-from-offshore-work-to-find-neighbours-clearing-trees-from-an-18-foot-strip-they-believed-was-theirs-13-years-later-an-appeals-court-upheld-his-land-rights-and-awarded-59966-99/articleshow/135986771.cms",
+      "fonte": "timesofindia",
+      "fonteNome": "The Times of India",
+      "pais": "Índia",
+      "visao": "Maior jornal indiano em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:25:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://static.toiimg.com/photo/msid-135986864,imgsize-1569239.cms",
+      "imagemCredito": "The Times of India",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-21T00:02:15.048Z"
+    },
+    {
       "id": "59424235b41a",
       "titulo": "US judge approves $7.25 billion Roundup cancer settlement",
       "resumo": "It is among the largest class recoveries in US history, and clears the way for guaranteed compensation for tens of thousands of cancer victims.",
@@ -275,6 +735,34 @@
       "coletadoEm": "2026-11-20T23:36:55.664Z"
     },
     {
+      "id": "3ace204545de",
+      "titulo": "Rahul Gandhi backs strong India-Israel ties despite Gaza war",
+      "resumo": "India’s opposition leader Rahul Gandhi, says New Delhi should continue to maintain strong ties with Israel.",
+      "link": "https://www.aljazeera.com/video/newsfeed/2026/11/20/rahul-gandhi-backs-strong-india-israel-ties-despite-gaza-war?traffic_source=rss",
+      "fonte": "aljazeera",
+      "fonteNome": "Al Jazeera",
+      "pais": "Catar",
+      "visao": "Rede do Catar (financiada pelo governo), foco no Sul Global e no mundo árabe",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:20:50.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "oriente-medio",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "conflitos",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-21T00:02:15.048Z"
+    },
+    {
       "id": "cdedd122f848",
       "titulo": "Dead pets were meant to be cremated - then their bodies appeared on a livestream",
       "resumo": "Grieving Filipinos confront a distressing reality: their dogs and cats may not have received the send-off they paid for.",
@@ -352,6 +840,34 @@
         "outros"
       ],
       "coletadoEm": "2026-11-20T23:36:55.664Z"
+    },
+    {
+      "id": "72d4f6ebd178",
+      "titulo": "‘For Us, He Is a Killer’: Zelensky Rebukes Trump for Calling Putin a ‘Friend’",
+      "resumo": "President Volodymyr Zelensky called Vladimir Putin an enemy and a killer, warning that President Donald Trump’s description of the Russian leader as a “friend” encourages him to continue his war. Zelensky said Putin wants Ukraine destroyed and urged Washington to use its…",
+      "link": "https://www.kyivpost.com/post/90773",
+      "fonte": "kyivpost",
+      "fonteNome": "Kyiv Post",
+      "pais": "Ucrânia",
+      "visao": "Jornal ucraniano",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:19:50.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://static.kyivpost.com/storage/2026/11/21/fb928b0979b7b6a6075ef9600697e77c.jpg?w=640&q=90&f=jpg",
+      "imagemCredito": "Kyiv Post",
+      "regioes": [
+        "europa",
+        "america-norte"
+      ],
+      "temas": [
+        "conflitos",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-21T00:02:15.048Z"
     },
     {
       "id": "e315ecd54630",
@@ -487,6 +1003,32 @@
         "tecnologia"
       ],
       "coletadoEm": "2026-11-20T23:20:56.990Z"
+    },
+    {
+      "id": "6c93b034dc53",
+      "titulo": "China’s summit snub could strengthen Takaichi’s standing at home",
+      "resumo": "Experts say Beijing's \"blatant\" snub — including a visibly scaled-down welcome for Takaichi — could galvanize her conservative base.",
+      "link": "https://www.japantimes.co.jp/news/2026/11/21/japan/politics/china-snub-boost-takaichi-base/",
+      "fonte": "japantimes",
+      "fonteNome": "The Japan Times",
+      "pais": "Japão",
+      "visao": "Jornal japonês em inglês",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:07:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/21/575284.JPG",
+      "imagemCredito": "The Japan Times",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "diplomacia"
+      ],
+      "coletadoEm": "2026-11-21T00:02:15.048Z"
     },
     {
       "id": "fd72ae54f858",
@@ -1964,6 +2506,33 @@
         "clima"
       ],
       "coletadoEm": "2026-11-20T22:54:55.629Z"
+    },
+    {
+      "id": "6babf5376256",
+      "titulo": "Moldova might \"experiment\" if tired of having diplomatic presence in Russia — Zakharova",
+      "resumo": "Earlier, Moldovan Parliament Speaker Igor Grosu suggested that the country’s authorities might declare Russian Ambassador Oleg Ozerov persona non grata",
+      "link": "https://tass.com/politics/2222769",
+      "fonte": "tass",
+      "fonteNome": "TASS",
+      "pais": "Rússia",
+      "visao": "Agência estatal russa (versão oficial do Kremlin)",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T21:52:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "diplomacia",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-21T00:02:15.048Z"
     },
     {
       "id": "541acfe5f704",
@@ -36672,5 +37241,5 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     }
   ],
-  "atualizadoEm": "2026-11-20T23:36:55.664Z"
+  "atualizadoEm": "2026-11-21T00:02:15.048Z"
 }

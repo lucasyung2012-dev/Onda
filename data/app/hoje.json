@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-20T23:36:55.664Z",
+  "geradoEm": "2026-11-21T00:02:15.048Z",
   "dataReferencia": "2026-11-20",
   "fuso": "America/Sao_Paulo",
-  "totalNoticias": 1439,
+  "totalNoticias": 1450,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -29,16 +29,16 @@
     "outros": "Outros"
   },
   "destaque": {
-    "id": "97f1ff305240",
-    "motivo": "Coberto por 14 fontes diferentes nas últimas 24 horas. Critério provisório: a partir da etapa 7, a escolha passa a ser feita por análise."
+    "id": "0e0b6ada852d",
+    "motivo": "Coberto por 13 fontes diferentes nas últimas 24 horas. Critério provisório: a partir da etapa 7, a escolha passa a ser feita por análise."
   },
   "fatos": [
     {
-      "id": "97f1ff305240",
-      "titulo": "Russia launches massive attack on Ukraine a day after Putin’s meeting with Trump and Xi",
-      "resumo": "Russian forces attacked Kyiv with missiles and drones overnight November 19–20. Kyiv Mayor Vitali Klitschko said three bridges were damaged. The Podilsko-Voskresenskyi Bridge is closed to traffic from the right bank to the left. The Darnytskyi and Pivdennyi (Southern) bridges…",
-      "imagem": "https://meduza.io/image/attachments/images/012/997/222/small/lNbPu_QWgjASQyab-CKhgQ",
-      "credito": "Meduza",
+      "id": "0e0b6ada852d",
+      "titulo": "Trump Claims Putin Wants Peace as Moscow Rejects NATO-Style Guarantees for Ukraine",
+      "resumo": "President Donald Trump claimed Vladimir Putin wants a diplomatic end to Russia’s war against Ukraine, describing their talks in China as “very good.” However, Trump declined to discuss security guarantees for Kyiv before a peace agreement, while Moscow rejected NATO-style…",
+      "imagem": "https://static.kyivpost.com/storage/2026/11/21/86b3b9882bed604bcacaa5acace4ffba.jpg?w=640&q=90&f=jpg",
+      "credito": "Kyiv Post",
       "regioes": [
         "europa",
         "america-norte",
@@ -51,22 +51,23 @@
         "politica",
         "energia",
         "direitos",
-        "economia"
+        "economia",
+        "outros"
       ],
-      "fontes": 14,
+      "fontes": 13,
       "paises": 8,
-      "maisRecente": "2026-11-20T22:35:07.000Z",
+      "maisRecente": "2026-11-20T23:36:56.000Z",
       "materias": [
         {
-          "fonte": "Meduza",
-          "pais": "Rússia",
-          "visao": "Site russo independente, no exílio, oposição ao Kremlin",
+          "fonte": "Kyiv Post",
+          "pais": "Ucrânia",
+          "visao": "Jornal ucraniano",
           "estatal": false,
           "tipo": "noticia",
           "idioma": "en",
-          "titulo": "Russia launches massive attack on Ukraine a day after Putin’s meeting with Trump and Xi",
-          "link": "https://meduza.io/en/feature/2026/11/21/russia-launches-massive-attack-on-ukraine-a-day-after-putin-s-meeting-with-trump-and-xi",
-          "publicadoEm": "2026-11-20T22:35:07.000Z",
+          "titulo": "Trump Claims Putin Wants Peace as Moscow Rejects NATO-Style Guarantees for Ukraine",
+          "link": "https://www.kyivpost.com/post/90774",
+          "publicadoEm": "2026-11-20T23:36:56.000Z",
           "semData": false
         },
         {
@@ -154,6 +155,18 @@
           "semData": false
         },
         {
+          "fonte": "Kyiv Post",
+          "pais": "Ucrânia",
+          "visao": "Jornal ucraniano",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Russia Rejects NATO-Style Security Guarantees for Ukraine",
+          "link": "https://www.kyivpost.com/post/90735",
+          "publicadoEm": "2026-11-20T14:22:38.000Z",
+          "semData": false
+        },
+        {
           "fonte": "The Moscow Times",
           "pais": "Rússia",
           "visao": "Jornal russo independente, no exílio",
@@ -190,6 +203,18 @@
           "semData": false
         },
         {
+          "fonte": "The Moscow Times",
+          "pais": "Rússia",
+          "visao": "Jornal russo independente, no exílio",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Russia Pushes Back Against U.S. Idea of NATO-Style Security Guarantees for Ukraine",
+          "link": "https://www.themoscowtimes.com/2026/11/20/russia-pushes-back-against-us-idea-of-nato-style-security-guarantees-for-ukraine-a94326",
+          "publicadoEm": "2026-11-20T10:16:00.000Z",
+          "semData": false
+        },
+        {
           "fonte": "Asharq Al-Awsat",
           "pais": "Arábia Saudita",
           "visao": "Jornal pan-árabe de dono saudita",
@@ -202,15 +227,15 @@
           "semData": false
         },
         {
-          "fonte": "CNA",
-          "pais": "Singapura",
-          "visao": "Canal de Singapura, foco no Sudeste Asiático",
-          "estatal": true,
+          "fonte": "Asharq Al-Awsat",
+          "pais": "Arábia Saudita",
+          "visao": "Jornal pan-árabe de dono saudita",
+          "estatal": false,
           "tipo": "noticia",
           "idioma": "en",
-          "titulo": "Russia pummels Ukraine after Putin vowed 'painful' attack",
-          "link": "https://www.channelnewsasia.com/world/russia-strike-ukraine-invasion-putin-missile-drone-6568896",
-          "publicadoEm": "2026-11-20T09:21:00.000Z",
+          "titulo": "Russia Pushes Back Against US Idea of NATO-Style Security Guarantees for Ukraine",
+          "link": "https://english.aawsat.com/node/5343506",
+          "publicadoEm": "2026-11-20T08:49:47.000Z",
           "semData": false
         },
         {
@@ -226,15 +251,27 @@
           "semData": false
         },
         {
-          "fonte": "Asharq Al-Awsat",
-          "pais": "Arábia Saudita",
-          "visao": "Jornal pan-árabe de dono saudita",
+          "fonte": "Daily Sabah",
+          "pais": "Turquia",
+          "visao": "Jornal turco pró-governo Erdogan",
           "estatal": false,
           "tipo": "noticia",
           "idioma": "en",
-          "titulo": "Russia Pummels Ukraine After Putin Vowed ‘Painful’ Attack",
-          "link": "https://english.aawsat.com/node/5343473",
-          "publicadoEm": "2026-11-20T06:49:49.000Z",
+          "titulo": "US says Russia open to NATO-style security guarantees for Ukraine",
+          "link": "https://www.dailysabah.com/world/europe/us-says-russia-open-to-nato-style-security-guarantees-for-ukraine",
+          "publicadoEm": "2026-11-20T08:44:00.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Kyiv Post",
+          "pais": "Ucrânia",
+          "visao": "Jornal ucraniano",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "US Says It Got Kremlin ‘Comfortable’ With NATO Article 5-Style Security Guarantees for Ukraine",
+          "link": "https://www.kyivpost.com/post/90681",
+          "publicadoEm": "2026-11-20T08:33:11.000Z",
           "semData": false
         },
         {
@@ -259,18 +296,6 @@
           "titulo": "Trump, Xi and Putin release 'peace declaration' from unprecedented summit",
           "link": "https://www.channelnewsasia.com/world/china-russia-us-peace-declaration-nuclear-trilateral-talks-6565716",
           "publicadoEm": "2026-11-20T03:16:00.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "PBS NewsHour",
-          "pais": "EUA",
-          "visao": "TV pública dos EUA",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Inside the historic summit between Trump, Xi and Putin",
-          "link": "https://www.pbs.org/newshour/show/inside-the-historic-summit-between-trump-xi-and-putin",
-          "publicadoEm": "2026-11-19T23:55:57.000Z",
           "semData": false
         }
       ]
@@ -1258,6 +1283,89 @@
       ]
     },
     {
+      "id": "1c69855faa1a",
+      "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
+      "resumo": "Nov 20 (Reuters) - Iran's Foreign Minister Abbas Araqchi said Tehran still hoped diplomacy could end its war with the United States, while US President Donald Trump said Iran wanted a deal but one that wasnot acceptable to him. Araqchi told the state-owned Iran newspaper that…",
+      "imagem": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/8/c/961118/8cc01a98d2d5cea34ea6b373beb3af30.jpeg",
+      "credito": "Ukrainska Pravda",
+      "regioes": [
+        "america-norte",
+        "oriente-medio",
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia",
+        "politica",
+        "direitos"
+      ],
+      "fontes": 5,
+      "paises": 4,
+      "maisRecente": "2026-11-20T23:46:29.000Z",
+      "materias": [
+        {
+          "fonte": "Al-Monitor",
+          "pais": "EUA",
+          "visao": "Site especializado em Oriente Médio",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
+          "link": "https://www.al-monitor.com/originals/2026/11/araqchi-says-iran-wants-diplomacy-end-war-trump-says-terms-unacceptable",
+          "publicadoEm": "2026-11-20T23:46:29.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
+          "link": "https://www.straitstimes.com/world/middle-east/araqchi-says-iran-wants-diplomacy-to-end-war-trump-says-terms-unacceptable",
+          "publicadoEm": "2026-11-20T23:15:29.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Ukrainska Pravda",
+          "pais": "Ucrânia",
+          "visao": "Site ucraniano de jornalismo independente",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Trump says Putin wants to end Russia's war against Ukraine through diplomacy",
+          "link": "https://www.pravda.com.ua/eng/news/2026/11/20/8063876/",
+          "publicadoEm": "2026-11-20T18:25:00.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Haaretz",
+          "pais": "Israel",
+          "visao": "Jornal israelense, centro-esquerda",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Trump's Iran choice: A deal or another war he can't end",
+          "link": "https://www.haaretz.com/middle-east-news/iran/2026-11-20/ty-article/.premium/trump-may-start-a-war-but-iran-will-decide-how-and-when-it-ends/000001a1-f4ee-d175-abf5-fefed8990000",
+          "publicadoEm": "2026-11-20T04:00:51.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Kyiv Post",
+          "pais": "Ucrânia",
+          "visao": "Jornal ucraniano",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Kushner Says Trump Wants Europe ‘By His Side’ on Ukraine",
+          "link": "https://www.kyivpost.com/post/90651",
+          "publicadoEm": "2026-11-20T00:18:38.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
       "id": "fd72ae54f858",
       "titulo": "Activists, leaders criticize COP31 climate talks as fossil fuels go unmentioned in draft deal",
       "resumo": "United Nations climate talks in Turkey stretched into overtime Friday and delegates put off some decisions to next year, unable to find common ground on multiple issues with mutterings and protests about failure.",
@@ -1867,77 +1975,6 @@
       ]
     },
     {
-      "id": "04471859b97d",
-      "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
-      "resumo": "Nov 20 - Iran's Foreign Minister Abbas Araqchi said Tehran still hoped diplomacy could end its war with the United States, while US President Donald Trump said Iran wanted a deal but one that was not acceptable to him.",
-      "imagem": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/8/c/961118/8cc01a98d2d5cea34ea6b373beb3af30.jpeg",
-      "credito": "Ukrainska Pravda",
-      "regioes": [
-        "america-norte",
-        "oriente-medio",
-        "europa"
-      ],
-      "temas": [
-        "conflitos",
-        "diplomacia",
-        "politica",
-        "direitos"
-      ],
-      "fontes": 4,
-      "paises": 3,
-      "maisRecente": "2026-11-20T23:15:29.000Z",
-      "materias": [
-        {
-          "fonte": "The Straits Times",
-          "pais": "Singapura",
-          "visao": "Jornal de referência de Singapura",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
-          "link": "https://www.straitstimes.com/world/middle-east/araqchi-says-iran-wants-diplomacy-to-end-war-trump-says-terms-unacceptable",
-          "publicadoEm": "2026-11-20T23:15:29.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Ukrainska Pravda",
-          "pais": "Ucrânia",
-          "visao": "Site ucraniano de jornalismo independente",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Trump says Putin wants to end Russia's war against Ukraine through diplomacy",
-          "link": "https://www.pravda.com.ua/eng/news/2026/11/20/8063876/",
-          "publicadoEm": "2026-11-20T18:25:00.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Haaretz",
-          "pais": "Israel",
-          "visao": "Jornal israelense, centro-esquerda",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Trump's Iran choice: A deal or another war he can't end",
-          "link": "https://www.haaretz.com/middle-east-news/iran/2026-11-20/ty-article/.premium/trump-may-start-a-war-but-iran-will-decide-how-and-when-it-ends/000001a1-f4ee-d175-abf5-fefed8990000",
-          "publicadoEm": "2026-11-20T04:00:51.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Kyiv Post",
-          "pais": "Ucrânia",
-          "visao": "Jornal ucraniano",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Kushner Says Trump Wants Europe ‘By His Side’ on Ukraine",
-          "link": "https://www.kyivpost.com/post/90651",
-          "publicadoEm": "2026-11-20T00:18:38.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
       "id": "8e3ceec613f9",
       "titulo": "Trump threatens ‘tremendous penalties’ on US tech firms that build datacenters abroad",
       "resumo": "President gives wide-ranging White House press conference and says he has ‘fantastic relationships’ with Putin and Xi Donald Trump threatened on Friday to impose “tremendous penalties” on American tech companies that build datacenters outside the US, though he gave no details and…",
@@ -2519,23 +2556,23 @@
       ]
     },
     {
-      "id": "53aaa183a671",
-      "titulo": "Russia Rejects NATO-Style Security Guarantees for Ukraine",
-      "resumo": "Russia has rejected proposals for NATO-style security guarantees for Ukraine, calling any arrangements resembling the country’s membership in the alliance unacceptable. The statement contradicts recent claims by US envoy Jared Kushner that Washington had made the Kremlin…",
-      "imagem": "https://static.kyivpost.com/storage/2026/11/20/d23c6f7dce875eb8b570140916b41719.jpg?w=640&q=90&f=jpg",
+      "id": "72d4f6ebd178",
+      "titulo": "‘For Us, He Is a Killer’: Zelensky Rebukes Trump for Calling Putin a ‘Friend’",
+      "resumo": "President Volodymyr Zelensky called Vladimir Putin an enemy and a killer, warning that President Donald Trump’s description of the Russian leader as a “friend” encourages him to continue his war. Zelensky said Putin wants Ukraine destroyed and urged Washington to use its…",
+      "imagem": "https://static.kyivpost.com/storage/2026/11/21/fb928b0979b7b6a6075ef9600697e77c.jpg?w=640&q=90&f=jpg",
       "credito": "Kyiv Post",
       "regioes": [
         "europa",
-        "america-norte"
+        "america-norte",
+        "asia-pacifico"
       ],
       "temas": [
         "conflitos",
-        "diplomacia",
-        "outros"
+        "politica"
       ],
-      "fontes": 4,
-      "paises": 4,
-      "maisRecente": "2026-11-20T14:22:38.000Z",
+      "fontes": 3,
+      "paises": 2,
+      "maisRecente": "2026-11-20T23:19:50.000Z",
       "materias": [
         {
           "fonte": "Kyiv Post",
@@ -2544,57 +2581,33 @@
           "estatal": false,
           "tipo": "noticia",
           "idioma": "en",
-          "titulo": "Russia Rejects NATO-Style Security Guarantees for Ukraine",
-          "link": "https://www.kyivpost.com/post/90735",
-          "publicadoEm": "2026-11-20T14:22:38.000Z",
+          "titulo": "‘For Us, He Is a Killer’: Zelensky Rebukes Trump for Calling Putin a ‘Friend’",
+          "link": "https://www.kyivpost.com/post/90773",
+          "publicadoEm": "2026-11-20T23:19:50.000Z",
           "semData": false
         },
         {
-          "fonte": "The Moscow Times",
-          "pais": "Rússia",
-          "visao": "Jornal russo independente, no exílio",
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
           "estatal": false,
           "tipo": "noticia",
           "idioma": "en",
-          "titulo": "Russia Pushes Back Against U.S. Idea of NATO-Style Security Guarantees for Ukraine",
-          "link": "https://www.themoscowtimes.com/2026/11/20/russia-pushes-back-against-us-idea-of-nato-style-security-guarantees-for-ukraine-a94326",
-          "publicadoEm": "2026-11-20T10:16:00.000Z",
+          "titulo": "Trump defends calling Russia’s Putin a friend, but says he ‘can’t speak’ to whether he’s a friend to the US",
+          "link": "https://www.straitstimes.com/world/united-states/trump-defends-calling-russias-putin-a-friend-but-says-he-cant-speak-to-whether-hes-a-friend-to-the",
+          "publicadoEm": "2026-11-20T18:54:28.000Z",
           "semData": false
         },
         {
-          "fonte": "Asharq Al-Awsat",
-          "pais": "Arábia Saudita",
-          "visao": "Jornal pan-árabe de dono saudita",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Russia Pushes Back Against US Idea of NATO-Style Security Guarantees for Ukraine",
-          "link": "https://english.aawsat.com/node/5343506",
-          "publicadoEm": "2026-11-20T08:49:47.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Daily Sabah",
-          "pais": "Turquia",
-          "visao": "Jornal turco pró-governo Erdogan",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "US says Russia open to NATO-style security guarantees for Ukraine",
-          "link": "https://www.dailysabah.com/world/europe/us-says-russia-open-to-nato-style-security-guarantees-for-ukraine",
-          "publicadoEm": "2026-11-20T08:44:00.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Kyiv Post",
+          "fonte": "Ukrainska Pravda",
           "pais": "Ucrânia",
-          "visao": "Jornal ucraniano",
+          "visao": "Site ucraniano de jornalismo independente",
           "estatal": false,
           "tipo": "noticia",
           "idioma": "en",
-          "titulo": "US Says It Got Kremlin ‘Comfortable’ With NATO Article 5-Style Security Guarantees for Ukraine",
-          "link": "https://www.kyivpost.com/post/90681",
-          "publicadoEm": "2026-11-20T08:33:11.000Z",
+          "titulo": "Zelenskyy responds to Trump calling Putin his friend: \"For us, he is an enemy and a killer\"",
+          "link": "https://www.pravda.com.ua/eng/news/2026/11/20/8063867/",
+          "publicadoEm": "2026-11-20T18:00:00.000Z",
           "semData": false
         }
       ]
@@ -2653,6 +2666,64 @@
           "titulo": "EU warns against COP31 becoming a ‘fossil fuel summit’",
           "link": "https://www.politico.eu/article/eu-warns-against-cop31-becoming-a-fossil-fuel-summit/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
           "publicadoEm": "2026-11-20T16:03:22.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "97f1ff305240",
+      "titulo": "Russia launches massive attack on Ukraine a day after Putin’s meeting with Trump and Xi",
+      "resumo": "Russian forces attacked Kyiv with missiles and drones overnight November 19–20. Kyiv Mayor Vitali Klitschko said three bridges were damaged. The Podilsko-Voskresenskyi Bridge is closed to traffic from the right bank to the left. The Darnytskyi and Pivdennyi (Southern) bridges…",
+      "imagem": "https://meduza.io/image/attachments/images/012/997/222/small/lNbPu_QWgjASQyab-CKhgQ",
+      "credito": "Meduza",
+      "regioes": [
+        "europa",
+        "america-norte",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia",
+        "politica"
+      ],
+      "fontes": 3,
+      "paises": 3,
+      "maisRecente": "2026-11-20T22:35:07.000Z",
+      "materias": [
+        {
+          "fonte": "Meduza",
+          "pais": "Rússia",
+          "visao": "Site russo independente, no exílio, oposição ao Kremlin",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Russia launches massive attack on Ukraine a day after Putin’s meeting with Trump and Xi",
+          "link": "https://meduza.io/en/feature/2026/11/21/russia-launches-massive-attack-on-ukraine-a-day-after-putin-s-meeting-with-trump-and-xi",
+          "publicadoEm": "2026-11-20T22:35:07.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "CNA",
+          "pais": "Singapura",
+          "visao": "Canal de Singapura, foco no Sudeste Asiático",
+          "estatal": true,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Russia pummels Ukraine after Putin vowed 'painful' attack",
+          "link": "https://www.channelnewsasia.com/world/russia-strike-ukraine-invasion-putin-missile-drone-6568896",
+          "publicadoEm": "2026-11-20T09:21:00.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Asharq Al-Awsat",
+          "pais": "Arábia Saudita",
+          "visao": "Jornal pan-árabe de dono saudita",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Russia Pummels Ukraine After Putin Vowed ‘Painful’ Attack",
+          "link": "https://english.aawsat.com/node/5343473",
+          "publicadoEm": "2026-11-20T06:49:49.000Z",
           "semData": false
         }
       ]
@@ -3291,6 +3362,94 @@
           "titulo": "Russia Hits 3 Kyiv Bridges in Overnight Ballistic Attack",
           "link": "https://www.kyivpost.com/post/90654",
           "publicadoEm": "2026-11-20T01:31:05.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "8b2c2a617246",
+      "titulo": "Three Houthi ballistic missiles intercepted over Riyadh, Saudi-led coalition says",
+      "resumo": "Three ballistic missiles launched by Houthis towards Riyadh were intercepted and destroyed by Saudi-led coalition's air defences, spokesman for the coalition, Major General Turki Al Malki said on X. Turki's announcement comes after the Saudi Civil Defence agency issued, and later…",
+      "imagem": "https://static.srpcdigital.com/styles/414x217/public/2026-11/1885638_0.jpeg.webp?VersionId=Q451ibxl6Wleu9CYNYeIhCkLnMVxDAPC",
+      "credito": "Asharq Al-Awsat",
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "conflitos",
+        "energia"
+      ],
+      "fontes": 2,
+      "paises": 2,
+      "maisRecente": "2026-11-21T00:00:08.000Z",
+      "materias": [
+        {
+          "fonte": "Middle East Eye",
+          "pais": "Reino Unido",
+          "visao": "Site focado no Oriente Médio, crítico de governos da região",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Three Houthi ballistic missiles intercepted over Riyadh, Saudi-led coalition says",
+          "link": "https://www.middleeasteye.net/live-blog/live-blog-update/three-houthi-ballistic-missiles-intercepted-over-riyadh-saudi-led",
+          "publicadoEm": "2026-11-21T00:00:08.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Asharq Al-Awsat",
+          "pais": "Arábia Saudita",
+          "visao": "Jornal pan-árabe de dono saudita",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Arab Coalition Intercepts More Houthi Missiles and Drones",
+          "link": "https://english.aawsat.com/node/5343537",
+          "publicadoEm": "2026-11-20T10:15:18.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "96a7f9767d2d",
+      "titulo": "Judge approves $7.25bn Bayer payout to settle claims that Roundup causes cancer",
+      "resumo": "German company faced 65,000 claims from people who said they developed cancer after using weedkiller A Missouri judge on Friday approved Bayer ’s $7.25bn settlement of lawsuits ⁠alleging that its weedkiller ​Roundup causes cancer, potentially resolving litigation that has weighed…",
+      "imagem": "https://i.guim.co.uk/img/media/efbc188d676f119c98b60ce20d212a75264e7757/483_0_3333_2667/master/3333.jpg?width=140&quality=85&auto=format&fit=max&s=80be199f03da1f2774ebcc5eaf1c6cd0",
+      "credito": "The Guardian",
+      "regioes": [
+        "europa",
+        "mundo"
+      ],
+      "temas": [
+        "economia",
+        "direitos",
+        "outros"
+      ],
+      "fontes": 2,
+      "paises": 2,
+      "maisRecente": "2026-11-20T23:42:43.000Z",
+      "materias": [
+        {
+          "fonte": "The Guardian",
+          "pais": "Reino Unido",
+          "visao": "Jornal britânico, centro-esquerda",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Judge approves $7.25bn Bayer payout to settle claims that Roundup causes cancer",
+          "link": "https://www.theguardian.com/business/2026/nov/20/bayer-roundup-cancer-litigation",
+          "publicadoEm": "2026-11-20T23:42:43.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Le Monde (inglês)",
+          "pais": "França",
+          "visao": "Jornal de referência francês",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "US judge approves $7.25 billion Roundup cancer settlement",
+          "link": "https://www.lemonde.fr/en/environment/article/2026/11/21/us-judge-approves-7-25-billion-roundup-cancer-settlement_6785770_114.html",
+          "publicadoEm": "2026-11-20T23:23:16.000Z",
           "semData": false
         }
       ]
@@ -4548,51 +4707,6 @@
       ]
     },
     {
-      "id": "df0254670cb2",
-      "titulo": "Trump defends calling Russia’s Putin a friend, but says he ‘can’t speak’ to whether he’s a friend to the US",
-      "resumo": "Trump raised eyebrows in China with his warm welcome for the Russian leader.",
-      "imagem": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/0/8/961090/0896fd475d7855de8d97ac8d3694ce83.jpeg",
-      "credito": "Ukrainska Pravda",
-      "regioes": [
-        "europa",
-        "america-norte",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "conflitos",
-        "politica"
-      ],
-      "fontes": 2,
-      "paises": 2,
-      "maisRecente": "2026-11-20T18:54:28.000Z",
-      "materias": [
-        {
-          "fonte": "The Straits Times",
-          "pais": "Singapura",
-          "visao": "Jornal de referência de Singapura",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Trump defends calling Russia’s Putin a friend, but says he ‘can’t speak’ to whether he’s a friend to the US",
-          "link": "https://www.straitstimes.com/world/united-states/trump-defends-calling-russias-putin-a-friend-but-says-he-cant-speak-to-whether-hes-a-friend-to-the",
-          "publicadoEm": "2026-11-20T18:54:28.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Ukrainska Pravda",
-          "pais": "Ucrânia",
-          "visao": "Site ucraniano de jornalismo independente",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Zelenskyy responds to Trump calling Putin his friend: \"For us, he is an enemy and a killer\"",
-          "link": "https://www.pravda.com.ua/eng/news/2026/11/20/8063867/",
-          "publicadoEm": "2026-11-20T18:00:00.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
       "id": "2387a859b624",
       "titulo": "Houthi attacks add to worries over Trump Saudi nuclear power pact",
       "resumo": "By Patricia Zengerle and Timothy Gardner Nov 20 (Reuters) - Houthi attacks on Saudi infrastructure are adding to concerns about US President Donald Trump's proposed nuclear power pact with the kingdom, weeks before US senators are due to vote on whether to block the agreement…",
@@ -4719,18 +4833,6 @@
           "titulo": "Daily Cartoon, November 20, 2026",
           "link": "https://www.haaretz.com/opinion/daily-cartoon/2026-11-20/ty-article-opinion/daily-cartoon-november-20-2026/000001a1-f6b5-d381-ade5-fff5181f0000",
           "publicadoEm": "2026-11-20T02:08:56.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The National",
-          "pais": "Emirados Árabes",
-          "visao": "Jornal dos Emirados, ligado ao governo",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Cartoon for November 20, 2026",
-          "link": "https://www.thenationalnews.com/opinion/cartoon/2026/11/20/telegram-jordan-iraq-ban/",
-          "publicadoEm": "2026-11-20T00:01:00.000Z",
           "semData": false
         }
       ]
@@ -6901,52 +7003,6 @@
       ]
     },
     {
-      "id": "5bb8f46bd356",
-      "titulo": "Trump Says No Rush on Iran Decision, Looks to Next Year",
-      "resumo": "",
-      "imagem": "https://static.srpcdigital.com/styles/414x217/public/2026-11/1885632.jpeg.webp?VersionId=4.KXVw_IAr8Uj4aeUGwf5hq2furQ1vCb",
-      "credito": "Asharq Al-Awsat",
-      "regioes": [
-        "america-norte",
-        "oriente-medio",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "outros",
-        "conflitos",
-        "diplomacia"
-      ],
-      "fontes": 2,
-      "paises": 2,
-      "maisRecente": "2026-11-20T09:50:03.000Z",
-      "materias": [
-        {
-          "fonte": "Asharq Al-Awsat",
-          "pais": "Arábia Saudita",
-          "visao": "Jornal pan-árabe de dono saudita",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Trump Says No Rush on Iran Decision, Looks to Next Year",
-          "link": "https://english.aawsat.com/node/5343531",
-          "publicadoEm": "2026-11-20T09:50:03.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Haaretz",
-          "pais": "Israel",
-          "visao": "Jornal israelense, centro-esquerda",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Trump pushes Iran strike decision to next year: 'We've got time'",
-          "link": "https://www.haaretz.com/us-news/2026-11-20/ty-article/trump-pushes-iran-strike-decision-to-next-year-weve-got-time/000001a1-f623-d175-abf5-fe3795240000",
-          "publicadoEm": "2026-11-19T23:42:35.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
       "id": "0878fb563bd0",
       "titulo": "Manus on Markets: Anthropic IPO frenzy masks Wall Street jitters",
       "resumo": "",
@@ -6985,49 +7041,6 @@
           "titulo": "Anthropic's blockbuster IPO tests Wall Street's faith in the AI boom",
           "link": "https://news.cgtn.com/news/2026-11-20/Anthropic-s-blockbuster-IPO-tests-Wall-Street-s-faith-in-the-AI-boom-1SdtFfj8t44/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
           "publicadoEm": "2026-11-20T02:51:38.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "10ba4d31c2da",
-      "titulo": "Anthropic registers 17% gain and a market value of nearly $1.8 trillion on stock market debut",
-      "resumo": "The AI company makes history with the largest initial public offering ever. Shares of the developer of Claude closed the first trading session at $97.17",
-      "imagem": "https://images.english.elpais.com/resizer/v2/V637BIJZBNPJZB6X4YRKJZDJCU.jpg?auth=111d257f80943f632f7370341f6553c721d8b9fa605562720e576fc5de0558f7",
-      "credito": "El País (inglês)",
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "economia",
-        "tecnologia"
-      ],
-      "fontes": 2,
-      "paises": 2,
-      "maisRecente": "2026-11-20T08:42:36.000Z",
-      "materias": [
-        {
-          "fonte": "El País (inglês)",
-          "pais": "Espanha",
-          "visao": "Jornal de referência espanhol",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Anthropic registers 17% gain and a market value of nearly $1.8 trillion on stock market debut",
-          "link": "https://english.elpais.com/economy-and-business/2026-11-19/anthropic-debuts-with-sharp-gains-in-the-largest-ipo-in-history.html",
-          "publicadoEm": "2026-11-20T08:42:36.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "BBC News",
-          "pais": "Reino Unido",
-          "visao": "Emissora pública britânica",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "How did Anthropic's stock market debut unfold?",
-          "link": "https://www.bbc.co.uk/news/videos/cwg7l01vg081o?at_medium=RSS&at_campaign=rss",
-          "publicadoEm": "2026-11-19T23:52:25.000Z",
           "semData": false
         }
       ]
@@ -7245,6 +7258,315 @@
       ]
     },
     {
+      "id": "7167154fdb00",
+      "titulo": "Marcos Jnr promised a ‘new Philippines’. What happened?",
+      "resumo": "“I knew your parents very well and they were great,” US President Donald Trump told his Philippine counterpart at a dinner in Manila this week, offering a glowing tribute to a family that was once forced into exile in disgrace. Turning to his host, Ferdinand “Bongbong” Marcos…",
+      "imagem": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/20/8ccbee3a-fd5c-4ffb-9d36-f7291c710242_3940e47c.jpg?itok=5uaW0VO7&v=1795167418",
+      "credito": "South China Morning Post",
+      "regioes": [
+        "america-norte",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "politica"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-21T00:00:08.000Z",
+      "materias": [
+        {
+          "fonte": "South China Morning Post",
+          "pais": "Hong Kong",
+          "visao": "Jornal de Hong Kong sobre China e Ásia",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Marcos Jnr promised a ‘new Philippines’. What happened?",
+          "link": "https://www.scmp.com/week-asia/people/article/3375235/marcos-jnr-promised-new-philippines-what-happened",
+          "publicadoEm": "2026-11-21T00:00:08.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "848e99a81fa1",
+      "titulo": "Oil Prices Caught Between a Looming Glut and Middle East Turmoil",
+      "resumo": "Oil prices have traded in a narrow range over the past few sessions as forecasts of a coming surplus collide with continued attacks and stalled diplomacy in the Middle East. A run of agency reports this month has pushed expectations toward oversupply and weighed on crude. Brent…",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "energia",
+        "economia",
+        "conflitos"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-21T00:00:00.000Z",
+      "materias": [
+        {
+          "fonte": "OilPrice.com",
+          "pais": "EUA",
+          "visao": "Notícias de energia e petróleo",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Oil Prices Caught Between a Looming Glut and Middle East Turmoil",
+          "link": "https://oilprice.com/Energy/Energy-General/Oil-Prices-Caught-Between-a-Looming-Glut-and-Middle-East-Turmoil.html",
+          "publicadoEm": "2026-11-21T00:00:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "17c25968fdb4",
+      "titulo": "Man convicted of starting deadly 2025 LA Palisades Fire",
+      "resumo": "Jonathan Rinderknecht is found guilty at his second trial of sparking last year's deadly Palisades Fire, which killed 12 people.",
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/3fe8f74c2bf88423fca0537ec6732648?impolicy=wcms_crop_resize&cropH=2387&cropW=4244&xPos=0&yPos=0&width=862&height=485",
+      "credito": "ABC News Austrália",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "direitos",
+        "conflitos"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:53:06.000Z",
+      "materias": [
+        {
+          "fonte": "ABC News Austrália",
+          "pais": "Austrália",
+          "visao": "Emissora pública australiana",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Man convicted of starting deadly 2025 LA Palisades Fire",
+          "link": "https://www.abc.net.au/news/2026-11-21/man-convicted-of-starting-2025-la-palisades-fire/107412326",
+          "publicadoEm": "2026-11-20T23:53:06.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "ca01f496607a",
+      "titulo": "Concerns raised over AI cameras at junior basketball games",
+      "resumo": "Basketball Australia has started trialling AI-powered \"smart cameras\" at community games, ahead of a wider rollout, sparking concerns for some.",
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/fba4612dee781a27118cd64fd80959a1?impolicy=wcms_crop_resize&cropH=810&cropW=1440&xPos=0&yPos=0&width=862&height=485",
+      "credito": "ABC News Austrália",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "tecnologia",
+        "direitos"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:49:05.000Z",
+      "materias": [
+        {
+          "fonte": "ABC News Austrália",
+          "pais": "Austrália",
+          "visao": "Emissora pública australiana",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Concerns raised over AI cameras at junior basketball games",
+          "link": "https://www.abc.net.au/news/2026-11-21/concerns-over-basketball-australia-ai-cameras-junior-games/107406442",
+          "publicadoEm": "2026-11-20T23:49:05.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "19c0628393b8",
+      "titulo": "Republican senator blocks Trump cyber nominee over January 6 denial",
+      "resumo": "Thom Tillis move comes after Michael LoSapio, nominated for Cisa role, told hearing ‘I don’t believe it was an attack’ Senator Thom Tillis, the outgoing North Carolina Republican who is due to be replaced by a Democrat, has reportedly blocked a confirmation vote on Donald Trump’s…",
+      "imagem": "https://i.guim.co.uk/img/media/cac7b215020ab17f2e1926d910d082e9f9ca8ad3/444_0_4416_3535/master/4416.jpg?width=140&quality=85&auto=format&fit=max&s=892fc0c8d9b7b741fcb53f80e10cc653",
+      "credito": "The Guardian",
+      "regioes": [
+        "america-norte"
+      ],
+      "temas": [
+        "politica",
+        "conflitos",
+        "tecnologia"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:48:38.000Z",
+      "materias": [
+        {
+          "fonte": "The Guardian",
+          "pais": "Reino Unido",
+          "visao": "Jornal britânico, centro-esquerda",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Republican senator blocks Trump cyber nominee over January 6 denial",
+          "link": "https://www.theguardian.com/us-news/2026/nov/20/tillis-republican-senator-trump-cyber-nominee",
+          "publicadoEm": "2026-11-20T23:48:38.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "041a64125a03",
+      "titulo": "Russian missiles land in Poland, as Europe holds military drills nearby",
+      "resumo": "Two Russian missiles and a suspected drone came down in Poland on Friday in what its prime minister said was likely to be a provocation timed to coincide with European military exercises in his country for a possible post-war mission in Ukraine. The incidents occurred while…",
+      "imagem": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/11/21/66884aa7-2b7c-4999-a3ce-4110cc3cf4ab_b5c8aaa1.jpg?itok=OWWRIKOI&v=1795218209",
+      "credito": "South China Morning Post",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia",
+        "politica"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:43:44.000Z",
+      "materias": [
+        {
+          "fonte": "South China Morning Post",
+          "pais": "Hong Kong",
+          "visao": "Jornal de Hong Kong sobre China e Ásia",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Russian missiles land in Poland, as Europe holds military drills nearby",
+          "link": "https://www.scmp.com/news/world/russia-central-asia/article/3375302/russian-missiles-land-poland-europe-holds-military-drills-nearby",
+          "publicadoEm": "2026-11-20T23:43:44.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "b9fd33b45ed1",
+      "titulo": "Waymo recalls self-driving cars over closed freeway lanes, manual traffic control",
+      "resumo": "This comes after a California regulator barred Waymo vehicles from freeways in the state.",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:40:00.000Z",
+      "materias": [
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Waymo recalls self-driving cars over closed freeway lanes, manual traffic control",
+          "link": "https://www.straitstimes.com/world/united-states/waymo-recalls-self-driving-cars-over-closed-freeway-lanes-manual-traffic-control",
+          "publicadoEm": "2026-11-20T23:40:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "233a3654f89a",
+      "titulo": "How the Vikings and 49ers are training for Mexico City’s thin air",
+      "resumo": "Which team is better prepared for Sunday's 7:30 p.m. kickoff at Estadio Azteca? Both did thin-air training, but the 49ers (despite the neutral site) have home-field advantage, both as designated by the league and by their expected fan support. The post How the Vikings and 49ers…",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "america-latina"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:37:48.000Z",
+      "materias": [
+        {
+          "fonte": "Mexico News Daily",
+          "pais": "México",
+          "visao": "Notícias do México em inglês",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "How the Vikings and 49ers are training for Mexico City’s thin air",
+          "link": "https://mexiconewsdaily.com/lifestyle/how-vikings-and-49ers-training-mexico-citys-thin-air/",
+          "publicadoEm": "2026-11-20T23:37:48.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "fabe8f110b31",
+      "titulo": "Overturned boat carrying mourners to funeral kills at least four in Nigeria",
+      "resumo": "Police say two children among dead as search continues for more victims.",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "africa"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:36:36.000Z",
+      "materias": [
+        {
+          "fonte": "Al Jazeera",
+          "pais": "Catar",
+          "visao": "Rede do Catar (financiada pelo governo), foco no Sul Global e no mundo árabe",
+          "estatal": true,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Overturned boat carrying mourners to funeral kills at least four in Nigeria",
+          "link": "https://www.aljazeera.com/news/2026/11/20/overturned-boat-carrying-mourners-to-funeral-kills-at-least-four-in-nigeria?traffic_source=rss",
+          "publicadoEm": "2026-11-20T23:36:36.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "109eb4f65d49",
+      "titulo": "Hatching a plan to ensure Australia's native turtles survive and thrive",
+      "resumo": "How a citizen science program is saving thousands of turtles even as researchers learn more about them.",
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/bcb47c38c0f73f94992947f2444a62a4?impolicy=wcms_crop_resize&cropH=2205&cropW=3921&xPos=628&yPos=882&width=862&height=485",
+      "credito": "ABC News Austrália",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:32:49.000Z",
+      "materias": [
+        {
+          "fonte": "ABC News Austrália",
+          "pais": "Austrália",
+          "visao": "Emissora pública australiana",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Hatching a plan to ensure Australia's native turtles survive and thrive",
+          "link": "https://www.abc.net.au/news/2026-11-21/1-million-turtles-conservation-project-closing-in-on-milestone/107398472",
+          "publicadoEm": "2026-11-20T23:32:49.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
       "id": "531970a17042",
       "titulo": "Secret police recording of parent murderer released",
       "resumo": "A month after she murdered her elderly father by injecting him with a lethal dose of insulin, double murderer Raelene Polymiadis begged God for forgiveness.",
@@ -7330,6 +7652,78 @@
           "idioma": "en",
           "titulo": "Honda to recall 810,000 US vehicles over Takata air bag rupture risk",
           "link": "https://www.straitstimes.com/world/united-states/honda-to-recall-810000-us-vehicles-over-takata-air-bag-rupture-risk",
+          "publicadoEm": "2026-11-20T23:30:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "512f212aa60f",
+      "titulo": "Russia launches ballistic missile attack on central Kryvyi Rih: child and paramedic killed, at least 21 injured",
+      "resumo": "Russian forces attacked the centre of Kryvyi Rih with ballistic missiles on the evening of 20 November, injuring at least 21 people. A seven-year-old boy and a female paramedic have been killed in the attack.",
+      "imagem": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/3/b/961152/3b829fbac1f54d29071fa375cc4592b9.jpeg",
+      "credito": "Ukrainska Pravda",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:30:00.000Z",
+      "materias": [
+        {
+          "fonte": "Ukrainska Pravda",
+          "pais": "Ucrânia",
+          "visao": "Site ucraniano de jornalismo independente",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Russia launches ballistic missile attack on central Kryvyi Rih: child and paramedic killed, at least 21 injured",
+          "link": "https://www.pravda.com.ua/eng/news/2026/11/21/8063886/",
+          "publicadoEm": "2026-11-20T23:30:00.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Ukrainska Pravda",
+          "pais": "Ucrânia",
+          "visao": "Site ucraniano de jornalismo independente",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Russia launches ballistic missile attack on central Kryvyi Rih: child and paramedic killed, at least 21 injured",
+          "link": "https://www.pravda.com.ua/eng/news/2026/11/20/8063886/",
+          "publicadoEm": "2026-11-20T20:17:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "7be3ad6f9d6d",
+      "titulo": "Tokyo is being reshaped by a historic real estate boom",
+      "resumo": "Rents are heating up across Tokyo, particularly in the historically industrial, working-class east side.",
+      "imagem": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/21/575285.jpg",
+      "credito": "The Japan Times",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "economia"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:30:00.000Z",
+      "materias": [
+        {
+          "fonte": "The Japan Times",
+          "pais": "Japão",
+          "visao": "Jornal japonês em inglês",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Tokyo is being reshaped by a historic real estate boom",
+          "link": "https://www.japantimes.co.jp/business/2026/11/21/tokyo-real-estate-boom/",
           "publicadoEm": "2026-11-20T23:30:00.000Z",
           "semData": false
         }
@@ -7436,31 +7830,31 @@
       ]
     },
     {
-      "id": "59424235b41a",
-      "titulo": "US judge approves $7.25 billion Roundup cancer settlement",
-      "resumo": "It is among the largest class recoveries in US history, and clears the way for guaranteed compensation for tens of thousands of cancer victims.",
-      "imagem": "https://img.lemde.fr/2026/11/20/251/0/3000/1500/644/322/60/0/b55db19_ftp-1-nwiyguiqxi3g-e3a6c38ce3f34d2697f00bf0bca7242b-0-d9854aa8d41c4bb4ba7a30ebec143fee.jpg",
-      "credito": "Le Monde (inglês)",
+      "id": "b8c773849786",
+      "titulo": "Louisiana farmer wins 13-year land dispute after neighbours clear trees; court awards him $59,966",
+      "resumo": "In a landmark ruling, Louisiana farmer Benjamin Lee Bird emerged victorious in a lengthy 13-year battle over a disputed land strip. The court upheld his ownership, leading to a damages award against his neighbours for their actions, which included tree removal and altering…",
+      "imagem": "https://static.toiimg.com/photo/msid-135986864,imgsize-1569239.cms",
+      "credito": "The Times of India",
       "regioes": [
         "mundo"
       ],
       "temas": [
-        "outros"
+        "direitos"
       ],
       "fontes": 1,
       "paises": 1,
-      "maisRecente": "2026-11-20T23:23:16.000Z",
+      "maisRecente": "2026-11-20T23:25:00.000Z",
       "materias": [
         {
-          "fonte": "Le Monde (inglês)",
-          "pais": "França",
-          "visao": "Jornal de referência francês",
+          "fonte": "The Times of India",
+          "pais": "Índia",
+          "visao": "Maior jornal indiano em inglês",
           "estatal": false,
           "tipo": "noticia",
           "idioma": "en",
-          "titulo": "US judge approves $7.25 billion Roundup cancer settlement",
-          "link": "https://www.lemonde.fr/en/environment/article/2026/11/21/us-judge-approves-7-25-billion-roundup-cancer-settlement_6785770_114.html",
-          "publicadoEm": "2026-11-20T23:23:16.000Z",
+          "titulo": "Louisiana farmer wins 13-year land dispute after neighbours clear trees; court awards him $59,966",
+          "link": "https://timesofindia.indiatimes.com/world/us/a-louisiana-farmer-returned-from-offshore-work-to-find-neighbours-clearing-trees-from-an-18-foot-strip-they-believed-was-theirs-13-years-later-an-appeals-court-upheld-his-land-rights-and-awarded-59966-99/articleshow/135986771.cms",
+          "publicadoEm": "2026-11-20T23:25:00.000Z",
           "semData": false
         }
       ]
@@ -7492,6 +7886,38 @@
           "titulo": "Loud explosion heard in Riyadh after Saudi civil defence alerts",
           "link": "https://www.middleeasteye.net/live-blog/live-blog-update/loud-explosion-heard-riyadh-after-saudi-civil-defence-alerts",
           "publicadoEm": "2026-11-20T23:22:18.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "3ace204545de",
+      "titulo": "Rahul Gandhi backs strong India-Israel ties despite Gaza war",
+      "resumo": "India’s opposition leader Rahul Gandhi, says New Delhi should continue to maintain strong ties with Israel.",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "oriente-medio",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "conflitos",
+        "politica"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:20:50.000Z",
+      "materias": [
+        {
+          "fonte": "Al Jazeera",
+          "pais": "Catar",
+          "visao": "Rede do Catar (financiada pelo governo), foco no Sul Global e no mundo árabe",
+          "estatal": true,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Rahul Gandhi backs strong India-Israel ties despite Gaza war",
+          "link": "https://www.aljazeera.com/video/newsfeed/2026/11/20/rahul-gandhi-backs-strong-india-israel-ties-despite-gaza-war?traffic_source=rss",
+          "publicadoEm": "2026-11-20T23:20:50.000Z",
           "semData": false
         }
       ]
@@ -7705,6 +8131,36 @@
           "titulo": "In a year of AI solving maths problems, Anthropic may have just solved the biggest",
           "link": "https://www.bbc.co.uk/news/articles/c6pqr2g7w059o?at_medium=RSS&at_campaign=rss",
           "publicadoEm": "2026-11-20T23:08:57.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "6c93b034dc53",
+      "titulo": "China’s summit snub could strengthen Takaichi’s standing at home",
+      "resumo": "Experts say Beijing's \"blatant\" snub — including a visibly scaled-down welcome for Takaichi — could galvanize her conservative base.",
+      "imagem": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/11/21/575284.JPG",
+      "credito": "The Japan Times",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "diplomacia"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:07:00.000Z",
+      "materias": [
+        {
+          "fonte": "The Japan Times",
+          "pais": "Japão",
+          "visao": "Jornal japonês em inglês",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "China’s summit snub could strengthen Takaichi’s standing at home",
+          "link": "https://www.japantimes.co.jp/news/2026/11/21/japan/politics/china-snub-boost-takaichi-base/",
+          "publicadoEm": "2026-11-20T23:07:00.000Z",
           "semData": false
         }
       ]
@@ -8972,6 +9428,37 @@
           "titulo": "US embassy steps up attack on China over cartel meth as Mexico signs deals with Beijing",
           "link": "https://www.scmp.com/news/us/article/3375300/us-embassy-steps-attack-china-over-cartel-meth-mexico-signs-deals-beijing",
           "publicadoEm": "2026-11-20T21:52:28.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "6babf5376256",
+      "titulo": "Moldova might \"experiment\" if tired of having diplomatic presence in Russia — Zakharova",
+      "resumo": "Earlier, Moldovan Parliament Speaker Igor Grosu suggested that the country’s authorities might declare Russian Ambassador Oleg Ozerov persona non grata",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "diplomacia",
+        "politica"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T21:52:00.000Z",
+      "materias": [
+        {
+          "fonte": "TASS",
+          "pais": "Rússia",
+          "visao": "Agência estatal russa (versão oficial do Kremlin)",
+          "estatal": true,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Moldova might \"experiment\" if tired of having diplomatic presence in Russia — Zakharova",
+          "link": "https://tass.com/politics/2222769",
+          "publicadoEm": "2026-11-20T21:52:00.000Z",
           "semData": false
         }
       ]
@@ -10904,36 +11391,6 @@
           "titulo": "Russian ballistic missile strike on Ukraine’s Kryvyi Rih injures 20, including three children",
           "link": "https://meduza.io/en/news/2026/11/20/russian-ballistic-missile-strike-on-ukraine-s-kryvyi-rih-injures-20-including-three-children",
           "publicadoEm": "2026-11-20T20:17:28.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "c10c0d6d7b58",
-      "titulo": "Russia launches ballistic missile attack on central Kryvyi Rih: child and paramedic killed, at least 21 injured",
-      "resumo": "Russian forces attacked the centre of Kryvyi Rih with ballistic missiles on the evening of 20 November, injuring at least 21 people. A seven-year-old boy and a female paramedic have been killed in the attack.",
-      "imagem": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/3/b/961152/3b829fbac1f54d29071fa375cc4592b9.jpeg",
-      "credito": "Ukrainska Pravda",
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "conflitos"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-20T20:17:00.000Z",
-      "materias": [
-        {
-          "fonte": "Ukrainska Pravda",
-          "pais": "Ucrânia",
-          "visao": "Site ucraniano de jornalismo independente",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Russia launches ballistic missile attack on central Kryvyi Rih: child and paramedic killed, at least 21 injured",
-          "link": "https://www.pravda.com.ua/eng/news/2026/11/20/8063886/",
-          "publicadoEm": "2026-11-20T20:17:00.000Z",
           "semData": false
         }
       ]
@@ -29954,37 +30411,6 @@
       ]
     },
     {
-      "id": "04271bf005c7",
-      "titulo": "Arab Coalition Intercepts More Houthi Missiles and Drones",
-      "resumo": "",
-      "imagem": "https://static.srpcdigital.com/styles/414x217/public/2026-11/1885638_0.jpeg.webp?VersionId=Q451ibxl6Wleu9CYNYeIhCkLnMVxDAPC",
-      "credito": "Asharq Al-Awsat",
-      "regioes": [
-        "oriente-medio"
-      ],
-      "temas": [
-        "conflitos",
-        "energia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-20T10:15:18.000Z",
-      "materias": [
-        {
-          "fonte": "Asharq Al-Awsat",
-          "pais": "Arábia Saudita",
-          "visao": "Jornal pan-árabe de dono saudita",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Arab Coalition Intercepts More Houthi Missiles and Drones",
-          "link": "https://english.aawsat.com/node/5343537",
-          "publicadoEm": "2026-11-20T10:15:18.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
       "id": "9d1f7da72d1f",
       "titulo": "BHEKISISA: Saiqa Mullick is bridging the gap Between HIV research and real-world impact",
       "resumo": "Scientists created an HIV prevention jab that almost always works. Getting people to use it is a different sort of science. Meet Saiqa Mullick, one of its leading practitioners.",
@@ -30597,6 +31023,37 @@
           "titulo": "Russian Diesel Tankers Arrive in Brazil as Trump’s Fuel Deal With Putin Fails to Deliver to US",
           "link": "https://www.kyivpost.com/post/90691",
           "publicadoEm": "2026-11-20T09:53:07.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "5bb8f46bd356",
+      "titulo": "Trump Says No Rush on Iran Decision, Looks to Next Year",
+      "resumo": "",
+      "imagem": "https://static.srpcdigital.com/styles/414x217/public/2026-11/1885632.jpeg.webp?VersionId=4.KXVw_IAr8Uj4aeUGwf5hq2furQ1vCb",
+      "credito": "Asharq Al-Awsat",
+      "regioes": [
+        "america-norte",
+        "oriente-medio"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T09:50:03.000Z",
+      "materias": [
+        {
+          "fonte": "Asharq Al-Awsat",
+          "pais": "Arábia Saudita",
+          "visao": "Jornal pan-árabe de dono saudita",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Trump Says No Rush on Iran Decision, Looks to Next Year",
+          "link": "https://english.aawsat.com/node/5343531",
+          "publicadoEm": "2026-11-20T09:50:03.000Z",
           "semData": false
         }
       ]
@@ -31918,6 +32375,37 @@
       ]
     },
     {
+      "id": "10ba4d31c2da",
+      "titulo": "Anthropic registers 17% gain and a market value of nearly $1.8 trillion on stock market debut",
+      "resumo": "The AI company makes history with the largest initial public offering ever. Shares of the developer of Claude closed the first trading session at $97.17",
+      "imagem": "https://images.english.elpais.com/resizer/v2/V637BIJZBNPJZB6X4YRKJZDJCU.jpg?auth=111d257f80943f632f7370341f6553c721d8b9fa605562720e576fc5de0558f7",
+      "credito": "El País (inglês)",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "economia",
+        "tecnologia"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T08:42:36.000Z",
+      "materias": [
+        {
+          "fonte": "El País (inglês)",
+          "pais": "Espanha",
+          "visao": "Jornal de referência espanhol",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Anthropic registers 17% gain and a market value of nearly $1.8 trillion on stock market debut",
+          "link": "https://english.elpais.com/economy-and-business/2026-11-19/anthropic-debuts-with-sharp-gains-in-the-largest-ipo-in-history.html",
+          "publicadoEm": "2026-11-20T08:42:36.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
       "id": "8eb0894fa200",
       "titulo": "Fuel quota for industries, mines increased by 10%",
       "resumo": "TEHRAN- The Minister of Industry, Mining and Trade announced that fuel allocated to mineral and industrial producers in the SADAF system for the current year is 10 percent higher than last year, with provincial quotas increased by the same amount.",
@@ -32590,18 +33078,6 @@
           "titulo": "(LEAD) Unification minister, top U.S. envoy reaffirm alliance as key to peace in 1st talks",
           "link": "https://en.yna.co.kr/view/AEN20261119007251315",
           "publicadoEm": "2026-11-20T05:37:52.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Yonhap",
-          "pais": "Coreia do Sul",
-          "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Unification minister set to hold 1st talks with U.S. top envoy, USFK chief",
-          "link": "https://en.yna.co.kr/view/AEN20261119007200315",
-          "publicadoEm": "2026-11-20T00:00:03.000Z",
           "semData": false
         }
       ]
@@ -33528,18 +34004,6 @@
           "titulo": "Seoul shares open sharply lower tracking U.S. losses after Anthropic debut",
           "link": "https://en.yna.co.kr/view/AEN20261120001100320",
           "publicadoEm": "2026-11-20T00:03:13.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Yonhap",
-          "pais": "Coreia do Sul",
-          "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "(URGENT) Seoul shares open sharply lower tracking U.S. losses after Anthropic debut",
-          "link": "https://en.yna.co.kr/view/AEN20261120001000320",
-          "publicadoEm": "2026-11-20T00:01:39.000Z",
           "semData": false
         }
       ]
@@ -39215,130 +39679,6 @@
           "titulo": "Seoul subway union launches 'work-to-rule' campaign over hiring, wage dispute",
           "link": "https://en.yna.co.kr/view/AEN20261120001500315",
           "publicadoEm": "2026-11-20T00:04:02.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "1c8cd487af49",
-      "titulo": "Heroes bring back 3 foreign players from 2026 season, acquire new Japanese pitcher",
-      "resumo": "SEOUL, Nov. 20 (Yonhap) -- The Kiwoom Heroes completed their foreign player sign...",
-      "imagem": "https://img.yna.co.kr/etc/inner/EN/2026/11/20/AEN20261120000900315_01_i_P2.jpg",
-      "credito": "Yonhap",
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T23:59:15.000Z",
-      "materias": [
-        {
-          "fonte": "Yonhap",
-          "pais": "Coreia do Sul",
-          "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Heroes bring back 3 foreign players from 2026 season, acquire new Japanese pitcher",
-          "link": "https://en.yna.co.kr/view/AEN20261120000900315",
-          "publicadoEm": "2026-11-19T23:59:15.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "077cc76e2531",
-      "titulo": "Experts assess what was addressed and overlooked at trilateral meeting in China",
-      "resumo": "For perspective on the Trump, Xi and Putin summit in China, Amna Nawaz spoke with Dennis Wilder and Fred Fleitz. Wilder was senior director for East Asia and special assistant to President George W. Bush and was the editor of the president's daily brief during the Obama…",
-      "imagem": "https://d3i6fh83elv35t.cloudfront.net/static/2026/11/summitdiss-1024x683.jpg",
-      "credito": "PBS NewsHour",
-      "regioes": [
-        "america-norte",
-        "europa",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "diplomacia",
-        "politica"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T23:50:53.000Z",
-      "materias": [
-        {
-          "fonte": "PBS NewsHour",
-          "pais": "EUA",
-          "visao": "TV pública dos EUA",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Experts assess what was addressed and overlooked at trilateral meeting in China",
-          "link": "https://www.pbs.org/newshour/show/experts-assess-what-was-addressed-and-overlooked-at-trilateral-meeting-in-china",
-          "publicadoEm": "2026-11-19T23:50:53.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "81df1ca253c1",
-      "titulo": "Israel realiza maior ofensiva terrestre em Gaza desde o cessar-fogo",
-      "resumo": "Exército diz que operação em área controlada pelo Hamas visava eliminar supostas ameaças às forças israelenses",
-      "imagem": "https://www.cartacapital.com.br/wp-content/uploads/2025/11/000_82GN4RR.jpg",
-      "credito": "CartaCapital Mundo",
-      "regioes": [
-        "oriente-medio"
-      ],
-      "temas": [
-        "conflitos"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T23:49:24.000Z",
-      "materias": [
-        {
-          "fonte": "CartaCapital Mundo",
-          "pais": "Brasil",
-          "visao": "Revista brasileira, esquerda",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "pt",
-          "titulo": "Israel realiza maior ofensiva terrestre em Gaza desde o cessar-fogo",
-          "link": "https://www.cartacapital.com.br/mundo/israel-realiza-maior-ofensiva-terrestre-em-gaza-desde-o-cessar-fogo/",
-          "publicadoEm": "2026-11-19T23:49:24.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "ec89f819758b",
-      "titulo": "Ataques russos contra Kiev deixam um morto e causam danos em duas embaixadas",
-      "resumo": "",
-      "imagem": "",
-      "credito": "",
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "conflitos",
-        "diplomacia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-19T23:39:35.000Z",
-      "materias": [
-        {
-          "fonte": "Estadão Internacional",
-          "pais": "Brasil",
-          "visao": "Jornal de referência brasileiro, centro-direita",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "pt",
-          "titulo": "Ataques russos contra Kiev deixam um morto e causam danos em duas embaixadas",
-          "link": "https://www.estadao.com.br/internacional/ataques-russos-contra-kiev-morte-danos-embaixadas-npr/",
-          "publicadoEm": "2026-11-19T23:39:35.000Z",
           "semData": false
         }
       ]

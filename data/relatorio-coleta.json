@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-20T23:36:55.664Z",
+  "geradoEm": "2026-11-21T00:02:15.048Z",
   "fontesOk": 69,
   "fontesComErro": 1,
-  "noticiasNovasNestaRodada": 15,
+  "noticiasNovasNestaRodada": 21,
   "porFonte": [
     {
       "id": "nyt",
@@ -45,9 +45,9 @@
       "nome": "PBS NewsHour",
       "status": "ok",
       "itensNoFeed": 20,
-      "aceitas": 17,
-      "descartadasPorIdade": 3,
-      "comImagem": 17
+      "aceitas": 15,
+      "descartadasPorIdade": 5,
+      "comImagem": 15
     },
     {
       "id": "cbc",
@@ -73,8 +73,8 @@
       "nome": "Atlantic Council",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 23,
-      "descartadasPorIdade": 77,
+      "aceitas": 22,
+      "descartadasPorIdade": 78,
       "comImagem": 0
     },
     {
@@ -271,9 +271,9 @@
       "nome": "Kyiv Post",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 87,
-      "descartadasPorIdade": 13,
-      "comImagem": 87
+      "aceitas": 89,
+      "descartadasPorIdade": 11,
+      "comImagem": 89
     },
     {
       "id": "pravdaua",
@@ -309,7 +309,7 @@
       "itensNoFeed": 20,
       "aceitas": 20,
       "descartadasPorIdade": 0,
-      "comImagem": 11
+      "comImagem": 10
     },
     {
       "id": "almonitor",
@@ -469,8 +469,8 @@
       "nome": "AllAfrica",
       "status": "ok",
       "itensNoFeed": 33,
-      "aceitas": 30,
-      "descartadasPorIdade": 3,
+      "aceitas": 31,
+      "descartadasPorIdade": 2,
       "comImagem": 0
     },
     {
@@ -532,9 +532,9 @@
       "nome": "Gazeta do Povo Mundo",
       "status": "ok",
       "itensNoFeed": 59,
-      "aceitas": 59,
-      "descartadasPorIdade": 0,
-      "comImagem": 59
+      "aceitas": 58,
+      "descartadasPorIdade": 1,
+      "comImagem": 58
     },
     {
       "id": "cartacapital",
