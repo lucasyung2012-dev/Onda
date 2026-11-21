@@ -164,7 +164,7 @@ function desenhar({ animar = true } = {}) {
     if (foco) foco.scrollIntoView(); else window.scrollTo(0, 0);
   };
   // "View Transitions": o navegador anima a troca entre a tela velha e a nova.
-  if (animar && document.startViewTransition && !config.menosMovimento()) {
+  if (animar && document.startViewTransition && !config.menosMovimento() && !document.hidden) {
     const transicao = document.startViewTransition(trocar);
     transicao.ready.catch(() => {}); // se a animação for pulada (app em segundo plano), tudo bem
   } else {
