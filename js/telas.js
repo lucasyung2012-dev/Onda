@@ -115,34 +115,55 @@ export function listaDeFatos(fatos, dados, limite) {
 
 // ---------- HOJE ----------
 
-export function telaHoje(analise, dados, indicadoresHtml = '') {
-  const topo = cabecalho('Radar de hoje', esc(dataPorExtenso(dados.dataReferencia)),
-    `${numero(dados.totalNoticias)} notícias de ${dados.totalFontes} fontes · atualizado às ${hora(dados.geradoEm)}`);
+/** "Bom dia", "Boa tarde" ou "Boa noite", pela hora de Brasília. */
+function saudacao() {
+  const horaBR = Number(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', hour: 'numeric', hour12: false }).format(new Date())) % 24;
+  if (emIngles()) return horaBR < 12 ? 'Good morning' : horaBR < 18 ? 'Good afternoon' : 'Good evening';
+  return horaBR < 12 ? 'Bom dia' : horaBR < 18 ? 'Boa tarde' : 'Boa noite';
+}
+
+export function telaHoje(analise, dados, indicadoresHtml = '', tema = null) {
+  const en = emIngles();
+  const topo = `
+    <p class="rotulo">${esc(dataPorExtenso(dados.dataReferencia))}</p>
+    <h1 class="titulo-tela saudacao">${saudacao()}</h1>
+    <p class="subtitulo">${en ? 'What happened in the world and how it reaches you' : 'O que aconteceu no mundo e como chega em você'} · ${numero(dados.totalNoticias)} ${en ? 'stories from' : 'notícias de'} ${dados.totalFontes} ${en ? 'sources' : 'fontes'} · ${en ? 'updated' : 'atualizado às'} ${hora(dados.geradoEm)}</p>`;
+
+  // Atalhos do fim da tela: tema do dia (com o título de hoje), explorar e edições anteriores
+  const temaOk = tema?.status === 'ok';
+  const atalhos = `
+    ${temaOk ? `
+      <a class="tema-do-dia tema-atalho" href="#tema/${esc(tema.dataReferencia)}">
+        <p class="rotulo">${t('Tema do dia')} · ${t('Entender o mundo')}</p>
+        <h3>${esc(tema.titulo)}</h3>
+        <p>${esc(tema.pergunta)}</p>
+      </a>` : ''}
+    <div class="atalhos cascata" style="margin-top:12px">
+      <a class="atalho" href="#explorar" style="--i:1"><strong>${numero(dados.fatos.length)}</strong><span>${t('fatos para explorar por região, assunto ou fonte')}</span></a>
+      <a class="atalho" href="#edicoes" style="--i:2"><strong>${en ? 'History' : 'Histórico'}</strong><span>${t('Edições anteriores')}</span></a>
+    </div>`;
 
   const temAnalise = analise && analise.status === 'ok' && analise.destaque;
-  const atalhos = `
-    <div class="atalhos cascata">
-      <a class="atalho" href="#explorar" style="--i:1"><strong>${numero(dados.fatos.length)}</strong><span>${t('fatos para explorar por região, assunto ou fonte')}</span></a>
-      <a class="atalho tema" href="#temas" style="--i:2"><span>${t('Tema do dia')}</span><strong style="font-size:17px">${t('Entender o mundo')}</strong></a>
-    </div>
-    <a class="botao largo" href="#edicoes" style="margin-top:10px">${t('Edições anteriores')} <span class="icone i-seta" aria-hidden="true"></span></a>`;
-
   if (!temAnalise) return `<div class="tela">${topo}${semAnalise(analise, dados)}${indicadoresHtml}<div class="secao">${atalhos}</div></div>`;
 
   const d = analise.destaque;
   const deOutroDia = analise.dataReferencia !== dados.dataReferencia;
   const rotuloCapa = deOutroDia ? `${t('Destaque de')} ${dataCurta(analise.dataReferencia)}` : t('Destaque do dia');
   const regiao = d.regioes[0];
+  const aviso = analise.versao > 1
+    ? (en ? `Version ${analise.versao} · redone at ${hora(analise.geradoEm)}` : `Versão ${analise.versao} · refeita às ${hora(analise.geradoEm)}`)
+    : (en ? `Analysis by AI at ${hora(analise.geradoEm)}` : `Análise feita por IA às ${hora(analise.geradoEm)}`);
 
   return `
     <div class="tela">
       ${topo}
       <div class="hoje-grade" style="margin-top:18px">
+        <!-- 1º e maior: o DESTAQUE DO DIA -->
         <div class="secao">
           <a class="capa" href="#analise">
             ${imagem({ url: d.imagem, credito: d.credito, regiao, nomeRegiao: dados.nomesRegioes[regiao] })}
             <div class="capa-texto">
-              <p class="rotulo">${rotuloCapa}</p>
+              <p class="rotulo"><span class="numero-destaque">1</span>${rotuloCapa}</p>
               <div class="etiquetas">${etiquetaRegiao(regiao, dados, 'sobre-foto')}${etiquetaTema(d.temas[0], dados, 'sobre-foto')}</div>
               <h2>${esc(d.titulo)}</h2>
             </div>
@@ -153,18 +174,34 @@ export function telaHoje(analise, dados, indicadoresHtml = '') {
             <p>${esc(d.emUmaFrase)}</p>
           </div>
           <a class="botao principal largo" href="#analise" style="margin-top:14px">${t('Ler a análise completa')} <span class="icone i-seta" aria-hidden="true"></span></a>
-          <p class="aviso-ia"><span class="icone i-ia" aria-hidden="true"></span>${analise.versao > 1 ? `Versão ${analise.versao} · refeita às ${hora(analise.geradoEm)}` : `Análise feita por IA às ${hora(analise.geradoEm)}`} a partir de ${d.fontesUsadas.length} matérias. Confira nas fontes.</p>
+          <p class="aviso-ia"><span class="icone i-ia" aria-hidden="true"></span>${aviso} ${en ? `from ${d.fontesUsadas.length} articles. Check the sources.` : `a partir de ${d.fontesUsadas.length} matérias. Confira nas fontes.`}</p>
         </div>
+        <!-- Depois: os outros 5, os números e os atalhos -->
         <div class="secao">
-          <div class="secao-cabeca"><h2>${t('Também importa hoje')}</h2></div>
-          <div class="importa cascata">
-            ${analise.tambemImporta.map((t, i) => cartaoImporta(t, i + 2, dados)).join('')}
+          <div class="secao-cabeca"><h2>${t('Também importa hoje')}</h2><span>${analise.tambemImporta.length}</span></div>
+          <div class="carrossel">
+            ${analise.tambemImporta.map((item, i) => cartaoFoto(item, i + 2, dados)).join('')}
           </div>
           ${indicadoresHtml}
           <div class="secao" style="margin-top:22px">${atalhos}</div>
         </div>
       </div>
     </div>`;
+}
+
+/** Cartão com foto dos "Também importa" (arrasta para o lado). */
+function cartaoFoto(item, numeroItem, dados) {
+  const regiao = item.regioes[0];
+  return `
+    <button class="cartao-foto" type="button" data-fato="${esc(item.fatoId)}">
+      ${imagem({ url: item.imagem, regiao, nomeRegiao: dados.nomesRegioes[regiao], comCredito: false })}
+      <span class="numero-foto">${numeroItem}</span>
+      <div class="cartao-foto-texto">
+        <span class="etiqueta regiao" style="--cor:${corRegiao(regiao)}">${esc(dados.nomesRegioes[regiao] || '')}</span>
+        <h3>${esc(item.tituloPt)}</h3>
+        <p>${esc(item.porQueImporta)}</p>
+      </div>
+    </button>`;
 }
 
 function notas(n) {
@@ -297,33 +334,42 @@ export function telaAnalise(analise, dados, opcoes = {}) {
 
 const MODOS = ['regioes', 'assuntos', 'fontes'];
 
-export function telaExplorar(dados, modo, busca) {
+export function telaExplorar(dados, modo, busca, historico = {}) {
+  const en = emIngles();
   const pos = MODOS.indexOf(modo);
+  // "Em alta agora": os fatos mais repercutidos (com foto) do momento
+  const emAlta = dados.fatos.filter((f) => f.fontes >= 3 && f.imagem && f.temas[0] !== 'outros').slice(0, 8);
   return `
     <div class="tela">
-      ${cabecalho('Explorar', 'Todas as notícias', `${numero(dados.totalNoticias)} notícias em ${numero(dados.fatos.length)} fatos, últimas 24 h`)}
-      <label class="busca"><span class="icone i-busca" aria-hidden="true"></span>
-        <span class="sr-only">Buscar</span>
-        <input id="campo-busca" type="search" placeholder="Buscar: China, petróleo, Lula…" value="${esc(busca)}" autocomplete="off" enterkeyhint="search">
+      ${cabecalho('Explorar', 'Todas as notícias', `${numero(dados.totalNoticias)} ${en ? 'stories in' : 'notícias em'} ${numero(dados.fatos.length)} ${en ? 'events, last 24 h' : 'fatos, últimas 24 h'}`)}
+      <label class="busca busca-grande"><span class="icone i-busca" aria-hidden="true"></span>
+        <span class="sr-only">${en ? 'Search' : 'Buscar'}</span>
+        <input id="campo-busca" type="search" placeholder="${en ? 'Search today and the history: China, oil…' : 'Buscar hoje e no histórico: China, petróleo…'}" value="${esc(busca)}" autocomplete="off" enterkeyhint="search">
       </label>
-      <div class="segmentos" style="--qtd:3;--pos:${pos}" role="group" aria-label="Organizar por">
+      ${!busca && emAlta.length ? `
+        <div class="secao" style="margin-top:6px">
+          <div class="secao-cabeca"><h2>${en ? 'Trending now' : 'Em alta agora'}</h2><span>${en ? 'most covered' : 'mais repercutidos'}</span></div>
+          <div class="carrossel">
+            ${emAlta.map((f) => `
+              <button class="cartao-foto pequeno" type="button" data-fato="${esc(f.id)}">
+                ${imagem({ url: f.imagem, regiao: f.regioes[0], nomeRegiao: dados.nomesRegioes[f.regioes[0]], comCredito: false })}
+                <span class="numero-foto" style="width:auto;padding:0 8px;border-radius:999px;font-size:12px;font-family:var(--fonte-texto)">${f.fontes} ${en ? 'sources' : 'fontes'}</span>
+                <div class="cartao-foto-texto"><h3>${esc(f.titulo)}</h3></div>
+              </button>`).join('')}
+          </div>
+        </div>` : ''}
+      <div class="segmentos" style="--qtd:3;--pos:${pos};margin-top:18px" role="group" aria-label="${en ? 'Organize by' : 'Organizar por'}">
         <span class="indicador"></span>
         <button type="button" data-modo="regioes" aria-pressed="${modo === 'regioes'}">${t('Regiões')}</button>
         <button type="button" data-modo="assuntos" aria-pressed="${modo === 'assuntos'}">${t('Assuntos')}</button>
         <button type="button" data-modo="fontes" aria-pressed="${modo === 'fontes'}">${t('Fontes')}</button>
       </div>
-      <div id="explorar-corpo">${corpoExplorar(dados, modo, busca)}</div>
+      <div id="explorar-corpo">${corpoExplorar(dados, modo, busca, 30, historico)}</div>
     </div>`;
 }
 
-export function corpoExplorar(dados, modo, busca, limite = 30) {
-  if (busca && busca.trim().length >= 2) {
-    const termo = semAcento(busca.trim().toLowerCase());
-    const achados = dados.fatos.filter((f) =>
-      semAcento(f.titulo.toLowerCase()).includes(termo) ||
-      f.materias.some((m) => semAcento(m.titulo.toLowerCase()).includes(termo)));
-    return `<p class="subtitulo" style="margin:14px 0 4px">${achados.length} resultado(s) para “${esc(busca)}”</p>${listaDeFatos(achados, dados, limite)}`;
-  }
+export function corpoExplorar(dados, modo, busca, limite = 30, historico = {}) {
+  if (busca && busca.trim().length >= 2) return resultadosBusca(dados, busca, limite, historico);
   if (modo === 'fontes') return gradeFontes(dados);
   const campo = modo === 'regioes' ? 'regioes' : 'temas';
   const nomes = modo === 'regioes' ? dados.nomesRegioes : dados.nomesTemas;
@@ -360,14 +406,14 @@ function gradeFontes(dados) {
   return paises.map((pais) => `
     <div class="grupo-fontes">
       <p class="rotulo">${esc(pais)}</p>
-      <ul class="lista-fontes cascata" style="margin-top:8px">
+      <div class="grade-fontes cascata">
         ${porPais[pais].sort((a, b) => b.total - a.total).map((c, i) => `
-          <li style="--i:${Math.min(i, 8)}"><button class="linha-fonte" type="button" data-gaveta="fonte/${encodeURIComponent(c.nome)}">
-            <span class="nome-fonte">${logoFonte(c.nome, dados.dominios?.[c.nome])}<span>${esc(c.nome)}${c.estatal ? ' <span class="etiqueta estatal" style="margin-left:4px">' + t('Estatal') + '</span>' : ''}</span></span>
-            <span class="conta">${c.total}</span>
-            <span class="icone i-seta" aria-hidden="true"></span>
-          </button></li>`).join('')}
-      </ul>
+          <button class="cartao-fonte" type="button" data-gaveta="fonte/${encodeURIComponent(c.nome)}" style="--i:${Math.min(i, 8)}">
+            ${logoFonte(c.nome, dados.dominios?.[c.nome])}
+            <strong>${esc(c.nome)}</strong>
+            <small>${c.total} ${emIngles() ? 'stories' : 'notícias'}${c.estatal ? ` · <span style="color:var(--alerta)">${t('Estatal')}</span>` : ''}</small>
+          </button>`).join('')}
+      </div>
     </div>`).join('');
 }
 
@@ -414,38 +460,62 @@ export function dadosDaGaveta(dados, tipo, id) {
 // ---------- TEMAS ----------
 
 /** Aba Temas: o tema do dia e os temas anteriores (que vão se acumulando). */
+/** Quantas partes e quantos minutos de leitura tem a aula. */
+function tamanhoDaAula(tema) {
+  const textos = JSON.stringify(tema).replace(/"(link|url|imagem|fonte|dataReferencia|geradoEm)":"[^"]*"/g, '');
+  const palavras = textos.split(/\s+/).length;
+  const partes = ['paraComecar', 'historia', 'comoFunciona', 'atores', 'debate', 'eHoje', 'cadeia', 'teste']
+    .filter((c) => (Array.isArray(tema[c]) ? tema[c].length : tema[c])).length + 1; // +1 = as fontes
+  return { partes, minutos: Math.max(2, Math.round(palavras / 200)) };
+}
+
 export function telaTemas(tema, indice, filaHtml = '') {
+  const en = emIngles();
   const temHoje = tema?.status === 'ok';
-  const anteriores = (indice?.temas || []).filter((t) => !temHoje || t.data !== tema.dataReferencia);
-  const capa = temHoje ? `
-    <a class="tema-do-dia" href="#tema/${esc(tema.dataReferencia)}" style="margin-top:18px;display:block;text-decoration:none">
-      <p class="rotulo">${t('Tema do dia')} · ${esc(dataCurta(tema.dataReferencia))}${tema.sugeridoPorVoce ? ` · ${emIngles() ? 'your suggestion' : 'sugerido por você'}` : ''}</p>
-      <h2>${esc(tema.titulo)}</h2>
-      <p style="font-family:var(--fonte-titulo);font-size:17px;color:#fff;margin-bottom:10px">${esc(tema.pergunta)}</p>
-      <div class="passos-tema">${tema.cadeia.slice(0, 4).map((c) => `<span>${esc(curto(c.passo))}</span>`).join('<i>›</i>')}<i>›</i><span>${t('Você')}</span></div>
-      <p>${esc(tema.emUmaFrase)}</p>
-      <span class="botao" style="margin-top:14px;background:rgba(255,255,255,.14);border:0;color:#fff">${t('Ler a explicação')} <span class="icone i-seta" aria-hidden="true"></span></span>
-    </a>` : `
-    <div class="tema-do-dia" style="margin-top:18px">
-      <p class="rotulo">${t('Tema do dia')}</p>
-      <h2>O primeiro tema chega com a primeira análise</h2>
-      <p>Todo dia, às 7h, o Onda escolhe um assunto para entender o mundo — de qualquer época — e explica do começo até você, usando só fontes que dá para conferir (Wikipedia e notícias). Precisa da chave da IA configurada.</p>
-    </div>`;
+  const anteriores = (indice?.temas || []).filter((x) => !temHoje || x.data !== tema.dataReferencia);
+  let capa;
+  if (temHoje) {
+    const { partes, minutos } = tamanhoDaAula(tema);
+    capa = `
+      <a class="tema-do-dia tema-capa" href="#tema/${esc(tema.dataReferencia)}">
+        ${tema.imagem?.url ? `<img class="tema-capa-img" src="${esc(tema.imagem.url)}" alt="" loading="lazy" referrerpolicy="no-referrer" onload="this.classList.add('carregou')" onerror="this.remove()">` : ''}
+        <div class="tema-capa-texto">
+          <p class="rotulo">${t('Tema do dia')} · ${esc(dataCurta(tema.dataReferencia))}${tema.sugeridoPorVoce ? ` · ${en ? 'your suggestion' : 'sugerido por você'}` : ''}</p>
+          <h2>${esc(tema.titulo)}</h2>
+          <p class="tema-pergunta">${esc(tema.pergunta)}</p>
+          <div class="tema-info">
+            <span>${partes} ${en ? 'parts' : 'partes'}</span><span>${minutos} min ${en ? 'read' : 'de leitura'}</span>${tema.teste?.length ? `<span>${en ? 'quick quiz' : 'teste rápido'}</span>` : ''}
+          </div>
+          <span class="botao" style="margin-top:14px;background:rgba(255,255,255,.16);border:0;color:#fff">${t('Ler a explicação')} <span class="icone i-seta" aria-hidden="true"></span></span>
+        </div>
+      </a>`;
+  } else {
+    capa = `
+      <div class="tema-do-dia" style="margin-top:18px">
+        <p class="rotulo">${t('Tema do dia')}</p>
+        <h2>${en ? 'The first topic arrives with the first analysis' : 'O primeiro tema chega com a primeira análise'}</h2>
+        <p>${en ? 'Every day at 7 a.m., Onda picks a subject to understand the world and explains it from the beginning to you, using only sources you can check.' : 'Todo dia, às 7h, o Onda escolhe um assunto para entender o mundo e explica do começo até você, usando só fontes que dá para conferir.'}</p>
+      </div>`;
+  }
+
+  // Cores dos cartões sem imagem (variam com o título, sempre as mesmas para cada tema)
+  const cores = ['#13628A', '#5B4BC4', '#1FA594', '#C2557A', '#D98B3A', '#4F86C6'];
+  const cor = (texto) => cores[[...texto].reduce((s, c) => s + c.charCodeAt(0), 0) % cores.length];
 
   return `
     <div class="tela">
-      ${cabecalho('Temas', 'Entender o mundo', 'Não é notícia: é a explicação de um assunto, do começo até o seu dia a dia.')}
+      ${cabecalho('Temas', 'Entender o mundo', en ? 'Not news: the explanation of a subject, from the beginning to your daily life.' : 'Não é notícia: é a explicação de um assunto, do começo até o seu dia a dia.')}
       ${capa}
       ${filaHtml}
       <div class="secao">
         <div class="secao-cabeca"><h2>${t('Temas anteriores')}</h2><span>${anteriores.length}</span></div>
         ${anteriores.length
-          ? `<div class="temas-lista cascata">${anteriores.map((t, i) => `
-              <a class="tema-item" href="#tema/${esc(t.data)}" style="--i:${Math.min(i, 10)};text-decoration:none;color:inherit">
-                <span><strong style="display:block;font-weight:600">${esc(t.titulo)}</strong><small style="white-space:normal">${esc(t.pergunta)}</small></span>
-                <small>${esc(dataCurta(t.data))}</small>
+          ? `<div class="grade-temas cascata">${anteriores.map((x, i) => `
+              <a class="cartao-tema" href="#tema/${esc(x.data)}" style="--i:${Math.min(i, 10)};--cor:${cor(x.titulo)}">
+                <div class="cartao-tema-img">${x.imagem ? `<img src="${esc(x.imagem)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : ''}<span>${esc(x.titulo.slice(0, 1))}</span></div>
+                <div class="cartao-tema-texto"><small>${esc(dataCurta(x.data))}</small><strong>${esc(x.titulo)}</strong></div>
               </a>`).join('')}</div>`
-          : '<p class="vazio">' + t('Os temas vão se acumulando aqui, um por dia.') + '</p>'}
+          : `<p class="vazio">${t('Os temas vão se acumulando aqui, um por dia.')}</p>`}
       </div>
     </div>`;
 }
@@ -725,38 +795,77 @@ function linhaMeu(item, dados, i) {
     </a>`;
 }
 
-export function telaMeu({ situacao, nomeConta, hoje, anteriores, limite, dados, historico }) {
+/** "Esta semana", "Semana passada" ou "16/11 – 22/11" para agrupar as anteriores. */
+function nomeDaSemana(dataIso, hojeIso) {
+  const segunda = (iso) => { const d = new Date(`${iso}T12:00:00Z`); d.setUTCDate(d.getUTCDate() - ((d.getUTCDay() + 6) % 7)); return d; };
+  const s = segunda(dataIso); const h = segunda(hojeIso);
+  const diff = Math.round((h - s) / (7 * 86400000));
+  if (diff === 0) return emIngles() ? 'This week' : 'Esta semana';
+  if (diff === 1) return emIngles() ? 'Last week' : 'Semana passada';
+  const fim = new Date(s); fim.setUTCDate(fim.getUTCDate() + 6);
+  return `${dataCurta(s.toISOString().slice(0, 10))} – ${dataCurta(fim.toISOString().slice(0, 10))}`;
+}
+
+export function telaMeu({ situacao, nomeConta, hoje, anteriores, todos, limite, dados, historico, aba, dataHoje }) {
+  const en = emIngles();
+  // Seus números
+  const analises = todos.filter((i) => i.minha?.texto).length;
+  const dias = new Set(todos.map((i) => i.data));
+  let seguidos = 0;
+  for (let d = new Date(`${dataHoje}T12:00:00Z`); dias.has(d.toISOString().slice(0, 10)); d.setUTCDate(d.getUTCDate() - 1)) seguidos++;
+  const numeros = `
+    <div class="meus-numeros">
+      <div class="cartao"><strong>${hoje.length}<small>/${limite}</small></strong><span>${en ? 'today' : 'hoje'}</span></div>
+      <div class="cartao"><strong>${analises}</strong><span>${en ? 'analyses' : 'análises'}</span></div>
+      <div class="cartao ouro"><strong>${seguidos}</strong><span>${en ? 'days in a row' : 'dias seguidos'}</span></div>
+    </div>`;
+
   let conta;
   if (!situacao.configurado) {
-    conta = `<div class="cartao meu-cartao"><div class="avatar"><span class="icone i-pessoa" aria-hidden="true"></span></div>
-      <h2>Falta ligar o Dropbox</h2><p>Por enquanto, o que você acompanha fica salvo só neste aparelho.</p></div>`;
+    conta = `<p class="subtitulo">${en ? 'Saved only on this device.' : 'Salvo só neste aparelho.'}</p>`;
   } else if (!situacao.conectado) {
     conta = `<div class="cartao meu-cartao"><div class="avatar"><span class="icone i-pessoa" aria-hidden="true"></span></div>
-      <h2>${t('Conecte o seu Dropbox')}</h2><p>Assim o que você acompanha e as suas análises ficam iguais no celular e no iPad. O Onda só enxerga a pasta dele, dentro de Apps.</p>
+      <h2>${t('Conecte o seu Dropbox')}</h2><p>${en ? 'So what you follow and your analyses look the same on your phone and iPad. Onda only sees its own folder, inside Apps.' : 'Assim o que você acompanha e as suas análises ficam iguais no celular e no iPad. O Onda só enxerga a pasta dele, dentro de Apps.'}</p>
       <button class="botao principal" type="button" data-dropbox="conectar" style="margin-top:6px">${t('Conectar o Dropbox')}</button></div>`;
   } else {
-    const quando = situacao.ultimaSincronizacao ? `sincronizado às ${hora(situacao.ultimaSincronizacao.toISOString())}` : 'sincronizando…';
-    conta = `<div class="cartao conta-linha">
-      <div><strong>${t('Dropbox conectado')}</strong><p class="subtitulo">${esc(nomeConta || '')}${nomeConta ? ' · ' : ''}${situacao.ultimoErro ? `<span style="color:var(--perigo)">sem sincronizar: ${esc(situacao.ultimoErro)}</span>` : quando}</p></div>
-      <button class="botao" type="button" data-dropbox="sincronizar">${t('Sincronizar')}</button>
+    const quando = situacao.ultimaSincronizacao ? `${en ? 'synced at' : 'sincronizado às'} ${hora(situacao.ultimaSincronizacao.toISOString())}` : (en ? 'syncing…' : 'sincronizando…');
+    conta = `<div class="conta-compacta">
+      <span class="ponto-sync ${situacao.ultimoErro ? 'erro' : ''}"></span>
+      <span>Dropbox · ${situacao.ultimoErro ? `<span style="color:var(--perigo)">${en ? 'not synced' : 'sem sincronizar'}: ${esc(situacao.ultimoErro)}</span>` : quando}</span>
+      <button class="botao-texto" type="button" data-dropbox="sincronizar">${t('Sincronizar')}</button>
     </div>`;
+  }
+
+  const abas = [['hoje', en ? 'Today' : 'Hoje'], ['anteriores', en ? 'Earlier' : 'Anteriores'], ['calendario', en ? 'Calendar' : 'Calendário']];
+  const abaAtual = abas.some(([a]) => a === aba) ? aba : 'hoje';
+  let corpo;
+  if (abaAtual === 'hoje') {
+    corpo = hoje.length
+      ? `<div class="importa cascata">${hoje.map((it, i) => linhaMeu(it, dados, i)).join('')}</div>`
+      : `<p class="vazio">${en ? 'Tap ☆ Follow on a story (the story of the day, the other 5 or Explore).' : 'Toque em ☆ Acompanhar numa notícia (no destaque, nos 5 do dia ou no Explorar).'}</p>`;
+  } else if (abaAtual === 'anteriores') {
+    const grupos = {};
+    for (const it of anteriores) (grupos[nomeDaSemana(it.data, dataHoje)] ||= []).push(it);
+    corpo = anteriores.length
+      ? Object.entries(grupos).map(([semana, lista]) => `
+          <p class="rotulo" style="margin:16px 0 8px">${esc(semana)} · ${lista.length}</p>
+          <div class="importa cascata">${lista.map((it, i) => linhaMeu(it, dados, i)).join('')}</div>`).join('')
+      : `<p class="vazio">${en ? 'Stories you followed on other days show up here.' : 'As notícias que você acompanhou em outros dias aparecem aqui.'}</p>`;
+  } else {
+    corpo = `<p class="subtitulo" style="margin-bottom:12px">${en ? 'Each day keeps the Onda edition (story of the day + 5) and what you followed.' : 'Cada dia guarda sozinho a edição do Onda (destaque + 5) e o que você acompanhou.'}</p>${historico}`;
   }
 
   return `
     <div class="tela">
-      ${cabecalho('Meu Onda', 'O que você acompanha', `Até ${limite} notícias por dia. Em cada uma, se quiser, a sua análise fica guardada.`)}
-      <div style="margin-top:16px">${conta}</div>
-      <div class="secao">
-        <div class="secao-cabeca"><h2>${t('Hoje')}</h2><span>${hoje.length}/${limite}</span></div>
-        ${hoje.length ? `<div class="importa cascata">${hoje.map((it, i) => linhaMeu(it, dados, i)).join('')}</div>`
-          : '<p class="vazio">Toque em ☆ Acompanhar numa notícia (no destaque, nos 5 do dia ou no Explorar).</p>'}
+      ${cabecalho('Meu Onda', 'O que você acompanha')}
+      ${numeros}
+      <div style="margin-top:12px">${conta}</div>
+      <div class="segmentos" style="--qtd:3;--pos:${abas.findIndex(([a]) => a === abaAtual)};margin-top:18px" role="group">
+        <span class="indicador"></span>
+        ${abas.map(([a, nome]) => `<button type="button" data-aba-meu="${a}" aria-pressed="${a === abaAtual}">${nome}</button>`).join('')}
       </div>
-      <div class="secao">
-        <div class="secao-cabeca"><h2>${t('Dia a dia')}</h2><span>${anteriores.length} acompanhadas antes</span></div>
-        <p class="subtitulo" style="margin:-6px 0 12px">Cada dia guarda sozinho a edição do Onda (destaque + 5) e o que você acompanhou.</p>
-        ${historico}
-      </div>
-      ${situacao.conectado ? '<button class="botao largo" type="button" data-dropbox="desconectar" style="margin-top:28px">' + t('Desconectar este aparelho') + '</button>' : ''}
+      <div style="margin-top:14px">${corpo}</div>
+      ${situacao.conectado ? `<button class="botao-texto" type="button" data-dropbox="desconectar" style="margin-top:28px">${t('Desconectar este aparelho')}</button>` : ''}
     </div>`;
 }
 
@@ -957,6 +1066,42 @@ export function selo(variacao, grande = false) {
 
 const periodoTexto = (c) => (c.periodo === 'ano anterior' ? (emIngles() ? 'vs. previous year' : 'vs. ano anterior') : (emIngles() ? 'in 30 days' : 'em 30 dias'));
 
+// Símbolo grande e transparente no fundo de cada cartão
+const DESENHOS = {
+  gota: '<path d="M12 2.5C9 7 5.5 10.5 5.5 14.5a6.5 6.5 0 0 0 13 0C18.5 10.5 15 7 12 2.5z"/>',
+  grao: '<path d="M12 21V8M12 8c0-3 2-5 5-5 0 3-2 5-5 5zM12 8C12 5 10 3 7 3c0 3 2 5 5 5zM12 14c0-3 2-5 5-5 0 3-2 5-5 5zM12 14c0-3-2-5-5-5 0 3 2 5 5 5z"/>',
+  globo: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/>',
+  chama: '<path d="M12 21c-4 0-6.5-2.6-6.5-6 0-4 3-6 4-9 1 1.5 1.5 3 1.5 4.5C12.5 9 14 7 14 4.5c3 2.5 4.5 6 4.5 10 0 3.6-2.5 6.5-6.5 6.5z"/>',
+};
+const SIMBOLOS = { dolar: '$', euro: '€', selic: '%', ipca: '%', juroseua: '%', yuan: '¥', petroleo: 'gota', wti: 'gota', commodities: 'grao', pibmundo: 'globo', inflacaomundo: 'chama' };
+function simbolo(id) {
+  const s = SIMBOLOS[id] || '•';
+  if (DESENHOS[s]) return `<svg class="marca-fundo desenho" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${DESENHOS[s]}</svg>`;
+  return `<span class="marca-fundo" aria-hidden="true">${s}</span>`;
+}
+
+/** Curva suave passando pelos pontos (em vez de "zigue-zague"). */
+function caminhoSuave(p) {
+  if (p.length < 3) return p.map(([x, y], i) => `${i ? 'L' : 'M'}${x.toFixed(1)} ${y.toFixed(1)}`).join(' ');
+  let d = `M${p[0][0].toFixed(1)} ${p[0][1].toFixed(1)}`;
+  for (let i = 0; i < p.length - 1; i++) {
+    const [x0, y0] = p[i - 1] || p[i]; const [x1, y1] = p[i]; const [x2, y2] = p[i + 1]; const [x3, y3] = p[i + 2] || p[i + 1];
+    d += ` C${(x1 + (x2 - x0) / 6).toFixed(1)} ${(y1 + (y2 - y0) / 6).toFixed(1)} ${(x2 - (x3 - x1) / 6).toFixed(1)} ${(y2 - (y3 - y1) / 6).toFixed(1)} ${x2.toFixed(1)} ${y2.toFixed(1)}`;
+  }
+  return d;
+}
+
+/** Mini gráfico dos últimos 30 dias (ou dos últimos pontos, nos mensais e anuais). */
+function miniGrafico(ind) {
+  const pts = ind.frequencia === 'diaria' ? pontosDoPeriodo(ind, '30d') : ind.serie.slice(-12);
+  if (pts.length < 2) return '';
+  const vs = pts.map(([, v]) => v); const min = Math.min(...vs); const max = Math.max(...vs);
+  const xy = pts.map(([, v], i) => [(i / (pts.length - 1)) * 100, max === min ? 12 : 22 - ((v - min) / (max - min)) * 20]);
+  return `<svg class="mini-grafico" viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true"><path d="${caminhoSuave(xy)}" vector-effect="non-scaling-stroke"/></svg>`;
+}
+
+const classeVariacao = (c) => { const n = c.porcento ?? c.pontos; return n > 0 ? 'sobe' : n < 0 ? 'desce' : ''; };
+
 /** Faixa compacta no Hoje. */
 export function resumoIndicadores(dados) {
   if (!dados?.indicadores?.length) return '';
@@ -966,49 +1111,47 @@ export function resumoIndicadores(dados) {
       <div class="secao-cabeca"><h2>${en ? 'The world in numbers' : 'O mundo em números'}</h2><a href="#indicadores">${en ? 'See all' : 'Ver todos'}</a></div>
       <div class="faixa-indicadores">
         ${dados.indicadores.map((ind) => `
-          <a class="mini-indicador" href="#indicadores/${esc(ind.id)}">
+          <a class="mini-indicador ${classeVariacao(ind.comparacao)}" href="#indicadores/${esc(ind.id)}">
+            ${simbolo(ind.id)}
             <span class="nome">${esc(t(ind.nome))}</span>
             <strong>${valorFormatado(ind, ind.ultimo.valor)}</strong>
             ${selo(ind.comparacao)}
+            ${miniGrafico(ind)}
           </a>`).join('')}
       </div>
     </div>`;
 }
 
-/** Tela principal do painel: cartões em duas seções, Brasil e Mundo. */
-export function telaIndicadores(dados) {
+/** Tela principal do painel: abas Brasil / Mundo e cartões. */
+export function telaIndicadores(dados, grupoEscolhido = 'brasil') {
   const en = emIngles();
   const titulo = en ? 'The world in numbers' : 'O mundo em números';
   if (!dados?.indicadores?.length) {
     return `<div class="tela">${cabecalho('Indicadores', titulo)}<p class="vazio">${en ? 'Could not load the indicators. Check your connection.' : 'Não deu para carregar os indicadores. Confira a conexão.'}</p></div>`;
   }
-  const grupo = (id, nome) => {
-    const lista = dados.indicadores.filter((i) => i.grupo === id);
-    if (!lista.length) return '';
-    return `
-      <div class="secao">
-        <div class="secao-cabeca"><h2>${nome}</h2></div>
-        <div class="grade-indicadores cascata">
-          ${lista.map((ind, i) => {
-            const n = ind.comparacao.porcento ?? ind.comparacao.pontos;
-            return `
-            <a class="cartao-indicador ${n > 0 ? 'sobe' : n < 0 ? 'desce' : ''}" href="#indicadores/${esc(ind.id)}" style="--i:${i}">
-              <span class="nome">${esc(t(ind.nome))}</span>
-              <strong class="valor">${valorFormatado(ind, ind.ultimo.valor)}</strong>
-              ${selo(ind.comparacao)}
-              <small>${periodoTexto(ind.comparacao)} · ${esc(dataIndicador(ind, ind.ultimo.data))}</small>
-            </a>`;
-          }).join('')}
-        </div>
-      </div>`;
-  };
+  const grupo = grupoEscolhido === 'mundo' ? 'mundo' : 'brasil';
+  const lista = dados.indicadores.filter((i) => i.grupo === grupo);
   const direto = dados.direto ? (en ? ' (read straight from the sources)' : ' (lido direto das fontes)') : '';
   return `
     <div class="tela">
       <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>${t('Hoje')}</button>
       ${cabecalho('Indicadores', titulo, en ? 'Official numbers that show how events abroad reach Brazil. Tap one to see more. Context, not investment advice.' : 'Números oficiais que mostram como o que acontece lá fora chega ao Brasil. Toque num deles para ver mais. É contexto, não dica de investimento.')}
-      ${grupo('brasil', en ? 'Brazil' : 'Brasil')}
-      ${grupo('mundo', en ? 'World' : 'Mundo')}
+      <div class="segmentos" style="--qtd:2;--pos:${grupo === 'mundo' ? 1 : 0};margin-top:14px" role="group">
+        <span class="indicador"></span>
+        <button type="button" data-grupo-ind="brasil" aria-pressed="${grupo === 'brasil'}">${en ? 'Brazil' : 'Brasil'}</button>
+        <button type="button" data-grupo-ind="mundo" aria-pressed="${grupo === 'mundo'}">${en ? 'World' : 'Mundo'}</button>
+      </div>
+      <div class="grade-indicadores cascata" style="margin-top:14px">
+        ${lista.map((ind, i) => `
+          <a class="cartao-indicador ${classeVariacao(ind.comparacao)}" href="#indicadores/${esc(ind.id)}" style="--i:${i}">
+            ${simbolo(ind.id)}
+            <span class="nome">${esc(t(ind.nome))}</span>
+            <strong class="valor">${valorFormatado(ind, ind.ultimo.valor)}</strong>
+            ${selo(ind.comparacao)}
+            <small>${periodoTexto(ind.comparacao)} · ${esc(dataIndicador(ind, ind.ultimo.data))}</small>
+            ${miniGrafico(ind)}
+          </a>`).join('')}
+      </div>
       <p class="aviso-ia">${en ? 'Updated' : 'Atualizado'} ${dataHora(dados.geradoEm)}${direto}.</p>
     </div>`;
 }
@@ -1022,24 +1165,33 @@ export function pontosDoPeriodo(ind, periodo) {
   return ind.serie.filter(([d]) => d >= corte);
 }
 
-/** Gráfico do período; o app mostra o valor do ponto tocado. */
+/** Gráfico do período: curva suave, degradê, linhas de grade e o ponto de hoje. O app mostra o valor do ponto tocado. */
 function graficoIndicador(ind, pontos) {
   if (pontos.length < 2) return '';
-  const L = 320; const A = 120; const m = 6;
+  const L = 320; const A = 130; const m = 8;
   const valores = pontos.map(([, v]) => v);
   const min = Math.min(...valores); const max = Math.max(...valores);
   const x = (i) => m + (i / (pontos.length - 1)) * (L - 2 * m);
-  const y = (v) => (max === min ? A / 2 : m + (1 - (v - min) / (max - min)) * (A - 2 * m));
-  const linha = pontos.map(([, v], i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)} ${y(v).toFixed(1)}`).join(' ');
+  const y = (v) => (max === min ? A / 2 : m + (1 - (v - min) / (max - min)) * (A - 2 * m - 10));
+  const xy = pontos.map(([, v], i) => [x(i), y(v)]);
+  const linha = caminhoSuave(xy);
   const area = `${linha} L${x(pontos.length - 1).toFixed(1)} ${A} L${x(0).toFixed(1)} ${A} Z`;
   const subiu = pontos[pontos.length - 1][1] >= pontos[0][1];
+  const grade = [0.25, 0.5, 0.75].map((f) => `<line class="grafico-grade" x1="0" x2="${L}" y1="${(A * f).toFixed(1)}" y2="${(A * f).toFixed(1)}" vector-effect="non-scaling-stroke"/>`).join('');
+  const [xf, yf] = xy[xy.length - 1];
+  const id = `grad-${esc(ind.id)}`;
   return `
     <div class="grafico grafico-interativo ${subiu ? 'sobe' : 'desce'}" data-grafico="${esc(ind.id)}">
       <div class="grafico-dica" hidden></div>
+      <div class="grafico-caixa">
       <svg viewBox="0 0 ${L} ${A}" preserveAspectRatio="none" role="img" aria-label="${emIngles() ? 'Chart' : 'Gráfico'}">
-        <path d="${area}" class="grafico-area"/><path d="${linha}" class="grafico-linha" vector-effect="non-scaling-stroke"/>
+        <defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--cor-grafico);stop-opacity:.42"/><stop offset="1" style="stop-color:var(--cor-grafico);stop-opacity:0"/></linearGradient></defs>
+        ${grade}
+        <path d="${area}" fill="url(#${id})"/><path d="${linha}" class="grafico-linha" vector-effect="non-scaling-stroke"/>
         <line class="grafico-cursor" x1="0" x2="0" y1="0" y2="${A}" vector-effect="non-scaling-stroke" visibility="hidden"/>
       </svg>
+      <span class="grafico-ponto" style="left:${((xf / L) * 100).toFixed(2)}%;top:${((yf / A) * 100).toFixed(2)}%"></span>
+      </div>
       <div class="grafico-legenda"><span>${esc(dataIndicador(ind, pontos[0][0]))}</span><span>${emIngles() ? 'min' : 'mín.'} ${valorFormatado(ind, min)} · ${emIngles() ? 'max' : 'máx.'} ${valorFormatado(ind, max)}</span><span>${esc(dataIndicador(ind, pontos[pontos.length - 1][0]))}</span></div>
     </div>`;
 }
@@ -1063,6 +1215,7 @@ export function telaIndicador(ind, explicacao, noticias, escolha) {
     <div class="tela pagina-indicador" data-indicador="${esc(ind.id)}">
       <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>${en ? 'Indicators' : 'Indicadores'}</button>
       <div class="indicador-capa ${n > 0 ? 'sobe' : n < 0 ? 'desce' : ''}">
+        ${simbolo(ind.id)}
         <p class="rotulo">${esc(t(ind.nome))} · ${ind.grupo === 'mundo' ? (en ? 'World' : 'Mundo') : (en ? 'Brazil' : 'Brasil')}</p>
         <p class="valor-gigante">${valorFormatado(ind, ind.ultimo.valor)}</p>
         <p class="subtitulo">${esc(ind.unidade)} · ${en ? 'data from' : 'dado de'} ${esc(dataIndicador(ind, ind.ultimo.data))}${ind.erro ? (en ? ' · not updated today' : ' · não atualizado hoje') : ''}</p>
@@ -1115,4 +1268,34 @@ export function resultadoComparacao(ind, dataIso) {
       <div><span class="subtitulo">${en ? 'Latest' : 'Agora'}</span><strong>${valorFormatado(ind, atual)}</strong></div>
       ${selo(variacao, true)}
     </div>`;
+}
+
+/**
+ * Etapa 7 — Busca em tudo: as notícias de hoje, as edições anteriores
+ * (destaque e os 5 de cada dia), os temas e as suas análises.
+ */
+function resultadosBusca(dados, busca, limite, { edicoes = [], temas = [], meus = [] }) {
+  const en = emIngles();
+  const termo = semAcento(busca.trim().toLowerCase());
+  const tem = (...textos) => textos.some((x) => x && semAcento(String(x).toLowerCase()).includes(termo));
+
+  const hoje = dados.fatos.filter((f) => tem(f.titulo, ...f.materias.map((m) => m.titulo)));
+  const dias = edicoes.filter((e) => tem(e.titulo, ...(e.outros || [])));
+  const aulas = temas.filter((x) => tem(x.titulo, x.pergunta));
+  const minhas = meus.filter((i) => tem(i.titulo, i.minha?.texto, i.minha?.palpite));
+  const total = hoje.length + dias.length + aulas.length + minhas.length;
+
+  const bloco = (titulo, qtd, corpo) => (qtd ? `<div class="secao" style="margin-top:20px"><div class="secao-cabeca"><h2 style="font-size:17px">${titulo}</h2><span>${qtd}</span></div>${corpo}</div>` : '');
+  const linha = (href, n, titulo, sub) => `<a class="linha-compacta" href="${href}"><span class="n">${n}</span><span><strong>${esc(titulo)}</strong><small>${sub}</small></span><span class="icone i-seta" aria-hidden="true"></span></a>`;
+
+  return `
+    <p class="subtitulo" style="margin:14px 0 4px">${total} ${en ? 'result(s) for' : 'resultado(s) para'} “${esc(busca)}”</p>
+    ${bloco(en ? 'Past editions' : 'Edições anteriores', dias.length, dias.map((e) => {
+      const outro = (e.outros || []).find((o) => tem(o));
+      return linha(`#edicao/${esc(e.data)}`, '★', tem(e.titulo) ? e.titulo : outro, `${esc(dataCurta(e.data))} · ${tem(e.titulo) ? (en ? 'story of the day' : 'destaque do dia') : (en ? 'also mattered' : 'também importou')}`);
+    }).join(''))}
+    ${bloco(en ? 'Topics' : 'Temas', aulas.length, aulas.map((x) => linha(`#tema/${esc(x.data)}`, '◆', x.titulo, `${esc(dataCurta(x.data))} · ${esc(x.pergunta || '')}`)).join(''))}
+    ${bloco(en ? 'Your analyses' : 'Suas análises', minhas.length, minhas.map((i) => linha(`#analise-minha/${esc(i.id)}`, '☆', i.titulo, `${esc(dataCurta(i.data))} · ${i.minha?.texto ? (en ? 'with your analysis' : 'com a sua análise') : (en ? 'followed' : 'acompanhada')}`)).join(''))}
+    ${bloco(en ? 'Today’s news' : 'Notícias de hoje', hoje.length, listaDeFatos(hoje, dados, limite))}
+    ${total ? '' : `<p class="vazio">${en ? 'Nothing found. Try another word.' : 'Nada encontrado. Tente outra palavra.'}</p>`}`;
 }

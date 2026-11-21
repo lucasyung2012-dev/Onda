@@ -1,9 +1,10 @@
 {
-  "temas": [
-    {
-      "data": "2026-11-20",
-      "titulo": "O Supremo Tribunal Federal: estrutura e funcionamento",
-      "pergunta": "Como o Supremo Tribunal Federal brasileiro funciona e qual o seu papel na geopolítica nacional?"
-    }
-  ]
+   "temas" : [
+      {
+         "data" : "2026-11-20",
+         "imagem" : "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Supremo_Brasil.jpg/1280px-Supremo_Brasil.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+         "pergunta" : "Como o Supremo Tribunal Federal brasileiro funciona e qual o seu papel na geopolítica nacional?",
+         "titulo" : "O Supremo Tribunal Federal: estrutura e funcionamento"
+      }
+   ]
 }

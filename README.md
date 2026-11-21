@@ -26,7 +26,7 @@ A visão completa do projeto está em [`docs/VISAO.md`](docs/VISAO.md).
 - [x] 1. Coleta de notícias
 - [x] 2. Primeira tela (app instalável)
 - [x] 3. Destaque analisado pela IA, nova organização e visual
-- [ ] 4. Login e Meu Onda
-- [ ] 5. Cadeia de efeitos sua
-- [ ] 6. Temas e biblioteca
-- [ ] 7. Histórico e busca
+- [x] 4. Edições anteriores, tema do dia e Explorar ilustrado
+- [x] 5. Meu Onda com Dropbox e Minha análise
+- [x] 6. Configurações, fila de temas, conteúdo em inglês e painel de indicadores
+- [x] 7. Histórico e busca (calendário e busca em tudo)

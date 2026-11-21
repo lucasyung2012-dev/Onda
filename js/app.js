@@ -126,7 +126,7 @@ function htmlDaRota({ tela, partes }) {
     }
     case 'meu': return htmlMeu();
     case 'indicadores': {
-      if (!partes[1]) return telas.telaIndicadores(estado.indicadores);
+      if (!partes[1]) return telas.telaIndicadores(estado.indicadores, estado.grupoInd);
       const ind = estado.indicadores?.indicadores.find((i) => i.id === partes[1]);
       if (!estado.indicadores) return '<p class="carregando">…</p>';
       return telas.telaIndicador(ind, explicacoesNoIdioma(emIngles())[partes[1]], noticiasDoIndicador(partes[1]), estado.escolhaIndicador[partes[1]] || {});
@@ -139,9 +139,9 @@ function htmlDaRota({ tela, partes }) {
         if (estado.gaveta.chave !== chave) estado.gaveta = { chave, sub: '', limite: 30 };
         return telas.telaGaveta(dados, partes[1], partes[2], estado.gaveta.sub, estado.gaveta.limite);
       }
-      return telas.telaExplorar(dados, estado.explorar.modo, estado.explorar.busca);
+      return telas.telaExplorar(dados, estado.explorar.modo, estado.explorar.busca, historicoParaBusca());
     }
-    default: return telas.telaHoje(analise, dados, telas.resumoIndicadores(estado.indicadores));
+    default: return telas.telaHoje(analise, dados, telas.resumoIndicadores(estado.indicadores), estado.tema);
   }
 }
 
@@ -325,8 +325,16 @@ function htmlMeu() {
     anteriores: todos.filter((i) => i.data !== hojeData()),
     limite: meus.LIMITE_POR_DIA,
     dados: estado.dados,
-    historico: htmlHistorico(),
+    historico: estado.abaMeu === 'calendario' ? htmlHistorico() : '',
+    todos,
+    aba: estado.abaMeu,
+    dataHoje: hojeData(),
   });
+}
+
+/** O que a busca do Explorar procura além de hoje: edições, temas e as suas análises. */
+function historicoParaBusca() {
+  return { edicoes: estado.edicoes?.edicoes || [], temas: estado.temas?.temas || [], meus: meus.todos() };
 }
 
 // ---------- Painel de indicadores ----------
@@ -392,7 +400,7 @@ function mostrarPonto(e) {
   const fracao = Math.min(1, Math.max(0, (e.clientX - r.left) / r.width));
   const i = Math.round(fracao * (pontos.length - 1));
   const [data, valor] = pontos[i];
-  const xSvg = 6 + (i / (pontos.length - 1)) * (320 - 12);
+  const xSvg = 8 + (i / (pontos.length - 1)) * (320 - 16); // mesmas margens do gráfico (telas.js)
   const cursor = svg.querySelector('.grafico-cursor');
   cursor.setAttribute('x1', xSvg); cursor.setAttribute('x2', xSvg); cursor.setAttribute('visibility', 'visible');
   const dica = caixa.querySelector('.grafico-dica');
@@ -496,7 +504,7 @@ document.addEventListener('input', (e) => {
 
 function atualizarExplorarCorpo() {
   const alvo = document.getElementById('explorar-corpo');
-  if (alvo) alvo.innerHTML = telas.corpoExplorar(estado.dados, estado.explorar.modo, estado.explorar.busca, estado.explorar.limite);
+  if (alvo) alvo.innerHTML = telas.corpoExplorar(estado.dados, estado.explorar.modo, estado.explorar.busca, estado.explorar.limite, historicoParaBusca());
 }
 
 function atualizarGaveta() {
@@ -518,11 +526,13 @@ document.addEventListener('input', (e) => {
 // ---------- Toques e cliques ----------
 
 document.addEventListener('click', (e) => {
-  const alvo = e.target.closest('[data-fato], [data-gaveta], [data-modo], [data-sub], [data-mais], [data-voltar], [data-fechar-folha], [data-recarregar], [data-acompanhar], [data-dropbox], [data-copiar-prompt], [data-mes], [data-dia], [data-resposta], [data-pular], [data-config], [data-fila], [data-chave-robo], [data-periodo], #veu');
+  const alvo = e.target.closest('[data-fato], [data-gaveta], [data-modo], [data-sub], [data-mais], [data-voltar], [data-fechar-folha], [data-recarregar], [data-acompanhar], [data-dropbox], [data-copiar-prompt], [data-mes], [data-dia], [data-resposta], [data-pular], [data-config], [data-fila], [data-chave-robo], [data-periodo], [data-grupo-ind], [data-aba-meu], #veu');
   if (!alvo) return;
   const idEditor = alvo.closest('.editor')?.dataset.item;
 
-  if (alvo.dataset.periodo) trocarPeriodo(alvo);
+  if (alvo.dataset.abaMeu) { estado.abaMeu = alvo.dataset.abaMeu; conteudo.innerHTML = htmlMeu(); }
+  else if (alvo.dataset.grupoInd) { estado.grupoInd = alvo.dataset.grupoInd; desenhar({ animar: false }); }
+  else if (alvo.dataset.periodo) trocarPeriodo(alvo);
   else if (alvo.dataset.fila) {
     const id = alvo.dataset.id;
     if (alvo.dataset.fila === 'tirar') meus.tirarDaFila(id);

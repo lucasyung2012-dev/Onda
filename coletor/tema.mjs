@@ -357,7 +357,7 @@ async function principal() {
   await gravarJson('data/app/tema.json', edicao);
 
   indice.temas = indice.temas.filter((t) => t.data !== hojeData);
-  indice.temas.unshift({ data: hojeData, titulo: aula.titulo, pergunta: aula.pergunta });
+  indice.temas.unshift({ data: hojeData, titulo: aula.titulo, pergunta: aula.pergunta, imagem: aula.imagem?.url || '' });
   indice.temas.sort((x, y) => y.data.localeCompare(x.data));
   await gravarJson('data/app/temas.json', indice);
   console.log(`Tema do dia gravado: ${aula.titulo}`);
