@@ -40,7 +40,7 @@ jobs:
     timeout-minutes: 10
     environment:
       name: github-pages
-      url: ${{ steps.publicacao.outputs.page_url }}
+      url: ${{ steps.publicacao.outputs.page_url || steps.publicacao2.outputs.page_url }}
     steps:
       - name: Baixar a versão mais recente do repositório
         uses: actions/checkout@v4
@@ -59,6 +59,19 @@ jobs:
         with:
           path: .
 
+      # O GitHub às vezes recusa a publicação na hora (ex.: outra em andamento).
+      # Em vez de deixar o site com os dados velhos até a próxima coleta
+      # (foi o que deu o aviso "robô atrasado" em 21/11), tenta de novo.
       - name: Publicar
         id: publicacao
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+
+      - name: Esperar antes de tentar de novo
+        if: steps.publicacao.outcome == 'failure'
+        run: sleep 45
+
+      - name: Publicar (2ª tentativa)
+        id: publicacao2
+        if: steps.publicacao.outcome == 'failure'
         uses: actions/deploy-pages@v4
