@@ -58,13 +58,14 @@ async function noIdioma(base) {
 
 async function carregar() {
   const opcional = (c) => lerJson(c).catch(() => null); // sem esses, o app funciona mesmo assim
-  const [dados, analise, tema, temas, edicoes, fontes] = await Promise.all([
+  const [dados, analise, tema, temas, edicoes, fontes, relatorio] = await Promise.all([
     lerJson('data/app/hoje.json'),
     noIdioma('analise'),
     noIdioma('tema'),
     opcional('data/app/temas.json'),
     opcional('data/app/edicoes.json'),
     opcional('data/fontes.json'),
+    opcional('data/relatorio-coleta.json'),
   ]);
   // Domínio de cada fonte (para mostrar o logotipo dela no Explorar)
   dados.dominios = {};
@@ -73,7 +74,7 @@ async function carregar() {
     if (partes.length > 2 && ['www', 'rss', 'feeds', 'feed', 'moxie', 'english', 'en'].includes(partes[0])) partes.shift();
     dados.dominios[f.nome] = partes.join('.');
   }
-  Object.assign(estado, { dados, analise, tema, temas, edicoes });
+  Object.assign(estado, { dados, analise, tema, temas, edicoes, relatorio });
 }
 
 /** Trocou o idioma: busca de novo a análise e o tema na língua escolhida. */
@@ -107,7 +108,7 @@ function rotaAtual() {
 function abaDaTela(tela) {
   if (['analise', 'edicoes', 'edicao', 'indicadores'].includes(tela)) return 'hoje';
   if (tela === 'tema') return 'temas';
-  if (tela === 'analise-minha') return 'meu';
+  if (tela === 'analise-minha' || tela === 'semana') return 'meu';
   return ['hoje', 'temas', 'explorar', 'meu'].includes(tela) ? tela : 'hoje';
 }
 
@@ -131,7 +132,8 @@ function htmlDaRota({ tela, partes }) {
       if (!estado.indicadores) return '<p class="carregando">…</p>';
       return telas.telaIndicador(ind, explicacoesNoIdioma(emIngles())[partes[1]], noticiasDoIndicador(partes[1]), estado.escolhaIndicador[partes[1]] || {});
     }
-    case 'config': return telas.telaConfig(config.ler(), { conectado: dropbox.conectado(), roboLigado: Boolean(estado.tema?.filaConectada) });
+    case 'semana': return telas.telaSemana({ dataHoje: hojeData(), edicoes: estado.edicoes?.edicoes, temas: estado.temas?.temas, meus: meus.todos(), indicadores: estado.indicadores });
+    case 'config': return telas.telaConfig(config.ler(), { conectado: dropbox.conectado(), roboLigado: Boolean(estado.tema?.filaConectada), saudeHtml: telas.secaoSaude(calcularSaude()) });
     case 'analise-minha': return telas.telaMinhaAnalise(meus.pegar(partes[1]), dados);
     case 'explorar': {
       if (partes.length >= 3) {
@@ -141,7 +143,14 @@ function htmlDaRota({ tela, partes }) {
       }
       return telas.telaExplorar(dados, estado.explorar.modo, estado.explorar.busca, historicoParaBusca());
     }
-    default: return telas.telaHoje(analise, dados, telas.resumoIndicadores(estado.indicadores), estado.tema);
+    default: {
+      const html = telas.telaHoje(analise, dados, telas.resumoIndicadores(estado.indicadores), estado.tema);
+      const atraso = mensagemDeAtraso();
+      // Sexta, sábado e domingo: atalho para "Sua semana no Onda" no Hoje
+      const diaSemana = new Date(`${hojeData()}T12:00:00-03:00`).getUTCDay();
+      const comSemana = [5, 6, 0].includes(diaSemana) ? html.replace('<div class="atalhos cascata"', `${telas.atalhoSemana()}<div class="atalhos cascata"`) : html;
+      return atraso ? comSemana.replace('<div class="tela">', `<div class="tela">${telas.avisoAtraso(atraso)}`) : comSemana;
+    }
   }
 }
 
@@ -332,6 +341,62 @@ function htmlMeu() {
   });
 }
 
+// ---------- Saúde do Onda ----------
+
+const horasDesde = (iso) => (iso ? (Date.now() - new Date(iso).getTime()) / 3600000 : Infinity);
+const horaBrasilia = () => Number(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', hour: 'numeric', hour12: false }).format(new Date())) % 24;
+
+/**
+ * Estado de cada robô: ok = verde, null = atenção (amarelo), false = atrasado (vermelho).
+ * Regras: a coleta roda a cada 3 h; o destaque e o tema saem por volta das 7h.
+ */
+function calcularSaude() {
+  const en = emIngles();
+  const hoje = hojeData();
+  const cedo = horaBrasilia() < 8; // antes das 8h, o do dia ainda pode estar a caminho
+  const r = estado.relatorio;
+  const falhas = (r?.porFonte || []).filter((f) => f.status === 'erro').map((f) => f.nome);
+  const coletaH = horasDesde(estado.dados?.geradoEm);
+  const indFalhas = (estado.indicadores?.indicadores || []).filter((i) => i.erro).map((i) => t(i.nome));
+  const indH = horasDesde(estado.indicadores?.geradoEm);
+  const a = estado.analise; const tm = estado.tema;
+  return [
+    {
+      nome: en ? 'News collection (every 3 h)' : 'Coleta de notícias (a cada 3 h)',
+      quando: estado.dados?.geradoEm,
+      ok: coletaH < 6 ? true : coletaH < 12 ? null : false,
+      detalhe: r ? `${r.fontesOk} ${en ? 'of' : 'de'} ${r.fontesOk + r.fontesComErro} ${en ? 'sources ok' : 'fontes ok'}${falhas.length ? ` (${en ? 'failed' : 'falharam'}: ${falhas.slice(0, 3).join(', ')}${falhas.length > 3 ? '…' : ''})` : ''}` : '',
+    },
+    {
+      nome: en ? 'Story of the day (7 a.m.)' : 'Destaque do dia (7h)',
+      quando: a?.geradoEm,
+      ok: a?.dataReferencia === hoje ? true : cedo ? null : false,
+      detalhe: a?.ultimoErro && a.dataReferencia !== hoje ? `${en ? 'error' : 'erro'}: ${a.ultimoErro.mensagem}` : (a?.dataReferencia === hoje ? (en ? 'locked until midnight' : 'travado até a meia-noite') : ''),
+    },
+    {
+      nome: en ? 'Topic of the day (7 a.m.)' : 'Tema do dia (7h)',
+      quando: tm?.geradoEm,
+      ok: tm?.dataReferencia === hoje ? true : cedo ? null : false,
+      detalhe: tm?.filaConectada ? (en ? 'reading your queue' : 'lendo a sua fila') : (en ? 'not reading your queue' : 'sem ler a sua fila'),
+    },
+    {
+      nome: en ? 'Indicators (every 3 h)' : 'Indicadores (a cada 3 h)',
+      quando: estado.indicadores?.geradoEm,
+      ok: indH < 6 ? (indFalhas.length ? null : true) : indH < 12 ? null : false,
+      detalhe: indFalhas.length ? `${en ? 'failed' : 'falharam'}: ${indFalhas.join(', ')}` : (estado.indicadores?.direto ? (en ? 'read straight from the sources' : 'lidos direto das fontes') : ''),
+    },
+  ];
+}
+
+/** Texto do aviso no Hoje, se a coleta ou o destaque estiverem atrasados (senão, vazio). */
+function mensagemDeAtraso() {
+  const [coleta, destaque] = calcularSaude();
+  if (coleta.ok === false || destaque.ok === false) {
+    return emIngles() ? 'A robot is running late. Tap to see Onda health.' : 'Algum robô está atrasado. Toque para ver a Saúde do Onda.';
+  }
+  return '';
+}
+
 /** O que a busca do Explorar procura além de hoje: edições, temas e as suas análises. */
 function historicoParaBusca() {
   return { edicoes: estado.edicoes?.edicoes || [], temas: estado.temas?.temas || [], meus: meus.todos() };
@@ -353,7 +418,7 @@ function carregarPainel() {
   carregarIndicadores().then((dados) => {
     estado.indicadores = dados;
     const tela = rotaAtual().tela;
-    if (tela === 'hoje' || tela === 'indicadores') desenhar({ animar: false });
+    if (['hoje', 'indicadores', 'config', 'semana'].includes(tela)) desenhar({ animar: false });
   });
 }
 

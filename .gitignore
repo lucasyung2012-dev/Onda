@@ -1,2 +1,5 @@
 # Configurações locais do editor/assistente (não fazem parte do app)
 .claude/
+
+# Arquivo bruto das notícias de hoje: o robô gera e usa na hora; não precisa ir para o repositório
+data/noticias/hoje.json

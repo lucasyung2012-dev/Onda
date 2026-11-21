@@ -1165,3 +1165,26 @@ img { max-width: 100%; display: block; }
 /* Abas que são links (ex.: Gasolina São Paulo / Brasil) */
 .segmentos .aba-link { position: relative; z-index: 1; display: grid; place-items: center; padding: 8px 6px; font-size: 14px; font-weight: 600; color: var(--texto-3); text-decoration: none; }
 .segmentos .aba-link[aria-pressed="true"] { color: var(--texto); }
+
+/* ---------- Saúde do Onda ---------- */
+.saude { display: grid; gap: 8px; }
+.saude-item { display: grid; grid-template-columns: 12px 1fr; gap: 10px; align-items: start; padding: 10px 12px; border-radius: var(--raio-p); background: var(--superficie); border: 1px solid var(--borda); }
+.saude-item strong { display: block; font-size: 14.5px; }
+.saude-item small { font-size: 12.5px; color: var(--texto-3); }
+.saude-ponto { width: 10px; height: 10px; border-radius: 50%; margin-top: 5px; background: var(--sucesso); box-shadow: 0 0 0 4px color-mix(in srgb, var(--sucesso) 20%, transparent); }
+.saude-item.atencao .saude-ponto { background: var(--ouro); box-shadow: 0 0 0 4px var(--ouro-fundo); }
+.saude-item.ruim .saude-ponto { background: var(--perigo); box-shadow: 0 0 0 4px color-mix(in srgb, var(--perigo) 20%, transparent); }
+.aviso-atraso { display: flex; gap: 8px; align-items: center; margin-top: 12px; padding: 10px 14px; border-radius: var(--raio-p); background: var(--ouro-fundo); color: var(--ouro); font-size: 13.5px; font-weight: 600; text-decoration: none; border: 1px solid color-mix(in srgb, var(--ouro) 35%, transparent); }
+
+/* ---------- Sua semana no Onda ---------- */
+.semana-capa { margin-top: 8px; padding: 20px 18px; border-radius: calc(var(--raio) + 4px); color: #EAF6FF; background: linear-gradient(140deg, #5B4BC4, #13628A 55%, #0A2C47); box-shadow: var(--sombra); }
+.semana-capa .rotulo { color: #CFE9F2; }
+.semana-capa h1 { font-size: 28px; margin: 4px 0 14px; color: #fff; }
+.semana-numeros { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.semana-numeros div { display: grid; justify-items: center; padding: 10px 4px; border-radius: 12px; background: rgba(255, 255, 255, 0.12); }
+.semana-numeros strong { font-family: var(--fonte-titulo); font-size: 24px; line-height: 1; }
+.semana-numeros span { font-size: 11px; color: #CFE9F2; margin-top: 3px; }
+.semana-voce p { font-size: 15px; color: var(--texto-2); }
+.semana-atalho { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 14px; padding: 14px 16px; border-radius: var(--raio); text-decoration: none; color: #fff; background: linear-gradient(140deg, #5B4BC4, #13628A); }
+.semana-atalho strong { font-family: var(--fonte-titulo); font-size: 17px; display: block; }
+.semana-atalho small { color: #CFE9F2; font-size: 12.5px; }

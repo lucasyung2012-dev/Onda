@@ -859,6 +859,7 @@ export function telaMeu({ situacao, nomeConta, hoje, anteriores, todos, limite, 
     <div class="tela">
       ${cabecalho('Meu Onda', 'O que você acompanha')}
       ${numeros}
+      ${atalhoSemana()}
       <div style="margin-top:12px">${conta}</div>
       <div class="segmentos" style="--qtd:3;--pos:${abas.findIndex(([a]) => a === abaAtual)};margin-top:18px" role="group">
         <span class="indicador"></span>
@@ -951,7 +952,7 @@ export function telaErro(mensagem) {
 
 // ---------- CONFIGURAÇÕES ----------
 
-export function telaConfig(config, { conectado = false, roboLigado = false } = {}) {
+export function telaConfig(config, { conectado = false, roboLigado = false, saudeHtml = '' } = {}) {
   // Grupo de opções lado a lado (como um seletor). Cada botão grava uma escolha.
   const opcoes = (chave, lista) => `
     <div class="opcoes" role="group">
@@ -993,6 +994,7 @@ export function telaConfig(config, { conectado = false, roboLigado = false } = {
         <p class="subtitulo">${roboLigado ? (en ? '✓ The robot is already reading your queue.' : '✓ O robô já está lendo a sua fila.') : (en ? 'Done once: copy the key below and save it in GitHub → Onda → Settings → Secrets and variables → Actions → New repository secret, with the name DROPBOX_REFRESH_TOKEN. It only opens the Onda folder in your Dropbox. Never paste it anywhere else.' : 'Faça uma vez só: copie a chave abaixo e salve no GitHub → Onda → Settings → Secrets and variables → Actions → New repository secret, com o nome DROPBOX_REFRESH_TOKEN. Ela só abre a pasta do Onda no seu Dropbox. Não cole em nenhum outro lugar.')}</p>
         <button class="botao" type="button" data-chave-robo>${en ? 'Copy robot key' : 'Copiar a chave do robô'}</button>
       </section>` : ''}
+      ${saudeHtml}
       <section class="grupo-config">
         <h2>${t('Sobre o Onda')}</h2>
         <p class="subtitulo">${en ? 'Onda — from the world to you. Free, open source:' : 'Onda — do mundo até você. Gratuito e de código aberto:'} <a href="https://github.com/lucasyung2012-dev/Onda" target="_blank" rel="noopener noreferrer">github.com/lucasyung2012-dev/Onda</a></p>
@@ -1305,4 +1307,120 @@ function resultadosBusca(dados, busca, limite, { edicoes = [], temas = [], meus 
     ${bloco(en ? 'Your analyses' : 'Suas análises', minhas.length, minhas.map((i) => linha(`#analise-minha/${esc(i.id)}`, '☆', i.titulo, `${esc(dataCurta(i.data))} · ${i.minha?.texto ? (en ? 'with your analysis' : 'com a sua análise') : (en ? 'followed' : 'acompanhada')}`)).join(''))}
     ${bloco(en ? 'Today’s news' : 'Notícias de hoje', hoje.length, listaDeFatos(hoje, dados, limite))}
     ${total ? '' : `<p class="vazio">${en ? 'Nothing found. Try another word.' : 'Nada encontrado. Tente outra palavra.'}</p>`}`;
+}
+
+// ---------- SAÚDE DO ONDA ----------
+// Mostra quando cada robô trabalhou pela última vez e o que falhou.
+// `itens` = [{ nome, quando (ISO), ok (true/false/null), detalhe }]
+
+export function secaoSaude(itens) {
+  const en = emIngles();
+  return `
+    <section class="grupo-config">
+      <h2>${en ? 'Onda health' : 'Saúde do Onda'}</h2>
+      <p class="subtitulo">${en ? 'When each robot last worked and what failed.' : 'Quando cada robô trabalhou pela última vez e o que falhou.'}</p>
+      <div class="saude">
+        ${itens.map((x) => `
+          <div class="saude-item ${x.ok === false ? 'ruim' : x.ok === null ? 'atencao' : 'bom'}">
+            <span class="saude-ponto" aria-hidden="true"></span>
+            <div><strong>${esc(x.nome)}</strong><small>${x.quando ? `${en ? 'last' : 'última vez'}: ${dataHora(x.quando)}` : (en ? 'no data' : 'sem dado')}${x.detalhe ? ` · ${esc(x.detalhe)}` : ''}</small></div>
+          </div>`).join('')}
+      </div>
+    </section>`;
+}
+
+/** Faixa de aviso no Hoje quando algum robô está atrasado. */
+export function avisoAtraso(texto) {
+  return `<a class="aviso-atraso" href="#config"><span aria-hidden="true">⚠</span><span>${esc(texto)}</span></a>`;
+}
+
+// ---------- SUA SEMANA NO ONDA ----------
+// Um resumo dos últimos 7 dias: os destaques, os temas, o que você
+// acompanhou e escreveu, e como os principais números se mexeram.
+
+export function telaSemana({ dataHoje, edicoes, temas, meus, indicadores }) {
+  const en = emIngles();
+  const fim = dataHoje;
+  const inicio = new Date(new Date(`${dataHoje}T12:00:00Z`).getTime() - 6 * 86400000).toISOString().slice(0, 10);
+  const naSemana = (d) => d >= inicio && d <= fim;
+  const dias = (edicoes || []).filter((e) => naSemana(e.data));
+  const aulas = (temas || []).filter((x) => naSemana(x.data));
+  const minhas = (meus || []).filter((i) => naSemana(i.data));
+  const escritas = minhas.filter((i) => i.minha?.texto).length;
+  const palpites = minhas.filter((i) => i.minha?.palpite).length;
+
+  // Como os números se mexeram em 7 dias
+  const semanaDe = (ind) => {
+    let antes = null;
+    const alvo = new Date(new Date(`${ind.ultimo.data}T12:00:00Z`).getTime() - 7 * 86400000).toISOString().slice(0, 10);
+    for (const p of ind.serie) { if (p[0] <= alvo) antes = p; else break; }
+    if (!antes) return null;
+    return ind.taxa ? { pontos: Math.round((ind.ultimo.valor - antes[1]) * 100) / 100 } : { porcento: Math.round(((ind.ultimo.valor - antes[1]) / antes[1]) * 1000) / 10 };
+  };
+  const principais = ['dolar', 'petroleo', 'gasolina', 'juroseua']
+    .map((id) => (indicadores?.indicadores || []).find((i) => i.id === id)).filter(Boolean);
+
+  // O destaque mais "pesado" da semana, pela nota de importância
+  const maior = [...dias].sort((a, b) => b.notas.geral - a.notas.geral)[0];
+
+  return `
+    <div class="tela">
+      <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>${t('Meu Onda')}</button>
+      <div class="semana-capa">
+        <p class="rotulo">${en ? 'Your week on Onda' : 'Sua semana no Onda'}</p>
+        <h1>${esc(dataCurta(inicio))} – ${esc(dataCurta(fim))}</h1>
+        <div class="semana-numeros">
+          <div><strong>${dias.length}</strong><span>${en ? 'editions' : 'edições'}</span></div>
+          <div><strong>${aulas.length}</strong><span>${en ? 'topics' : 'temas'}</span></div>
+          <div><strong>${minhas.length}</strong><span>${en ? 'followed' : 'acompanhadas'}</span></div>
+          <div><strong>${escritas}</strong><span>${en ? 'analyses' : 'análises'}</span></div>
+        </div>
+      </div>
+
+      ${maior ? `
+        <div class="secao">
+          <div class="secao-cabeca"><h2>${en ? 'The biggest story of the week' : 'O fato mais importante da semana'}</h2></div>
+          <a class="linha-compacta destaque-compacto" href="#edicao/${esc(maior.data)}"><span class="n">★</span><span><strong>${esc(maior.titulo)}</strong><small>${esc(dataCurta(maior.data))} · ${en ? 'importance' : 'importância'} ${maior.notas.geral} · ${en ? 'you' : 'você'} ${maior.notas.voce}</small></span><span class="icone i-seta" aria-hidden="true"></span></a>
+        </div>` : ''}
+
+      <div class="secao">
+        <div class="secao-cabeca"><h2>${en ? 'Stories of the day' : 'Destaques de cada dia'}</h2><span>${dias.length}</span></div>
+        ${dias.length ? dias.map((e) => `<a class="linha-compacta" href="#edicao/${esc(e.data)}"><span class="n" style="font-size:12px">${esc(dataCurta(e.data))}</span><span><strong>${esc(e.titulo)}</strong><small>${en ? 'scores' : 'notas'} ${e.notas.geral} · ${e.notas.mundo} · ${e.notas.voce}</small></span><span class="icone i-seta" aria-hidden="true"></span></a>`).join('') : `<p class="vazio">${en ? 'No editions this week yet.' : 'Ainda sem edições nesta semana.'}</p>`}
+      </div>
+
+      ${aulas.length ? `
+        <div class="secao">
+          <div class="secao-cabeca"><h2>${en ? 'What you could learn' : 'O que deu para aprender'}</h2><span>${aulas.length}</span></div>
+          ${aulas.map((x) => `<a class="linha-compacta" href="#tema/${esc(x.data)}"><span class="n">◆</span><span><strong>${esc(x.titulo)}</strong><small>${esc(x.pergunta || '')}</small></span><span class="icone i-seta" aria-hidden="true"></span></a>`).join('')}
+        </div>` : ''}
+
+      ${principais.length ? `
+        <div class="secao">
+          <div class="secao-cabeca"><h2>${en ? 'Numbers in 7 days' : 'Os números em 7 dias'}</h2><a href="#indicadores">${en ? 'Panel' : 'Painel'}</a></div>
+          <div class="grade-indicadores">
+            ${principais.map((ind) => { const v = semanaDe(ind); return `
+              <a class="cartao-indicador ${v ? ((v.porcento ?? v.pontos) > 0 ? 'sobe' : (v.porcento ?? v.pontos) < 0 ? 'desce' : '') : ''}" href="#indicadores/${esc(ind.id)}" style="min-height:110px">
+                <span class="nome">${esc(t(ind.nome))}</span>
+                <strong class="valor">${valorFormatado(ind, ind.ultimo.valor)}</strong>
+                ${v ? selo(v) : ''}
+                <small>${en ? 'in 7 days' : 'em 7 dias'}</small>
+              </a>`; }).join('')}
+          </div>
+        </div>` : ''}
+
+      <div class="secao">
+        <div class="secao-cabeca"><h2>${en ? 'You' : 'Você'}</h2></div>
+        <div class="cartao semana-voce">
+          ${minhas.length
+            ? `<p>${en ? `You followed <b>${minhas.length}</b> stories, wrote <b>${escritas}</b> analyses and made <b>${palpites}</b> guesses this week.` : `Você acompanhou <b>${minhas.length}</b> notícias, escreveu <b>${escritas}</b> análises e fez <b>${palpites}</b> palpites nesta semana.`}</p>`
+            : `<p>${en ? 'You did not follow any stories this week. Tap ☆ Follow on something that catches your eye.' : 'Você não acompanhou nenhuma notícia nesta semana. Toque em ☆ Acompanhar no que chamar a sua atenção.'}</p>`}
+        </div>
+      </div>
+    </div>`;
+}
+
+/** Cartão-atalho para "Sua semana no Onda". */
+export function atalhoSemana() {
+  const en = emIngles();
+  return `<a class="semana-atalho" href="#semana"><span><strong>${en ? 'Your week on Onda' : 'Sua semana no Onda'}</strong><small>${en ? 'The stories, topics and numbers of the last 7 days' : 'Os destaques, temas e números dos últimos 7 dias'}</small></span><span class="icone i-seta" aria-hidden="true"></span></a>`;
 }

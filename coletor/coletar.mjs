@@ -19,7 +19,7 @@
 //   8. Grava data/relatorio-coleta.json dizendo o que funcionou e o que falhou.
 // =============================================================
 
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, rm } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { lerFeed } from './rss.mjs';
 import { classificar, NOMES_REGIOES, NOMES_TEMAS } from './classificar.mjs';
@@ -67,11 +67,14 @@ async function lerJson(caminho, padrao) {
   }
 }
 
-/** Grava um JSON no disco, criando a pasta se precisar. */
-async function gravarJson(caminho, dados) {
+/**
+ * Grava um JSON no disco, criando a pasta se precisar. Os arquivos grandes
+ * vão compactados (sem espaços), para o repositório não crescer à toa.
+ */
+async function gravarJson(caminho, dados, { compacto = false } = {}) {
   const destino = arquivo(caminho);
   await mkdir(new URL('./', destino), { recursive: true });
-  await writeFile(destino, JSON.stringify(dados, null, 2) + '\n', 'utf8');
+  await writeFile(destino, (compacto ? JSON.stringify(dados) : JSON.stringify(dados, null, 2)) + '\n', 'utf8');
 }
 
 /**
@@ -257,10 +260,14 @@ async function principal() {
     }
     salvo.atualizadoEm = agora.toISOString();
     salvo.noticias.sort((a, b) => b.publicadoEm.localeCompare(a.publicadoEm));
-    await gravarJson(`data/noticias/${dia}.json`, salvo);
+    await gravarJson(`data/noticias/${dia}.json`, salvo, { compacto: true });
     if (!indice.dias.includes(dia)) indice.dias.push(dia);
   }
   indice.dias.sort().reverse();
+  // Guarda as notícias brutas só dos últimos 7 dias (é o que o robô usa).
+  // Edições, temas e indicadores (o que você relê) ficam para sempre.
+  for (const velho of indice.dias.slice(7)) await rm(arquivo(`data/noticias/${velho}.json`), { force: true });
+  indice.dias = indice.dias.slice(0, 7);
   indice.atualizadoEm = agora.toISOString();
   await gravarJson('data/noticias/indice.json', indice);
 
@@ -297,7 +304,7 @@ async function principal() {
   // 7b. Versão enxuta para o app (data/app/hoje.json).
   //     O hoje.json completo passa de 2 MB, pesado para o celular. O app só
   //     precisa do essencial de cada fato, com as matérias já embutidas.
-  await gravarJson('data/app/hoje.json', montarParaApp(agora, hoje, fatos, recentes));
+  await gravarJson('data/app/hoje.json', montarParaApp(agora, hoje, fatos, recentes), { compacto: true });
 
   // 8. Relatório da coleta.
   const comErro = relatorio.filter((r) => r.status === 'erro');
