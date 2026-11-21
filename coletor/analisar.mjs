@@ -131,7 +131,7 @@ Responda neste formato JSON (todos os campos são obrigatórios):
  "emUmaFrase": "<uma frase que diga como isso pode chegar ao dia a dia de quem vive no Brasil, sem exagero>",
  "emTrintaSegundos": {"oQue": "<o que aconteceu, em UMA frase curta, até 110 caracteres>", "porQue": "<por que importa, em UMA frase curta, até 110 caracteres>", "voce": "<o que muda para quem vive no Brasil, em UMA frase curta, até 110 caracteres; diga se não muda nada agora>"},
  "fatosRapidos": {"onde": "<lugar curto, ex.: 'Leste da Polônia'>", "quando": "<data curta, ex.: '20/11', ou 'sem data clara'>", "quem": "<os principais envolvidos, até 3, separados por vírgula>"},
- "lugar": "<o lugar principal para marcar no mapa, o mais específico que as matérias permitem (cidade, província ou país), sempre com o país, ex.: 'Rzeszów, Polônia'>",
+ "lugar": "<o lugar principal para marcar no mapa, o mais específico que as matérias permitem (cidade, província ou país), sempre com o país; use o NOME de um lugar que existe no mapa, nunca uma descrição como 'sudeste da Polônia', ex.: 'Rzeszów, Polônia'>",
  "quemDisse": [{"quem": "<nome da pessoa ou instituição>", "cargo": "<cargo e país, ex.: 'primeiro-ministro da Polônia'>", "disse": "<o que disse, resumido em 1 frase>", "literal": <true SÓ se essa frase exata aparece entre aspas numa matéria; senão false>, "fontes": [<índices das matérias>]}],
  "oQueAconteceu": "<2 a 4 parágrafos curtos separados por \\n\\n: o quê, onde, quando, quem está envolvido, antecedentes necessários>",
  "dataDoFato": "<AAAA-MM-DD em que o fato ocorreu, ou null se as matérias não deixam claro>",

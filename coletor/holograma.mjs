@@ -62,11 +62,28 @@ async function coordenadas(lugar) {
   return { lat: Number(achado.lat), lon: Number(achado.lon), caixa: { s, n, o, l }, tipo: achado.type };
 }
 
+/**
+ * Tenta achar o lugar; se o OpenStreetMap não achar (ex.: "sudeste da
+ * Polônia"), tenta nomes mais simples: sem "sudeste da", só "cidade, país",
+ * e por fim só o país.
+ */
+async function coordenadasComReserva(lugar) {
+  const partes = lugar.split(',').map((s) => s.trim()).filter(Boolean);
+  const semDirecao = (s) => s.replace(/^(o |a )?(norte|sul|leste|oeste|nordeste|noroeste|sudeste|sudoeste|centro|interior|litoral|regi[aã]o|arredores|perto|fronteira)( d[aeo]s?| de)?\s+/i, '');
+  const tentativas = [...new Set([lugar, partes.map(semDirecao).join(', '), partes.slice(-2).map(semDirecao).join(', '), semDirecao(partes.at(-1) || '')])].filter(Boolean);
+  let ultimoErro = null;
+  for (const t of tentativas) {
+    try { return await coordenadas(t); } catch (erro) { ultimoErro = erro; console.log(`  não achei "${t}"; tentando mais simples…`); }
+    await new Promise((r) => setTimeout(r, 1100)); // 1 pedido por segundo
+  }
+  throw ultimoErro;
+}
+
 async function perguntarLugar(titulo, resumo) {
   if (!temIA()) return '';
   const { resposta } = await perguntarIA({
     sistema: 'Você ajuda a pôr notícias e aulas num mapa. Responda só com JSON válido.',
-    usuario: `Assunto: ${titulo}\n${(resumo || '').slice(0, 800)}\n\nQual é o lugar principal, para marcar num mapa? O mais específico que o texto permitir (cidade, província ou país), sempre com o país. JSON: {"lugar": "<ex.: 'Rzeszów, Polônia' ou 'Bruxelas, Bélgica'; string vazia se não houver um lugar>"}`,
+    usuario: `Assunto: ${titulo}\n${(resumo || '').slice(0, 800)}\n\nQual é o lugar principal, para marcar num mapa? O mais específico que o texto permitir, com o NOME de um lugar que existe no mapa (cidade, província ou país), nunca uma descrição como "sudeste da Polônia"; sempre com o país. JSON: {"lugar": "<ex.: 'Rzeszów, Polônia' ou 'Bruxelas, Bélgica'; string vazia se não houver um lugar>"}`,
     maxTokens: 300,
     validar: (r) => { if (typeof r.lugar !== 'string') throw new Error('sem lugar'); },
   });
@@ -165,7 +182,7 @@ async function montar(nome, caminhoArquivo, pegar) {
   if (!lugar) lugar = await perguntarLugar(alvo.titulo, alvo.oQueAconteceu || alvo.emUmaFrase);
   if (!lugar) { console.log(`${nome}: sem lugar para o mapa.`); return; }
   console.log(`${nome}: lugar "${lugar}"…`);
-  const c = await coordenadas(lugar);
+  const c = await coordenadasComReserva(lugar);
   alvo.holograma = { lugar, lat: c.lat, lon: c.lon, ...desenhar(c) };
   await gravarJson(caminhoArquivo, dados);
   // Guarda também no arquivo do dia (histórico), na versão mais recente.
