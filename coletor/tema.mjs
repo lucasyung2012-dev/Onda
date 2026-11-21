@@ -364,7 +364,10 @@ async function principal() {
 
   // Só agora, com o tema pronto e salvo, a sugestão sai da fila.
   if (escolhido.daFila) {
-    try { await fila.tirarDaFila(sugestao.id); console.log('Fila: sugestão usada e retirada.'); }
+    try {
+      const quantos = await fila.tirarDaFila(sugestao.id, sugestao.texto);
+      console.log(quantos ? `Fila: sugestão usada; ${quantos} item(ns) retirado(s) da fila.` : 'Fila: a sugestão já não estava mais na fila.');
+    }
     catch (erro) { console.log(`Fila: tema feito, mas não deu para tirar da fila (${erro.message}).`); }
   }
 }

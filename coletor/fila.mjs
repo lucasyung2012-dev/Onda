@@ -48,14 +48,21 @@ export async function proximaSugestao() {
   return fila[0] || null;
 }
 
-/** Tira um tema da fila (depois que ele virou o tema do dia). */
-export async function tirarDaFila(id) {
+const normal = (t) => (t || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+
+/**
+ * Tira um tema da fila (depois que ele virou o tema do dia), junto com
+ * qualquer cópia com o mesmo texto (ex.: sugerida duas vezes, ou no
+ * celular e no iPad). Devolve quantos itens saíram.
+ */
+export async function tirarDaFila(id, texto) {
   for (let tentativa = 0; tentativa < 3; tentativa++) {
     const { dados, rev } = await ler();
-    if (!dados?.fila?.[id]) return;
+    const iguais = Object.values(dados?.fila || {}).filter((x) => x.id === id || normal(x.texto) === normal(texto)).map((x) => x.id);
+    if (!iguais.length) return 0;
     const agora = new Date().toISOString();
-    delete dados.fila[id];
-    dados.apagados = { ...(dados.apagados || {}), [id]: agora };
+    dados.apagados = { ...(dados.apagados || {}) };
+    for (const i of iguais) { delete dados.fila[i]; dados.apagados[i] = agora; }
     dados.atualizadoEm = agora;
     const r = await fetch('https://content.dropboxapi.com/2/files/upload', {
       method: 'POST',
@@ -66,7 +73,7 @@ export async function tirarDaFila(id) {
       },
       body: new TextEncoder().encode(JSON.stringify(dados, null, 2)),
     });
-    if (r.ok) return;
+    if (r.ok) return iguais.length;
     if (r.status !== 409) throw new Error(`Dropbox respondeu ${r.status}`);
     // 409 = o app mudou o arquivo no meio: lê de novo e tenta outra vez
   }
