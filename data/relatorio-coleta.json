@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-21T00:09:49.871Z",
+  "geradoEm": "2026-11-21T00:16:13.360Z",
   "fontesOk": 69,
   "fontesComErro": 1,
-  "noticiasNovasNestaRodada": 2,
+  "noticiasNovasNestaRodada": 3,
   "porFonte": [
     {
       "id": "nyt",
@@ -147,7 +147,7 @@
       "itensNoFeed": 45,
       "aceitas": 39,
       "descartadasPorIdade": 6,
-      "comImagem": 39
+      "comImagem": 38
     },
     {
       "id": "dw",
@@ -271,9 +271,9 @@
       "nome": "Kyiv Post",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 88,
-      "descartadasPorIdade": 12,
-      "comImagem": 88
+      "aceitas": 89,
+      "descartadasPorIdade": 11,
+      "comImagem": 89
     },
     {
       "id": "pravdaua",

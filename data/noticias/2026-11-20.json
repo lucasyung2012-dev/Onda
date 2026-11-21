@@ -2,6 +2,35 @@
   "data": "2026-11-20",
   "noticias": [
     {
+      "id": "968fb7c8ed69",
+      "titulo": "Six Palestinians killed in Israeli strikes on Gaza, civil defence says",
+      "resumo": "Israeli strikes killed six people in the Gaza Strip on Friday, the civil defence agency in the war-shattered territory told AFP, despite a ceasefire. Mahmoud Bassal, the spokesman for Gaza's civil defence agency, said that four Palestinians were killed and several others wounded…",
+      "link": "https://www.middleeasteye.net/live-blog/live-blog-update/six-palestinians-killed-israeli-strikes-gaza-civil-defence-says",
+      "fonte": "middleeasteye",
+      "fonteNome": "Middle East Eye",
+      "pais": "Reino Unido",
+      "visao": "Site focado no Oriente Médio, crítico de governos da região",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:15:23.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "oriente-medio",
+        "global"
+      ],
+      "temas": [
+        "conflitos",
+        "direitos",
+        "saude"
+      ],
+      "coletadoEm": "2026-11-21T00:16:13.360Z"
+    },
+    {
       "id": "cb67e500f861",
       "titulo": "At more than 190cm, Tiny Tim could be a national cattle record breaker",
       "resumo": "A Holstein-Friesian named Tiny Tim is thought to be Australia's biggest living steer, knocking the late legend Knickers off the throne.",
@@ -26,6 +55,32 @@
         "outros"
       ],
       "coletadoEm": "2026-11-21T00:09:49.871Z"
+    },
+    {
+      "id": "7dbf331b0d39",
+      "titulo": "‘A source of inspiration’: California celebrates the late civil rights icon Dolores Huerta",
+      "resumo": "A public vigil and celebration of life honor the civil rights activist and co-founder of United Farm Workers union Hundreds of people came out to honor and celebrate the life and legacy of the California civil rights activist Dolores Huerta at a celebration-of-life event Friday…",
+      "link": "https://www.theguardian.com/us-news/2026/nov/20/dolores-huerta-celebration-of-life-california",
+      "fonte": "guardian",
+      "fonteNome": "The Guardian",
+      "pais": "Reino Unido",
+      "visao": "Jornal britânico, centro-esquerda",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:03:47.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-21T00:16:13.360Z"
     },
     {
       "id": "b7fdc1f987cb",
@@ -189,6 +244,33 @@
         "direitos"
       ],
       "coletadoEm": "2026-11-21T00:02:15.048Z"
+    },
+    {
+      "id": "3d25e4332273",
+      "titulo": "Denmark Expels Russian Defense Attaché Over Foiled Plot to Assassinate Ukrainian Rapper",
+      "resumo": "Denmark ordered Russia’s defense attaché to leave within seven days after intelligence officials linked Moscow to a foiled assassination plot targeting Ukrainian-American rapper Kyivstoner. Police intercepted armed suspects minutes before his September concert, while Danish Prime…",
+      "link": "https://www.kyivpost.com/post/90775",
+      "fonte": "kyivpost",
+      "fonteNome": "Kyiv Post",
+      "pais": "Ucrânia",
+      "visao": "Jornal ucraniano",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:49:04.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://static.kyivpost.com/storage/2026/11/21/b331c217fdffb1ff64b0d0de330c749f.jpg?w=640&q=90&f=jpg",
+      "imagemCredito": "Kyiv Post",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-21T00:16:13.360Z"
     },
     {
       "id": "19c0628393b8",
@@ -37294,5 +37376,5 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     }
   ],
-  "atualizadoEm": "2026-11-21T00:09:49.871Z"
+  "atualizadoEm": "2026-11-21T00:16:13.360Z"
 }

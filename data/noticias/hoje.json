@@ -1,10 +1,10 @@
 {
-  "geradoEm": "2026-11-21T00:09:49.871Z",
+  "geradoEm": "2026-11-21T00:16:13.360Z",
   "fuso": "America/Sao_Paulo",
   "dataReferencia": "2026-11-20",
   "janelaHoras": 24,
-  "totalNoticias": 1441,
-  "totalFatos": 1157,
+  "totalNoticias": 1439,
+  "totalFatos": 1153,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -134,6 +134,36 @@
         "406da3cf784a",
         "e0b1167422c9",
         "6c49addc3e67"
+      ]
+    },
+    {
+      "id": "3d25e4332273",
+      "titulo": "Denmark Expels Russian Defense Attaché Over Foiled Plot to Assassinate Ukrainian Rapper",
+      "imagem": "https://static.kyivpost.com/storage/2026/11/21/b331c217fdffb1ff64b0d0de330c749f.jpg?w=640&q=90&f=jpg",
+      "fontes": 8,
+      "umaFonteSo": false,
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia",
+        "politica",
+        "midia",
+        "direitos"
+      ],
+      "maisRecente": "2026-11-20T23:49:04.000Z",
+      "noticias": [
+        "3d25e4332273",
+        "55c3376cce85",
+        "3f8818fb4a99",
+        "7c7462cdf7f6",
+        "ad7ea8e66f28",
+        "80154fe65d34",
+        "487c1f22483b",
+        "0ffce361c510",
+        "e4cf90f11156",
+        "9085b6daf043"
       ]
     },
     {
@@ -397,29 +427,6 @@
         "804f7cffd0cc",
         "1cb1357741af",
         "9ceae8cc61ef"
-      ]
-    },
-    {
-      "id": "55c3376cce85",
-      "titulo": "Denmark accuses Russia of plotting to assassinate US-Ukrainian rapper",
-      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9834/live/684cb9a0-e527-11f1-b32f-b1f1a32fbf0e.jpg",
-      "fontes": 5,
-      "umaFonteSo": false,
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "conflitos",
-        "diplomacia",
-        "politica"
-      ],
-      "maisRecente": "2026-11-20T21:57:07.000Z",
-      "noticias": [
-        "55c3376cce85",
-        "ad7ea8e66f28",
-        "487c1f22483b",
-        "0ffce361c510",
-        "e4cf90f11156"
       ]
     },
     {
@@ -784,27 +791,6 @@
         "97f1ff305240",
         "c6db44933161",
         "8a0988db7ba1"
-      ]
-    },
-    {
-      "id": "504b0b4b2a8e",
-      "titulo": "Denmark Expels Russian Diplomat After Accusing Moscow of Planning a Hit",
-      "imagem": "https://static01.nyt.com/images/2026/11/20/multimedia/20int-denmark-ukraine-rapper-photo-pqwv/20int-denmark-ukraine-rapper-photo-pqwv-mediumSquareAt3X.jpg",
-      "fontes": 3,
-      "umaFonteSo": false,
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "diplomacia",
-        "conflitos",
-        "politica"
-      ],
-      "maisRecente": "2026-11-20T21:47:21.000Z",
-      "noticias": [
-        "504b0b4b2a8e",
-        "7c7462cdf7f6",
-        "80154fe65d34"
       ]
     },
     {
@@ -1494,26 +1480,6 @@
       "noticias": [
         "ef0c03a57e04",
         "90364238795c"
-      ]
-    },
-    {
-      "id": "3f8818fb4a99",
-      "titulo": "Two arrested in Denmark over alleged plot to kill a Ukrainian rapper",
-      "imagem": "https://meduza.io/imgly/share/1795204892/en/news/2026/11/20/two-arrested-in-denmark-over-alleged-plot-to-kill-a-ukrainian-rapper",
-      "fontes": 2,
-      "umaFonteSo": false,
-      "regioes": [
-        "europa"
-      ],
-      "temas": [
-        "conflitos",
-        "midia",
-        "direitos"
-      ],
-      "maisRecente": "2026-11-20T20:01:32.000Z",
-      "noticias": [
-        "3f8818fb4a99",
-        "9085b6daf043"
       ]
     },
     {
@@ -2777,6 +2743,26 @@
       ]
     },
     {
+      "id": "968fb7c8ed69",
+      "titulo": "Six Palestinians killed in Israeli strikes on Gaza, civil defence says",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "oriente-medio",
+        "global"
+      ],
+      "temas": [
+        "conflitos",
+        "direitos",
+        "saude"
+      ],
+      "maisRecente": "2026-11-21T00:15:23.000Z",
+      "noticias": [
+        "968fb7c8ed69"
+      ]
+    },
+    {
       "id": "cb67e500f861",
       "titulo": "At more than 190cm, Tiny Tim could be a national cattle record breaker",
       "imagem": "https://live-production.wcms.abc-cdn.net.au/5faf716950f95fc8b387789720820646?impolicy=wcms_crop_resize&cropH=2583&cropW=4592&xPos=0&yPos=432&width=862&height=485",
@@ -2791,6 +2777,23 @@
       "maisRecente": "2026-11-21T00:04:22.000Z",
       "noticias": [
         "cb67e500f861"
+      ]
+    },
+    {
+      "id": "7dbf331b0d39",
+      "titulo": "‘A source of inspiration’: California celebrates the late civil rights icon Dolores Huerta",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "maisRecente": "2026-11-21T00:03:47.000Z",
+      "noticias": [
+        "7dbf331b0d39"
       ]
     },
     {
@@ -4109,6 +4112,24 @@
       "maisRecente": "2026-11-20T21:48:28.000Z",
       "noticias": [
         "b53594c5c796"
+      ]
+    },
+    {
+      "id": "504b0b4b2a8e",
+      "titulo": "Denmark Expels Russian Diplomat After Accusing Moscow of Planning a Hit",
+      "imagem": "https://static01.nyt.com/images/2026/11/20/multimedia/20int-denmark-ukraine-rapper-photo-pqwv/20int-denmark-ukraine-rapper-photo-pqwv-mediumSquareAt3X.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia"
+      ],
+      "maisRecente": "2026-11-20T21:47:21.000Z",
+      "noticias": [
+        "504b0b4b2a8e"
       ]
     },
     {
@@ -21189,98 +21210,38 @@
       "noticias": [
         "cfd4839a6d8c"
       ]
-    },
-    {
-      "id": "8c012b11df7b",
-      "titulo": "Where the Mango Meets the Orchid: Prospects in Pakistan-Singapore Relations",
-      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2026/11/thediplomat_2026-11-20-092812.jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "diplomacia"
-      ],
-      "maisRecente": "2026-11-20T00:15:00.000Z",
-      "noticias": [
-        "8c012b11df7b"
-      ]
-    },
-    {
-      "id": "4756b043fd4c",
-      "titulo": "Lee Kang-in named top Asian footballer overseas for 2nd straight year",
-      "imagem": "https://img.yna.co.kr/photo/yna/YH/2026/11/18/PYH2026111801080001300_P2.jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "maisRecente": "2026-11-20T00:14:04.000Z",
-      "noticias": [
-        "4756b043fd4c"
-      ]
-    },
-    {
-      "id": "ad37c01d2442",
-      "titulo": "Why Canada is embracing AI data centres while the US pushes back",
-      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/20d8/live/7f60e450-df9a-11f1-a9ad-6774a3284d10.png",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "america-norte"
-      ],
-      "temas": [
-        "politica",
-        "tecnologia"
-      ],
-      "maisRecente": "2026-11-20T00:13:24.000Z",
-      "noticias": [
-        "ad37c01d2442"
-      ]
-    },
-    {
-      "id": "297bb25fedf3",
-      "titulo": "Secretário de Guerra dos EUA promete ampliar apoio militar ao Equador no combate ao narcotráfico",
-      "imagem": "https://media.gazetadopovo.com.br/2026/11/19210724/eua-equador-narcoterrorismo-960x540.jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "america-latina",
-        "america-norte"
-      ],
-      "temas": [
-        "conflitos",
-        "politica",
-        "diplomacia"
-      ],
-      "maisRecente": "2026-11-20T00:13:14.000Z",
-      "noticias": [
-        "297bb25fedf3"
-      ]
-    },
-    {
-      "id": "05e895f3e5c8",
-      "titulo": "EXTREME WEATHER EVENT: Brace for the super El Niño summer of proactive water restrictions",
-      "imagem": "https://cdn.dailymaverick.co.za/i/Q3OL0QeeNDZDd7zcrULZk2N_Nxw=/800x0/smart/filters:strip_exif()/file/attachments/3000/0000262024_866511_233782.jpeg",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "maisRecente": "2026-11-20T00:10:47.000Z",
-      "noticias": [
-        "05e895f3e5c8"
-      ]
     }
   ],
   "noticias": [
+    {
+      "id": "968fb7c8ed69",
+      "titulo": "Six Palestinians killed in Israeli strikes on Gaza, civil defence says",
+      "resumo": "Israeli strikes killed six people in the Gaza Strip on Friday, the civil defence agency in the war-shattered territory told AFP, despite a ceasefire. Mahmoud Bassal, the spokesman for Gaza's civil defence agency, said that four Palestinians were killed and several others wounded…",
+      "link": "https://www.middleeasteye.net/live-blog/live-blog-update/six-palestinians-killed-israeli-strikes-gaza-civil-defence-says",
+      "fonte": "middleeasteye",
+      "fonteNome": "Middle East Eye",
+      "pais": "Reino Unido",
+      "visao": "Site focado no Oriente Médio, crítico de governos da região",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:15:23.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "oriente-medio",
+        "global"
+      ],
+      "temas": [
+        "conflitos",
+        "direitos",
+        "saude"
+      ],
+      "coletadoEm": "2026-11-21T00:16:13.360Z"
+    },
     {
       "id": "cb67e500f861",
       "titulo": "At more than 190cm, Tiny Tim could be a national cattle record breaker",
@@ -21306,6 +21267,32 @@
         "outros"
       ],
       "coletadoEm": "2026-11-21T00:09:49.871Z"
+    },
+    {
+      "id": "7dbf331b0d39",
+      "titulo": "‘A source of inspiration’: California celebrates the late civil rights icon Dolores Huerta",
+      "resumo": "A public vigil and celebration of life honor the civil rights activist and co-founder of United Farm Workers union Hundreds of people came out to honor and celebrate the life and legacy of the California civil rights activist Dolores Huerta at a celebration-of-life event Friday…",
+      "link": "https://www.theguardian.com/us-news/2026/nov/20/dolores-huerta-celebration-of-life-california",
+      "fonte": "guardian",
+      "fonteNome": "The Guardian",
+      "pais": "Reino Unido",
+      "visao": "Jornal britânico, centro-esquerda",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:03:47.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-21T00:16:13.360Z"
     },
     {
       "id": "b7fdc1f987cb",
@@ -21469,6 +21456,33 @@
         "direitos"
       ],
       "coletadoEm": "2026-11-21T00:02:15.048Z"
+    },
+    {
+      "id": "3d25e4332273",
+      "titulo": "Denmark Expels Russian Defense Attaché Over Foiled Plot to Assassinate Ukrainian Rapper",
+      "resumo": "Denmark ordered Russia’s defense attaché to leave within seven days after intelligence officials linked Moscow to a foiled assassination plot targeting Ukrainian-American rapper Kyivstoner. Police intercepted armed suspects minutes before his September concert, while Danish Prime…",
+      "link": "https://www.kyivpost.com/post/90775",
+      "fonte": "kyivpost",
+      "fonteNome": "Kyiv Post",
+      "pais": "Ucrânia",
+      "visao": "Jornal ucraniano",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:49:04.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://static.kyivpost.com/storage/2026/11/21/b331c217fdffb1ff64b0d0de330c749f.jpg?w=640&q=90&f=jpg",
+      "imagemCredito": "Kyiv Post",
+      "regioes": [
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-21T00:16:13.360Z"
     },
     {
       "id": "19c0628393b8",
@@ -60092,140 +60106,6 @@
         "diplomacia",
         "conflitos",
         "politica"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "8c012b11df7b",
-      "titulo": "Where the Mango Meets the Orchid: Prospects in Pakistan-Singapore Relations",
-      "resumo": "The recent visit to Pakistan by Singapore's foreign minister offers an opportunity to establish a framework of cooperation connecting South Asia with Southeast Asia.",
-      "link": "https://thediplomat.com/2026/11/where-the-mango-meets-the-orchid-prospects-in-pakistan-singapore-relations/",
-      "fonte": "thediplomat",
-      "fonteNome": "The Diplomat",
-      "pais": "Japão",
-      "visao": "Revista de análise sobre Ásia-Pacífico",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "analise",
-      "publicadoEm": "2026-11-20T00:15:00.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://images.thediplomat.com/v1/td-list-l-2/2026/11/thediplomat_2026-11-20-092812.jpg",
-      "imagemCredito": "The Diplomat",
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "diplomacia"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "4756b043fd4c",
-      "titulo": "Lee Kang-in named top Asian footballer overseas for 2nd straight year",
-      "resumo": "SEOUL, Nov. 20 (Yonhap) -- Lee Kang-in of Atletico Madrid has become the first b...",
-      "link": "https://en.yna.co.kr/view/AEN20261120001900315",
-      "fonte": "yonhap",
-      "fonteNome": "Yonhap",
-      "pais": "Coreia do Sul",
-      "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
-      "idioma": "en",
-      "estatal": true,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-20T00:14:04.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://img.yna.co.kr/photo/yna/YH/2026/11/18/PYH2026111801080001300_P2.jpg",
-      "imagemCredito": "Yonhap",
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "ad37c01d2442",
-      "titulo": "Why Canada is embracing AI data centres while the US pushes back",
-      "resumo": "Shark Tank's Kevin O'Leary is among the big investors looking to Canada as a data centre development destination, while his US project faces local opposition.",
-      "link": "https://www.bbc.co.uk/news/articles/cmx2q223z1jlo?at_medium=RSS&at_campaign=rss",
-      "fonte": "bbc",
-      "fonteNome": "BBC News",
-      "pais": "Reino Unido",
-      "visao": "Emissora pública britânica",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-20T00:13:24.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/20d8/live/7f60e450-df9a-11f1-a9ad-6774a3284d10.png",
-      "imagemCredito": "BBC News",
-      "regioes": [
-        "america-norte"
-      ],
-      "temas": [
-        "politica",
-        "tecnologia"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "297bb25fedf3",
-      "titulo": "Secretário de Guerra dos EUA promete ampliar apoio militar ao Equador no combate ao narcotráfico",
-      "resumo": "Secretário de Guerra dos EUA se reuniu com o presidente do Equador e prometeu reforçar cooperação militar contra o narcotráfico.",
-      "link": "https://www.gazetadopovo.com.br/mundo/secretario-de-guerra-dos-eua-promete-ampliar-apoio-militar-ao-equador-no-combate-ao-narcotrafico/",
-      "fonte": "gazetadopovo",
-      "fonteNome": "Gazeta do Povo Mundo",
-      "pais": "Brasil",
-      "visao": "Jornal brasileiro, direita conservadora",
-      "idioma": "pt",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-20T00:13:14.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://media.gazetadopovo.com.br/2026/11/19210724/eua-equador-narcoterrorismo-960x540.jpg",
-      "imagemCredito": "Gazeta do Povo Mundo",
-      "regioes": [
-        "america-latina",
-        "america-norte"
-      ],
-      "temas": [
-        "conflitos",
-        "politica",
-        "diplomacia"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "05e895f3e5c8",
-      "titulo": "EXTREME WEATHER EVENT: Brace for the super El Niño summer of proactive water restrictions",
-      "resumo": "It’s the tipping point where state failure, with the stench of corruption hanging over it, clashes head-on with an extreme weather event. At least there is R10bn of funding available to confront this unfolding crisis – testimony to the National Treasury’s standing as an island of…",
-      "link": "https://www.dailymaverick.co.za/article/2026-11-20-brace-for-the-super-el-nino-summer-of-proactive-water-restrictions/",
-      "fonte": "dailymaverick",
-      "fonteNome": "Daily Maverick",
-      "pais": "África do Sul",
-      "visao": "Jornal sul-africano independente",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-20T00:10:47.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://cdn.dailymaverick.co.za/i/Q3OL0QeeNDZDd7zcrULZk2N_Nxw=/800x0/smart/filters:strip_exif()/file/attachments/3000/0000262024_866511_233782.jpeg",
-      "imagemCredito": "Daily Maverick",
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "outros"
       ],
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     }
