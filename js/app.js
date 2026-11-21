@@ -327,6 +327,7 @@ document.addEventListener('submit', (e) => {
   e.preventDefault();
   const campo = document.getElementById('campo-sugestao');
   if (meus.sugerirTema(campo.value)) aviso(emIngles() ? 'Added to the queue' : 'Tema na fila');
+  else if (campo.value.trim()) aviso(emIngles() ? 'Already in the queue' : 'Esse tema já está na fila');
 });
 
 // ---------- Histórico em calendário ----------

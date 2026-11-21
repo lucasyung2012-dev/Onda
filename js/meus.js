@@ -111,6 +111,9 @@ export const fila = () => Object.values(dados.fila || {}).sort((a, b) => a.ordem
 export function sugerirTema(texto) {
   const limpo = texto.trim().slice(0, 200);
   if (!limpo) return false;
+  // Não deixa a mesma sugestão entrar duas vezes na fila.
+  const normal = (t) => t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+  if (fila().some((x) => normal(x.texto) === normal(limpo))) return false;
   const agora = new Date().toISOString();
   const id = `fila-${Date.now().toString(36)}`;
   const ultima = fila().at(-1);
