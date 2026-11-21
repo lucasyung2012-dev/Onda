@@ -280,7 +280,33 @@ const hojeData = () => estado.dados.dataReferencia;
 /** Botão "Acompanhar" já com o estado certo (ativo? limite do dia?). */
 function botaoPara(id) {
   const contagem = meus.doDia(hojeData()).length;
-  return telas.botaoAcompanhar(id, meus.acompanhando(id), contagem, meus.LIMITE_POR_DIA, contagem >= meus.LIMITE_POR_DIA);
+  return telas.botaoAcompanhar(id, meus.acompanhando(id), contagem, meus.LIMITE_POR_DIA, contagem >= meus.LIMITE_POR_DIA, meus.guardada(id));
+}
+
+/** Redesenha os botões de uma notícia que estão na tela (depois de acompanhar ou guardar). */
+function redesenharBotoes(id, qual) {
+  document.querySelectorAll(`[data-acompanhar="${CSS.escape(id)}"]`).forEach((b) => {
+    const linha = b.closest('.acompanhar-linha');
+    if (linha) {
+      linha.outerHTML = botaoPara(id);
+      document.querySelector(`[data-${qual}="${CSS.escape(id)}"]`)?.classList.add('pulsar');
+    }
+  });
+}
+
+/** Guardar (ou tirar dos guardados) uma notícia. Sem limite por dia. */
+function alternarGuardar(botao) {
+  const id = botao.dataset.guardar;
+  if (meus.guardada(id)) {
+    meus.tirarDasGuardadas(id);
+    aviso(emIngles() ? 'Removed from saved' : 'Tirada das guardadas');
+  } else {
+    const item = itemParaAcompanhar(id);
+    if (!item) return;
+    meus.guardar(item);
+    aviso(emIngles() ? 'Saved' : 'Guardada no Meu Onda');
+  }
+  redesenharBotoes(id, 'guardar');
 }
 
 /**
@@ -320,13 +346,7 @@ function alternarAcompanhar(botao) {
     aviso('★ Acompanhando');
   }
   // Atualiza todos os botões dessa notícia que estão na tela
-  document.querySelectorAll(`[data-acompanhar="${CSS.escape(id)}"]`).forEach((b) => {
-    const linha = b.closest('.acompanhar-linha');
-    if (linha) {
-      linha.outerHTML = botaoPara(id);
-      document.querySelector(`[data-acompanhar="${CSS.escape(id)}"]`)?.classList.add('pulsar');
-    }
-  });
+  redesenharBotoes(id, 'acompanhar');
 }
 
 function htmlMeu() {
@@ -342,6 +362,7 @@ function htmlMeu() {
     todos,
     aba: estado.abaMeu,
     dataHoje: hojeData(),
+    guardadas: meus.guardadas(),
   });
 }
 
@@ -626,7 +647,7 @@ document.addEventListener('input', (e) => {
 // ---------- Toques e cliques ----------
 
 document.addEventListener('click', (e) => {
-  const alvo = e.target.closest('[data-fato], [data-gaveta], [data-modo], [data-sub], [data-mais], [data-voltar], [data-fechar-folha], [data-recarregar], [data-acompanhar], [data-dropbox], [data-copiar-prompt], [data-mes], [data-dia], [data-resposta], [data-pular], [data-config], [data-fila], [data-chave-robo], [data-periodo], [data-grupo-ind], [data-aba-meu], [data-avisos], #veu');
+  const alvo = e.target.closest('[data-fato], [data-gaveta], [data-modo], [data-sub], [data-mais], [data-voltar], [data-fechar-folha], [data-recarregar], [data-acompanhar], [data-dropbox], [data-copiar-prompt], [data-mes], [data-dia], [data-resposta], [data-pular], [data-config], [data-fila], [data-chave-robo], [data-periodo], [data-grupo-ind], [data-aba-meu], [data-avisos], [data-guardar], [data-tirar-guardada], #veu');
   if (!alvo) return;
   const idEditor = alvo.closest('.editor')?.dataset.item;
 
@@ -667,6 +688,8 @@ document.addEventListener('click', (e) => {
   } else if (alvo.dataset.mes) { estado.cal.mes = alvo.dataset.mes; atualizarHistorico(); }
   else if (alvo.dataset.dia) { estado.cal.dia = alvo.dataset.dia; estado.cal.mes = alvo.dataset.dia.slice(0, 7); atualizarHistorico(); }
   else if (alvo.dataset.acompanhar) alternarAcompanhar(alvo);
+  else if (alvo.dataset.guardar) alternarGuardar(alvo);
+  else if (alvo.dataset.tirarGuardada) { meus.tirarDasGuardadas(alvo.dataset.tirarGuardada); conteudo.innerHTML = htmlMeu(); }
   else if (alvo.dataset.dropbox === 'conectar') dropbox.conectar();
   else if (alvo.dataset.dropbox === 'sincronizar') { meus.sincronizar(); aviso('Sincronizando…'); }
   else if (alvo.dataset.dropbox === 'desconectar') dropbox.desconectar().then(() => { estado.nomeConta = ''; conteudo.innerHTML = htmlMeu(); aviso('Dropbox desconectado deste aparelho'); });

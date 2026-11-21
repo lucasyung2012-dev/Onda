@@ -13,7 +13,7 @@ import * as dropbox from './dropbox.js';
 export const LIMITE_POR_DIA = 5;
 const CHAVE_LOCAL = 'onda-meus';
 
-const vazio = () => ({ versao: 1, itens: {}, fila: {}, avisos: {}, apagados: {} });
+const vazio = () => ({ versao: 1, itens: {}, fila: {}, avisos: {}, guardadas: {}, apagados: {} });
 
 let dados = (() => { try { return JSON.parse(localStorage.getItem(CHAVE_LOCAL)) || vazio(); } catch { return vazio(); } })();
 let ultimaSincronizacao = null;
@@ -86,7 +86,7 @@ function juntar(a, b) {
   for (const [id, quando] of Object.entries(b.apagados || {})) {
     if (!resultado.apagados[id] || quando > resultado.apagados[id]) resultado.apagados[id] = quando;
   }
-  for (const campo of ['itens', 'fila', 'avisos']) {
+  for (const campo of ['itens', 'fila', 'avisos', 'guardadas']) {
     resultado[campo] = {};
     for (const fonte of [a[campo] || {}, b[campo] || {}]) {
       for (const item of Object.values(fonte)) {
@@ -99,6 +99,35 @@ function juntar(a, b) {
     }
   }
   return resultado;
+}
+
+// ---------- Notícias guardadas ----------
+// "Guardar" é diferente de "Acompanhar": não tem limite por dia e não é
+// para escrever análise, só para não perder a notícia. Fica para sempre.
+// O id ganha o prefixo "g-" para não se misturar com o do Acompanhar
+// (assim, tirar dos guardados não apaga a sua análise da mesma notícia).
+
+const idGuardada = (id) => `g-${id}`;
+
+/** As guardadas, da mais recente para a mais antiga. */
+export const guardadas = () => Object.values(dados.guardadas || {}).sort((a, b) => b.guardadaEm.localeCompare(a.guardadaEm));
+export const guardada = (id) => Boolean(dados.guardadas?.[idGuardada(id)]);
+
+export function guardar(item) {
+  const agora = new Date().toISOString();
+  const id = idGuardada(item.id);
+  dados.guardadas ||= {};
+  dados.guardadas[id] = { ...item, id, fatoId: item.id, guardadaEm: agora, atualizadoEm: agora };
+  delete dados.apagados[id];
+  salvar();
+}
+
+export function tirarDasGuardadas(id) {
+  const chave = id.startsWith('g-') ? id : idGuardada(id);
+  if (!dados.guardadas?.[chave]) return;
+  delete dados.guardadas[chave];
+  dados.apagados[chave] = new Date().toISOString();
+  salvar();
 }
 
 // ---------- Avisos no celular ----------

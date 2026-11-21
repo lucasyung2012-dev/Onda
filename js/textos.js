@@ -39,7 +39,7 @@ const EN = {
   'Para ir além: as fontes': 'Going further: the sources', 'Para pensar': 'Something to think about',
   'Os temas vão se acumulando aqui, um por dia.': 'Topics pile up here, one a day.',
   // Meu Onda
-  'O que você acompanha': 'What you follow', 'Dia a dia': 'Day by day', 'Acompanhar': 'Follow', 'Acompanhando': 'Following',
+  'O que você acompanha': 'What you follow', 'Dia a dia': 'Day by day', 'Acompanhar': 'Follow', 'Acompanhando': 'Following', 'Guardar': 'Save', 'Guardada': 'Saved',
   'Minha análise': 'My analysis', 'Meu palpite': 'My guess', 'Peça a análise a uma IA': 'Ask an AI for the analysis',
   'Copiar prompt': 'Copy prompt', 'Deixar de acompanhar': 'Unfollow', 'Conectar o Dropbox': 'Connect Dropbox',
   'Conecte o seu Dropbox': 'Connect your Dropbox', 'Dropbox conectado': 'Dropbox connected', 'Sincronizar': 'Sync',

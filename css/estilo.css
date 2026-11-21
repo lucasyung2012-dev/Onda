@@ -1188,3 +1188,17 @@ img { max-width: 100%; display: block; }
 .semana-atalho { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 14px; padding: 14px 16px; border-radius: var(--raio); text-decoration: none; color: #fff; background: linear-gradient(140deg, #5B4BC4, #13628A); }
 .semana-atalho strong { font-family: var(--fonte-titulo); font-size: 17px; display: block; }
 .semana-atalho small { color: #CFE9F2; font-size: 12.5px; }
+
+/* ---------- Guardar (notícias guardadas, sem limite) ---------- */
+.botao.guardar { gap: 6px; }
+.botao.guardar .marcador { flex: none; }
+.botao.guardar.ativo { background: var(--ouro-fundo); border-color: color-mix(in srgb, var(--ouro) 45%, transparent); color: var(--ouro); }
+.botao.guardar.pulsar { animation: pulsar 0.45s ease; }
+.guardadas { display: grid; gap: 12px; }
+.guardada-cartao { padding: 16px; animation: subir 0.4s ease both; animation-delay: calc(var(--i, 0) * 40ms); }
+.guardada-cartao h3 { margin: 4px 0 6px; font-size: 17px; line-height: 1.3; }
+.guardada-cartao p:not(.rotulo) { margin: 0 0 8px; color: var(--texto-2, inherit); line-height: 1.45; }
+.guardada-fontes { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 8px; padding: 0; }
+.guardada-fontes a { display: inline-block; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--borda, rgba(127,127,127,.3)); font-size: 13px; text-decoration: none; color: inherit; }
+/* Com 4 abas (Meu Onda), o texto encolhe um pouco para caber no celular. */
+.segmentos[style*="--qtd:4"] button { font-size: 13px; padding-left: 2px; padding-right: 2px; letter-spacing: -0.1px; }

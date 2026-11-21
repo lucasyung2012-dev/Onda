@@ -759,18 +759,41 @@ export function folhaArquivo(item, dados, botao = '') {
 
 // ---------- ACOMPANHAR ----------
 
-/** Botão de estrela "Acompanhar". `cheio` = já chegou ao limite de hoje. */
-export function botaoAcompanhar(id, ativo, contagem, limite, cheio) {
+/** Desenho do marcador de página (o ícone do "Guardar"). Cheio quando já está guardada. */
+const marcador = (cheio) => `<svg class="marcador" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M6 3h12v18l-6-4.5L6 21z" fill="${cheio ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>`;
+
+/** Botão "Guardar": sem limite, só para não perder a notícia. */
+function botaoGuardar(id, guardado) {
+  return `<button class="botao guardar ${guardado ? 'ativo' : ''}" type="button" data-guardar="${esc(id)}" aria-pressed="${guardado}">${marcador(guardado)}${guardado ? t('Guardada') : t('Guardar')}</button>`;
+}
+
+/** Botões de estrela "Acompanhar" e "Guardar". `cheio` = o Acompanhar já chegou ao limite de hoje. */
+export function botaoAcompanhar(id, ativo, contagem, limite, cheio, guardado = false) {
   if (ativo) {
     return `<div class="acompanhar-linha">
       <button class="botao acompanhar ativo" type="button" data-acompanhar="${esc(id)}"><span class="estrela" aria-hidden="true">★</span>${t('Acompanhando')}</button>
+      ${botaoGuardar(id, guardado)}
       <a class="botao principal" href="#analise-minha/${esc(id)}">${t('Minha análise')} <span class="icone i-seta" aria-hidden="true"></span></a>
     </div>`;
   }
   return `<div class="acompanhar-linha">
     <button class="botao acompanhar" type="button" data-acompanhar="${esc(id)}" ${cheio ? 'data-cheio' : ''}><span class="estrela" aria-hidden="true">☆</span>${t('Acompanhar')}</button>
-    <span class="subtitulo">${contagem}/${limite} hoje</span>
+    ${botaoGuardar(id, guardado)}
+    <span class="subtitulo">${contagem}/${limite} ${emIngles() ? 'today' : 'hoje'}</span>
   </div>`;
+}
+
+/** Uma notícia guardada: título, resumo e as fontes com link (abre mesmo semanas depois). */
+function linhaGuardada(item, i) {
+  const fontes = (item.materias || []).slice(0, 4);
+  return `
+    <div class="cartao guardada-cartao" style="--i:${Math.min(i, 10)}">
+      <p class="rotulo">${esc(dataCurta(item.data))}${item.origem === 'destaque' ? ` · ${emIngles() ? 'story of the day' : 'destaque'}` : ''}</p>
+      <h3>${esc(item.titulo)}</h3>
+      ${item.resumo ? `<p>${esc(item.resumo)}</p>` : ''}
+      ${fontes.length ? `<ul class="guardada-fontes">${fontes.map((m) => `<li><a href="${esc(m.link)}" target="_blank" rel="noopener">${esc(m.fonte)}</a></li>`).join('')}</ul>` : ''}
+      <button class="botao-texto" type="button" data-tirar-guardada="${esc(item.id)}">${emIngles() ? 'Remove' : 'Tirar das guardadas'}</button>
+    </div>`;
 }
 
 // ---------- MEU ONDA ----------
@@ -806,7 +829,7 @@ function nomeDaSemana(dataIso, hojeIso) {
   return `${dataCurta(s.toISOString().slice(0, 10))} – ${dataCurta(fim.toISOString().slice(0, 10))}`;
 }
 
-export function telaMeu({ situacao, nomeConta, hoje, anteriores, todos, limite, dados, historico, aba, dataHoje }) {
+export function telaMeu({ situacao, nomeConta, hoje, anteriores, todos, limite, dados, historico, aba, dataHoje, guardadas = [] }) {
   const en = emIngles();
   // Seus números
   const analises = todos.filter((i) => i.minha?.texto).length;
@@ -836,7 +859,7 @@ export function telaMeu({ situacao, nomeConta, hoje, anteriores, todos, limite, 
     </div>`;
   }
 
-  const abas = [['hoje', en ? 'Today' : 'Hoje'], ['anteriores', en ? 'Earlier' : 'Anteriores'], ['calendario', en ? 'Calendar' : 'Calendário']];
+  const abas = [['hoje', en ? 'Today' : 'Hoje'], ['anteriores', en ? 'Earlier' : 'Anteriores'], ['guardadas', en ? 'Saved' : 'Guardadas'], ['calendario', en ? 'Calendar' : 'Calendário']];
   const abaAtual = abas.some(([a]) => a === aba) ? aba : 'hoje';
   let corpo;
   if (abaAtual === 'hoje') {
@@ -851,6 +874,11 @@ export function telaMeu({ situacao, nomeConta, hoje, anteriores, todos, limite, 
           <p class="rotulo" style="margin:16px 0 8px">${esc(semana)} · ${lista.length}</p>
           <div class="importa cascata">${lista.map((it, i) => linhaMeu(it, dados, i)).join('')}</div>`).join('')
       : `<p class="vazio">${en ? 'Stories you followed on other days show up here.' : 'As notícias que você acompanhou em outros dias aparecem aqui.'}</p>`;
+  } else if (abaAtual === 'guardadas') {
+    corpo = guardadas.length
+      ? `<p class="subtitulo" style="margin-bottom:12px">${guardadas.length} ${en ? (guardadas.length === 1 ? 'saved story' : 'saved stories') : (guardadas.length === 1 ? 'notícia guardada' : 'notícias guardadas')}</p>
+         <div class="guardadas cascata">${guardadas.map((it, i) => linhaGuardada(it, i)).join('')}</div>`
+      : `<p class="vazio">${en ? 'Tap Save on any story to keep it here forever, with no daily limit.' : 'Toque em Guardar em qualquer notícia para ela ficar aqui para sempre, sem limite por dia.'}</p>`;
   } else {
     corpo = `<p class="subtitulo" style="margin-bottom:12px">${en ? 'Each day keeps the Onda edition (story of the day + 5) and what you followed.' : 'Cada dia guarda sozinho a edição do Onda (destaque + 5) e o que você acompanhou.'}</p>${historico}`;
   }
@@ -861,7 +889,7 @@ export function telaMeu({ situacao, nomeConta, hoje, anteriores, todos, limite, 
       ${numeros}
       ${atalhoSemana()}
       <div style="margin-top:12px">${conta}</div>
-      <div class="segmentos" style="--qtd:3;--pos:${abas.findIndex(([a]) => a === abaAtual)};margin-top:18px" role="group">
+      <div class="segmentos" style="--qtd:4;--pos:${abas.findIndex(([a]) => a === abaAtual)};margin-top:18px" role="group">
         <span class="indicador"></span>
         ${abas.map(([a, nome]) => `<button type="button" data-aba-meu="${a}" aria-pressed="${a === abaAtual}">${nome}</button>`).join('')}
       </div>
