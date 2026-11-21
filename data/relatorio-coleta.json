@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-21T01:00:47.166Z",
+  "geradoEm": "2026-11-21T01:03:33.042Z",
   "fontesOk": 69,
   "fontesComErro": 1,
-  "noticiasNovasNestaRodada": 8,
+  "noticiasNovasNestaRodada": 0,
   "porFonte": [
     {
       "id": "nyt",
@@ -469,8 +469,8 @@
       "nome": "AllAfrica",
       "status": "ok",
       "itensNoFeed": 33,
-      "aceitas": 32,
-      "descartadasPorIdade": 1,
+      "aceitas": 31,
+      "descartadasPorIdade": 2,
       "comImagem": 0
     },
     {
