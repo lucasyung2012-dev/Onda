@@ -1,0 +1,6 @@
+{
+  "name": "onda",
+  "private": true,
+  "description": "Onda — do mundo até você. Este arquivo só diz ao Node que os .js do projeto usam import/export (o robô de indicadores lê js/fontes-indicadores.js).",
+  "type": "module"
+}

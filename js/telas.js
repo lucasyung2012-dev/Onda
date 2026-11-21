@@ -929,109 +929,190 @@ export function secaoFila(itens, { conectado, roboLigado }) {
 }
 
 // ---------- PAINEL DE INDICADORES ----------
+// Tela principal: grade Brasil / Mundo. Ao tocar, a página do indicador
+// com gráfico (períodos e toque para ver o valor) e "comparar com uma data".
 
-/** 5,8889 → "5,89" (no idioma escolhido) */
-function valorIndicador(ind) {
-  return new Intl.NumberFormat(emIngles() ? 'en-US' : 'pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(ind.ultimo.valor);
+const fmtNumero = (v, casas = 2) => new Intl.NumberFormat(emIngles() ? 'en-US' : 'pt-BR', { minimumFractionDigits: casas, maximumFractionDigits: casas }).format(v);
+export const valorFormatado = (ind, v) => `${ind.prefixo || ''}${fmtNumero(v)}${ind.sufixo || ''}`;
+
+/** Data do dado: "19/11/2026", "out/2026" (mensal) ou "2025" (anual). */
+export function dataIndicador(ind, iso) {
+  if (ind.frequencia === 'anual') return iso.slice(0, 4);
+  if (ind.frequencia === 'mensal') {
+    return new Intl.DateTimeFormat(emIngles() ? 'en-US' : 'pt-BR', { month: 'short', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${iso}T12:00:00Z`));
+  }
+  const [a, m, d] = iso.split('-');
+  return emIngles() ? `${m}/${d}/${a}` : `${d}/${m}/${a}`;
 }
 
-/** "▲ 1,4%" ou "▼ 0,25 p.p." (subir = âmbar, cair = turquesa: subir não é "bom" nem "ruim" em si). */
-function variacaoIndicador(v, sufixo = '') {
-  if (!v) return '';
-  const n = v.porcento ?? v.pontos;
+/** Selo de variação: ▲ / ▼ com cor (subiu = âmbar, caiu = turquesa). */
+export function selo(variacao, grande = false) {
+  const n = variacao.porcento ?? variacao.pontos;
   if (n === null || n === undefined) return '';
-  const fmt = new Intl.NumberFormat(emIngles() ? 'en-US' : 'pt-BR', { maximumFractionDigits: 2 }).format(Math.abs(n));
+  const classe = n > 0 ? 'sobe' : n < 0 ? 'desce' : 'igual';
   const seta = n > 0 ? '▲' : n < 0 ? '▼' : '•';
-  const classe = n > 0 ? 'sobe' : n < 0 ? 'desce' : '';
-  return `<span class="variacao ${classe}">${seta} ${fmt}${v.porcento !== undefined ? '%' : ' p.p.'}${sufixo}</span>`;
+  const valor = new Intl.NumberFormat(emIngles() ? 'en-US' : 'pt-BR', { maximumFractionDigits: 2 }).format(Math.abs(n));
+  return `<span class="selo ${classe} ${grande ? 'grande' : ''}">${seta} ${valor}${variacao.porcento !== undefined ? '%' : ' p.p.'}</span>`;
 }
 
-/** Gráfico de linha simples (SVG) do último ano. */
-function grafico(serie) {
-  if (!serie || serie.length < 2) return '';
-  const L = 320; const A = 96; const m = 4;
-  const valores = serie.map(([, v]) => v);
-  const min = Math.min(...valores); const max = Math.max(...valores);
-  const x = (i) => m + (i / (serie.length - 1)) * (L - 2 * m);
-  const y = (v) => (max === min ? A / 2 : m + (1 - (v - min) / (max - min)) * (A - 2 * m));
-  const linha = serie.map(([, v], i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)} ${y(v).toFixed(1)}`).join(' ');
-  const area = `${linha} L${x(serie.length - 1).toFixed(1)} ${A} L${x(0).toFixed(1)} ${A} Z`;
-  const fmt = (v) => new Intl.NumberFormat(emIngles() ? 'en-US' : 'pt-BR', { maximumFractionDigits: 2 }).format(v);
-  const rotulo = emIngles() ? 'Chart of the last 12 months' : 'Gráfico dos últimos 12 meses';
-  return `
-    <div class="grafico">
-      <svg viewBox="0 0 ${L} ${A}" preserveAspectRatio="none" role="img" aria-label="${rotulo}">
-        <path d="${area}" class="grafico-area"/><path d="${linha}" class="grafico-linha" vector-effect="non-scaling-stroke"/>
-      </svg>
-      <div class="grafico-legenda"><span>${esc(dataCurta(serie[0][0]))}</span><span>${emIngles() ? 'min' : 'mín.'} ${fmt(min)} · ${emIngles() ? 'max' : 'máx.'} ${fmt(max)}</span><span>${esc(dataCurta(serie[serie.length - 1][0]))}</span></div>
-    </div>`;
-}
+const periodoTexto = (c) => (c.periodo === 'ano anterior' ? (emIngles() ? 'vs. previous year' : 'vs. ano anterior') : (emIngles() ? 'in 30 days' : 'em 30 dias'));
 
-function valorComUnidade(ind) {
-  return `${ind.unidade === 'R$' ? 'R$ ' : ''}${valorIndicador(ind)}${ind.unidade.startsWith('%') ? '%' : ''}`;
-}
-
-/** Faixa compacta no Hoje: os 5 números, cada um leva ao painel. */
+/** Faixa compacta no Hoje. */
 export function resumoIndicadores(dados) {
   if (!dados?.indicadores?.length) return '';
   const en = emIngles();
   return `
     <div class="secao">
-      <div class="secao-cabeca"><h2>${en ? 'Indicators' : 'Indicadores'}</h2><a href="#indicadores">${en ? 'See all' : 'Ver painel'}</a></div>
+      <div class="secao-cabeca"><h2>${en ? 'The world in numbers' : 'O mundo em números'}</h2><a href="#indicadores">${en ? 'See all' : 'Ver todos'}</a></div>
       <div class="faixa-indicadores">
         ${dados.indicadores.map((ind) => `
           <a class="mini-indicador" href="#indicadores/${esc(ind.id)}">
             <span class="nome">${esc(t(ind.nome))}</span>
-            <strong>${valorComUnidade(ind)}</strong>
-            ${variacaoIndicador(ind.variacao30, en ? ' in 30d' : ' em 30 dias')}
+            <strong>${valorFormatado(ind, ind.ultimo.valor)}</strong>
+            ${selo(ind.comparacao)}
           </a>`).join('')}
       </div>
     </div>`;
 }
 
-/** O painel completo. `noticiasDe(id)` devolve as notícias de hoje ligadas a cada indicador. */
-export function telaIndicadores(dados, explicacoes, noticiasDe, foco) {
+/** Tela principal do painel: cartões em duas seções, Brasil e Mundo. */
+export function telaIndicadores(dados) {
   const en = emIngles();
   const titulo = en ? 'The world in numbers' : 'O mundo em números';
   if (!dados?.indicadores?.length) {
     return `<div class="tela">${cabecalho('Indicadores', titulo)}<p class="vazio">${en ? 'Could not load the indicators. Check your connection.' : 'Não deu para carregar os indicadores. Confira a conexão.'}</p></div>`;
   }
-  const subtitulo = en
-    ? 'Official numbers that show how events abroad reach Brazil. Context, not investment advice.'
-    : 'Números oficiais que mostram como o que acontece lá fora chega ao Brasil. É contexto, não dica de investimento.';
-  const cartoes = dados.indicadores.map((ind) => {
-    const ex = explicacoes[ind.id] || {};
-    const ligadas = noticiasDe(ind.id);
-    const unidade = ind.unidade === 'R$' ? '' : ` ${esc(ind.unidade)}`;
-    const atraso = ind.erro ? (en ? ' · not updated today' : ' · não atualizado hoje') : '';
-    const noticias = ligadas.length
-      ? `<p class="rotulo" style="margin-top:12px">${en ? "In today's news" : 'Nas notícias de hoje'}</p>`
-        + ligadas.map((f) => `<button type="button" class="linha-compacta" data-fato="${esc(f.id)}"><span class="n">•</span><span><strong>${esc(f.titulo)}</strong><small>${f.fontes} ${en ? 'sources' : 'fontes'}</small></span><span class="icone i-seta" aria-hidden="true"></span></button>`).join('')
-      : '';
+  const grupo = (id, nome) => {
+    const lista = dados.indicadores.filter((i) => i.grupo === id);
+    if (!lista.length) return '';
     return `
-      <section class="cartao indicador" id="ind-${esc(ind.id)}" ${foco === ind.id ? 'data-foco' : ''}>
-        <div class="indicador-topo">
-          <div>
-            <p class="rotulo">${esc(t(ind.nome))}</p>
-            <p class="valor-grande">${ind.unidade === 'R$' ? '<small>R$</small> ' : ''}${valorIndicador(ind)}<small>${unidade}</small></p>
-            <p class="subtitulo">${en ? 'on' : 'em'} ${esc(dataCurta(ind.ultimo.data))}${atraso}</p>
-          </div>
-          <div class="variacoes">${variacaoIndicador(ind.variacao30, en ? ' 30 days' : ' 30 dias')}${variacaoIndicador(ind.variacao365, en ? ' 12 months' : ' 12 meses')}</div>
+      <div class="secao">
+        <div class="secao-cabeca"><h2>${nome}</h2></div>
+        <div class="grade-indicadores cascata">
+          ${lista.map((ind, i) => {
+            const n = ind.comparacao.porcento ?? ind.comparacao.pontos;
+            return `
+            <a class="cartao-indicador ${n > 0 ? 'sobe' : n < 0 ? 'desce' : ''}" href="#indicadores/${esc(ind.id)}" style="--i:${i}">
+              <span class="nome">${esc(t(ind.nome))}</span>
+              <strong class="valor">${valorFormatado(ind, ind.ultimo.valor)}</strong>
+              ${selo(ind.comparacao)}
+              <small>${periodoTexto(ind.comparacao)} · ${esc(dataIndicador(ind, ind.ultimo.data))}</small>
+            </a>`;
+          }).join('')}
         </div>
-        ${grafico(ind.serie)}
-        ${ex.oQueE ? `<p class="explica"><strong>${en ? 'What it is' : 'O que é'}:</strong> ${esc(ex.oQueE)}</p>` : ''}
-        ${ex.mundo ? `<p class="explica"><strong>${en ? 'What moves it' : 'O que mexe nele'}:</strong> ${esc(ex.mundo)}</p>` : ''}
-        ${ex.voce ? `<p class="explica voce"><strong>${en ? 'How it reaches you' : 'Como chega em você'}:</strong> ${esc(ex.voce)}</p>` : ''}
-        ${noticias}
-        <p class="fonte-indicador">${en ? 'Source' : 'Fonte'}: <a href="${esc(ind.link)}" target="_blank" rel="noopener noreferrer">${esc(ind.fonte)}</a></p>
-      </section>`;
-  }).join('');
+      </div>`;
+  };
   const direto = dados.direto ? (en ? ' (read straight from the sources)' : ' (lido direto das fontes)') : '';
   return `
     <div class="tela">
       <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>${t('Hoje')}</button>
-      ${cabecalho('Indicadores', titulo, subtitulo)}
-      ${cartoes}
+      ${cabecalho('Indicadores', titulo, en ? 'Official numbers that show how events abroad reach Brazil. Tap one to see more. Context, not investment advice.' : 'Números oficiais que mostram como o que acontece lá fora chega ao Brasil. Toque num deles para ver mais. É contexto, não dica de investimento.')}
+      ${grupo('brasil', en ? 'Brazil' : 'Brasil')}
+      ${grupo('mundo', en ? 'World' : 'Mundo')}
       <p class="aviso-ia">${en ? 'Updated' : 'Atualizado'} ${dataHora(dados.geradoEm)}${direto}.</p>
+    </div>`;
+}
+
+/** Os pontos do período escolhido (30d, 6m, 1a, 5a ou tudo). */
+export function pontosDoPeriodo(ind, periodo) {
+  const dias = { '30d': 31, '6m': 183, '1a': 366, '5a': 1830 }[periodo];
+  if (!dias || ind.frequencia === 'anual') return ind.serie;
+  const ultimo = new Date(`${ind.ultimo.data}T12:00:00Z`).getTime();
+  const corte = new Date(ultimo - dias * 86400000).toISOString().slice(0, 10);
+  return ind.serie.filter(([d]) => d >= corte);
+}
+
+/** Gráfico do período; o app mostra o valor do ponto tocado. */
+function graficoIndicador(ind, pontos) {
+  if (pontos.length < 2) return '';
+  const L = 320; const A = 120; const m = 6;
+  const valores = pontos.map(([, v]) => v);
+  const min = Math.min(...valores); const max = Math.max(...valores);
+  const x = (i) => m + (i / (pontos.length - 1)) * (L - 2 * m);
+  const y = (v) => (max === min ? A / 2 : m + (1 - (v - min) / (max - min)) * (A - 2 * m));
+  const linha = pontos.map(([, v], i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)} ${y(v).toFixed(1)}`).join(' ');
+  const area = `${linha} L${x(pontos.length - 1).toFixed(1)} ${A} L${x(0).toFixed(1)} ${A} Z`;
+  const subiu = pontos[pontos.length - 1][1] >= pontos[0][1];
+  return `
+    <div class="grafico grafico-interativo ${subiu ? 'sobe' : 'desce'}" data-grafico="${esc(ind.id)}">
+      <div class="grafico-dica" hidden></div>
+      <svg viewBox="0 0 ${L} ${A}" preserveAspectRatio="none" role="img" aria-label="${emIngles() ? 'Chart' : 'Gráfico'}">
+        <path d="${area}" class="grafico-area"/><path d="${linha}" class="grafico-linha" vector-effect="non-scaling-stroke"/>
+        <line class="grafico-cursor" x1="0" x2="0" y1="0" y2="${A}" vector-effect="non-scaling-stroke" visibility="hidden"/>
+      </svg>
+      <div class="grafico-legenda"><span>${esc(dataIndicador(ind, pontos[0][0]))}</span><span>${emIngles() ? 'min' : 'mín.'} ${valorFormatado(ind, min)} · ${emIngles() ? 'max' : 'máx.'} ${valorFormatado(ind, max)}</span><span>${esc(dataIndicador(ind, pontos[pontos.length - 1][0]))}</span></div>
+    </div>`;
+}
+
+/**
+ * Página de um indicador.
+ * `escolha` = { periodo, dataComparar } — o que você escolheu nos botões e no calendário.
+ */
+export function telaIndicador(ind, explicacao, noticias, escolha) {
+  const en = emIngles();
+  if (!ind) return `<div class="tela"><p class="vazio">${en ? 'Indicator not found.' : 'Indicador não encontrado.'}</p></div>`;
+  const c = ind.comparacao;
+  const n = c.porcento ?? c.pontos;
+  const ex = explicacao || {};
+  const periodos = ind.frequencia === 'anual'
+    ? [['tudo', en ? 'All' : 'Tudo']]
+    : [['30d', en ? '30 days' : '30 dias'], ['6m', en ? '6 months' : '6 meses'], ['1a', en ? '1 year' : '1 ano'], ['5a', en ? '5 years' : '5 anos']];
+  const periodo = periodos.some(([p]) => p === escolha.periodo) ? escolha.periodo : periodos[Math.min(2, periodos.length - 1)][0];
+
+  return `
+    <div class="tela pagina-indicador" data-indicador="${esc(ind.id)}">
+      <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>${en ? 'Indicators' : 'Indicadores'}</button>
+      <div class="indicador-capa ${n > 0 ? 'sobe' : n < 0 ? 'desce' : ''}">
+        <p class="rotulo">${esc(t(ind.nome))} · ${ind.grupo === 'mundo' ? (en ? 'World' : 'Mundo') : (en ? 'Brazil' : 'Brasil')}</p>
+        <p class="valor-gigante">${valorFormatado(ind, ind.ultimo.valor)}</p>
+        <p class="subtitulo">${esc(ind.unidade)} · ${en ? 'data from' : 'dado de'} ${esc(dataIndicador(ind, ind.ultimo.data))}${ind.erro ? (en ? ' · not updated today' : ' · não atualizado hoje') : ''}</p>
+        <div class="de-para">
+          ${selo(c, true)}
+          <span>${periodoTexto(c)}</span>
+        </div>
+        <p class="de-para-valores">${valorFormatado(ind, c.de.valor)} <small>(${esc(dataIndicador(ind, c.de.data))})</small> → <strong>${valorFormatado(ind, ind.ultimo.valor)}</strong></p>
+      </div>
+
+      <div class="segmentos periodos" style="--qtd:${periodos.length};--pos:${periodos.findIndex(([p]) => p === periodo)}" role="group" aria-label="${en ? 'Period' : 'Período'}">
+        <span class="indicador"></span>
+        ${periodos.map(([p, nome]) => `<button type="button" data-periodo="${p}" aria-pressed="${p === periodo}">${nome}</button>`).join('')}
+      </div>
+      <div id="grafico-area">${graficoIndicador(ind, pontosDoPeriodo(ind, periodo))}</div>
+
+      <div class="cartao comparar">
+        <p class="rotulo">${en ? 'Compare with a date' : 'Comparar com uma data'}</p>
+        <input type="date" id="data-comparar" min="${esc(ind.serie[0][0])}" max="${esc(ind.ultimo.data)}" value="${esc(escolha.dataComparar || c.de.data)}">
+        <div id="resultado-comparar">${resultadoComparacao(ind, escolha.dataComparar || c.de.data)}</div>
+      </div>
+
+      <div class="explica-cartoes">
+        ${ex.oQueE ? `<div class="cartao"><p class="rotulo">${en ? 'What it is' : 'O que é'}</p><p>${esc(ex.oQueE)}</p></div>` : ''}
+        ${ex.mundo ? `<div class="cartao"><p class="rotulo">${en ? 'What moves it' : 'O que mexe nele'}</p><p>${esc(ex.mundo)}</p></div>` : ''}
+        ${ex.voce ? `<div class="cartao voce"><p class="rotulo ouro">${en ? 'How it reaches you' : 'Como chega em você'}</p><p>${esc(ex.voce)}</p></div>` : ''}
+      </div>
+
+      ${noticias.length ? `<div class="secao"><div class="secao-cabeca"><h2>${en ? "In today's news" : 'Nas notícias de hoje'}</h2></div>
+        ${noticias.map((f) => `<button type="button" class="linha-compacta" data-fato="${esc(f.id)}"><span class="n">•</span><span><strong>${esc(f.titulo)}</strong><small>${f.fontes} ${en ? 'sources' : 'fontes'}</small></span><span class="icone i-seta" aria-hidden="true"></span></button>`).join('')}</div>` : ''}
+
+      <p class="fonte-indicador">${en ? 'Source' : 'Fonte'}: <a href="${esc(ind.link)}" target="_blank" rel="noopener noreferrer">${esc(ind.fonte)}</a></p>
+    </div>`;
+}
+
+/** "Em 15/10/2026: R$ 5,05 → hoje R$ 5,89 (▲ 16,6%)" */
+export function resultadoComparacao(ind, dataIso) {
+  const en = emIngles();
+  let ponto = null;
+  for (const p of ind.serie) { if (p[0] <= dataIso) ponto = p; else break; }
+  if (!ponto) return `<p class="subtitulo">${en ? 'No data before this date.' : 'Sem dado antes dessa data.'}</p>`;
+  const [d, v] = ponto;
+  const atual = ind.ultimo.valor;
+  const variacao = ind.taxa ? { pontos: Math.round((atual - v) * 100) / 100 } : { porcento: Math.round(((atual - v) / v) * 1000) / 10 };
+  const outroDia = d !== dataIso ? `<small> (${en ? 'closest data' : 'dado mais próximo'}: ${esc(dataIndicador(ind, d))})</small>` : '';
+  return `
+    <div class="comparacao-linha">
+      <div><span class="subtitulo">${en ? 'On that date' : 'Naquela data'}</span><strong>${valorFormatado(ind, v)}</strong>${outroDia}</div>
+      <span class="seta-comparar">→</span>
+      <div><span class="subtitulo">${en ? 'Latest' : 'Agora'}</span><strong>${valorFormatado(ind, atual)}</strong></div>
+      ${selo(variacao, true)}
     </div>`;
 }

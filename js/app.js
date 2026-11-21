@@ -27,6 +27,7 @@ const estado = {
   arquivos: {},       // edições e temas antigos já baixados (para não baixar de novo)
   edicaoAberta: null, // edição antiga que está na tela (para abrir as notícias dela)
   cal: { mes: null, dia: null }, // mês e dia escolhidos no calendário do histórico
+  escolhaIndicador: {}, // período do gráfico e data de comparação de cada indicador
   explorar: { modo: 'regioes', busca: '', limite: 30 },
   gaveta: { chave: '', sub: '', limite: 30 },
 };
@@ -124,7 +125,12 @@ function htmlDaRota({ tela, partes }) {
       return carregarDepois('temas', partes[1], (t) => telas.telaTema(t, anteriores));
     }
     case 'meu': return htmlMeu();
-    case 'indicadores': return telas.telaIndicadores(estado.indicadores, explicacoesNoIdioma(emIngles()), noticiasDoIndicador, partes[1]);
+    case 'indicadores': {
+      if (!partes[1]) return telas.telaIndicadores(estado.indicadores);
+      const ind = estado.indicadores?.indicadores.find((i) => i.id === partes[1]);
+      if (!estado.indicadores) return '<p class="carregando">…</p>';
+      return telas.telaIndicador(ind, explicacoesNoIdioma(emIngles())[partes[1]], noticiasDoIndicador(partes[1]), estado.escolhaIndicador[partes[1]] || {});
+    }
     case 'config': return telas.telaConfig(config.ler(), { conectado: dropbox.conectado(), roboLigado: Boolean(estado.tema?.filaConectada) });
     case 'analise-minha': return telas.telaMinhaAnalise(meus.pegar(partes[1]), dados);
     case 'explorar': {
@@ -343,6 +349,60 @@ function carregarPainel() {
   });
 }
 
+// ---------- Página de um indicador: período, toque no gráfico e comparação ----------
+
+const indicadorAberto = () => {
+  const id = document.querySelector('.pagina-indicador')?.dataset.indicador;
+  return id ? estado.indicadores?.indicadores.find((i) => i.id === id) : null;
+};
+const escolhaDe = (id) => (estado.escolhaIndicador[id] ||= {});
+
+/** Troca o período do gráfico (30 dias, 6 meses, 1 ano, 5 anos). */
+function trocarPeriodo(botao) {
+  const ind = indicadorAberto();
+  if (!ind) return;
+  escolhaDe(ind.id).periodo = botao.dataset.periodo;
+  const seg = botao.closest('.segmentos');
+  seg.style.setProperty('--pos', [...seg.querySelectorAll('button')].indexOf(botao));
+  seg.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b === botao)));
+  // Redesenha só a área do gráfico (a página continua no mesmo lugar)
+  const html = telas.telaIndicador(ind, {}, [], escolhaDe(ind.id));
+  const temp = document.createElement('div');
+  temp.innerHTML = html;
+  document.getElementById('grafico-area').innerHTML = temp.querySelector('#grafico-area').innerHTML;
+}
+
+// Escolheu uma data no calendário de comparação
+document.addEventListener('change', (e) => {
+  if (e.target.id !== 'data-comparar' || !e.target.value) return;
+  const ind = indicadorAberto();
+  if (!ind) return;
+  escolhaDe(ind.id).dataComparar = e.target.value;
+  document.getElementById('resultado-comparar').innerHTML = telas.resultadoComparacao(ind, e.target.value);
+});
+
+// Tocar ou passar o dedo no gráfico mostra o valor daquele dia
+function mostrarPonto(e) {
+  const caixa = e.target.closest('.grafico-interativo');
+  const ind = indicadorAberto();
+  if (!caixa || !ind) return;
+  const pontos = telas.pontosDoPeriodo(ind, escolhaDe(ind.id).periodo || (ind.frequencia === 'anual' ? 'tudo' : '1a'));
+  const svg = caixa.querySelector('svg');
+  const r = svg.getBoundingClientRect();
+  const fracao = Math.min(1, Math.max(0, (e.clientX - r.left) / r.width));
+  const i = Math.round(fracao * (pontos.length - 1));
+  const [data, valor] = pontos[i];
+  const xSvg = 6 + (i / (pontos.length - 1)) * (320 - 12);
+  const cursor = svg.querySelector('.grafico-cursor');
+  cursor.setAttribute('x1', xSvg); cursor.setAttribute('x2', xSvg); cursor.setAttribute('visibility', 'visible');
+  const dica = caixa.querySelector('.grafico-dica');
+  dica.hidden = false;
+  dica.textContent = `${telas.dataIndicador(ind, data)}: ${telas.valorFormatado(ind, valor)}`;
+  dica.style.left = `${Math.min(r.width - 60, Math.max(60, fracao * r.width))}px`;
+}
+document.addEventListener('pointerdown', mostrarPonto);
+document.addEventListener('pointermove', (e) => { if (e.pointerType !== 'mouse' || e.target.closest('.grafico-interativo')) mostrarPonto(e); });
+
 // ---------- Fila de temas sugeridos ----------
 
 /** Data prevista de cada tema da fila: hoje (se antes das 7h e sem tema ainda) ou a partir de amanhã. */
@@ -458,11 +518,12 @@ document.addEventListener('input', (e) => {
 // ---------- Toques e cliques ----------
 
 document.addEventListener('click', (e) => {
-  const alvo = e.target.closest('[data-fato], [data-gaveta], [data-modo], [data-sub], [data-mais], [data-voltar], [data-fechar-folha], [data-recarregar], [data-acompanhar], [data-dropbox], [data-copiar-prompt], [data-mes], [data-dia], [data-resposta], [data-pular], [data-config], [data-fila], [data-chave-robo], #veu');
+  const alvo = e.target.closest('[data-fato], [data-gaveta], [data-modo], [data-sub], [data-mais], [data-voltar], [data-fechar-folha], [data-recarregar], [data-acompanhar], [data-dropbox], [data-copiar-prompt], [data-mes], [data-dia], [data-resposta], [data-pular], [data-config], [data-fila], [data-chave-robo], [data-periodo], #veu');
   if (!alvo) return;
   const idEditor = alvo.closest('.editor')?.dataset.item;
 
-  if (alvo.dataset.fila) {
+  if (alvo.dataset.periodo) trocarPeriodo(alvo);
+  else if (alvo.dataset.fila) {
     const id = alvo.dataset.id;
     if (alvo.dataset.fila === 'tirar') meus.tirarDaFila(id);
     else meus.moverNaFila(id, alvo.dataset.fila === 'subir' ? -1 : 1);
