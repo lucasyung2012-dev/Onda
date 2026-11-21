@@ -50,6 +50,7 @@ const inteiro = (i, max) => Number.isInteger(i) && i >= 0 && i < max;
 
 const REGRAS = `Você é o professor do Onda, um radar geopolítico pessoal de um estudante brasileiro de São Paulo, curioso, que quer ENTENDER O MUNDO e como ele chega ao dia a dia dele.
 Regras: use SOMENTE as informações dos textos fornecidos; não invente fatos, números, datas, nomes ou citações. Separe fato de interpretação. Não exagere o impacto no Brasil.
+Números e palavras: escreva em português do Brasil. Cuidado com textos de Portugal: lá "mil milhões" = bilhão e "bilião" = TRILHÃO no Brasil; converta sempre (ex.: "12,2 biliões de euros" vira "12,2 trilhões de euros"). Grafia do Brasil ("diretamente", não "directamente").
 Estilo: português do Brasil, claro, envolvente, como um bom professor de cursinho; explique termos difíceis; use exemplos concretos dos textos. Responda apenas com JSON válido.`;
 
 // ---------- Wikipedia ----------
@@ -291,7 +292,7 @@ ${material(artigos, PALAVRAS.funcionamento)}
 Explique como o tema funciona por dentro. JSON:
 {"comoFunciona": "<3 a 5 parágrafos separados por \\n\\n: regras, quem decide, quem paga, quem manda, como as peças se encaixam>",
  "numeros": [{"valor": "<número exatamente como nos textos, com unidade>", "significado": "<o que ele mostra>", "fonte": <índice [n]>}]}
-Números: 3 a 6, só os que aparecem nos textos. Têm de ser QUANTIDADES que ajudam a entender o tema (valores em dinheiro, porcentagens, número de membros, população, produção...), nunca um ano sozinho.`, 3500, (r) => {
+Números: 3 a 6, só os que aparecem nos textos. Prefira os mais recentes; se o número for de um ano específico, diga o ano no "significado" (ex.: "PIB da UE em 2010"). Têm de ser QUANTIDADES que ajudam a entender o tema (valores em dinheiro, porcentagens, número de membros, população, produção...), nunca um ano sozinho.`, 3500, (r) => {
     if (!r.comoFunciona) throw new Error('sem funcionamento');
     r.numeros = (r.numeros || []).filter((n) => n.valor && n.significado && fonteValida(n.fonte)).slice(0, 6);
   }));
@@ -306,7 +307,7 @@ ${textoNoticias ? `\nNotícias recentes:\n${textoNoticias}` : ''}
 Mostre os interesses de cada ator. JSON:
 {"atores": [{"nome": "<país, organização ou grupo>", "quer": "<o que ele quer>", "porque": "<por que quer isso>"}],
  "mitos": [{"mito": "<ideia comum, mas errada ou incompleta>", "verdade": "<o que os textos mostram>"}]}
-Atores: 3 a 6. Mitos: 0 a 3 (só se os textos permitirem).`, 3000, (r) => {
+Atores: 3 a 6 países, blocos ou grupos com interesses próprios e duradouros no tema (não as peças internas, como órgãos e cargos, que já aparecem em "como funciona"; e não um país só porque saiu numa notícia da semana). Mitos: 0 a 3 (só se os textos permitirem).`, 3000, (r) => {
     r.atores = (r.atores || []).filter((x) => x.nome && x.quer).slice(0, 6);
     r.mitos = (r.mitos || []).filter((x) => x.mito && x.verdade).slice(0, 3);
     if (!r.atores.length) throw new Error('sem atores');
