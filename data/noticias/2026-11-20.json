@@ -2,6 +2,59 @@
   "data": "2026-11-20",
   "noticias": [
     {
+      "id": "cb67e500f861",
+      "titulo": "At more than 190cm, Tiny Tim could be a national cattle record breaker",
+      "resumo": "A Holstein-Friesian named Tiny Tim is thought to be Australia's biggest living steer, knocking the late legend Knickers off the throne.",
+      "link": "https://www.abc.net.au/news/2026-11-21/tiny-tim-could-be-australias-next-biggest-steer/107396504",
+      "fonte": "abcau",
+      "fonteNome": "ABC News Austrália",
+      "pais": "Austrália",
+      "visao": "Emissora pública australiana",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:04:22.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/5faf716950f95fc8b387789720820646?impolicy=wcms_crop_resize&cropH=2583&cropW=4592&xPos=0&yPos=432&width=862&height=485",
+      "imagemCredito": "ABC News Austrália",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-21T00:09:49.871Z"
+    },
+    {
+      "id": "b7fdc1f987cb",
+      "titulo": "Mamdani announces plan to close New York's Rikers Island jail by 2032",
+      "resumo": "Plans to shutter the troubled facility date back to 2019, when the city council first voted to close it but delays arose over where to place inmates.",
+      "link": "https://www.bbc.co.uk/news/articles/cmjeqv89egylo?at_medium=RSS&at_campaign=rss",
+      "fonte": "bbc",
+      "fonteNome": "BBC News",
+      "pais": "Reino Unido",
+      "visao": "Emissora pública britânica",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:01:39.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4622/live/d8e189d0-e52b-11f1-964d-a1d5fe40573e.jpg",
+      "imagemCredito": "BBC News",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "politica",
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-21T00:09:49.871Z"
+    },
+    {
       "id": "8b2c2a617246",
       "titulo": "Three Houthi ballistic missiles intercepted over Riyadh, Saudi-led coalition says",
       "resumo": "Three ballistic missiles launched by Houthis towards Riyadh were intercepted and destroyed by Saudi-led coalition's air defences, spokesman for the coalition, Major General Turki Al Malki said on X. Turki's announcement comes after the Saudi Civil Defence agency issued, and later…",
@@ -37241,5 +37294,5 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     }
   ],
-  "atualizadoEm": "2026-11-21T00:02:15.048Z"
+  "atualizadoEm": "2026-11-21T00:09:49.871Z"
 }

@@ -1,10 +1,10 @@
 {
-  "geradoEm": "2026-11-21T00:02:15.048Z",
+  "geradoEm": "2026-11-21T00:09:49.871Z",
   "fuso": "America/Sao_Paulo",
   "dataReferencia": "2026-11-20",
   "janelaHoras": 24,
-  "totalNoticias": 1450,
-  "totalFatos": 1164,
+  "totalNoticias": 1441,
+  "totalFatos": 1157,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -80,18 +80,16 @@
       "id": "3640a3fbb952",
       "titulo": "'Friends' But Who Benefits? Notes from an Historic Summit, Myanmar's Genocide Ruling, Time to 'Bre-join' the EU?",
       "imagem": "https://s.france24.com/media/display/cfefa95a-e518-11f1-b6ef-13439ca2fe89/w:1024/p:16x9/2026-11-19T230006Z-1256675834-RC2WQOACA4BG-RTRMADP-3-CYBERSECURITY-DRONES-RISK.jpg",
-      "fontes": 10,
+      "fontes": 9,
       "umaFonteSo": false,
       "regioes": [
         "asia-pacifico",
-        "oriente-medio",
-        "africa"
+        "oriente-medio"
       ],
       "temas": [
         "direitos",
         "politica",
-        "diplomacia",
-        "conflitos"
+        "diplomacia"
       ],
       "maisRecente": "2026-11-20T19:42:58.000Z",
       "noticias": [
@@ -104,8 +102,7 @@
         "c3c9f0569bbd",
         "18c9f9eb2cf4",
         "1122161db4c7",
-        "b5b5389eec49",
-        "c77fcaf2e982"
+        "b5b5389eec49"
       ]
     },
     {
@@ -137,6 +134,32 @@
         "406da3cf784a",
         "e0b1167422c9",
         "6c49addc3e67"
+      ]
+    },
+    {
+      "id": "b7fdc1f987cb",
+      "titulo": "Mamdani announces plan to close New York's Rikers Island jail by 2032",
+      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4622/live/d8e189d0-e52b-11f1-964d-a1d5fe40573e.jpg",
+      "fontes": 7,
+      "umaFonteSo": false,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros",
+        "direitos",
+        "politica",
+        "saude"
+      ],
+      "maisRecente": "2026-11-21T00:01:39.000Z",
+      "noticias": [
+        "b7fdc1f987cb",
+        "e36ffc2479c4",
+        "9850fda4b50d",
+        "90bd58a66c31",
+        "bea6757a09d1",
+        "9051ff4ef067",
+        "1f3046b4e817"
       ]
     },
     {
@@ -273,30 +296,6 @@
         "403c1b9feff1",
         "92b1903e2810",
         "d51383a5608f"
-      ]
-    },
-    {
-      "id": "e36ffc2479c4",
-      "titulo": "Mayor Mamdani announces plan to close New York's Rikers Island jail by 2032",
-      "imagem": "https://static.toiimg.com/photo/msid-136036120,imgsize-67902.cms",
-      "fontes": 6,
-      "umaFonteSo": false,
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "outros",
-        "direitos",
-        "saude"
-      ],
-      "maisRecente": "2026-11-20T18:50:33.000Z",
-      "noticias": [
-        "e36ffc2479c4",
-        "9850fda4b50d",
-        "90bd58a66c31",
-        "bea6757a09d1",
-        "9051ff4ef067",
-        "1f3046b4e817"
       ]
     },
     {
@@ -2775,6 +2774,23 @@
       "noticias": [
         "3108ce6aeed3",
         "e15866f2229f"
+      ]
+    },
+    {
+      "id": "cb67e500f861",
+      "titulo": "At more than 190cm, Tiny Tim could be a national cattle record breaker",
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/5faf716950f95fc8b387789720820646?impolicy=wcms_crop_resize&cropH=2583&cropW=4592&xPos=0&yPos=432&width=862&height=485",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "maisRecente": "2026-11-21T00:04:22.000Z",
+      "noticias": [
+        "cb67e500f861"
       ]
     },
     {
@@ -17866,13 +17882,11 @@
         "asia-pacifico"
       ],
       "temas": [
-        "tecnologia",
-        "diplomacia"
+        "tecnologia"
       ],
       "maisRecente": "2026-11-20T07:58:20.000Z",
       "noticias": [
-        "38de3597bee1",
-        "867ff21f9fc4"
+        "38de3597bee1"
       ]
     },
     {
@@ -18156,8 +18170,7 @@
         "043ec543dad1",
         "0f0f505e7775",
         "9e1d13f9b3dc",
-        "4c5e08a0efa7",
-        "2d5877f6416e"
+        "4c5e08a0efa7"
       ]
     },
     {
@@ -21265,146 +21278,62 @@
       "noticias": [
         "05e895f3e5c8"
       ]
-    },
-    {
-      "id": "4360ac421a2d",
-      "titulo": "Massive hope for pancreatic cancer pill after trial saw tumours vanish",
-      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4568/live/3c973e20-e4be-11f1-99a1-253766e7ad8b.png",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "maisRecente": "2026-11-20T00:08:22.000Z",
-      "noticias": [
-        "4360ac421a2d"
-      ]
-    },
-    {
-      "id": "5224b1e893ee",
-      "titulo": "Tariff disputes on hold, but unresolved as APEC meeting gets underway",
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/Tariff-disputes-on-hold-but-unresolved-as-APEC-meeting-gets-underway-1SduogRwLKg/img/a7c140bbb8174074a39c91ad4807101c/a7c140bbb8174074a39c91ad4807101c-1280.jpeg",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "economia"
-      ],
-      "maisRecente": "2026-11-20T00:05:44.000Z",
-      "noticias": [
-        "5224b1e893ee"
-      ]
-    },
-    {
-      "id": "9b3d1b1975e1",
-      "titulo": "Mark Carney’s Asian tour aims to diversify Canada’s trading partners",
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/Mark-Carney-s-Asian-tour-aims-to-diversify-Canada-s-trading-partners-1SduhsHbaA8/img/f2392c20a52241f0bf97a4d327c3f777/f2392c20a52241f0bf97a4d327c3f777-1280.jpeg",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "america-norte"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "maisRecente": "2026-11-20T00:05:35.000Z",
-      "noticias": [
-        "9b3d1b1975e1"
-      ]
-    },
-    {
-      "id": "f06709be47af",
-      "titulo": "APEC: Can China & the US cooperate on AI?",
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/APEC-Can-China-the-US-cooperate-on-AI--1SdubHSggYU/img/5acdc8118e1a4254b5ec0c64cc48ad33/5acdc8118e1a4254b5ec0c64cc48ad33-1280.jpeg",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "tecnologia"
-      ],
-      "maisRecente": "2026-11-20T00:05:26.000Z",
-      "noticias": [
-        "f06709be47af"
-      ]
-    },
-    {
-      "id": "b49409016700",
-      "titulo": "Brazil taps technology to improve coffee quality and meet demand",
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/Brazil-taps-technology-to-improve-coffee-quality-and-meet-demand-1SdtWoyxkYg/img/c47b55968ee747e4b8428ecf1dbca81f/c47b55968ee747e4b8428ecf1dbca81f-1280.jpeg",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "brasil"
-      ],
-      "temas": [
-        "tecnologia"
-      ],
-      "maisRecente": "2026-11-20T00:05:17.000Z",
-      "noticias": [
-        "b49409016700"
-      ]
-    },
-    {
-      "id": "0766d7022c40",
-      "titulo": "Mexico diversifies agriculture for new markets",
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/Mexico-diversifies-agriculture-for-new-markets-1SdtAUAoFvq/img/e5dd397f1f76408aaaee8a36ea5d8e37/e5dd397f1f76408aaaee8a36ea5d8e37-1280.jpeg",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "america-latina"
-      ],
-      "temas": [
-        "economia"
-      ],
-      "maisRecente": "2026-11-20T00:05:09.000Z",
-      "noticias": [
-        "0766d7022c40"
-      ]
-    },
-    {
-      "id": "4981ed85e8b5",
-      "titulo": "Chinese truck manufacturers aim to expand in Brazil",
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/Chinese-truck-manufacturers-aim-to-expand-in-Brazil-1SdtpODg96U/img/6e5cf8306a9c4aa68f2f89af048b78b0/6e5cf8306a9c4aa68f2f89af048b78b0-1280.jpeg",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "asia-pacifico",
-        "brasil"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "maisRecente": "2026-11-20T00:04:59.000Z",
-      "noticias": [
-        "4981ed85e8b5"
-      ]
-    },
-    {
-      "id": "099aa6ea7e0a",
-      "titulo": "Seoul subway union launches 'work-to-rule' campaign over hiring, wage dispute",
-      "imagem": "https://img.yna.co.kr/photo/yna/YH/2026/11/19/PYH2026111914990001300_P2.jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "economia"
-      ],
-      "maisRecente": "2026-11-20T00:04:02.000Z",
-      "noticias": [
-        "099aa6ea7e0a"
-      ]
     }
   ],
   "noticias": [
+    {
+      "id": "cb67e500f861",
+      "titulo": "At more than 190cm, Tiny Tim could be a national cattle record breaker",
+      "resumo": "A Holstein-Friesian named Tiny Tim is thought to be Australia's biggest living steer, knocking the late legend Knickers off the throne.",
+      "link": "https://www.abc.net.au/news/2026-11-21/tiny-tim-could-be-australias-next-biggest-steer/107396504",
+      "fonte": "abcau",
+      "fonteNome": "ABC News Austrália",
+      "pais": "Austrália",
+      "visao": "Emissora pública australiana",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:04:22.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/5faf716950f95fc8b387789720820646?impolicy=wcms_crop_resize&cropH=2583&cropW=4592&xPos=0&yPos=432&width=862&height=485",
+      "imagemCredito": "ABC News Austrália",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-21T00:09:49.871Z"
+    },
+    {
+      "id": "b7fdc1f987cb",
+      "titulo": "Mamdani announces plan to close New York's Rikers Island jail by 2032",
+      "resumo": "Plans to shutter the troubled facility date back to 2019, when the city council first voted to close it but delays arose over where to place inmates.",
+      "link": "https://www.bbc.co.uk/news/articles/cmjeqv89egylo?at_medium=RSS&at_campaign=rss",
+      "fonte": "bbc",
+      "fonteNome": "BBC News",
+      "pais": "Reino Unido",
+      "visao": "Emissora pública britânica",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:01:39.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4622/live/d8e189d0-e52b-11f1-964d-a1d5fe40573e.jpg",
+      "imagemCredito": "BBC News",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "politica",
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-21T00:09:49.871Z"
+    },
     {
       "id": "8b2c2a617246",
       "titulo": "Three Houthi ballistic missiles intercepted over Riyadh, Saudi-led coalition says",
@@ -60297,299 +60226,6 @@
       ],
       "temas": [
         "outros"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "867ff21f9fc4",
-      "titulo": "Dubai eyes closer ties with S. Korea on AI in logistics, mobility: official",
-      "resumo": "DUBAI, Nov. 20 (Yonhap) -- Dubai sees potential for closer cooperation with Sout...",
-      "link": "https://en.yna.co.kr/view/AEN20261120001400320",
-      "fonte": "yonhap",
-      "fonteNome": "Yonhap",
-      "pais": "Coreia do Sul",
-      "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
-      "idioma": "en",
-      "estatal": true,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-20T00:09:21.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://img.yna.co.kr/etc/inner/EN/2026/11/20/AEN20261120001400320_01_i_P2.jpg",
-      "imagemCredito": "Yonhap",
-      "regioes": [
-        "oriente-medio",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "diplomacia",
-        "tecnologia"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "4360ac421a2d",
-      "titulo": "Massive hope for pancreatic cancer pill after trial saw tumours vanish",
-      "resumo": "Daily pill daraxonrasib appears to shrink and possibly even eliminate tumours in some patients with one of the deadliest cancers.",
-      "link": "https://www.bbc.co.uk/news/articles/cqrmgjnzz9l0o?at_medium=RSS&at_campaign=rss",
-      "fonte": "bbc",
-      "fonteNome": "BBC News",
-      "pais": "Reino Unido",
-      "visao": "Emissora pública britânica",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-20T00:08:22.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4568/live/3c973e20-e4be-11f1-99a1-253766e7ad8b.png",
-      "imagemCredito": "BBC News",
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "c77fcaf2e982",
-      "titulo": "INTERNATIONAL JUSTICE: SA sold weapons to Myanmar while it was committing genocide, sparking calls for charges",
-      "resumo": "South Africa’s arms sales to Myanmar between 2017 and 2021 face renewed scrutiny after the International Court of Justice found the military government committed genocide.",
-      "link": "https://www.dailymaverick.co.za/article/2026-11-20-rights-group-calls-for-criminal-probe-into-sa-arms-sales-to-genocide-linked-myanmar/",
-      "fonte": "dailymaverick",
-      "fonteNome": "Daily Maverick",
-      "pais": "África do Sul",
-      "visao": "Jornal sul-africano independente",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-20T00:08:03.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://cdn.dailymaverick.co.za/i/dfE0oBBepzUSYimqHL7jXtWWkgQ=/800x0/smart/filters:strip_exif()/file/attachments/orphans/peterfab-Myanmar-saimplications2_755283.jpg",
-      "imagemCredito": "Daily Maverick",
-      "regioes": [
-        "africa",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "conflitos",
-        "direitos",
-        "politica"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "5224b1e893ee",
-      "titulo": "Tariff disputes on hold, but unresolved as APEC meeting gets underway",
-      "resumo": "",
-      "link": "https://newsus.cgtn.com/news/2026-11-20/Tariff-disputes-on-hold-but-unresolved-as-APEC-meeting-gets-underway-1SduogRwLKg/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-      "fonte": "cgtn",
-      "fonteNome": "CGTN",
-      "pais": "China",
-      "visao": "TV estatal chinesa (versão oficial de Pequim)",
-      "idioma": "en",
-      "estatal": true,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-20T00:05:44.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/Tariff-disputes-on-hold-but-unresolved-as-APEC-meeting-gets-underway-1SduogRwLKg/img/a7c140bbb8174074a39c91ad4807101c/a7c140bbb8174074a39c91ad4807101c-1280.jpeg",
-      "imagemCredito": "CGTN",
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "economia"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "9b3d1b1975e1",
-      "titulo": "Mark Carney’s Asian tour aims to diversify Canada’s trading partners",
-      "resumo": "",
-      "link": "https://newsus.cgtn.com/news/2026-11-20/Mark-Carney-s-Asian-tour-aims-to-diversify-Canada-s-trading-partners-1SduhsHbaA8/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-      "fonte": "cgtn",
-      "fonteNome": "CGTN",
-      "pais": "China",
-      "visao": "TV estatal chinesa (versão oficial de Pequim)",
-      "idioma": "en",
-      "estatal": true,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-20T00:05:35.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/Mark-Carney-s-Asian-tour-aims-to-diversify-Canada-s-trading-partners-1SduhsHbaA8/img/f2392c20a52241f0bf97a4d327c3f777/f2392c20a52241f0bf97a4d327c3f777-1280.jpeg",
-      "imagemCredito": "CGTN",
-      "regioes": [
-        "america-norte"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "f06709be47af",
-      "titulo": "APEC: Can China & the US cooperate on AI?",
-      "resumo": "",
-      "link": "https://newsus.cgtn.com/news/2026-11-20/APEC-Can-China-the-US-cooperate-on-AI--1SdubHSggYU/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-      "fonte": "cgtn",
-      "fonteNome": "CGTN",
-      "pais": "China",
-      "visao": "TV estatal chinesa (versão oficial de Pequim)",
-      "idioma": "en",
-      "estatal": true,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-20T00:05:26.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/APEC-Can-China-the-US-cooperate-on-AI--1SdubHSggYU/img/5acdc8118e1a4254b5ec0c64cc48ad33/5acdc8118e1a4254b5ec0c64cc48ad33-1280.jpeg",
-      "imagemCredito": "CGTN",
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "tecnologia"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "b49409016700",
-      "titulo": "Brazil taps technology to improve coffee quality and meet demand",
-      "resumo": "",
-      "link": "https://newsus.cgtn.com/news/2026-11-20/Brazil-taps-technology-to-improve-coffee-quality-and-meet-demand-1SdtWoyxkYg/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-      "fonte": "cgtn",
-      "fonteNome": "CGTN",
-      "pais": "China",
-      "visao": "TV estatal chinesa (versão oficial de Pequim)",
-      "idioma": "en",
-      "estatal": true,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-20T00:05:17.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/Brazil-taps-technology-to-improve-coffee-quality-and-meet-demand-1SdtWoyxkYg/img/c47b55968ee747e4b8428ecf1dbca81f/c47b55968ee747e4b8428ecf1dbca81f-1280.jpeg",
-      "imagemCredito": "CGTN",
-      "regioes": [
-        "brasil"
-      ],
-      "temas": [
-        "tecnologia"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "0766d7022c40",
-      "titulo": "Mexico diversifies agriculture for new markets",
-      "resumo": "",
-      "link": "https://newsus.cgtn.com/news/2026-11-20/Mexico-diversifies-agriculture-for-new-markets-1SdtAUAoFvq/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-      "fonte": "cgtn",
-      "fonteNome": "CGTN",
-      "pais": "China",
-      "visao": "TV estatal chinesa (versão oficial de Pequim)",
-      "idioma": "en",
-      "estatal": true,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-20T00:05:09.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/Mexico-diversifies-agriculture-for-new-markets-1SdtAUAoFvq/img/e5dd397f1f76408aaaee8a36ea5d8e37/e5dd397f1f76408aaaee8a36ea5d8e37-1280.jpeg",
-      "imagemCredito": "CGTN",
-      "regioes": [
-        "america-latina"
-      ],
-      "temas": [
-        "economia"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "4981ed85e8b5",
-      "titulo": "Chinese truck manufacturers aim to expand in Brazil",
-      "resumo": "",
-      "link": "https://newsus.cgtn.com/news/2026-11-20/Chinese-truck-manufacturers-aim-to-expand-in-Brazil-1SdtpODg96U/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-      "fonte": "cgtn",
-      "fonteNome": "CGTN",
-      "pais": "China",
-      "visao": "TV estatal chinesa (versão oficial de Pequim)",
-      "idioma": "en",
-      "estatal": true,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-20T00:04:59.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/Chinese-truck-manufacturers-aim-to-expand-in-Brazil-1SdtpODg96U/img/6e5cf8306a9c4aa68f2f89af048b78b0/6e5cf8306a9c4aa68f2f89af048b78b0-1280.jpeg",
-      "imagemCredito": "CGTN",
-      "regioes": [
-        "asia-pacifico",
-        "brasil"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "099aa6ea7e0a",
-      "titulo": "Seoul subway union launches 'work-to-rule' campaign over hiring, wage dispute",
-      "resumo": "SEOUL, Nov. 20 (Yonhap) -- Unionized workers at Seoul Metro launched a \"work-to-...",
-      "link": "https://en.yna.co.kr/view/AEN20261120001500315",
-      "fonte": "yonhap",
-      "fonteNome": "Yonhap",
-      "pais": "Coreia do Sul",
-      "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
-      "idioma": "en",
-      "estatal": true,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-20T00:04:02.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://img.yna.co.kr/photo/yna/YH/2026/11/19/PYH2026111914990001300_P2.jpg",
-      "imagemCredito": "Yonhap",
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "economia"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "2d5877f6416e",
-      "titulo": "Seoul shares open sharply lower tracking U.S. losses after Anthropic debut",
-      "resumo": "SEOUL, Nov. 20 (Yonhap) -- Seoul shares opened sharply lower Friday, tracking ov...",
-      "link": "https://en.yna.co.kr/view/AEN20261120001100320",
-      "fonte": "yonhap",
-      "fonteNome": "Yonhap",
-      "pais": "Coreia do Sul",
-      "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
-      "idioma": "en",
-      "estatal": true,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-20T00:03:13.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://img.yna.co.kr/photo/yna/YH/2026/11/19/PYH2026111920820001300_P2.jpg",
-      "imagemCredito": "Yonhap",
-      "regioes": [
-        "america-norte",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "economia"
       ],
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     }

@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-21T00:02:15.048Z",
+  "geradoEm": "2026-11-21T00:09:49.871Z",
   "dataReferencia": "2026-11-20",
   "fuso": "America/Sao_Paulo",
-  "totalNoticias": 1450,
+  "totalNoticias": 1441,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -308,17 +308,15 @@
       "credito": "France 24",
       "regioes": [
         "asia-pacifico",
-        "oriente-medio",
-        "africa"
+        "oriente-medio"
       ],
       "temas": [
         "direitos",
         "politica",
-        "diplomacia",
-        "conflitos"
+        "diplomacia"
       ],
-      "fontes": 10,
-      "paises": 10,
+      "fontes": 9,
+      "paises": 9,
       "maisRecente": "2026-11-20T19:42:58.000Z",
       "materias": [
         {
@@ -439,18 +437,6 @@
           "titulo": "Myanmar Committed Genocide Against the Rohingya, Top Global Court Finds",
           "link": "https://www.nytimes.com/2026/11/19/world/europe/myanmar-genocide-icj-decision-.html",
           "publicadoEm": "2026-11-20T01:37:20.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Daily Maverick",
-          "pais": "África do Sul",
-          "visao": "Jornal sul-africano independente",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "INTERNATIONAL JUSTICE: SA sold weapons to Myanmar while it was committing genocide, sparking calls for charges",
-          "link": "https://www.dailymaverick.co.za/article/2026-11-20-rights-group-calls-for-criminal-probe-into-sa-arms-sales-to-genocide-linked-myanmar/",
-          "publicadoEm": "2026-11-20T00:08:03.000Z",
           "semData": false
         }
       ]
@@ -583,6 +569,111 @@
           "titulo": "Myanmar's genocide defense failed at the ICJ. Israel made many of the same arguments",
           "link": "https://www.haaretz.com/world-news/asia-and-australia/2026-11-20/ty-article-magazine/.premium/the-icj-has-found-a-country-guilty-of-genocide-israel-should-be-worried/000001a1-f85f-d5b4-a3bd-f97f72a30000",
           "publicadoEm": "2026-11-20T12:44:29.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "b7fdc1f987cb",
+      "titulo": "Mamdani announces plan to close New York's Rikers Island jail by 2032",
+      "resumo": "Plans to shutter the troubled facility date back to 2019, when the city council first voted to close it but delays arose over where to place inmates.",
+      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4622/live/d8e189d0-e52b-11f1-964d-a1d5fe40573e.jpg",
+      "credito": "BBC News",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros",
+        "direitos",
+        "politica",
+        "saude"
+      ],
+      "fontes": 7,
+      "paises": 7,
+      "maisRecente": "2026-11-21T00:01:39.000Z",
+      "materias": [
+        {
+          "fonte": "BBC News",
+          "pais": "Reino Unido",
+          "visao": "Emissora pública britânica",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Mamdani announces plan to close New York's Rikers Island jail by 2032",
+          "link": "https://www.bbc.co.uk/news/articles/cmjeqv89egylo?at_medium=RSS&at_campaign=rss",
+          "publicadoEm": "2026-11-21T00:01:39.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Mayor Mamdani announces plan to close New York's Rikers Island jail by 2032",
+          "link": "https://www.straitstimes.com/world/mayor-mamdani-announces-plan-to-close-new-yorks-rikers-island-jail-by-2032",
+          "publicadoEm": "2026-11-20T18:50:33.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Al Jazeera",
+          "pais": "Catar",
+          "visao": "Rede do Catar, foco no Sul Global e no mundo árabe",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Zohran Mamdani unveils plan to close New York’s Rikers Island jail by 2032",
+          "link": "https://www.aljazeera.com/news/2026/11/20/mamdani-unveils-plan-to-close-new-yorks-rikers-island-by-2032?traffic_source=rss",
+          "publicadoEm": "2026-11-20T17:54:55.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Times of India",
+          "pais": "Índia",
+          "visao": "Maior jornal indiano em inglês",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Zohran Mamdani sets 2032 deadline to close notorious Rikers Island jail",
+          "link": "https://timesofindia.indiatimes.com/world/us/our-nation-has-a-mass-incarceration-problem-mamdani-sets-2032-deadline-to-close-notorious-rikers-island-jail/articleshow/136035337.cms",
+          "publicadoEm": "2026-11-20T17:46:00.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "South China Morning Post",
+          "pais": "Hong Kong",
+          "visao": "Jornal de Hong Kong sobre China e Ásia",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Mamdani unveils plan to close New York’s notorious Rikers Island jail",
+          "link": "https://www.scmp.com/news/world/united-states-canada/article/3375293/mamdani-unveils-plan-close-new-yorks-notorious-rikers-island-jail",
+          "publicadoEm": "2026-11-20T17:00:43.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Euronews",
+          "pais": "União Europeia",
+          "visao": "Canal de notícias pan-europeu",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "NYC mayor unveils plan to close notorious Rikers Island jail by 2032",
+          "link": "https://www.euronews.com/2026/11/20/nyc-mayor-unveils-plan-to-close-notorious-rikers-island-jail-by-2032",
+          "publicadoEm": "2026-11-20T15:03:20.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "El País (inglês)",
+          "pais": "Espanha",
+          "visao": "Jornal de referência espanhol",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Mamdani unveils plan to close Rikers Island, New York’s notorious jail plagued by allegations of abuse, violence and death",
+          "link": "https://english.elpais.com/usa/2026-11-20/mamdani-unveils-plan-to-close-rikers-island-new-yorks-notorious-jail-plagued-by-allegations-of-abuse-violence-and-death.html",
+          "publicadoEm": "2026-11-20T12:41:54.000Z",
           "semData": false
         }
       ]
@@ -1092,98 +1183,6 @@
           "titulo": "Trump ousts cyber director after tech outages spark criticism",
           "link": "https://www.channelnewsasia.com/world/white-house-fires-cybersecurity-chief-widespread-outages-6567801",
           "publicadoEm": "2026-11-20T01:13:00.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "e36ffc2479c4",
-      "titulo": "Mayor Mamdani announces plan to close New York's Rikers Island jail by 2032",
-      "resumo": "Nov 20 - New York City Mayor Zohran Mamdani on Friday unveiled his plan to close the city's infamous Rikers Island jail complex by 2032, five years after a previously set deadline, and replace it with four borough-based jails, expanded mental healthcare, re-entry programs, and…",
-      "imagem": "https://static.toiimg.com/photo/msid-136036120,imgsize-67902.cms",
-      "credito": "The Times of India",
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "outros",
-        "direitos",
-        "saude"
-      ],
-      "fontes": 6,
-      "paises": 6,
-      "maisRecente": "2026-11-20T18:50:33.000Z",
-      "materias": [
-        {
-          "fonte": "The Straits Times",
-          "pais": "Singapura",
-          "visao": "Jornal de referência de Singapura",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Mayor Mamdani announces plan to close New York's Rikers Island jail by 2032",
-          "link": "https://www.straitstimes.com/world/mayor-mamdani-announces-plan-to-close-new-yorks-rikers-island-jail-by-2032",
-          "publicadoEm": "2026-11-20T18:50:33.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Al Jazeera",
-          "pais": "Catar",
-          "visao": "Rede do Catar, foco no Sul Global e no mundo árabe",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Zohran Mamdani unveils plan to close New York’s Rikers Island jail by 2032",
-          "link": "https://www.aljazeera.com/news/2026/11/20/mamdani-unveils-plan-to-close-new-yorks-rikers-island-by-2032?traffic_source=rss",
-          "publicadoEm": "2026-11-20T17:54:55.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The Times of India",
-          "pais": "Índia",
-          "visao": "Maior jornal indiano em inglês",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Zohran Mamdani sets 2032 deadline to close notorious Rikers Island jail",
-          "link": "https://timesofindia.indiatimes.com/world/us/our-nation-has-a-mass-incarceration-problem-mamdani-sets-2032-deadline-to-close-notorious-rikers-island-jail/articleshow/136035337.cms",
-          "publicadoEm": "2026-11-20T17:46:00.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "South China Morning Post",
-          "pais": "Hong Kong",
-          "visao": "Jornal de Hong Kong sobre China e Ásia",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Mamdani unveils plan to close New York’s notorious Rikers Island jail",
-          "link": "https://www.scmp.com/news/world/united-states-canada/article/3375293/mamdani-unveils-plan-close-new-yorks-notorious-rikers-island-jail",
-          "publicadoEm": "2026-11-20T17:00:43.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Euronews",
-          "pais": "União Europeia",
-          "visao": "Canal de notícias pan-europeu",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "NYC mayor unveils plan to close notorious Rikers Island jail by 2032",
-          "link": "https://www.euronews.com/2026/11/20/nyc-mayor-unveils-plan-to-close-notorious-rikers-island-jail-by-2032",
-          "publicadoEm": "2026-11-20T15:03:20.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "El País (inglês)",
-          "pais": "Espanha",
-          "visao": "Jornal de referência espanhol",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Mamdani unveils plan to close Rikers Island, New York’s notorious jail plagued by allegations of abuse, violence and death",
-          "link": "https://english.elpais.com/usa/2026-11-20/mamdani-unveils-plan-to-close-rikers-island-new-yorks-notorious-jail-plagued-by-allegations-of-abuse-violence-and-death.html",
-          "publicadoEm": "2026-11-20T12:41:54.000Z",
           "semData": false
         }
       ]
@@ -7253,6 +7252,36 @@
           "titulo": "Russian strikes damage two bridges in Kyiv: Mayor",
           "link": "https://www.thehindu.com/news/international/russia-missile-strike-on-kyiv-ukraine/article71723381.ece",
           "publicadoEm": "2026-11-20T06:52:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "cb67e500f861",
+      "titulo": "At more than 190cm, Tiny Tim could be a national cattle record breaker",
+      "resumo": "A Holstein-Friesian named Tiny Tim is thought to be Australia's biggest living steer, knocking the late legend Knickers off the throne.",
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/5faf716950f95fc8b387789720820646?impolicy=wcms_crop_resize&cropH=2583&cropW=4592&xPos=0&yPos=432&width=862&height=485",
+      "credito": "ABC News Austrália",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-21T00:04:22.000Z",
+      "materias": [
+        {
+          "fonte": "ABC News Austrália",
+          "pais": "Austrália",
+          "visao": "Emissora pública australiana",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "At more than 190cm, Tiny Tim could be a national cattle record breaker",
+          "link": "https://www.abc.net.au/news/2026-11-21/tiny-tim-could-be-australias-next-biggest-steer/107396504",
+          "publicadoEm": "2026-11-21T00:04:22.000Z",
           "semData": false
         }
       ]
@@ -33427,8 +33456,7 @@
         "asia-pacifico"
       ],
       "temas": [
-        "tecnologia",
-        "diplomacia"
+        "tecnologia"
       ],
       "fontes": 1,
       "paises": 1,
@@ -33444,18 +33472,6 @@
           "titulo": "(Yonhap Interview) Dubai explores closer ties with S. Korea on path to future: museum chief",
           "link": "https://en.yna.co.kr/view/AEN20261120007300320",
           "publicadoEm": "2026-11-20T07:58:20.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Yonhap",
-          "pais": "Coreia do Sul",
-          "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Dubai eyes closer ties with S. Korea on AI in logistics, mobility: official",
-          "link": "https://en.yna.co.kr/view/AEN20261120001400320",
-          "publicadoEm": "2026-11-20T00:09:21.000Z",
           "semData": false
         }
       ]
@@ -33992,18 +34008,6 @@
           "titulo": "(LEAD) Seoul shares open sharply lower tracking U.S. losses after Anthropic debut",
           "link": "https://en.yna.co.kr/view/AEN20261120001151320",
           "publicadoEm": "2026-11-20T00:25:15.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Yonhap",
-          "pais": "Coreia do Sul",
-          "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Seoul shares open sharply lower tracking U.S. losses after Anthropic debut",
-          "link": "https://en.yna.co.kr/view/AEN20261120001100320",
-          "publicadoEm": "2026-11-20T00:03:13.000Z",
           "semData": false
         }
       ]
@@ -39438,247 +39442,6 @@
           "titulo": "EXTREME WEATHER EVENT: Brace for the super El Niño summer of proactive water restrictions",
           "link": "https://www.dailymaverick.co.za/article/2026-11-20-brace-for-the-super-el-nino-summer-of-proactive-water-restrictions/",
           "publicadoEm": "2026-11-20T00:10:47.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "4360ac421a2d",
-      "titulo": "Massive hope for pancreatic cancer pill after trial saw tumours vanish",
-      "resumo": "Daily pill daraxonrasib appears to shrink and possibly even eliminate tumours in some patients with one of the deadliest cancers.",
-      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4568/live/3c973e20-e4be-11f1-99a1-253766e7ad8b.png",
-      "credito": "BBC News",
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-20T00:08:22.000Z",
-      "materias": [
-        {
-          "fonte": "BBC News",
-          "pais": "Reino Unido",
-          "visao": "Emissora pública britânica",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Massive hope for pancreatic cancer pill after trial saw tumours vanish",
-          "link": "https://www.bbc.co.uk/news/articles/cqrmgjnzz9l0o?at_medium=RSS&at_campaign=rss",
-          "publicadoEm": "2026-11-20T00:08:22.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "5224b1e893ee",
-      "titulo": "Tariff disputes on hold, but unresolved as APEC meeting gets underway",
-      "resumo": "",
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/Tariff-disputes-on-hold-but-unresolved-as-APEC-meeting-gets-underway-1SduogRwLKg/img/a7c140bbb8174074a39c91ad4807101c/a7c140bbb8174074a39c91ad4807101c-1280.jpeg",
-      "credito": "CGTN",
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "economia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-20T00:05:44.000Z",
-      "materias": [
-        {
-          "fonte": "CGTN",
-          "pais": "China",
-          "visao": "TV estatal chinesa (versão oficial de Pequim)",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Tariff disputes on hold, but unresolved as APEC meeting gets underway",
-          "link": "https://newsus.cgtn.com/news/2026-11-20/Tariff-disputes-on-hold-but-unresolved-as-APEC-meeting-gets-underway-1SduogRwLKg/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-          "publicadoEm": "2026-11-20T00:05:44.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "9b3d1b1975e1",
-      "titulo": "Mark Carney’s Asian tour aims to diversify Canada’s trading partners",
-      "resumo": "",
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/Mark-Carney-s-Asian-tour-aims-to-diversify-Canada-s-trading-partners-1SduhsHbaA8/img/f2392c20a52241f0bf97a4d327c3f777/f2392c20a52241f0bf97a4d327c3f777-1280.jpeg",
-      "credito": "CGTN",
-      "regioes": [
-        "america-norte"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-20T00:05:35.000Z",
-      "materias": [
-        {
-          "fonte": "CGTN",
-          "pais": "China",
-          "visao": "TV estatal chinesa (versão oficial de Pequim)",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Mark Carney’s Asian tour aims to diversify Canada’s trading partners",
-          "link": "https://newsus.cgtn.com/news/2026-11-20/Mark-Carney-s-Asian-tour-aims-to-diversify-Canada-s-trading-partners-1SduhsHbaA8/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-          "publicadoEm": "2026-11-20T00:05:35.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "f06709be47af",
-      "titulo": "APEC: Can China & the US cooperate on AI?",
-      "resumo": "",
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/APEC-Can-China-the-US-cooperate-on-AI--1SdubHSggYU/img/5acdc8118e1a4254b5ec0c64cc48ad33/5acdc8118e1a4254b5ec0c64cc48ad33-1280.jpeg",
-      "credito": "CGTN",
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "tecnologia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-20T00:05:26.000Z",
-      "materias": [
-        {
-          "fonte": "CGTN",
-          "pais": "China",
-          "visao": "TV estatal chinesa (versão oficial de Pequim)",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "APEC: Can China & the US cooperate on AI?",
-          "link": "https://newsus.cgtn.com/news/2026-11-20/APEC-Can-China-the-US-cooperate-on-AI--1SdubHSggYU/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-          "publicadoEm": "2026-11-20T00:05:26.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "b49409016700",
-      "titulo": "Brazil taps technology to improve coffee quality and meet demand",
-      "resumo": "",
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/Brazil-taps-technology-to-improve-coffee-quality-and-meet-demand-1SdtWoyxkYg/img/c47b55968ee747e4b8428ecf1dbca81f/c47b55968ee747e4b8428ecf1dbca81f-1280.jpeg",
-      "credito": "CGTN",
-      "regioes": [
-        "brasil"
-      ],
-      "temas": [
-        "tecnologia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-20T00:05:17.000Z",
-      "materias": [
-        {
-          "fonte": "CGTN",
-          "pais": "China",
-          "visao": "TV estatal chinesa (versão oficial de Pequim)",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Brazil taps technology to improve coffee quality and meet demand",
-          "link": "https://newsus.cgtn.com/news/2026-11-20/Brazil-taps-technology-to-improve-coffee-quality-and-meet-demand-1SdtWoyxkYg/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-          "publicadoEm": "2026-11-20T00:05:17.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "0766d7022c40",
-      "titulo": "Mexico diversifies agriculture for new markets",
-      "resumo": "",
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/Mexico-diversifies-agriculture-for-new-markets-1SdtAUAoFvq/img/e5dd397f1f76408aaaee8a36ea5d8e37/e5dd397f1f76408aaaee8a36ea5d8e37-1280.jpeg",
-      "credito": "CGTN",
-      "regioes": [
-        "america-latina"
-      ],
-      "temas": [
-        "economia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-20T00:05:09.000Z",
-      "materias": [
-        {
-          "fonte": "CGTN",
-          "pais": "China",
-          "visao": "TV estatal chinesa (versão oficial de Pequim)",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Mexico diversifies agriculture for new markets",
-          "link": "https://newsus.cgtn.com/news/2026-11-20/Mexico-diversifies-agriculture-for-new-markets-1SdtAUAoFvq/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-          "publicadoEm": "2026-11-20T00:05:09.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "4981ed85e8b5",
-      "titulo": "Chinese truck manufacturers aim to expand in Brazil",
-      "resumo": "",
-      "imagem": "https://newsus.cgtn.com/news/2026-11-20/Chinese-truck-manufacturers-aim-to-expand-in-Brazil-1SdtpODg96U/img/6e5cf8306a9c4aa68f2f89af048b78b0/6e5cf8306a9c4aa68f2f89af048b78b0-1280.jpeg",
-      "credito": "CGTN",
-      "regioes": [
-        "asia-pacifico",
-        "brasil"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-20T00:04:59.000Z",
-      "materias": [
-        {
-          "fonte": "CGTN",
-          "pais": "China",
-          "visao": "TV estatal chinesa (versão oficial de Pequim)",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Chinese truck manufacturers aim to expand in Brazil",
-          "link": "https://newsus.cgtn.com/news/2026-11-20/Chinese-truck-manufacturers-aim-to-expand-in-Brazil-1SdtpODg96U/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-          "publicadoEm": "2026-11-20T00:04:59.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "099aa6ea7e0a",
-      "titulo": "Seoul subway union launches 'work-to-rule' campaign over hiring, wage dispute",
-      "resumo": "SEOUL, Nov. 20 (Yonhap) -- Unionized workers at Seoul Metro launched a \"work-to-...",
-      "imagem": "https://img.yna.co.kr/photo/yna/YH/2026/11/19/PYH2026111914990001300_P2.jpg",
-      "credito": "Yonhap",
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "economia"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-20T00:04:02.000Z",
-      "materias": [
-        {
-          "fonte": "Yonhap",
-          "pais": "Coreia do Sul",
-          "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Seoul subway union launches 'work-to-rule' campaign over hiring, wage dispute",
-          "link": "https://en.yna.co.kr/view/AEN20261120001500315",
-          "publicadoEm": "2026-11-20T00:04:02.000Z",
           "semData": false
         }
       ]
