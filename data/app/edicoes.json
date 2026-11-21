@@ -1,6 +1,24 @@
 {
   "edicoes": [
     {
+      "data": "2026-11-21",
+      "titulo": "Míssil russo atinge Polônia e intensifica ataques à Ucrânia",
+      "regiao": "europa",
+      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cbb7/live/b5de9720-e4ea-11f1-99b6-a35a62fa4264.jpg",
+      "notas": {
+        "geral": 7,
+        "mundo": 7,
+        "voce": 3
+      },
+      "outros": [
+        "Debate sobre combustíveis fósseis atrasa acordo na COP31",
+        "Reaproximação UE‑UK após Brexit com acordo sobre alimentos e mobilidade",
+        "Navio atingido por projétil próximo ao Estreito de Hormuz",
+        "Na ONU, acordam continuar discussões sobre regulação de robôs assassinos",
+        "Treinamento de tropas de 11 países na Polônia para missão na Ucrânia"
+      ]
+    },
+    {
       "data": "2026-11-20",
       "titulo": "Rússia intensifica ataques a Kiev após cúpula Trump‑Putin‑Xi",
       "regiao": "europa",

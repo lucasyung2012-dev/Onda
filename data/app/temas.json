@@ -1,10 +1,16 @@
 {
-   "temas" : [
-      {
-         "data" : "2026-11-20",
-         "imagem" : "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Supremo_Brasil.jpg/1280px-Supremo_Brasil.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-         "pergunta" : "Como o Supremo Tribunal Federal brasileiro funciona e qual o seu papel na geopolítica nacional?",
-         "titulo" : "O Supremo Tribunal Federal: estrutura e funcionamento"
-      }
-   ]
+  "temas": [
+    {
+      "data": "2026-11-21",
+      "titulo": "OTAN – Organização do Tratado do Atlântico Norte",
+      "pergunta": "Como a OTAN coordena a defesa coletiva dos seus membros e quais são as implicações desse pacto para a segurança global e para o Brasil?",
+      "imagem": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Seal_of_the_North_Atlantic_Treaty_Organization.png?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    {
+      "data": "2026-11-20",
+      "imagem": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Supremo_Brasil.jpg/1280px-Supremo_Brasil.jpg?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "pergunta": "Como o Supremo Tribunal Federal brasileiro funciona e qual o seu papel na geopolítica nacional?",
+      "titulo": "O Supremo Tribunal Federal: estrutura e funcionamento"
+    }
+  ]
 }
