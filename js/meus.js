@@ -13,7 +13,7 @@ import * as dropbox from './dropbox.js';
 export const LIMITE_POR_DIA = 5;
 const CHAVE_LOCAL = 'onda-meus';
 
-const vazio = () => ({ versao: 1, itens: {}, fila: {}, apagados: {} });
+const vazio = () => ({ versao: 1, itens: {}, fila: {}, avisos: {}, apagados: {} });
 
 let dados = (() => { try { return JSON.parse(localStorage.getItem(CHAVE_LOCAL)) || vazio(); } catch { return vazio(); } })();
 let ultimaSincronizacao = null;
@@ -86,7 +86,7 @@ function juntar(a, b) {
   for (const [id, quando] of Object.entries(b.apagados || {})) {
     if (!resultado.apagados[id] || quando > resultado.apagados[id]) resultado.apagados[id] = quando;
   }
-  for (const campo of ['itens', 'fila']) {
+  for (const campo of ['itens', 'fila', 'avisos']) {
     resultado[campo] = {};
     for (const fonte of [a[campo] || {}, b[campo] || {}]) {
       for (const item of Object.values(fonte)) {
@@ -99,6 +99,29 @@ function juntar(a, b) {
     }
   }
   return resultado;
+}
+
+// ---------- Avisos no celular ----------
+// Cada aparelho que ativou os avisos guarda aqui o seu "endereço de
+// entrega". O robô lê esta lista no Dropbox para mandar o aviso das 7h.
+
+const idDoAviso = (endpoint) => `aviso-${[...endpoint].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7).toString(36)}`;
+
+export function guardarAviso(inscricao) {
+  const agora = new Date().toISOString();
+  const id = idDoAviso(inscricao.endpoint);
+  dados.avisos ||= {};
+  dados.avisos[id] = { id, endpoint: inscricao.endpoint, keys: inscricao.keys, criadoEm: dados.avisos[id]?.criadoEm || agora, atualizadoEm: agora };
+  delete dados.apagados[id];
+  salvar();
+}
+
+export function esquecerAviso(endpoint) {
+  const id = idDoAviso(endpoint);
+  if (!dados.avisos?.[id]) return;
+  delete dados.avisos[id];
+  dados.apagados[id] = new Date().toISOString();
+  salvar();
 }
 
 // ---------- Fila de temas sugeridos ----------

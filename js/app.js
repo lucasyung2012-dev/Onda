@@ -12,6 +12,7 @@ import * as telas from './telas.js';
 import * as meus from './meus.js';
 import * as dropbox from './dropbox.js';
 import { gerarPrompt } from './prompt.js';
+import * as avisos from './avisos.js';
 import * as config from './config.js';
 import { dataCurta, semAcento } from './util.js';
 import { carregarIndicadores, EXPLICACOES, explicacoesNoIdioma } from './indicadores.js';
@@ -133,7 +134,10 @@ function htmlDaRota({ tela, partes }) {
       return telas.telaIndicador(ind, explicacoesNoIdioma(emIngles())[partes[1]], noticiasDoIndicador(partes[1]), estado.escolhaIndicador[partes[1]] || {});
     }
     case 'semana': return telas.telaSemana({ dataHoje: hojeData(), edicoes: estado.edicoes?.edicoes, temas: estado.temas?.temas, meus: meus.todos(), indicadores: estado.indicadores });
-    case 'config': return telas.telaConfig(config.ler(), { conectado: dropbox.conectado(), roboLigado: Boolean(estado.tema?.filaConectada), saudeHtml: telas.secaoSaude(calcularSaude()) });
+    case 'config': {
+      atualizarSituacaoAvisos();
+      return telas.telaConfig(config.ler(), { conectado: dropbox.conectado(), roboLigado: Boolean(estado.tema?.filaConectada), saudeHtml: telas.secaoSaude(calcularSaude()), avisosHtml: telas.secaoAvisos(estado.avisoSituacao, dropbox.conectado()) });
+    }
     case 'analise-minha': return telas.telaMinhaAnalise(meus.pegar(partes[1]), dados);
     case 'explorar': {
       if (partes.length >= 3) {
@@ -339,6 +343,37 @@ function htmlMeu() {
     aba: estado.abaMeu,
     dataHoje: hojeData(),
   });
+}
+
+// ---------- Aviso no celular ----------
+
+/** Descobre se os avisos estão ligados neste aparelho e redesenha Configurações se mudou. */
+function atualizarSituacaoAvisos() {
+  avisos.situacao().then((s) => {
+    const mudou = JSON.stringify(s) !== JSON.stringify(estado.avisoSituacao);
+    estado.avisoSituacao = s;
+    if (mudou && rotaAtual().tela === 'config') desenhar({ animar: false });
+  }).catch(() => {});
+}
+
+async function ligarOuDesligarAvisos(acao) {
+  const en = emIngles();
+  try {
+    if (acao === 'ativar') {
+      meus.guardarAviso(await avisos.ativar()); // o endereço vai para o Dropbox; o robô lê de lá
+      aviso(en ? 'Notifications on' : 'Avisos ligados');
+    } else {
+      const endereco = await avisos.desativar();
+      if (endereco) meus.esquecerAviso(endereco);
+      aviso(en ? 'Notifications off on this device' : 'Avisos desligados neste aparelho');
+    }
+  } catch (erro) {
+    aviso(erro.message === 'permissao-negada'
+      ? (en ? 'Permission denied. Allow it in Settings → Notifications → Onda.' : 'Permissão negada. Libere em Ajustes → Notificações → Onda.')
+      : (en ? 'Could not turn on notifications here.' : 'Não deu para ligar os avisos aqui.'));
+  }
+  estado.avisoSituacao = null;
+  atualizarSituacaoAvisos();
 }
 
 // ---------- Saúde do Onda ----------
@@ -591,11 +626,12 @@ document.addEventListener('input', (e) => {
 // ---------- Toques e cliques ----------
 
 document.addEventListener('click', (e) => {
-  const alvo = e.target.closest('[data-fato], [data-gaveta], [data-modo], [data-sub], [data-mais], [data-voltar], [data-fechar-folha], [data-recarregar], [data-acompanhar], [data-dropbox], [data-copiar-prompt], [data-mes], [data-dia], [data-resposta], [data-pular], [data-config], [data-fila], [data-chave-robo], [data-periodo], [data-grupo-ind], [data-aba-meu], #veu');
+  const alvo = e.target.closest('[data-fato], [data-gaveta], [data-modo], [data-sub], [data-mais], [data-voltar], [data-fechar-folha], [data-recarregar], [data-acompanhar], [data-dropbox], [data-copiar-prompt], [data-mes], [data-dia], [data-resposta], [data-pular], [data-config], [data-fila], [data-chave-robo], [data-periodo], [data-grupo-ind], [data-aba-meu], [data-avisos], #veu');
   if (!alvo) return;
   const idEditor = alvo.closest('.editor')?.dataset.item;
 
-  if (alvo.dataset.abaMeu) { estado.abaMeu = alvo.dataset.abaMeu; conteudo.innerHTML = htmlMeu(); }
+  if (alvo.dataset.avisos) ligarOuDesligarAvisos(alvo.dataset.avisos);
+  else if (alvo.dataset.abaMeu) { estado.abaMeu = alvo.dataset.abaMeu; conteudo.innerHTML = htmlMeu(); }
   else if (alvo.dataset.grupoInd) { estado.grupoInd = alvo.dataset.grupoInd; desenhar({ animar: false }); }
   else if (alvo.dataset.periodo) trocarPeriodo(alvo);
   else if (alvo.dataset.fila) {

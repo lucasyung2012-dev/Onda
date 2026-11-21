@@ -952,7 +952,7 @@ export function telaErro(mensagem) {
 
 // ---------- CONFIGURAÇÕES ----------
 
-export function telaConfig(config, { conectado = false, roboLigado = false, saudeHtml = '' } = {}) {
+export function telaConfig(config, { conectado = false, roboLigado = false, saudeHtml = '', avisosHtml = '' } = {}) {
   // Grupo de opções lado a lado (como um seletor). Cada botão grava uma escolha.
   const opcoes = (chave, lista) => `
     <div class="opcoes" role="group">
@@ -994,6 +994,7 @@ export function telaConfig(config, { conectado = false, roboLigado = false, saud
         <p class="subtitulo">${roboLigado ? (en ? '✓ The robot is already reading your queue.' : '✓ O robô já está lendo a sua fila.') : (en ? 'Done once: copy the key below and save it in GitHub → Onda → Settings → Secrets and variables → Actions → New repository secret, with the name DROPBOX_REFRESH_TOKEN. It only opens the Onda folder in your Dropbox. Never paste it anywhere else.' : 'Faça uma vez só: copie a chave abaixo e salve no GitHub → Onda → Settings → Secrets and variables → Actions → New repository secret, com o nome DROPBOX_REFRESH_TOKEN. Ela só abre a pasta do Onda no seu Dropbox. Não cole em nenhum outro lugar.')}</p>
         <button class="botao" type="button" data-chave-robo>${en ? 'Copy robot key' : 'Copiar a chave do robô'}</button>
       </section>` : ''}
+      ${avisosHtml}
       ${saudeHtml}
       <section class="grupo-config">
         <h2>${t('Sobre o Onda')}</h2>
@@ -1423,4 +1424,32 @@ export function telaSemana({ dataHoje, edicoes, temas, meus, indicadores }) {
 export function atalhoSemana() {
   const en = emIngles();
   return `<a class="semana-atalho" href="#semana"><span><strong>${en ? 'Your week on Onda' : 'Sua semana no Onda'}</strong><small>${en ? 'The stories, topics and numbers of the last 7 days' : 'Os destaques, temas e números dos últimos 7 dias'}</small></span><span class="icone i-seta" aria-hidden="true"></span></a>`;
+}
+
+// ---------- AVISO NO CELULAR (Configurações) ----------
+
+export function secaoAvisos(sit, conectado) {
+  const en = emIngles();
+  let corpo;
+  if (!sit) corpo = `<p class="subtitulo">${en ? 'Checking…' : 'Verificando…'}</p>`;
+  else if (sit.precisaInstalar) {
+    corpo = `<p class="subtitulo">${en
+      ? 'On iPhone and iPad, notifications only work with Onda installed: in Safari, tap Share → Add to Home Screen, then open Onda from the icon and come back here.'
+      : 'No iPhone e no iPad, os avisos só funcionam com o Onda instalado: no Safari, toque em Compartilhar → Adicionar à Tela de Início, abra o Onda pelo ícone e volte aqui.'}</p>`;
+  } else if (!sit.suportado) {
+    corpo = `<p class="subtitulo">${en ? 'This browser cannot receive notifications.' : 'Este navegador não consegue receber avisos.'}</p>`;
+  } else if (!conectado) {
+    corpo = `<p class="subtitulo">${en ? 'Connect Dropbox in My Onda first: the robot finds your device through it.' : 'Conecte o Dropbox no Meu Onda primeiro: é por ele que o robô encontra o seu aparelho.'}</p>`;
+  } else if (sit.permissao === 'denied') {
+    corpo = `<p class="subtitulo">${en ? 'Notifications are blocked. Allow them in Settings → Notifications → Onda.' : 'Os avisos estão bloqueados. Libere em Ajustes → Notificações → Onda.'}</p>`;
+  } else if (sit.ativo) {
+    corpo = `
+      <p class="subtitulo">✓ ${en ? 'On. Every morning, when the story of the day is ready (around 7 a.m.), you get a notification on this device.' : 'Ligado. Toda manhã, quando o destaque do dia ficar pronto (por volta das 7h), chega um aviso neste aparelho.'}</p>
+      <button class="botao" type="button" data-avisos="desativar">${en ? 'Turn off on this device' : 'Desligar neste aparelho'}</button>`;
+  } else {
+    corpo = `
+      <p class="subtitulo">${en ? 'Get a notification every morning when the story of the day is ready.' : 'Receba um aviso toda manhã quando o destaque do dia ficar pronto.'}</p>
+      <button class="botao principal" type="button" data-avisos="ativar">${en ? 'Turn on notifications' : 'Ativar avisos'}</button>`;
+  }
+  return `<section class="grupo-config"><h2>${en ? 'Morning notification' : 'Aviso no celular às 7h'}</h2>${corpo}</section>`;
 }

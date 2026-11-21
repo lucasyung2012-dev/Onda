@@ -79,3 +79,8 @@ export async function tirarDaFila(id, texto) {
   }
   throw new Error('não deu para tirar o tema da fila (o arquivo mudou várias vezes)');
 }
+
+/** O arquivo onda.json inteiro (o robô de avisos usa para achar os aparelhos). */
+export async function lerOnda() {
+  return (await ler()).dados || {};
+}

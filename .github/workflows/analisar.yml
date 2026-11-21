@@ -20,7 +20,7 @@ on:
         description: 'O que rodar'
         type: choice
         default: tudo
-        options: [tudo, 'só o tema do dia', 'só traduzir', 'refazer o destaque']
+        options: [tudo, 'só o tema do dia', 'só traduzir', 'refazer o destaque', 'testar o aviso']
 
 permissions:
   contents: write
@@ -44,7 +44,7 @@ jobs:
         run: node coletor/coletar.mjs
 
       - name: Escolher e analisar o destaque do dia
-        if: github.event.inputs.parte != 'só o tema do dia' && github.event.inputs.parte != 'só traduzir'
+        if: github.event.inputs.parte != 'só o tema do dia' && github.event.inputs.parte != 'só traduzir' && github.event.inputs.parte != 'testar o aviso'
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
@@ -54,7 +54,7 @@ jobs:
       # Roda mesmo se o destaque falhar. O "sleep" respeita o limite
       # de uso por minuto do plano gratuito da IA.
       - name: Escrever o tema do dia
-        if: always() && github.event.inputs.parte != 'só traduzir' && github.event.inputs.parte != 'refazer o destaque'
+        if: always() && github.event.inputs.parte != 'só traduzir' && github.event.inputs.parte != 'refazer o destaque' && github.event.inputs.parte != 'testar o aviso'
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
@@ -65,13 +65,24 @@ jobs:
 
       # Versão em inglês da análise e do tema (para o app no idioma inglês)
       - name: Traduzir para o inglês
-        if: always()
+        if: always() && github.event.inputs.parte != 'testar o aviso'
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
           if [ "${{ github.event.inputs.parte }}" != "só traduzir" ]; then sleep 65; fi
           node coletor/traduzir.mjs
+
+      # Aviso no celular: "o destaque do dia chegou" (uma vez por dia)
+      - name: Avisar no celular
+        if: always() && (github.event_name == 'schedule' || github.event.inputs.parte == 'tudo' || github.event.inputs.parte == 'refazer o destaque' || github.event.inputs.parte == 'testar o aviso')
+        env:
+          VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
+          DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
+          FORCAR_AVISO: ${{ github.event.inputs.parte == 'testar o aviso' && 'sim' || 'nao' }}
+        run: |
+          npm install --no-save --no-package-lock web-push@3
+          node coletor/avisos.mjs
 
       - name: Salvar no repositório
         if: always()
