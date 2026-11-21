@@ -286,6 +286,29 @@ export function telaAnalise(analise, dados, opcoes = {}) {
         <div class="nota-linha ${k === 'voce' ? 'voce' : ''}"><span class="valor">${d.notas[k].nota}</span><div><strong>${rotulo}</strong><p>${esc(d.notas[k].porque)}</p></div></div>`).join('')}
     </div>`;
 
+  // Como cada lado vê: um cartão por olhar (deslize), com as fontes e o país.
+  const cl = d.comoCadaLadoVe;
+  const en = emIngles();
+  let ladosHtml = '';
+  if (cl?.lados?.length) {
+    ladosHtml = `
+      <p class="subtitulo" style="margin-bottom:10px">${en ? `${cl.lados.length} ways the story is being told, without taking sides. Swipe to see them all.` : `${cl.lados.length} jeitos de contar a mesma história, sem dar razão a nenhum. Deslize para ver todos.`}</p>
+      <div class="vertentes">${cl.lados.map((l, i) => `
+        <article class="vertente" style="--i:${i}">
+          <p class="rotulo">${en ? 'Side' : 'Lado'} ${i + 1}/${cl.lados.length}</p>
+          <h3>${esc(l.lado)}</h3>
+          <p class="vertente-pensa">${esc(l.comoConta)}</p>
+          ${l.destaca ? `<p><span class="rotulo acento">${en ? 'Emphasizes' : 'O que destaca'}</span> ${esc(l.destaca)}</p>` : ''}
+          ${l.deixaDeFora ? `<p class="vertente-critica"><span class="rotulo">${en ? 'Leaves out' : 'O que deixa de fora'}</span> ${esc(l.deixaDeFora)}</p>` : ''}
+          <ul class="guardada-fontes">${l.fontes.map((f) => `<li><a href="${esc(f.link)}" target="_blank" rel="noopener noreferrer">${esc(f.fonte)} · ${esc(f.pais)}${f.estatal ? ` · ${en ? 'state' : 'estatal'}` : ''}</a></li>`).join('')}</ul>
+        </article>`).join('')}</div>
+      ${cl.ondeConcordam ? `<div class="afirmacao" style="--cor:var(--a-fato);margin-top:12px"><span class="tipo">${en ? 'Where they agree' : 'Onde todos concordam'}</span><p>${esc(cl.ondeConcordam)}</p></div>` : ''}
+      ${cl.ondeDivergem ? `<div class="afirmacao" style="--cor:var(--a-analise);margin-top:8px"><span class="tipo">${en ? 'Where they split' : 'Onde as versões se separam'}</span><p>${esc(cl.ondeDivergem)}</p></div>` : ''}
+      ${cl.faltaOlhar ? `<p class="subtitulo" style="margin-top:10px">${en ? 'Missing view' : 'Olhar que falta'}: ${esc(cl.faltaOlhar)}</p>` : ''}`;
+  } else if (cl?.faltaOlhar) {
+    ladosHtml = `<p class="subtitulo">${esc(cl.faltaOlhar)}</p>`;
+  }
+
   const fontes = `
     <ul class="fontes-usadas">
       ${d.fontesUsadas.map((f, i) => `
@@ -311,14 +334,17 @@ export function telaAnalise(analise, dados, opcoes = {}) {
       ${opcoes.botao || ''}
       <div class="uma-frase"><p class="rotulo ouro">${t('Em uma frase')}</p><p>${esc(d.emUmaFrase)}</p></div>
 
-      ${bloco(1, 'O que aconteceu', `<div class="texto-longo">${paragrafos(d.oQueAconteceu)}</div><p class="data-fato">${dataFato}</p>`)}
-      ${bloco(2, 'Por que é o destaque do dia', `<div class="texto-longo">${paragrafos(d.porQueImporta)}</div>`)}
-      ${bloco(3, 'Como chega em você', cadeia)}
-      ${bloco(4, 'As notas', notasDetalhe)}
-      ${bloco(5, 'Fatos × versões', afirmacoes)}
-      ${bloco(6, 'O que ainda não sabemos', `<div class="texto-longo">${paragrafos(d.oQueNaoSabemos)}</div>`)}
-      ${bloco(7, 'O que acompanhar', `<ul class="lista-pontos">${d.oQueAcompanhar.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`)}
-      ${bloco(8, `As fontes (${d.fontesUsadas.length})`, fontes)}
+      ${[
+        ['O que aconteceu', `<div class="texto-longo">${paragrafos(d.oQueAconteceu)}</div><p class="data-fato">${dataFato}</p>`],
+        ['Por que é o destaque do dia', `<div class="texto-longo">${paragrafos(d.porQueImporta)}</div>`],
+        ['Como chega em você', cadeia],
+        ['As notas', notasDetalhe],
+        ['Fatos × versões', afirmacoes],
+        ladosHtml ? ['Como cada lado vê', ladosHtml] : null,
+        ['O que ainda não sabemos', `<div class="texto-longo">${paragrafos(d.oQueNaoSabemos)}</div>`],
+        ['O que acompanhar', `<ul class="lista-pontos">${d.oQueAcompanhar.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`],
+        [`${t('As fontes')} (${d.fontesUsadas.length})`, fontes],
+      ].filter(Boolean).map(([titulo, corpo], i) => bloco(i + 1, titulo, corpo)).join('')}
 
       ${opcoes.comOutros && analise.tambemImporta?.length ? `
         <section class="secao">

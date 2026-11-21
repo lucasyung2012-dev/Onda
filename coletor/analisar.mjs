@@ -11,7 +11,10 @@
 //   2. ANÁLISE: entrega à IA as matérias do destaque e pede a análise
 //      completa: o que aconteceu, por que importa, como chega em você,
 //      notas, fatos x versões e o que acompanhar.
-//   3. Grava data/app/analise.json (o app lê) e guarda uma cópia em
+//   3. COMO CADA LADO VÊ: busca notícias sobre o mesmo fato vindas de
+//      outros países e linhas editoriais e pede à IA para mostrar como
+//      cada lado conta a história (sem dar razão a ninguém). Opcional.
+//   4. Grava data/app/analise.json (o app lê) e guarda uma cópia em
 //      data/analises/AAAA-MM-DD.json. Se rodar de novo no mesmo dia, a
 //      versão anterior é mantida: nada é sobrescrito em silêncio.
 //
@@ -21,6 +24,7 @@
 
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { perguntarIA, temIA } from './ia.mjs';
+import { buscarOutrasLinhas } from './linhas.mjs';
 
 const FUSO = 'America/Sao_Paulo';
 const MAX_CANDIDATOS = 60;   // quantos fatos a IA compara
@@ -77,11 +81,12 @@ ${linhas.join('\n')}
 
 Tarefa:
 1. Escolha o ÚNICO acontecimento geopolítico mais importante do dia. Compare: importância estratégica, quantidade e peso dos países envolvidos, consequências militares, diplomáticas e econômicas, impacto regional e internacional, potencial de mudar a ordem mundial, consequências imediatas e futuras. Não privilegie guerras automaticamente: um acordo histórico pode valer mais que um confronto isolado. Ignore esportes, celebridades, crimes comuns e curiosidades.
-2. Escolha mais 5 acontecimentos que também importam hoje, de preferência de regiões e temas diferentes do destaque. Eles precisam ser acontecimentos DIFERENTES do destaque e diferentes entre si: não repita o mesmo encontro, guerra ou negociação visto de outro ângulo.
+2. Escolha mais 5 acontecimentos que também importam hoje, de preferência de regiões e temas diferentes do destaque. Eles precisam ser acontecimentos DIFERENTES do destaque e diferentes entre si: não repita o mesmo encontro, guerra ou negociação visto de outro ângulo. Também não escolha um fato que é só o contexto ou um desdobramento do destaque (ex.: se o destaque é um míssil russo na Polônia, um exercício militar na Polônia ligado à mesma guerra não entra).
 
 Responda neste formato JSON:
-{"destaque": {"indice": <número>, "tituloPt": "<título curto em português>", "criterio": "<1 frase com o principal motivo da escolha, sem citar quantidade de fontes>"},
- "tambemImporta": [{"indice": <número>, "tituloPt": "<título curto em português>", "porQueImporta": "<1 frase: por que importa, se possível ligando ao Brasil>"}]}`;
+{"destaque": {"indice": <número>, "tituloPt": "<título curto em português>", "criterio": "<1 frase com o principal motivo da escolha, sem citar quantidade de fontes>",
+   "palavras": [<6 a 10 nomes e termos específicos do destaque, em português E em inglês, para achar outras notícias sobre ele (ex.: "Polônia", "Poland", "míssil", "missile", "Tusk"); nada genérico como "governo">]},
+ "tambemImporta": [{"indice": <número>, "tituloPt": "<título curto em português>", "porQueImporta": "<1 frase: por que importa. Só ligue ao Brasil se a ligação for real e clara; senão, explique por que importa para o mundo>"}]}`;
 
   return perguntarIA({
     sistema: REGRAS,
@@ -92,6 +97,7 @@ Responda neste formato JSON:
       if (!r.destaque || !ok(r.destaque.indice) || !r.destaque.tituloPt) throw new Error('seleção sem destaque válido');
       if (!Array.isArray(r.tambemImporta)) throw new Error('seleção sem "tambemImporta"');
       r.tambemImporta = r.tambemImporta.filter((t) => ok(t.indice) && t.indice !== r.destaque.indice && t.tituloPt).slice(0, 5);
+      r.destaque.palavras = (r.destaque.palavras || []).filter((p) => typeof p === 'string' && p.trim().length >= 3).slice(0, 10);
     },
   });
 }
@@ -134,7 +140,13 @@ Responda neste formato JSON (todos os campos são obrigatórios):
  "oQueNaoSabemos": "<o que ainda não está claro>",
  "oQueAcompanhar": ["<o que observar nos próximos dias>"]
 }
-A "cadeia" deve ter de 3 a 6 passos, do fato até o Brasil/você. A cadeia, "chegaEmVoce" e "emUmaFrase" precisam ser coerentes entre si. Efeito que as matérias não confirmam (ex.: alta de preço) deve ser descrito como risco potencial, com "pode", nunca como fato. Em "afirmacoes", coloque de 4 a 8 itens.`;
+A "cadeia" deve ter de 3 a 6 passos, do fato até o Brasil/você. A cadeia, "chegaEmVoce" e "emUmaFrase" precisam ser coerentes entre si. Efeito que as matérias não confirmam (ex.: alta de preço) deve ser descrito como risco potencial, com "pode", nunca como fato. Em "afirmacoes", coloque de 4 a 8 itens.
+Cuidados (erros que já aconteceram):
+- "fato" só quando pelo menos DUAS matérias de fontes diferentes dizem a mesma coisa. Com uma fonte só, use "nao_confirmado".
+- Números de mortos, de armas destruídas ou de ataques ditos por um lado do conflito (governo, exército ou imprensa daquele país) são "alegacao", não "fato", a menos que fontes independentes confirmem.
+- Copie os números exatamente como estão nas matérias (se a matéria diz "3 lançadores atingidos", não escreva "1 lançador destruído").
+- Em "porQueImporta" e na "cadeia", não diga que algo JÁ está acontecendo (ex.: "já afeta o mercado de energia") se as matérias não dizem isso.
+- Toda afirmação, inclusive "analise", precisa citar as matérias em que se apoia.`;
 
   const { resposta, provedor, modelo } = await perguntarIA({
     sistema: REGRAS,
@@ -154,7 +166,11 @@ A "cadeia" deve ter de 3 a 6 passos, do fato até o Brasil/você. A cadeia, "che
       if (!TIPOS_IMPACTO.includes(r.chegaEmVoce?.tipo)) r.chegaEmVoce = { tipo: 'indireto', texto: r.chegaEmVoce?.texto || '' };
       r.afirmacoes = (r.afirmacoes || [])
         .filter((a) => a.texto && TIPOS_AFIRMACAO.includes(a.tipo))
-        .map((a) => ({ ...a, fontes: (a.fontes || []).filter((i) => Number.isInteger(i) && i >= 0 && i < usadas.length) }));
+        .map((a) => ({ ...a, fontes: [...new Set((a.fontes || []).filter((i) => Number.isInteger(i) && i >= 0 && i < usadas.length))] }))
+        // Garantia no código: "fato" com uma fonte só vira "não confirmado".
+        .map((a) => (a.tipo === 'fato' && new Set(a.fontes.map((i) => usadas[i].fonte)).size < 2 ? { ...a, tipo: 'nao_confirmado' } : a))
+        // Afirmação sem nenhuma matéria que a sustente fica de fora.
+        .filter((a) => a.fontes.length);
       r.oQueAcompanhar = (r.oQueAcompanhar || []).filter(Boolean).slice(0, 5);
       if (r.dataDoFato && !/^\d{4}-\d{2}-\d{2}$/.test(r.dataDoFato)) r.dataDoFato = null;
     },
@@ -162,10 +178,77 @@ A "cadeia" deve ter de 3 a 6 passos, do fato até o Brasil/você. A cadeia, "che
 
   // As fontes citadas vêm dos NOSSOS dados (nome, link, data), não da IA.
   const fontesUsadas = usadas.map((m) => ({
-    fonte: m.fonteNome, pais: m.pais, visao: m.visao, estatal: m.estatal,
+    id: m.fonte, fonte: m.fonteNome, pais: m.pais, visao: m.visao, estatal: m.estatal,
     titulo: m.titulo, link: m.link, publicadoEm: m.publicadoEm,
   }));
   return { analise: resposta, fontesUsadas, provedor, modelo };
+}
+
+// ---------- Etapa 3: como cada lado vê ----------
+// Junta as matérias do destaque com notícias sobre o mesmo fato vindas de
+// OUTROS países e linhas editoriais (buscadas nos últimos 3 dias) e pede à
+// IA para mostrar como cada lado conta a história. Sem dar razão a ninguém.
+
+async function comoCadaLadoVe(analise, fontesUsadas, palavras) {
+  const outras = await buscarOutrasLinhas(palavras, {
+    jaUsadas: fontesUsadas.map((f) => f.link),
+    fontesVistas: fontesUsadas.map((f) => f.id),
+    paisesVistos: fontesUsadas.map((f) => f.pais),
+    dias: 3, maximo: 8, minimo: palavras.length >= 4 ? 2 : 1,
+  });
+  console.log(`  Outros olhares achados: ${outras.length} (${outras.map((n) => `${n.fonteNome}/${n.pais}`).join(', ') || 'nenhum'})`);
+  const todas = [
+    ...fontesUsadas,
+    ...outras.map((n) => ({ id: n.fonte, fonte: n.fonteNome, pais: n.pais, visao: n.visao, estatal: n.estatal, titulo: n.titulo, link: n.link, publicadoEm: n.publicadoEm, resumo: n.resumo })),
+  ];
+  const texto = todas.map((m, i) =>
+    `[${i}] ${m.fonte} (${m.pais}; linha: ${m.visao || 'sem descrição'}${m.estatal ? '; VEÍCULO ESTATAL' : ''}): ${m.titulo}. ${(m.resumo || '').slice(0, 300)}`).join('\n');
+
+  const usuario = `O destaque do dia é: ${analise.titulo}
+Resumo: ${analise.oQueAconteceu.slice(0, 1200)}
+
+Matérias sobre ele, de vários países e linhas editoriais:
+${texto}
+
+Mostre COMO CADA LADO VÊ este acontecimento. JSON:
+{"lados": [{"lado": "<quem é esse olhar, ex.: 'Governo e imprensa da Rússia', 'Polônia e aliados da OTAN', 'Imprensa da Ásia'>",
+   "comoConta": "<como esse lado conta o fato, em 1 ou 2 frases>",
+   "destaca": "<o que esse lado enfatiza>",
+   "deixaDeFora": "<o que esse lado não menciona e outros mencionam; só se der para ver comparando as matérias; string vazia se não der>",
+   "fontes": [<índices [n] das matérias desse lado>]}],
+ "ondeConcordam": "<o que todos os lados aceitam (costuma ser o fato em si); string vazia se não houver>",
+ "ondeDivergem": "<o ponto central em que as versões se separam; string vazia se não houver>",
+ "faltaOlhar": "<se um lado importante do fato não aparece nas matérias (ex.: o governo acusado), diga qual; string vazia se todos aparecem>"}
+Regras:
+- Agrupe as matérias por olhar (país, governo, linha editorial), não por veículo. Mostre todos os olhares que existem de verdade nas matérias, nem mais nem menos: podem ser 2, podem ser 5. Nunca invente um lado sem matéria.
+- Se todas as matérias contam do mesmo jeito, devolva "lados": [] e explique em "faltaOlhar" que não há outro olhar nas fontes.
+- Apresente cada lado com equilíbrio, sem dar razão a nenhum e sem adjetivos de julgamento.
+- Veículo estatal mostra a posição daquele governo, não um fato comprovado.
+- Use só o que está nas matérias: não invente declarações nem omissões.`;
+
+  const { resposta } = await perguntarIA({
+    sistema: REGRAS,
+    usuario,
+    maxTokens: 3000,
+    validar: (r) => {
+      const ok = (i) => Number.isInteger(i) && i >= 0 && i < todas.length;
+      r.lados = (Array.isArray(r.lados) ? r.lados : [])
+        .map((l) => ({ ...l, fontes: [...new Set((l.fontes || []).filter(ok))] }))
+        .filter((l) => l.lado && l.comoConta && l.fontes.length)
+        .slice(0, 6);
+      if (r.lados.length < 2) r.lados = []; // um lado só não é comparação
+    },
+  });
+  // As fontes de cada lado vêm dos NOSSOS dados (nome, país, linha, link).
+  return {
+    lados: resposta.lados.map((l) => ({
+      lado: l.lado, comoConta: l.comoConta, destaca: l.destaca || '', deixaDeFora: l.deixaDeFora || '',
+      fontes: l.fontes.map((i) => ({ fonte: todas[i].fonte, pais: todas[i].pais, visao: todas[i].visao, estatal: todas[i].estatal, link: todas[i].link })),
+    })),
+    ondeConcordam: resposta.lados.length ? resposta.ondeConcordam || '' : '',
+    ondeDivergem: resposta.lados.length ? resposta.ondeDivergem || '' : '',
+    faltaOlhar: resposta.faltaOlhar || '',
+  };
 }
 
 // ---------- Programa principal ----------
@@ -205,6 +288,17 @@ async function principal() {
   console.log('2/2 Analisando o destaque…');
   const { analise, fontesUsadas, provedor, modelo } = await analisar(destaque, hojeData);
 
+  // Etapa 3 (opcional): se falhar, o destaque sai do mesmo jeito, sem os lados.
+  let lados = null;
+  try {
+    await esperar(65000);
+    console.log('3/3 Como cada lado vê…');
+    lados = await comoCadaLadoVe(analise, fontesUsadas, selecao.resposta.destaque.palavras || []);
+    console.log(`  Lados: ${lados.lados.map((l) => l.lado).join(' | ') || 'nenhum'}`);
+  } catch (erro) {
+    console.log(`  Como cada lado vê ficou de fora: ${erro.message}`);
+  }
+
   const edicao = {
     status: 'ok',
     geradoEm: agora.toISOString(),
@@ -220,6 +314,7 @@ async function principal() {
       criterio: selecao.resposta.destaque.criterio || '',
       ...analise,
       fontesUsadas,
+      comoCadaLadoVe: lados,
     },
     tambemImporta: selecao.resposta.tambemImporta.map((t) => {
       const f = lista[t.indice];
@@ -230,7 +325,7 @@ async function principal() {
         // As matérias ficam guardadas junto, para a edição poder ser relida
         // no histórico mesmo depois que a notícia sair do "hoje".
         resumo: (f.materias.find((m) => m.resumo) || {}).resumo || '',
-        materias: f.materias.slice(0, 8).map((m) => ({
+        materias: [...new Map(f.materias.map((m) => [m.link, m])).values()].slice(0, 8).map((m) => ({
           fonte: m.fonteNome, pais: m.pais, visao: m.visao, estatal: m.estatal, tipo: m.tipo,
           titulo: m.titulo, link: m.link, publicadoEm: m.publicadoEm,
         })),

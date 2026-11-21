@@ -30,6 +30,7 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { perguntarIA, temIA } from './ia.mjs';
 import * as fila from './fila.mjs';
+import { buscarOutrasLinhas } from './linhas.mjs';
 
 const FUSO = 'America/Sao_Paulo';
 const NAVEGADOR = 'OndaRadar/1.0 (https://github.com/lucasyung2012-dev/Onda)';
@@ -170,44 +171,9 @@ Responda neste formato JSON:
 // procura nas notícias dos últimos dias (todas as fontes do Onda) as que falam
 // do tema e escolhe as de países e linhas editoriais DIFERENTES.
 
-const semAcento = (t) => (t || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
-const escaparRegex = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-
-async function noticiasDeVariasLinhas(escolha, jaUsadas, maximo = 12) {
-  const palavras = [...new Set([...(escolha.palavras || []), ...escolha.buscas.map((b) => b.termo)]
-    .map((p) => semAcento(p).trim()).filter((p) => p.length >= 3))];
-  if (!palavras.length) return [];
-  // Palavra inteira: "otan" acha "a OTAN decidiu", mas não "botanica".
-  const regras = palavras.map((p) => new RegExp(`(^|[^a-z0-9])${escaparRegex(p)}([^a-z0-9]|$)`));
-
-  const indice = await lerJson('data/noticias/indice.json', { dias: [] });
-  const vistos = new Set(jaUsadas);
-  const achadas = [];
-  for (const dia of indice.dias) {
-    const { noticias = [] } = await lerJson(`data/noticias/${dia}.json`, { noticias: [] });
-    for (const n of noticias) {
-      if (!n.link || vistos.has(n.link)) continue;
-      const texto = semAcento(`${n.titulo} ${n.resumo || ''}`);
-      const pontos = regras.filter((r) => r.test(texto)).length;
-      if (pontos) { vistos.add(n.link); achadas.push({ ...n, pontos }); }
-    }
-  }
-  achadas.sort((a, b) => b.pontos - a.pontos || (b.publicadoEm || '').localeCompare(a.publicadoEm || ''));
-
-  // Variedade: uma notícia por fonte; na 1ª rodada, também um país por vez.
-  const escolhidas = [];
-  const fontesUsadas = new Set();
-  const paises = new Set();
-  for (const rodada of [1, 2]) {
-    for (const n of achadas) {
-      if (escolhidas.length >= maximo) break;
-      if (fontesUsadas.has(n.fonte) || (rodada === 1 && paises.has(n.pais))) continue;
-      escolhidas.push(n);
-      fontesUsadas.add(n.fonte);
-      paises.add(n.pais);
-    }
-  }
-  return escolhidas;
+async function noticiasDeVariasLinhas(escolha, jaUsadas) {
+  const palavras = [...(escolha.palavras || []), ...escolha.buscas.map((b) => b.termo)];
+  return buscarOutrasLinhas(palavras, { jaUsadas, maximo: 12 });
 }
 
 // ---------- 2. Escrever a aula em partes ----------

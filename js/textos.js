@@ -22,7 +22,7 @@ const EN = {
   'Fatos confirmados por várias fontes': 'Stories confirmed by several sources',
   // Análise
   'Em uma frase': 'In one sentence', 'O que aconteceu': 'What happened', 'Por que é o destaque do dia': 'Why it is the story of the day',
-  'As notas': 'The scores', 'Fatos × versões': 'Facts × claims', 'O que ainda não sabemos': "What we still don't know",
+  'As notas': 'The scores', 'Fatos × versões': 'Facts × claims', 'Como cada lado vê': 'How each side sees it', 'As fontes': 'The sources', 'O que ainda não sabemos': "What we still don't know",
   'O que acompanhar': 'What to watch', 'Também importou neste dia': 'Also mattered that day',
   'Importância geral': 'Overall importance', 'Impacto no mundo': 'Impact on the world', 'Impacto no seu dia a dia': 'Impact on your daily life',
   'Fato confirmado': 'Confirmed fact', 'Declaração oficial': 'Official statement', 'Alegação': 'Claim', 'Não confirmado': 'Unconfirmed', 'Análise': 'Analysis',

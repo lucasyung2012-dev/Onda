@@ -1204,7 +1204,7 @@ img { max-width: 100%; display: block; }
 .segmentos[style*="--qtd:4"] button { font-size: 13px; padding-left: 2px; padding-right: 2px; letter-spacing: -0.1px; }
 
 /* ---------- As vertentes (tema do dia): cartões que deslizam para o lado ---------- */
-.vertentes { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin: 0 calc(-1 * var(--margem)); padding: 2px var(--margem) 8px; }
+.vertentes { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--margem); scrollbar-width: none; margin: 0 calc(-1 * var(--margem)); padding: 2px var(--margem) 8px; }
 .vertentes::-webkit-scrollbar { display: none; }
 .vertente {
   flex: none; width: 84%; max-width: 360px; scroll-snap-align: start;
