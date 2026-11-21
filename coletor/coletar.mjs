@@ -2,7 +2,7 @@
 // coletar.mjs — O robô de coleta do Onda (etapa 1).
 //
 // Roda no GitHub Actions a cada 3 horas (veja .github/workflows/coletar.yml).
-// Também dá para rodar à mão: `node coletor/coletar.mjs` (precisa do Node 20+).
+// Também dá para rodar à mão: `node coletor/coletar.mjs` (precisa do Node 24+).
 //
 // O que ele faz, em ordem:
 //   1. Lê a lista de fontes em data/fontes.json.

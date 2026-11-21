@@ -38,12 +38,12 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Baixar o repositório
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
-      - name: Preparar o Node 20
-        uses: actions/setup-node@v4
+      - name: Preparar o Node 24
+        uses: actions/setup-node@v5
         with:
-          node-version: '20'
+          node-version: '24'
 
       # As notícias dos últimos dias moram no ramo "dados" (ver .github/dados.sh)
       - name: Baixar as notícias guardadas
