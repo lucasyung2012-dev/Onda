@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-21T00:45:56.409Z",
+  "geradoEm": "2026-11-21T01:00:47.166Z",
   "fontesOk": 69,
   "fontesComErro": 1,
-  "noticiasNovasNestaRodada": 7,
+  "noticiasNovasNestaRodada": 8,
   "porFonte": [
     {
       "id": "nyt",
@@ -27,9 +27,9 @@
       "nome": "Fox News",
       "status": "ok",
       "itensNoFeed": 25,
-      "aceitas": 12,
-      "descartadasPorIdade": 13,
-      "comImagem": 12
+      "aceitas": 11,
+      "descartadasPorIdade": 14,
+      "comImagem": 11
     },
     {
       "id": "npr",
@@ -451,9 +451,9 @@
       "nome": "Lowy Interpreter",
       "status": "ok",
       "itensNoFeed": 50,
-      "aceitas": 7,
-      "descartadasPorIdade": 43,
-      "comImagem": 7
+      "aceitas": 6,
+      "descartadasPorIdade": 44,
+      "comImagem": 6
     },
     {
       "id": "africanews",
@@ -469,8 +469,8 @@
       "nome": "AllAfrica",
       "status": "ok",
       "itensNoFeed": 33,
-      "aceitas": 31,
-      "descartadasPorIdade": 2,
+      "aceitas": 32,
+      "descartadasPorIdade": 1,
       "comImagem": 0
     },
     {
