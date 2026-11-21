@@ -93,7 +93,7 @@ async function buscarArtigos(buscas) {
   const artigos = [];
   const vistos = new Set();
   for (const { idioma, termo } of buscas) {
-    if (artigos.length >= 6) break;
+    if (artigos.length >= 7) break;
     try {
       const a = await artigoWikipedia(idioma === 'en' ? 'en' : 'pt', termo);
       if (a && !vistos.has(a.link)) { artigos.push(a); vistos.add(a.link); }
@@ -148,7 +148,7 @@ ${manchetes.map((m, i) => `[${i}] ${m}`).join('\n')}
 Responda neste formato JSON:
 {"titulo": "<nome curto do tema>",
  "pergunta": "<a grande pergunta que a aula responde>",
- "buscas": [<5 ou 6 itens {"idioma": "pt" ou "en", "termo": "<título provável de um artigo da Wikipedia>"}: o artigo principal em português e em inglês, artigos sobre a história, o funcionamento e os principais atores do tema e, se existir, um artigo sobre a relação do Brasil com o tema (ex.: "Brasil e o FMI", "Relações entre Brasil e China")>],
+ "buscas": [<6 ou 7 itens {"idioma": "pt" ou "en", "termo": "<título provável de um artigo da Wikipedia>"}: o artigo principal em português e em inglês, artigos sobre a história, o funcionamento e os principais atores do tema, um artigo sobre as críticas ou o grande debate em torno dele (ex.: "Euroceticismo", "Críticas à OTAN") e, se existir, um artigo sobre a relação do Brasil com o tema (ex.: "Brasil e o FMI", "Relações entre Brasil e China")>],
  "manchetesLigadas": [<índices APENAS das manchetes que tratam diretamente do tema; na dúvida, deixe a lista vazia>],
  "palavras": [<6 a 10 nomes ou palavras específicas, em português E em inglês, que aparecem em notícias sobre o tema (ex.: "OTAN", "NATO", "Aliança Atlântica"); nada genérico como "governo" ou "mundo">]}`;
 
@@ -321,25 +321,31 @@ Textos sobre críticas, controvérsias e posições:
 ${material(artigos, PALAVRAS.atores, { limite: MATERIAL_POR_PARTE - 3500 })}
 ${textoOutras ? `\nNotícias recentes de fontes com linhas editoriais diferentes (país e linha entre parênteses):\n${textoOutras}` : ''}
 
-Mostre AS VERTENTES: as diferentes formas de enxergar este tema. JSON:
-{"vertentes": [{"nome": "<nome curto da visão, ex.: 'Visão dos EUA e da Europa', 'Visão da Rússia', 'Defesa do livre mercado'>",
-   "pensa": "<o que essa visão pensa sobre o tema, em 1 ou 2 frases>",
-   "quemDefende": "<quem defende: países, governos, partidos, grupos, autores>",
+Mostre AS VERTENTES: as grandes formas de enxergar este tema. JSON:
+{"vertentes": [{"nome": "<nome curto da visão, ex.: 'Mais integração europeia', 'Soberania de cada país', 'Visão da Rússia'>",
+   "pensa": "<o que essa visão pensa sobre o tema como um todo, em 1 ou 2 frases>",
+   "quemDefende": "<quem defende: países, governos, partidos, correntes, autores>",
    "porQue": "<o principal argumento, contado como quem defende contaria, na sua forma mais forte>",
    "criticas": "<o ponto fraco que os críticos apontam, de forma justa>",
+   "hoje": "<como essa visão aparece nas notícias recentes; string vazia se não aparecer>",
    "fontes": [<índices [n] dos textos que sustentam esta vertente>]}],
  "ondeConcordam": "<o que as visões aceitam em comum (costuma ser o fato); string vazia se não houver>",
- "ondeBrigam": "<o ponto central da discordância; string vazia se não houver>"}
+ "ondeBrigam": "<o ponto central da discordância, sobre o tema como um todo; string vazia se não houver>"}
+Como pensar:
+1. PRIMEIRO identifique as grandes posições DURADOURAS sobre o tema, as que existem há anos e dividem países, governos, correntes políticas ou estudiosos (ex.: na União Europeia, "mais integração" x "mais soberania para cada país" x "como a UE é vista de fora"; na OTAN, "aliança de defesa" x "expansão que ameaça a Rússia" x "não alinhamento"). Uma vertente é uma forma de ver o TEMA, não uma opinião sobre uma notícia da semana.
+2. DEPOIS use as notícias só para o campo "hoje" (como cada visão aparece agora) e como fonte extra. Nunca crie uma vertente a partir de uma notícia isolada.
 Regras:
-- Mostre TODAS as visões que existem de verdade nos textos, nem mais nem menos: podem ser 2, podem ser 6. Nunca invente uma visão para completar número.
+- Mostre TODAS as grandes visões que existem de verdade nos textos, nem mais nem menos: podem ser 2, podem ser 6. Nunca invente uma visão para completar número.
 - Se o tema não tiver debate de verdade, devolva "vertentes": [].
-- As vertentes podem ser por região (Ocidente, Rússia, China, Sul Global, Brasil...) ou por ideia (mais mercado x mais Estado, segurança x direitos...): o que fizer mais sentido para este tema.
+- As vertentes podem ser por região (Ocidente, Rússia, China, Sul Global, Brasil...) ou por ideia (mais mercado x mais Estado, integração x soberania, segurança x direitos...): o que fizer mais sentido para este tema.
 - Apresente cada visão com equilíbrio e respeito, sem dar razão a nenhuma. Todas têm um ponto fraco.
-- Cada vertente precisa de pelo menos uma fonte [n] que a sustente; o que não tiver base nos textos fica de fora.
+- Cada vertente precisa de base nos textos: pelo menos um artigo, ou pelo menos duas notícias de fontes diferentes. O que não tiver base fica de fora.
 - Notícia de veículo estatal mostra a posição daquele governo, não um fato comprovado.`, 3500, (r) => {
+    // Base mínima: um artigo, ou duas notícias de fontes diferentes.
+    const temBase = (idx) => idx.some((i) => i < artigos.length) || new Set(idx.map((i) => fontes[i].fonte)).size >= 2;
     r.vertentes = (Array.isArray(r.vertentes) ? r.vertentes : [])
       .map((v) => ({ ...v, fontes: [...new Set((v.fontes || []).filter(fonteValida))] }))
-      .filter((v) => v.nome && v.pensa && v.fontes.length)
+      .filter((v) => v.nome && v.pensa && v.fontes.length && temBase(v.fontes))
       .slice(0, 8);
     // Com uma visão só não há "vertentes": é melhor não mostrar a seção.
     if (r.vertentes.length < 2) r.vertentes = [];
@@ -375,7 +381,7 @@ Cadeia: 3 a 5 passos. Teste: 3 perguntas, cuja resposta esteja no texto da aula.
   aula.numeros = (aula.numeros || []).map((n) => ({ ...n, fonte: nomeFonte(n.fonte), link: fonteValida(n.fonte) ? fontes[n.fonte].link : '' }));
   // Cada vertente guarda os nomes e links das suas fontes (vindos dos nossos dados).
   const usadasNasVertentes = new Set((aula.vertentes || []).flatMap((v) => v.fontes));
-  aula.vertentes = (aula.vertentes || []).map((v) => ({ ...v, fontes: v.fontes.map((i) => ({ fonte: fontes[i].fonte, link: fontes[i].link })) }));
+  aula.vertentes = (aula.vertentes || []).map((v) => ({ ...v, fontes: [...new Map(v.fontes.map((i) => [fontes[i].fonte, { fonte: fontes[i].fonte, link: fontes[i].link }])).values()] })); // uma vez cada fonte
   // Lista de fontes da aula: os artigos; as notícias do dia só se a aula usou
   // ("E hoje?"); e as notícias de várias linhas citadas nas vertentes.
   aula.fontes = fontes.filter((_, i) => i < artigos.length

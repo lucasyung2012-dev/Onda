@@ -565,6 +565,7 @@ export function telaTema(tema, temasAnteriores = []) {
         ${v.quemDefende ? `<p><span class="rotulo acento">${en ? 'Who holds it' : 'Quem defende'}</span> ${esc(v.quemDefende)}</p>` : ''}
         ${v.porQue ? `<p><span class="rotulo acento">${en ? 'Why' : 'Por quê'}</span> ${esc(v.porQue)}</p>` : ''}
         ${v.criticas ? `<p class="vertente-critica"><span class="rotulo">${en ? 'What critics say' : 'O que os críticos dizem'}</span> ${esc(v.criticas)}</p>` : ''}
+        ${v.hoje ? `<p><span class="rotulo ouro">${en ? 'How it shows up today' : 'Como aparece hoje'}</span> ${esc(v.hoje)}</p>` : ''}
         ${v.fontes?.length ? `<ul class="guardada-fontes">${v.fontes.map((f) => `<li><a href="${esc(f.link)}" target="_blank" rel="noopener noreferrer">${esc(f.fonte)}</a></li>`).join('')}</ul>` : ''}
       </article>`).join('');
     bloco('As vertentes', `
