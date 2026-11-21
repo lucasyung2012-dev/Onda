@@ -23,6 +23,38 @@ const IMPACTO = traduzido({
 const AFIRMACAO = traduzido({
   fato: 'Fato confirmado', declaracao: 'Declaração oficial', alegacao: 'Alegação', nao_confirmado: 'Não confirmado', analise: 'Análise',
 });
+// ---------- Peças para deixar a leitura leve ----------
+
+/** Primeira frase de um texto (resumo de reserva quando o robô não mandou um). */
+function primeiraFrase(texto, max = 170) {
+  // Tira as marcas de fonte do meio do texto, como "(fonte [0])" ou "[2]".
+  const paragrafo = (texto || '').split(/\n+/)[0].replace(/\s*\((fontes?|source)[^)]*\)/gi, '').replace(/\s*\[\d+\]/g, '').trim();
+  const achou = paragrafo.match(/^.+?[.!?](\s|$)/);
+  let frase = (achou ? achou[0] : paragrafo).trim();
+  if (frase.length > max) frase = `${frase.slice(0, max).replace(/\s+\S*$/, '')}…`;
+  return frase;
+}
+
+/** Texto dobrado: mostra os primeiros parágrafos e guarda o resto em "Ler mais". */
+function dobrado(texto, { mostrar = 1, rotulo = '' } = {}) {
+  const ps = (texto || '').split(/\n+/).filter(Boolean).map((p) => `<p>${esc(p)}</p>`);
+  if (ps.length <= mostrar) return `<div class="texto-longo">${ps.join('')}</div>`;
+  return `<div class="texto-longo">${ps.slice(0, mostrar).join('')}</div>
+    <details class="dobra"><summary>${esc(rotulo || (emIngles() ? 'Read more' : 'Ler mais'))}</summary><div class="texto-longo">${ps.slice(mostrar).join('')}</div></details>`;
+}
+
+/** Parte que fica escondida até tocar (fontes, lista completa...). */
+const gaveta = (rotulo, corpo) => `<details class="dobra"><summary>${esc(rotulo)}</summary>${corpo}</details>`;
+
+/** A ideia principal de uma parte, em destaque. */
+const ideia = (texto) => (texto ? `<p class="ideia">${esc(texto)}</p>` : '');
+
+/** Menu de partes que gruda no alto ao rolar: um toque leva à parte. */
+const menuPartes = (itens) => `
+  <nav class="menu-partes" aria-label="${emIngles() ? 'Sections' : 'Partes'}">
+    ${itens.map(([id, nome]) => `<a href="#" data-pular="${esc(id)}">${esc(nome)}</a>`).join('')}
+  </nav>`;
+
 // Cor de cada tema na aba Explorar
 const COR_TEMA = {
   conflitos: '#C2554F', diplomacia: '#4F86C6', economia: '#2E9E5B', energia: '#D98B3A', politica: '#8A7FD1',
@@ -250,9 +282,8 @@ export function telaAnalise(analise, dados, opcoes = {}) {
   if (!analise?.destaque) return `<div class="tela"><p class="vazio">Ainda não há análise.</p></div>`;
   const d = analise.destaque;
   const regiao = d.regioes[0];
-  const paragrafos = (texto) => texto.split(/\n+/).filter(Boolean).map((p) => `<p>${esc(p)}</p>`).join('');
-  const bloco = (num, titulo, corpo) => `
-    <section class="bloco entrar-lado">
+  const bloco = (num, titulo, corpo, id = '') => `
+    <section class="bloco entrar-lado"${id ? ` id="${id}"` : ''}>
       <div class="bloco-cabeca"><span class="num">${num}</span><h2>${t(titulo)}</h2></div>
       ${corpo}
     </section>`;
@@ -261,6 +292,10 @@ export function telaAnalise(analise, dados, opcoes = {}) {
     ? `<strong>Data do fato:</strong> ${esc(dataCurta(d.dataDoFato))}. ${esc(d.dataDoFatoObs || '')}`
     : `<strong>Data do fato:</strong> as matérias não deixam claro. ${esc(d.dataDoFatoObs || '')}`;
 
+  // Caminho curto (etiquetas) + o caminho completo guardado na gaveta.
+  const passos = `
+    <div class="passos">${[...new Set(d.cadeia.map((c) => c.camada))].map((c) => `<span>${esc(CAMADAS[c] || c)}</span>`).join('<i aria-hidden="true">›</i>')}<i aria-hidden="true">›</i><span class="voce">${t('Você')}</span></div>
+    <p class="impacto-voce"><span class="rotulo ouro">${esc(IMPACTO[d.chegaEmVoce.tipo])}</span> ${esc(d.chegaEmVoce.texto)}</p>`;
   const cadeia = `
     <ol class="cadeia">
       ${d.cadeia.map((c, i) => `
@@ -319,6 +354,35 @@ export function telaAnalise(analise, dados, opcoes = {}) {
         </a></li>`).join('')}
     </ul>`;
 
+  // "Em 30 segundos": o resumo que o robô escreve; nos destaques antigos,
+  // a primeira frase de cada parte.
+  const r30 = d.emTrintaSegundos || {};
+  const resumo30 = `
+    <div class="resumo-30">
+      <p class="rotulo ouro">${en ? 'In 30 seconds' : 'Em 30 segundos'}</p>
+      <div class="linha-30"><span class="rotulo acento">${en ? 'What' : 'O quê'}</span><p>${esc(r30.oQue || primeiraFrase(d.oQueAconteceu))}</p></div>
+      <div class="linha-30"><span class="rotulo acento">${en ? 'Why' : 'Por quê'}</span><p>${esc(r30.porQue || d.criterio || primeiraFrase(d.porQueImporta))}</p></div>
+      <div class="linha-30"><span class="rotulo ouro">${en ? 'For you' : 'Para você'}</span><p>${esc(r30.voce || d.emUmaFrase)}</p></div>
+    </div>`;
+
+  // As partes: [id, título, nome curto no menu, conteúdo]
+  const contagem = {};
+  for (const a of d.afirmacoes) contagem[a.tipo] = (contagem[a.tipo] || 0) + 1;
+  const placar = `<div class="placar">${Object.entries(contagem).map(([tipo, n]) => `<span style="--cor:var(--a-${tipo})"><b>${n}</b> ${esc(AFIRMACAO[tipo])}</span>`).join('')}</div>`;
+  const partes = [
+    ['parte-aconteceu', 'O que aconteceu', en ? 'What happened' : 'Aconteceu',
+      `${dobrado(d.oQueAconteceu, { mostrar: 1 })}<p class="data-fato">${dataFato}</p>`],
+    ['parte-porque', 'Por que é o destaque do dia', en ? 'Why' : 'Por quê', dobrado(d.porQueImporta, { mostrar: 1 })],
+    ['parte-voce', 'Como chega em você', en ? 'You' : 'Você', `${passos}${gaveta(en ? 'See the full path' : 'Ver o caminho completo', cadeia)}`],
+    ladosHtml ? ['parte-lados', 'Como cada lado vê', en ? 'Sides' : 'Lados', ladosHtml] : null,
+    ['parte-fatos', 'Fatos × versões', en ? 'Facts' : 'Fatos', `${placar}${gaveta(en ? `See all ${d.afirmacoes.length}` : `Ver as ${d.afirmacoes.length} afirmações`, afirmacoes)}`],
+    ['parte-agora', en ? 'What comes next' : 'E agora?', en ? 'Next' : 'E agora',
+      `<p class="rotulo">${t('O que ainda não sabemos')}</p>${dobrado(d.oQueNaoSabemos, { mostrar: 1 })}
+       <p class="rotulo" style="margin-top:14px">${t('O que acompanhar')}</p><ul class="lista-pontos">${d.oQueAcompanhar.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`],
+    ['parte-fontes', `${t('As fontes')} (${d.fontesUsadas.length})`, en ? 'Sources' : 'Fontes',
+      gaveta(en ? `See the ${d.fontesUsadas.length} sources` : `Ver as ${d.fontesUsadas.length} fontes`, fontes)],
+  ].filter(Boolean);
+
   return `
     <div class="tela">
       <div class="analise-capa">
@@ -331,20 +395,11 @@ export function telaAnalise(analise, dados, opcoes = {}) {
         <h1>${esc(d.titulo)}</h1>
       </div>
       ${notas(d.notas)}
+      ${gaveta(en ? 'Why these scores?' : 'Por que essas notas?', notasDetalhe)}
       ${opcoes.botao || ''}
-      <div class="uma-frase"><p class="rotulo ouro">${t('Em uma frase')}</p><p>${esc(d.emUmaFrase)}</p></div>
-
-      ${[
-        ['O que aconteceu', `<div class="texto-longo">${paragrafos(d.oQueAconteceu)}</div><p class="data-fato">${dataFato}</p>`],
-        ['Por que é o destaque do dia', `<div class="texto-longo">${paragrafos(d.porQueImporta)}</div>`],
-        ['Como chega em você', cadeia],
-        ['As notas', notasDetalhe],
-        ['Fatos × versões', afirmacoes],
-        ladosHtml ? ['Como cada lado vê', ladosHtml] : null,
-        ['O que ainda não sabemos', `<div class="texto-longo">${paragrafos(d.oQueNaoSabemos)}</div>`],
-        ['O que acompanhar', `<ul class="lista-pontos">${d.oQueAcompanhar.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`],
-        [`${t('As fontes')} (${d.fontesUsadas.length})`, fontes],
-      ].filter(Boolean).map(([titulo, corpo], i) => bloco(i + 1, titulo, corpo)).join('')}
+      ${resumo30}
+      ${menuPartes(partes.map(([id, , curto]) => [id, curto]))}
+      ${partes.map(([id, titulo, , corpo], i) => bloco(i + 1, titulo, corpo, id)).join('')}
 
       ${opcoes.comOutros && analise.tambemImporta?.length ? `
         <section class="secao">
@@ -557,27 +612,40 @@ export function telaTema(tema, temasAnteriores = []) {
   if (tema.formato !== 2) return telaTemaV1(tema);
 
   const paragrafos = (texto) => (texto || '').split(/\n+/).filter(Boolean).map((p) => `<p>${esc(p)}</p>`).join('');
+  const en = emIngles();
+  const lerCapitulo = en ? 'Read the chapter' : 'Ler o capítulo';
   const blocos = [];
-  const bloco = (titulo, corpo) => blocos.push({ titulo: t(titulo), corpo });
+  // curto = nome no menu de capítulos
+  const CURTO = {
+    'As vertentes': en ? 'Views' : 'Vertentes', 'Onde há debate': 'Debate', 'E hoje?': en ? 'Today' : 'Hoje',
+    'Como chega em você': en ? 'You' : 'Você', 'Teste rápido': en ? 'Quiz' : 'Teste',
+    'Ligações com outros temas': en ? 'Links' : 'Ligações', 'Para ir além: as fontes': en ? 'Sources' : 'Fontes',
+  };
+  const bloco = (titulo, corpo, curto) => blocos.push({ titulo: t(titulo), corpo, curto: curto || CURTO[titulo] || t(titulo) });
 
   if (tema.paraComecar) {
-    bloco('Para começar do zero', `<div class="texto-longo">${paragrafos(tema.paraComecar)}</div>
-      ${tema.glossario?.length ? `<div class="glossario">${tema.glossario.map((g) => `
-        <details><summary>${esc(g.termo)}</summary><p>${esc(g.definicao)}</p></details>`).join('')}</div>` : ''}`);
+    bloco('Para começar do zero', `${dobrado(tema.paraComecar, { mostrar: 1, rotulo: lerCapitulo })}
+      ${tema.glossario?.length ? `<p class="rotulo" style="margin-top:14px">${en ? 'Key words (tap)' : 'Palavras-chave (toque)'}</p><div class="glossario">${tema.glossario.map((g) => `
+        <details><summary>${esc(g.termo)}</summary><p>${esc(g.definicao)}</p></details>`).join('')}</div>` : ''}`, en ? 'Basics' : 'O básico');
   }
   if (tema.historia) {
-    bloco('Como chegamos aqui', `<div class="texto-longo">${paragrafos(tema.historia)}</div>
-      ${tema.linhaDoTempo?.length ? `<ol class="cadeia linha-tempo" style="margin-top:16px">${tema.linhaDoTempo.map((l) => `
-        <li class="elo"><span class="ponto" style="font-size:9px">●</span><div class="caixa"><span class="camada">${esc(l.quando)}</span><p>${esc(l.oQue)}</p>${l.fonte ? `<small class="subtitulo">${esc(l.fonte)}</small>` : ''}</div></li>`).join('')}</ol>` : ''}`);
+    // Linha do tempo na horizontal (deslize) e o texto longo na gaveta
+    bloco('Como chegamos aqui', `${ideia(tema.historiaIdeia || primeiraFrase(tema.historia))}
+      ${tema.linhaDoTempo?.length ? `<div class="linha-horizontal">${tema.linhaDoTempo.map((l, i) => `
+        <div class="marco" style="--i:${i}"><span class="quando">${esc(l.quando)}</span><p>${esc(l.oQue)}</p>${l.fonte ? `<small>${esc(l.fonte)}</small>` : ''}</div>`).join('')}</div>` : ''}
+      ${gaveta(lerCapitulo, `<div class="texto-longo">${paragrafos(tema.historia)}</div>`)}`, en ? 'History' : 'História');
   }
   if (tema.comoFunciona) {
-    bloco('Como funciona por dentro', `<div class="texto-longo">${paragrafos(tema.comoFunciona)}</div>
+    bloco('Como funciona por dentro', `${ideia(tema.comoFuncionaIdeia || primeiraFrase(tema.comoFunciona))}
       ${tema.numeros?.length ? `<div class="numeros">${tema.numeros.map((n) => `
-        <div class="numero-caixa"><strong>${esc(n.valor)}</strong><p>${esc(n.significado)}</p>${n.fonte ? `<small>${esc(n.fonte)}</small>` : ''}</div>`).join('')}</div>` : ''}`);
+        <div class="numero-caixa"><strong>${esc(n.valor)}</strong><p>${esc(n.significado)}</p>${n.fonte ? `<small>${esc(n.fonte)}</small>` : ''}</div>`).join('')}</div>` : ''}
+      ${gaveta(lerCapitulo, `<div class="texto-longo">${paragrafos(tema.comoFunciona)}</div>`)}`, en ? 'How it works' : 'Como funciona');
   }
   if (tema.atores?.length) {
-    bloco('O que cada lado quer', `<div class="atores">${tema.atores.map((a) => `
-      <div class="ator"><strong>${esc(a.nome)}</strong><p><span class="rotulo acento">Quer</span> ${esc(a.quer)}</p>${a.porque ? `<p class="subtitulo">${esc(a.porque)}</p>` : ''}</div>`).join('')}</div>`);
+    // Quem é quem: etiquetas; tocando, abre o que cada um quer
+    bloco('O que cada lado quer', `<p class="subtitulo" style="margin-bottom:10px">${en ? 'Tap a name to see what they want.' : 'Toque num nome para ver o que ele quer.'}</p>
+      <div class="quem-e-quem">${tema.atores.map((a) => `
+      <details class="ator-chip"><summary>${esc(a.nome)}</summary><p><span class="rotulo acento">${en ? 'Wants' : 'Quer'}</span> ${esc(a.quer)}</p>${a.porque ? `<p class="subtitulo">${esc(a.porque)}</p>` : ''}</details>`).join('')}</div>`, en ? 'Who is who' : 'Quem é quem');
   }
   // As vertentes: cartões lado a lado (deslize), cada um com o que pensa,
   // quem defende, por quê, o que os críticos dizem e as fontes.
@@ -625,11 +693,11 @@ export function telaTema(tema, temasAnteriores = []) {
     bloco('Ligações com outros temas', `<div class="temas-lista">${ligacoes.map((t) => `
       <a class="tema-item" href="#tema/${esc(t.data)}" style="text-decoration:none;color:inherit"><span><strong style="display:block;font-weight:600">${esc(t.titulo)}</strong><small style="white-space:normal">${esc(t.pergunta)}</small></span><small>${esc(dataCurta(t.data))}</small></a>`).join('')}</div>`);
   }
-  bloco('Para ir além: as fontes', `<ul class="fontes-usadas">${(tema.fontes || []).map((f, i) => `
-    <li><a class="fonte-usada" href="${esc(f.link)}" target="_blank" rel="noopener noreferrer"><span class="idx">${i + 1}</span><div><strong>${esc(f.fonte)}</strong><p>${esc(f.titulo)}</p></div><span class="icone i-externo" aria-hidden="true"></span></a></li>`).join('')}</ul>`);
+  const nFontes = (tema.fontes || []).length;
+  bloco('Para ir além: as fontes', gaveta(en ? `See the ${nFontes} sources` : `Ver as ${nFontes} fontes`, `<ul class="fontes-usadas">${(tema.fontes || []).map((f, i) => `
+    <li><a class="fonte-usada" href="${esc(f.link)}" target="_blank" rel="noopener noreferrer"><span class="idx">${i + 1}</span><div><strong>${esc(f.fonte)}</strong><p>${esc(f.titulo)}</p></div><span class="icone i-externo" aria-hidden="true"></span></a></li>`).join('')}</ul>`));
 
-  // Índice no topo: pula direto para cada parte da aula
-  const indice = blocos.map((b, i) => `<a href="#tema/${esc(tema.dataReferencia)}" data-pular="bloco-${i}">${i + 1}. ${b.titulo}</a>`).join('');
+  const { minutos } = tamanhoDaAula(tema);
 
   return `
     <div class="tela aula">
@@ -640,11 +708,12 @@ export function telaTema(tema, temasAnteriores = []) {
           <p class="rotulo">${t('Tema do dia')} · ${esc(dataCurta(tema.dataReferencia))}${tema.sugeridoPorVoce ? ` · ${emIngles() ? 'your suggestion' : 'sugerido por você'}` : ''}</p>
           <h2>${esc(tema.titulo)}</h2>
           <p style="font-family:var(--fonte-titulo);font-size:18px;color:#fff">${esc(tema.pergunta)}</p>
+          <p class="aula-duracao">${en ? `${blocos.length} chapters · ${minutos} min` : `${blocos.length} capítulos · ${minutos} min de leitura`}</p>
         </div>
         ${tema.imagem ? `<a class="credito" href="${esc(tema.imagem.link)}" target="_blank" rel="noopener noreferrer">Imagem: ${esc(tema.imagem.credito)}</a>` : ''}
       </div>
       <div class="uma-frase"><p class="rotulo ouro">${t('A resposta em uma frase')}</p><p>${esc(tema.emUmaFrase)}</p></div>
-      <nav class="indice-aula" aria-label="Partes da aula"><p class="rotulo">${t('Nesta aula')}</p>${indice}</nav>
+      ${menuPartes(blocos.map((b, i) => [`bloco-${i}`, `${i + 1} ${b.curto}`]))}
       ${blocos.map((b, i) => `
         <section class="bloco" id="bloco-${i}">
           <div class="bloco-cabeca"><span class="num">${i + 1}</span><h2>${b.titulo}</h2></div>${b.corpo}

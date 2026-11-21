@@ -129,6 +129,7 @@ Responda neste formato JSON (todos os campos são obrigatórios):
 {
  "titulo": "<título claro em português, até 90 caracteres>",
  "emUmaFrase": "<uma frase que diga como isso pode chegar ao dia a dia de quem vive no Brasil, sem exagero>",
+ "emTrintaSegundos": {"oQue": "<o que aconteceu, em UMA frase curta, até 110 caracteres>", "porQue": "<por que importa, em UMA frase curta, até 110 caracteres>", "voce": "<o que muda para quem vive no Brasil, em UMA frase curta, até 110 caracteres; diga se não muda nada agora>"},
  "oQueAconteceu": "<2 a 4 parágrafos curtos separados por \\n\\n: o quê, onde, quando, quem está envolvido, antecedentes necessários>",
  "dataDoFato": "<AAAA-MM-DD em que o fato ocorreu, ou null se as matérias não deixam claro>",
  "dataDoFatoObs": "<explique se o fato é de hoje, de antes (só noticiado hoje) ou se não dá para saber>",
@@ -173,6 +174,9 @@ Cuidados (erros que já aconteceram):
         .filter((a) => a.fontes.length);
       r.oQueAcompanhar = (r.oQueAcompanhar || []).filter(Boolean).slice(0, 5);
       if (r.dataDoFato && !/^\d{4}-\d{2}-\d{2}$/.test(r.dataDoFato)) r.dataDoFato = null;
+      // Resumo de 30 segundos: opcional (sem ele, o app usa a 1ª frase de cada parte).
+      const r30 = r.emTrintaSegundos || {};
+      r.emTrintaSegundos = r30.oQue && r30.porQue && r30.voce ? { oQue: r30.oQue, porQue: r30.porQue, voce: r30.voce } : null;
     },
   });
 

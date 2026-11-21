@@ -242,7 +242,8 @@ Textos sobre a história:
 ${material(artigos, PALAVRAS.historia)}
 
 Conte como chegamos até aqui. JSON:
-{"historia": "<4 a 6 parágrafos separados por \\n\\n, em ordem cronológica, como capítulos de uma história>",
+{"historiaIdeia": "<a ideia principal deste capítulo em UMA frase curta, até 140 caracteres>",
+ "historia": "<4 a 6 parágrafos separados por \\n\\n, em ordem cronológica, como capítulos de uma história>",
  "linhaDoTempo": [{"quando": "<ano ou data que está nos textos>", "oQue": "<o que aconteceu>", "fonte": <índice [n] do texto>}]}
 Linha do tempo: 6 a 12 marcos, só com datas que aparecem nos textos, escritas em português (ex.: "julho de 1944", "27 de dezembro de 1945").`, 4000, (r) => {
     if (!r.historia) throw new Error('sem história');
@@ -256,7 +257,8 @@ Textos sobre a estrutura e o funcionamento:
 ${material(artigos, PALAVRAS.funcionamento)}
 
 Explique como o tema funciona por dentro. JSON:
-{"comoFunciona": "<3 a 5 parágrafos separados por \\n\\n: regras, quem decide, quem paga, quem manda, como as peças se encaixam>",
+{"comoFuncionaIdeia": "<a ideia principal deste capítulo em UMA frase curta, até 140 caracteres>",
+ "comoFunciona": "<3 a 5 parágrafos separados por \\n\\n: regras, quem decide, quem paga, quem manda, como as peças se encaixam>",
  "numeros": [{"valor": "<número exatamente como nos textos, com unidade>", "significado": "<o que ele mostra>", "fonte": <índice [n]>}]}
 Números: 3 a 6, só os que aparecem nos textos. Prefira os mais recentes; se o número for de um ano específico, diga o ano no "significado" (ex.: "PIB da UE em 2010"). Têm de ser QUANTIDADES que ajudam a entender o tema (valores em dinheiro, porcentagens, número de membros, população, produção...), nunca um ano sozinho.`, 3500, (r) => {
     if (!r.comoFunciona) throw new Error('sem funcionamento');

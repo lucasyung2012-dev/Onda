@@ -1217,3 +1217,86 @@ img { max-width: 100%; display: block; }
 .vertente .vertente-pensa { color: var(--texto); font-weight: 500; }
 .vertente .rotulo { display: block; margin-bottom: 2px; }
 .vertente .vertente-critica { padding: 10px 12px; border-radius: var(--raio-p); background: var(--superficie-2); }
+
+/* =============================================================
+   Leitura leve (destaque e tema): resumo, menu de partes, texto
+   dobrado, etiquetas e linha do tempo na horizontal.
+   ============================================================= */
+
+/* Menu de partes: gruda logo abaixo do topo e desliza para o lado */
+.menu-partes {
+  position: sticky; top: calc(var(--altura-topo) + env(safe-area-inset-top)); z-index: 5;
+  display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none;
+  margin: 16px calc(-1 * var(--margem)) 0; padding: 8px var(--margem);
+  background: color-mix(in srgb, var(--fundo) 88%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+}
+.menu-partes::-webkit-scrollbar { display: none; }
+.menu-partes a {
+  flex: none; padding: 6px 12px; border-radius: 999px; font-size: 13.5px; font-weight: 600;
+  color: var(--texto-2); text-decoration: none; background: var(--superficie); border: 1px solid var(--borda);
+}
+.menu-partes a:active { background: var(--acento-fundo); color: var(--acento); }
+.bloco[id] { scroll-margin-top: calc(var(--altura-topo) + 64px); }
+.aula .bloco { scroll-margin-top: calc(var(--altura-topo) + 64px); }
+
+/* Em 30 segundos */
+.resumo-30 { margin-top: 16px; padding: 14px 16px; border-radius: var(--raio); background: var(--superficie); border: 1px solid var(--borda); display: grid; gap: 10px; }
+.linha-30 { display: grid; grid-template-columns: 72px 1fr; gap: 8px; align-items: baseline; }
+.linha-30 p { font-size: 15.5px; line-height: 1.45; color: var(--texto); }
+
+/* Texto dobrado e gavetas ("Ler mais", "Ver as fontes") */
+.dobra { margin-top: 10px; }
+.dobra > summary {
+  display: inline-flex; align-items: center; gap: 6px; cursor: pointer; list-style: none;
+  font-size: 14px; font-weight: 600; color: var(--acento); padding: 6px 0;
+}
+.dobra > summary::-webkit-details-marker { display: none; }
+.dobra > summary::after { content: '▾'; transition: transform 0.2s ease; }
+.dobra[open] > summary::after { transform: rotate(180deg); }
+.dobra[open] > summary { margin-bottom: 8px; }
+
+/* A ideia principal de um capítulo */
+.ideia {
+  font-family: var(--fonte-titulo); font-size: 18px; line-height: 1.4; color: var(--texto);
+  padding: 12px 14px; border-radius: var(--raio-p); background: var(--acento-fundo); margin-bottom: 12px;
+}
+
+/* Caminho até você, em etiquetas */
+.passos { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.passos span { padding: 5px 10px; border-radius: 999px; font-size: 13px; font-weight: 600; background: var(--superficie); border: 1px solid var(--borda); color: var(--texto-2); }
+.passos span.voce { background: var(--ouro-fundo); color: var(--ouro); border-color: transparent; }
+.passos i { font-style: normal; color: var(--texto-3); }
+.impacto-voce { margin-top: 12px; font-size: 15px; line-height: 1.5; color: var(--texto-2); }
+.impacto-voce .rotulo { display: block; margin-bottom: 2px; }
+
+/* Placar de fatos x versões */
+.placar { display: flex; flex-wrap: wrap; gap: 8px; }
+.placar span { padding: 6px 12px; border-radius: 999px; font-size: 13px; color: var(--texto); background: color-mix(in srgb, var(--cor) 16%, transparent); border: 1px solid color-mix(in srgb, var(--cor) 40%, transparent); }
+.placar b { color: var(--cor); font-size: 15px; margin-right: 2px; }
+
+/* Linha do tempo na horizontal (deslize) */
+.linha-horizontal { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--margem); scrollbar-width: none; margin: 4px calc(-1 * var(--margem)) 0; padding: 4px var(--margem) 10px; }
+.linha-horizontal::-webkit-scrollbar { display: none; }
+.marco { flex: none; width: 62%; max-width: 240px; scroll-snap-align: start; padding: 12px; border-radius: var(--raio-p); background: var(--superficie); border: 1px solid var(--borda); border-top: 3px solid var(--ouro); animation: subir 0.4s ease both; animation-delay: calc(var(--i, 0) * 40ms); }
+.marco .quando { display: block; font-family: var(--fonte-titulo); font-size: 16px; color: var(--ouro); margin-bottom: 4px; }
+.marco p { font-size: 14px; line-height: 1.45; color: var(--texto-2); }
+.marco small { display: block; margin-top: 6px; font-size: 11.5px; color: var(--texto-3); }
+
+/* Quem é quem: etiquetas que abrem */
+.quem-e-quem { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-start; }
+.ator-chip { border-radius: var(--raio-p); background: var(--superficie); border: 1px solid var(--borda); }
+.ator-chip > summary { cursor: pointer; list-style: none; padding: 8px 12px; font-weight: 600; font-size: 14.5px; }
+.ator-chip > summary::-webkit-details-marker { display: none; }
+.ator-chip[open] { flex-basis: 100%; border-color: var(--acento); }
+.ator-chip[open] > summary { color: var(--acento); }
+.ator-chip p { padding: 0 12px 10px; font-size: 14.5px; line-height: 1.5; }
+
+.aula-duracao { margin-top: 8px; font-size: 13px; font-weight: 600; color: rgba(255, 255, 255, 0.85); }
+/* Palavras-chave como etiquetas (abrem ao tocar) */
+.glossario { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-start; }
+.glossario details { padding: 0; }
+.glossario summary { list-style: none; padding: 7px 12px; font-size: 14px; }
+.glossario summary::-webkit-details-marker { display: none; }
+.glossario details[open] { flex-basis: 100%; border-color: var(--acento); }
+.glossario details p { margin: 0; padding: 0 12px 10px; }
