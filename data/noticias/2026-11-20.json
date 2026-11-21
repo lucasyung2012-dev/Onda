@@ -2,6 +2,170 @@
   "data": "2026-11-20",
   "noticias": [
     {
+      "id": "f99fe6b454bb",
+      "titulo": "Bayer pagará até US$ 7,25 bilhões em acordo judicial com pacientes que alegam ter desenvolvido câncer após uso de herbicida",
+      "resumo": "A fabricante de agroquímicos Bayer pagará até US$ 7,25 bilhões (o equivalente a mais de R$ 40 bilhões) ao longo de duas décadas para resolver milhares de processos movidos por pacientes com câncer nos EUA. O acordo foi aprovado nesta sexta-feira (20) por um juiz do estado do…",
+      "link": "https://g1.globo.com/mundo/noticia/2026/11/20/bayer-pagara-ate-us-725-bilhoes-em-acordo-judicial-com-pacientes-que-alegam-ter-desenvolvido-cancer-apos-uso-de-herbicida.ghtml",
+      "fonte": "g1",
+      "fonteNome": "g1 Mundo",
+      "pais": "Brasil",
+      "visao": "Portal do Grupo Globo",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:38:30.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://s2-g1.glbimg.com/BjgIzyXsGg2XoP45IiCC883sVZE=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/2/A/HQ58dUTHS5mQUHilXI9Q/reutersmike-blake-monsanto-cos-roundup-is-shown-for-sale-in-encinitas-california.jpg",
+      "imagemCredito": "g1 Mundo",
+      "regioes": [
+        "america-norte",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "economia",
+        "direitos",
+        "conflitos",
+        "diplomacia",
+        "midia",
+        "saude"
+      ],
+      "coletadoEm": "2026-11-21T00:45:56.409Z"
+    },
+    {
+      "id": "e632947e613b",
+      "titulo": "Suspect in Los Angeles’ deadly Palisades fire convicted of arson at retrial",
+      "resumo": "Jonathan Rinderknecht faces up to 20 years in prison for each offence.",
+      "link": "https://www.straitstimes.com/world/united-states/suspect-in-los-angeles-deadly-palisades-fire-convicted-of-arson-at-retrial",
+      "fonte": "straitstimes",
+      "fonteNome": "The Straits Times",
+      "pais": "Singapura",
+      "visao": "Jornal de referência de Singapura",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:38:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-21T00:45:56.409Z"
+    },
+    {
+      "id": "d81e71721ceb",
+      "titulo": "Top headlines in major S. Korean newspapers",
+      "resumo": "SEOUL, Nov. 21 (Yonhap) -- The following are the top headlines in major South Ko...",
+      "link": "https://en.yna.co.kr/view/AEN20261121000500320",
+      "fonte": "yonhap",
+      "fonteNome": "Yonhap",
+      "pais": "Coreia do Sul",
+      "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:37:21.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-21T00:45:56.409Z"
+    },
+    {
+      "id": "4c86c7b4db03",
+      "titulo": "From Marxism to extremism: A Perth teen’s descent into radicalisation",
+      "resumo": "James Hollands was just 16 when he was fatally shot by police after almost killing a random stranger he stabbed with a kitchen knife — now a coroner will determine if the teenager could have been saved.",
+      "link": "https://www.abc.net.au/news/2026-11-21/james-hollands-inquest-examines-years-leading-to-police-shooting/107404726",
+      "fonte": "abcau",
+      "fonteNome": "ABC News Austrália",
+      "pais": "Austrália",
+      "visao": "Emissora pública australiana",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:36:10.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/840dbe5ccfed8b9a1c9f285df23e19a8?impolicy=wcms_crop_resize&cropH=1572&cropW=2795&xPos=193&yPos=196&width=862&height=485",
+      "imagemCredito": "ABC News Austrália",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-21T00:45:56.409Z"
+    },
+    {
+      "id": "8b16797ef9af",
+      "titulo": "EUA discutem entrada da Ucrânia na Otan em troca de cessão de territórios à Rússia, diz jornal",
+      "resumo": "Os EUA estariam discutindo a possibilidade de permitir a entrada da Ucrânia na Otan em troca da cessão de territórios ucranianos à Rússia.",
+      "link": "https://www.gazetadopovo.com.br/mundo/eua-discutem-entrada-da-ucrania-na-otan-em-troca-de-cessao-de-territorios-a-russia-diz-jornal/",
+      "fonte": "gazetadopovo",
+      "fonteNome": "Gazeta do Povo Mundo",
+      "pais": "Brasil",
+      "visao": "Jornal brasileiro, direita conservadora",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:35:33.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://media.gazetadopovo.com.br/2026/10/15212539/trump-ucrania-960x540.jpg",
+      "imagemCredito": "Gazeta do Povo Mundo",
+      "regioes": [
+        "europa",
+        "america-norte"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-21T00:45:56.409Z"
+    },
+    {
+      "id": "fd65dccda25a",
+      "titulo": "ANC fights to keep control of South Africa's key cities after election setback",
+      "resumo": "The ANC appears reluctant to replicate its national power-sharing deal with the pro-business DA at the local level.",
+      "link": "https://www.bbc.co.uk/news/articles/cqpv94d10rwpo?at_medium=RSS&at_campaign=rss",
+      "fonte": "bbc",
+      "fonteNome": "BBC News",
+      "pais": "Reino Unido",
+      "visao": "Emissora pública britânica",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:34:51.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/aad1/live/7d1c0de0-e4ff-11f1-a8e4-b1e12a49db15.jpg",
+      "imagemCredito": "BBC News",
+      "regioes": [
+        "africa"
+      ],
+      "temas": [
+        "diplomacia",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-21T00:45:56.409Z"
+    },
+    {
       "id": "b8147bb77afa",
       "titulo": "Freight train derails near Sejong, leaving Saemaeul, Mugunghwa services suspended",
       "resumo": "PYEONGTAEK/SEJONG, Nov. 21 (Yonhap) -- Five cars of a freight train derailed nea...",
@@ -191,6 +355,33 @@
         "politica"
       ],
       "coletadoEm": "2026-11-21T00:37:55.938Z"
+    },
+    {
+      "id": "e5102d2b451f",
+      "titulo": "Victorian Greens seek urgent injunction over how-to-vote cards mimicking party’s branding but preferencing it last",
+      "resumo": "Exclusive: Independent candidate Tosh-Jake Finnigan’s cards instruct people to vote in a way that would benefit Liberal party Get our daily political email , free app or daily news podcast The Victorian Greens are seeking an urgent injunction from the supreme court to stop an…",
+      "link": "https://www.theguardian.com/australia-news/2026/nov/21/victorian-greens-seek-urgent-injunction-over-how-to-vote-cards-mimicking-branding-but-preferencing-it-last-ntwnfb",
+      "fonte": "guardian",
+      "fonteNome": "The Guardian",
+      "pais": "Reino Unido",
+      "visao": "Jornal britânico, centro-esquerda",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:26:56.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://i.guim.co.uk/img/media/96ab340872e588ad309196b07390be6b1c05c064/0_0_935_748/master/935.jpg?width=140&quality=85&auto=format&fit=max&s=cb157e8ba631ea73ff9af551de474e32",
+      "imagemCredito": "The Guardian",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "politica",
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-21T00:45:56.409Z"
     },
     {
       "id": "ccc3ecbbe545",
@@ -37888,5 +38079,5 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     }
   ],
-  "atualizadoEm": "2026-11-21T00:37:55.938Z"
+  "atualizadoEm": "2026-11-21T00:45:56.409Z"
 }

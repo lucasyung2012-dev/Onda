@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-21T00:37:55.938Z",
+  "geradoEm": "2026-11-21T00:45:56.409Z",
   "fontesOk": 69,
   "fontesComErro": 1,
-  "noticiasNovasNestaRodada": 14,
+  "noticiasNovasNestaRodada": 7,
   "porFonte": [
     {
       "id": "nyt",
@@ -390,7 +390,7 @@
       "itensNoFeed": 100,
       "aceitas": 100,
       "descartadasPorIdade": 0,
-      "comImagem": 95
+      "comImagem": 94
     },
     {
       "id": "thehindu",
@@ -496,9 +496,9 @@
       "nome": "g1 Mundo",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 71,
-      "descartadasPorIdade": 29,
-      "comImagem": 70
+      "aceitas": 72,
+      "descartadasPorIdade": 28,
+      "comImagem": 72
     },
     {
       "id": "folha",
@@ -531,9 +531,9 @@
       "id": "gazetadopovo",
       "nome": "Gazeta do Povo Mundo",
       "status": "ok",
-      "itensNoFeed": 58,
+      "itensNoFeed": 59,
       "aceitas": 58,
-      "descartadasPorIdade": 0,
+      "descartadasPorIdade": 1,
       "comImagem": 58
     },
     {

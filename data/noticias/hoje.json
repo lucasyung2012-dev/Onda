@@ -1,10 +1,10 @@
 {
-  "geradoEm": "2026-11-21T00:37:55.938Z",
+  "geradoEm": "2026-11-21T00:45:56.409Z",
   "fuso": "America/Sao_Paulo",
   "dataReferencia": "2026-11-20",
   "janelaHoras": 24,
-  "totalNoticias": 1453,
-  "totalFatos": 1162,
+  "totalNoticias": 1458,
+  "totalFatos": 1166,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -1040,6 +1040,25 @@
         "8c2c1d5a86f2",
         "66d0fc6e1526",
         "3fe6fbac963c"
+      ]
+    },
+    {
+      "id": "e632947e613b",
+      "titulo": "Suspect in Los Angeles’ deadly Palisades fire convicted of arson at retrial",
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/3fe8f74c2bf88423fca0537ec6732648?impolicy=wcms_crop_resize&cropH=2387&cropW=4244&xPos=0&yPos=0&width=862&height=485",
+      "fontes": 2,
+      "umaFonteSo": false,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "direitos",
+        "conflitos"
+      ],
+      "maisRecente": "2026-11-21T00:38:00.000Z",
+      "noticias": [
+        "e632947e613b",
+        "17c25968fdb4"
       ]
     },
     {
@@ -2730,6 +2749,99 @@
       ]
     },
     {
+      "id": "f99fe6b454bb",
+      "titulo": "Bayer pagará até US$ 7,25 bilhões em acordo judicial com pacientes que alegam ter desenvolvido câncer após uso de herbicida",
+      "imagem": "https://s2-g1.glbimg.com/BjgIzyXsGg2XoP45IiCC883sVZE=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/2/A/HQ58dUTHS5mQUHilXI9Q/reutersmike-blake-monsanto-cos-roundup-is-shown-for-sale-in-encinitas-california.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "america-norte",
+        "asia-pacifico"
+      ],
+      "temas": [
+        "economia",
+        "direitos",
+        "conflitos",
+        "diplomacia",
+        "midia",
+        "saude"
+      ],
+      "maisRecente": "2026-11-21T00:38:30.000Z",
+      "noticias": [
+        "f99fe6b454bb"
+      ]
+    },
+    {
+      "id": "d81e71721ceb",
+      "titulo": "Top headlines in major S. Korean newspapers",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "maisRecente": "2026-11-21T00:37:21.000Z",
+      "noticias": [
+        "d81e71721ceb"
+      ]
+    },
+    {
+      "id": "4c86c7b4db03",
+      "titulo": "From Marxism to extremism: A Perth teen’s descent into radicalisation",
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/840dbe5ccfed8b9a1c9f285df23e19a8?impolicy=wcms_crop_resize&cropH=1572&cropW=2795&xPos=193&yPos=196&width=862&height=485",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "maisRecente": "2026-11-21T00:36:10.000Z",
+      "noticias": [
+        "4c86c7b4db03"
+      ]
+    },
+    {
+      "id": "8b16797ef9af",
+      "titulo": "EUA discutem entrada da Ucrânia na Otan em troca de cessão de territórios à Rússia, diz jornal",
+      "imagem": "https://media.gazetadopovo.com.br/2026/10/15212539/trump-ucrania-960x540.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "europa",
+        "america-norte"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "maisRecente": "2026-11-21T00:35:33.000Z",
+      "noticias": [
+        "8b16797ef9af"
+      ]
+    },
+    {
+      "id": "fd65dccda25a",
+      "titulo": "ANC fights to keep control of South Africa's key cities after election setback",
+      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/aad1/live/7d1c0de0-e4ff-11f1-a8e4-b1e12a49db15.jpg",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "africa"
+      ],
+      "temas": [
+        "diplomacia",
+        "politica"
+      ],
+      "maisRecente": "2026-11-21T00:34:51.000Z",
+      "noticias": [
+        "fd65dccda25a"
+      ]
+    },
+    {
       "id": "b8147bb77afa",
       "titulo": "Freight train derails near Sejong, leaving Saemaeul, Mugunghwa services suspended",
       "imagem": "https://img.yna.co.kr/etc/inner/EN/2026/11/21/AEN20261121000400315_01_i_P2.jpg",
@@ -2778,6 +2890,24 @@
       "maisRecente": "2026-11-21T00:31:07.000Z",
       "noticias": [
         "12777fc634ce"
+      ]
+    },
+    {
+      "id": "e5102d2b451f",
+      "titulo": "Victorian Greens seek urgent injunction over how-to-vote cards mimicking party’s branding but preferencing it last",
+      "imagem": "https://i.guim.co.uk/img/media/96ab340872e588ad309196b07390be6b1c05c064/0_0_935_748/master/935.jpg?width=140&quality=85&auto=format&fit=max&s=cb157e8ba631ea73ff9af551de474e32",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "politica",
+        "direitos"
+      ],
+      "maisRecente": "2026-11-21T00:26:56.000Z",
+      "noticias": [
+        "e5102d2b451f"
       ]
     },
     {
@@ -2993,24 +3123,6 @@
       "maisRecente": "2026-11-21T00:00:00.000Z",
       "noticias": [
         "848e99a81fa1"
-      ]
-    },
-    {
-      "id": "17c25968fdb4",
-      "titulo": "Man convicted of starting deadly 2025 LA Palisades Fire",
-      "imagem": "https://live-production.wcms.abc-cdn.net.au/3fe8f74c2bf88423fca0537ec6732648?impolicy=wcms_crop_resize&cropH=2387&cropW=4244&xPos=0&yPos=0&width=862&height=485",
-      "fontes": 1,
-      "umaFonteSo": true,
-      "regioes": [
-        "mundo"
-      ],
-      "temas": [
-        "direitos",
-        "conflitos"
-      ],
-      "maisRecente": "2026-11-20T23:53:06.000Z",
-      "noticias": [
-        "17c25968fdb4"
       ]
     },
     {
@@ -21333,46 +21445,173 @@
       "noticias": [
         "42a972871329"
       ]
-    },
+    }
+  ],
+  "noticias": [
     {
-      "id": "1b13ceefb89e",
-      "titulo": "HD Hyundai Heavy hosts U.S. maritime delegation at Ulsan shipyard",
-      "imagem": "https://img.yna.co.kr/etc/inner/EN/2026/11/20/AEN20261120002200320_02_i_P2.jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
+      "id": "f99fe6b454bb",
+      "titulo": "Bayer pagará até US$ 7,25 bilhões em acordo judicial com pacientes que alegam ter desenvolvido câncer após uso de herbicida",
+      "resumo": "A fabricante de agroquímicos Bayer pagará até US$ 7,25 bilhões (o equivalente a mais de R$ 40 bilhões) ao longo de duas décadas para resolver milhares de processos movidos por pacientes com câncer nos EUA. O acordo foi aprovado nesta sexta-feira (20) por um juiz do estado do…",
+      "link": "https://g1.globo.com/mundo/noticia/2026/11/20/bayer-pagara-ate-us-725-bilhoes-em-acordo-judicial-com-pacientes-que-alegam-ter-desenvolvido-cancer-apos-uso-de-herbicida.ghtml",
+      "fonte": "g1",
+      "fonteNome": "g1 Mundo",
+      "pais": "Brasil",
+      "visao": "Portal do Grupo Globo",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:38:30.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://s2-g1.glbimg.com/BjgIzyXsGg2XoP45IiCC883sVZE=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/2/A/HQ58dUTHS5mQUHilXI9Q/reutersmike-blake-monsanto-cos-roundup-is-shown-for-sale-in-encinitas-california.jpg",
+      "imagemCredito": "g1 Mundo",
       "regioes": [
         "america-norte",
         "asia-pacifico"
       ],
       "temas": [
-        "outros"
+        "economia",
+        "direitos",
+        "conflitos",
+        "diplomacia",
+        "midia",
+        "saude"
       ],
-      "maisRecente": "2026-11-20T00:45:51.000Z",
-      "noticias": [
-        "1b13ceefb89e"
-      ]
+      "coletadoEm": "2026-11-21T00:45:56.409Z"
     },
     {
-      "id": "53fa3597d66c",
-      "titulo": "‘We Won’t Allow It Again’: Merz Says Europe Will Not Accept ‘Yalta 2’",
-      "imagem": "https://static.kyivpost.com/storage/2026/11/20/10a53d2e5a60226b7e54a4ccbecdbcb3.jpg?w=640&q=90&f=jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
+      "id": "e632947e613b",
+      "titulo": "Suspect in Los Angeles’ deadly Palisades fire convicted of arson at retrial",
+      "resumo": "Jonathan Rinderknecht faces up to 20 years in prison for each offence.",
+      "link": "https://www.straitstimes.com/world/united-states/suspect-in-los-angeles-deadly-palisades-fire-convicted-of-arson-at-retrial",
+      "fonte": "straitstimes",
+      "fonteNome": "The Straits Times",
+      "pais": "Singapura",
+      "visao": "Jornal de referência de Singapura",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:38:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-21T00:45:56.409Z"
+    },
+    {
+      "id": "d81e71721ceb",
+      "titulo": "Top headlines in major S. Korean newspapers",
+      "resumo": "SEOUL, Nov. 21 (Yonhap) -- The following are the top headlines in major South Ko...",
+      "link": "https://en.yna.co.kr/view/AEN20261121000500320",
+      "fonte": "yonhap",
+      "fonteNome": "Yonhap",
+      "pais": "Coreia do Sul",
+      "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
+      "idioma": "en",
+      "estatal": true,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:37:21.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "asia-pacifico"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-21T00:45:56.409Z"
+    },
+    {
+      "id": "4c86c7b4db03",
+      "titulo": "From Marxism to extremism: A Perth teen’s descent into radicalisation",
+      "resumo": "James Hollands was just 16 when he was fatally shot by police after almost killing a random stranger he stabbed with a kitchen knife — now a coroner will determine if the teenager could have been saved.",
+      "link": "https://www.abc.net.au/news/2026-11-21/james-hollands-inquest-examines-years-leading-to-police-shooting/107404726",
+      "fonte": "abcau",
+      "fonteNome": "ABC News Austrália",
+      "pais": "Austrália",
+      "visao": "Emissora pública australiana",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:36:10.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://live-production.wcms.abc-cdn.net.au/840dbe5ccfed8b9a1c9f285df23e19a8?impolicy=wcms_crop_resize&cropH=1572&cropW=2795&xPos=193&yPos=196&width=862&height=485",
+      "imagemCredito": "ABC News Austrália",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-21T00:45:56.409Z"
+    },
+    {
+      "id": "8b16797ef9af",
+      "titulo": "EUA discutem entrada da Ucrânia na Otan em troca de cessão de territórios à Rússia, diz jornal",
+      "resumo": "Os EUA estariam discutindo a possibilidade de permitir a entrada da Ucrânia na Otan em troca da cessão de territórios ucranianos à Rússia.",
+      "link": "https://www.gazetadopovo.com.br/mundo/eua-discutem-entrada-da-ucrania-na-otan-em-troca-de-cessao-de-territorios-a-russia-diz-jornal/",
+      "fonte": "gazetadopovo",
+      "fonteNome": "Gazeta do Povo Mundo",
+      "pais": "Brasil",
+      "visao": "Jornal brasileiro, direita conservadora",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:35:33.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://media.gazetadopovo.com.br/2026/10/15212539/trump-ucrania-960x540.jpg",
+      "imagemCredito": "Gazeta do Povo Mundo",
       "regioes": [
         "europa",
         "america-norte"
       ],
       "temas": [
-        "conflitos",
-        "diplomacia"
+        "outros"
       ],
-      "maisRecente": "2026-11-20T00:45:45.000Z",
-      "noticias": [
-        "53fa3597d66c"
-      ]
-    }
-  ],
-  "noticias": [
+      "coletadoEm": "2026-11-21T00:45:56.409Z"
+    },
+    {
+      "id": "fd65dccda25a",
+      "titulo": "ANC fights to keep control of South Africa's key cities after election setback",
+      "resumo": "The ANC appears reluctant to replicate its national power-sharing deal with the pro-business DA at the local level.",
+      "link": "https://www.bbc.co.uk/news/articles/cqpv94d10rwpo?at_medium=RSS&at_campaign=rss",
+      "fonte": "bbc",
+      "fonteNome": "BBC News",
+      "pais": "Reino Unido",
+      "visao": "Emissora pública britânica",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:34:51.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/aad1/live/7d1c0de0-e4ff-11f1-a8e4-b1e12a49db15.jpg",
+      "imagemCredito": "BBC News",
+      "regioes": [
+        "africa"
+      ],
+      "temas": [
+        "diplomacia",
+        "politica"
+      ],
+      "coletadoEm": "2026-11-21T00:45:56.409Z"
+    },
     {
       "id": "b8147bb77afa",
       "titulo": "Freight train derails near Sejong, leaving Saemaeul, Mugunghwa services suspended",
@@ -21563,6 +21802,33 @@
         "politica"
       ],
       "coletadoEm": "2026-11-21T00:37:55.938Z"
+    },
+    {
+      "id": "e5102d2b451f",
+      "titulo": "Victorian Greens seek urgent injunction over how-to-vote cards mimicking party’s branding but preferencing it last",
+      "resumo": "Exclusive: Independent candidate Tosh-Jake Finnigan’s cards instruct people to vote in a way that would benefit Liberal party Get our daily political email , free app or daily news podcast The Victorian Greens are seeking an urgent injunction from the supreme court to stop an…",
+      "link": "https://www.theguardian.com/australia-news/2026/nov/21/victorian-greens-seek-urgent-injunction-over-how-to-vote-cards-mimicking-branding-but-preferencing-it-last-ntwnfb",
+      "fonte": "guardian",
+      "fonteNome": "The Guardian",
+      "pais": "Reino Unido",
+      "visao": "Jornal britânico, centro-esquerda",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:26:56.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "https://i.guim.co.uk/img/media/96ab340872e588ad309196b07390be6b1c05c064/0_0_935_748/master/935.jpg?width=140&quality=85&auto=format&fit=max&s=cb157e8ba631ea73ff9af551de474e32",
+      "imagemCredito": "The Guardian",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "politica",
+        "direitos"
+      ],
+      "coletadoEm": "2026-11-21T00:45:56.409Z"
     },
     {
       "id": "ccc3ecbbe545",
@@ -60589,61 +60855,6 @@
         "conflitos"
       ],
       "coletadoEm": "2026-11-20T20:27:30.953Z"
-    },
-    {
-      "id": "1b13ceefb89e",
-      "titulo": "HD Hyundai Heavy hosts U.S. maritime delegation at Ulsan shipyard",
-      "resumo": "SEOUL, Nov. 20 (Yonhap) -- HD Hyundai Heavy Industries Co. said Friday a U.S. ma...",
-      "link": "https://en.yna.co.kr/view/AEN20261120002200320",
-      "fonte": "yonhap",
-      "fonteNome": "Yonhap",
-      "pais": "Coreia do Sul",
-      "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
-      "idioma": "en",
-      "estatal": true,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-20T00:45:51.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://img.yna.co.kr/etc/inner/EN/2026/11/20/AEN20261120002200320_02_i_P2.jpg",
-      "imagemCredito": "Yonhap",
-      "regioes": [
-        "america-norte",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "53fa3597d66c",
-      "titulo": "‘We Won’t Allow It Again’: Merz Says Europe Will Not Accept ‘Yalta 2’",
-      "resumo": "German Chancellor Friedrich Merz rejected a new Yalta-style division of Europe, presenting Berlin summit leaders with pieces of the Berlin Wall as a warning against repeating history. His remarks followed the Trump-Putin-Xi summit, whose peace declaration omitted Ukraine.",
-      "link": "https://www.kyivpost.com/post/90652",
-      "fonte": "kyivpost",
-      "fonteNome": "Kyiv Post",
-      "pais": "Ucrânia",
-      "visao": "Jornal ucraniano",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-20T00:45:45.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://static.kyivpost.com/storage/2026/11/20/10a53d2e5a60226b7e54a4ccbecdbcb3.jpg?w=640&q=90&f=jpg",
-      "imagemCredito": "Kyiv Post",
-      "regioes": [
-        "europa",
-        "america-norte"
-      ],
-      "temas": [
-        "conflitos",
-        "diplomacia"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
     }
   ]
 }
