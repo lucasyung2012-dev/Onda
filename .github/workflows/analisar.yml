@@ -40,6 +40,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Baixar as notícias guardadas
+        run: bash .github/dados.sh baixar
+
       - name: Coletar as notícias mais recentes
         run: node coletor/coletar.mjs
 
@@ -89,6 +92,8 @@ jobs:
         run: |
           git config user.name "onda-robo"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          bash .github/dados.sh guardar   # notícias e indicadores: ramo "dados"
+          # A análise, o tema e as traduções (pequenos, 1 vez por dia) vão para a main.
           git add data/
           if git diff --cached --quiet; then
             echo "Nada de novo para salvar."

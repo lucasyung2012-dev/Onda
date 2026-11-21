@@ -47,6 +47,10 @@ jobs:
         with:
           ref: main
 
+      # Junta as notícias e os indicadores, que moram no ramo "dados".
+      - name: Juntar as notícias
+        run: bash .github/dados.sh baixar
+
       - name: Preparar o Pages
         uses: actions/configure-pages@v5
 

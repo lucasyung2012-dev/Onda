@@ -6,3 +6,10 @@ data/noticias/hoje.json
 
 # Chave privada dos avisos (vai só para os Secrets do GitHub; nunca no repositório)
 .vapid-privada.txt
+
+# Arquivos que mudam a cada coleta: moram no ramo "dados" (ver .github/dados.sh),
+# para o histórico da main não crescer ~2,8 GB por ano.
+data/noticias/
+data/app/hoje.json
+data/app/indicadores.json
+data/relatorio-coleta.json

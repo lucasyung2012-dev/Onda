@@ -7,8 +7,8 @@
 #   - quando você aperta "Run workflow" na aba Actions do GitHub;
 #   - quando alguém muda o código do coletor ou a lista de fontes.
 #
-# O que faz: roda coletor/coletar.mjs e, se surgirem notícias
-# novas, salva os arquivos de data/ de volta no repositório.
+# O que faz: roda coletor/coletar.mjs e guarda as notícias no ramo
+# "dados", fora do histórico da main (ver .github/dados.sh).
 # =============================================================
 name: Coletar notícias
 
@@ -45,6 +45,10 @@ jobs:
         with:
           node-version: '20'
 
+      # As notícias dos últimos dias moram no ramo "dados" (ver .github/dados.sh)
+      - name: Baixar as notícias guardadas
+        run: bash .github/dados.sh baixar
+
       - name: Coletar as notícias
         run: node coletor/coletar.mjs
 
@@ -53,15 +57,10 @@ jobs:
         continue-on-error: true
         run: node coletor/indicadores.mjs
 
-      - name: Salvar as notícias no repositório
+      # Substitui o ramo "dados" (um commit só, sem acumular histórico).
+      # A main não recebe commit: assim o repositório não cresce a cada 3 horas.
+      - name: Guardar as notícias
         run: |
           git config user.name "onda-robo"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/
-          if git diff --cached --quiet; then
-            echo "Nada de novo para salvar."
-          else
-            git commit -m "Coleta de notícias: $(TZ=America/Sao_Paulo date '+%d/%m/%Y %H:%M') (Brasília)"
-            git pull --rebase
-            git push
-          fi
+          bash .github/dados.sh guardar
