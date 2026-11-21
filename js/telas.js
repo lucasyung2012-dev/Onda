@@ -464,7 +464,7 @@ export function dadosDaGaveta(dados, tipo, id) {
 function tamanhoDaAula(tema) {
   const textos = JSON.stringify(tema).replace(/"(link|url|imagem|fonte|dataReferencia|geradoEm)":"[^"]*"/g, '');
   const palavras = textos.split(/\s+/).length;
-  const partes = ['paraComecar', 'historia', 'comoFunciona', 'atores', 'debate', 'eHoje', 'cadeia', 'teste']
+  const partes = ['paraComecar', 'historia', 'comoFunciona', 'atores', 'vertentes', 'debate', 'eHoje', 'cadeia', 'teste']
     .filter((c) => (Array.isArray(tema[c]) ? tema[c].length : tema[c])).length + 1; // +1 = as fontes
   return { partes, minutos: Math.max(2, Math.round(palavras / 200)) };
 }
@@ -553,7 +553,28 @@ export function telaTema(tema, temasAnteriores = []) {
     bloco('O que cada lado quer', `<div class="atores">${tema.atores.map((a) => `
       <div class="ator"><strong>${esc(a.nome)}</strong><p><span class="rotulo acento">Quer</span> ${esc(a.quer)}</p>${a.porque ? `<p class="subtitulo">${esc(a.porque)}</p>` : ''}</div>`).join('')}</div>`);
   }
-  if (tema.debate?.length || tema.mitos?.length) {
+  // As vertentes: cartões lado a lado (deslize), cada um com o que pensa,
+  // quem defende, por quê, o que os críticos dizem e as fontes.
+  if (tema.vertentes?.length) {
+    const en = emIngles();
+    const cartoes = tema.vertentes.map((v, i) => `
+      <article class="vertente" style="--i:${i}">
+        <p class="rotulo">${en ? 'View' : 'Visão'} ${i + 1}/${tema.vertentes.length}</p>
+        <h3>${esc(v.nome)}</h3>
+        <p class="vertente-pensa">${esc(v.pensa)}</p>
+        ${v.quemDefende ? `<p><span class="rotulo acento">${en ? 'Who holds it' : 'Quem defende'}</span> ${esc(v.quemDefende)}</p>` : ''}
+        ${v.porQue ? `<p><span class="rotulo acento">${en ? 'Why' : 'Por quê'}</span> ${esc(v.porQue)}</p>` : ''}
+        ${v.criticas ? `<p class="vertente-critica"><span class="rotulo">${en ? 'What critics say' : 'O que os críticos dizem'}</span> ${esc(v.criticas)}</p>` : ''}
+        ${v.fontes?.length ? `<ul class="guardada-fontes">${v.fontes.map((f) => `<li><a href="${esc(f.link)}" target="_blank" rel="noopener noreferrer">${esc(f.fonte)}</a></li>`).join('')}</ul>` : ''}
+      </article>`).join('');
+    bloco('As vertentes', `
+      <p class="subtitulo" style="margin-bottom:10px">${en ? `${tema.vertentes.length} ways of seeing this topic, without taking sides. Swipe to see them all; you decide.` : `${tema.vertentes.length} formas de enxergar o tema, sem dar razão a nenhuma. Deslize para ver todas; quem decide é você.`}</p>
+      <div class="vertentes">${cartoes}</div>
+      ${tema.ondeConcordam ? `<div class="afirmacao" style="--cor:var(--a-fato);margin-top:12px"><span class="tipo">${en ? 'Where they agree' : 'Onde todos concordam'}</span><p>${esc(tema.ondeConcordam)}</p></div>` : ''}
+      ${tema.ondeBrigam ? `<div class="afirmacao" style="--cor:var(--a-analise);margin-top:8px"><span class="tipo">${en ? 'Where they clash' : 'Onde está a briga'}</span><p>${esc(tema.ondeBrigam)}</p></div>` : ''}
+      ${(tema.mitos || []).map((m) => `<div class="mito"><p><span class="etiqueta estatal">${en ? 'Myth' : 'Mito'}</span> ${esc(m.mito)}</p><p><span class="etiqueta pronta">${en ? 'Fact' : 'Verdade'}</span> ${esc(m.verdade)}</p></div>`).join('')}`);
+  } else if (tema.debate?.length || tema.mitos?.length) {
+    // Temas antigos (antes das vertentes) continuam aparecendo como eram.
     bloco('Onde há debate', `
       ${(tema.debate || []).map((d) => `<div class="afirmacao" style="--cor:var(--a-analise);margin-bottom:8px"><span class="tipo">${esc(d.quemDefende || 'Visão')}</span><p><strong>${esc(d.visao)}</strong></p>${d.argumento ? `<small>${esc(d.argumento)}</small>` : ''}</div>`).join('')}
       ${(tema.mitos || []).map((m) => `<div class="mito"><p><span class="etiqueta estatal">Mito</span> ${esc(m.mito)}</p><p><span class="etiqueta pronta">Verdade</span> ${esc(m.verdade)}</p></div>`).join('')}`);

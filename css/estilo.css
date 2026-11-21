@@ -1202,3 +1202,18 @@ img { max-width: 100%; display: block; }
 .guardada-fontes a { display: inline-block; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--borda, rgba(127,127,127,.3)); font-size: 13px; text-decoration: none; color: inherit; }
 /* Com 4 abas (Meu Onda), o texto encolhe um pouco para caber no celular. */
 .segmentos[style*="--qtd:4"] button { font-size: 13px; padding-left: 2px; padding-right: 2px; letter-spacing: -0.1px; }
+
+/* ---------- As vertentes (tema do dia): cartões que deslizam para o lado ---------- */
+.vertentes { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin: 0 calc(-1 * var(--margem)); padding: 2px var(--margem) 8px; }
+.vertentes::-webkit-scrollbar { display: none; }
+.vertente {
+  flex: none; width: 84%; max-width: 360px; scroll-snap-align: start;
+  padding: 16px; border-radius: var(--raio); background: var(--superficie);
+  border: 1px solid var(--borda); border-top: 3px solid var(--a-analise);
+  animation: subir 0.4s ease both; animation-delay: calc(var(--i, 0) * 60ms);
+}
+.vertente h3 { margin: 4px 0 8px; font-size: 18px; line-height: 1.25; }
+.vertente p { margin: 0 0 10px; line-height: 1.5; color: var(--texto-2); }
+.vertente .vertente-pensa { color: var(--texto); font-weight: 500; }
+.vertente .rotulo { display: block; margin-bottom: 2px; }
+.vertente .vertente-critica { padding: 10px 12px; border-radius: var(--raio-p); background: var(--superficie-2); }

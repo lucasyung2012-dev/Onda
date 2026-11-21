@@ -34,7 +34,7 @@ const EN = {
   // Temas
   'Temas anteriores': 'Past topics', 'Ler a explicação': 'Read the lesson', 'A resposta em uma frase': 'The answer in one sentence',
   'Nesta aula': 'In this lesson', 'Para começar do zero': 'Starting from scratch', 'Como chegamos aqui': 'How we got here',
-  'Como funciona por dentro': 'How it works inside', 'O que cada lado quer': 'What each side wants', 'Onde há debate': 'Where there is debate',
+  'Como funciona por dentro': 'How it works inside', 'O que cada lado quer': 'What each side wants', 'Onde há debate': 'Where there is debate', 'As vertentes': 'The different views',
   'E hoje?': 'And today?', 'Teste rápido': 'Quick quiz', 'Ligações com outros temas': 'Links to other topics',
   'Para ir além: as fontes': 'Going further: the sources', 'Para pensar': 'Something to think about',
   'Os temas vão se acumulando aqui, um por dia.': 'Topics pile up here, one a day.',

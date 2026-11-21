@@ -16,7 +16,9 @@
 //      profundidade sem estourar o limite de texto por pedido da IA
 //      gratuita (por isso há uma pausa de ~1 minuto entre as partes).
 //        a) o básico + glossário      b) a história + linha do tempo
-//        c) como funciona + números   d) o que cada lado quer + debates
+//        c) como funciona + números   d) o que cada lado quer + mitos
+//        d2) as vertentes (as várias formas de ver o tema, com notícias
+//            de fontes de países e linhas editoriais diferentes)
 //        e) e hoje? + como chega em você + teste rápido
 //   4. Grava data/app/tema.json, data/temas/AAAA-MM-DD.json (todas as
 //      versões do dia) e o índice data/app/temas.json.
@@ -147,7 +149,8 @@ Responda neste formato JSON:
 {"titulo": "<nome curto do tema>",
  "pergunta": "<a grande pergunta que a aula responde>",
  "buscas": [<5 ou 6 itens {"idioma": "pt" ou "en", "termo": "<título provável de um artigo da Wikipedia>"}: o artigo principal em português e em inglês, artigos sobre a história, o funcionamento e os principais atores do tema e, se existir, um artigo sobre a relação do Brasil com o tema (ex.: "Brasil e o FMI", "Relações entre Brasil e China")>],
- "manchetesLigadas": [<índices APENAS das manchetes que tratam diretamente do tema; na dúvida, deixe a lista vazia>]}`;
+ "manchetesLigadas": [<índices APENAS das manchetes que tratam diretamente do tema; na dúvida, deixe a lista vazia>],
+ "palavras": [<6 a 10 nomes ou palavras específicas, em português E em inglês, que aparecem em notícias sobre o tema (ex.: "OTAN", "NATO", "Aliança Atlântica"); nada genérico como "governo" ou "mundo">]}`;
 
   return perguntarIA({
     sistema: REGRAS,
@@ -156,8 +159,54 @@ Responda neste formato JSON:
     validar: (r) => {
       if (!r.titulo || !r.pergunta || !Array.isArray(r.buscas) || r.buscas.length < 2) throw new Error('escolha de tema incompleta');
       r.manchetesLigadas = (r.manchetesLigadas || []).filter((i) => inteiro(i, manchetes.length)).slice(0, 4);
+      r.palavras = (r.palavras || []).filter((p) => typeof p === 'string' && p.trim().length >= 3).slice(0, 10);
     },
   });
+}
+
+// ---------- Notícias de várias linhas editoriais (para as vertentes) ----------
+// A Wikipedia puxa um pouco para a visão ocidental. Para equilibrar, o robô
+// procura nas notícias dos últimos dias (todas as fontes do Onda) as que falam
+// do tema e escolhe as de países e linhas editoriais DIFERENTES.
+
+const semAcento = (t) => (t || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+const escaparRegex = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+async function noticiasDeVariasLinhas(escolha, jaUsadas, maximo = 12) {
+  const palavras = [...new Set([...(escolha.palavras || []), ...escolha.buscas.map((b) => b.termo)]
+    .map((p) => semAcento(p).trim()).filter((p) => p.length >= 3))];
+  if (!palavras.length) return [];
+  // Palavra inteira: "otan" acha "a OTAN decidiu", mas não "botanica".
+  const regras = palavras.map((p) => new RegExp(`(^|[^a-z0-9])${escaparRegex(p)}([^a-z0-9]|$)`));
+
+  const indice = await lerJson('data/noticias/indice.json', { dias: [] });
+  const vistos = new Set(jaUsadas);
+  const achadas = [];
+  for (const dia of indice.dias) {
+    const { noticias = [] } = await lerJson(`data/noticias/${dia}.json`, { noticias: [] });
+    for (const n of noticias) {
+      if (!n.link || vistos.has(n.link)) continue;
+      const texto = semAcento(`${n.titulo} ${n.resumo || ''}`);
+      const pontos = regras.filter((r) => r.test(texto)).length;
+      if (pontos) { vistos.add(n.link); achadas.push({ ...n, pontos }); }
+    }
+  }
+  achadas.sort((a, b) => b.pontos - a.pontos || (b.publicadoEm || '').localeCompare(a.publicadoEm || ''));
+
+  // Variedade: uma notícia por fonte; na 1ª rodada, também um país por vez.
+  const escolhidas = [];
+  const fontesUsadas = new Set();
+  const paises = new Set();
+  for (const rodada of [1, 2]) {
+    for (const n of achadas) {
+      if (escolhidas.length >= maximo) break;
+      if (fontesUsadas.has(n.fonte) || (rodada === 1 && paises.has(n.pais))) continue;
+      escolhidas.push(n);
+      fontesUsadas.add(n.fonte);
+      paises.add(n.pais);
+    }
+  }
+  return escolhidas;
 }
 
 // ---------- 2. Escrever a aula em partes ----------
@@ -175,13 +224,17 @@ async function parte(nome, usuario, maxTokens, validar) {
   return { resposta, provedor, modelo };
 }
 
-async function escreverAula(escolha, artigos, noticias, anteriores) {
-  // Lista única de fontes: artigos primeiro, depois notícias. Os índices [n] valem para todas as partes.
+async function escreverAula(escolha, artigos, noticias, anteriores, outras = []) {
+  // Lista única de fontes: artigos, notícias do dia e notícias de várias linhas.
+  // Os índices [n] valem para todas as partes.
   const fontes = [
     ...artigos.map((a) => ({ fonte: a.fonte, titulo: a.titulo, link: a.link })),
     ...noticias.map((n) => ({ fonte: n.fonteNome, titulo: n.titulo, link: n.link })),
+    ...outras.map((n) => ({ fonte: n.fonteNome, titulo: n.titulo, link: n.link })),
   ];
   const textoNoticias = noticias.map((n, i) => `[${artigos.length + i}] ${n.fonteNome} (${n.publicadoEm.slice(0, 10)}): ${n.titulo}. ${n.resumo || ''}`).join('\n');
+  const inicioOutras = artigos.length + noticias.length;
+  const textoOutras = outras.map((n, i) => `[${inicioOutras + i}] ${n.fonteNome} — ${n.pais}; linha: ${n.visao || 'sem descrição'}${n.estatal ? '; VEÍCULO ESTATAL' : ''} (${(n.publicadoEm || '').slice(0, 10)}): ${n.titulo}. ${(n.resumo || '').slice(0, 300)}`).join('\n');
   const cabecalho = `Tema: ${escolha.titulo}\nGrande pergunta: ${escolha.pergunta}`;
   const fonteValida = (i) => inteiro(i, fontes.length);
   const aula = { formato: 2 };
@@ -243,22 +296,54 @@ Números: 3 a 6, só os que aparecem nos textos. Têm de ser QUANTIDADES que aju
     r.numeros = (r.numeros || []).filter((n) => n.valor && n.significado && fonteValida(n.fonte)).slice(0, 6);
   }));
 
-  // d) O que cada lado quer + debates + mitos
+  // d) O que cada lado quer + mitos
   await tentar('atores', () => parte('o que cada lado quer', `${cabecalho}
 
 Textos sobre política, relações e controvérsias:
 ${material(artigos, PALAVRAS.atores, { limite: MATERIAL_POR_PARTE - 2000 })}
 ${textoNoticias ? `\nNotícias recentes:\n${textoNoticias}` : ''}
 
-Mostre os interesses e os debates. JSON:
+Mostre os interesses de cada ator. JSON:
 {"atores": [{"nome": "<país, organização ou grupo>", "quer": "<o que ele quer>", "porque": "<por que quer isso>"}],
- "debate": [{"visao": "<uma posição sobre o tema>", "quemDefende": "<quem defende>", "argumento": "<o principal argumento>"}],
  "mitos": [{"mito": "<ideia comum, mas errada ou incompleta>", "verdade": "<o que os textos mostram>"}]}
-Atores: 3 a 6. Debate: 2 a 4 posições diferentes, apresentadas com equilíbrio. Mitos: 0 a 3 (só se os textos permitirem).`, 3500, (r) => {
+Atores: 3 a 6. Mitos: 0 a 3 (só se os textos permitirem).`, 3000, (r) => {
     r.atores = (r.atores || []).filter((x) => x.nome && x.quer).slice(0, 6);
-    r.debate = (r.debate || []).filter((x) => x.visao).slice(0, 4);
     r.mitos = (r.mitos || []).filter((x) => x.mito && x.verdade).slice(0, 3);
     if (!r.atores.length) throw new Error('sem atores');
+  }));
+
+  // d2) As vertentes: as diferentes formas de enxergar o tema, cada uma com
+  // quem defende, o argumento e o ponto fraco. Sem número fixo: todas as que
+  // existem de verdade nos textos, nem mais nem menos.
+  await tentar('vertentes', () => parte('as vertentes', `${cabecalho}
+
+Textos sobre críticas, controvérsias e posições:
+${material(artigos, PALAVRAS.atores, { limite: MATERIAL_POR_PARTE - 3500 })}
+${textoOutras ? `\nNotícias recentes de fontes com linhas editoriais diferentes (país e linha entre parênteses):\n${textoOutras}` : ''}
+
+Mostre AS VERTENTES: as diferentes formas de enxergar este tema. JSON:
+{"vertentes": [{"nome": "<nome curto da visão, ex.: 'Visão dos EUA e da Europa', 'Visão da Rússia', 'Defesa do livre mercado'>",
+   "pensa": "<o que essa visão pensa sobre o tema, em 1 ou 2 frases>",
+   "quemDefende": "<quem defende: países, governos, partidos, grupos, autores>",
+   "porQue": "<o principal argumento, contado como quem defende contaria, na sua forma mais forte>",
+   "criticas": "<o ponto fraco que os críticos apontam, de forma justa>",
+   "fontes": [<índices [n] dos textos que sustentam esta vertente>]}],
+ "ondeConcordam": "<o que as visões aceitam em comum (costuma ser o fato); string vazia se não houver>",
+ "ondeBrigam": "<o ponto central da discordância; string vazia se não houver>"}
+Regras:
+- Mostre TODAS as visões que existem de verdade nos textos, nem mais nem menos: podem ser 2, podem ser 6. Nunca invente uma visão para completar número.
+- Se o tema não tiver debate de verdade, devolva "vertentes": [].
+- As vertentes podem ser por região (Ocidente, Rússia, China, Sul Global, Brasil...) ou por ideia (mais mercado x mais Estado, segurança x direitos...): o que fizer mais sentido para este tema.
+- Apresente cada visão com equilíbrio e respeito, sem dar razão a nenhuma. Todas têm um ponto fraco.
+- Cada vertente precisa de pelo menos uma fonte [n] que a sustente; o que não tiver base nos textos fica de fora.
+- Notícia de veículo estatal mostra a posição daquele governo, não um fato comprovado.`, 3500, (r) => {
+    r.vertentes = (Array.isArray(r.vertentes) ? r.vertentes : [])
+      .map((v) => ({ ...v, fontes: [...new Set((v.fontes || []).filter(fonteValida))] }))
+      .filter((v) => v.nome && v.pensa && v.fontes.length)
+      .slice(0, 8);
+    // Com uma visão só não há "vertentes": é melhor não mostrar a seção.
+    if (r.vertentes.length < 2) r.vertentes = [];
+    if (!r.vertentes.length) { r.ondeConcordam = ''; r.ondeBrigam = ''; }
   }));
 
   // e) E hoje? + como chega em você + teste rápido
@@ -288,8 +373,14 @@ Cadeia: 3 a 5 passos. Teste: 3 perguntas, cuja resposta esteja no texto da aula.
   const nomeFonte = (i) => (fonteValida(i) ? fontes[i].fonte : '');
   aula.linhaDoTempo = (aula.linhaDoTempo || []).map((l) => ({ ...l, fonte: nomeFonte(l.fonte) }));
   aula.numeros = (aula.numeros || []).map((n) => ({ ...n, fonte: nomeFonte(n.fonte), link: fonteValida(n.fonte) ? fontes[n.fonte].link : '' }));
-  // Se a aula não usou as notícias (sem "E hoje?"), elas não entram na lista de fontes.
-  aula.fontes = aula.eHoje ? fontes : fontes.slice(0, artigos.length);
+  // Cada vertente guarda os nomes e links das suas fontes (vindos dos nossos dados).
+  const usadasNasVertentes = new Set((aula.vertentes || []).flatMap((v) => v.fontes));
+  aula.vertentes = (aula.vertentes || []).map((v) => ({ ...v, fontes: v.fontes.map((i) => ({ fonte: fontes[i].fonte, link: fontes[i].link })) }));
+  // Lista de fontes da aula: os artigos; as notícias do dia só se a aula usou
+  // ("E hoje?"); e as notícias de várias linhas citadas nas vertentes.
+  aula.fontes = fontes.filter((_, i) => i < artigos.length
+    || (aula.eHoje && i < inicioOutras)
+    || (i >= inicioOutras && usadasNasVertentes.has(i)));
   aula.imagem = (artigos.find((x) => x.imagem) || {}).imagem || null;
   return { aula, ia };
 }
@@ -337,9 +428,15 @@ async function principal() {
   if (!escolhido) throw new Error('não achei fontes suficientes para nenhum tema');
 
   const noticias = escolhido.escolha.manchetesLigadas.map((i) => porId.get(fatos[i].noticias[0])).filter(Boolean);
+  // Se a busca falhar, a aula sai do mesmo jeito (só sem essas notícias).
+  const outras = await noticiasDeVariasLinhas(escolhido.escolha, noticias.map((n) => n.link)).catch((erro) => {
+    console.log(`  Notícias de várias linhas: falhou (${erro.message})`);
+    return [];
+  });
+  console.log(`  Notícias de várias linhas: ${outras.length} (${outras.map((n) => `${n.fonteNome}/${n.pais}`).join(', ') || 'nenhuma'})`);
   await esperar(PAUSA);
   console.log('Escrevendo a aula em partes…');
-  const { aula, ia } = await escreverAula(escolhido.escolha, escolhido.artigos, noticias, anteriores);
+  const { aula, ia } = await escreverAula(escolhido.escolha, escolhido.artigos, noticias, anteriores, outras);
 
   const edicao = {
     status: 'ok',
