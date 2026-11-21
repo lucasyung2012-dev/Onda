@@ -1,10 +1,10 @@
 {
-  "geradoEm": "2026-11-21T00:16:13.360Z",
+  "geradoEm": "2026-11-21T00:28:23.431Z",
   "fuso": "America/Sao_Paulo",
   "dataReferencia": "2026-11-20",
   "janelaHoras": 24,
-  "totalNoticias": 1439,
-  "totalFatos": 1153,
+  "totalNoticias": 1441,
+  "totalFatos": 1155,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -355,32 +355,6 @@
       ]
     },
     {
-      "id": "1c69855faa1a",
-      "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
-      "imagem": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/8/c/961118/8cc01a98d2d5cea34ea6b373beb3af30.jpeg",
-      "fontes": 5,
-      "umaFonteSo": false,
-      "regioes": [
-        "america-norte",
-        "oriente-medio",
-        "europa"
-      ],
-      "temas": [
-        "conflitos",
-        "diplomacia",
-        "politica",
-        "direitos"
-      ],
-      "maisRecente": "2026-11-20T23:46:29.000Z",
-      "noticias": [
-        "1c69855faa1a",
-        "04471859b97d",
-        "5447230f9e98",
-        "ed80357e7168",
-        "84ee1f14a44e"
-      ]
-    },
-    {
       "id": "fd72ae54f858",
       "titulo": "Activists, leaders criticize COP31 climate talks as fossil fuels go unmentioned in draft deal",
       "imagem": "https://d3i6fh83elv35t.cloudfront.net/static/2026/11/2026-11-20T173520Z_1819819024_RC2SROAT8WYP_RTRMADP_3_CLIMATE-COP31-1024x683.jpg",
@@ -532,6 +506,31 @@
         "1d0780d803cc",
         "cb37c247dfb3",
         "c249760ec3ac"
+      ]
+    },
+    {
+      "id": "1c69855faa1a",
+      "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
+      "imagem": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/8/c/961118/8cc01a98d2d5cea34ea6b373beb3af30.jpeg",
+      "fontes": 4,
+      "umaFonteSo": false,
+      "regioes": [
+        "america-norte",
+        "oriente-medio",
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia",
+        "politica",
+        "direitos"
+      ],
+      "maisRecente": "2026-11-20T23:46:29.000Z",
+      "noticias": [
+        "1c69855faa1a",
+        "04471859b97d",
+        "5447230f9e98",
+        "ed80357e7168"
       ]
     },
     {
@@ -726,8 +725,8 @@
       ]
     },
     {
-      "id": "72d4f6ebd178",
-      "titulo": "‘For Us, He Is a Killer’: Zelensky Rebukes Trump for Calling Putin a ‘Friend’",
+      "id": "9cd0be67c237",
+      "titulo": "‘He’s a killer’: Zelensky on Putin after Trump calls Russian leader a ‘friend’",
       "imagem": "https://static.kyivpost.com/storage/2026/11/21/fb928b0979b7b6a6075ef9600697e77c.jpg?w=640&q=90&f=jpg",
       "fontes": 3,
       "umaFonteSo": false,
@@ -738,13 +737,35 @@
       ],
       "temas": [
         "conflitos",
-        "politica"
+        "politica",
+        "outros"
       ],
-      "maisRecente": "2026-11-20T23:19:50.000Z",
+      "maisRecente": "2026-11-21T00:23:00.000Z",
       "noticias": [
+        "9cd0be67c237",
         "72d4f6ebd178",
         "df0254670cb2",
         "6158b7626e97"
+      ]
+    },
+    {
+      "id": "62a222d17488",
+      "titulo": "Saudi Arabia says it intercepts three Houthi missiles targeting Riyadh",
+      "imagem": "https://static.srpcdigital.com/styles/414x217/public/2026-11/1885638_0.jpeg.webp?VersionId=Q451ibxl6Wleu9CYNYeIhCkLnMVxDAPC",
+      "fontes": 3,
+      "umaFonteSo": false,
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "conflitos",
+        "energia"
+      ],
+      "maisRecente": "2026-11-21T00:20:23.000Z",
+      "noticias": [
+        "62a222d17488",
+        "8b2c2a617246",
+        "04271bf005c7"
       ]
     },
     {
@@ -1012,25 +1033,6 @@
         "8c2c1d5a86f2",
         "66d0fc6e1526",
         "3fe6fbac963c"
-      ]
-    },
-    {
-      "id": "8b2c2a617246",
-      "titulo": "Three Houthi ballistic missiles intercepted over Riyadh, Saudi-led coalition says",
-      "imagem": "https://static.srpcdigital.com/styles/414x217/public/2026-11/1885638_0.jpeg.webp?VersionId=Q451ibxl6Wleu9CYNYeIhCkLnMVxDAPC",
-      "fontes": 2,
-      "umaFonteSo": false,
-      "regioes": [
-        "oriente-medio"
-      ],
-      "temas": [
-        "conflitos",
-        "energia"
-      ],
-      "maisRecente": "2026-11-21T00:00:08.000Z",
-      "noticias": [
-        "8b2c2a617246",
-        "04271bf005c7"
       ]
     },
     {
@@ -2743,6 +2745,41 @@
       ]
     },
     {
+      "id": "10ee907fc20e",
+      "titulo": "Threats, insults, settlements: How Nvidia’s ex-CEO Jensen Huang made humiliation routine",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "tecnologia"
+      ],
+      "maisRecente": "2026-11-21T00:22:00.000Z",
+      "noticias": [
+        "10ee907fc20e"
+      ]
+    },
+    {
+      "id": "eec2743f2c10",
+      "titulo": "Não posso falar pelos EUA, diz Trump ao responder se Putin é amigo do país",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "america-norte",
+        "europa"
+      ],
+      "temas": [
+        "politica"
+      ],
+      "maisRecente": "2026-11-21T00:16:00.000Z",
+      "noticias": [
+        "eec2743f2c10"
+      ]
+    },
+    {
       "id": "968fb7c8ed69",
       "titulo": "Six Palestinians killed in Israeli strikes on Gaza, civil defence says",
       "imagem": "",
@@ -3333,6 +3370,24 @@
       "maisRecente": "2026-11-20T23:02:30.000Z",
       "noticias": [
         "b85a5fc66bb6"
+      ]
+    },
+    {
+      "id": "612bc0c81707",
+      "titulo": "Africa: High-Level Dialogue - 16 Days of Activism Against Gender-Based Violence",
+      "imagem": "",
+      "fontes": 1,
+      "umaFonteSo": true,
+      "regioes": [
+        "europa",
+        "africa"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "maisRecente": "2026-11-20T23:01:49.000Z",
+      "noticias": [
+        "612bc0c81707"
       ]
     },
     {
@@ -18178,8 +18233,7 @@
       "fontes": 1,
       "umaFonteSo": true,
       "regioes": [
-        "asia-pacifico",
-        "america-norte"
+        "asia-pacifico"
       ],
       "temas": [
         "economia",
@@ -18190,8 +18244,7 @@
         "c3055cace2d5",
         "043ec543dad1",
         "0f0f505e7775",
-        "9e1d13f9b3dc",
-        "4c5e08a0efa7"
+        "9e1d13f9b3dc"
       ]
     },
     {
@@ -21193,26 +21246,116 @@
       "noticias": [
         "5e4a4c4a5f44"
       ]
-    },
+    }
+  ],
+  "noticias": [
     {
-      "id": "cfd4839a6d8c",
-      "titulo": "Hyundai Motor unveils new Elantra, Genesis G80 Hybrid at LA Auto Show",
-      "imagem": "https://img.yna.co.kr/etc/inner/EN/2026/11/20/AEN20261120002000320_01_i_P2.jpg",
-      "fontes": 1,
-      "umaFonteSo": true,
+      "id": "9cd0be67c237",
+      "titulo": "‘He’s a killer’: Zelensky on Putin after Trump calls Russian leader a ‘friend’",
+      "resumo": "“For us he’s an enemy, and of course, for us, he is a killer,” Zelensky told CNN.",
+      "link": "https://www.straitstimes.com/world/europe/hes-a-killer-zelensky-on-putin-after-trump-calls-russian-leader-a-friend",
+      "fonte": "straitstimes",
+      "fonteNome": "The Straits Times",
+      "pais": "Singapura",
+      "visao": "Jornal de referência de Singapura",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:23:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
       "regioes": [
-        "asia-pacifico"
+        "europa",
+        "america-norte"
       ],
       "temas": [
         "outros"
       ],
-      "maisRecente": "2026-11-20T00:24:54.000Z",
-      "noticias": [
-        "cfd4839a6d8c"
-      ]
-    }
-  ],
-  "noticias": [
+      "coletadoEm": "2026-11-21T00:28:23.431Z"
+    },
+    {
+      "id": "10ee907fc20e",
+      "titulo": "Threats, insults, settlements: How Nvidia’s ex-CEO Jensen Huang made humiliation routine",
+      "resumo": "The behaviour kept Nvidia’s human resources department busy fielding workplace complaints.",
+      "link": "https://www.straitstimes.com/world/united-states/threats-insults-settlements-how-nvidias-ex-ceo-jensen-huang-made-humiliation-routine",
+      "fonte": "straitstimes",
+      "fonteNome": "The Straits Times",
+      "pais": "Singapura",
+      "visao": "Jornal de referência de Singapura",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:22:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "tecnologia"
+      ],
+      "coletadoEm": "2026-11-21T00:28:23.431Z"
+    },
+    {
+      "id": "62a222d17488",
+      "titulo": "Saudi Arabia says it intercepts three Houthi missiles targeting Riyadh",
+      "resumo": "Nov 21 - The Saudi-led coalition fighting Yemen's Iran-aligned Houthis said on Saturday it had intercepted and destroyed three ballistic missiles fired towards Riyadh, marking the second Houthi attack on the Saudi capital in a few days, after its tallest skyscraper was struck on…",
+      "link": "https://www.straitstimes.com/world/middle-east/saudi-arabia-says-it-intercepts-three-houthi-missiles-targeting-riyadh",
+      "fonte": "straitstimes",
+      "fonteNome": "The Straits Times",
+      "pais": "Singapura",
+      "visao": "Jornal de referência de Singapura",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:20:23.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "conflitos",
+        "energia"
+      ],
+      "coletadoEm": "2026-11-21T00:28:23.431Z"
+    },
+    {
+      "id": "eec2743f2c10",
+      "titulo": "Não posso falar pelos EUA, diz Trump ao responder se Putin é amigo do país",
+      "resumo": "O presidente dos Estados Unidos , Donald Trump , afirmou nesta sexta-feira (20) que não pode falar em nome dos americanos ao ser questionado se considera o presidente da Rússia , Vladimir Putin , um amigo dos Estados Unidos. Leia mais (11/20/2026 - 21h16)",
+      "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/nao-posso-falar-pelos-eua-diz-trump-ao-responder-se-putin-e-amigo-do-pais.shtml",
+      "fonte": "folha",
+      "fonteNome": "Folha Mundo",
+      "pais": "Brasil",
+      "visao": "Jornal de referência brasileiro",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:16:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "america-norte",
+        "europa"
+      ],
+      "temas": [
+        "politica"
+      ],
+      "coletadoEm": "2026-11-21T00:28:23.431Z"
+    },
     {
       "id": "968fb7c8ed69",
       "titulo": "Six Palestinians killed in Israeli strikes on Gaza, civil defence says",
@@ -22463,6 +22606,33 @@
         "tecnologia"
       ],
       "coletadoEm": "2026-11-20T23:20:56.990Z"
+    },
+    {
+      "id": "612bc0c81707",
+      "titulo": "Africa: High-Level Dialogue - 16 Days of Activism Against Gender-Based Violence",
+      "resumo": "[African Development Bank (AfDB)] When: Thursday, 26 November 2026. Time: 1:00 PM - 3:00 PM GMT. Where: Auditorium, CCIA Building, African Development Bank Group Headquarters, Abidjan, Côte d'Ivoire, and online Format: Hybrid (in person and online) Language: Simultaneous…",
+      "link": "https://allafrica.com/stories/202611200720.html",
+      "fonte": "allafrica",
+      "fonteNome": "AllAfrica",
+      "pais": "África (vários)",
+      "visao": "Reúne jornais de todo o continente africano",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:01:49.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "europa",
+        "africa"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-21T00:28:23.431Z"
     },
     {
       "id": "11277c1f5cdd",
@@ -60024,88 +60194,6 @@
       ],
       "temas": [
         "outros"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "4c5e08a0efa7",
-      "titulo": "(LEAD) Seoul shares open sharply lower tracking U.S. losses after Anthropic debut",
-      "resumo": "SEOUL, Nov. 20 (Yonhap) -- Seoul shares opened sharply lower Friday, tracking lo...",
-      "link": "https://en.yna.co.kr/view/AEN20261120001151320",
-      "fonte": "yonhap",
-      "fonteNome": "Yonhap",
-      "pais": "Coreia do Sul",
-      "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
-      "idioma": "en",
-      "estatal": true,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-20T00:25:15.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://img.yna.co.kr/photo/yna/YH/2026/11/19/PYH2026111920820001300_P2.jpg",
-      "imagemCredito": "Yonhap",
-      "regioes": [
-        "america-norte",
-        "asia-pacifico"
-      ],
-      "temas": [
-        "economia"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "cfd4839a6d8c",
-      "titulo": "Hyundai Motor unveils new Elantra, Genesis G80 Hybrid at LA Auto Show",
-      "resumo": "SEOUL, Nov. 20 (Yonhap) -- Hyundai Motor Co. said Friday it has unveiled its eig...",
-      "link": "https://en.yna.co.kr/view/AEN20261120002000320",
-      "fonte": "yonhap",
-      "fonteNome": "Yonhap",
-      "pais": "Coreia do Sul",
-      "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
-      "idioma": "en",
-      "estatal": true,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-20T00:24:54.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://img.yna.co.kr/etc/inner/EN/2026/11/20/AEN20261120002000320_01_i_P2.jpg",
-      "imagemCredito": "Yonhap",
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "coletadoEm": "2026-11-20T20:36:59.091Z"
-    },
-    {
-      "id": "84ee1f14a44e",
-      "titulo": "Kushner Says Trump Wants Europe ‘By His Side’ on Ukraine",
-      "resumo": "US envoy Jared Kushner said President Donald Trump wants Europe involved in any Ukraine peace agreement rather than imposing a unilateral settlement. Following Berlin talks, Kushner said he and Steve Witkoff conveyed European leaders’ strong and united support for Ukraine to…",
-      "link": "https://www.kyivpost.com/post/90651",
-      "fonte": "kyivpost",
-      "fonteNome": "Kyiv Post",
-      "pais": "Ucrânia",
-      "visao": "Jornal ucraniano",
-      "idioma": "en",
-      "estatal": false,
-      "tipo": "noticia",
-      "publicadoEm": "2026-11-20T00:18:38.000Z",
-      "dataPublicacao": "2026-11-19",
-      "semData": false,
-      "dataFato": null,
-      "imagem": "https://static.kyivpost.com/storage/2026/11/20/befe24f698e3e6e738807563b65aefc8.jpg?w=640&q=90&f=jpg",
-      "imagemCredito": "Kyiv Post",
-      "regioes": [
-        "europa",
-        "america-norte"
-      ],
-      "temas": [
-        "diplomacia",
-        "conflitos",
-        "politica"
       ],
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     }

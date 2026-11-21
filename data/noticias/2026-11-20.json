@@ -2,6 +2,113 @@
   "data": "2026-11-20",
   "noticias": [
     {
+      "id": "9cd0be67c237",
+      "titulo": "‘He’s a killer’: Zelensky on Putin after Trump calls Russian leader a ‘friend’",
+      "resumo": "“For us he’s an enemy, and of course, for us, he is a killer,” Zelensky told CNN.",
+      "link": "https://www.straitstimes.com/world/europe/hes-a-killer-zelensky-on-putin-after-trump-calls-russian-leader-a-friend",
+      "fonte": "straitstimes",
+      "fonteNome": "The Straits Times",
+      "pais": "Singapura",
+      "visao": "Jornal de referência de Singapura",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:23:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "europa",
+        "america-norte"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-21T00:28:23.431Z"
+    },
+    {
+      "id": "10ee907fc20e",
+      "titulo": "Threats, insults, settlements: How Nvidia’s ex-CEO Jensen Huang made humiliation routine",
+      "resumo": "The behaviour kept Nvidia’s human resources department busy fielding workplace complaints.",
+      "link": "https://www.straitstimes.com/world/united-states/threats-insults-settlements-how-nvidias-ex-ceo-jensen-huang-made-humiliation-routine",
+      "fonte": "straitstimes",
+      "fonteNome": "The Straits Times",
+      "pais": "Singapura",
+      "visao": "Jornal de referência de Singapura",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:22:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "tecnologia"
+      ],
+      "coletadoEm": "2026-11-21T00:28:23.431Z"
+    },
+    {
+      "id": "62a222d17488",
+      "titulo": "Saudi Arabia says it intercepts three Houthi missiles targeting Riyadh",
+      "resumo": "Nov 21 - The Saudi-led coalition fighting Yemen's Iran-aligned Houthis said on Saturday it had intercepted and destroyed three ballistic missiles fired towards Riyadh, marking the second Houthi attack on the Saudi capital in a few days, after its tallest skyscraper was struck on…",
+      "link": "https://www.straitstimes.com/world/middle-east/saudi-arabia-says-it-intercepts-three-houthi-missiles-targeting-riyadh",
+      "fonte": "straitstimes",
+      "fonteNome": "The Straits Times",
+      "pais": "Singapura",
+      "visao": "Jornal de referência de Singapura",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:20:23.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "conflitos",
+        "energia"
+      ],
+      "coletadoEm": "2026-11-21T00:28:23.431Z"
+    },
+    {
+      "id": "eec2743f2c10",
+      "titulo": "Não posso falar pelos EUA, diz Trump ao responder se Putin é amigo do país",
+      "resumo": "O presidente dos Estados Unidos , Donald Trump , afirmou nesta sexta-feira (20) que não pode falar em nome dos americanos ao ser questionado se considera o presidente da Rússia , Vladimir Putin , um amigo dos Estados Unidos. Leia mais (11/20/2026 - 21h16)",
+      "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/nao-posso-falar-pelos-eua-diz-trump-ao-responder-se-putin-e-amigo-do-pais.shtml",
+      "fonte": "folha",
+      "fonteNome": "Folha Mundo",
+      "pais": "Brasil",
+      "visao": "Jornal de referência brasileiro",
+      "idioma": "pt",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-21T00:16:00.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "america-norte",
+        "europa"
+      ],
+      "temas": [
+        "politica"
+      ],
+      "coletadoEm": "2026-11-21T00:28:23.431Z"
+    },
+    {
       "id": "968fb7c8ed69",
       "titulo": "Six Palestinians killed in Israeli strikes on Gaza, civil defence says",
       "resumo": "Israeli strikes killed six people in the Gaza Strip on Friday, the civil defence agency in the war-shattered territory told AFP, despite a ceasefire. Mahmoud Bassal, the spokesman for Gaza's civil defence agency, said that four Palestinians were killed and several others wounded…",
@@ -1251,6 +1358,33 @@
         "tecnologia"
       ],
       "coletadoEm": "2026-11-20T23:20:56.990Z"
+    },
+    {
+      "id": "612bc0c81707",
+      "titulo": "Africa: High-Level Dialogue - 16 Days of Activism Against Gender-Based Violence",
+      "resumo": "[African Development Bank (AfDB)] When: Thursday, 26 November 2026. Time: 1:00 PM - 3:00 PM GMT. Where: Auditorium, CCIA Building, African Development Bank Group Headquarters, Abidjan, Côte d'Ivoire, and online Format: Hybrid (in person and online) Language: Simultaneous…",
+      "link": "https://allafrica.com/stories/202611200720.html",
+      "fonte": "allafrica",
+      "fonteNome": "AllAfrica",
+      "pais": "África (vários)",
+      "visao": "Reúne jornais de todo o continente africano",
+      "idioma": "en",
+      "estatal": false,
+      "tipo": "noticia",
+      "publicadoEm": "2026-11-20T23:01:49.000Z",
+      "dataPublicacao": "2026-11-20",
+      "semData": false,
+      "dataFato": null,
+      "imagem": "",
+      "imagemCredito": "",
+      "regioes": [
+        "europa",
+        "africa"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "coletadoEm": "2026-11-21T00:28:23.431Z"
     },
     {
       "id": "11277c1f5cdd",
@@ -37376,5 +37510,5 @@
       "coletadoEm": "2026-11-20T20:36:59.091Z"
     }
   ],
-  "atualizadoEm": "2026-11-21T00:16:13.360Z"
+  "atualizadoEm": "2026-11-21T00:28:23.431Z"
 }

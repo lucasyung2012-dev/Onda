@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-21T00:16:13.360Z",
-  "fontesOk": 69,
-  "fontesComErro": 1,
-  "noticiasNovasNestaRodada": 3,
+  "geradoEm": "2026-11-21T00:28:23.431Z",
+  "fontesOk": 68,
+  "fontesComErro": 2,
+  "noticiasNovasNestaRodada": 5,
   "porFonte": [
     {
       "id": "nyt",
@@ -27,9 +27,9 @@
       "nome": "Fox News",
       "status": "ok",
       "itensNoFeed": 25,
-      "aceitas": 13,
-      "descartadasPorIdade": 12,
-      "comImagem": 13
+      "aceitas": 12,
+      "descartadasPorIdade": 13,
+      "comImagem": 12
     },
     {
       "id": "npr",
@@ -215,9 +215,10 @@
     {
       "id": "euronews",
       "nome": "Euronews",
-      "status": "ok",
-      "itensNoFeed": 50,
-      "aceitas": 50,
+      "status": "erro",
+      "erro": "o site respondeu HTTP 406",
+      "itensNoFeed": 0,
+      "aceitas": 0,
       "descartadasPorIdade": 0,
       "comImagem": 0
     },
@@ -271,9 +272,9 @@
       "nome": "Kyiv Post",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 89,
-      "descartadasPorIdade": 11,
-      "comImagem": 89
+      "aceitas": 88,
+      "descartadasPorIdade": 12,
+      "comImagem": 88
     },
     {
       "id": "pravdaua",
@@ -298,9 +299,9 @@
       "nome": "Haaretz",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 68,
-      "descartadasPorIdade": 32,
-      "comImagem": 68
+      "aceitas": 67,
+      "descartadasPorIdade": 33,
+      "comImagem": 67
     },
     {
       "id": "middleeasteye",
@@ -469,8 +470,8 @@
       "nome": "AllAfrica",
       "status": "ok",
       "itensNoFeed": 33,
-      "aceitas": 31,
-      "descartadasPorIdade": 2,
+      "aceitas": 32,
+      "descartadasPorIdade": 1,
       "comImagem": 0
     },
     {
@@ -505,8 +506,8 @@
       "nome": "Folha Mundo",
       "status": "ok",
       "itensNoFeed": 100,
-      "aceitas": 38,
-      "descartadasPorIdade": 62,
+      "aceitas": 39,
+      "descartadasPorIdade": 61,
       "comImagem": 0
     },
     {
@@ -532,9 +533,9 @@
       "nome": "Gazeta do Povo Mundo",
       "status": "ok",
       "itensNoFeed": 59,
-      "aceitas": 58,
-      "descartadasPorIdade": 1,
-      "comImagem": 58
+      "aceitas": 57,
+      "descartadasPorIdade": 2,
+      "comImagem": 57
     },
     {
       "id": "cartacapital",

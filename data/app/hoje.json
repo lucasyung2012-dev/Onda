@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-11-21T00:16:13.360Z",
+  "geradoEm": "2026-11-21T00:28:23.431Z",
   "dataReferencia": "2026-11-20",
   "fuso": "America/Sao_Paulo",
-  "totalNoticias": 1439,
+  "totalNoticias": 1441,
   "totalFontes": 66,
   "nomesRegioes": {
     "brasil": "Brasil",
@@ -1424,89 +1424,6 @@
       ]
     },
     {
-      "id": "1c69855faa1a",
-      "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
-      "resumo": "Nov 20 (Reuters) - Iran's Foreign Minister Abbas Araqchi said Tehran still hoped diplomacy could end its war with the United States, while US President Donald Trump said Iran wanted a deal but one that wasnot acceptable to him. Araqchi told the state-owned Iran newspaper that…",
-      "imagem": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/8/c/961118/8cc01a98d2d5cea34ea6b373beb3af30.jpeg",
-      "credito": "Ukrainska Pravda",
-      "regioes": [
-        "america-norte",
-        "oriente-medio",
-        "europa"
-      ],
-      "temas": [
-        "conflitos",
-        "diplomacia",
-        "politica",
-        "direitos"
-      ],
-      "fontes": 5,
-      "paises": 4,
-      "maisRecente": "2026-11-20T23:46:29.000Z",
-      "materias": [
-        {
-          "fonte": "Al-Monitor",
-          "pais": "EUA",
-          "visao": "Site especializado em Oriente Médio",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
-          "link": "https://www.al-monitor.com/originals/2026/11/araqchi-says-iran-wants-diplomacy-end-war-trump-says-terms-unacceptable",
-          "publicadoEm": "2026-11-20T23:46:29.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "The Straits Times",
-          "pais": "Singapura",
-          "visao": "Jornal de referência de Singapura",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
-          "link": "https://www.straitstimes.com/world/middle-east/araqchi-says-iran-wants-diplomacy-to-end-war-trump-says-terms-unacceptable",
-          "publicadoEm": "2026-11-20T23:15:29.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Ukrainska Pravda",
-          "pais": "Ucrânia",
-          "visao": "Site ucraniano de jornalismo independente",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Trump says Putin wants to end Russia's war against Ukraine through diplomacy",
-          "link": "https://www.pravda.com.ua/eng/news/2026/11/20/8063876/",
-          "publicadoEm": "2026-11-20T18:25:00.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Haaretz",
-          "pais": "Israel",
-          "visao": "Jornal israelense, centro-esquerda",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Trump's Iran choice: A deal or another war he can't end",
-          "link": "https://www.haaretz.com/middle-east-news/iran/2026-11-20/ty-article/.premium/trump-may-start-a-war-but-iran-will-decide-how-and-when-it-ends/000001a1-f4ee-d175-abf5-fefed8990000",
-          "publicadoEm": "2026-11-20T04:00:51.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Kyiv Post",
-          "pais": "Ucrânia",
-          "visao": "Jornal ucraniano",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Kushner Says Trump Wants Europe ‘By His Side’ on Ukraine",
-          "link": "https://www.kyivpost.com/post/90651",
-          "publicadoEm": "2026-11-20T00:18:38.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
       "id": "fd72ae54f858",
       "titulo": "Activists, leaders criticize COP31 climate talks as fossil fuels go unmentioned in draft deal",
       "resumo": "United Nations climate talks in Turkey stretched into overtime Friday and delegates put off some decisions to next year, unable to find common ground on multiple issues with mutterings and protests about failure.",
@@ -2031,6 +1948,77 @@
           "titulo": "French Ex-PM Villepin Announces Presidential Run",
           "link": "https://english.aawsat.com/node/5343554",
           "publicadoEm": "2026-11-20T10:56:45.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "1c69855faa1a",
+      "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
+      "resumo": "Nov 20 (Reuters) - Iran's Foreign Minister Abbas Araqchi said Tehran still hoped diplomacy could end its war with the United States, while US President Donald Trump said Iran wanted a deal but one that wasnot acceptable to him. Araqchi told the state-owned Iran newspaper that…",
+      "imagem": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/8/c/961118/8cc01a98d2d5cea34ea6b373beb3af30.jpeg",
+      "credito": "Ukrainska Pravda",
+      "regioes": [
+        "america-norte",
+        "oriente-medio",
+        "europa"
+      ],
+      "temas": [
+        "conflitos",
+        "diplomacia",
+        "politica",
+        "direitos"
+      ],
+      "fontes": 4,
+      "paises": 4,
+      "maisRecente": "2026-11-20T23:46:29.000Z",
+      "materias": [
+        {
+          "fonte": "Al-Monitor",
+          "pais": "EUA",
+          "visao": "Site especializado em Oriente Médio",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
+          "link": "https://www.al-monitor.com/originals/2026/11/araqchi-says-iran-wants-diplomacy-end-war-trump-says-terms-unacceptable",
+          "publicadoEm": "2026-11-20T23:46:29.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Araqchi says Iran wants diplomacy to end war; Trump says terms unacceptable",
+          "link": "https://www.straitstimes.com/world/middle-east/araqchi-says-iran-wants-diplomacy-to-end-war-trump-says-terms-unacceptable",
+          "publicadoEm": "2026-11-20T23:15:29.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Ukrainska Pravda",
+          "pais": "Ucrânia",
+          "visao": "Site ucraniano de jornalismo independente",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Trump says Putin wants to end Russia's war against Ukraine through diplomacy",
+          "link": "https://www.pravda.com.ua/eng/news/2026/11/20/8063876/",
+          "publicadoEm": "2026-11-20T18:25:00.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Haaretz",
+          "pais": "Israel",
+          "visao": "Jornal israelense, centro-esquerda",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Trump's Iran choice: A deal or another war he can't end",
+          "link": "https://www.haaretz.com/middle-east-news/iran/2026-11-20/ty-article/.premium/trump-may-start-a-war-but-iran-will-decide-how-and-when-it-ends/000001a1-f4ee-d175-abf5-fefed8990000",
+          "publicadoEm": "2026-11-20T04:00:51.000Z",
           "semData": false
         }
       ]
@@ -2617,9 +2605,9 @@
       ]
     },
     {
-      "id": "72d4f6ebd178",
-      "titulo": "‘For Us, He Is a Killer’: Zelensky Rebukes Trump for Calling Putin a ‘Friend’",
-      "resumo": "President Volodymyr Zelensky called Vladimir Putin an enemy and a killer, warning that President Donald Trump’s description of the Russian leader as a “friend” encourages him to continue his war. Zelensky said Putin wants Ukraine destroyed and urged Washington to use its…",
+      "id": "9cd0be67c237",
+      "titulo": "‘He’s a killer’: Zelensky on Putin after Trump calls Russian leader a ‘friend’",
+      "resumo": "“For us he’s an enemy, and of course, for us, he is a killer,” Zelensky told CNN.",
       "imagem": "https://static.kyivpost.com/storage/2026/11/21/fb928b0979b7b6a6075ef9600697e77c.jpg?w=640&q=90&f=jpg",
       "credito": "Kyiv Post",
       "regioes": [
@@ -2629,12 +2617,25 @@
       ],
       "temas": [
         "conflitos",
-        "politica"
+        "politica",
+        "outros"
       ],
       "fontes": 3,
       "paises": 2,
-      "maisRecente": "2026-11-20T23:19:50.000Z",
+      "maisRecente": "2026-11-21T00:23:00.000Z",
       "materias": [
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "‘He’s a killer’: Zelensky on Putin after Trump calls Russian leader a ‘friend’",
+          "link": "https://www.straitstimes.com/world/europe/hes-a-killer-zelensky-on-putin-after-trump-calls-russian-leader-a-friend",
+          "publicadoEm": "2026-11-21T00:23:00.000Z",
+          "semData": false
+        },
         {
           "fonte": "Kyiv Post",
           "pais": "Ucrânia",
@@ -2669,6 +2670,61 @@
           "titulo": "Zelenskyy responds to Trump calling Putin his friend: \"For us, he is an enemy and a killer\"",
           "link": "https://www.pravda.com.ua/eng/news/2026/11/20/8063867/",
           "publicadoEm": "2026-11-20T18:00:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "62a222d17488",
+      "titulo": "Saudi Arabia says it intercepts three Houthi missiles targeting Riyadh",
+      "resumo": "Nov 21 - The Saudi-led coalition fighting Yemen's Iran-aligned Houthis said on Saturday it had intercepted and destroyed three ballistic missiles fired towards Riyadh, marking the second Houthi attack on the Saudi capital in a few days, after its tallest skyscraper was struck on…",
+      "imagem": "https://static.srpcdigital.com/styles/414x217/public/2026-11/1885638_0.jpeg.webp?VersionId=Q451ibxl6Wleu9CYNYeIhCkLnMVxDAPC",
+      "credito": "Asharq Al-Awsat",
+      "regioes": [
+        "oriente-medio"
+      ],
+      "temas": [
+        "conflitos",
+        "energia"
+      ],
+      "fontes": 3,
+      "paises": 3,
+      "maisRecente": "2026-11-21T00:20:23.000Z",
+      "materias": [
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Saudi Arabia says it intercepts three Houthi missiles targeting Riyadh",
+          "link": "https://www.straitstimes.com/world/middle-east/saudi-arabia-says-it-intercepts-three-houthi-missiles-targeting-riyadh",
+          "publicadoEm": "2026-11-21T00:20:23.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Middle East Eye",
+          "pais": "Reino Unido",
+          "visao": "Site focado no Oriente Médio, crítico de governos da região",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Three Houthi ballistic missiles intercepted over Riyadh, Saudi-led coalition says",
+          "link": "https://www.middleeasteye.net/live-blog/live-blog-update/three-houthi-ballistic-missiles-intercepted-over-riyadh-saudi-led",
+          "publicadoEm": "2026-11-21T00:00:08.000Z",
+          "semData": false
+        },
+        {
+          "fonte": "Asharq Al-Awsat",
+          "pais": "Arábia Saudita",
+          "visao": "Jornal pan-árabe de dono saudita",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Arab Coalition Intercepts More Houthi Missiles and Drones",
+          "link": "https://english.aawsat.com/node/5343537",
+          "publicadoEm": "2026-11-20T10:15:18.000Z",
           "semData": false
         }
       ]
@@ -3367,49 +3423,6 @@
           "titulo": "Russia Hits 3 Kyiv Bridges in Overnight Ballistic Attack",
           "link": "https://www.kyivpost.com/post/90654",
           "publicadoEm": "2026-11-20T01:31:05.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "8b2c2a617246",
-      "titulo": "Three Houthi ballistic missiles intercepted over Riyadh, Saudi-led coalition says",
-      "resumo": "Three ballistic missiles launched by Houthis towards Riyadh were intercepted and destroyed by Saudi-led coalition's air defences, spokesman for the coalition, Major General Turki Al Malki said on X. Turki's announcement comes after the Saudi Civil Defence agency issued, and later…",
-      "imagem": "https://static.srpcdigital.com/styles/414x217/public/2026-11/1885638_0.jpeg.webp?VersionId=Q451ibxl6Wleu9CYNYeIhCkLnMVxDAPC",
-      "credito": "Asharq Al-Awsat",
-      "regioes": [
-        "oriente-medio"
-      ],
-      "temas": [
-        "conflitos",
-        "energia"
-      ],
-      "fontes": 2,
-      "paises": 2,
-      "maisRecente": "2026-11-21T00:00:08.000Z",
-      "materias": [
-        {
-          "fonte": "Middle East Eye",
-          "pais": "Reino Unido",
-          "visao": "Site focado no Oriente Médio, crítico de governos da região",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Three Houthi ballistic missiles intercepted over Riyadh, Saudi-led coalition says",
-          "link": "https://www.middleeasteye.net/live-blog/live-blog-update/three-houthi-ballistic-missiles-intercepted-over-riyadh-saudi-led",
-          "publicadoEm": "2026-11-21T00:00:08.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Asharq Al-Awsat",
-          "pais": "Arábia Saudita",
-          "visao": "Jornal pan-árabe de dono saudita",
-          "estatal": false,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Arab Coalition Intercepts More Houthi Missiles and Drones",
-          "link": "https://english.aawsat.com/node/5343537",
-          "publicadoEm": "2026-11-20T10:15:18.000Z",
           "semData": false
         }
       ]
@@ -7219,6 +7232,67 @@
       ]
     },
     {
+      "id": "10ee907fc20e",
+      "titulo": "Threats, insults, settlements: How Nvidia’s ex-CEO Jensen Huang made humiliation routine",
+      "resumo": "The behaviour kept Nvidia’s human resources department busy fielding workplace complaints.",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "mundo"
+      ],
+      "temas": [
+        "tecnologia"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-21T00:22:00.000Z",
+      "materias": [
+        {
+          "fonte": "The Straits Times",
+          "pais": "Singapura",
+          "visao": "Jornal de referência de Singapura",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Threats, insults, settlements: How Nvidia’s ex-CEO Jensen Huang made humiliation routine",
+          "link": "https://www.straitstimes.com/world/united-states/threats-insults-settlements-how-nvidias-ex-ceo-jensen-huang-made-humiliation-routine",
+          "publicadoEm": "2026-11-21T00:22:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "eec2743f2c10",
+      "titulo": "Não posso falar pelos EUA, diz Trump ao responder se Putin é amigo do país",
+      "resumo": "O presidente dos Estados Unidos , Donald Trump , afirmou nesta sexta-feira (20) que não pode falar em nome dos americanos ao ser questionado se considera o presidente da Rússia , Vladimir Putin , um amigo dos Estados Unidos. Leia mais (11/20/2026 - 21h16)",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "america-norte",
+        "europa"
+      ],
+      "temas": [
+        "politica"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-21T00:16:00.000Z",
+      "materias": [
+        {
+          "fonte": "Folha Mundo",
+          "pais": "Brasil",
+          "visao": "Jornal de referência brasileiro",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "pt",
+          "titulo": "Não posso falar pelos EUA, diz Trump ao responder se Putin é amigo do país",
+          "link": "https://redir.folha.com.br/redir/online/mundo/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/nao-posso-falar-pelos-eua-diz-trump-ao-responder-se-putin-e-amigo-do-pais.shtml",
+          "publicadoEm": "2026-11-21T00:16:00.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
       "id": "968fb7c8ed69",
       "titulo": "Six Palestinians killed in Israeli strikes on Gaza, civil defence says",
       "resumo": "Israeli strikes killed six people in the Gaza Strip on Friday, the civil defence agency in the war-shattered territory told AFP, despite a ceasefire. Mahmoud Bassal, the spokesman for Gaza's civil defence agency, said that four Palestinians were killed and several others wounded…",
@@ -8247,6 +8321,37 @@
           "titulo": "US police departments warn GTA VI users to ‘keep it in the game’",
           "link": "https://www.theguardian.com/us-news/2026/nov/20/grand-theft-auto-vi-us-police-psa",
           "publicadoEm": "2026-11-20T23:02:30.000Z",
+          "semData": false
+        }
+      ]
+    },
+    {
+      "id": "612bc0c81707",
+      "titulo": "Africa: High-Level Dialogue - 16 Days of Activism Against Gender-Based Violence",
+      "resumo": "[African Development Bank (AfDB)] When: Thursday, 26 November 2026. Time: 1:00 PM - 3:00 PM GMT. Where: Auditorium, CCIA Building, African Development Bank Group Headquarters, Abidjan, Côte d'Ivoire, and online Format: Hybrid (in person and online) Language: Simultaneous…",
+      "imagem": "",
+      "credito": "",
+      "regioes": [
+        "europa",
+        "africa"
+      ],
+      "temas": [
+        "outros"
+      ],
+      "fontes": 1,
+      "paises": 1,
+      "maisRecente": "2026-11-20T23:01:49.000Z",
+      "materias": [
+        {
+          "fonte": "AllAfrica",
+          "pais": "África (vários)",
+          "visao": "Reúne jornais de todo o continente africano",
+          "estatal": false,
+          "tipo": "noticia",
+          "idioma": "en",
+          "titulo": "Africa: High-Level Dialogue - 16 Days of Activism Against Gender-Based Violence",
+          "link": "https://allafrica.com/stories/202611200720.html",
+          "publicadoEm": "2026-11-20T23:01:49.000Z",
           "semData": false
         }
       ]
@@ -33995,8 +34100,7 @@
       "imagem": "https://img.yna.co.kr/photo/yna/YH/2026/11/20/PYH2026112014050001300_P2.jpg",
       "credito": "Yonhap",
       "regioes": [
-        "asia-pacifico",
-        "america-norte"
+        "asia-pacifico"
       ],
       "temas": [
         "economia",
@@ -34052,18 +34156,6 @@
           "titulo": "(URGENT) Seoul shares plunge over 5 pct as Anthropic debut fails to ease AI concerns",
           "link": "https://en.yna.co.kr/view/AEN20261120005400320",
           "publicadoEm": "2026-11-20T06:33:10.000Z",
-          "semData": false
-        },
-        {
-          "fonte": "Yonhap",
-          "pais": "Coreia do Sul",
-          "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "(LEAD) Seoul shares open sharply lower tracking U.S. losses after Anthropic debut",
-          "link": "https://en.yna.co.kr/view/AEN20261120001151320",
-          "publicadoEm": "2026-11-20T00:25:15.000Z",
           "semData": false
         }
       ]
@@ -39314,36 +39406,6 @@
           "titulo": "BIGBANG teases new digital single",
           "link": "https://en.yna.co.kr/view/AEN20261120002100315",
           "publicadoEm": "2026-11-20T00:29:18.000Z",
-          "semData": false
-        }
-      ]
-    },
-    {
-      "id": "cfd4839a6d8c",
-      "titulo": "Hyundai Motor unveils new Elantra, Genesis G80 Hybrid at LA Auto Show",
-      "resumo": "SEOUL, Nov. 20 (Yonhap) -- Hyundai Motor Co. said Friday it has unveiled its eig...",
-      "imagem": "https://img.yna.co.kr/etc/inner/EN/2026/11/20/AEN20261120002000320_01_i_P2.jpg",
-      "credito": "Yonhap",
-      "regioes": [
-        "asia-pacifico"
-      ],
-      "temas": [
-        "outros"
-      ],
-      "fontes": 1,
-      "paises": 1,
-      "maisRecente": "2026-11-20T00:24:54.000Z",
-      "materias": [
-        {
-          "fonte": "Yonhap",
-          "pais": "Coreia do Sul",
-          "visao": "Agência de notícias sul-coreana, financiada pelo Estado",
-          "estatal": true,
-          "tipo": "noticia",
-          "idioma": "en",
-          "titulo": "Hyundai Motor unveils new Elantra, Genesis G80 Hybrid at LA Auto Show",
-          "link": "https://en.yna.co.kr/view/AEN20261120002000320",
-          "publicadoEm": "2026-11-20T00:24:54.000Z",
           "semData": false
         }
       ]
