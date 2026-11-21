@@ -115,7 +115,7 @@ export function listaDeFatos(fatos, dados, limite) {
 
 // ---------- HOJE ----------
 
-export function telaHoje(analise, dados) {
+export function telaHoje(analise, dados, indicadoresHtml = '') {
   const topo = cabecalho('Radar de hoje', esc(dataPorExtenso(dados.dataReferencia)),
     `${numero(dados.totalNoticias)} notícias de ${dados.totalFontes} fontes · atualizado às ${hora(dados.geradoEm)}`);
 
@@ -127,7 +127,7 @@ export function telaHoje(analise, dados) {
     </div>
     <a class="botao largo" href="#edicoes" style="margin-top:10px">${t('Edições anteriores')} <span class="icone i-seta" aria-hidden="true"></span></a>`;
 
-  if (!temAnalise) return `<div class="tela">${topo}${semAnalise(analise, dados)}<div class="secao">${atalhos}</div></div>`;
+  if (!temAnalise) return `<div class="tela">${topo}${semAnalise(analise, dados)}${indicadoresHtml}<div class="secao">${atalhos}</div></div>`;
 
   const d = analise.destaque;
   const deOutroDia = analise.dataReferencia !== dados.dataReferencia;
@@ -160,6 +160,7 @@ export function telaHoje(analise, dados) {
           <div class="importa cascata">
             ${analise.tambemImporta.map((t, i) => cartaoImporta(t, i + 2, dados)).join('')}
           </div>
+          ${indicadoresHtml}
           <div class="secao" style="margin-top:22px">${atalhos}</div>
         </div>
       </div>
@@ -924,5 +925,113 @@ export function secaoFila(itens, { conectado, roboLigado }) {
             <button type="button" class="botao-icone" data-fila="tirar" data-id="${esc(x.id)}" aria-label="${en ? 'Remove' : 'Tirar da fila'}" style="--icone:var(--i-fechar)"></button>
           </span>
         </li>`).join('')}</ol>` : ''}
+    </div>`;
+}
+
+// ---------- PAINEL DE INDICADORES ----------
+
+/** 5,8889 → "5,89" (no idioma escolhido) */
+function valorIndicador(ind) {
+  return new Intl.NumberFormat(emIngles() ? 'en-US' : 'pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(ind.ultimo.valor);
+}
+
+/** "▲ 1,4%" ou "▼ 0,25 p.p." (subir = âmbar, cair = turquesa: subir não é "bom" nem "ruim" em si). */
+function variacaoIndicador(v, sufixo = '') {
+  if (!v) return '';
+  const n = v.porcento ?? v.pontos;
+  if (n === null || n === undefined) return '';
+  const fmt = new Intl.NumberFormat(emIngles() ? 'en-US' : 'pt-BR', { maximumFractionDigits: 2 }).format(Math.abs(n));
+  const seta = n > 0 ? '▲' : n < 0 ? '▼' : '•';
+  const classe = n > 0 ? 'sobe' : n < 0 ? 'desce' : '';
+  return `<span class="variacao ${classe}">${seta} ${fmt}${v.porcento !== undefined ? '%' : ' p.p.'}${sufixo}</span>`;
+}
+
+/** Gráfico de linha simples (SVG) do último ano. */
+function grafico(serie) {
+  if (!serie || serie.length < 2) return '';
+  const L = 320; const A = 96; const m = 4;
+  const valores = serie.map(([, v]) => v);
+  const min = Math.min(...valores); const max = Math.max(...valores);
+  const x = (i) => m + (i / (serie.length - 1)) * (L - 2 * m);
+  const y = (v) => (max === min ? A / 2 : m + (1 - (v - min) / (max - min)) * (A - 2 * m));
+  const linha = serie.map(([, v], i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)} ${y(v).toFixed(1)}`).join(' ');
+  const area = `${linha} L${x(serie.length - 1).toFixed(1)} ${A} L${x(0).toFixed(1)} ${A} Z`;
+  const fmt = (v) => new Intl.NumberFormat(emIngles() ? 'en-US' : 'pt-BR', { maximumFractionDigits: 2 }).format(v);
+  const rotulo = emIngles() ? 'Chart of the last 12 months' : 'Gráfico dos últimos 12 meses';
+  return `
+    <div class="grafico">
+      <svg viewBox="0 0 ${L} ${A}" preserveAspectRatio="none" role="img" aria-label="${rotulo}">
+        <path d="${area}" class="grafico-area"/><path d="${linha}" class="grafico-linha" vector-effect="non-scaling-stroke"/>
+      </svg>
+      <div class="grafico-legenda"><span>${esc(dataCurta(serie[0][0]))}</span><span>${emIngles() ? 'min' : 'mín.'} ${fmt(min)} · ${emIngles() ? 'max' : 'máx.'} ${fmt(max)}</span><span>${esc(dataCurta(serie[serie.length - 1][0]))}</span></div>
+    </div>`;
+}
+
+function valorComUnidade(ind) {
+  return `${ind.unidade === 'R$' ? 'R$ ' : ''}${valorIndicador(ind)}${ind.unidade.startsWith('%') ? '%' : ''}`;
+}
+
+/** Faixa compacta no Hoje: os 5 números, cada um leva ao painel. */
+export function resumoIndicadores(dados) {
+  if (!dados?.indicadores?.length) return '';
+  const en = emIngles();
+  return `
+    <div class="secao">
+      <div class="secao-cabeca"><h2>${en ? 'Indicators' : 'Indicadores'}</h2><a href="#indicadores">${en ? 'See all' : 'Ver painel'}</a></div>
+      <div class="faixa-indicadores">
+        ${dados.indicadores.map((ind) => `
+          <a class="mini-indicador" href="#indicadores/${esc(ind.id)}">
+            <span class="nome">${esc(t(ind.nome))}</span>
+            <strong>${valorComUnidade(ind)}</strong>
+            ${variacaoIndicador(ind.variacao30, en ? ' in 30d' : ' em 30 dias')}
+          </a>`).join('')}
+      </div>
+    </div>`;
+}
+
+/** O painel completo. `noticiasDe(id)` devolve as notícias de hoje ligadas a cada indicador. */
+export function telaIndicadores(dados, explicacoes, noticiasDe, foco) {
+  const en = emIngles();
+  const titulo = en ? 'The world in numbers' : 'O mundo em números';
+  if (!dados?.indicadores?.length) {
+    return `<div class="tela">${cabecalho('Indicadores', titulo)}<p class="vazio">${en ? 'Could not load the indicators. Check your connection.' : 'Não deu para carregar os indicadores. Confira a conexão.'}</p></div>`;
+  }
+  const subtitulo = en
+    ? 'Official numbers that show how events abroad reach Brazil. Context, not investment advice.'
+    : 'Números oficiais que mostram como o que acontece lá fora chega ao Brasil. É contexto, não dica de investimento.';
+  const cartoes = dados.indicadores.map((ind) => {
+    const ex = explicacoes[ind.id] || {};
+    const ligadas = noticiasDe(ind.id);
+    const unidade = ind.unidade === 'R$' ? '' : ` ${esc(ind.unidade)}`;
+    const atraso = ind.erro ? (en ? ' · not updated today' : ' · não atualizado hoje') : '';
+    const noticias = ligadas.length
+      ? `<p class="rotulo" style="margin-top:12px">${en ? "In today's news" : 'Nas notícias de hoje'}</p>`
+        + ligadas.map((f) => `<button type="button" class="linha-compacta" data-fato="${esc(f.id)}"><span class="n">•</span><span><strong>${esc(f.titulo)}</strong><small>${f.fontes} ${en ? 'sources' : 'fontes'}</small></span><span class="icone i-seta" aria-hidden="true"></span></button>`).join('')
+      : '';
+    return `
+      <section class="cartao indicador" id="ind-${esc(ind.id)}" ${foco === ind.id ? 'data-foco' : ''}>
+        <div class="indicador-topo">
+          <div>
+            <p class="rotulo">${esc(t(ind.nome))}</p>
+            <p class="valor-grande">${ind.unidade === 'R$' ? '<small>R$</small> ' : ''}${valorIndicador(ind)}<small>${unidade}</small></p>
+            <p class="subtitulo">${en ? 'on' : 'em'} ${esc(dataCurta(ind.ultimo.data))}${atraso}</p>
+          </div>
+          <div class="variacoes">${variacaoIndicador(ind.variacao30, en ? ' 30 days' : ' 30 dias')}${variacaoIndicador(ind.variacao365, en ? ' 12 months' : ' 12 meses')}</div>
+        </div>
+        ${grafico(ind.serie)}
+        ${ex.oQueE ? `<p class="explica"><strong>${en ? 'What it is' : 'O que é'}:</strong> ${esc(ex.oQueE)}</p>` : ''}
+        ${ex.mundo ? `<p class="explica"><strong>${en ? 'What moves it' : 'O que mexe nele'}:</strong> ${esc(ex.mundo)}</p>` : ''}
+        ${ex.voce ? `<p class="explica voce"><strong>${en ? 'How it reaches you' : 'Como chega em você'}:</strong> ${esc(ex.voce)}</p>` : ''}
+        ${noticias}
+        <p class="fonte-indicador">${en ? 'Source' : 'Fonte'}: <a href="${esc(ind.link)}" target="_blank" rel="noopener noreferrer">${esc(ind.fonte)}</a></p>
+      </section>`;
+  }).join('');
+  const direto = dados.direto ? (en ? ' (read straight from the sources)' : ' (lido direto das fontes)') : '';
+  return `
+    <div class="tela">
+      <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>${t('Hoje')}</button>
+      ${cabecalho('Indicadores', titulo, subtitulo)}
+      ${cartoes}
+      <p class="aviso-ia">${en ? 'Updated' : 'Atualizado'} ${dataHora(dados.geradoEm)}${direto}.</p>
     </div>`;
 }

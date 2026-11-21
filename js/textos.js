@@ -50,6 +50,9 @@ const EN = {
   'Aparência': 'Appearance', 'Automático': 'Automatic', 'Noite': 'Night', 'Dia': 'Day', 'Idioma': 'Language',
   'Acessibilidade': 'Accessibility', 'Tamanho da letra': 'Text size', 'Mais contraste': 'Higher contrast',
   'Menos movimento': 'Reduce motion', 'Sobre o Onda': 'About Onda',
+  // Indicadores
+  'Indicadores': 'Indicators', 'Dólar': 'US dollar', 'Euro': 'Euro', 'Petróleo Brent': 'Brent oil',
+  'Selic (juros do Brasil)': 'Selic (Brazil interest rate)', 'Inflação (IPCA, 12 meses)': 'Inflation (IPCA, 12 months)',
   // Camadas da cadeia de efeitos
   'Economia': 'Economy', 'Preços': 'Prices', 'Energia': 'Energy', 'Política': 'Politics', 'Segurança': 'Security',
   'Tecnologia': 'Technology', 'Mídia': 'Media', 'Sociedade': 'Society', 'Brasil': 'Brazil', 'Você': 'You',

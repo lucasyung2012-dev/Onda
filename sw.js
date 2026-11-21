@@ -12,7 +12,7 @@
 // aparelhos baixarem a versão nova.
 // =============================================================
 
-const VERSAO = 'onda-v13';
+const VERSAO = 'onda-v14';
 
 const ARQUIVOS_DO_APP = [
   './',
@@ -26,6 +26,7 @@ const ARQUIVOS_DO_APP = [
   'js/prompt.js',
   'js/config.js',
   'js/textos.js',
+  'js/indicadores.js',
   'manifest.webmanifest',
   'assets/logo/onda.svg',
   'assets/logo/onda-mini.svg',

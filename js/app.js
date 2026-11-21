@@ -13,7 +13,8 @@ import * as meus from './meus.js';
 import * as dropbox from './dropbox.js';
 import { gerarPrompt } from './prompt.js';
 import * as config from './config.js';
-import { dataCurta } from './util.js';
+import { dataCurta, semAcento } from './util.js';
+import { carregarIndicadores, EXPLICACOES } from './indicadores.js';
 import { t, emIngles, REGIOES_EN, TEMAS_EN } from './textos.js';
 
 // ---------- Estado: o que está acontecendo agora ----------
@@ -84,7 +85,7 @@ function rotaAtual() {
 
 /** Qual aba do rodapé fica acesa para cada tela */
 function abaDaTela(tela) {
-  if (['analise', 'edicoes', 'edicao'].includes(tela)) return 'hoje';
+  if (['analise', 'edicoes', 'edicao', 'indicadores'].includes(tela)) return 'hoje';
   if (tela === 'tema') return 'temas';
   if (tela === 'analise-minha') return 'meu';
   return ['hoje', 'temas', 'explorar', 'meu'].includes(tela) ? tela : 'hoje';
@@ -104,6 +105,7 @@ function htmlDaRota({ tela, partes }) {
       return carregarDepois('temas', partes[1], (t) => telas.telaTema(t, anteriores));
     }
     case 'meu': return htmlMeu();
+    case 'indicadores': return telas.telaIndicadores(estado.indicadores, EXPLICACOES, noticiasDoIndicador, partes[1]);
     case 'config': return telas.telaConfig(config.ler(), { conectado: dropbox.conectado(), roboLigado: Boolean(estado.tema?.filaConectada) });
     case 'analise-minha': return telas.telaMinhaAnalise(meus.pegar(partes[1]), dados);
     case 'explorar': {
@@ -114,7 +116,7 @@ function htmlDaRota({ tela, partes }) {
       }
       return telas.telaExplorar(dados, estado.explorar.modo, estado.explorar.busca);
     }
-    default: return telas.telaHoje(analise, dados);
+    default: return telas.telaHoje(analise, dados, telas.resumoIndicadores(estado.indicadores));
   }
 }
 
@@ -138,7 +140,9 @@ function desenhar({ animar = true } = {}) {
 
   const trocar = () => {
     conteudo.innerHTML = htmlDaRota(rota);
-    window.scrollTo(0, 0);
+    // No painel de indicadores, rola até o indicador tocado no Hoje
+    const foco = rota.tela === 'indicadores' && rota.partes[1] && document.getElementById(`ind-${rota.partes[1]}`);
+    if (foco) foco.scrollIntoView(); else window.scrollTo(0, 0);
   };
   // "View Transitions": o navegador anima a troca entre a tela velha e a nova.
   if (animar && document.startViewTransition && !config.menosMovimento()) {
@@ -297,6 +301,26 @@ function htmlMeu() {
     limite: meus.LIMITE_POR_DIA,
     dados: estado.dados,
     historico: htmlHistorico(),
+  });
+}
+
+// ---------- Painel de indicadores ----------
+
+/** Até 3 notícias de hoje ligadas a um indicador (pelas palavras-chave dele). */
+function noticiasDoIndicador(id) {
+  const palavras = EXPLICACOES[id]?.palavras || [];
+  const combina = (texto) => { const t = ` ${semAcento(texto.toLowerCase())} `; return palavras.some((p) => t.includes(p)); };
+  return (estado.dados?.fatos || [])
+    .filter((f) => combina(f.titulo) || f.materias.some((m) => combina(m.titulo)))
+    .slice(0, 3); // os fatos já vêm dos mais repercutidos para os menos
+}
+
+/** Carrega os números sem atrasar a abertura do app; depois redesenha a tela. */
+function carregarPainel() {
+  carregarIndicadores().then((dados) => {
+    estado.indicadores = dados;
+    const tela = rotaAtual().tela;
+    if (tela === 'hoje' || tela === 'indicadores') desenhar({ animar: false });
   });
 }
 
@@ -530,6 +554,7 @@ async function iniciar() {
   try {
     await carregar();
     aplicarIdiomaNosDados();
+    carregarPainel();
     desenhar({ animar: false });
   } catch (erro) {
     conteudo.innerHTML = telas.telaErro(`Sem conexão e sem cópia salva ainda. (${erro.message})`);
