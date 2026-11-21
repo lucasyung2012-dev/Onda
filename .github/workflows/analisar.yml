@@ -20,7 +20,7 @@ on:
         description: 'O que rodar'
         type: choice
         default: tudo
-        options: [tudo, 'só o tema do dia', 'só traduzir', 'refazer o destaque', 'testar o aviso']
+        options: [tudo, 'só o tema do dia', 'só traduzir', 'refazer o destaque', 'testar o aviso', 'só o holograma']
 
 permissions:
   contents: write
@@ -43,11 +43,17 @@ jobs:
       - name: Baixar as notícias guardadas
         run: bash .github/dados.sh baixar
 
+      # O destaque e o tema de hoje para o app são montados a partir do arquivo
+      # do dia (não ficam duplicados no repositório; ver coletor/montar-app.mjs).
+      - name: Montar os arquivos do app
+        continue-on-error: true
+        run: node coletor/montar-app.mjs
+
       - name: Coletar as notícias mais recentes
         run: node coletor/coletar.mjs
 
       - name: Escolher e analisar o destaque do dia
-        if: github.event.inputs.parte != 'só o tema do dia' && github.event.inputs.parte != 'só traduzir' && github.event.inputs.parte != 'testar o aviso'
+        if: github.event.inputs.parte != 'só o tema do dia' && github.event.inputs.parte != 'só traduzir' && github.event.inputs.parte != 'testar o aviso' && github.event.inputs.parte != 'só o holograma'
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
@@ -57,7 +63,7 @@ jobs:
       # Roda mesmo se o destaque falhar. O "sleep" respeita o limite
       # de uso por minuto do plano gratuito da IA.
       - name: Escrever o tema do dia
-        if: always() && github.event.inputs.parte != 'só traduzir' && github.event.inputs.parte != 'refazer o destaque' && github.event.inputs.parte != 'testar o aviso'
+        if: always() && github.event.inputs.parte != 'só traduzir' && github.event.inputs.parte != 'refazer o destaque' && github.event.inputs.parte != 'testar o aviso' && github.event.inputs.parte != 'só o holograma'
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
@@ -66,9 +72,21 @@ jobs:
           if [ "${{ github.event.inputs.parte }}" != "só o tema do dia" ]; then sleep 65; fi
           node coletor/tema.mjs
 
+      # O "holograma": mapas do lugar do fato (mundo, país e região).
+      # Se falhar, o destaque e o tema saem do mesmo jeito, sem mapa.
+      - name: Desenhar o holograma
+        if: always() && github.event.inputs.parte != 'testar o aviso' && github.event.inputs.parte != 'só traduzir'
+        continue-on-error: true
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          npm install --no-save --no-package-lock d3-geo@3 topojson-client@3 topojson-simplify@3 world-atlas@2
+          node coletor/holograma.mjs
+
       # Versão em inglês da análise e do tema (para o app no idioma inglês)
       - name: Traduzir para o inglês
-        if: always() && github.event.inputs.parte != 'testar o aviso'
+        if: always() && github.event.inputs.parte != 'testar o aviso' && github.event.inputs.parte != 'só o holograma'
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}

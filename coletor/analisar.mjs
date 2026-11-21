@@ -36,7 +36,7 @@ const lerJson = async (c, padrao) => { try { return JSON.parse(await readFile(ar
 async function gravarJson(caminho, dados) {
   const destino = arquivo(caminho);
   await mkdir(new URL('./', destino), { recursive: true });
-  await writeFile(destino, JSON.stringify(dados, null, 2) + '\n', 'utf8');
+  await writeFile(destino, JSON.stringify(dados) + '\n', 'utf8');
 }
 const dataBrasilia = (d) => new Intl.DateTimeFormat('en-CA', { timeZone: FUSO, year: 'numeric', month: '2-digit', day: '2-digit' }).format(d);
 const esperar = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -130,6 +130,9 @@ Responda neste formato JSON (todos os campos são obrigatórios):
  "titulo": "<título claro em português, até 90 caracteres>",
  "emUmaFrase": "<uma frase que diga como isso pode chegar ao dia a dia de quem vive no Brasil, sem exagero>",
  "emTrintaSegundos": {"oQue": "<o que aconteceu, em UMA frase curta, até 110 caracteres>", "porQue": "<por que importa, em UMA frase curta, até 110 caracteres>", "voce": "<o que muda para quem vive no Brasil, em UMA frase curta, até 110 caracteres; diga se não muda nada agora>"},
+ "fatosRapidos": {"onde": "<lugar curto, ex.: 'Leste da Polônia'>", "quando": "<data curta, ex.: '20/11', ou 'sem data clara'>", "quem": "<os principais envolvidos, até 3, separados por vírgula>"},
+ "lugar": "<o lugar principal para marcar no mapa, o mais específico que as matérias permitem (cidade, província ou país), sempre com o país, ex.: 'Rzeszów, Polônia'>",
+ "quemDisse": [{"quem": "<nome da pessoa ou instituição>", "cargo": "<cargo e país, ex.: 'primeiro-ministro da Polônia'>", "disse": "<o que disse, resumido em 1 frase>", "literal": <true SÓ se essa frase exata aparece entre aspas numa matéria; senão false>, "fontes": [<índices das matérias>]}],
  "oQueAconteceu": "<2 a 4 parágrafos curtos separados por \\n\\n: o quê, onde, quando, quem está envolvido, antecedentes necessários>",
  "dataDoFato": "<AAAA-MM-DD em que o fato ocorreu, ou null se as matérias não deixam claro>",
  "dataDoFatoObs": "<explique se o fato é de hoje, de antes (só noticiado hoje) ou se não dá para saber>",
@@ -177,6 +180,14 @@ Cuidados (erros que já aconteceram):
       // Resumo de 30 segundos: opcional (sem ele, o app usa a 1ª frase de cada parte).
       const r30 = r.emTrintaSegundos || {};
       r.emTrintaSegundos = r30.oQue && r30.porQue && r30.voce ? { oQue: r30.oQue, porQue: r30.porQue, voce: r30.voce } : null;
+      // Fatos rápidos, lugar no mapa e quem disse o quê: opcionais.
+      const fr = r.fatosRapidos || {};
+      r.fatosRapidos = fr.onde || fr.quando || fr.quem ? { onde: fr.onde || '', quando: fr.quando || '', quem: fr.quem || '' } : null;
+      r.lugar = typeof r.lugar === 'string' ? r.lugar.trim() : '';
+      r.quemDisse = (Array.isArray(r.quemDisse) ? r.quemDisse : [])
+        .map((q) => ({ ...q, literal: q.literal === true, fontes: [...new Set((q.fontes || []).filter((i) => Number.isInteger(i) && i >= 0 && i < usadas.length))] }))
+        .filter((q) => q.quem && q.disse && q.fontes.length) // sem matéria que confirme, não entra
+        .slice(0, 4);
     },
   });
 
@@ -364,6 +375,10 @@ principal().catch(async (erro) => {
   console.error('A análise falhou:', erro.message);
   // Mantém a última análise boa; só registra o problema para o app avisar.
   const atual = await lerJson('data/app/analise.json', {});
-  await gravarJson('data/app/analise.json', { ...atual, ultimoErro: { em: new Date().toISOString(), mensagem: erro.message } });
+  const ultimoErro = { em: new Date().toISOString(), mensagem: erro.message };
+  await gravarJson('data/app/analise.json', { ...atual, ultimoErro });
+  // analise.json não vai para o repositório (é montado na publicação); o erro vai
+  // num arquivo pequeno, que o montador junta de volta (coletor/montar-app.mjs).
+  await gravarJson('data/app/situacao.json', { ultimoErro });
   process.exit(1);
 });

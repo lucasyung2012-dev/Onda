@@ -43,7 +43,7 @@ const lerJson = async (c, padrao) => { try { return JSON.parse(await readFile(ar
 async function gravarJson(caminho, dados) {
   const destino = arquivo(caminho);
   await mkdir(new URL('./', destino), { recursive: true });
-  await writeFile(destino, JSON.stringify(dados, null, 2) + '\n', 'utf8');
+  await writeFile(destino, JSON.stringify(dados) + '\n', 'utf8');
 }
 const dataBrasilia = (d) => new Intl.DateTimeFormat('en-CA', { timeZone: FUSO, year: 'numeric', month: '2-digit', day: '2-digit' }).format(d);
 const esperar = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -220,11 +220,15 @@ Escreva a abertura da aula. JSON:
  "emUmaFrase": "<a resposta em uma frase>",
  "paraComecar": "<3 a 4 parágrafos separados por \\n\\n que expliquem o assunto do zero, para quem nunca ouviu falar>",
  "glossario": [{"termo": "<termo difícil>", "definicao": "<explicação simples>"}],
+ "fatosRapidos": [{"rotulo": "<ex.: 'Criada em', 'Sede', 'Membros'>", "valor": "<valor curto que está nos textos, ex.: '1949', 'Bruxelas', '32 países'>"}],
+ "lugar": "<o lugar mais ligado ao tema para marcar no mapa (ex.: a sede), com o país, ex.: 'Bruxelas, Bélgica'; string vazia se o tema não tiver um lugar>",
  "ligacoes": ["<títulos de temas anteriores relacionados, copiados exatamente da lista, ou lista vazia>"]}
 Glossário: 4 a 8 termos.`, 3500, (r) => {
     for (const c of ['titulo', 'pergunta', 'emUmaFrase', 'paraComecar']) if (!r[c]) throw new Error(`abertura sem "${c}"`);
     r.glossario = (r.glossario || []).filter((g) => g.termo && g.definicao).slice(0, 8);
     r.ligacoes = (r.ligacoes || []).filter((l) => anteriores.includes(l));
+    r.fatosRapidos = (r.fatosRapidos || []).filter((f) => f.rotulo && f.valor).slice(0, 3);
+    r.lugar = typeof r.lugar === 'string' ? r.lugar.trim() : '';
   });
   Object.assign(aula, a.resposta);
   ia = { provedor: a.provedor, modelo: a.modelo };
@@ -259,10 +263,12 @@ ${material(artigos, PALAVRAS.funcionamento)}
 Explique como o tema funciona por dentro. JSON:
 {"comoFuncionaIdeia": "<a ideia principal deste capítulo em UMA frase curta, até 140 caracteres>",
  "comoFunciona": "<3 a 5 parágrafos separados por \\n\\n: regras, quem decide, quem paga, quem manda, como as peças se encaixam>",
- "numeros": [{"valor": "<número exatamente como nos textos, com unidade>", "significado": "<o que ele mostra>", "fonte": <índice [n]>}]}
+ "numeros": [{"valor": "<número exatamente como nos textos, com unidade>", "significado": "<o que ele mostra>", "fonte": <índice [n]>}],
+ "voceSabia": ["<1 ou 2 curiosidades surpreendentes e verdadeiras que estão nos textos, em 1 frase cada>"]}
 Números: 3 a 6, só os que aparecem nos textos. Prefira os mais recentes; se o número for de um ano específico, diga o ano no "significado" (ex.: "PIB da UE em 2010"). Têm de ser QUANTIDADES que ajudam a entender o tema (valores em dinheiro, porcentagens, número de membros, população, produção...), nunca um ano sozinho.`, 3500, (r) => {
     if (!r.comoFunciona) throw new Error('sem funcionamento');
     r.numeros = (r.numeros || []).filter((n) => n.valor && n.significado && fonteValida(n.fonte)).slice(0, 6);
+    r.voceSabia = (r.voceSabia || []).filter((v) => typeof v === 'string' && v.trim()).slice(0, 2);
   }));
 
   // d) O que cada lado quer + mitos

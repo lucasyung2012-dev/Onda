@@ -51,13 +51,23 @@ jobs:
       - name: Juntar as notícias
         run: bash .github/dados.sh baixar
 
+      - name: Preparar o Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Monta a pasta _site/ com só o que o app usa, os arquivos do app e os
+      # dias antigos compactados (ver coletor/site.mjs).
+      - name: Montar o site (leve)
+        run: node coletor/site.mjs
+
       - name: Preparar o Pages
         uses: actions/configure-pages@v5
 
       - name: Empacotar o site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
 
       # O GitHub às vezes recusa a publicação na hora (ex.: outra em andamento).
       # Em vez de deixar o site com os dados velhos até a próxima coleta

@@ -21,7 +21,7 @@ const lerJson = async (c, padrao) => { try { return JSON.parse(await readFile(ar
 async function gravarJson(caminho, dados) {
   const destino = arquivo(caminho);
   await mkdir(new URL('./', destino), { recursive: true });
-  await writeFile(destino, JSON.stringify(dados, null, 2) + '\n', 'utf8');
+  await writeFile(destino, JSON.stringify(dados) + '\n', 'utf8');
 }
 const esperar = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -32,7 +32,7 @@ const PAUSA = 65000;
 const NAO_TRADUZIR = new Set([
   'fatoId', 'regioes', 'temas', 'link', 'url', 'imagem', 'credito', 'dataReferencia', 'dataDoFato', 'geradoEm',
   'publicadoEm', 'camada', 'tipo', 'status', 'fuso', 'versao', 'fonte', 'provedor', 'modelo', 'formato', 'id',
-  'filaConectada', 'materias', 'correta', 'ultimoErro', 'sugeridoPorVoce',
+  'filaConectada', 'materias', 'correta', 'ultimoErro', 'sugeridoPorVoce', 'holograma', 'lugar',
 ]);
 
 /** Junta todos os textos traduzíveis com o "endereço" de cada um no objeto. */
@@ -85,6 +85,9 @@ async function traduzirObjeto(original) {
     });
     pedaco.forEach((item, k) => colocar(copia, item.caminho, String(resposta.t[k])));
   }
+  // O mapa (holograma) não é traduzido nem guardado de novo: o app usa o do português.
+  delete copia.holograma;
+  if (copia.destaque) delete copia.destaque.holograma;
   return { ...copia, idioma: 'en' };
 }
 

@@ -13,3 +13,13 @@ data/noticias/
 data/app/hoje.json
 data/app/indicadores.json
 data/relatorio-coleta.json
+
+# Destaque e tema de hoje para o app: montados a partir do arquivo do dia
+# (data/analises, data/temas), para não ficarem duplicados no repositório.
+data/app/analise.json
+data/app/analise-en.json
+data/app/tema.json
+data/app/tema-en.json
+
+# Pasta montada na publicação do site (coletor/site.mjs)
+_site/

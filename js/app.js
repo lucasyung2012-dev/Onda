@@ -84,15 +84,48 @@ async function recarregarConteudo() {
   Object.assign(estado, { analise, tema, arquivos: {} });
 }
 
-/** Baixa (uma vez só) a edição ou o tema de um dia antigo e guarda a última versão. */
+/**
+ * Lê o arquivo de um dia antigo. No site publicado ele vem compactado
+ * (.json.gz, de 4 a 11 vezes menor) e o navegador descompacta aqui;
+ * se não houver a versão compactada (ex.: testando no computador),
+ * lê o .json normal.
+ */
+async function lerDia(caminho) {
+  try {
+    const r = await fetch(`${caminho}.gz`, { cache: 'no-cache' });
+    if (r.ok && 'DecompressionStream' in window) {
+      const bytes = await r.arrayBuffer();
+      try {
+        const texto = await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
+        return JSON.parse(texto);
+      } catch {
+        return JSON.parse(new TextDecoder().decode(bytes)); // o servidor já entregou descompactado
+      }
+    }
+  } catch { /* sem a versão compactada: tenta a normal */ }
+  return lerJson(caminho);
+}
+
+/** Arquivo do dia: guarda todas as versões (vale a última); no site, só a última. */
+const ultimaVersao = (doDia) => (doDia?.versoes ? doDia.versoes[doDia.versoes.length - 1] : doDia);
+
+/** Baixa (uma vez só) a edição ou o tema de um dia antigo. */
 async function arquivoDoDia(pasta, data) {
   const chave = `${pasta}/${data}/${emIngles() ? 'en' : 'pt'}`;
   if (!estado.arquivos[chave]) {
-    const traduzido = emIngles() ? await lerJson(`data/${pasta}-en/${data}.json`).catch(() => null) : null;
-    if (traduzido) estado.arquivos[chave] = traduzido;
-    else {
-      const doDia = await lerJson(`data/${pasta}/${data}.json`);
-      estado.arquivos[chave] = doDia.versoes[doDia.versoes.length - 1];
+    const traduzido = emIngles() ? await lerDia(`data/${pasta}-en/${data}.json`).catch(() => null) : null;
+    if (traduzido) {
+      // A tradução não guarda o mapa (para não duplicar): pega o do português.
+      const temMapa = pasta === 'analises' ? traduzido.destaque?.holograma : traduzido.holograma;
+      if (!temMapa) {
+        const pt = ultimaVersao(await lerDia(`data/${pasta}/${data}.json`).catch(() => null));
+        const mapa = pasta === 'analises' ? pt?.destaque?.holograma : pt?.holograma;
+        if (mapa && pasta === 'analises') traduzido.destaque = { ...traduzido.destaque, holograma: mapa };
+        else if (mapa) traduzido.holograma = mapa;
+      }
+      estado.arquivos[chave] = traduzido;
+    } else {
+      estado.arquivos[chave] = ultimaVersao(await lerDia(`data/${pasta}/${data}.json`));
     }
   }
   return estado.arquivos[chave];
@@ -647,7 +680,7 @@ document.addEventListener('input', (e) => {
 // ---------- Toques e cliques ----------
 
 document.addEventListener('click', (e) => {
-  const alvo = e.target.closest('[data-fato], [data-gaveta], [data-modo], [data-sub], [data-mais], [data-voltar], [data-fechar-folha], [data-recarregar], [data-acompanhar], [data-dropbox], [data-copiar-prompt], [data-mes], [data-dia], [data-resposta], [data-pular], [data-config], [data-fila], [data-chave-robo], [data-periodo], [data-grupo-ind], [data-aba-meu], [data-avisos], [data-guardar], [data-tirar-guardada], #veu');
+  const alvo = e.target.closest('[data-fato], [data-gaveta], [data-modo], [data-sub], [data-mais], [data-voltar], [data-fechar-folha], [data-recarregar], [data-acompanhar], [data-dropbox], [data-copiar-prompt], [data-mes], [data-dia], [data-resposta], [data-pular], [data-config], [data-fila], [data-chave-robo], [data-periodo], [data-grupo-ind], [data-aba-meu], [data-avisos], [data-guardar], [data-tirar-guardada], [data-holo], #veu');
   if (!alvo) return;
   const idEditor = alvo.closest('.editor')?.dataset.item;
 
@@ -689,6 +722,12 @@ document.addEventListener('click', (e) => {
   else if (alvo.dataset.dia) { estado.cal.dia = alvo.dataset.dia; estado.cal.mes = alvo.dataset.dia.slice(0, 7); atualizarHistorico(); }
   else if (alvo.dataset.acompanhar) alternarAcompanhar(alvo);
   else if (alvo.dataset.guardar) alternarGuardar(alvo);
+  else if (alvo.dataset.holo) {
+    // Holograma: tocar numa escala para o loop e mostra só ela
+    const h = alvo.closest('.holograma');
+    h.classList.add('manual');
+    h.querySelectorAll('.holo-camada, [data-holo]').forEach((el) => el.classList.toggle('ativa', el.style.getPropertyValue('--n') === alvo.dataset.holo));
+  }
   else if (alvo.dataset.tirarGuardada) { meus.tirarDasGuardadas(alvo.dataset.tirarGuardada); conteudo.innerHTML = htmlMeu(); }
   else if (alvo.dataset.dropbox === 'conectar') dropbox.conectar();
   else if (alvo.dataset.dropbox === 'sincronizar') { meus.sincronizar(); aviso('Sincronizando…'); }

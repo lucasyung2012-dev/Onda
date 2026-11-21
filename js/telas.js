@@ -55,6 +55,66 @@ const menuPartes = (itens) => `
     ${itens.map(([id, nome]) => `<a href="#" data-pular="${esc(id)}">${esc(nome)}</a>`).join('')}
   </nav>`;
 
+// ---------- Ícones e cores de cada parte ----------
+// Desenhos simples de traço (24 x 24), na cor da parte.
+const ICONES = {
+  noticia: '<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h8M8 17h5"/>',
+  alvo: '<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/>',
+  pessoa: '<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/>',
+  balanca: '<path d="M12 4v16M6 20h12M5 8h14M5 8l-3 6h6zM19 8l-3 6h6z"/>',
+  check: '<circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/>',
+  aspas: '<path d="M6 17c-1-3 0-8 4-10M15 17c-1-3 0-8 4-10"/><circle cx="7" cy="16" r="2"/><circle cx="16" cy="16" r="2"/>',
+  olho: '<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+  link: '<path d="M10 14a4 4 0 0 0 6 0l3-3a4 4 0 0 0-6-6l-1 1M14 10a4 4 0 0 0-6 0l-3 3a4 4 0 0 0 6 6l1-1"/>',
+  mapa: '<path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>',
+  livro: '<path d="M4 5c3-1 6-1 8 1 2-2 5-2 8-1v14c-3-1-6-1-8 1-2-2-5-2-8-1z"/><path d="M12 6v14"/>',
+  ampulheta: '<path d="M6 3h12M6 21h12M7 3c0 5 10 6 10 9s-10 4-10 9M17 3c0 5-10 6-10 9s10 4 10 9"/>',
+  engrenagem: '<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/>',
+  grupo: '<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M15 15c3 0 6 1.5 6 4"/>',
+  lampada: '<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10c1 1 1 2 1 3h6c0-1 0-2 1-3a6 6 0 0 0-4-10z"/>',
+  calendario: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+  pergunta: '<circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/>',
+  corrente: '<path d="M4 12h4M16 12h4M8 8h8v8H8z"/>',
+};
+const iconeParte = (nome, cor) => `<span class="icone-parte" style="--cor:${cor}" aria-hidden="true"><svg viewBox="0 0 24 24">${ICONES[nome] || ICONES.noticia}</svg></span>`;
+
+// ---------- Holograma: o lugar do fato em três escalas ----------
+// O robô manda os traços prontos (mundo, país, região); aqui só desenhamos
+// e animamos: mundo → país → região, em loop. Tocar numa escala para o loop.
+export function holograma(h) {
+  if (!h?.escalas?.length) return '';
+  const en = emIngles();
+  const NOMES = { mundo: en ? 'World' : 'Mundo', pais: en ? 'Country' : 'País', regiao: en ? 'Region' : 'Região' };
+  const L = h.tamanho || 240;
+  const camadas = h.escalas.map((e, i) => {
+    const [contorno, grade] = (e.extra || '').split('|');
+    return `
+      <svg class="holo-camada" style="--n:${i}" viewBox="0 0 ${L} ${L}" aria-hidden="true">
+        ${contorno ? `<path class="holo-esfera" d="${contorno}"/>` : ''}
+        ${grade ? `<path class="holo-grade" d="${grade}"/>` : ''}
+        <path class="holo-terra" d="${e.terra}"/>
+        ${e.fronteiras ? `<path class="holo-fronteira" d="${e.fronteiras}"/>` : ''}
+        ${e.destaque ? `<path class="holo-pais" d="${e.destaque}"/>` : ''}
+        <g class="holo-ponto" transform="translate(${e.ponto[0]} ${e.ponto[1]})">
+          <circle class="holo-onda" r="6"/><circle class="holo-onda d2" r="6"/><circle r="3.2"/>
+        </g>
+      </svg>`;
+  }).join('');
+  return `
+    <div class="holograma" data-escalas="${h.escalas.length}" style="--qtd:${h.escalas.length}" role="img" aria-label="${esc(`${en ? 'Map' : 'Mapa'}: ${h.lugar}`)}">
+      <div class="holo-tela">${camadas}<div class="holo-linhas"></div></div>
+      <div class="holo-rotulos">${h.escalas.map((e, i) => `<button type="button" data-holo="${i}" style="--n:${i}">${NOMES[e.nome] || e.nome}</button>`).join('')}</div>
+      <p class="holo-lugar">${iconeParte('mapa', 'var(--acento)')}${esc(h.lugar)}</p>
+    </div>`;
+}
+
+/** Fatos rápidos: quadradinhos com rótulo e valor. */
+function fatosRapidos(lista) {
+  const itens = lista.filter((f) => f.valor);
+  if (!itens.length) return '';
+  return `<div class="fatos-rapidos" style="--qtd:${itens.length}">${itens.map((f) => `<div><small>${esc(f.rotulo)}</small><strong>${esc(f.valor)}</strong></div>`).join('')}</div>`;
+}
+
 // Cor de cada tema na aba Explorar
 const COR_TEMA = {
   conflitos: '#C2554F', diplomacia: '#4F86C6', economia: '#2E9E5B', energia: '#D98B3A', politica: '#8A7FD1',
@@ -282,11 +342,20 @@ export function telaAnalise(analise, dados, opcoes = {}) {
   if (!analise?.destaque) return `<div class="tela"><p class="vazio">Ainda não há análise.</p></div>`;
   const d = analise.destaque;
   const regiao = d.regioes[0];
-  const bloco = (num, titulo, corpo, id = '') => `
-    <section class="bloco entrar-lado"${id ? ` id="${id}"` : ''}>
-      <div class="bloco-cabeca"><span class="num">${num}</span><h2>${t(titulo)}</h2></div>
+  // Cada parte é um cartão com ícone e cor próprios.
+  const VISUAL = {
+    'parte-aconteceu': ['noticia', '#8A7FD1'], 'parte-porque': ['alvo', '#4F86C6'], 'parte-voce': ['pessoa', '#E9B949'],
+    'parte-lados': ['balanca', '#45D0C4'], 'parte-quem': ['aspas', '#F2A65A'], 'parte-fatos': ['check', '#5DBB73'],
+    'parte-agora': ['olho', '#B49CF2'], 'parte-fontes': ['link', '#6B7F92'],
+  };
+  const bloco = (num, titulo, corpo, id = '') => {
+    const [icone, cor] = VISUAL[id] || ['noticia', 'var(--acento)'];
+    return `
+    <section class="bloco cartao-parte entrar-lado" style="--cor:${cor}"${id ? ` id="${id}"` : ''}>
+      <div class="bloco-cabeca">${iconeParte(icone, cor)}<h2>${t(titulo)}</h2></div>
       ${corpo}
     </section>`;
+  };
 
   const dataFato = d.dataDoFato
     ? `<strong>Data do fato:</strong> ${esc(dataCurta(d.dataDoFato))}. ${esc(d.dataDoFatoObs || '')}`
@@ -365,6 +434,15 @@ export function telaAnalise(analise, dados, opcoes = {}) {
       <div class="linha-30"><span class="rotulo ouro">${en ? 'For you' : 'Para você'}</span><p>${esc(r30.voce || d.emUmaFrase)}</p></div>
     </div>`;
 
+  // Onde foi: fatos rápidos (onde, quando, quem) + o holograma do lugar.
+  const fr = d.fatosRapidos;
+  const ondeFoi = fr || d.holograma ? `
+    <div class="cartao-parte onde-foi" style="--cor:var(--acento)">
+      <div class="bloco-cabeca">${iconeParte('mapa', 'var(--acento)')}<h2>${en ? 'Where it happened' : 'Onde foi'}</h2></div>
+      ${fr ? fatosRapidos([{ rotulo: en ? 'Where' : 'Onde', valor: fr.onde }, { rotulo: en ? 'When' : 'Quando', valor: fr.quando }, { rotulo: en ? 'Who' : 'Quem', valor: fr.quem }]) : ''}
+      ${holograma(d.holograma)}
+    </div>` : '';
+
   // As partes: [id, título, nome curto no menu, conteúdo]
   const contagem = {};
   for (const a of d.afirmacoes) contagem[a.tipo] = (contagem[a.tipo] || 0) + 1;
@@ -375,6 +453,13 @@ export function telaAnalise(analise, dados, opcoes = {}) {
     ['parte-porque', 'Por que é o destaque do dia', en ? 'Why' : 'Por quê', dobrado(d.porQueImporta, { mostrar: 1 })],
     ['parte-voce', 'Como chega em você', en ? 'You' : 'Você', `${passos}${gaveta(en ? 'See the full path' : 'Ver o caminho completo', cadeia)}`],
     ladosHtml ? ['parte-lados', 'Como cada lado vê', en ? 'Sides' : 'Lados', ladosHtml] : null,
+    d.quemDisse?.length ? ['parte-quem', en ? 'Who said what' : 'Quem disse o quê', en ? 'Quotes' : 'Quem disse', `
+      <div class="citacoes">${d.quemDisse.map((q) => `
+        <figure class="citacao">
+          <blockquote>${q.literal ? `“${esc(q.disse)}”` : esc(q.disse)}</blockquote>
+          <figcaption><strong>${esc(q.quem)}</strong>${q.cargo ? ` · ${esc(q.cargo)}` : ''}${q.literal ? '' : ` <span class="subtitulo">(${en ? 'summary' : 'resumo'})</span>`}
+            <small>${q.fontes.map((i) => esc(d.fontesUsadas[i]?.fonte || '')).filter(Boolean).join(', ')}</small></figcaption>
+        </figure>`).join('')}</div>`] : null,
     ['parte-fatos', 'Fatos × versões', en ? 'Facts' : 'Fatos', `${placar}${gaveta(en ? `See all ${d.afirmacoes.length}` : `Ver as ${d.afirmacoes.length} afirmações`, afirmacoes)}`],
     ['parte-agora', en ? 'What comes next' : 'E agora?', en ? 'Next' : 'E agora',
       `<p class="rotulo">${t('O que ainda não sabemos')}</p>${dobrado(d.oQueNaoSabemos, { mostrar: 1 })}
@@ -398,6 +483,7 @@ export function telaAnalise(analise, dados, opcoes = {}) {
       ${gaveta(en ? 'Why these scores?' : 'Por que essas notas?', notasDetalhe)}
       ${opcoes.botao || ''}
       ${resumo30}
+      ${ondeFoi}
       ${menuPartes(partes.map(([id, , curto]) => [id, curto]))}
       ${partes.map(([id, titulo, , corpo], i) => bloco(i + 1, titulo, corpo, id)).join('')}
 
@@ -543,7 +629,7 @@ export function dadosDaGaveta(dados, tipo, id) {
 /** Aba Temas: o tema do dia e os temas anteriores (que vão se acumulando). */
 /** Quantas partes e quantos minutos de leitura tem a aula. */
 function tamanhoDaAula(tema) {
-  const textos = JSON.stringify(tema).replace(/"(link|url|imagem|fonte|dataReferencia|geradoEm)":"[^"]*"/g, '');
+  const textos = JSON.stringify({ ...tema, holograma: null }).replace(/"(link|url|imagem|fonte|dataReferencia|geradoEm)":"[^"]*"/g, '');
   const palavras = textos.split(/\s+/).length;
   const partes = ['paraComecar', 'historia', 'comoFunciona', 'atores', 'vertentes', 'debate', 'eHoje', 'cadeia', 'teste']
     .filter((c) => (Array.isArray(tema[c]) ? tema[c].length : tema[c])).length + 1; // +1 = as fontes
@@ -621,7 +707,18 @@ export function telaTema(tema, temasAnteriores = []) {
     'Como chega em você': en ? 'You' : 'Você', 'Teste rápido': en ? 'Quiz' : 'Teste',
     'Ligações com outros temas': en ? 'Links' : 'Ligações', 'Para ir além: as fontes': en ? 'Sources' : 'Fontes',
   };
-  const bloco = (titulo, corpo, curto) => blocos.push({ titulo: t(titulo), corpo, curto: curto || CURTO[titulo] || t(titulo) });
+  // Ícone e cor de cada capítulo
+  const VISUAL = {
+    'Para começar do zero': ['livro', '#8A7FD1'], 'Como chegamos aqui': ['ampulheta', '#E9B949'],
+    'Como funciona por dentro': ['engrenagem', '#4F86C6'], 'Você sabia?': ['lampada', '#F2A65A'], 'Did you know?': ['lampada', '#F2A65A'],
+    'O que cada lado quer': ['grupo', '#C2557A'], 'As vertentes': ['balanca', '#45D0C4'], 'Onde há debate': ['balanca', '#45D0C4'],
+    'E hoje?': ['calendario', '#5DBB73'], 'Como chega em você': ['pessoa', '#E9B949'], 'Teste rápido': ['pergunta', '#B49CF2'],
+    'Ligações com outros temas': ['corrente', '#6B7F92'], 'Para ir além: as fontes': ['link', '#6B7F92'],
+  };
+  const bloco = (titulo, corpo, curto) => {
+    const [icone, cor] = VISUAL[titulo] || ['noticia', 'var(--acento)'];
+    blocos.push({ titulo: t(titulo), corpo, curto: curto || CURTO[titulo] || t(titulo), icone, cor });
+  };
 
   if (tema.paraComecar) {
     bloco('Para começar do zero', `${dobrado(tema.paraComecar, { mostrar: 1, rotulo: lerCapitulo })}
@@ -640,6 +737,10 @@ export function telaTema(tema, temasAnteriores = []) {
       ${tema.numeros?.length ? `<div class="numeros">${tema.numeros.map((n) => `
         <div class="numero-caixa"><strong>${esc(n.valor)}</strong><p>${esc(n.significado)}</p>${n.fonte ? `<small>${esc(n.fonte)}</small>` : ''}</div>`).join('')}</div>` : ''}
       ${gaveta(lerCapitulo, `<div class="texto-longo">${paragrafos(tema.comoFunciona)}</div>`)}`, en ? 'How it works' : 'Como funciona');
+  }
+  // Você sabia?: as curiosidades da aula, num cartão próprio
+  if (tema.voceSabia?.length) {
+    bloco(en ? 'Did you know?' : 'Você sabia?', `<ul class="voce-sabia">${tema.voceSabia.map((v) => `<li>${esc(v)}</li>`).join('')}</ul>`, en ? 'Did you know' : 'Você sabia');
   }
   if (tema.atores?.length) {
     // Quem é quem: etiquetas; tocando, abre o que cada um quer
@@ -713,10 +814,16 @@ export function telaTema(tema, temasAnteriores = []) {
         ${tema.imagem ? `<a class="credito" href="${esc(tema.imagem.link)}" target="_blank" rel="noopener noreferrer">Imagem: ${esc(tema.imagem.credito)}</a>` : ''}
       </div>
       <div class="uma-frase"><p class="rotulo ouro">${t('A resposta em uma frase')}</p><p>${esc(tema.emUmaFrase)}</p></div>
+      ${tema.fatosRapidos?.length || tema.holograma ? `
+        <div class="cartao-parte onde-foi" style="--cor:var(--acento)">
+          <div class="bloco-cabeca">${iconeParte('mapa', 'var(--acento)')}<h2>${en ? 'Quick facts' : 'Fatos rápidos'}</h2></div>
+          ${fatosRapidos(tema.fatosRapidos || [])}
+          ${holograma(tema.holograma)}
+        </div>` : ''}
       ${menuPartes(blocos.map((b, i) => [`bloco-${i}`, `${i + 1} ${b.curto}`]))}
       ${blocos.map((b, i) => `
-        <section class="bloco" id="bloco-${i}">
-          <div class="bloco-cabeca"><span class="num">${i + 1}</span><h2>${b.titulo}</h2></div>${b.corpo}
+        <section class="bloco cartao-parte" id="bloco-${i}" style="--cor:${b.cor}">
+          <div class="bloco-cabeca">${iconeParte(b.icone, b.cor)}<h2>${b.titulo}</h2></div>${b.corpo}
         </section>`).join('')}
       ${tema.paraPensar ? `<div class="uma-frase" style="margin-top:24px"><p class="rotulo ouro">${t('Para pensar')}</p><p>${esc(tema.paraPensar)}</p></div>` : ''}
       <p class="aviso-ia"><span class="icone i-ia" aria-hidden="true"></span>${esc(tema.ia?.aviso || '')} Gerada em ${dataHora(tema.geradoEm)}.</p>
