@@ -20,7 +20,7 @@ on:
         description: 'O que rodar'
         type: choice
         default: tudo
-        options: [tudo, 'só o tema do dia', 'só traduzir']
+        options: [tudo, 'só o tema do dia', 'só traduzir', 'refazer o destaque']
 
 permissions:
   contents: write
@@ -48,12 +48,13 @@ jobs:
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          REFAZER_DESTAQUE: ${{ github.event.inputs.parte == 'refazer o destaque' && 'sim' || 'nao' }}
         run: node coletor/analisar.mjs
 
       # Roda mesmo se o destaque falhar. O "sleep" respeita o limite
       # de uso por minuto do plano gratuito da IA.
       - name: Escrever o tema do dia
-        if: always() && github.event.inputs.parte != 'só traduzir'
+        if: always() && github.event.inputs.parte != 'só traduzir' && github.event.inputs.parte != 'refazer o destaque'
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}

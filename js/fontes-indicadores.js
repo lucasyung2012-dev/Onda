@@ -18,6 +18,8 @@ export const INDICADORES = [
   { id: 'dolar', grupo: 'brasil', nome: 'Dólar', unidade: 'R$', prefixo: 'R$ ', frequencia: 'diaria', fonte: 'Banco Central do Brasil', link: 'https://www3.bcb.gov.br/sgspub/', origem: { bcb: 1 } },
   { id: 'euro', grupo: 'brasil', nome: 'Euro', unidade: 'R$', prefixo: 'R$ ', frequencia: 'diaria', fonte: 'Banco Central do Brasil', link: 'https://www3.bcb.gov.br/sgspub/', origem: { bcb: 21619 } },
   { id: 'selic', grupo: 'brasil', nome: 'Selic (juros do Brasil)', unidade: '% ao ano', sufixo: '%', taxa: true, frequencia: 'diaria', fonte: 'Banco Central do Brasil', link: 'https://www.bcb.gov.br/controleinflacao/taxaselic', origem: { bcb: 432 } },
+  { id: 'gasolina', grupo: 'brasil', nome: 'Gasolina (São Paulo)', unidade: 'R$ por litro', prefixo: 'R$ ', frequencia: 'semanal', fonte: 'ANP (Agência Nacional do Petróleo)', link: 'https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/precos/levantamento-de-precos-de-combustiveis-ultimas-semanas-pesquisadas', origem: { anp: 'SAO PAULO' } },
+  { id: 'gasolina-br', grupo: 'brasil', oculto: true, nome: 'Gasolina (Brasil)', unidade: 'R$ por litro', prefixo: 'R$ ', frequencia: 'semanal', fonte: 'ANP (Agência Nacional do Petróleo)', link: 'https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/precos/levantamento-de-precos-de-combustiveis-ultimas-semanas-pesquisadas', origem: { anp: 'BRASIL' } },
   { id: 'ipca', grupo: 'brasil', nome: 'Inflação (IPCA, 12 meses)', unidade: '%', sufixo: '%', taxa: true, frequencia: 'mensal', fonte: 'Banco Central do Brasil (dados do IBGE)', link: 'https://www.ibge.gov.br/explica/inflacao.php', origem: { bcb: 13522 } },
   // ---- Mundo ----
   { id: 'petroleo', grupo: 'mundo', nome: 'Petróleo Brent', unidade: 'US$/barril', prefixo: 'US$ ', frequencia: 'diaria', fonte: 'Ipeadata (dados da EIA, EUA)', link: 'https://www.ipeadata.gov.br/', origem: { ipea: 'EIA366_PBRENT366' } },
@@ -93,6 +95,7 @@ async function bancoMundial(indicador) {
 /** Baixa a série de um indicador. */
 export async function baixarSerie(ind) {
   const o = ind.origem;
+  if (o.anp) throw new Error('a gasolina (planilha da ANP) só é lida pelo robô');
   if (o.bcb) return bcb(o.bcb);
   if (o.ipea) return ipea(o.ipea);
   if (o.tesouro) return tesouro(o.tesouro);

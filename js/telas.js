@@ -1072,8 +1072,9 @@ const DESENHOS = {
   grao: '<path d="M12 21V8M12 8c0-3 2-5 5-5 0 3-2 5-5 5zM12 8C12 5 10 3 7 3c0 3 2 5 5 5zM12 14c0-3 2-5 5-5 0 3-2 5-5 5zM12 14c0-3-2-5-5-5 0 3 2 5 5 5z"/>',
   globo: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/>',
   chama: '<path d="M12 21c-4 0-6.5-2.6-6.5-6 0-4 3-6 4-9 1 1.5 1.5 3 1.5 4.5C12.5 9 14 7 14 4.5c3 2.5 4.5 6 4.5 10 0 3.6-2.5 6.5-6.5 6.5z"/>',
+  bomba: '<path d="M5 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16M3 21h14M5 10h10M15 8h2a2 2 0 0 1 2 2v6a1.5 1.5 0 0 0 3 0V9l-3-3"/>',
 };
-const SIMBOLOS = { dolar: '$', euro: '€', selic: '%', ipca: '%', juroseua: '%', yuan: '¥', petroleo: 'gota', wti: 'gota', commodities: 'grao', pibmundo: 'globo', inflacaomundo: 'chama' };
+const SIMBOLOS = { dolar: '$', euro: '€', selic: '%', ipca: '%', juroseua: '%', yuan: '¥', petroleo: 'gota', wti: 'gota', commodities: 'grao', pibmundo: 'globo', inflacaomundo: 'chama', gasolina: 'bomba', 'gasolina-br': 'bomba' };
 function simbolo(id) {
   const s = SIMBOLOS[id] || '•';
   if (DESENHOS[s]) return `<svg class="marca-fundo desenho" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${DESENHOS[s]}</svg>`;
@@ -1110,7 +1111,7 @@ export function resumoIndicadores(dados) {
     <div class="secao">
       <div class="secao-cabeca"><h2>${en ? 'The world in numbers' : 'O mundo em números'}</h2><a href="#indicadores">${en ? 'See all' : 'Ver todos'}</a></div>
       <div class="faixa-indicadores">
-        ${dados.indicadores.map((ind) => `
+        ${dados.indicadores.filter((ind) => !ind.oculto).map((ind) => `
           <a class="mini-indicador ${classeVariacao(ind.comparacao)}" href="#indicadores/${esc(ind.id)}">
             ${simbolo(ind.id)}
             <span class="nome">${esc(t(ind.nome))}</span>
@@ -1130,7 +1131,7 @@ export function telaIndicadores(dados, grupoEscolhido = 'brasil') {
     return `<div class="tela">${cabecalho('Indicadores', titulo)}<p class="vazio">${en ? 'Could not load the indicators. Check your connection.' : 'Não deu para carregar os indicadores. Confira a conexão.'}</p></div>`;
   }
   const grupo = grupoEscolhido === 'mundo' ? 'mundo' : 'brasil';
-  const lista = dados.indicadores.filter((i) => i.grupo === grupo);
+  const lista = dados.indicadores.filter((i) => i.grupo === grupo && !i.oculto);
   const direto = dados.direto ? (en ? ' (read straight from the sources)' : ' (lido direto das fontes)') : '';
   return `
     <div class="tela">
@@ -1214,6 +1215,12 @@ export function telaIndicador(ind, explicacao, noticias, escolha) {
   return `
     <div class="tela pagina-indicador" data-indicador="${esc(ind.id)}">
       <button class="voltar-texto" type="button" data-voltar><span class="icone i-voltar" aria-hidden="true"></span>${en ? 'Indicators' : 'Indicadores'}</button>
+      ${ind.id.startsWith('gasolina') ? `
+      <div class="segmentos" style="--qtd:2;--pos:${ind.id === 'gasolina' ? 0 : 1};margin-top:10px" role="group">
+        <span class="indicador"></span>
+        <a class="aba-link" href="#indicadores/gasolina" aria-pressed="${ind.id === 'gasolina'}">São Paulo</a>
+        <a class="aba-link" href="#indicadores/gasolina-br" aria-pressed="${ind.id === 'gasolina-br'}">${en ? 'Brazil' : 'Brasil'}</a>
+      </div>` : ''}
       <div class="indicador-capa ${n > 0 ? 'sobe' : n < 0 ? 'desce' : ''}">
         ${simbolo(ind.id)}
         <p class="rotulo">${esc(t(ind.nome))} · ${ind.grupo === 'mundo' ? (en ? 'World' : 'Mundo') : (en ? 'Brazil' : 'Brasil')}</p>

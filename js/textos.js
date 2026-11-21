@@ -54,7 +54,7 @@ const EN = {
   'Indicadores': 'Indicators', 'Dólar': 'US dollar', 'Euro': 'Euro', 'Petróleo Brent': 'Brent oil',
   'Selic (juros do Brasil)': 'Selic (Brazil interest rate)', 'Inflação (IPCA, 12 meses)': 'Inflation (IPCA, 12 months)',
   'Petróleo WTI (EUA)': 'WTI oil (US)', 'Juros dos EUA (10 anos)': 'US interest rate (10 years)', 'Yuan da China (por dólar)': 'Chinese yuan (per dollar)',
-  'Commodities (índice)': 'Commodities (index)', 'Economia mundial (crescimento)': 'World economy (growth)', 'Inflação no mundo': 'World inflation',
+  'Gasolina (São Paulo)': 'Gasoline (São Paulo)', 'Gasolina (Brasil)': 'Gasoline (Brazil)', 'Commodities (índice)': 'Commodities (index)', 'Economia mundial (crescimento)': 'World economy (growth)', 'Inflação no mundo': 'World inflation',
   // Camadas da cadeia de efeitos
   'Economia': 'Economy', 'Preços': 'Prices', 'Energia': 'Energy', 'Política': 'Politics', 'Segurança': 'Security',
   'Tecnologia': 'Technology', 'Mídia': 'Media', 'Sociedade': 'Society', 'Brasil': 'Brazil', 'Você': 'You',

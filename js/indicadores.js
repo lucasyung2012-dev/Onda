@@ -37,6 +37,12 @@ export const EXPLICACOES = {
     voce: 'É quanto o seu dinheiro passa a comprar a menos: a mesma compra no mercado fica mais cara.',
     palavras: ['inflacao', 'precos', 'alimentos'],
   },
+  gasolina: {
+    oQueE: 'O preço médio do litro da gasolina comum nos postos, que a ANP pesquisa toda semana (aqui, a média de São Paulo).',
+    mundo: 'Segue o petróleo no mundo (guerras, OPEP+, sanções) e o dólar, porque a Petrobras usa o preço internacional como referência. Impostos e a mistura de etanol também pesam.',
+    voce: 'É o que você vê na bomba: mexe no custo de ir de carro, de app e de ônibus, e no frete que encarece tudo no mercado.',
+    palavras: ['gasolina', 'gasoline', 'combustivel', 'fuel', 'petrobras', 'petroleo', 'oil', 'opep', 'opec'],
+  },
   petroleo: {
     oQueE: 'O preço internacional do barril de petróleo tipo Brent (do Mar do Norte), a principal referência do mundo, em dólares.',
     mundo: 'Sobe com guerras e tensões no Oriente Médio, cortes de produção da OPEP+ e sanções a grandes produtores (como Rússia e Irã); cai quando a economia mundial esfria.',
@@ -103,6 +109,11 @@ const EN = {
     mundo: 'Wars, droughts, expensive oil and a strong dollar make food, energy and transport more expensive worldwide — and it shows up here.',
     voce: 'It is how much less your money buys: the same grocery shopping costs more.',
   },
+  gasolina: {
+    oQueE: 'The average price of a liter of regular gasoline at gas stations, surveyed weekly by ANP, Brazil’s oil agency (here, the São Paulo average).',
+    mundo: 'It follows world oil prices (wars, OPEC+, sanctions) and the dollar, because Petrobras uses the international price as a reference. Taxes and the ethanol blend also matter.',
+    voce: 'It is what you see at the pump: it changes the cost of driving, ride apps and buses, and the freight that makes everything at the supermarket more expensive.',
+  },
   petroleo: {
     oQueE: 'The international price of a barrel of Brent crude (from the North Sea), the world’s main benchmark, in dollars.',
     mundo: 'It rises with wars and tension in the Middle East, OPEC+ production cuts and sanctions on big producers (like Russia and Iran); it falls when the world economy cools down.',
@@ -141,6 +152,10 @@ const EN = {
 };
 
 /** Explicações no idioma escolhido (mantendo as palavras-chave). */
+// A gasolina do Brasil usa os mesmos textos da de São Paulo (trocando só o lugar).
+EXPLICACOES['gasolina-br'] = { ...EXPLICACOES.gasolina, oQueE: 'O preço médio do litro da gasolina comum nos postos, que a ANP pesquisa toda semana (aqui, a média do Brasil).' };
+EN['gasolina-br'] = { ...EN.gasolina, oQueE: 'The average price of a liter of regular gasoline at gas stations, surveyed weekly by ANP, Brazil’s oil agency (here, the Brazil average).' };
+
 export function explicacoesNoIdioma(ingles) {
   if (!ingles) return EXPLICACOES;
   return Object.fromEntries(Object.entries(EXPLICACOES).map(([id, ex]) => [id, { ...ex, ...(EN[id] || {}) }]));

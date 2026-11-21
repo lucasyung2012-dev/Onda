@@ -1161,3 +1161,7 @@ img { max-width: 100%; display: block; }
   .grade-temas, .grade-fontes { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .cartao-foto { width: 280px; }
 }
+
+/* Abas que são links (ex.: Gasolina São Paulo / Brasil) */
+.segmentos .aba-link { position: relative; z-index: 1; display: grid; place-items: center; padding: 8px 6px; font-size: 14px; font-weight: 600; color: var(--texto-3); text-decoration: none; }
+.segmentos .aba-link[aria-pressed="true"] { color: var(--texto); }

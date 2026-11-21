@@ -181,6 +181,14 @@ async function principal() {
     return;
   }
 
+  // Destaque TRAVADO: se o destaque de hoje já saiu, ele fica até amanhã,
+  // como a capa de um jornal. Só muda se alguém pedir "refazer o destaque".
+  const jaTemHoje = (await lerJson(`data/analises/${hojeData}.json`, { versoes: [] })).versoes.length > 0;
+  if (jaTemHoje && process.env.REFAZER_DESTAQUE !== 'sim') {
+    console.log(`O destaque de ${hojeData} já saiu e está travado. Nada a fazer (para refazer, use "refazer o destaque").`);
+    return;
+  }
+
   const hoje = await lerJson('data/noticias/hoje.json', null);
   if (!hoje) throw new Error('data/noticias/hoje.json não existe: rode a coleta antes.');
 
