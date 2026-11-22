@@ -1,7 +1,7 @@
 # =============================================================
 # Analista do Onda: destaque do dia (com mais 5) e tema do dia, com IA.
 #
-# Roda todo dia às 6h30 de Brasília (9h30 UTC), para estar pronto ~7h, e pelo botão
+# Roda todo dia às 6h de Brasília (9h UTC; o GitHub costuma atrasar), para estar pronto antes das 7h, e pelo botão
 # "Run workflow". Antes de analisar, faz uma coleta nova.
 #
 # Precisa de pelo menos uma chave gratuita nos Secrets do repositório
@@ -13,7 +13,7 @@ name: Analisar destaque
 
 on:
   schedule:
-    - cron: '30 9 * * *'   # 6h30 de Brasília: o destaque e o tema ficam prontos por volta das 7h
+    - cron: '0 9 * * *'    # 6h de Brasília. O GitHub costuma atrasar os horários (em 22/11, 46 min); assim fica pronto antes das 7h
   workflow_dispatch:
     inputs:
       parte:

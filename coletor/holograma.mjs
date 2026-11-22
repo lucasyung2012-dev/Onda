@@ -113,9 +113,10 @@ function compactar(d) {
 const caminho = (projecao) => { const p = geoPath(projecao).digits(0); return (geo) => compactar(p(geo)); };
 
 /** Uma escala: terra, fronteiras, o país em destaque e o ponto. */
-function escala(nome, projecao, b, ponto, extra = '') {
+function escala(nome, projecao, b, ponto, extra = '', neutro = false) {
   const p = caminho(projecao);
-  const pais = b.paises.find((f) => geoContains(f, ponto)) || null;
+  // Em território disputado, nenhum país é pintado (o Onda não toma lado).
+  const pais = neutro ? null : b.paises.find((f) => geoContains(f, ponto)) || null;
   const [x, y] = projecao(ponto);
   return {
     nome,
@@ -128,17 +129,17 @@ function escala(nome, projecao, b, ponto, extra = '') {
 }
 
 /** A mesma escala com o máximo de detalhe que cabe no LIMITE. */
-function escalaLeve(nome, fazerProjecao, ponto) {
+function escalaLeve(nome, fazerProjecao, ponto, neutro = false) {
   let ultima = null;
   for (const nivel of NIVEIS) {
-    ultima = escala(nome, fazerProjecao(nivel), nivel, ponto);
+    ultima = escala(nome, fazerProjecao(nivel), nivel, ponto, '', neutro);
     const tamanho = ultima.terra.length + ultima.fronteiras.length + ultima.destaque.length;
     if (tamanho <= LIMITE) return ultima;
   }
   return ultima; // nem o mais simples coube: vai assim mesmo
 }
 
-function desenhar({ lat, lon, caixa }) {
+function desenhar({ lat, lon, caixa }, neutro = false) {
   const ponto = [lon, lat];
   const paisGlobo = GLOBO.paises.find((f) => geoContains(f, ponto)) || null;
 
@@ -146,11 +147,11 @@ function desenhar({ lat, lon, caixa }) {
   const globo = geoOrthographic().rotate([-lon, -lat * 0.7]).fitExtent([[8, 8], [L - 8, L - 8]], { type: 'Sphere' }).clipAngle(90);
   const grade = caminho(globo)(geoGraticule10()) || '';
   const contorno = caminho(globo)({ type: 'Sphere' }) || '';
-  const mundo = escala('mundo', globo, GLOBO, ponto, `${contorno}|${grade}`);
+  const mundo = escala('mundo', globo, GLOBO, ponto, `${contorno}|${grade}`, neutro);
 
   // País: o país inteiro (girado para não cortar países grandes, como a Rússia)
   let pais = null;
-  if (paisGlobo) {
+  if (paisGlobo && !neutro) { // em território disputado, sem a escala "país"
     pais = escalaLeve('pais', (nivel) => {
       const alvo = nivel.paises.find((f) => geoContains(f, ponto)) || paisGlobo;
       const [clon] = geoCentroid(alvo);
@@ -161,13 +162,30 @@ function desenhar({ lat, lon, caixa }) {
   // Região: uns 600 km em volta do ponto (ou a área do lugar, se for maior)
   const meia = Math.max(3, Math.min(8, Math.max(caixa.n - caixa.s, caixa.l - caixa.o) / 2 + 1));
   const area = { type: 'Polygon', coordinates: [[[lon - meia, lat - meia], [lon - meia, lat + meia], [lon + meia, lat + meia], [lon + meia, lat - meia], [lon - meia, lat - meia]]] };
-  const regiao = escalaLeve('regiao', () => geoMercator().rotate([-lon, 0]).fitExtent([[0, 0], [L, L]], area).clipExtent([[0, 0], [L, L]]), ponto);
+  const regiao = escalaLeve('regiao', () => geoMercator().rotate([-lon, 0]).fitExtent([[0, 0], [L, L]], area).clipExtent([[0, 0], [L, L]]), ponto, neutro);
 
   return {
     tamanho: L,
-    pais: paisGlobo?.properties?.name || '',
+    pais: neutro ? '' : paisGlobo?.properties?.name || '',
+    neutro,
     escalas: [mundo, pais, regiao].filter(Boolean),
   };
+}
+
+// ---------- Territórios disputados ----------
+// O Onda não toma lado: em lugar disputado ou ocupado, o mapa não pinta
+// nenhum país e o nome não diz a quem pertence (revisão de 22/11: a
+// Crimeia tinha saído como "Rússia", com a Rússia pintada).
+const DISPUTADO = /territ[oó]rio disputado|crimeia|crimea|cisjord|west bank|gaza|jerusal[eé]m oriental|colinas de gol[ãa]|golan|taiwan|caxemira|kashmir|donetsk|luhansk|lugansk|zaporizh|kherson|abc[áa]zia|abkhaz|oss[ée]tia|transn[íi]stria|saara ocidental|western sahara|nagorno|karabakh|kosovo|chipre do norte|northern cyprus/i;
+const PAISES_EM_DISPUTA = /^(r[úu]ssia|russia|ucr[âa]nia|ukraine|israel|palestina|palestine|china|taiwan|[íi]ndia|india|paquist[ãa]o|pakistan|marrocos|morocco|ge[óo]rgia|georgia|azerbaij[ãa]o|azerbaijan|arm[êe]nia|armenia|mold[áa]via|moldova|s[íi]ria|syria|s[ée]rvia|serbia|chipre|cyprus|turquia|turkey)$/i;
+
+/** "Ponte de Kerch, Crimeia, Rússia" vira "Ponte de Kerch, Crimeia (território disputado)". */
+function neutralizar(lugar) {
+  if (!lugar || !DISPUTADO.test(lugar)) return lugar;
+  if (/territ[oó]rio disputado/i.test(lugar)) return lugar;
+  const partes = lugar.split(',').map((s) => s.trim()).filter(Boolean);
+  while (partes.length > 1 && PAISES_EM_DISPUTA.test(partes.at(-1))) partes.pop();
+  return `${partes.join(', ')} (território disputado)`;
 }
 
 // ---------- 4: pôr no destaque e no tema ----------
@@ -177,13 +195,14 @@ async function montar(nome, caminhoArquivo, pegar) {
   if (!dados || dados.status !== 'ok') { console.log(`${nome}: nada para desenhar.`); return; }
   const alvo = pegar(dados);
   if (!alvo) return;
-  let lugar = alvo.lugar || alvo.fatosRapidos?.onde || '';
+  let lugar = neutralizar(alvo.lugar || alvo.fatosRapidos?.onde || '');
   if (alvo.holograma?.lugar && alvo.holograma.lugar === lugar) { console.log(`${nome}: holograma já está em dia.`); return; }
-  if (!lugar) lugar = await perguntarLugar(alvo.titulo, alvo.oQueAconteceu || alvo.emUmaFrase);
+  if (!lugar) lugar = neutralizar(await perguntarLugar(alvo.titulo, alvo.oQueAconteceu || alvo.emUmaFrase));
   if (!lugar) { console.log(`${nome}: sem lugar para o mapa.`); return; }
-  console.log(`${nome}: lugar "${lugar}"…`);
-  const c = await coordenadasComReserva(lugar);
-  alvo.holograma = { lugar, lat: c.lat, lon: c.lon, ...desenhar(c) };
+  const neutro = DISPUTADO.test(lugar);
+  console.log(`${nome}: lugar "${lugar}"${neutro ? ' (território disputado: sem pintar país)' : ''}…`);
+  const c = await coordenadasComReserva(lugar.replace(/\s*\(territ[oó]rio disputado\)/i, ''));
+  alvo.holograma = { lugar, lat: c.lat, lon: c.lon, ...desenhar(c, neutro) };
   await gravarJson(caminhoArquivo, dados);
   // Guarda também no arquivo do dia (histórico), na versão mais recente.
   const dia = dados.dataReferencia;

@@ -149,7 +149,7 @@ ${manchetes.map((m, i) => `[${i}] ${m}`).join('\n')}
 
 Responda neste formato JSON:
 {"titulo": "<nome curto do tema>",
- "pergunta": "<a grande pergunta que a aula responde>",
+ "pergunta": "<a grande pergunta que a aula responde; não force o Brasil na pergunta, a não ser que o tema seja sobre o Brasil>",
  "buscas": [<6 ou 7 itens {"idioma": "pt" ou "en", "termo": "<título provável de um artigo da Wikipedia>"}: o artigo principal em português e em inglês, artigos sobre a história, o funcionamento e os principais atores do tema, um artigo sobre as críticas ou o grande debate em torno dele (ex.: "Euroceticismo", "Críticas à OTAN") e, se existir, um artigo sobre a relação do Brasil com o tema (ex.: "Brasil e o FMI", "Relações entre Brasil e China")>],
  "manchetesLigadas": [<índices APENAS das manchetes que tratam diretamente do tema; na dúvida, deixe a lista vazia>],
  "palavras": [<6 a 10 nomes ou palavras específicas, em português E em inglês, que aparecem em notícias sobre o tema (ex.: "OTAN", "NATO", "Aliança Atlântica"); nada genérico como "governo" ou "mundo">]}`;
@@ -249,7 +249,7 @@ Conte como chegamos até aqui. JSON:
 {"historiaIdeia": "<a ideia principal deste capítulo em UMA frase curta, até 140 caracteres>",
  "historia": "<4 a 6 parágrafos separados por \\n\\n, em ordem cronológica, como capítulos de uma história>",
  "linhaDoTempo": [{"quando": "<ano ou data que está nos textos>", "oQue": "<o que aconteceu>", "fonte": <índice [n] do texto>}]}
-Linha do tempo: 6 a 12 marcos, só com datas que aparecem nos textos, escritas em português (ex.: "julho de 1944", "27 de dezembro de 1945").`, 4000, (r) => {
+Linha do tempo: 6 a 12 marcos, só com datas que aparecem nos textos, um marco por acontecimento (não repita o mesmo fato em duas datas, como "processo de adesão" e "entrada oficial"), escritas em português (ex.: "julho de 1944", "27 de dezembro de 1945").`, 4000, (r) => {
     if (!r.historia) throw new Error('sem história');
     r.linhaDoTempo = (r.linhaDoTempo || []).filter((l) => l.quando && l.oQue).map((l) => ({ ...l, fonte: fonteValida(l.fonte) ? l.fonte : null }));
   }));
@@ -314,6 +314,7 @@ Regras:
 - Se o tema não tiver debate de verdade, devolva "vertentes": [].
 - As vertentes podem ser por região (Ocidente, Rússia, China, Sul Global, Brasil...) ou por ideia (mais mercado x mais Estado, integração x soberania, segurança x direitos...): o que fizer mais sentido para este tema.
 - Apresente cada visão com equilíbrio e respeito, sem dar razão a nenhuma. Todas têm um ponto fraco.
+- O nome, o que pensa, quem defende e o porquê de cada vertente precisam ser da MESMA visão (ex.: se o nome é uma crítica, "quemDefende" são os críticos, não quem está sendo criticado).
 - Cada vertente precisa de base nos textos: pelo menos um artigo, ou pelo menos duas notícias de fontes diferentes. O que não tiver base fica de fora.
 - Notícia de veículo estatal mostra a posição daquele governo, não um fato comprovado.`, 3500, (r) => {
     // Base mínima: um artigo, ou duas notícias de fontes diferentes.
@@ -335,7 +336,7 @@ ${aula.emUmaFrase}
 ${(aula.paraComecar || '').slice(0, 1500)}
 ${(aula.historia || '').slice(0, 1500)}
 ${(aula.comoFunciona || '').slice(0, 1200)}
-${textoNoticias ? `\nNotícias recentes ligadas ao tema:\n${textoNoticias}` : '\n(Não há notícias de hoje ligadas a este tema.)'}
+${textoNoticias ? `\nNotícias recentes ligadas ao tema:\n${textoNoticias}` : textoOutras ? `\nNotícias dos últimos dias sobre o tema (fontes de várias linhas):\n${textoOutras}` : '\n(Não há notícias de hoje ligadas a este tema.)'}
 
 Feche a aula. JSON:
 {"eHoje": "<como o tema aparece nas notícias recentes; string vazia se não houver notícia ligada>",
@@ -343,7 +344,7 @@ Feche a aula. JSON:
  "chegaEmVoce": {"tipo": "<direto, indireto, risco ou nenhum>", "texto": "<como isso aparece no dia a dia de quem vive no Brasil; sem exagero>"},
  "paraPensar": "<uma pergunta para o leitor refletir>",
  "teste": [{"pergunta": "<pergunta sobre a aula>", "opcoes": ["<a>", "<b>", "<c>", "<d>"], "correta": <0 a 3>, "explicacao": "<por que essa é a certa>"}]}
-Cadeia: 3 a 5 passos. Teste: 3 perguntas, cuja resposta esteja no texto da aula.`, 3500, (r) => {
+Cadeia: 3 a 5 passos. Não force uma ligação com o Brasil: só diga que o Brasil participa, compra, adota ou paga algo se os textos disserem isso; se não houver ligação clara, a cadeia termina no mundo e "chegaEmVoce" é "nenhum". Teste: 3 perguntas, cuja resposta esteja no texto da aula.`, 3500, (r) => {
     if (!Array.isArray(r.cadeia) || r.cadeia.length < 2) throw new Error('sem cadeia');
     r.cadeia = r.cadeia.filter((c) => c.passo).map((c) => ({ passo: c.passo, camada: CAMADAS.includes(c.camada) ? c.camada : 'sociedade' }));
     if (!['direto', 'indireto', 'risco', 'nenhum'].includes(r.chegaEmVoce?.tipo)) r.chegaEmVoce = { tipo: 'indireto', texto: r.chegaEmVoce?.texto || '' };
@@ -361,6 +362,8 @@ Cadeia: 3 a 5 passos. Teste: 3 perguntas, cuja resposta esteja no texto da aula.
   // ("E hoje?"); e as notícias de várias linhas citadas nas vertentes.
   aula.fontes = fontes.filter((_, i) => i < artigos.length
     || (aula.eHoje && i < inicioOutras)
+    // sem notícias do dia, o "E hoje?" usa as notícias de várias linhas
+    || (aula.eHoje && !noticias.length && i >= inicioOutras)
     || (i >= inicioOutras && usadasNasVertentes.has(i)));
   aula.imagem = (artigos.find((x) => x.imagem) || {}).imagem || null;
   return { aula, ia };

@@ -130,8 +130,8 @@ Responda neste formato JSON (todos os campos são obrigatórios):
  "titulo": "<título claro em português, até 90 caracteres>",
  "emUmaFrase": "<uma frase que diga como isso pode chegar ao dia a dia de quem vive no Brasil, sem exagero>",
  "emTrintaSegundos": {"oQue": "<o que aconteceu, em UMA frase curta, até 110 caracteres>", "porQue": "<por que importa, em UMA frase curta, até 110 caracteres>", "voce": "<o que muda para quem vive no Brasil, em UMA frase curta, até 110 caracteres; diga se não muda nada agora>"},
- "fatosRapidos": {"onde": "<lugar curto, ex.: 'Leste da Polônia'>", "quando": "<data curta, ex.: '20/11', ou 'sem data clara'>", "quem": "<os principais envolvidos, até 3, separados por vírgula>"},
- "lugar": "<o lugar principal para marcar no mapa, o mais específico que as matérias permitem (cidade, província ou país), sempre com o país; use o NOME de um lugar que existe no mapa, nunca uma descrição como 'sudeste da Polônia', ex.: 'Rzeszów, Polônia'>",
+ "fatosRapidos": {"onde": "<lugar curto, ex.: 'Leste da Polônia'>", "quando": "<data curta, ex.: '20/11', ou 'sem data clara'>", "quem": "<os principais envolvidos, até 3, separados por vírgula, sem repetir o mesmo ator (ex.: não ponha 'Ucrânia' e 'Ministério da Defesa da Ucrânia' juntos)>"},
+ "lugar": "<o lugar principal para marcar no mapa, o mais específico que as matérias permitem (cidade, província ou país), sempre com o país; use o NOME de um lugar que existe no mapa, nunca uma descrição como 'sudeste da Polônia', ex.: 'Rzeszów, Polônia'. Em território DISPUTADO ou ocupado (ex.: Crimeia, Cisjordânia, Taiwan), não diga a qual país pertence: escreva o lugar seguido de '(território disputado)', ex.: 'Ponte de Kerch, Crimeia (território disputado)'>",
  "quemDisse": [{"quem": "<nome da pessoa ou instituição>", "cargo": "<cargo e país, ex.: 'primeiro-ministro da Polônia'>", "disse": "<o que disse, resumido em 1 frase>", "literal": <true SÓ se essa frase exata aparece entre aspas numa matéria; senão false>, "fontes": [<índices das matérias>]}],
  "oQueAconteceu": "<2 a 4 parágrafos curtos separados por \\n\\n: o quê, onde, quando, quem está envolvido, antecedentes necessários>",
  "dataDoFato": "<AAAA-MM-DD em que o fato ocorreu, ou null se as matérias não deixam claro>",
@@ -150,7 +150,8 @@ Cuidados (erros que já aconteceram):
 - Números de mortos, de armas destruídas ou de ataques ditos por um lado do conflito (governo, exército ou imprensa daquele país) são "alegacao", não "fato", a menos que fontes independentes confirmem.
 - Copie os números exatamente como estão nas matérias (se a matéria diz "3 lançadores atingidos", não escreva "1 lançador destruído").
 - Em "porQueImporta" e na "cadeia", não diga que algo JÁ está acontecendo (ex.: "já afeta o mercado de energia") se as matérias não dizem isso.
-- Toda afirmação, inclusive "analise", precisa citar as matérias em que se apoia.`;
+- Toda afirmação, inclusive "analise", precisa citar as matérias em que se apoia.
+- Não force uma ligação com o Brasil. Se as matérias não falam de energia, preços ou comércio, não invente um caminho até o seu bolso (ex.: "pode subir o preço da energia"): a cadeia pode terminar dizendo que, por enquanto, não há efeito claro no Brasil, e "chegaEmVoce" pode ser "nenhum".`;
 
   const { resposta, provedor, modelo } = await perguntarIA({
     sistema: REGRAS,
@@ -171,8 +172,16 @@ Cuidados (erros que já aconteceram):
       r.afirmacoes = (r.afirmacoes || [])
         .filter((a) => a.texto && TIPOS_AFIRMACAO.includes(a.tipo))
         .map((a) => ({ ...a, fontes: [...new Set((a.fontes || []).filter((i) => Number.isInteger(i) && i >= 0 && i < usadas.length))] }))
-        // Garantia no código: "fato" com uma fonte só vira "não confirmado".
-        .map((a) => (a.tipo === 'fato' && new Set(a.fontes.map((i) => usadas[i].fonte)).size < 2 ? { ...a, tipo: 'nao_confirmado' } : a))
+        // Garantia no código: "fato" precisa de fontes de pelo menos DOIS PAÍSES
+        // diferentes (dois jornais do mesmo país, ainda mais se ele é parte do
+        // conflito, não são confirmação independente; revisão de 22/11).
+        // Uma fonte só: "não confirmado". Várias, mas todas do mesmo país: "alegação".
+        .map((a) => {
+          if (a.tipo !== 'fato') return a;
+          if (new Set(a.fontes.map((i) => usadas[i].fonte)).size < 2) return { ...a, tipo: 'nao_confirmado' };
+          if (new Set(a.fontes.map((i) => usadas[i].pais)).size < 2) return { ...a, tipo: 'alegacao' };
+          return a;
+        })
         // Afirmação sem nenhuma matéria que a sustente fica de fora.
         .filter((a) => a.fontes.length);
       r.oQueAcompanhar = (r.oQueAcompanhar || []).filter(Boolean).slice(0, 5);
@@ -235,7 +244,9 @@ Mostre COMO CADA LADO VÊ este acontecimento. JSON:
  "ondeDivergem": "<o ponto central em que as versões se separam; string vazia se não houver>",
  "faltaOlhar": "<se um lado importante do fato não aparece nas matérias (ex.: o governo acusado), diga qual; string vazia se todos aparecem>"}
 Regras:
-- Agrupe as matérias por olhar (país, governo, linha editorial), não por veículo. Mostre todos os olhares que existem de verdade nas matérias, nem mais nem menos: podem ser 2, podem ser 5. Nunca invente um lado sem matéria.
+- Agrupe por LADO POLÍTICO do fato (ex.: um lado do conflito, o outro lado, países neutros ou mediadores), não por país de cada jornal: jornais que contam do mesmo jeito ficam juntos num lado só, mesmo sendo de países diferentes. Mostre todos os lados que existem de verdade nas matérias, nem mais nem menos: podem ser 2, podem ser 5. Nunca invente um lado sem matéria.
+- Com 2 ou mais lados, "ondeConcordam" e "ondeDivergem" são OBRIGATÓRIOS (uma frase cada).
+- Em "faltaOlhar": se o governo ou a imprensa de um país ENVOLVIDO no fato não aparece nas matérias (ex.: a imprensa oficial da Rússia num ataque à Rússia), diga qual falta. Imprensa de exílio ou de oposição não substitui a versão oficial.
 - Se todas as matérias contam do mesmo jeito, devolva "lados": [] e explique em "faltaOlhar" que não há outro olhar nas fontes.
 - Apresente cada lado com equilíbrio, sem dar razão a nenhum e sem adjetivos de julgamento.
 - Veículo estatal mostra a posição daquele governo, não um fato comprovado.
