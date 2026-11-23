@@ -12,7 +12,7 @@
 // aparelhos baixarem a versão nova.
 // =============================================================
 
-const VERSAO = 'onda-v28';
+const VERSAO = 'onda-v29';
 
 const ARQUIVOS_DO_APP = [
   './',

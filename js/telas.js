@@ -159,8 +159,11 @@ export function seloChecagem(checagem, revisao, { tema = false } = {}) {
   const en = emIngles();
   const n = NIVEIS[tema ? 'revisado' : checagem?.nivel] || NIVEIS.nao_confirmado;
   const uid = `s${++seloContador}`;
+  const fora = revisao?.fora;
   const resumo = tema
-    ? `${revisao?.conferidas || 0} ${en ? 'checked' : 'conferidas'} · ${revisao?.corrigidas || 0} ${en ? 'fixed' : 'corrigidas'}`
+    ? (fora
+      ? `${fora.confirmados} ${en ? 'of' : 'de'} ${fora.total} ${en ? 'facts confirmed outside Wikipedia' : 'dados confirmados fora da Wikipédia'}${fora.divergentes ? ` · ${fora.divergentes} ${en ? 'disputed' : (fora.divergentes === 1 ? 'divergente' : 'divergentes')}` : ''}`
+      : `${revisao?.conferidas || 0} ${en ? 'checked' : 'conferidas'} · ${revisao?.corrigidas || 0} ${en ? 'fixed' : 'corrigidas'}`)
     : [checagem ? `${checagem.onda?.paises || 0} ${en ? 'countries' : 'países'} · ${checagem.onda?.veiculos || 0} ${en ? 'outlets' : 'veículos'}` : '',
       revisao ? `${en ? 'text' : 'texto'}: ${revisao.corrigidas} ${en ? 'fixed' : (revisao.corrigidas === 1 ? 'correção' : 'correções')}` : ''].filter(Boolean).join(' · ');
 
@@ -191,6 +194,21 @@ export function seloChecagem(checagem, revisao, { tema = false } = {}) {
           <li><p class="subtitulo">${esc(c.explicacao)}</p><p><s>${esc(c.antes)}</s></p><p>→ ${esc(c.depois)}</p></li>`).join('')}</ul>` : ''}
       </div>`);
   }
+  if (fora) {
+    partes.push(`
+      <div class="selo-bloco">
+        <p class="rotulo" style="color:var(--acento)">${en ? 'Checked outside Wikipedia' : 'Conferido fora da Wikipédia'}</p>
+        <p>${en ? 'The lesson is based on Wikipedia, which anyone can edit. So its numbers, dates and facts were checked in other sources:' : 'A aula usa a Wikipédia como base, que qualquer pessoa pode editar. Por isso, os números, as datas e os fatos foram conferidos em outras fontes:'}</p>
+        <div class="selo-numeros">
+          <div><strong>${fora.confirmados}</strong><span>${en ? 'confirmed' : 'confirmados'}</span></div>
+          <div><strong style="color:#F2A65A">${fora.divergentes}</strong><span>${en ? 'disagree' : 'divergentes'}</span></div>
+          <div><strong style="color:var(--texto-3)">${fora.semMencao}</strong><span>${en ? 'not mentioned' : 'sem menção'}</span></div>
+        </div>
+        <div class="selo-paises">${fora.fontes.map((f) => `<a href="${esc(f.link)}" target="_blank" rel="noopener noreferrer">${esc(f.nome)}</a>`).join('')}</div>
+        ${fora.divergencias?.length ? `<ul class="selo-correcoes">${fora.divergencias.map((d) => `
+          <li><p class="subtitulo">${en ? 'Wikipedia' : 'Wikipédia'}: ${esc(d.dado)}</p><p>⚠ ${esc(d.fonte)}: ${esc(d.diz)}</p></li>`).join('')}</ul>` : ''}
+      </div>`);
+  }
   partes.push(`<p class="subtitulo selo-limite">${en ? 'No check guarantees 100% truth: it measures whether independent sources agree.' : 'Nenhuma checagem garante 100% de verdade: ela mede se fontes independentes concordam.'}</p>`);
 
   return `
@@ -210,11 +228,19 @@ export function seloMini(checagem) {
   return `<span class="selo-mini" style="--cor:${n.cor}" title="${esc(emIngles() ? n.en : n.pt)}"><svg viewBox="-12 -12 24 24" aria-hidden="true">${ICONE_SELO[n.icone]}</svg>${esc(emIngles() ? n.en : n.pt)}</span>`;
 }
 
+/** Marquinha de um dado conferido fora da Wikipédia: ✓ confirmado ou ⚠ divergente. */
+function marcaFora(c) {
+  if (!c || c.status === 'sem_mencao') return '';
+  const en = emIngles();
+  if (c.status === 'confirmado') return `<small class="marca-fora ok" title="${en ? 'Also confirmed by' : 'Também confirmado por'} ${esc(c.fonte)}">✓ ${esc(c.fonte)}</small>`;
+  return `<small class="marca-fora diverge">⚠ ${esc(c.fonte)}${c.diz ? `: ${esc(c.diz)}` : ''}</small>`;
+}
+
 /** Fatos rápidos: quadradinhos com rótulo e valor. */
 function fatosRapidos(lista) {
   const itens = lista.filter((f) => f.valor);
   if (!itens.length) return '';
-  return `<div class="fatos-rapidos" style="--qtd:${itens.length}">${itens.map((f) => `<div><small>${esc(f.rotulo)}</small><strong>${esc(f.valor)}</strong></div>`).join('')}</div>`;
+  return `<div class="fatos-rapidos" style="--qtd:${itens.length}">${itens.map((f) => `<div><small>${esc(f.rotulo)}</small><strong>${esc(f.valor)}</strong>${marcaFora(f.checagem)}</div>`).join('')}</div>`;
 }
 
 // Cor de cada tema na aba Explorar
@@ -834,18 +860,18 @@ export function telaTema(tema, temasAnteriores = []) {
     // Linha do tempo na horizontal (deslize) e o texto longo na gaveta
     bloco('Como chegamos aqui', `${ideia(tema.historiaIdeia || primeiraFrase(tema.historia))}
       ${tema.linhaDoTempo?.length ? `<div class="linha-horizontal">${tema.linhaDoTempo.map((l, i) => `
-        <div class="marco" style="--i:${i}"><span class="quando">${esc(l.quando)}</span><p>${esc(l.oQue)}</p>${l.fonte ? `<small>${esc(l.fonte)}</small>` : ''}</div>`).join('')}</div>` : ''}
+        <div class="marco" style="--i:${i}"><span class="quando">${esc(l.quando)}</span><p>${esc(l.oQue)}</p>${marcaFora(l.checagem)}${l.fonte ? `<small>${esc(l.fonte)}</small>` : ''}</div>`).join('')}</div>` : ''}
       ${gaveta(lerCapitulo, `<div class="texto-longo">${paragrafos(tema.historia)}</div>`)}`, en ? 'History' : 'História');
   }
   if (tema.comoFunciona) {
     bloco('Como funciona por dentro', `${ideia(tema.comoFuncionaIdeia || primeiraFrase(tema.comoFunciona))}
       ${tema.numeros?.length ? `<div class="numeros">${tema.numeros.map((n) => `
-        <div class="numero-caixa"><strong>${esc(n.valor)}</strong><p>${esc(n.significado)}</p>${n.fonte ? `<small>${esc(n.fonte)}</small>` : ''}</div>`).join('')}</div>` : ''}
+        <div class="numero-caixa"><strong>${esc(n.valor)}</strong><p>${esc(n.significado)}</p>${marcaFora(n.checagem)}${n.fonte ? `<small>${esc(n.fonte)}</small>` : ''}</div>`).join('')}</div>` : ''}
       ${gaveta(lerCapitulo, `<div class="texto-longo">${paragrafos(tema.comoFunciona)}</div>`)}`, en ? 'How it works' : 'Como funciona');
   }
   // Você sabia?: as curiosidades da aula, num cartão próprio
   if (tema.voceSabia?.length) {
-    bloco(en ? 'Did you know?' : 'Você sabia?', `<ul class="voce-sabia">${tema.voceSabia.map((v) => `<li>${esc(v)}</li>`).join('')}</ul>`, en ? 'Did you know' : 'Você sabia');
+    bloco(en ? 'Did you know?' : 'Você sabia?', `<ul class="voce-sabia">${tema.voceSabia.map((v, i) => `<li>${esc(v)}${marcaFora(tema.voceSabiaChecagem?.[i])}</li>`).join('')}</ul>`, en ? 'Did you know' : 'Você sabia');
   }
   if (tema.atores?.length) {
     // Quem é quem: etiquetas; tocando, abre o que cada um quer
@@ -873,7 +899,7 @@ export function telaTema(tema, temasAnteriores = []) {
       <div class="vertentes">${cartoes}</div>
       ${tema.ondeConcordam ? `<div class="afirmacao" style="--cor:var(--a-fato);margin-top:12px"><span class="tipo">${en ? 'Where they agree' : 'Onde todos concordam'}</span><p>${esc(tema.ondeConcordam)}</p></div>` : ''}
       ${tema.ondeBrigam ? `<div class="afirmacao" style="--cor:var(--a-analise);margin-top:8px"><span class="tipo">${en ? 'Where they clash' : 'Onde está a briga'}</span><p>${esc(tema.ondeBrigam)}</p></div>` : ''}
-      ${(tema.mitos || []).map((m) => `<div class="mito"><p><span class="etiqueta estatal">${en ? 'Myth' : 'Mito'}</span> ${esc(m.mito)}</p><p><span class="etiqueta pronta">${en ? 'Fact' : 'Verdade'}</span> ${esc(m.verdade)}</p></div>`).join('')}`);
+      ${(tema.mitos || []).map((m) => `<div class="mito"><p><span class="etiqueta estatal">${en ? 'Myth' : 'Mito'}</span> ${esc(m.mito)}</p><p><span class="etiqueta pronta">${en ? 'Fact' : 'Verdade'}</span> ${esc(m.verdade)}</p>${marcaFora(m.checagem)}</div>`).join('')}`);
   } else if (tema.debate?.length || tema.mitos?.length) {
     // Temas antigos (antes das vertentes) continuam aparecendo como eram.
     bloco('Onde há debate', `

@@ -202,3 +202,74 @@ function trechosLigados(texto, fontes, limite) {
   }
   return saida;
 }
+
+// ---------- Tema: conferência FORA da Wikipedia ----------
+
+/**
+ * Confere os dados da aula (que vêm da Wikipedia) em fontes de referência
+ * de fora: sites oficiais, centros de análise, ONU, Factbook, jornais.
+ * Cada dado ganha um carimbo:
+ *   confirmado  outra fonte diz o mesmo (guarda qual fonte);
+ *   divergente  outra fonte diz diferente (guarda o que ela diz; a aula
+ *               mostra as duas versões, sem apagar nada);
+ *   sem_mencao  as outras fontes não falam disso.
+ */
+export async function conferirFora(aula, externas) {
+  // Os dados conferidos: números, datas, fatos rápidos, curiosidades e mitos
+  const dados = [
+    ...(aula.numeros || []).map((n, i) => [`numeros[${i}]`, `${n.valor}: ${n.significado}`]),
+    ...(aula.linhaDoTempo || []).map((l, i) => [`linhaDoTempo[${i}]`, `${l.quando}: ${l.oQue}`]),
+    ...(aula.fatosRapidos || []).map((f, i) => [`fatosRapidos[${i}]`, `${f.rotulo}: ${f.valor}`]),
+    ...(aula.voceSabia || []).map((v, i) => [`voceSabia[${i}]`, v]),
+    ...(aula.mitos || []).map((m, i) => [`mitos[${i}]`, `${m.verdade}`]),
+  ];
+  if (!dados.length) return { confirmados: 0, divergentes: 0, semMencao: 0, fontes: [] };
+
+  // Só os parágrafos das fontes que tocam nos mesmos assuntos (cabe no limite da IA)
+  const porFonte = Math.floor(6500 / externas.length);
+  const texto = externas.map((f, i) => `[F${i}] ${f.nome}:\n${trechosLigados(dados.map(([, d]) => d).join(' '), f.texto, porFonte)}`).join('\n\n');
+
+  const { resposta } = await perguntarIA({
+    sistema: 'Você é um checador de fatos rigoroso e justo. Responda apenas com JSON válido.',
+    usuario: `Os DADOS abaixo vêm da Wikipedia. Confira cada um nas FONTES DE FORA da Wikipedia.
+
+FONTES DE FORA:
+${texto}
+
+DADOS (cada um com seu endereço):
+${dados.map(([onde, d]) => `[${onde}] ${d}`).join('\n')}
+
+Para CADA dado, diga:
+- "confirmado": alguma fonte de fora diz o mesmo (pode ser com outras palavras; números arredondados contam);
+- "divergente": alguma fonte de fora diz algo DIFERENTE (outro número, outra data, outro fato);
+- "sem_mencao": as fontes de fora não falam disso.
+JSON: {"dados": [{"onde": "<endereço>", "status": "<confirmado | divergente | sem_mencao>", "fonte": "<F0, F1... a fonte que confirma ou diverge; vazio se sem_mencao>", "diz": "<se divergente: o que a fonte de fora diz, em 1 frase curta; senão vazio>"}]}
+Seja rigoroso: só marque "confirmado" se a fonte de fora realmente disser aquilo.`,
+    maxTokens: 3000,
+    validar: (r) => { if (!Array.isArray(r.dados)) throw new Error('conferência sem "dados"'); },
+  });
+
+  const conta = { confirmado: 0, divergente: 0, sem_mencao: 0 };
+  const divergencias = [];
+  for (const d of resposta.dados) {
+    const m = String(d.onde || '').match(/^(\w+)\[(\d+)\]$/);
+    if (!m || !['confirmado', 'divergente', 'sem_mencao'].includes(d.status)) continue;
+    const [campo, i] = [m[1], Number(m[2])];
+    if (aula[campo]?.[i] == null) continue;
+    conta[d.status] += 1;
+    const fonte = externas[Number(String(d.fonte || '').replace(/\D/g, ''))];
+    const marca = { status: d.status, fonte: fonte?.nome || '', link: fonte?.url || '', diz: d.status === 'divergente' ? String(d.diz || '') : '' };
+    // "Você sabia?" é uma lista de textos: a marca fica numa lista ao lado
+    if (typeof aula[campo][i] === 'string') ((aula[`${campo}Checagem`] ||= [])[i] = marca);
+    else aula[campo][i].checagem = marca;
+    if (d.status === 'divergente') divergencias.push({ onde: d.onde, dado: dados.find(([o]) => o === d.onde)?.[1] || '', ...marca });
+  }
+  return {
+    confirmados: conta.confirmado,
+    divergentes: conta.divergente,
+    semMencao: conta.sem_mencao,
+    total: dados.length,
+    fontes: externas.map((f) => ({ nome: f.nome, link: f.url })),
+    divergencias: divergencias.slice(0, 8),
+  };
+}

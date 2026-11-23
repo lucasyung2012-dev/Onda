@@ -31,7 +31,8 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { perguntarIA, temIA } from './ia.mjs';
 import * as fila from './fila.mjs';
 import { buscarOutrasLinhas } from './linhas.mjs';
-import { revisarTema } from './revisor.mjs';
+import { revisarTema, conferirFora } from './revisor.mjs';
+import { lerFontesExternas } from './externas.mjs';
 
 const FUSO = 'America/Sao_Paulo';
 const NAVEGADOR = 'OndaRadar/1.0 (https://github.com/lucasyung2012-dev/Onda)';
@@ -153,16 +154,18 @@ Responda neste formato JSON:
  "pergunta": "<a grande pergunta que a aula responde; não force o Brasil na pergunta, a não ser que o tema seja sobre o Brasil>",
  "buscas": [<6 ou 7 itens {"idioma": "pt" ou "en", "termo": "<título provável de um artigo da Wikipedia>"}: o artigo principal em português e em inglês, artigos sobre a história, o funcionamento e os principais atores do tema, um artigo sobre as críticas ou o grande debate em torno dele (ex.: "Euroceticismo", "Críticas à OTAN") e, se existir, um artigo sobre a relação do Brasil com o tema (ex.: "Brasil e o FMI", "Relações entre Brasil e China")>],
  "manchetesLigadas": [<índices APENAS das manchetes que tratam diretamente do tema; na dúvida, deixe a lista vazia>],
- "palavras": [<6 a 10 nomes ou palavras específicas, em português E em inglês, que aparecem em notícias sobre o tema (ex.: "OTAN", "NATO", "Aliança Atlântica"); nada genérico como "governo" ou "mundo">]}`;
+ "palavras": [<6 a 10 nomes ou palavras específicas, em português E em inglês, que aparecem em notícias sobre o tema (ex.: "OTAN", "NATO", "Aliança Atlântica"); nada genérico como "governo" ou "mundo">],
+ "fontesExternas": [<3 a 5 páginas de referência FORA da Wikipedia sobre o tema, para conferir os dados da aula: {"nome": "<nome da fonte, ex.: 'Site oficial da OTAN', 'Council on Foreign Relations'>", "url": "<endereço completo>"}. Prefira o site oficial da organização ou do governo do tema, centros de análise (ex.: cfr.org/backgrounder), a ONU (un.org), o CIA World Factbook (cia.gov/the-world-factbook), a Agência Brasil e reportagens explicativas de BBC, DW, Al Jazeera ou The Conversation. Indique só páginas que você tem certeza de que existem. Nunca Wikipedia nem Wikimedia.>]}`;
 
   return perguntarIA({
     sistema: REGRAS,
     usuario,
-    maxTokens: 1500,
+    maxTokens: 2500, // inclui as fontes de referência fora da Wikipedia
     validar: (r) => {
       if (!r.titulo || !r.pergunta || !Array.isArray(r.buscas) || r.buscas.length < 2) throw new Error('escolha de tema incompleta');
       r.manchetesLigadas = (r.manchetesLigadas || []).filter((i) => inteiro(i, manchetes.length)).slice(0, 4);
       r.palavras = (r.palavras || []).filter((p) => typeof p === 'string' && p.trim().length >= 3).slice(0, 10);
+      r.fontesExternas = (Array.isArray(r.fontesExternas) ? r.fontesExternas : []).filter((f) => f?.nome && /^https?:\/\//.test(f?.url || '')).slice(0, 5);
     },
   });
 }
@@ -435,6 +438,23 @@ async function principal() {
     console.log(`  Revisão: ${aula.revisao.conferidas} conferidas, ${aula.revisao.corrigidas} corrigidas`);
   } catch (erro) {
     console.log(`  Revisão ficou de fora: ${erro.message}`);
+  }
+
+  // Conferência fora da Wikipedia: os dados da aula batem com outras fontes?
+  try {
+    console.log('Lendo fontes de referência fora da Wikipedia…');
+    const externas = await lerFontesExternas(escolhido.escolha.fontesExternas, escolhido.escolha.palavras || []);
+    if (externas.length) {
+      await esperar(PAUSA);
+      console.log('Conferindo os dados da aula nessas fontes…');
+      const fora = await conferirFora(aula, externas);
+      aula.revisao = { ...(aula.revisao || { conferidas: 0, corrigidas: 0, itens: [] }), fora };
+      console.log(`  Fora da Wikipedia: ${fora.confirmados} confirmados, ${fora.divergentes} divergentes, ${fora.semMencao} sem menção (${fora.fontes.map((f) => f.nome).join(', ')})`);
+    } else {
+      console.log('  Nenhuma fonte externa abriu: a aula sai só com a revisão normal.');
+    }
+  } catch (erro) {
+    console.log(`  Conferência fora da Wikipedia ficou de fora: ${erro.message}`);
   }
 
   const edicao = {
