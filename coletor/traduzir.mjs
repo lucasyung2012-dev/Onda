@@ -32,7 +32,7 @@ const PAUSA = 65000;
 const NAO_TRADUZIR = new Set([
   'fatoId', 'regioes', 'temas', 'link', 'url', 'imagem', 'credito', 'dataReferencia', 'dataDoFato', 'geradoEm',
   'publicadoEm', 'camada', 'tipo', 'status', 'fuso', 'versao', 'fonte', 'provedor', 'modelo', 'formato', 'id',
-  'filaConectada', 'materias', 'correta', 'ultimoErro', 'sugeridoPorVoce', 'holograma', 'lugar',
+  'filaConectada', 'materias', 'correta', 'ultimoErro', 'sugeridoPorVoce', 'holograma', 'lugar', 'nivel', 'checador', 'em', 'onde', 'desmente',
 ]);
 
 /** Junta todos os textos traduzíveis com o "endereço" de cada um no objeto. */

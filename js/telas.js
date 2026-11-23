@@ -108,6 +108,108 @@ export function holograma(h) {
     </div>`;
 }
 
+// ---------- Selo de checagem ----------
+// O fato é verdade? (checagem por fontes independentes) e o texto está
+// fiel às fontes? (revisor). O selo é redondo, com borda recortada e o
+// texto em volta, como um carimbo; tocando, abre os detalhes.
+const NIVEIS = {
+  confirmado: { cor: '#5DBB73', icone: 'check', pt: 'Fato confirmado', en: 'Confirmed', aroPt: 'CONFIRMADO', aroEn: 'CONFIRMED',
+    explicaPt: 'Fontes independentes, de vários países, contam o mesmo fato.', explicaEn: 'Independent sources from several countries report the same thing.' },
+  provavel: { cor: '#E9B949', icone: 'quase', pt: 'Provável', en: 'Likely', aroPt: 'PROVÁVEL', aroEn: 'LIKELY',
+    explicaPt: 'Confirmado por fontes de mais de um país, mas com pouca cobertura independente.', explicaEn: 'Reported in more than one country, but with little independent coverage.' },
+  nao_confirmado: { cor: '#8FA3B3', icone: 'interrogacao', pt: 'Não confirmado', en: 'Unconfirmed', aroPt: 'NÃO CONFIRMADO', aroEn: 'UNCONFIRMED',
+    explicaPt: 'Só um lado ou poucas fontes contam este fato até agora.', explicaEn: 'So far only one side or few sources report this.' },
+  contestado: { cor: '#F0827A', icone: 'x', pt: 'Contestado', en: 'Disputed', aroPt: 'CONTESTADO', aroEn: 'DISPUTED',
+    explicaPt: 'Uma agência de checagem desmentiu ou contesta este assunto.', explicaEn: 'A fact-checking agency has debunked or disputed this.' },
+  revisado: { cor: '#45D0C4', icone: 'livro', pt: 'Aula revisada', en: 'Lesson reviewed', aroPt: 'REVISADO', aroEn: 'REVIEWED',
+    explicaPt: 'Números, datas e afirmações conferidos com as fontes.', explicaEn: 'Numbers, dates and claims checked against the sources.' },
+};
+const ICONE_SELO = {
+  check: '<path d="M-9 0l6 6 12-13" />',
+  quase: '<path d="M-9 0l6 6 12-13" /><circle cx="10" cy="10" r="1.6" class="cheio"/>',
+  interrogacao: '<path d="M-5-5a5 5 0 1 1 7 4.5c-1.4.7-2 1.6-2 3" /><circle cx="0" cy="9" r="1.6" class="cheio"/>',
+  x: '<path d="M-7-7l14 14M7-7l-14 14" />',
+  livro: '<path d="M-10-7c4-1.5 7-1.5 10 1 3-2.5 6-2.5 10-1v14c-4-1.5-7-1.5-10 1-3-2.5-6-2.5-10-1z" /><path d="M0-6v14" />',
+};
+
+/** O desenho do selo (SVG): borda recortada, aro com texto e ícone no meio. */
+function desenhoSelo(n, en, uid) {
+  const pontas = 28;
+  const borda = Array.from({ length: pontas * 2 }, (_, i) => {
+    const r = i % 2 ? 44 : 48;
+    const a = (Math.PI * i) / pontas;
+    return `${(50 + r * Math.cos(a)).toFixed(1)},${(50 + r * Math.sin(a)).toFixed(1)}`;
+  }).join(' ');
+  const aro = `${en ? n.aroEn : n.aroPt} · ONDA · ${en ? 'CHECKED' : 'CHECADO'} ·`;
+  return `
+    <svg class="selo-desenho" viewBox="0 0 100 100" aria-hidden="true" style="--cor:${n.cor}">
+      <defs><path id="aro-${uid}" d="M50,50 m-34,0 a34,34 0 1,1 68,0 a34,34 0 1,1 -68,0"/></defs>
+      <polygon class="selo-borda" points="${borda}"/>
+      <circle class="selo-anel" cx="50" cy="50" r="40"/>
+      <circle class="selo-miolo" cx="50" cy="50" r="27"/>
+      <text class="selo-aro"><textPath href="#aro-${uid}" startOffset="0" textLength="211" lengthAdjust="spacing">${esc(aro)}</textPath></text>
+      <g class="selo-icone" transform="translate(50 50)">${ICONE_SELO[n.icone]}</g>
+    </svg>`;
+}
+
+let seloContador = 0;
+/** Selo completo: desenho + rótulo + detalhes (gaveta). */
+export function seloChecagem(checagem, revisao, { tema = false } = {}) {
+  if (!checagem && !revisao) return '';
+  const en = emIngles();
+  const n = NIVEIS[tema ? 'revisado' : checagem?.nivel] || NIVEIS.nao_confirmado;
+  const uid = `s${++seloContador}`;
+  const resumo = tema
+    ? `${revisao?.conferidas || 0} ${en ? 'checked' : 'conferidas'} · ${revisao?.corrigidas || 0} ${en ? 'fixed' : 'corrigidas'}`
+    : [checagem ? `${checagem.onda?.paises || 0} ${en ? 'countries' : 'países'} · ${checagem.onda?.veiculos || 0} ${en ? 'outlets' : 'veículos'}` : '',
+      revisao ? `${en ? 'text' : 'texto'}: ${revisao.corrigidas} ${en ? 'fixed' : (revisao.corrigidas === 1 ? 'correção' : 'correções')}` : ''].filter(Boolean).join(' · ');
+
+  const partes = [];
+  if (checagem && !tema) {
+    partes.push(`
+      <div class="selo-bloco">
+        <p class="rotulo" style="color:${n.cor}">${en ? 'Is it true?' : 'O fato é verdade?'}</p>
+        <p>${esc(en ? n.explicaEn : n.explicaPt)}</p>
+        <div class="selo-numeros">
+          <div><strong>${checagem.onda?.paises || 0}</strong><span>${en ? 'countries in Onda sources' : 'países nas fontes do Onda'}</span></div>
+          <div><strong>${checagem.onda?.veiculos || 0}</strong><span>${en ? 'outlets in Onda' : 'veículos no Onda'}</span></div>
+          <div><strong>${checagem.gdelt ? checagem.gdelt.paises : '–'}</strong><span>${en ? 'countries worldwide (GDELT)' : 'países no mundo (GDELT)'}</span></div>
+        </div>
+        ${checagem.paises?.length ? `<div class="selo-paises">${checagem.paises.map((p) => `<span>${esc(p)}</span>`).join('')}</div>` : ''}
+        <p class="rotulo" style="margin-top:12px">${en ? 'Fact-checkers' : 'Agências de checagem'}</p>
+        ${checagem.checagens?.length
+          ? `<ul class="selo-checagens">${checagem.checagens.map((c) => `<li class="${c.desmente ? 'desmente' : ''}"><a href="${esc(c.link)}" target="_blank" rel="noopener noreferrer"><strong>${esc(c.checador)}</strong> ${esc(c.titulo)}</a></li>`).join('')}</ul>`
+          : `<p class="subtitulo">${en ? 'No fact-check about this in 9 agencies (Lupa, Aos Fatos, Comprova, Boatos.org, Maldita, Full Fact, Snopes, FactCheck.org, Lead Stories).' : 'Nenhuma checagem sobre isso em 9 agências (Lupa, Aos Fatos, Comprova, Boatos.org, Maldita, Full Fact, Snopes, FactCheck.org, Lead Stories).'}</p>`}
+      </div>`);
+  }
+  if (revisao) {
+    partes.push(`
+      <div class="selo-bloco">
+        <p class="rotulo" style="color:var(--acento)">${en ? 'Is the text faithful to the sources?' : 'O texto está fiel às fontes?'}</p>
+        <p>${en ? `A second AI checked ${revisao.conferidas} claims against the sources and fixed ${revisao.corrigidas}.` : `Uma segunda IA conferiu ${revisao.conferidas} afirmações com as fontes e corrigiu ${revisao.corrigidas}.`}</p>
+        ${revisao.itens?.length ? `<ul class="selo-correcoes">${revisao.itens.map((c) => `
+          <li><p class="subtitulo">${esc(c.explicacao)}</p><p><s>${esc(c.antes)}</s></p><p>→ ${esc(c.depois)}</p></li>`).join('')}</ul>` : ''}
+      </div>`);
+  }
+  partes.push(`<p class="subtitulo selo-limite">${en ? 'No check guarantees 100% truth: it measures whether independent sources agree.' : 'Nenhuma checagem garante 100% de verdade: ela mede se fontes independentes concordam.'}</p>`);
+
+  return `
+    <details class="carimbo" style="--cor:${n.cor}">
+      <summary>
+        ${desenhoSelo(n, en, uid)}
+        <span class="selo-texto"><strong>${esc(en ? n.en : n.pt)}</strong><small>${esc(resumo)}</small><em>${en ? 'Tap for details' : 'Toque para ver a checagem'}</em></span>
+      </summary>
+      <div class="selo-detalhes">${partes.join('')}</div>
+    </details>`;
+}
+
+/** Selo pequeno (bolinha) para os cartões dos 5 do dia. */
+export function seloMini(checagem) {
+  const n = NIVEIS[checagem?.nivel];
+  if (!n) return '';
+  return `<span class="selo-mini" style="--cor:${n.cor}" title="${esc(emIngles() ? n.en : n.pt)}"><svg viewBox="-12 -12 24 24" aria-hidden="true">${ICONE_SELO[n.icone]}</svg>${esc(emIngles() ? n.en : n.pt)}</span>`;
+}
+
 /** Fatos rápidos: quadradinhos com rótulo e valor. */
 function fatosRapidos(lista) {
   const itens = lista.filter((f) => f.valor);
@@ -261,6 +363,7 @@ export function telaHoje(analise, dados, indicadoresHtml = '', tema = null) {
             </div>
           </a>
           ${notas(d.notas)}
+          ${seloMini(d.checagem)}
           <div class="uma-frase">
             <p class="rotulo ouro">${t('Como chega em você')}</p>
             <p>${esc(d.emUmaFrase)}</p>
@@ -311,6 +414,7 @@ function cartaoImporta(t, numeroItem, dados) {
       <span class="numero">${numeroItem}</span>
       <div>
         <h3>${esc(t.tituloPt)}</h3>
+        ${seloMini(t.checagem)}
         <p>${esc(t.porQueImporta)}</p>
       </div>
       ${imagem({ url: t.imagem, regiao: t.regioes[0], nomeRegiao: dados.nomesRegioes[t.regioes[0]], comCredito: false })}
@@ -480,6 +584,7 @@ export function telaAnalise(analise, dados, opcoes = {}) {
         <h1>${esc(d.titulo)}</h1>
       </div>
       ${notas(d.notas)}
+      ${seloChecagem(d.checagem, d.revisao)}
       ${gaveta(en ? 'Why these scores?' : 'Por que essas notas?', notasDetalhe)}
       ${opcoes.botao || ''}
       ${resumo30}
@@ -814,6 +919,7 @@ export function telaTema(tema, temasAnteriores = []) {
         ${tema.imagem ? `<a class="credito" href="${esc(tema.imagem.link)}" target="_blank" rel="noopener noreferrer">Imagem: ${esc(tema.imagem.credito)}</a>` : ''}
       </div>
       <div class="uma-frase"><p class="rotulo ouro">${t('A resposta em uma frase')}</p><p>${esc(tema.emUmaFrase)}</p></div>
+      ${seloChecagem(null, tema.revisao, { tema: true })}
       ${tema.fatosRapidos?.length || tema.holograma ? `
         <div class="cartao-parte onde-foi" style="--cor:var(--acento)">
           <div class="bloco-cabeca">${iconeParte('mapa', 'var(--acento)')}<h2>${en ? 'Quick facts' : 'Fatos rápidos'}</h2></div>

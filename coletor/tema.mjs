@@ -31,6 +31,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { perguntarIA, temIA } from './ia.mjs';
 import * as fila from './fila.mjs';
 import { buscarOutrasLinhas } from './linhas.mjs';
+import { revisarTema } from './revisor.mjs';
 
 const FUSO = 'America/Sao_Paulo';
 const NAVEGADOR = 'OndaRadar/1.0 (https://github.com/lucasyung2012-dev/Onda)';
@@ -421,6 +422,20 @@ async function principal() {
   await esperar(PAUSA);
   console.log('Escrevendo a aula em partes…');
   const { aula, ia } = await escreverAula(escolhido.escolha, escolhido.artigos, noticias, anteriores, outras);
+
+  // Revisor: confere números, datas e as partes mais arriscadas da aula com as fontes.
+  try {
+    await esperar(PAUSA);
+    console.log('Revisando a aula…');
+    const fontesTexto = [
+      ...escolhido.artigos.flatMap((a) => a.secoes.map((s) => s.texto)),
+      ...[...noticias, ...outras].map((n) => `${n.titulo}. ${n.resumo || ''}`),
+    ].join('\n');
+    aula.revisao = await revisarTema(aula, fontesTexto);
+    console.log(`  Revisão: ${aula.revisao.conferidas} conferidas, ${aula.revisao.corrigidas} corrigidas`);
+  } catch (erro) {
+    console.log(`  Revisão ficou de fora: ${erro.message}`);
+  }
 
   const edicao = {
     status: 'ok',

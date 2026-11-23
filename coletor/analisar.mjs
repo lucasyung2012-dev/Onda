@@ -25,6 +25,8 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { perguntarIA, temIA } from './ia.mjs';
 import { buscarOutrasLinhas } from './linhas.mjs';
+import { carregarChecadores, checarFato, passa } from './checagem.mjs';
+import { revisarDestaque } from './revisor.mjs';
 
 const FUSO = 'America/Sao_Paulo';
 const MAX_CANDIDATOS = 60;   // quantos fatos a IA compara
@@ -85,19 +87,27 @@ Tarefa:
 
 Responda neste formato JSON:
 {"destaque": {"indice": <número>, "tituloPt": "<título curto em português>", "criterio": "<1 frase com o principal motivo da escolha, sem citar quantidade de fontes>",
-   "palavras": [<6 a 10 nomes e termos específicos do destaque, em português E em inglês, para achar outras notícias sobre ele (ex.: "Polônia", "Poland", "míssil", "missile", "Tusk"); nada genérico como "governo">]},
- "tambemImporta": [{"indice": <número>, "tituloPt": "<título curto em português>", "porQueImporta": "<1 frase: por que importa. Só ligue ao Brasil se a ligação for real e clara; senão, explique por que importa para o mundo>"}]}`;
+   "palavras": [<6 a 10 nomes e termos específicos do destaque, em português E em inglês, para achar outras notícias sobre ele (ex.: "Polônia", "Poland", "míssil", "missile", "Tusk"); nada genérico como "governo">],
+   "buscaEn": "<busca curta em inglês, 2 a 4 palavras, para achar essa notícia em jornais do mundo todo>"},
+ "tambemImporta": [{"indice": <número>, "tituloPt": "<título curto em português>", "porQueImporta": "<1 frase: por que importa. Só ligue ao Brasil se a ligação for real e clara; senão, explique por que importa para o mundo>",
+   "palavras": [<4 a 8 nomes e termos específicos, em português E em inglês>], "buscaEn": "<busca curta em inglês, 2 a 4 palavras>"}],
+ "reservas": [<até 3 acontecimentos que seriam o destaque se o escolhido não for confirmado por fontes independentes; mesmo formato do "destaque" (indice, tituloPt, criterio, palavras, buscaEn); diferentes do destaque e dos 5>]}
+Em "buscaEn": as 2 a 4 palavras em inglês que um jornal estrangeiro usaria no título dessa notícia (ex.: Kerch bridge strike, Poland missile). Para nomes com mais de uma palavra, use aspas duplas escapadas no JSON (ex.: "\\"Kerch bridge\\" Ukraine").`;
 
   return perguntarIA({
     sistema: REGRAS,
     usuario,
-    maxTokens: 3000,
+    maxTokens: 4500, // destaque + 5 + reservas, com palavras e busca em inglês
     validar: (r) => {
       const ok = (i) => Number.isInteger(i) && i >= 0 && i < lista.length;
       if (!r.destaque || !ok(r.destaque.indice) || !r.destaque.tituloPt) throw new Error('seleção sem destaque válido');
       if (!Array.isArray(r.tambemImporta)) throw new Error('seleção sem "tambemImporta"');
       r.tambemImporta = r.tambemImporta.filter((t) => ok(t.indice) && t.indice !== r.destaque.indice && t.tituloPt).slice(0, 5);
-      r.destaque.palavras = (r.destaque.palavras || []).filter((p) => typeof p === 'string' && p.trim().length >= 3).slice(0, 10);
+      const limpar = (x) => ({ ...x, palavras: (x.palavras || []).filter((p) => typeof p === 'string' && p.trim().length >= 3).slice(0, 10), buscaEn: typeof x.buscaEn === 'string' ? x.buscaEn.trim() : '' });
+      r.destaque = limpar(r.destaque);
+      r.tambemImporta = r.tambemImporta.map(limpar);
+      const usados = new Set([r.destaque.indice, ...r.tambemImporta.map((t) => t.indice)]);
+      r.reservas = (Array.isArray(r.reservas) ? r.reservas : []).filter((x) => ok(x.indice) && !usados.has(x.indice) && x.tituloPt).map(limpar).slice(0, 3);
     },
   });
 }
@@ -205,7 +215,7 @@ Cuidados (erros que já aconteceram):
     id: m.fonte, fonte: m.fonteNome, pais: m.pais, visao: m.visao, estatal: m.estatal,
     titulo: m.titulo, link: m.link, publicadoEm: m.publicadoEm,
   }));
-  return { analise: resposta, fontesUsadas, provedor, modelo };
+  return { analise: resposta, fontesUsadas, usadas, provedor, modelo };
 }
 
 // ---------- Etapa 3: como cada lado vê ----------
@@ -305,21 +315,53 @@ async function principal() {
   console.log(`Candidatos confirmados: ${lista.length}`);
   if (lista.length === 0) throw new Error('nenhum fato confirmado por duas fontes nas últimas 24 h');
 
-  console.log('1/2 Escolhendo o destaque…');
+  console.log('1/4 Escolhendo o destaque…');
   const selecao = await selecionar(lista);
-  const destaque = lista[selecao.resposta.destaque.indice];
-  console.log(`  Destaque: ${selecao.resposta.destaque.tituloPt}`);
+  console.log(`  Escolhido pela IA: ${selecao.resposta.destaque.tituloPt}`);
+
+  // Checagem de verdade: o destaque só pode ser um fato confirmado por fontes
+  // independentes. Se o escolhido não passar, tenta as reservas, em ordem.
+  console.log('2/4 Checando se o fato é verdade…');
+  const checagens = await carregarChecadores().catch(() => []);
+  let escolha = null;
+  let checagem = null;
+  for (const c of [selecao.resposta.destaque, ...(selecao.resposta.reservas || [])]) {
+    // Se a checagem der erro, o destaque segue (o selo sai "não confirmado").
+    const ch = await checarFato({ materias: lista[c.indice].materias, palavras: c.palavras, buscaEn: c.buscaEn }, checagens)
+      .catch((erro) => ({ nivel: 'nao_confirmado', paises: [], onda: { paises: 0, veiculos: 0 }, gdelt: null, checagens: [], erro: erro.message }));
+    console.log(`  "${c.tituloPt}": ${ch.nivel} (Onda: ${ch.onda.paises} países; GDELT: ${ch.gdelt ? `${ch.gdelt.paises} países` : 'sem resposta'}; checadores: ${ch.checagens.length})`);
+    if (!escolha) { escolha = c; checagem = ch; } // guarda o 1º, caso nenhum passe
+    if (passa(ch)) { escolha = c; checagem = ch; break; }
+  }
+  if (escolha !== selecao.resposta.destaque) console.log(`  Destaque trocado pela reserva: ${escolha.tituloPt}`);
+  const destaque = lista[escolha.indice];
+  // Os 5 do dia também ganham o selo; um fato desmentido sai da lista.
+  for (const t of selecao.resposta.tambemImporta) {
+    t.checagem = await checarFato({ materias: lista[t.indice].materias, palavras: t.palavras, buscaEn: t.buscaEn }, checagens).catch(() => null);
+  }
+  selecao.resposta.tambemImporta = selecao.resposta.tambemImporta.filter((t) => t.indice !== escolha.indice && t.checagem?.nivel !== 'contestado');
 
   await esperar(65000); // respeita o limite de uso por minuto do plano gratuito
-  console.log('2/2 Analisando o destaque…');
-  const { analise, fontesUsadas, provedor, modelo } = await analisar(destaque, hojeData);
+  console.log('3/4 Analisando o destaque…');
+  const { analise, fontesUsadas, usadas, provedor, modelo } = await analisar(destaque, hojeData);
+
+  // Revisor: uma segunda IA confere o texto com as fontes e corrige sozinha.
+  let revisao = null;
+  try {
+    await esperar(65000);
+    console.log('  Revisando o texto…');
+    revisao = await revisarDestaque(analise, usadas); // as matérias com resumo
+    console.log(`  Revisão: ${revisao.conferidas} conferidas, ${revisao.corrigidas} corrigidas`);
+  } catch (erro) {
+    console.log(`  Revisão ficou de fora: ${erro.message}`);
+  }
 
   // Etapa 3 (opcional): se falhar, o destaque sai do mesmo jeito, sem os lados.
   let lados = null;
   try {
     await esperar(65000);
-    console.log('3/3 Como cada lado vê…');
-    lados = await comoCadaLadoVe(analise, fontesUsadas, selecao.resposta.destaque.palavras || []);
+    console.log('4/4 Como cada lado vê…');
+    lados = await comoCadaLadoVe(analise, fontesUsadas, escolha.palavras || []);
     console.log(`  Lados: ${lados.lados.map((l) => l.lado).join(' | ') || 'nenhum'}`);
   } catch (erro) {
     console.log(`  Como cada lado vê ficou de fora: ${erro.message}`);
@@ -337,16 +379,18 @@ async function principal() {
       temas: destaque.temas,
       imagem: (destaque.materias.find((m) => m.imagem) || {}).imagem || '',
       credito: (destaque.materias.find((m) => m.imagem) || {}).fonteNome || '',
-      criterio: selecao.resposta.destaque.criterio || '',
+      criterio: escolha.criterio || '',
       ...analise,
       fontesUsadas,
       comoCadaLadoVe: lados,
+      checagem,   // o fato é verdade? (selo; ver coletor/checagem.mjs)
+      revisao,    // o texto está fiel às fontes? (ver coletor/revisor.mjs)
     },
     tambemImporta: selecao.resposta.tambemImporta.map((t) => {
       const f = lista[t.indice];
       const comImagem = f.materias.find((m) => m.imagem);
       return {
-        fatoId: f.id, tituloPt: t.tituloPt, porQueImporta: t.porQueImporta || '',
+        fatoId: f.id, tituloPt: t.tituloPt, porQueImporta: t.porQueImporta || '', checagem: t.checagem || null,
         regioes: f.regioes, temas: f.temas, imagem: comImagem?.imagem || '', credito: comImagem?.fonteNome || '',
         // As matérias ficam guardadas junto, para a edição poder ser relida
         // no histórico mesmo depois que a notícia sair do "hoje".
