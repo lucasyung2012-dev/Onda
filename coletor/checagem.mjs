@@ -57,25 +57,35 @@ export async function carregarChecadores() {
 }
 
 /** Procura o fato no GDELT (últimos 3 dias). Devolve veículos e países. */
-async function noGdelt(busca) {
-  if (!busca) return null;
+// Quando falha, devolve { erro } com o motivo (fica anotado na checagem,
+// para descobrir o que houve sem ver o registro do robô).
+async function noGdelt(busca, tentativa = 1) {
+  if (!busca) return { erro: 'sem busca em inglês' };
   const url = `https://api.gdeltproject.org/api/v2/doc/doc?mode=artlist&format=json&maxrecords=75&timespan=3d&query=${encodeURIComponent(busca)}`;
+  let esperarMais = false;
   try {
     const r = await fetch(url, { headers: { 'User-Agent': NAVEGADOR }, signal: AbortSignal.timeout(30000) });
-    if (!r.ok) return null;
+    if (!r.ok) return { erro: `respondeu ${r.status}` };
     const texto = await r.text();
-    if (!texto.trim().startsWith('{')) return null; // o GDELT responde texto quando a busca é inválida
-    const artigos = JSON.parse(texto).articles || [];
-    return {
-      artigos: artigos.length,
-      veiculos: new Set(artigos.map((a) => a.domain)).size,
-      paises: [...new Set(artigos.map((a) => a.sourcecountry).filter(Boolean))],
-    };
-  } catch {
-    return null;
+    if (!texto.trim().startsWith('{')) {
+      // "Please limit requests..." = pediu para esperar: tenta de novo uma vez
+      if (/limit requests/i.test(texto) && tentativa === 1) { esperarMais = true; }
+      else return { erro: texto.trim().slice(0, 90) || 'resposta vazia' };
+    } else {
+      const artigos = JSON.parse(texto).articles || [];
+      return {
+        artigos: artigos.length,
+        veiculos: new Set(artigos.map((a) => a.domain)).size,
+        paises: [...new Set(artigos.map((a) => a.sourcecountry).filter(Boolean))],
+      };
+    }
+  } catch (erro) {
+    return { erro: erro.message };
   } finally {
     await esperar(6000); // o GDELT pede no máximo 1 pedido a cada 5 segundos
   }
+  await esperar(15000);
+  return esperarMais ? noGdelt(busca, 2) : { erro: 'sem resposta' };
 }
 
 /**
@@ -92,7 +102,8 @@ export async function checarFato({ materias = [], palavras = [], buscaEn = '' },
   const veiculosOnda = new Set(todas.map((m) => m.fonteNome || m.fonte)).size;
 
   // 2. GDELT
-  const gdelt = await noGdelt(buscaEn);
+  const respostaGdelt = await noGdelt(buscaEn);
+  const gdelt = respostaGdelt.erro ? null : respostaGdelt;
 
   // 3. Checadores: alguma checagem recente fala desse assunto?
   const limpas = [...new Set(palavras.map((p) => semAcento(p).trim()).filter((p) => p.length >= 4))];
@@ -114,6 +125,8 @@ export async function checarFato({ materias = [], palavras = [], buscaEn = '' },
     paises: paisesOnda.slice(0, 20), // em português (o GDELT entra só na contagem)
     onda: { veiculos: veiculosOnda, paises: paisesOnda.length },
     gdelt: gdelt ? { artigos: gdelt.artigos, veiculos: gdelt.veiculos, paises: paisesGdelt } : null,
+    gdeltErro: respostaGdelt.erro || '', // por que o GDELT não respondeu (para diagnóstico)
+    busca: buscaEn,
     checagens: ligadas,
     em: new Date().toISOString(),
   };

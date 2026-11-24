@@ -86,7 +86,11 @@ function aplicar(obj, problemas, listas) {
   return feitos;
 }
 
+const hojeBrasilia = () => new Intl.DateTimeFormat('pt-BR', { timeZone: 'America/Sao_Paulo', day: 'numeric', month: 'long', year: 'numeric' }).format(new Date());
+
 const PEDIDO = (fontes, texto, suspeitos, extra) => `Você é o REVISOR do Onda. Outra IA escreveu o texto abaixo a partir das fontes. Seu trabalho é conferir, afirmação por afirmação, se o texto está fiel às fontes e se é verossímil.
+
+ATENÇÃO: hoje é ${hojeBrasilia()}. Muitos fatos são MAIS NOVOS que o seu conhecimento. NUNCA corrija um número, uma data, um nome ou um cargo usando o que você sabe ou lembra: só corrija quando AS FONTES abaixo disserem outra coisa. Se algo parecer estranho mas as fontes disserem isso, não troque (no máximo marque como "implausivel"). Ex.: se as fontes dizem que a COP31 foi em novembro de 2026, ela foi em novembro de 2026.
 
 FONTES:
 ${fontes}
@@ -101,12 +105,38 @@ Aponte só problemas REAIS:
 - exagero: diz que algo JÁ acontece, ou é certo, quando as fontes falam em possibilidade (ou nem falam);
 - contradicao: o texto se contradiz;
 - implausivel: algo pouco verossímil (data impossível, cargo trocado, número absurdo), mesmo que pareça estar nas fontes;
-- brasil_forcado: ligação com o Brasil que as fontes não sustentam.
+- brasil_forcado: ligação com o Brasil que as fontes não sustentam. ATENÇÃO: dizer que NÃO há efeito no Brasil (ex.: "não altera a rotina no Brasil agora") NÃO é problema; não marque.
 ${extra}
 Responda em JSON:
 {"conferidas": <quantas afirmações você conferiu no total>,
  "problemas": [{"onde": "<o endereço exato, ex.: oQueAconteceu, afirmacoes[2], cadeia[3]>", "trecho": "<o trecho EXATO, copiado do texto, que tem o problema>", "tipo": "<um de: ${TIPOS.join(', ')}>", "explicacao": "<1 frase: o que está errado>", "correcao": "<o trecho corrigido, fiel às fontes; ou string vazia para tirar o trecho>"}]}
 Se estiver tudo certo, "problemas": []. Nunca acrescente fatos novos na correção: só corrija, suavize ("pode", "segundo X") ou tire.`;
+
+// Partes que nunca somem: se o revisor quiser tirar, entra um texto neutro.
+const PROTEGIDAS = {
+  'emTrintaSegundos.voce': 'Por enquanto, as fontes não apontam efeito direto no Brasil.',
+  'chegaEmVoce.texto': 'Por enquanto, as fontes não apontam efeito direto no Brasil.',
+};
+
+/**
+ * Travas no código (revisão de 24/11, quando o revisor trocou "2026" por
+ * "2023" usando a própria memória):
+ *  - correção que traz um número que não está nas fontes nem no trecho
+ *    original é recusada;
+ *  - partes protegidas não somem: viram um texto neutro.
+ */
+function filtrarCorrecoes(problemas, fontes) {
+  return problemas.map((p) => {
+    const correcao = typeof p.correcao === 'string' ? p.correcao : '';
+    const novos = numerosSuspeitos(correcao, `${fontes}\n${p.trecho || ''}`);
+    if (novos.length) {
+      console.log(`  Correção recusada (número ${novos.join(', ')} não está nas fontes): ${p.onde}`);
+      return null;
+    }
+    if (!correcao.trim() && PROTEGIDAS[p.onde]) return { ...p, trecho: p.trecho, correcao: PROTEGIDAS[p.onde] };
+    return p;
+  }).filter(Boolean);
+}
 
 async function revisar({ fontes, partes, suspeitos, extra = '', alvo, listas }) {
   const texto = partes.map(([onde, valor]) => `[${onde}] ${valor}`).join('\n');
@@ -116,7 +146,7 @@ async function revisar({ fontes, partes, suspeitos, extra = '', alvo, listas }) 
     maxTokens: 3000,
     validar: (r) => { if (!Array.isArray(r.problemas)) throw new Error('revisão sem "problemas"'); },
   });
-  const problemas = resposta.problemas.filter((p) => TIPOS.includes(p.tipo) && p.onde);
+  const problemas = filtrarCorrecoes(resposta.problemas.filter((p) => TIPOS.includes(p.tipo) && p.onde), fontes);
   const feitos = aplicar(alvo, problemas, listas);
   return { conferidas: Number(resposta.conferidas) || partes.length, corrigidas: feitos.length, itens: feitos.slice(0, 12), em: new Date().toISOString() };
 }
@@ -174,7 +204,6 @@ export async function revisarTema(aula, textoDasFontes) {
   // 2. A IA revisa o resto (com trechos das fontes que tocam nos mesmos assuntos)
   const partes = [
     ['emUmaFrase', aula.emUmaFrase],
-    ...(aula.voceSabia || []).map((v, i) => [`voceSabia[${i}]`, v]),
     ...(aula.mitos || []).map((m, i) => [`mitos[${i}]`, `Mito: ${m.mito} | Verdade: ${m.verdade}`]),
     ...(aula.cadeia || []).map((c, i) => [`cadeia[${i}]`, c.passo]),
     ['chegaEmVoce.texto', aula.chegaEmVoce?.texto],
@@ -184,7 +213,7 @@ export async function revisarTema(aula, textoDasFontes) {
   const r = await revisar({
     fontes, partes, suspeitos: [], alvo: aula,
     listas: { mitos: 'verdade', cadeia: 'passo', vertentes: 'pensa' },
-    extra: '- Nas vertentes, confira também se o nome, o que pensa e quem defende são da MESMA visão.',
+    extra: '- Nas vertentes, confira também se o nome, o que pensa e quem defende são da MESMA visão.\n- As FONTES acima são só TRECHOS dos artigos: se você não achar algo nelas, NÃO marque "sem_fonte" (pode estar em outro trecho). Marque só contradição clara, exagero, implausível ou Brasil forçado.',
   });
   return { conferidas: r.conferidas + feitos.length, corrigidas: r.corrigidas + feitos.length, itens: [...feitos, ...r.itens].slice(0, 12), em: r.em };
 }

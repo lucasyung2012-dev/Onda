@@ -438,12 +438,23 @@ async function principal() {
     console.log(`  Revisão: ${aula.revisao.conferidas} conferidas, ${aula.revisao.corrigidas} corrigidas`);
   } catch (erro) {
     console.log(`  Revisão ficou de fora: ${erro.message}`);
+    // Fica anotado na aula, para descobrir o motivo sem ver o registro do robô
+    aula.diagnostico = { ...(aula.diagnostico || {}), revisao: erro.message };
   }
 
   // Conferência fora da Wikipedia: os dados da aula batem com outras fontes?
   try {
     console.log('Lendo fontes de referência fora da Wikipedia…');
-    const externas = await lerFontesExternas(escolhido.escolha.fontesExternas, escolhido.escolha.palavras || []);
+    const indicadas = escolhido.escolha.fontesExternas || [];
+    let externas = await lerFontesExternas(indicadas, escolhido.escolha.palavras || []);
+    aula.diagnostico = { ...(aula.diagnostico || {}), indicadas: indicadas.map((f) => f.url), falhas: externas.falhas || [] };
+    // Reserva: se nenhuma página abrir, confere nas notícias recentes de vários
+    // jornais sobre o tema (também são fontes fora da Wikipedia).
+    if (!externas.length) {
+      externas = [...noticias, ...outras].filter((n) => n.resumo || n.titulo).slice(0, 10)
+        .map((n) => ({ nome: n.fonteNome, url: n.link, texto: `${n.titulo}. ${n.resumo || ''}` }));
+      if (externas.length) console.log(`  Nenhuma página abriu; conferindo em ${externas.length} notícias recentes.`);
+    }
     if (externas.length) {
       await esperar(PAUSA);
       console.log('Conferindo os dados da aula nessas fontes…');
@@ -451,10 +462,11 @@ async function principal() {
       aula.revisao = { ...(aula.revisao || { conferidas: 0, corrigidas: 0, itens: [] }), fora };
       console.log(`  Fora da Wikipedia: ${fora.confirmados} confirmados, ${fora.divergentes} divergentes, ${fora.semMencao} sem menção (${fora.fontes.map((f) => f.nome).join(', ')})`);
     } else {
-      console.log('  Nenhuma fonte externa abriu: a aula sai só com a revisão normal.');
+      console.log('  Nenhuma fonte externa abriu e não há notícias do tema: a aula sai só com a revisão normal.');
     }
   } catch (erro) {
     console.log(`  Conferência fora da Wikipedia ficou de fora: ${erro.message}`);
+    aula.diagnostico = { ...(aula.diagnostico || {}), fora: erro.message };
   }
 
   const edicao = {
