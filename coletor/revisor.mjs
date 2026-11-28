@@ -134,19 +134,20 @@ function filtrarCorrecoes(problemas, fontes) {
       return null;
     }
     if (!correcao.trim() && PROTEGIDAS[p.onde]) return { ...p, trecho: p.trecho, correcao: PROTEGIDAS[p.onde] };
+    if (!correcao.trim() && p.onde === 'emUmaFrase') return null; // a frase principal nunca some
     return p;
   }).filter(Boolean);
 }
 
-async function revisar({ fontes, partes, suspeitos, extra = '', alvo, listas }) {
+async function revisar({ fontes, partes, suspeitos, extra = '', alvo, listas, ignorar = [] }) {
   const texto = partes.map(([onde, valor]) => `[${onde}] ${valor}`).join('\n');
   const { resposta } = await perguntarIA({
     sistema: 'Você é um revisor rigoroso e justo. Responda apenas com JSON válido.',
     usuario: PEDIDO(fontes, texto, suspeitos, extra),
-    maxTokens: 3000,
+    maxTokens: 4500, // com 3000 a resposta às vezes não cabia (25 e 27/11)
     validar: (r) => { if (!Array.isArray(r.problemas)) throw new Error('revisão sem "problemas"'); },
   });
-  const problemas = filtrarCorrecoes(resposta.problemas.filter((p) => TIPOS.includes(p.tipo) && p.onde), fontes);
+  const problemas = filtrarCorrecoes(resposta.problemas.filter((p) => TIPOS.includes(p.tipo) && p.onde && !ignorar.includes(p.tipo)), fontes);
   const feitos = aplicar(alvo, problemas, listas);
   return { conferidas: Number(resposta.conferidas) || partes.length, corrigidas: feitos.length, itens: feitos.slice(0, 12), em: new Date().toISOString() };
 }
@@ -213,6 +214,7 @@ export async function revisarTema(aula, textoDasFontes) {
   const r = await revisar({
     fontes, partes, suspeitos: [], alvo: aula,
     listas: { mitos: 'verdade', cadeia: 'passo', vertentes: 'pensa' },
+    ignorar: ['sem_fonte'], // só recebe trechos das fontes: 'sem fonte' aqui é quase sempre engano (26/11)
     extra: '- Nas vertentes, confira também se o nome, o que pensa e quem defende são da MESMA visão.\n- As FONTES acima são só TRECHOS dos artigos: se você não achar algo nelas, NÃO marque "sem_fonte" (pode estar em outro trecho). Marque só contradição clara, exagero, implausível ou Brasil forçado.',
   });
   return { conferidas: r.conferidas + feitos.length, corrigidas: r.corrigidas + feitos.length, itens: [...feitos, ...r.itens].slice(0, 12), em: r.em };
@@ -274,7 +276,7 @@ Para CADA dado, diga:
 - "sem_mencao": as fontes de fora não falam disso.
 JSON: {"dados": [{"onde": "<endereço>", "status": "<confirmado | divergente | sem_mencao>", "fonte": "<F0, F1... a fonte que confirma ou diverge; vazio se sem_mencao>", "diz": "<se divergente: o que a fonte de fora diz, em 1 frase curta; senão vazio>"}]}
 Seja rigoroso: só marque "confirmado" se a fonte de fora realmente disser aquilo.`,
-    maxTokens: 3000,
+    maxTokens: 4500,
     validar: (r) => { if (!Array.isArray(r.dados)) throw new Error('conferência sem "dados"'); },
   });
 

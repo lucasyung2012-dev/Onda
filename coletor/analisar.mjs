@@ -347,6 +347,7 @@ async function principal() {
 
   // Revisor: uma segunda IA confere o texto com as fontes e corrige sozinha.
   let revisao = null;
+  const diagnostico = {}; // o motivo do que falhar (para descobrir sem ver o registro do robô)
   try {
     await esperar(65000);
     console.log('  Revisando o texto…');
@@ -354,6 +355,7 @@ async function principal() {
     console.log(`  Revisão: ${revisao.conferidas} conferidas, ${revisao.corrigidas} corrigidas`);
   } catch (erro) {
     console.log(`  Revisão ficou de fora: ${erro.message}`);
+    diagnostico.revisao = erro.message.slice(0, 300); // fica anotado no destaque
   }
 
   // Etapa 3 (opcional): se falhar, o destaque sai do mesmo jeito, sem os lados.
@@ -385,6 +387,7 @@ async function principal() {
       comoCadaLadoVe: lados,
       checagem,   // o fato é verdade? (selo; ver coletor/checagem.mjs)
       revisao,    // o texto está fiel às fontes? (ver coletor/revisor.mjs)
+      ...(Object.keys(diagnostico).length ? { diagnostico } : {}),
     },
     tambemImporta: selecao.resposta.tambemImporta.map((t) => {
       const f = lista[t.indice];

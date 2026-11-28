@@ -32,7 +32,7 @@ import { perguntarIA, temIA } from './ia.mjs';
 import * as fila from './fila.mjs';
 import { buscarOutrasLinhas } from './linhas.mjs';
 import { revisarTema, conferirFora } from './revisor.mjs';
-import { lerFontesExternas } from './externas.mjs';
+import { lerFontesExternas, linksCitados } from './externas.mjs';
 
 const FUSO = 'America/Sao_Paulo';
 const NAVEGADOR = 'OndaRadar/1.0 (https://github.com/lucasyung2012-dev/Onda)';
@@ -445,9 +445,13 @@ async function principal() {
   // Conferência fora da Wikipedia: os dados da aula batem com outras fontes?
   try {
     console.log('Lendo fontes de referência fora da Wikipedia…');
-    const indicadas = escolhido.escolha.fontesExternas || [];
+    // Primeiro as fontes que os artigos da Wikipedia citam (endereços reais);
+    // depois as páginas que a IA sugeriu.
+    const citadas = await linksCitados(escolhido.artigos).catch(() => []);
+    const indicadas = [...citadas, ...(escolhido.escolha.fontesExternas || [])];
+    console.log(`  Referências citadas nos artigos: ${citadas.length}`);
     let externas = await lerFontesExternas(indicadas, escolhido.escolha.palavras || []);
-    aula.diagnostico = { ...(aula.diagnostico || {}), indicadas: indicadas.map((f) => f.url), falhas: externas.falhas || [] };
+    aula.diagnostico = { ...(aula.diagnostico || {}), citadas: citadas.length, indicadas: indicadas.slice(0, 18).map((f) => f.url), falhas: externas.falhas || [] };
     // Reserva: se nenhuma página abrir, confere nas notícias recentes de vários
     // jornais sobre o tema (também são fontes fora da Wikipedia).
     if (!externas.length) {

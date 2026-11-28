@@ -26,6 +26,50 @@ const permitido = (url) => {
   } catch { return false; }
 };
 
+// ---------- As fontes que a própria Wikipedia cita ----------
+// Os endereços que a IA sugere muitas vezes não existem (24–27/11: quase
+// todos deram 404). As referências citadas nos artigos da Wikipedia, ao
+// contrário, são endereços reais: reportagens, sites oficiais, documentos.
+// Conferir o dado na fonte citada é o que um checador faz.
+
+// Ignorados: redes sociais, catálogos de biblioteca e a própria Wikimedia (as cópias do
+// Internet Archive ficam: guardam fontes antigas que já saíram do ar).
+const IGNORAR = /(^|\.)(x|twitter|facebook|instagram|linkedin|youtube|youtu|tiktok|viaf|worldcat|loc|d-nb|bnf|idref|isni|orcid|doi|jstor|books\.google|google|wikipedia|wikimedia|wikidata|wiktionary)\.(com|org|net|gov|fr|de|be)$/i;
+// Preferidos: grandes jornais e agências, sites oficiais e de organismos internacionais.
+const CONFIAVEIS = /(^|\.)(bbc\.(com|co\.uk)|reuters\.com|apnews\.com|theguardian\.com|dw\.com|aljazeera\.com|france24\.com|lemonde\.fr|elpais\.com|nytimes\.com|washingtonpost\.com|economist\.com|ft\.com|npr\.org|pbs\.org|cnn\.com|folha\.uol\.com\.br|estadao\.com\.br|g1\.globo\.com|oglobo\.globo\.com|valor\.globo\.com|agenciabrasil\.ebc\.com\.br|nexojornal\.com\.br|un\.org|who\.int|worldbank\.org|imf\.org|nato\.int|europa\.eu|oecd\.org|wto\.org|cfr\.org|brookings\.edu|chathamhouse\.org|britannica\.com)$|\.(gov|gov\.br|int|edu|edu\.br|leg\.br|jus\.br)$/i;
+
+const nomeDoSite = (host) => host.replace(/^www\d?\./, '');
+
+/**
+ * Lista os links que os artigos da Wikipedia citam, já filtrados e em
+ * ordem: primeiro os confiáveis, depois os outros. Devolve [{ nome, url }].
+ */
+export async function linksCitados(artigos, maximo = 14) {
+  const vistos = new Set();
+  const confiaveis = [];
+  const outros = [];
+  for (const a of artigos || []) {
+    try {
+      const u = new URL(a.link);
+      const titulo = decodeURIComponent(u.pathname.split('/wiki/')[1] || '');
+      if (!titulo) continue;
+      const api = `${u.origin}/w/api.php?action=parse&page=${encodeURIComponent(titulo)}&prop=externallinks&format=json&formatversion=2&redirects=1`;
+      const r = await fetch(api, { headers: { 'User-Agent': NAVEGADOR }, signal: AbortSignal.timeout(20000) });
+      const links = (await r.json())?.parse?.externallinks || [];
+      for (const link of links) {
+        let host;
+        try { host = new URL(link).hostname; } catch { continue; }
+        if (IGNORAR.test(host) || vistos.has(link) || /\.(pdf|jpg|png)(\?|$)/i.test(link)) continue;
+        vistos.add(link);
+        (CONFIAVEIS.test(host) ? confiaveis : outros).push({ nome: nomeDoSite(host), url: link });
+      }
+    } catch { /* artigo sem lista de links: segue */ }
+  }
+  // Variedade: no máximo 2 links do mesmo site
+  const porSite = {};
+  return [...confiaveis, ...outros].filter((l) => (porSite[l.nome] = (porSite[l.nome] || 0) + 1) <= 2).slice(0, maximo);
+}
+
 /** Tira o texto dos parágrafos (<p>) de uma página. */
 function paragrafos(html) {
   const ps = (html.match(/<p[\s>][\s\S]*?<\/p>/gi) || [])
@@ -38,14 +82,15 @@ function paragrafos(html) {
  * Abre as páginas indicadas e devolve só as que funcionaram e falam do
  * assunto: [{ nome, url, texto }].
  */
-export async function lerFontesExternas(lista, palavrasDoTema = []) {
+export async function lerFontesExternas(lista, palavrasDoTema = [], { quantas = 4 } = {}) {
   const termos = palavrasDoTema.map((p) => p.toLowerCase()).filter((p) => p.length >= 4);
   const boas = [];
   const falhas = []; // o motivo de cada página que ficou de fora (fica anotado na aula)
-  for (const { nome, url } of (lista || []).slice(0, 6)) {
+  for (const { nome, url } of (lista || []).slice(0, 18)) {
+    if (boas.length >= quantas) break; // já temos o bastante
     if (!nome || !permitido(url)) continue;
     try {
-      const r = await fetch(url, { headers: { 'User-Agent': NAVEGADOR, 'Accept-Language': 'pt-BR,pt;q=0.9,en;q=0.8' }, redirect: 'follow', signal: AbortSignal.timeout(20000) });
+      const r = await fetch(url, { headers: { 'User-Agent': NAVEGADOR, 'Accept-Language': 'pt-BR,pt;q=0.9,en;q=0.8' }, redirect: 'follow', signal: AbortSignal.timeout(12000) });
       if (!r.ok) { console.log(`  Fonte externa fora do ar: ${nome} (${r.status})`); falhas.push(`${nome}: respondeu ${r.status}`); continue; }
       const texto = paragrafos(await r.text());
       const fala = termos.filter((t) => texto.toLowerCase().includes(t)).length;
