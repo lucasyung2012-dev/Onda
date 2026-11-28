@@ -44,21 +44,27 @@ function aplicar(obj, problemas, listas) {
   const remover = {}; // campo -> índices a tirar (tirados no fim, para não bagunçar os índices)
   for (const p of problemas) {
     const onde = String(p.onde || '').trim();
-    const m = onde.match(/^(\w+)\[(\d+)\]/);
+    // Endereço de item de lista, com ou sem o campo: "cadeia[2]" ou "vertentes[1].pensa"
+    const m = onde.match(/^(\w+)\[(\d+)\](?:\.(\w+))?$/);
     const antes = String(p.trecho || '').trim();
     const depois = typeof p.correcao === 'string' ? p.correcao.trim() : '';
     if (m && Array.isArray(obj[m[1]])) {
       // Item de uma lista (afirmação, passo da cadeia, citação, curiosidade...)
-      const [campo, i] = [m[1], Number(m[2])];
+      const [campo, i, subcampo] = [m[1], Number(m[2]), m[3]];
       const item = obj[campo][i];
       if (item == null) continue;
-      const chave = listas[campo] || 'texto';
+      // Com o campo no endereço, mexe só nele (revisão de 28/11: a correção de
+      // "quem defende" tinha caído no "o que pensa" de uma vertente).
+      const chave = subcampo || listas[campo] || 'texto';
+      if (subcampo && (typeof item !== 'object' || !(subcampo in item))) continue;
       const atual = typeof item === 'string' ? item : String(item[chave] ?? '');
       // Troca só o trecho, se ele estiver no texto; senão, o texto todo
       const sem = (s) => s.replace(/^\(\w+\)\s*/, ''); // "(fato) ..." vira "..."
       const novo = depois ? (antes && atual.includes(sem(antes)) ? atual.replace(sem(antes), sem(depois)) : sem(depois)) : '';
       if (p.tipo === 'implausivel' && campo === 'afirmacoes') {
         item.tipo = 'nao_confirmado'; // tem fonte mas parece estranho: fica, marcado
+      } else if (!novo && subcampo) {
+        continue; // tirar um campo só deixaria o item pela metade: não mexe
       } else if (!novo) {
         (remover[campo] ||= new Set()).add(i);
       } else if (typeof item === 'string') {
@@ -205,10 +211,11 @@ export async function revisarTema(aula, textoDasFontes) {
   // 2. A IA revisa o resto (com trechos das fontes que tocam nos mesmos assuntos)
   const partes = [
     ['emUmaFrase', aula.emUmaFrase],
-    ...(aula.mitos || []).map((m, i) => [`mitos[${i}]`, `Mito: ${m.mito} | Verdade: ${m.verdade}`]),
+    ...(aula.mitos || []).map((m, i) => [`mitos[${i}].verdade`, m.verdade]),
     ...(aula.cadeia || []).map((c, i) => [`cadeia[${i}]`, c.passo]),
     ['chegaEmVoce.texto', aula.chegaEmVoce?.texto],
-    ...(aula.vertentes || []).map((v, i) => [`vertentes[${i}]`, `${v.nome} — pensa: ${v.pensa} — quem defende: ${v.quemDefende}`]),
+    // Cada campo da vertente com o seu endereço: a correção cai só no campo certo
+    ...(aula.vertentes || []).flatMap((v, i) => [[`vertentes[${i}].nome`, v.nome], [`vertentes[${i}].pensa`, v.pensa], [`vertentes[${i}].quemDefende`, v.quemDefende]]),
   ].filter(([, v]) => v);
   const fontes = trechosLigados(partes.map(([, v]) => v).join(' '), textoDasFontes, 7000);
   const r = await revisar({

@@ -61,7 +61,7 @@ export async function linksCitados(artigos, maximo = 14) {
         try { host = new URL(link).hostname; } catch { continue; }
         if (IGNORAR.test(host) || vistos.has(link) || /\.(pdf|jpg|png)(\?|$)/i.test(link)) continue;
         vistos.add(link);
-        (CONFIAVEIS.test(host) ? confiaveis : outros).push({ nome: nomeDoSite(host), url: link });
+        (CONFIAVEIS.test(host) ? confiaveis : outros).push({ nome: nomeDoSite(host), url: link, citada: true });
       }
     } catch { /* artigo sem lista de links: segue */ }
   }
@@ -75,7 +75,12 @@ function paragrafos(html) {
   const ps = (html.match(/<p[\s>][\s\S]*?<\/p>/gi) || [])
     .map((p) => textoPuro(p))
     .filter((p) => p.length > 60);
-  return ps.join('\n').slice(0, POR_PAGINA);
+  const texto = ps.join('\n');
+  if (texto.length >= 400) return texto.slice(0, POR_PAGINA);
+  // Página sem parágrafos comuns: pega o texto do <article> ou do <main>
+  const miolo = (html.match(/<(article|main)[\s>][\s\S]*?<\/\1>/i) || [])[0] || '';
+  const limpo = textoPuro(miolo.replace(/<(script|style|nav|header|footer)[\s\S]*?<\/\1>/gi, ' '));
+  return (limpo.length > texto.length ? limpo : texto).slice(0, POR_PAGINA);
 }
 
 /**
@@ -86,7 +91,7 @@ export async function lerFontesExternas(lista, palavrasDoTema = [], { quantas = 
   const termos = palavrasDoTema.map((p) => p.toLowerCase()).filter((p) => p.length >= 4);
   const boas = [];
   const falhas = []; // o motivo de cada página que ficou de fora (fica anotado na aula)
-  for (const { nome, url } of (lista || []).slice(0, 18)) {
+  for (const { nome, url, citada } of (lista || []).slice(0, 18)) {
     if (boas.length >= quantas) break; // já temos o bastante
     if (!nome || !permitido(url)) continue;
     try {
@@ -94,7 +99,10 @@ export async function lerFontesExternas(lista, palavrasDoTema = [], { quantas = 
       if (!r.ok) { console.log(`  Fonte externa fora do ar: ${nome} (${r.status})`); falhas.push(`${nome}: respondeu ${r.status}`); continue; }
       const texto = paragrafos(await r.text());
       const fala = termos.filter((t) => texto.toLowerCase().includes(t)).length;
-      if (texto.length < 800 || (termos.length && fala < Math.min(2, termos.length))) {
+      // A referência citada pela Wikipedia fala de um dado específico, não do tema
+      // inteiro: não precisa repetir as palavras-chave (28/11: todas tinham sido
+      // descartadas por isso). A sugerida pela IA precisa citar pelo menos uma.
+      if (texto.length < (citada ? 400 : 800) || (!citada && termos.length && fala < 1)) {
         console.log(`  Fonte externa sem conteúdo sobre o tema: ${nome}`);
         falhas.push(`${nome}: sem conteúdo sobre o tema`);
         continue;
